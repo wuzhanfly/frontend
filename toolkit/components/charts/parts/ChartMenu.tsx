@@ -1,17 +1,13 @@
-import { Icon } from '@chakra-ui/react';
-import { useCopyToClipboard } from '@uidotdev/usehooks';
-import dayjs from 'dayjs';
-import domToImage from 'dom-to-image';
-import React from 'react';
+import { Menu, Icon } from '@chakra-ui/react';
+import * as React from 'react';
+import { saveAs } from 'file-saver';
 
-import type { Resolution, TimeChartData } from '../types';
-
-import CopyIcon from 'icons/copy.svg';
-import DotsIcon from 'icons/dots.svg';
-import CsvIcon from 'icons/files/csv.svg';
-import ImageIcon from 'icons/files/image.svg';
-import ScopeIcon from 'icons/scope.svg';
-import ShareIcon from 'icons/share.svg';
+import CopyIcon from 'icons-components/Copy';
+import DotsIcon from 'icons-components/Dots';
+import CsvIcon from 'icons-components/files/Csv';
+import ImageIcon from 'icons-components/files/Image';
+import ScopeIcon from 'icons-components/Scope';
+import ShareIcon from 'icons-components/Share';
 
 import { useColorModeValue } from '../../../chakra/color-mode';
 import { IconButton } from '../../../chakra/icon-button';

@@ -1,0 +1,16 @@
+import * as React from 'react';
+
+export default function Cargo(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 152.99 160.01" xmlns="http://www.w3.org/2000/svg"
+      { ...props }
+    >
+      <g fill="#ffa270">
+    <path d="M11.032 117.804v-75.59L76.495 4.417l65.463 37.795v75.591L76.495 155.6z"/>
+    <path d="M76.495 4.414 11.032 42.21l65.463 37.795 65.463-37.795zm0 75.591v75.591l65.463-37.795v-75.59z"/>
+    <path d="m102.682 19.532 13.093 7.56-65.463 37.794-13.093-7.559z" fill="#fafafa"/>
+  </g>
+    </svg>
+  );
+}

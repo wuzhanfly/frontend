@@ -5,7 +5,7 @@ import React, { useRef } from 'react';
 
 import type { AxesConfigFn, TimeChartData } from './types';
 
-import RepeatIcon from 'icons/repeat.svg';
+import RepeatIcon from 'icons-components/Repeat';
 
 import { IconButton } from '../../chakra/icon-button';
 import { Link } from '../../chakra/link';

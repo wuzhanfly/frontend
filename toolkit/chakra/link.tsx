@@ -2,9 +2,9 @@ import type { LinkProps as ChakraLinkProps } from '@chakra-ui/react';
 import { Link as ChakraLink, LinkBox as ChakraLinkBox, LinkOverlay as ChakraLinkOverlay, Icon } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import type { LinkProps as NextLinkProps } from 'next/link';
-import React from 'react';
+import * as React from 'react';
 
-import ArrowIcon from 'icons/link_external.svg';
+import ArrowIcon from 'icons-components/LinkExternal';
 
 import { Skeleton } from './skeleton';
 

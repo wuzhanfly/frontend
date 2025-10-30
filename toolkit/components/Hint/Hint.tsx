@@ -1,7 +1,7 @@
-import { Icon } from '@chakra-ui/react';
-import React from 'react';
+import { Flex, Icon, Popover as ChakraPopover, Text } from '@chakra-ui/react';
+import * as React from 'react';
 
-import InfoIcon from 'icons/info.svg';
+import InfoIcon from 'icons-components/Info';
 
 import type { IconButtonProps } from '../../chakra/icon-button';
 import { IconButton } from '../../chakra/icon-button';

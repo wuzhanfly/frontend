@@ -1,0 +1,12 @@
+import * as React from 'react';
+
+export default function Filter(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+      { ...props }
+    >
+      <path d="M8.5 14.167c0 .46.373.833.833.833H11a.833.833 0 1 0 0-1.667H9.333a.833.833 0 0 0-.833.834ZM3.5 5a.833.833 0 0 0 0 1.667h13.333a.833.833 0 0 0 0-1.667H3.5Zm1.667 5c0 .46.373.833.833.833h8.333a.833.833 0 0 0 0-1.666H6a.833.833 0 0 0-.833.833Z" fill="currentColor"/>
+    </svg>
+  );
+}

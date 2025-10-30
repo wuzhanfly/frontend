@@ -1,10 +1,11 @@
 import { Box, Text, Icon } from '@chakra-ui/react';
 import React from 'react';
 
-// This icon doesn't work properly when it is in the sprite
-// Probably because of the gradient
-// eslint-disable-next-line no-restricted-imports
-import solidityScanIcon from 'icons/brands/solidity_scan.svg';
+import { Icon } from '@chakra-ui/react';
+import NextLink from 'next/link';
+import * as React from 'react';
+
+import solidityScanIcon from 'icons-components/brands/SolidityScan';
 import useFetchReport from 'lib/solidityScan/useFetchReport';
 import { Link } from 'toolkit/chakra/link';
 import { PopoverBody, PopoverContent, PopoverRoot } from 'toolkit/chakra/popover';

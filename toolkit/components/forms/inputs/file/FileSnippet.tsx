@@ -1,10 +1,10 @@
-import { Box, Flex, Icon, Text, chakra } from '@chakra-ui/react';
-import React from 'react';
+import { Flex, Icon } from '@chakra-ui/react';
+import * as React from 'react';
 
-import JsonFileIcon from 'icons/files/json.svg';
-import PlaceholderFileIcon from 'icons/files/placeholder.svg';
-import SolFileIcon from 'icons/files/sol.svg';
-import YulFileIcon from 'icons/files/yul.svg';
+import JsonFileIcon from 'icons-components/files/Json';
+import PlaceholderFileIcon from 'icons-components/files/Placeholder';
+import SolFileIcon from 'icons-components/files/Sol';
+import YulFileIcon from 'icons-components/files/Yul';
 
 import { CloseButton } from '../../../../chakra/close-button';
 import { Hint } from '../../../../components/Hint/Hint';

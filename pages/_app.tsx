@@ -3,7 +3,7 @@ import { GrowthBookProvider } from '@growthbook/growthbook-react';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import type { AppProps } from 'next/app';
-import React from 'react';
+import React, { useEffect } from 'react'; // [调试代码] 导入 useEffect 和 React
 
 import type { NextPageWithLayout } from 'nextjs/types';
 
@@ -32,6 +32,9 @@ import 'lib/setLocale';
 // import 'focus-visible/dist/focus-visible';
 import 'nextjs/global.css';
 
+// [调试代码] 导入 isBrowser 工具函数
+import { isBrowser } from 'toolkit/utils/isBrowser';
+
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
@@ -54,6 +57,18 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   useLoadFeatures(growthBook);
 
   const queryClient = useQueryClientConfig();
+
+  // [调试代码] 在浏览器环境中，应用挂载后打印配置信息
+  useEffect(() => {
+    if (isBrowser()) {
+      console.log('[调试信息] 当前运行时环境变量 (window.__envs):', window.__envs);
+      console.log('[调试信息] 当前应用配置 (configs/app):', config);
+      console.log('[调试信息] 当前网络名称:', config.chain.name);
+      console.log('[调试信息] 当前 API 主机:', config.apis.general.host);
+      // 如果需要查看特定的环境变量，可以在这里添加
+      // 例如: console.log('NEXT_PUBLIC_APP_HOST:', window.__envs.NEXT_PUBLIC_APP_HOST);
+    }
+  }, []); // 空依赖数组确保此 effect 只在组件挂载时执行一次
 
   const content = (() => {
     const getLayout = Component.getLayout ?? ((page) => <Layout>{ page }</Layout>);

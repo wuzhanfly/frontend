@@ -1,10 +1,7 @@
-import { Box, Icon } from '@chakra-ui/react';
-import React from 'react';
+import { Flex, Icon } from '@chakra-ui/react';
+import * as React from 'react';
 
-// This icon doesn't work properly when it is in the sprite
-// Probably because of radial gradient
-// eslint-disable-next-line no-restricted-imports
-import emptySearchResultIcon from 'icons/empty_search_result.svg';
+import emptySearchResultIcon from 'icons-components/EmptySearchResult';
 import { Heading } from 'toolkit/chakra/heading';
 
 interface Props {

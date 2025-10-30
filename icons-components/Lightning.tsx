@@ -1,0 +1,12 @@
+import * as React from 'react';
+
+export default function Lightning(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+      { ...props }
+    >
+      <path d="M10.833 7.5H17.5L9.167 20v-7.5H3.333l7.5-12.5v7.5ZM9.167 9.167v-3.15l-2.89 4.816h4.556v3.662l3.553-5.328h-5.22Z" fill="currentColor"/>
+    </svg>
+  );
+}

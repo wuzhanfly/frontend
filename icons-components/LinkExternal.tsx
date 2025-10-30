@@ -1,0 +1,12 @@
+import * as React from 'react';
+
+export default function LinkExternal(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+      { ...props }
+    >
+      <path d="M10.621 4.353 5.176 9.798a.69.69 0 1 1-.974-.974l5.444-5.446H5.108a.69.69 0 0 1 0-1.378H12v6.892a.69.69 0 1 1-1.379 0V4.353Z" fill="currentColor"/>
+    </svg>
+  );
+}

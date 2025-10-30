@@ -5,8 +5,8 @@ import { Box, Select as ChakraSelect, createListCollection, Flex, Portal, Icon, 
 import { useDebounce } from '@uidotdev/usehooks';
 import * as React from 'react';
 
-import ArrowIcon from 'icons/arrows/east-mini.svg';
-import CheckIcon from 'icons/check.svg';
+import ArrowIcon from 'icons-components/arrows/EastMini';
+import CheckIcon from 'icons-components/Check';
 
 import { FilterInput } from '../components/filters/FilterInput';
 import { CloseButton } from './close-button';

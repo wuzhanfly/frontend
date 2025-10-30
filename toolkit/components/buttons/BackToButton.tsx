@@ -1,7 +1,7 @@
 import { Icon } from '@chakra-ui/react';
-import React from 'react';
+import * as React from 'react';
 
-import ArrowIcon from 'icons/arrows/east.svg';
+import ArrowIcon from 'icons-components/arrows/East';
 
 import type { IconButtonProps } from '../../chakra/icon-button';
 import { IconButton } from '../../chakra/icon-button';

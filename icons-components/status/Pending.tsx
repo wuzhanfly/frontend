@@ -1,0 +1,14 @@
+import * as React from 'react';
+
+export default function Pending(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 11" fill="none"
+      { ...props }
+    >
+      <circle cx="5" cy="5.438" r="5" fill="#E2E8F0"/>
+  <circle cx="5" cy="5.438" r="2.5" fill="#4A5568"/>
+  <circle cx="5" cy="5.438" r="2.5" fill="#000" fill-opacity=".2"/>
+    </svg>
+  );
+}

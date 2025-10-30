@@ -2,7 +2,7 @@ import { Accordion, Icon } from '@chakra-ui/react';
 import * as React from 'react';
 import { scroller } from 'react-scroll';
 
-import IndicatorIcon from 'icons/arrows/east-mini.svg';
+import IndicatorIcon from 'icons-components/arrows/EastMini';
 
 interface AccordionItemTriggerProps extends Accordion.ItemTriggerProps {
   indicatorPlacement?: 'start' | 'end';

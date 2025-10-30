@@ -1,0 +1,12 @@
+import * as React from 'react';
+
+export default function InfoFilled(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+      { ...props }
+    >
+      <path d="M10 18.333a8.333 8.333 0 1 1 0-16.666 8.333 8.333 0 1 1 0 16.666Zm-.834-9.166v5h1.667v-5H9.166Zm0-3.334V7.5h1.667V5.833H9.166Z" fill="currentColor"/>
+    </svg>
+  );
+}

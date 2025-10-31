@@ -13,6 +13,7 @@ App is distributed as a docker image. Here you can find information about the [p
 You can configure your app by passing necessary environment variables when starting the container. See full list of ENVs and their description [here](./docs/ENVS.md).
 
 ```sh
+ yarn dev:preset zkbnb
 docker run -p 3000:3000 --env-file <path-to-your-env-file> ghcr.io/blockscout/frontend:latest
 ```
 

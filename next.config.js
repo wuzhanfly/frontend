@@ -44,6 +44,8 @@ const moduleExports = {
       'static': 180,
     },
   },
+  // Allow cross-origin requests from local network IP
+  allowedDevOrigins: ['192.168.0.135'],
 };
 
 module.exports = withBundleAnalyzer(withRoutes(moduleExports));

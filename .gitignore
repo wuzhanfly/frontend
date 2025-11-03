@@ -43,7 +43,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
-.env*.local
+#.env*.local
 /configs/envs/.env.secrets
 /configs/envs/.samples
 

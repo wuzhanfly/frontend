@@ -70,3 +70,7 @@ yarn-error.log*
 IFLOW.md
 .iflow/
 /iflow/
+
+#build log
+/build_info/
+/docker_build_file/

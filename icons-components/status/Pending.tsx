@@ -8,7 +8,7 @@ export default function Pending(props: React.SVGProps<SVGSVGElement>) {
     >
       <circle cx="5" cy="5.438" r="5" fill="#E2E8F0"/>
   <circle cx="5" cy="5.438" r="2.5" fill="#4A5568"/>
-  <circle cx="5" cy="5.438" r="2.5" fill="#000" fill-opacity=".2"/>
+  <circle cx="5" cy="5.438" r="2.5" fill="#000" fillOpacity=".2"/>
     </svg>
   );
 }

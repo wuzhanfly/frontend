@@ -10,7 +10,9 @@ export function useClientRect<E extends Element>(): [ DOMRect | null, LegacyRef<
     if (node !== null) {
       setRect(node.getBoundingClientRect());
     }
-    nodeRef.current = node;
+    if (nodeRef && 'current' in nodeRef) {
+      (nodeRef as React.MutableRefObject<E | null>).current = node;
+    }
   }, []);
 
   React.useEffect(() => {

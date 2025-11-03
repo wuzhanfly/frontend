@@ -1,6 +1,8 @@
 import { Menu, Icon } from '@chakra-ui/react';
 import * as React from 'react';
-import { saveAs } from 'file-saver';
+import { useCopyToClipboard } from '@uidotdev/usehooks';
+import domToImage from 'dom-to-image';
+import dayjs from 'dayjs';
 
 import CopyIcon from 'icons-components/Copy';
 import DotsIcon from 'icons-components/Dots';
@@ -16,6 +18,7 @@ import { useDisclosure } from '../../../hooks/useDisclosure';
 import { saveAsCsv } from '../../../utils/file';
 import { isBrowser } from '../../../utils/isBrowser';
 import ChartFullscreenDialog from '../ChartFullscreenDialog';
+import type { TimeChartData, Resolution } from '../types';
 
 export const CHART_MENU_ITEMS_IDS = [
   'share' as const,

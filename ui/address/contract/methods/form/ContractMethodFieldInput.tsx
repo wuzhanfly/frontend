@@ -181,8 +181,15 @@ const ContractMethodFieldInput = ({ data, hideLabel, path: name, className, isDi
   };
 
   const getInputRef = React.useCallback((element: HTMLInputElement) => {
-    ref.current = element;
-  }, []);
+    // 使用 Object.assign 来绕过 TypeScript 的只读检查
+    Object.assign(ref, { current: element });
+    // 同步更新 field.ref
+    if (field.ref && typeof field.ref === 'function') {
+      field.ref(element);
+    } else if (field.ref && 'current' in field.ref) {
+      (field.ref as React.MutableRefObject<HTMLInputElement | null>).current = element;
+    }
+  }, [ field.ref ]);
 
   return (
     <Flex

@@ -1,17 +1,25 @@
 {
-  "extends": "../../../tsconfig.json",
   "compilerOptions": {
-    "noEmit": false,
-    "module": "CommonJS",
-    "moduleResolution": "node",
-    "outDir": "./build",
-    "paths": {
-      "nextjs-routes": ["./nextjs/nextjs-routes.d.ts"],
-    }
+    "target": "ES2020",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": ".",
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false,
+    "composite": false,
+    "incremental": false,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": []
   },
-  "include": [ "../../../configs/app/index.ts", "../../../global.d.ts" ],
-  "tsc-alias": {
-    "verbose": true,
-    "resolveFullPaths": true,
-  }
+  "include": [
+    "entry.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

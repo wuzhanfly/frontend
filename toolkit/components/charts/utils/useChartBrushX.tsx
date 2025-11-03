@@ -11,7 +11,7 @@ interface Props {
 }
 
 export function useChartBrushX({ limits, anchor, setRange }: Props) {
-  const brushRef = React.useRef<d3.BrushBehavior<unknown>>(undefined);
+  const brushRef = React.useRef<d3.BrushBehavior<unknown> | undefined>(undefined);
   const [ brushSelectionBg ] = useToken('colors', useColorModeValue('blackAlpha.400', 'whiteAlpha.500'));
 
   React.useEffect(() => {

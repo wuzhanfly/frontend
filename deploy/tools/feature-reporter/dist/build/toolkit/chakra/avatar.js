@@ -1,0 +1,71 @@
+"use strict";
+'use client';
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AvatarGroup = exports.Avatar = void 0;
+const react_1 = require("@chakra-ui/react");
+const React = __importStar(require("react"));
+exports.Avatar = React.forwardRef(function Avatar(props, ref) {
+    const { name, src, srcSet, loading, icon, fallback, children, ...rest } = props;
+    return (<react_1.Avatar.Root ref={ref} {...rest}>
+        <AvatarFallback name={name} icon={icon}>
+          {fallback}
+        </AvatarFallback>
+        <react_1.Avatar.Image src={src} srcSet={srcSet} loading={loading}/>
+        {children}
+      </react_1.Avatar.Root>);
+});
+const AvatarFallback = React.forwardRef(function AvatarFallback(props, ref) {
+    const { name, icon, children, ...rest } = props;
+    return (<react_1.Avatar.Fallback ref={ref} {...rest}>
+        {children}
+        {name != null && children == null && <>{getInitials(name)}</>}
+        {name == null && children == null && (<react_1.Avatar.Icon asChild={Boolean(icon)}>{icon}</react_1.Avatar.Icon>)}
+      </react_1.Avatar.Fallback>);
+});
+function getInitials(name) {
+    const names = name.trim().split(' ');
+    const firstName = names[0] != null ? names[0] : '';
+    const lastName = names.length > 1 ? names[names.length - 1] : '';
+    return firstName && lastName ?
+        `${firstName.charAt(0)}${lastName.charAt(0)}` :
+        firstName.charAt(0);
+}
+exports.AvatarGroup = React.forwardRef(function AvatarGroup(props, ref) {
+    const { size, variant, borderless, ...rest } = props;
+    return (<react_1.Avatar.PropsProvider value={{ size, variant, borderless }}>
+        <react_1.Group gap="0" spaceX="-3" ref={ref} {...rest}/>
+      </react_1.Avatar.PropsProvider>);
+});

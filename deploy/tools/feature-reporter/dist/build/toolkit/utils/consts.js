@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ZERO_ADDRESS = exports.Mb = exports.Kb = exports.YEAR = exports.MONTH = exports.WEEK = exports.DAY = exports.HOUR = exports.MINUTE = exports.SECOND = exports.ZERO = exports.WEI_IN_GWEI = exports.GWEI = exports.WEI = void 0;
+const bignumber_js_1 = __importDefault(require("bignumber.js"));
+exports.WEI = new bignumber_js_1.default(10 ** 18);
+exports.GWEI = new bignumber_js_1.default(10 ** 9);
+exports.WEI_IN_GWEI = exports.WEI.dividedBy(exports.GWEI);
+exports.ZERO = new bignumber_js_1.default(0);
+exports.SECOND = 1000;
+exports.MINUTE = 60 * exports.SECOND;
+exports.HOUR = 60 * exports.MINUTE;
+exports.DAY = 24 * exports.HOUR;
+exports.WEEK = 7 * exports.DAY;
+exports.MONTH = 30 * exports.DAY;
+exports.YEAR = 365 * exports.DAY;
+exports.Kb = 1000;
+exports.Mb = 1000 * exports.Kb;
+exports.ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';

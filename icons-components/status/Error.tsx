@@ -6,7 +6,7 @@ export default function Error(props: React.SVGProps<SVGSVGElement>) {
       viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"
       { ...props }
     >
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M5 10A5 5 0 1 0 5 0a5 5 0 0 0 0 10ZM3.567 2.683a.625.625 0 1 0-.884.884L4.116 5 2.683 6.433a.625.625 0 1 0 .884.884L5 5.884l1.433 1.433a.625.625 0 1 0 .884-.884L5.884 5l1.433-1.433a.625.625 0 1 0-.884-.884L5 4.116 3.567 2.683Z" fill="currentColor"/>
+      <path fillRule="evenodd" clipRule="evenodd" d="M5 10A5 5 0 1 0 5 0a5 5 0 0 0 0 10ZM3.567 2.683a.625.625 0 1 0-.884.884L4.116 5 2.683 6.433a.625.625 0 1 0 .884.884L5 5.884l1.433 1.433a.625.625 0 1 0 .884-.884L5.884 5l1.433-1.433a.625.625 0 1 0-.884-.884L5 4.116 3.567 2.683Z" fill="currentColor"/>
     </svg>
   );
 }

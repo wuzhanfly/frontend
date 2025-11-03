@@ -7,7 +7,7 @@ export default function LightningNavbar(props: React.SVGProps<SVGSVGElement>) {
       { ...props }
     >
       <path d="M5.375 16v-5.006H.676L7.697 0h7.9v6l.027 10H5.374Z" fill="currentColor"/>
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.72 6.01V0L2.63 10.15h4.02V16l6.66-9.99H8.72Z" fill="#ED8936"/>
+  <path fillRule="evenodd" clipRule="evenodd" d="M8.72 6.01V0L2.63 10.15h4.02V16l6.66-9.99H8.72Z" fill="#ED8936"/>
     </svg>
   );
 }

@@ -31,7 +31,7 @@ export const InputGroup = React.forwardRef<HTMLDivElement, InputGroupProps>(
 
     const startElementRef = React.useRef<HTMLDivElement>(null);
     const endElementRef = React.useRef<HTMLDivElement>(null);
-    const groupRef = React.useRef<HTMLDivElement>(null);
+    const [groupRef, setGroupRef] = React.useState<HTMLDivElement | null>(null);
 
     const [ inlinePaddings, setInlinePaddings ] = React.useState<{ start?: number; end?: number }>();
 
@@ -46,7 +46,7 @@ export const InputGroup = React.forwardRef<HTMLDivElement, InputGroupProps>(
     }, []);
 
     React.useEffect(() => {
-      if (!groupRef.current) return;
+      if (!groupRef) return;
 
       let timeoutId: ReturnType<typeof setTimeout>;
 
@@ -61,7 +61,7 @@ export const InputGroup = React.forwardRef<HTMLDivElement, InputGroupProps>(
         { threshold: 0.01 },
       );
 
-      intersectionObserver.observe(groupRef.current);
+      intersectionObserver.observe(groupRef);
 
       return () => {
         intersectionObserver.disconnect();
@@ -69,7 +69,7 @@ export const InputGroup = React.forwardRef<HTMLDivElement, InputGroupProps>(
           clearTimeout(timeoutId);
         }
       };
-    }, [ calculateInlinePaddings ]);
+    }, [ calculateInlinePaddings, groupRef ]);
 
     React.useEffect(() => {
       calculateInlinePaddings();
@@ -77,8 +77,8 @@ export const InputGroup = React.forwardRef<HTMLDivElement, InputGroupProps>(
       const resizeHandler = debounce(calculateInlinePaddings, 300);
       const resizeObserver = new ResizeObserver(resizeHandler);
 
-      if (groupRef.current) {
-        resizeObserver.observe(groupRef.current);
+      if (groupRef) {
+        resizeObserver.observe(groupRef);
       }
 
       return function cleanup() {
@@ -88,11 +88,11 @@ export const InputGroup = React.forwardRef<HTMLDivElement, InputGroupProps>(
 
     // Combine refs for the Group component
     const combinedRef = React.useCallback((node: HTMLDivElement) => {
-      groupRef.current = node;
+      setGroupRef(node);
       if (typeof ref === 'function') {
         ref(node);
-      } else if (ref) {
-        ref.current = node;
+      } else if (ref && 'current' in ref) {
+        (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
       }
     }, [ ref ]);
 

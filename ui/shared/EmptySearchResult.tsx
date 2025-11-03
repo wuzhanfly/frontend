@@ -1,4 +1,4 @@
-import { Flex, Icon } from '@chakra-ui/react';
+import { Flex, Icon, Box } from '@chakra-ui/react';
 import * as React from 'react';
 
 import emptySearchResultIcon from 'icons-components/EmptySearchResult';

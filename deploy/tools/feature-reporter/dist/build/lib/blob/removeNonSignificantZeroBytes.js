@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = removeNonSignificantZeroBytes;
+function removeNonSignificantZeroBytes(bytes) {
+    return shouldRemoveBytes(bytes) ? bytes.filter((item, index) => index % 32) : bytes;
+}
+// check if every 0, 32, 64, etc byte is 0 in the provided array
+function shouldRemoveBytes(bytes) {
+    let result = true;
+    for (let index = 0; index < bytes.length; index += 32) {
+        const element = bytes[index];
+        if (element === 0) {
+            continue;
+        }
+        else {
+            result = false;
+            break;
+        }
+    }
+    return result;
+}

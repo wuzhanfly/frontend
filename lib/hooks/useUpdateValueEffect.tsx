@@ -3,7 +3,7 @@ import React from 'react';
 // run effect only if value is updated since initial mount
 const useUpdateValueEffect = (effect: () => void, value: string) => {
   const mountedRef = React.useRef(false);
-  const valueRef = React.useRef<string>(undefined);
+  const valueRef = React.useRef<string | undefined>(undefined);
   const isChangedRef = React.useRef(false);
 
   React.useEffect(() => {

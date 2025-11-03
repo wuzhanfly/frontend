@@ -1,7 +1,4 @@
 import { Box, Text, Icon } from '@chakra-ui/react';
-import React from 'react';
-
-import { Icon } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import * as React from 'react';
 

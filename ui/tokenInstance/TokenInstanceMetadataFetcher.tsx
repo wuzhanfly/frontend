@@ -28,7 +28,7 @@ interface Props {
 }
 
 const TokenInstanceMetadataFetcher = ({ hash, id }: Props) => {
-  const timeoutId = React.useRef<number>(undefined);
+  const timeoutId = React.useRef<number | undefined>(undefined);
 
   const { status, setStatus } = useMetadataUpdateContext() || {};
   const apiFetch = useApiFetch();

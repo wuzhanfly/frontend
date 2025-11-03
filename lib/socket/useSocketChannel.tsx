@@ -16,8 +16,8 @@ interface Params {
 export default function useSocketChannel({ topic, params, isDisabled, onJoin, onSocketClose, onSocketError, socketName }: Params) {
   const { socket, channelRegistry } = useSocket(socketName) || {};
   const [ channel, setChannel ] = useState<Channel>();
-  const onCloseRef = useRef<string>(undefined);
-  const onErrorRef = useRef<string>(undefined);
+  const onCloseRef = useRef<string | undefined>(undefined);
+  const onErrorRef = useRef<string | undefined>(undefined);
 
   const onJoinRef = useRef(onJoin);
   onJoinRef.current = onJoin;

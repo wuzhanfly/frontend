@@ -6,7 +6,7 @@ export default function Gas(props: React.SVGProps<SVGSVGElement>) {
       viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
       { ...props }
     >
-      <g clip-path="url(#a)">
+      <g clipPath="url(#a)">
     <path d="M12 17h1v2H0v-2h1V2a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v8h2a2 2 0 0 1 2 2v4a1 1 0 0 0 2 0V9h-2a1 1 0 0 1-1-1V4.414l-1.657-1.657 1.414-1.414 4.95 4.95A.996.996 0 0 1 20 7v9a3 3 0 0 1-6 0v-4h-2v5Zm-9 0h7v-6H3v6ZM3 3v6h7V3H3Z" fill="currentColor"/>
   </g>
   <defs>

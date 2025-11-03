@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ADDRESS_REGEXP = exports.BLOCK_HEIGHT = exports.FILE_EXTENSION = exports.HEX_REGEXP_WITH_0X = exports.HEX_REGEXP = exports.IPFS_PREFIX = exports.URL_PREFIX = void 0;
+exports.URL_PREFIX = /^https?:\/\//i;
+exports.IPFS_PREFIX = /^ipfs:\/\//i;
+exports.HEX_REGEXP = /^(?:0x)?[\da-fA-F]+$/;
+exports.HEX_REGEXP_WITH_0X = /^0x[\da-fA-F]+$/;
+exports.FILE_EXTENSION = /\.([\da-z]+)$/i;
+exports.BLOCK_HEIGHT = /^\d+$/;
+exports.ADDRESS_REGEXP = /^0x[a-fA-F\d]{40}$/;

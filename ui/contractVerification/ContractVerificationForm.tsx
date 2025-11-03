@@ -49,8 +49,8 @@ const ContractVerificationForm = ({ method: methodFromQuery, config, hash }: Pro
     defaultValues: getDefaultValues(methodFromQuery, config, hash, []),
   });
   const { handleSubmit, watch, formState, setError, reset, getFieldState, getValues, clearErrors } = formApi;
-  const submitPromiseResolver = React.useRef<((value: unknown) => void)>(undefined);
-  const methodNameRef = React.useRef<string>(undefined);
+  const submitPromiseResolver = React.useRef<((value: unknown) => void) | undefined>(undefined);
+  const methodNameRef = React.useRef<string | undefined>(undefined);
 
   const apiFetch = useApiFetch();
   const { trackContract } = useRewardsActivity();

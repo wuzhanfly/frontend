@@ -1,0 +1,30 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventTypes = void 0;
+var EventTypes;
+(function (EventTypes) {
+    EventTypes["PAGE_VIEW"] = "Page view";
+    EventTypes["SEARCH_QUERY"] = "Search query";
+    EventTypes["LOCAL_SEARCH"] = "Local search";
+    EventTypes["ADD_TO_WALLET"] = "Add to wallet";
+    EventTypes["ACCOUNT_ACCESS"] = "Account access";
+    EventTypes["LOGIN"] = "Login";
+    EventTypes["ACCOUNT_LINK_INFO"] = "Account link info";
+    EventTypes["PRIVATE_TAG"] = "Private tag";
+    EventTypes["VERIFY_ADDRESS"] = "Verify address";
+    EventTypes["VERIFY_TOKEN"] = "Verify token";
+    EventTypes["WALLET_CONNECT"] = "Wallet connect";
+    EventTypes["WALLET_ACTION"] = "Wallet action";
+    EventTypes["CONTRACT_INTERACTION"] = "Contract interaction";
+    EventTypes["CONTRACT_VERIFICATION"] = "Contract verification";
+    EventTypes["QR_CODE"] = "QR code";
+    EventTypes["PAGE_WIDGET"] = "Page widget";
+    EventTypes["TX_INTERPRETATION_INTERACTION"] = "Transaction interpretation interaction";
+    EventTypes["EXPERIMENT_STARTED"] = "Experiment started";
+    EventTypes["FILTERS"] = "Filters";
+    EventTypes["BUTTON_CLICK"] = "Button click";
+    EventTypes["PROMO_BANNER"] = "Promo banner";
+    EventTypes["APP_FEEDBACK"] = "App feedback";
+    EventTypes["ADDRESS_WIDGET"] = "Address widget";
+})(EventTypes || (exports.EventTypes = EventTypes = {}));
+/* eslint-enable  @stylistic/indent */

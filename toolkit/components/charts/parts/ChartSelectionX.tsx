@@ -23,8 +23,8 @@ export const ChartSelectionX = React.memo(({ anchorEl, height, scale, data, onSe
 
   const ref = React.useRef(null);
   const isActive = React.useRef(false);
-  const startX = React.useRef<number>(undefined);
-  const endX = React.useRef<number>(undefined);
+  const startX = React.useRef<number | undefined>(undefined);
+  const endX = React.useRef<number | undefined>(undefined);
 
   const getIndexByX = React.useCallback((x: number) => {
     const xDate = scale.invert(x);

@@ -1,4 +1,4 @@
-import { Flex, Icon } from '@chakra-ui/react';
+import { Flex, Icon, Box, Text, chakra } from '@chakra-ui/react';
 import * as React from 'react';
 
 import JsonFileIcon from 'icons-components/files/Json';

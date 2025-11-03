@@ -38,7 +38,7 @@ export const ChartTooltip = React.memo(({
   ...props
 }: ChartTooltipProps) => {
   const ref = React.useRef<SVGGElement>(null);
-  const trackerId = React.useRef<number>(undefined);
+  const trackerId = React.useRef<number | undefined>(undefined);
   const isVisible = React.useRef(false);
 
   const transitionDuration = !noAnimation ? 100 : null;

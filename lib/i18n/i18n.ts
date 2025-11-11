@@ -19,6 +19,7 @@ const resources = {
   }
 };
 
+// 预先初始化i18n实例
 i18n
   .use(initReactI18next)
   .init({
@@ -29,7 +30,13 @@ i18n
       escapeValue: false // React已经安全地转义了
     },
     ns: ['common', 'form'], // 命名空间
-    defaultNS: 'common' // 默认命名空间
+    defaultNS: 'common', // 默认命名空间
+    debug: process.env.NODE_ENV === 'development', // 开发模式下启用调试
+    // 确保语言包在其他组件之前加载
+    initImmediate: false, // 同步初始化
+    react: {
+      useSuspense: false // 禁用Suspense以避免加载问题
+    }
   });
 
 export default i18n;

@@ -15773,6 +15773,7 @@ __metadata:
     graphql: "npm:^16.8.1"
     graphql-ws: "npm:^5.11.3"
     husky: "npm:^8.0.0"
+    i18next: "npm:^25.6.1"
     jest: "npm:^29.2.1"
     jest-environment-jsdom: "npm:^29.2.1"
     jest-fetch-mock: "npm:^3.0.3"
@@ -15798,6 +15799,7 @@ __metadata:
     react-dom: "npm:19.1.0"
     react-google-recaptcha: "npm:3.1.0"
     react-hook-form: "npm:7.52.1"
+    react-i18next: "npm:^16.2.4"
     react-icons: "npm:5.4.0"
     react-identicons: "npm:^1.2.5"
     react-intersection-observer: "npm:^9.5.2"
@@ -20877,6 +20879,20 @@ __metadata:
     typescript:
       optional: true
   checksum: 10c0/25db34d17e8f11f0cd52d9ddc9c2e5942800aaaa20d0f40563aa1c50e958abd553d82ab3acf2b50ed46530c8d5cf0d5d5ccaf4d75df660c96083f78c83553438
+  languageName: node
+  linkType: hard
+
+"i18next@npm:^25.6.1":
+  version: 25.6.1
+  resolution: "i18next@npm:25.6.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.27.6"
+  peerDependencies:
+    typescript: ^5
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 10c0/efae952348302305baa107895d5a1f0ede637aea632ef9e5ad9d59e992d39df0310feaeb34989d3ecf5f2ef89fa41e7d8efba9180004366e522954db19a9a046
   languageName: node
   linkType: hard
 
@@ -26353,6 +26369,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-i18next@npm:^16.2.4":
+  version: 16.2.4
+  resolution: "react-i18next@npm:16.2.4"
+  dependencies:
+    "@babel/runtime": "npm:^7.27.6"
+    html-parse-stringify: "npm:^3.0.1"
+    use-sync-external-store: "npm:^1.6.0"
+  peerDependencies:
+    i18next: ">= 25.5.2"
+    react: ">= 16.8.0"
+    typescript: ^5
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+    typescript:
+      optional: true
+  checksum: 10c0/8212fea51e0cd0b7236b9f009daf89f6dc37e152325ad848c02a1adaaa4f761c5036ecdbfda28c651b042b2734e34bdb2cb4cfb9f10ea09b52285f29bc4e05ba
+  languageName: node
+  linkType: hard
+
 "react-icons@npm:5.4.0":
   version: 5.4.0
   resolution: "react-icons@npm:5.4.0"
@@ -29866,6 +29904,15 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
   checksum: 10c0/1b8663515c0be34fa653feb724fdcce3984037c78dd4a18f68b2c8be55cc1a1084c578d5b75f158d41b5ddffc2bf5600766d1af3c19c8e329bb20af2ec6f52f4
+  languageName: node
+  linkType: hard
+
+"use-sync-external-store@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "use-sync-external-store@npm:1.6.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/35e1179f872a53227bdf8a827f7911da4c37c0f4091c29b76b1e32473d1670ebe7bcd880b808b7549ba9a5605c233350f800ffab963ee4a4ee346ee983b6019b
   languageName: node
   linkType: hard
 

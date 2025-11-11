@@ -62,5 +62,6 @@ export default {
   "zoom_in": "Zoom In",
   "zoom_out": "Zoom Out",
   "fullscreen": "Fullscreen",
-  "exit_fullscreen": "Exit Fullscreen"
+  "exit_fullscreen": "Exit Fullscreen",
+  "address_settings": "Address settings"
 };

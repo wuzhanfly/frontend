@@ -20,7 +20,6 @@ const I18nTestComponent = () => {
           placeholder="Enter your username" 
           title="Please enter your username"
           aria-label="Username input field"
-          hint="Username should be unique"
         />
         
         <label htmlFor="email">Email Address</label>
@@ -30,7 +29,6 @@ const I18nTestComponent = () => {
           placeholder="Enter your email" 
           title="Please enter your valid email address"
           aria-label="Email input field"
-          hint="We'll never share your email"
           data-testid="email-input"
         />
         
@@ -41,14 +39,12 @@ const I18nTestComponent = () => {
           placeholder="Enter your password" 
           title="Password must be at least 8 characters"
           aria-label="Password input field"
-          hint="Use a strong password with numbers and symbols"
         />
         
         <button 
           type="submit" 
           title="Click to submit the form"
           aria-label="Submit button"
-          hint="Submit your form after filling all required fields"
         >
           Submit Form
         </button>
@@ -58,8 +54,6 @@ const I18nTestComponent = () => {
       <div 
         className="tooltip-container"
         title="This is a tooltip"
-        hint="This is a hint message"
-        tooltip="This is a tooltip message"
         data-label="Tooltip container"
       >
         <span>Hover for more information</span>
@@ -90,9 +84,9 @@ const I18nTestComponent = () => {
       
       {/* 链接文本 */}
       <nav>
-        <a href="/home" title="Go to homepage" hint="Navigate to the home page">Home</a>
-        <a href="/about" title="Learn more about us" hint="Learn more about our company">About Us</a>
-        <a href="/contact" title="Contact our support team" hint="Reach out to our support team">Contact</a>
+        <a href="/home" title="Go to homepage">Home</a>
+        <a href="/about" title="Learn more about us">About Us</a>
+        <a href="/contact" title="Contact our support team">Contact</a>
       </nav>
       
       {/* 表格标题和内容 */}
@@ -118,7 +112,6 @@ const I18nTestComponent = () => {
         <button 
           className="primary-button"
           title="Save your changes"
-          hint="Save all the changes you made"
         >
           Save Changes
         </button>
@@ -126,7 +119,6 @@ const I18nTestComponent = () => {
         <button 
           className="secondary-button"
           title="Cancel and discard changes"
-          hint="Cancel and return to the previous page"
         >
           Cancel
         </button>
@@ -134,7 +126,6 @@ const I18nTestComponent = () => {
         <button 
           className="delete-button"
           title="Delete this item permanently"
-          hint="This action cannot be undone"
         >
           Delete
         </button>
@@ -148,14 +139,7 @@ const I18nTestComponent = () => {
       </div>
       
       {/* 常见UI库属性 */}
-      <div 
-        tooltip="This is a tooltip" 
-        hint="This is a hint" 
-        helper="This is a helper text"
-        description="This is a description"
-        summary="This is a summary"
-        caption="This is a caption"
-      >
+      <div>
         UI Component with various text attributes
       </div>
     </div>

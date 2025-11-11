@@ -75,5 +75,8 @@ export default {
     "min_length": "最小长度为{{count}}个字符",
     "max_length": "最大长度为{{count}}个字符",
     "pattern": "格式无效"
+  },
+  "text": {
+    "language": "语言"
   }
 };

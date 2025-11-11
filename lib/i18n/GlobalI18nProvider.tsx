@@ -13,23 +13,32 @@ interface GlobalI18nProviderProps {
  */
 const GlobalI18nProvider: React.FC<GlobalI18nProviderProps> = ({ children }) => {
   const [isI18nReady, setIsI18nReady] = useState(false);
+  const [, setLanguageChange] = useState(0);
 
   useEffect(() => {
     // 确保i18n实例完全初始化
-    if (i18n.isInitialized) {
+    const handleInitialized = () => {
       setIsI18nReady(true);
+    };
+
+    if (i18n.isInitialized) {
+      handleInitialized();
     } else {
-      const handleInitialized = () => {
-        setIsI18nReady(true);
-      };
-      
       i18n.on('initialized', handleInitialized);
-      
-      // 清理事件监听器
-      return () => {
-        i18n.off('initialized', handleInitialized);
-      };
     }
+    
+    // 监听语言变化并强制重新渲染
+    const handleLanguageChange = () => {
+      setLanguageChange(prev => prev + 1);
+    };
+    
+    i18n.on('languageChanged', handleLanguageChange);
+    
+    // 清理事件监听器
+    return () => {
+      i18n.off('initialized', handleInitialized);
+      i18n.off('languageChanged', handleLanguageChange);
+    };
   }, []);
 
   // 在i18n完全加载之前显示加载状态或渲染空内容

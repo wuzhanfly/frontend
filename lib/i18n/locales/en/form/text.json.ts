@@ -75,5 +75,8 @@ export default {
     "min_length": "Minimum length is {{count}} characters",
     "max_length": "Maximum length is {{count}} characters",
     "pattern": "Invalid format"
+  },
+  "text": {
+    "language": "Language"
   }
 };

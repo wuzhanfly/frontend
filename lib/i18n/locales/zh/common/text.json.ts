@@ -62,5 +62,6 @@ export default {
   "zoom_in": "放大",
   "zoom_out": "缩小",
   "fullscreen": "全屏",
-  "exit_fullscreen": "退出全屏"
+  "exit_fullscreen": "退出全屏",
+  "address_settings": "地址设置"
 };

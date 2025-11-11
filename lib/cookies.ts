@@ -19,7 +19,10 @@ export enum NAMES {
   ADDRESS_NFT_DISPLAY_TYPE = 'address_nft_display_type',
   UUID = 'uuid',
   SHOW_SCAM_TOKENS = 'show_scam_tokens',
+  LANGUAGE = 'language',
 }
+
+export const LANGUAGE = 'language';
 
 export function get(name?: NAMES | undefined | null, serverCookie?: string) {
   if (!isBrowser()) {

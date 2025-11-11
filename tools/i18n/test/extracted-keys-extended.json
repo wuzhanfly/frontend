@@ -1,0 +1,607 @@
+{
+  "extractedAt": "2025-11-11T03:31:34.124Z",
+  "totalKeys": 72,
+  "keys": [
+    {
+      "key": "common.about_us",
+      "text": "About Us",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.active",
+      "text": "Active",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.cancel_and_discard_changes",
+      "text": "Cancel and discard changes",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.contact",
+      "text": "Contact",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.contact_our_support_team",
+      "text": "Contact our support team",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.delete_this_item_permanently",
+      "text": "Delete this item permanently",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.deletebutton",
+      "text": "delete-button",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.email",
+      "text": "Email",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.email_address",
+      "text": "Email Address",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.email_column",
+      "text": "Email column",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.go_to_homepage",
+      "text": "Go to homepage",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.helper_password_should_contain",
+      "text": "Helper: Password should contain at least one number",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.helpertext",
+      "text": "helper-text",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.hint_fields_marked_with_are_re",
+      "text": "Hint: Fields marked with * are required",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.home",
+      "text": "Home",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.hover_for_more_information",
+      "text": "Hover for more information",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.infomessage",
+      "text": "info-message",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.john_doe",
+      "text": "John Doe",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.johnexamplecom",
+      "text": "john@example.com",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.learn_more_about_us",
+      "text": "Learn more about us",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.name",
+      "text": "Name",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.name_column",
+      "text": "Name column",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.password",
+      "text": "Password",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.password_input_field",
+      "text": "Password input field",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.password_must_be_at_least_8_ch",
+      "text": "Password must be at least 8 characters",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.please_enter_your_username",
+      "text": "Please enter your username",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.please_enter_your_valid_email_",
+      "text": "Please enter your valid email address",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.primarybutton",
+      "text": "primary-button",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.product_description",
+      "text": "Product Description",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.reacti18next",
+      "text": "react-i18next",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.save_your_changes",
+      "text": "Save your changes",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.secondarybutton",
+      "text": "secondary-button",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.status",
+      "text": "Status",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.status_column",
+      "text": "Status column",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.submit_button",
+      "text": "Submit button",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.successmessage",
+      "text": "success-message",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.this_is_a_sample_text_for_inte",
+      "text": "This is a sample text for internationalization testing",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.this_is_a_tooltip",
+      "text": "This is a tooltip",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.this_product_offers_excellent_",
+      "text": "This product offers excellent features and performance",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.tooltip_container",
+      "text": "Tooltip container",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.tooltipcontainer",
+      "text": "tooltip-container",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.username",
+      "text": "Username",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.username_input_field",
+      "text": "Username input field",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.validation_please_enter_a_vali",
+      "text": "Validation: Please enter a valid email address",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.validationmessage",
+      "text": "validation-message",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.warningmessage",
+      "text": "warning-message",
+      "source": "string_literal",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "common.welcome_to_our_application",
+      "text": "Welcome to our application",
+      "source": "jsx_text",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.aria-label.email_input_field",
+      "text": "Email input field",
+      "source": "jsx_attribute",
+      "attribute": "aria-label",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.aria-label.password_input_field",
+      "text": "Password input field",
+      "source": "jsx_attribute",
+      "attribute": "aria-label",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.aria-label.submit_button",
+      "text": "Submit button",
+      "source": "jsx_attribute",
+      "attribute": "aria-label",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.aria-label.username_input_field",
+      "text": "Username input field",
+      "source": "jsx_attribute",
+      "attribute": "aria-label",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.data-label.email_column",
+      "text": "Email column",
+      "source": "jsx_attribute",
+      "attribute": "data-label",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.data-label.name_column",
+      "text": "Name column",
+      "source": "jsx_attribute",
+      "attribute": "data-label",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.data-label.status_column",
+      "text": "Status column",
+      "source": "jsx_attribute",
+      "attribute": "data-label",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.data-label.tooltip_container",
+      "text": "Tooltip container",
+      "source": "jsx_attribute",
+      "attribute": "data-label",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.data-testid.emailinput",
+      "text": "email-input",
+      "source": "jsx_attribute",
+      "attribute": "data-testid",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.data-testid.errormessage",
+      "text": "error-message",
+      "source": "jsx_attribute",
+      "attribute": "data-testid",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.data-testid.hinttext",
+      "text": "hint-text",
+      "source": "jsx_attribute",
+      "attribute": "data-testid",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.placeholder.enter_your_email",
+      "text": "Enter your email",
+      "source": "jsx_attribute",
+      "attribute": "placeholder",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.placeholder.enter_your_password",
+      "text": "Enter your password",
+      "source": "jsx_attribute",
+      "attribute": "placeholder",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.placeholder.enter_your_username",
+      "text": "Enter your username",
+      "source": "jsx_attribute",
+      "attribute": "placeholder",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.title.cancel_and_discard_changes",
+      "text": "Cancel and discard changes",
+      "source": "jsx_attribute",
+      "attribute": "title",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.title.click_to_submit_the_form",
+      "text": "Click to submit the form",
+      "source": "jsx_attribute",
+      "attribute": "title",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.title.contact_our_support_team",
+      "text": "Contact our support team",
+      "source": "jsx_attribute",
+      "attribute": "title",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.title.delete_this_item_permanently",
+      "text": "Delete this item permanently",
+      "source": "jsx_attribute",
+      "attribute": "title",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.title.go_to_homepage",
+      "text": "Go to homepage",
+      "source": "jsx_attribute",
+      "attribute": "title",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.title.learn_more_about_us",
+      "text": "Learn more about us",
+      "source": "jsx_attribute",
+      "attribute": "title",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.title.password_must_be_at_least_8_ch",
+      "text": "Password must be at least 8 characters",
+      "source": "jsx_attribute",
+      "attribute": "title",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.title.please_enter_your_username",
+      "text": "Please enter your username",
+      "source": "jsx_attribute",
+      "attribute": "title",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.title.please_enter_your_valid_email_",
+      "text": "Please enter your valid email address",
+      "source": "jsx_attribute",
+      "attribute": "title",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.title.save_your_changes",
+      "text": "Save your changes",
+      "source": "jsx_attribute",
+      "attribute": "title",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    },
+    {
+      "key": "form.title.this_is_a_tooltip",
+      "text": "This is a tooltip",
+      "source": "jsx_attribute",
+      "attribute": "title",
+      "files": [
+        "tools/i18n/test/I18nTestComponent.tsx"
+      ]
+    }
+  ]
+}

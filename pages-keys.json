@@ -1,0 +1,194 @@
+{
+  "extractedAt": "2025-11-11T07:59:33.106Z",
+  "totalKeys": 23,
+  "keys": [
+    {
+      "key": "common:common.0_auto",
+      "text": "0 auto",
+      "source": "string_literal",
+      "files": [
+        "pages/_app.tsx"
+      ]
+    },
+    {
+      "key": "common:common.api_fetch",
+      "text": "API fetch",
+      "source": "string_literal",
+      "files": [
+        "pages/api/media-type.ts"
+      ]
+    },
+    {
+      "key": "common:common.celestia_txn_batches_feature_i",
+      "text": "Celestia txn batches feature is not enabled.",
+      "source": "string_literal",
+      "files": [
+        "pages/batches/celestia/[height]/[commitment].tsx"
+      ]
+    },
+    {
+      "key": "common:common.configurl",
+      "text": "configUrl",
+      "source": "string_literal",
+      "files": [
+        "pages/apps/[id].tsx"
+      ]
+    },
+    {
+      "key": "common:common.deposits_feature_is_not_enable",
+      "text": "Deposits feature is not enabled.",
+      "source": "string_literal",
+      "files": [
+        "pages/deposits/index.tsx"
+      ]
+    },
+    {
+      "key": "common:common.fitcontent",
+      "text": "fit-content",
+      "source": "string_literal",
+      "files": [
+        "pages/_app.tsx"
+      ]
+    },
+    {
+      "key": "common:common.frontend",
+      "text": "frontend_",
+      "source": "string_literal",
+      "files": [
+        "pages/api/metrics.ts"
+      ]
+    },
+    {
+      "key": "common:common.nextpublic",
+      "text": "NEXT_PUBLIC_",
+      "source": "string_literal",
+      "files": [
+        "pages/api/config.ts"
+      ]
+    },
+    {
+      "key": "common:common.nextpublicapphost",
+      "text": "NEXT_PUBLIC_APP_HOST:",
+      "source": "string_literal",
+      "files": [
+        "pages/_app.tsx"
+      ]
+    },
+    {
+      "key": "common:common.no_url_provided",
+      "text": "no url provided",
+      "source": "string_literal",
+      "files": [
+        "pages/api/proxy.ts"
+      ]
+    },
+    {
+      "key": "common:common.not_found",
+      "text": "Not found",
+      "source": "string_literal",
+      "files": [
+        "pages/404.tsx"
+      ]
+    },
+    {
+      "key": "common:common.renderpage",
+      "text": "renderPage",
+      "source": "string_literal",
+      "files": [
+        "pages/_document.tsx"
+      ]
+    },
+    {
+      "key": "common:common.resource_not_found",
+      "text": "Resource not found",
+      "source": "string_literal",
+      "files": [
+        "pages/api/monitoring/invalid-api-schema.ts"
+      ]
+    },
+    {
+      "key": "common:common.shortcut_icon",
+      "text": "shortcut icon",
+      "source": "string_literal",
+      "files": [
+        "pages/_document.tsx"
+      ]
+    },
+    {
+      "key": "common:common.txn_batches_feature_is_not_ena",
+      "text": "Txn batches feature is not enabled.",
+      "source": "string_literal",
+      "files": [
+        "pages/batches/[number].tsx",
+        "pages/batches/index.tsx"
+      ]
+    },
+    {
+      "key": "common:common.txn_withdrawals_feature_is_not",
+      "text": "Txn withdrawals feature is not enabled.",
+      "source": "string_literal",
+      "files": [
+        "pages/txn-withdrawals/index.tsx"
+      ]
+    },
+    {
+      "key": "common:common.withdrawals_feature_is_not_ena",
+      "text": "Withdrawals feature is not enabled.",
+      "source": "string_literal",
+      "files": [
+        "pages/withdrawals/index.tsx"
+      ]
+    },
+    {
+      "key": "common:common.xbsaccountcsrf",
+      "text": "x-bs-account-csrf",
+      "source": "string_literal",
+      "files": [
+        "pages/api/csrf.ts"
+      ]
+    },
+    {
+      "key": "common:common.yyyymmdd",
+      "text": "YYYY-MM-DD",
+      "source": "string_literal",
+      "files": [
+        "pages/stats/[id].tsx"
+      ]
+    },
+    {
+      "key": "common:common.zkevm",
+      "text": "zkEvm",
+      "source": "string_literal",
+      "files": [
+        "pages/batches/[number].tsx"
+      ]
+    },
+    {
+      "key": "common:common.zksync",
+      "text": "zkSync",
+      "source": "string_literal",
+      "files": [
+        "pages/batches/[number].tsx",
+        "pages/batches/index.tsx"
+      ]
+    },
+    {
+      "key": "tokens:common.chainslug",
+      "text": "chain-slug",
+      "source": "string_literal",
+      "files": [
+        "pages/chain/[chain-slug]/token/[hash]/index.tsx",
+        "pages/chain/[chain-slug]/token/[hash]/instance/[id].tsx"
+      ]
+    },
+    {
+      "key": "validators:common.validators_feature_is_not_enab",
+      "text": "Validators feature is not enabled.",
+      "source": "string_literal",
+      "files": [
+        "pages/validators/[id].tsx",
+        "pages/validators/index.tsx"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "clusters.common.cluster_not_found": "Cluster not found",
+  "clusters.common.the_unique_cluster_name": "The unique cluster name",
+  "clusters.common.the_address_attached_to_this_c": "The address attached to this cluster name",
+  "clusters.common.when_this_cluster_name_was_cre": "When this cluster name was created",
+  "clusters.common.clusters": "Clusters",
+  "clusters.common.cluster_details": "Cluster details"
+}

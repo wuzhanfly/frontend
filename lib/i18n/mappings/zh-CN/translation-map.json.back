@@ -1,0 +1,6174 @@
+[
+  {
+    "key": "Top accounts",
+    "value": "Top accounts"
+  },
+  {
+    "key": "Coming soon 🔜",
+    "value": "Coming soon 🔜"
+  },
+  {
+    "key": "There are no accounts.",
+    "value": "There are no accounts."
+  },
+  {
+    "key": "Watch list",
+    "value": "Watch list"
+  },
+  {
+    "key": "Email notifications",
+    "value": "Email notifications"
+  },
+  {
+    "key": "Save changes",
+    "value": "Save changes"
+  },
+  {
+    "key": "Add address",
+    "value": "Add address"
+  },
+  {
+    "key": "Promise",
+    "value": "Promise"
+  },
+  {
+    "key": "Notification methods",
+    "value": "Notification methods"
+  },
+  {
+    "key": "Incoming",
+    "value": "Incoming"
+  },
+  {
+    "key": "Outgoing",
+    "value": "Outgoing"
+  },
+  {
+    "key": "Edit watch list address",
+    "value": "Edit watch list address"
+  },
+  {
+    "key": "New address to watch list",
+    "value": "New address to watch list"
+  },
+  {
+    "key": "Address",
+    "value": "Address"
+  },
+  {
+    "key": "will be deleted",
+    "value": "will be deleted"
+  },
+  {
+    "key": "Add email",
+    "value": "Add email"
+  },
+  {
+    "key": "There has been an error processing your request",
+    "value": "There has been an error processing your request"
+  },
+  {
+    "key": "Email notification is ON",
+    "value": "Email notification is ON"
+  },
+  {
+    "key": "Email notification is OFF",
+    "value": "Email notification is OFF"
+  },
+  {
+    "key": "Email notification",
+    "value": "Email notification"
+  },
+  {
+    "key": "Private tag",
+    "value": "Private tag"
+  },
+  {
+    "key": "There are no transactions.",
+    "value": "There are no transactions."
+  },
+  {
+    "key": "All",
+    "value": "All"
+  },
+  {
+    "key": "Received from",
+    "value": "Received from"
+  },
+  {
+    "key": "Sent to",
+    "value": "Sent to"
+  },
+  {
+    "key": "Txn",
+    "value": "Txn"
+  },
+  {
+    "key": "Gas used",
+    "value": "Gas used"
+  },
+  {
+    "key": "Download CSV",
+    "value": "Download CSV"
+  },
+  {
+    "key": "Short identifier of an address that may change with chain state updates",
+    "value": "Short identifier of an address that may change with chain state updates"
+  },
+  {
+    "key": "Identifies the purpose and behavior of the address on the Filecoin network",
+    "value": "Identifies the purpose and behavior of the address on the Filecoin network"
+  },
+  {
+    "key": "0x-style address to which the Filecoin address is assigned by the Ethereum Address Manager",
+    "value": "0x-style address to which the Filecoin address is assigned by the Ethereum Address Manager"
+  },
+  {
+    "key": "Transaction and address of creation",
+    "value": "Transaction and address of creation"
+  },
+  {
+    "key": "All tokens in the account and total value",
+    "value": "All tokens in the account and total value"
+  },
+  {
+    "key": "Number of transactions related to this address",
+    "value": "Number of transactions related to this address"
+  },
+  {
+    "key": "Gas used by the address",
+    "value": "Gas used by the address"
+  },
+  {
+    "key": "Block number in which the address was updated",
+    "value": "Block number in which the address was updated"
+  },
+  {
+    "key": "Metrics provided by third party partners",
+    "value": "Metrics provided by third party partners"
+  },
+  {
+    "key": "There are no token transfers.",
+    "value": "There are no token transfers."
+  },
+  {
+    "key": "Outgoing transactions",
+    "value": "Outgoing transactions"
+  },
+  {
+    "key": "Incoming transactions",
+    "value": "Incoming transactions"
+  },
+  {
+    "key": "Vulnerabilities distribution",
+    "value": "Vulnerabilities distribution"
+  },
+  {
+    "key": "View full report",
+    "value": "View full report"
+  },
+  {
+    "key": "List of clusters registered to this address",
+    "value": "List of clusters registered to this address"
+  },
+  {
+    "key": "Address clusters",
+    "value": "Address clusters"
+  },
+  {
+    "key": "Attached to this address",
+    "value": "Attached to this address"
+  },
+  {
+    "key": "More results",
+    "value": "More results"
+  },
+  {
+    "key": "Balances",
+    "value": "Balances"
+  },
+  {
+    "key": "Delta",
+    "value": "Delta"
+  },
+  {
+    "key": "Txs",
+    "value": "Txs"
+  },
+  {
+    "key": "Age",
+    "value": "Age"
+  },
+  {
+    "key": "Checking contract verification",
+    "value": "Checking contract verification"
+  },
+  {
+    "key": "Contract successfully verified",
+    "value": "Contract successfully verified"
+  },
+  {
+    "key": "Contract not verified automatically. Please verify manually.",
+    "value": "Contract not verified automatically. Please verify manually."
+  },
+  {
+    "key": "Open source code in IDE",
+    "value": "Open source code in IDE"
+  },
+  {
+    "key": "Open in",
+    "value": "Open in"
+  },
+  {
+    "key": "Redactors",
+    "value": "Redactors"
+  },
+  {
+    "key": "Contract creation failed and there is no runtime bytecode. Below is the raw creation bytecode.",
+    "value": "Contract creation failed and there is no runtime bytecode. Below is the raw creation bytecode."
+  },
+  {
+    "key": "Contract creation code",
+    "value": "Contract creation code"
+  },
+  {
+    "key": "Constructor Arguments",
+    "value": "Constructor Arguments"
+  },
+  {
+    "key": "View external libraries",
+    "value": "View external libraries"
+  },
+  {
+    "key": "Libraries",
+    "value": "Libraries"
+  },
+  {
+    "key": "Library",
+    "value": "Library"
+  },
+  {
+    "key": "Select contract",
+    "value": "Select contract"
+  },
+  {
+    "key": "Open contract details page in new tab",
+    "value": "Open contract details page in new tab"
+  },
+  {
+    "key": "Visualize contract code using Sol2Uml JS library",
+    "value": "Visualize contract code using Sol2Uml JS library"
+  },
+  {
+    "key": "Contract source code",
+    "value": "Contract source code"
+  },
+  {
+    "key": "Minimal proxy",
+    "value": "Minimal proxy"
+  },
+  {
+    "key": "Proxy storage slots",
+    "value": "Proxy storage slots"
+  },
+  {
+    "key": "Diamond proxy",
+    "value": "Diamond proxy"
+  },
+  {
+    "key": "Eternal storage",
+    "value": "Eternal storage"
+  },
+  {
+    "key": "Minimal Upgradeable Proxies",
+    "value": "Minimal Upgradeable Proxies"
+  },
+  {
+    "key": "Clones with immutable arguments",
+    "value": "Clones with immutable arguments"
+  },
+  {
+    "key": "Safe proxy",
+    "value": "Safe proxy"
+  },
+  {
+    "key": "Compound protocol proxy",
+    "value": "Compound protocol proxy"
+  },
+  {
+    "key": "Unknown proxy pattern",
+    "value": "Unknown proxy pattern"
+  },
+  {
+    "key": "View contract in Sourcify repository",
+    "value": "View contract in Sourcify repository"
+  },
+  {
+    "key": "Partial",
+    "value": "Partial"
+  },
+  {
+    "key": "Exact",
+    "value": "Exact"
+  },
+  {
+    "key": "This is an",
+    "value": "This is an"
+  },
+  {
+    "key": "Submit audit",
+    "value": "Submit audit"
+  },
+  {
+    "key": "Something went wrong. Try again later.",
+    "value": "Something went wrong. Try again later."
+  },
+  {
+    "key": "Submitter name",
+    "value": "Submitter name"
+  },
+  {
+    "key": "Submitter email",
+    "value": "Submitter email"
+  },
+  {
+    "key": "I'm the contract owner",
+    "value": "I'm the contract owner"
+  },
+  {
+    "key": "Project name",
+    "value": "Project name"
+  },
+  {
+    "key": "Project URL",
+    "value": "Project URL"
+  },
+  {
+    "key": "Audit company name",
+    "value": "Audit company name"
+  },
+  {
+    "key": "Audit report URL",
+    "value": "Audit report URL"
+  },
+  {
+    "key": "Audit publish date",
+    "value": "Audit publish date"
+  },
+  {
+    "key": "Comment",
+    "value": "Comment"
+  },
+  {
+    "key": "Textarea",
+    "value": "Textarea"
+  },
+  {
+    "key": "Send request",
+    "value": "Send request"
+  },
+  {
+    "key": "Contract name",
+    "value": "Contract name"
+  },
+  {
+    "key": "Creator",
+    "value": "Creator"
+  },
+  {
+    "key": "Compiler version",
+    "value": "Compiler version"
+  },
+  {
+    "key": "ZK compiler version",
+    "value": "ZK compiler version"
+  },
+  {
+    "key": "EVM version",
+    "value": "EVM version"
+  },
+  {
+    "key": "License",
+    "value": "License"
+  },
+  {
+    "key": "Optimization enabled",
+    "value": "Optimization enabled"
+  },
+  {
+    "key": "Package name",
+    "value": "Package name"
+  },
+  {
+    "key": "Verified at",
+    "value": "Verified at"
+  },
+  {
+    "key": "Contract file path",
+    "value": "Contract file path"
+  },
+  {
+    "key": "Security audit",
+    "value": "Security audit"
+  },
+  {
+    "key": "Collapse",
+    "value": "Collapse"
+  },
+  {
+    "key": "Expand",
+    "value": "Expand"
+  },
+  {
+    "key": "Contract information",
+    "value": "Contract information"
+  },
+  {
+    "key": "Reset",
+    "value": "Reset"
+  },
+  {
+    "key": "Search by method name",
+    "value": "Search by method name"
+  },
+  {
+    "key": "System address",
+    "value": "System address"
+  },
+  {
+    "key": "Connect your wallet to enter your address.",
+    "value": "Connect your wallet to enter your address."
+  },
+  {
+    "key": "Fallback",
+    "value": "Fallback"
+  },
+  {
+    "key": "Simulate",
+    "value": "Simulate"
+  },
+  {
+    "key": "Copy calldata",
+    "value": "Copy calldata"
+  },
+  {
+    "key": "Copied",
+    "value": "Copied"
+  },
+  {
+    "key": "Something went wrong",
+    "value": "Something went wrong"
+  },
+  {
+    "key": "View transaction details",
+    "value": "View transaction details"
+  },
+  {
+    "key": "Transaction has been confirmed.",
+    "value": "Transaction has been confirmed."
+  },
+  {
+    "key": "Field is required",
+    "value": "Field is required"
+  },
+  {
+    "key": "Invalid address format",
+    "value": "Invalid address format"
+  },
+  {
+    "key": "Invalid address checksum",
+    "value": "Invalid address checksum"
+  },
+  {
+    "key": "Invalid integer format",
+    "value": "Invalid integer format"
+  },
+  {
+    "key": "Invalid bytes format",
+    "value": "Invalid bytes format"
+  },
+  {
+    "key": "t aware of this and thinks that fallback method state mutability can only be ",
+    "value": "t aware of this and thinks that fallback method state mutability can only be "
+  },
+  {
+    "key": "Public Client is not defined",
+    "value": "Public Client is not defined"
+  },
+  {
+    "key": "Wallet is not connected",
+    "value": "Wallet is not connected"
+  },
+  {
+    "key": "Wallet Client is not defined",
+    "value": "Wallet Client is not defined"
+  },
+  {
+    "key": "Method name is not defined",
+    "value": "Method name is not defined"
+  },
+  {
+    "key": "Read",
+    "value": "Read"
+  },
+  {
+    "key": "Write",
+    "value": "Write"
+  },
+  {
+    "key": "Code",
+    "value": "Code"
+  },
+  {
+    "key": "Compiler",
+    "value": "Compiler"
+  },
+  {
+    "key": "Compiler Settings",
+    "value": "Compiler Settings"
+  },
+  {
+    "key": "Custom ABI",
+    "value": "Custom ABI"
+  },
+  {
+    "key": "MUD System",
+    "value": "MUD System"
+  },
+  {
+    "key": "Not a contract",
+    "value": "Not a contract"
+  },
+  {
+    "key": "Address hash encoded in base16 format",
+    "value": "Address hash encoded in base16 format"
+  },
+  {
+    "key": "Address hash encoded in bech32 format",
+    "value": "Address hash encoded in bech32 format"
+  },
+  {
+    "key": "Metadata URL",
+    "value": "Metadata URL"
+  },
+  {
+    "key": "Link to additional information published by the account owner",
+    "value": "Link to additional information published by the account owner"
+  },
+  {
+    "key": "Vote signer address",
+    "value": "Vote signer address"
+  },
+  {
+    "key": "Address authorized to vote in governance and validator elections on behalf of this account",
+    "value": "Address authorized to vote in governance and validator elections on behalf of this account"
+  },
+  {
+    "key": "Validator signer address",
+    "value": "Validator signer address"
+  },
+  {
+    "key": "Attestation signer address",
+    "value": "Attestation signer address"
+  },
+  {
+    "key": "Address whose key this account uses to sign attestations on the Attestations contract",
+    "value": "Address whose key this account uses to sign attestations on the Attestations contract"
+  },
+  {
+    "key": "Token name and symbol",
+    "value": "Token name and symbol"
+  },
+  {
+    "key": "The name found in the source code of the Contract",
+    "value": "The name found in the source code of the Contract"
+  },
+  {
+    "key": "The name of the validator",
+    "value": "The name of the validator"
+  },
+  {
+    "key": "Multichain",
+    "value": "Multichain"
+  },
+  {
+    "key": "We were unable to generate QR code.",
+    "value": "We were unable to generate QR code."
+  },
+  {
+    "key": "QR code generation failed",
+    "value": "QR code generation failed"
+  },
+  {
+    "key": "Click to view QR code",
+    "value": "Click to view QR code"
+  },
+  {
+    "key": "Show QR code",
+    "value": "Show QR code"
+  },
+  {
+    "key": "Address QR code",
+    "value": "Address QR code"
+  },
+  {
+    "key": "Invalid response schema",
+    "value": "Invalid response schema"
+  },
+  {
+    "key": "List of names resolved or owned by this address",
+    "value": "List of names resolved or owned by this address"
+  },
+  {
+    "key": "Address domains",
+    "value": "Address domains"
+  },
+  {
+    "key": "Primary*",
+    "value": "Primary*"
+  },
+  {
+    "key": "Owned by this address",
+    "value": "Owned by this address"
+  },
+  {
+    "key": "Resolved to this address",
+    "value": "Resolved to this address"
+  },
+  {
+    "key": "Epoch #",
+    "value": "Epoch #"
+  },
+  {
+    "key": "Reward type",
+    "value": "Reward type"
+  },
+  {
+    "key": "Associated address",
+    "value": "Associated address"
+  },
+  {
+    "key": "Data Cap Management",
+    "value": "Data Cap Management"
+  },
+  {
+    "key": "Ethereum Address Manager",
+    "value": "Ethereum Address Manager"
+  },
+  {
+    "key": "Ethereum Virtual Machine",
+    "value": "Ethereum Virtual Machine"
+  },
+  {
+    "key": "Initialization",
+    "value": "Initialization"
+  },
+  {
+    "key": "Storage Market",
+    "value": "Storage Market"
+  },
+  {
+    "key": "Storage Provider",
+    "value": "Storage Provider"
+  },
+  {
+    "key": "Multi-Signature Wallet",
+    "value": "Multi-Signature Wallet"
+  },
+  {
+    "key": "Payment Channel",
+    "value": "Payment Channel"
+  },
+  {
+    "key": "Placeholder Address",
+    "value": "Placeholder Address"
+  },
+  {
+    "key": "Power Management",
+    "value": "Power Management"
+  },
+  {
+    "key": "Incentives and Rewards",
+    "value": "Incentives and Rewards"
+  },
+  {
+    "key": "System Operations",
+    "value": "System Operations"
+  },
+  {
+    "key": "Verification Registry",
+    "value": "Verification Registry"
+  },
+  {
+    "key": "MUD World",
+    "value": "MUD World"
+  },
+  {
+    "key": "Field",
+    "value": "Field"
+  },
+  {
+    "key": "Hide columns",
+    "value": "Hide columns"
+  },
+  {
+    "key": "Show all columns",
+    "value": "Show all columns"
+  },
+  {
+    "key": "Modified",
+    "value": "Modified"
+  },
+  {
+    "key": "There are no records for",
+    "value": "There are no records for"
+  },
+  {
+    "key": "Search by name, namespace or table ID...",
+    "value": "Search by name, namespace or table ID..."
+  },
+  {
+    "key": "View schema",
+    "value": "View schema"
+  },
+  {
+    "key": "Full name",
+    "value": "Full name"
+  },
+  {
+    "key": "Table ID",
+    "value": "Table ID"
+  },
+  {
+    "key": "Show all tokens",
+    "value": "Show all tokens"
+  },
+  {
+    "key": "Token select",
+    "value": "Token select"
+  },
+  {
+    "key": "Search by token name",
+    "value": "Search by token name"
+  },
+  {
+    "key": "Could not find any matches.",
+    "value": "Could not find any matches."
+  },
+  {
+    "key": "Tokens",
+    "value": "Tokens"
+  },
+  {
+    "key": "By collection",
+    "value": "By collection"
+  },
+  {
+    "key": "List",
+    "value": "List"
+  },
+  {
+    "key": "Price",
+    "value": "Price"
+  },
+  {
+    "key": "Quantity",
+    "value": "Quantity"
+  },
+  {
+    "key": "Asset",
+    "value": "Asset"
+  },
+  {
+    "key": "Contract address",
+    "value": "Contract address"
+  },
+  {
+    "key": "Qty",
+    "value": "Qty"
+  },
+  {
+    "key": "Net Worth",
+    "value": "Net Worth"
+  },
+  {
+    "key": "Array",
+    "value": "Array"
+  },
+  {
+    "key": "No public RPC client",
+    "value": "No public RPC client"
+  },
+  {
+    "key": "Percentage",
+    "value": "Percentage"
+  },
+  {
+    "key": "Txn count",
+    "value": "Txn count"
+  },
+  {
+    "key": "Rank",
+    "value": "Rank"
+  },
+  {
+    "key": "Details",
+    "value": "Details"
+  },
+  {
+    "key": "Contract",
+    "value": "Contract"
+  },
+  {
+    "key": "Transactions",
+    "value": "Transactions"
+  },
+  {
+    "key": "Token transfers",
+    "value": "Token transfers"
+  },
+  {
+    "key": "Internal txns",
+    "value": "Internal txns"
+  },
+  {
+    "key": "Coin balance history",
+    "value": "Coin balance history"
+  },
+  {
+    "key": "Logs",
+    "value": "Logs"
+  },
+  {
+    "key": "Address details",
+    "value": "Address details"
+  },
+  {
+    "key": "Chains",
+    "value": "Chains"
+  },
+  {
+    "key": "View by chain",
+    "value": "View by chain"
+  },
+  {
+    "key": "Cross-chain",
+    "value": "Cross-chain"
+  },
+  {
+    "key": "Local",
+    "value": "Local"
+  },
+  {
+    "key": "Account history",
+    "value": "Account history"
+  },
+  {
+    "key": "User operations",
+    "value": "User operations"
+  },
+  {
+    "key": "Deposits",
+    "value": "Deposits"
+  },
+  {
+    "key": "Withdrawals",
+    "value": "Withdrawals"
+  },
+  {
+    "key": "Epoch rewards",
+    "value": "Epoch rewards"
+  },
+  {
+    "key": "Widgets",
+    "value": "Widgets"
+  },
+  {
+    "key": "Celo account",
+    "value": "Celo account"
+  },
+  {
+    "key": "Validator",
+    "value": "Validator"
+  },
+  {
+    "key": "Proxy",
+    "value": "Proxy"
+  },
+  {
+    "key": "Token",
+    "value": "Token"
+  },
+  {
+    "key": "Smart contract wallet",
+    "value": "Smart contract wallet"
+  },
+  {
+    "key": "XStar humanity levels",
+    "value": "XStar humanity levels"
+  },
+  {
+    "key": "Successfully added token to your wallet",
+    "value": "Successfully added token to your wallet"
+  },
+  {
+    "key": "Add token to wallet",
+    "value": "Add token to wallet"
+  },
+  {
+    "key": "Incoming txn",
+    "value": "Incoming txn"
+  },
+  {
+    "key": "Outgoing txn",
+    "value": "Outgoing txn"
+  },
+  {
+    "key": "Txn to the same address",
+    "value": "Txn to the same address"
+  },
+  {
+    "key": "external chain logo",
+    "value": "external chain logo"
+  },
+  {
+    "key": "Address on TON",
+    "value": "Address on TON"
+  },
+  {
+    "key": "API fetch",
+    "value": "API fetch"
+  },
+  {
+    "key": "Resource not found",
+    "value": "Resource not found"
+  },
+  {
+    "key": "Unable to process invalid API schema",
+    "value": "Unable to process invalid API schema"
+  },
+  {
+    "key": "Unknown error",
+    "value": "Unknown error"
+  },
+  {
+    "key": "no url provided",
+    "value": "no url provided"
+  },
+  {
+    "key": "Image",
+    "value": "Image"
+  },
+  {
+    "key": "Raw",
+    "value": "Raw"
+  },
+  {
+    "key": "Not an image",
+    "value": "Not an image"
+  },
+  {
+    "key": "Blob data",
+    "value": "Blob data"
+  },
+  {
+    "key": "Blob image representation",
+    "value": "Blob image representation"
+  },
+  {
+    "key": "Commitment to the data in the blob",
+    "value": "Commitment to the data in the blob"
+  },
+  {
+    "key": "Blob size in bytes",
+    "value": "Blob size in bytes"
+  },
+  {
+    "key": "Hash of the transaction with this blob",
+    "value": "Hash of the transaction with this blob"
+  },
+  {
+    "key": "This blob is not yet indexed",
+    "value": "This blob is not yet indexed"
+  },
+  {
+    "key": "Blob details",
+    "value": "Blob details"
+  },
+  {
+    "key": "Displays the epoch this block belongs to before the epoch is finalized",
+    "value": "Displays the epoch this block belongs to before the epoch is finalized"
+  },
+  {
+    "key": "Displays the epoch finalized by this block",
+    "value": "Displays the epoch finalized by this block"
+  },
+  {
+    "key": "Static block reward",
+    "value": "Static block reward"
+  },
+  {
+    "key": "Txn fees",
+    "value": "Txn fees"
+  },
+  {
+    "key": "Burnt fees",
+    "value": "Burnt fees"
+  },
+  {
+    "key": "Uncle",
+    "value": "Uncle"
+  },
+  {
+    "key": "View previous block",
+    "value": "View previous block"
+  },
+  {
+    "key": "View next block",
+    "value": "View next block"
+  },
+  {
+    "key": "The most recent L1 block height as of this L2 block",
+    "value": "The most recent L1 block height as of this L2 block"
+  },
+  {
+    "key": "Batch number",
+    "value": "Batch number"
+  },
+  {
+    "key": "Size of the block in bytes",
+    "value": "Size of the block in bytes"
+  },
+  {
+    "key": "The number of transactions in the block",
+    "value": "The number of transactions in the block"
+  },
+  {
+    "key": "The number of beacon withdrawals in the block",
+    "value": "The number of beacon withdrawals in the block"
+  },
+  {
+    "key": "Status is the short interpretation of the batch lifecycle",
+    "value": "Status is the short interpretation of the batch lifecycle"
+  },
+  {
+    "key": "A block producer who successfully included the block onto the blockchain",
+    "value": "A block producer who successfully included the block onto the blockchain"
+  },
+  {
+    "key": "L1 transaction containing this batch commitment",
+    "value": "L1 transaction containing this batch commitment"
+  },
+  {
+    "key": "L1 transaction containing confirmation of this batch",
+    "value": "L1 transaction containing confirmation of this batch"
+  },
+  {
+    "key": "The iteration of the consensus round in which the block was proposed",
+    "value": "The iteration of the consensus round in which the block was proposed"
+  },
+  {
+    "key": "The total gas amount used in the block and its percentage of gas filled in the block",
+    "value": "The total gas amount used in the block and its percentage of gas filled in the block"
+  },
+  {
+    "key": "Total gas limit provided by all transactions in the block",
+    "value": "Total gas limit provided by all transactions in the block"
+  },
+  {
+    "key": "The minimum gas price a transaction should have in order to be included in this block",
+    "value": "The minimum gas price a transaction should have in order to be included in this block"
+  },
+  {
+    "key": "Minimum fee required per unit of gas. Fee adjusts based on network congestion",
+    "value": "Minimum fee required per unit of gas. Fee adjusts based on network congestion"
+  },
+  {
+    "key": "Total difficulty of the chain until this block",
+    "value": "Total difficulty of the chain until this block"
+  },
+  {
+    "key": "The SHA256 hash of the block",
+    "value": "The SHA256 hash of the block"
+  },
+  {
+    "key": "The cumulative number of L2 to L1 transactions as of this block",
+    "value": "The cumulative number of L2 to L1 transactions as of this block"
+  },
+  {
+    "key": "The root of the Merkle accumulator representing all L2 to L1 transactions as of this block",
+    "value": "The root of the Merkle accumulator representing all L2 to L1 transactions as of this block"
+  },
+  {
+    "key": "The number of delayed L1 to L2 messages read as of this block",
+    "value": "The number of delayed L1 to L2 messages read as of this block"
+  },
+  {
+    "key": "in this block",
+    "value": "in this block"
+  },
+  {
+    "key": "- Genesis Block",
+    "value": "- Genesis Block"
+  },
+  {
+    "key": "There are no internal transactions.",
+    "value": "There are no internal transactions."
+  },
+  {
+    "key": "Green Fund",
+    "value": "Green Fund"
+  },
+  {
+    "key": "Actual amount of gas used by the blobs in this block",
+    "value": "Actual amount of gas used by the blobs in this block"
+  },
+  {
+    "key": "A running total of blob gas consumed in excess of the target, prior to the block.",
+    "value": "A running total of blob gas consumed in excess of the target, prior to the block."
+  },
+  {
+    "key": "Aggregate quorum certificate",
+    "value": "Aggregate quorum certificate"
+  },
+  {
+    "key": "Quorum certificate",
+    "value": "Quorum certificate"
+  },
+  {
+    "key": "View",
+    "value": "View"
+  },
+  {
+    "key": "Signature",
+    "value": "Signature"
+  },
+  {
+    "key": "Signers",
+    "value": "Signers"
+  },
+  {
+    "key": "Nested quorum certificates",
+    "value": "Nested quorum certificates"
+  },
+  {
+    "key": "Proposed by validator",
+    "value": "Proposed by validator"
+  },
+  {
+    "key": "There are no blocks.",
+    "value": "There are no blocks."
+  },
+  {
+    "key": "Block countdown",
+    "value": "Block countdown"
+  },
+  {
+    "key": "Base fee",
+    "value": "Base fee"
+  },
+  {
+    "key": "Timestamp",
+    "value": "Timestamp"
+  },
+  {
+    "key": "Forked",
+    "value": "Forked"
+  },
+  {
+    "key": "Uncles",
+    "value": "Uncles"
+  },
+  {
+    "key": "Blocks",
+    "value": "Blocks"
+  },
+  {
+    "key": "Blob txns",
+    "value": "Blob txns"
+  },
+  {
+    "key": "Operation",
+    "value": "Operation"
+  },
+  {
+    "key": "Status",
+    "value": "Status"
+  },
+  {
+    "key": "Sender",
+    "value": "Sender"
+  },
+  {
+    "key": "Cluster not found",
+    "value": "Cluster not found"
+  },
+  {
+    "key": "The unique cluster name",
+    "value": "The unique cluster name"
+  },
+  {
+    "key": "The address attached to this cluster name",
+    "value": "The address attached to this cluster name"
+  },
+  {
+    "key": "When this cluster name was created",
+    "value": "When this cluster name was created"
+  },
+  {
+    "key": "Clusters",
+    "value": "Clusters"
+  },
+  {
+    "key": "Cluster details",
+    "value": "Cluster details"
+  },
+  {
+    "key": "Verify new address ownership",
+    "value": "Verify new address ownership"
+  },
+  {
+    "key": "Copy and sign message",
+    "value": "Copy and sign message"
+  },
+  {
+    "key": "Congrats! Address is verified.",
+    "value": "Congrats! Address is verified."
+  },
+  {
+    "key": "Oops! Something went wrong",
+    "value": "Oops! Something went wrong"
+  },
+  {
+    "key": "Continue",
+    "value": "Continue"
+  },
+  {
+    "key": "Specified address either does not exist or is EOA.",
+    "value": "Specified address either does not exist or is EOA."
+  },
+  {
+    "key": "Ownership of this contract address is already verified by this account.",
+    "value": "Ownership of this contract address is already verified by this account."
+  },
+  {
+    "key": "The contract source code you entered is not yet verified. Please follow these steps to",
+    "value": "The contract source code you entered is not yet verified. Please follow these steps to"
+  },
+  {
+    "key": "verify the contract",
+    "value": "verify the contract"
+  },
+  {
+    "key": "Enter the contract address you are verifying ownership for.",
+    "value": "Enter the contract address you are verifying ownership for."
+  },
+  {
+    "key": "Verifying",
+    "value": "Verifying"
+  },
+  {
+    "key": "Signing",
+    "value": "Signing"
+  },
+  {
+    "key": "Sign and verify",
+    "value": "Sign and verify"
+  },
+  {
+    "key": "Connect wallet",
+    "value": "Connect wallet"
+  },
+  {
+    "key": "Message to sign",
+    "value": "Message to sign"
+  },
+  {
+    "key": "Signature hash",
+    "value": "Signature hash"
+  },
+  {
+    "key": "help@blockscout.com",
+    "value": "help@blockscout.com"
+  },
+  {
+    "key": "The signature could not be processed.",
+    "value": "The signature could not be processed."
+  },
+  {
+    "key": "This verification message has expired. Add the contract address to restart the process.",
+    "value": "This verification message has expired. Add the contract address to restart the process."
+  },
+  {
+    "key": "This address",
+    "value": "This address"
+  },
+  {
+    "key": "can verify ownership of this contract.",
+    "value": "can verify ownership of this contract."
+  },
+  {
+    "key": "Sign via Web3 wallet",
+    "value": "Sign via Web3 wallet"
+  },
+  {
+    "key": "Sign manually",
+    "value": "Sign manually"
+  },
+  {
+    "key": "The address ownership for",
+    "value": "The address ownership for"
+  },
+  {
+    "key": "is verified.",
+    "value": "is verified."
+  },
+  {
+    "key": "You may now submit the “Add token information” request",
+    "value": "You may now submit the “Add token information” request"
+  },
+  {
+    "key": "Columns",
+    "value": "Columns"
+  },
+  {
+    "key": "Method",
+    "value": "Method"
+  },
+  {
+    "key": "Address from",
+    "value": "Address from"
+  },
+  {
+    "key": "Address to",
+    "value": "Address to"
+  },
+  {
+    "key": "Amount",
+    "value": "Amount"
+  },
+  {
+    "key": "Tx hash",
+    "value": "Tx hash"
+  },
+  {
+    "key": "From",
+    "value": "From"
+  },
+  {
+    "key": "To",
+    "value": "To"
+  },
+  {
+    "key": "Fee",
+    "value": "Fee"
+  },
+  {
+    "key": "Include",
+    "value": "Include"
+  },
+  {
+    "key": "Exclude",
+    "value": "Exclude"
+  },
+  {
+    "key": "Select mode",
+    "value": "Select mode"
+  },
+  {
+    "key": "Token name or symbol",
+    "value": "Token name or symbol"
+  },
+  {
+    "key": "Popular",
+    "value": "Popular"
+  },
+  {
+    "key": "No tokens found",
+    "value": "No tokens found"
+  },
+  {
+    "key": "Set last duration",
+    "value": "Set last duration"
+  },
+  {
+    "key": "Something went wrong. Please try again.",
+    "value": "Something went wrong. Please try again."
+  },
+  {
+    "key": "No results found.",
+    "value": "No results found."
+  },
+  {
+    "key": "View examples",
+    "value": "View examples"
+  },
+  {
+    "key": "View modules",
+    "value": "View modules"
+  },
+  {
+    "key": "Blockscout core API",
+    "value": "Blockscout core API"
+  },
+  {
+    "key": "Stats API",
+    "value": "Stats API"
+  },
+  {
+    "key": "Name service API",
+    "value": "Name service API"
+  },
+  {
+    "key": "User ops indexer API",
+    "value": "User ops indexer API"
+  },
+  {
+    "key": "TAC operation lifecycle API",
+    "value": "TAC operation lifecycle API"
+  },
+  {
+    "key": "Auto-generated API key token",
+    "value": "Auto-generated API key token"
+  },
+  {
+    "key": "Save",
+    "value": "Save"
+  },
+  {
+    "key": "Generate API key",
+    "value": "Generate API key"
+  },
+  {
+    "key": "Edit API key",
+    "value": "Edit API key"
+  },
+  {
+    "key": "New API key",
+    "value": "New API key"
+  },
+  {
+    "key": "Remove API key",
+    "value": "Remove API key"
+  },
+  {
+    "key": "API key for",
+    "value": "API key for"
+  },
+  {
+    "key": "Days",
+    "value": "Days"
+  },
+  {
+    "key": "Hours",
+    "value": "Hours"
+  },
+  {
+    "key": "Minutes",
+    "value": "Minutes"
+  },
+  {
+    "key": "Seconds",
+    "value": "Seconds"
+  },
+  {
+    "key": "Contract has already been verified",
+    "value": "Contract has already been verified"
+  },
+  {
+    "key": "Address is not a smart contract",
+    "value": "Address is not a smart contract"
+  },
+  {
+    "key": "Contract is successfully verified.",
+    "value": "Contract is successfully verified."
+  },
+  {
+    "key": "There was an error with socket connection. Try again later.",
+    "value": "There was an error with socket connection. Try again later."
+  },
+  {
+    "key": "Try to fetch constructor arguments automatically",
+    "value": "Try to fetch constructor arguments automatically"
+  },
+  {
+    "key": "Contract code",
+    "value": "Contract code"
+  },
+  {
+    "key": "Commit hash not found in the repository",
+    "value": "Commit hash not found in the repository"
+  },
+  {
+    "key": "Commit hash",
+    "value": "Commit hash"
+  },
+  {
+    "key": "The compiler version is specified in",
+    "value": "The compiler version is specified in"
+  },
+  {
+    "key": "pragma solidity X.X.X",
+    "value": "pragma solidity X.X.X"
+  },
+  {
+    "key": "solc —version",
+    "value": "solc —version"
+  },
+  {
+    "key": "to check.",
+    "value": "to check."
+  },
+  {
+    "key": "ABI-encoded Constructor Arguments",
+    "value": "ABI-encoded Constructor Arguments"
+  },
+  {
+    "key": "Add arguments in",
+    "value": "Add arguments in"
+  },
+  {
+    "key": "ABI hex encoded form",
+    "value": "ABI hex encoded form"
+  },
+  {
+    "key": "They may also be",
+    "value": "They may also be"
+  },
+  {
+    "key": "EVM Version",
+    "value": "EVM Version"
+  },
+  {
+    "key": "GitHub repository not found",
+    "value": "GitHub repository not found"
+  },
+  {
+    "key": "Invalid GitHub repository URL",
+    "value": "Invalid GitHub repository URL"
+  },
+  {
+    "key": "GitHub repository URL",
+    "value": "GitHub repository URL"
+  },
+  {
+    "key": "Is Yul contract",
+    "value": "Is Yul contract"
+  },
+  {
+    "key": "Verification through a single file.",
+    "value": "Verification through a single file."
+  },
+  {
+    "key": "Verification of multi-part Solidity files.",
+    "value": "Verification of multi-part Solidity files."
+  },
+  {
+    "key": "Verification through",
+    "value": "Verification through"
+  },
+  {
+    "key": "Sourcify",
+    "value": "Sourcify"
+  },
+  {
+    "key": "Verification using",
+    "value": "Verification using"
+  },
+  {
+    "key": "file.",
+    "value": "file."
+  },
+  {
+    "key": "Verification of Vyper contract.",
+    "value": "Verification of Vyper contract."
+  },
+  {
+    "key": "Verification of multi-part Vyper files.",
+    "value": "Verification of multi-part Vyper files."
+  },
+  {
+    "key": "Verification through Hardhat plugin.",
+    "value": "Verification through Hardhat plugin."
+  },
+  {
+    "key": "Verification through Foundry.",
+    "value": "Verification through Foundry."
+  },
+  {
+    "key": "Verification of Stylus contract via GitHub repository.",
+    "value": "Verification of Stylus contract via GitHub repository."
+  },
+  {
+    "key": "Must match the name specified in the code. For example, in",
+    "value": "Must match the name specified in the code. For example, in"
+  },
+  {
+    "key": "is the contract name.",
+    "value": "is the contract name."
+  },
+  {
+    "key": "Optimization runs",
+    "value": "Optimization runs"
+  },
+  {
+    "key": "File is too big. Maximum size is 20 Mb.",
+    "value": "File is too big. Maximum size is 20 Mb."
+  },
+  {
+    "key": "You can upload only one file",
+    "value": "You can upload only one file"
+  },
+  {
+    "key": "ZK compiler",
+    "value": "ZK compiler"
+  },
+  {
+    "key": "compiler version.",
+    "value": "compiler version."
+  },
+  {
+    "key": "Sources *.sol or *.yul files",
+    "value": "Sources *.sol or *.yul files"
+  },
+  {
+    "key": "Upload all Solidity or Yul contract source files.",
+    "value": "Upload all Solidity or Yul contract source files."
+  },
+  {
+    "key": "Contract verification via Foundry",
+    "value": "Contract verification via Foundry"
+  },
+  {
+    "key": "Full tutorial about contract verification via Foundry on Blockscout is available",
+    "value": "Full tutorial about contract verification via Foundry on Blockscout is available"
+  },
+  {
+    "key": "Contract verification via Solidity Hardhat plugin",
+    "value": "Contract verification via Solidity Hardhat plugin"
+  },
+  {
+    "key": "Sources and Metadata JSON",
+    "value": "Sources and Metadata JSON"
+  },
+  {
+    "key": "Upload the standard input JSON file created during contract compilation.",
+    "value": "Upload the standard input JSON file created during contract compilation."
+  },
+  {
+    "key": "Path prefix",
+    "value": "Path prefix"
+  },
+  {
+    "key": "The contract name is the name assigned to the verified contract in Blockscout.",
+    "value": "The contract name is the name assigned to the verified contract in Blockscout."
+  },
+  {
+    "key": "Add any",
+    "value": "Add any"
+  },
+  {
+    "key": "Incorrect date",
+    "value": "Incorrect date"
+  },
+  {
+    "key": "Create custom ABI",
+    "value": "Create custom ABI"
+  },
+  {
+    "key": "Edit custom ABI",
+    "value": "Edit custom ABI"
+  },
+  {
+    "key": "New custom ABI",
+    "value": "New custom ABI"
+  },
+  {
+    "key": "Double check the ABI matches the contract to prevent errors or incorrect results.",
+    "value": "Double check the ABI matches the contract to prevent errors or incorrect results."
+  },
+  {
+    "key": "Remove custom ABI",
+    "value": "Remove custom ABI"
+  },
+  {
+    "key": "Custom ABI for",
+    "value": "Custom ABI for"
+  },
+  {
+    "key": "Index",
+    "value": "Index"
+  },
+  {
+    "key": "Game type",
+    "value": "Game type"
+  },
+  {
+    "key": "L2 block #",
+    "value": "L2 block #"
+  },
+  {
+    "key": "Resolution age",
+    "value": "Resolution age"
+  },
+  {
+    "key": "Gas price history",
+    "value": "Gas price history"
+  },
+  {
+    "key": "Gas is the amount of native tokens required to perform a transaction on the blockchain.",
+    "value": "Gas is the amount of native tokens required to perform a transaction on the blockchain."
+  },
+  {
+    "key": "Network utilization",
+    "value": "Network utilization"
+  },
+  {
+    "key": "Fast",
+    "value": "Fast"
+  },
+  {
+    "key": "Slow",
+    "value": "Slow"
+  },
+  {
+    "key": "No data. Please reload the page.",
+    "value": "No data. Please reload the page."
+  },
+  {
+    "key": "View all blocks",
+    "value": "View all blocks"
+  },
+  {
+    "key": "Latest blocks",
+    "value": "Latest blocks"
+  },
+  {
+    "key": "Reward",
+    "value": "Reward"
+  },
+  {
+    "key": "View all transactions",
+    "value": "View all transactions"
+  },
+  {
+    "key": "View all watch list transactions",
+    "value": "View all watch list transactions"
+  },
+  {
+    "key": "There is no data",
+    "value": "There is no data"
+  },
+  {
+    "key": "Market cap",
+    "value": "Market cap"
+  },
+  {
+    "key": "Daily transactions",
+    "value": "Daily transactions"
+  },
+  {
+    "key": "Daily op txns",
+    "value": "Daily op txns"
+  },
+  {
+    "key": "Total value locked",
+    "value": "Total value locked"
+  },
+  {
+    "key": "Total value of digital assets locked or staked in a chain",
+    "value": "Total value of digital assets locked or staked in a chain"
+  },
+  {
+    "key": "View all batches",
+    "value": "View all batches"
+  },
+  {
+    "key": "Latest batches",
+    "value": "Latest batches"
+  },
+  {
+    "key": "To be determined",
+    "value": "To be determined"
+  },
+  {
+    "key": "View all deposits",
+    "value": "View all deposits"
+  },
+  {
+    "key": "View all cross chain transactions",
+    "value": "View all cross chain transactions"
+  },
+  {
+    "key": "Message payload",
+    "value": "Message payload"
+  },
+  {
+    "key": "Source tx",
+    "value": "Source tx"
+  },
+  {
+    "key": "Destination tx",
+    "value": "Destination tx"
+  },
+  {
+    "key": "Message",
+    "value": "Message"
+  },
+  {
+    "key": "Uptime",
+    "value": "Uptime"
+  },
+  {
+    "key": "Real-time statistics",
+    "value": "Real-time statistics"
+  },
+  {
+    "key": "Current TPS",
+    "value": "Current TPS"
+  },
+  {
+    "key": "Number of transactions processed per second on the network",
+    "value": "Number of transactions processed per second on the network"
+  },
+  {
+    "key": "Number of computational gas consumed per second on the network",
+    "value": "Number of computational gas consumed per second on the network"
+  },
+  {
+    "key": "Block height",
+    "value": "Block height"
+  },
+  {
+    "key": "Number of blocks created since the genesis block",
+    "value": "Number of blocks created since the genesis block"
+  },
+  {
+    "key": "Block time",
+    "value": "Block time"
+  },
+  {
+    "key": "Time taken by the sequencer to produce a new block",
+    "value": "Time taken by the sequencer to produce a new block"
+  },
+  {
+    "key": "Refresh",
+    "value": "Refresh"
+  },
+  {
+    "key": "Component unmounted",
+    "value": "Component unmounted"
+  },
+  {
+    "key": "Profile",
+    "value": "Profile"
+  },
+  {
+    "key": "OTP sent",
+    "value": "OTP sent"
+  },
+  {
+    "key": "Name",
+    "value": "Name"
+  },
+  {
+    "key": "Notifications",
+    "value": "Notifications"
+  },
+  {
+    "key": "My linked wallet",
+    "value": "My linked wallet"
+  },
+  {
+    "key": "Link wallet",
+    "value": "Link wallet"
+  },
+  {
+    "key": "Email",
+    "value": "Email"
+  },
+  {
+    "key": "The date the name was registered",
+    "value": "The date the name was registered"
+  },
+  {
+    "key": "The resolver contract provides information about a domain name",
+    "value": "The resolver contract provides information about a domain name"
+  },
+  {
+    "key": "The account that owns the domain name and has the rights to edit its ownership and records",
+    "value": "The account that owns the domain name and has the rights to edit its ownership and records"
+  },
+  {
+    "key": "The account that owns the rights to edit the records of this domain name",
+    "value": "The account that owns the rights to edit the records of this domain name"
+  },
+  {
+    "key": "Owner of this NFT domain in NameWrapper contract",
+    "value": "Owner of this NFT domain in NameWrapper contract"
+  },
+  {
+    "key": "Other cryptocurrency addresses added to this domain name",
+    "value": "Other cryptocurrency addresses added to this domain name"
+  },
+  {
+    "key": "Expired",
+    "value": "Expired"
+  },
+  {
+    "key": "The domain name is resolved offchain using",
+    "value": "The domain name is resolved offchain using"
+  },
+  {
+    "key": "Txn hash",
+    "value": "Txn hash"
+  },
+  {
+    "key": "Cluster name",
+    "value": "Cluster name"
+  },
+  {
+    "key": "Active chains",
+    "value": "Active chains"
+  },
+  {
+    "key": "Names",
+    "value": "Names"
+  },
+  {
+    "key": "Total backing",
+    "value": "Total backing"
+  },
+  {
+    "key": "There are no name domains.",
+    "value": "There are no name domains."
+  },
+  {
+    "key": "Search by name or address",
+    "value": "Search by name or address"
+  },
+  {
+    "key": "Protocol",
+    "value": "Protocol"
+  },
+  {
+    "key": "Domain",
+    "value": "Domain"
+  },
+  {
+    "key": "Registered on",
+    "value": "Registered on"
+  },
+  {
+    "key": "Expiration date",
+    "value": "Expiration date"
+  },
+  {
+    "key": "Default",
+    "value": "Default"
+  },
+  {
+    "key": "Registered on descending",
+    "value": "Registered on descending"
+  },
+  {
+    "key": "Registered on ascending",
+    "value": "Registered on ascending"
+  },
+  {
+    "key": "The address on the source chain that starts a cross‑chain operation",
+    "value": "The address on the source chain that starts a cross‑chain operation"
+  },
+  {
+    "key": "The status of the operation",
+    "value": "The status of the operation"
+  },
+  {
+    "key": "Block time on the source chain when a cross‑chain operation is formed and sent",
+    "value": "Block time on the source chain when a cross‑chain operation is formed and sent"
+  },
+  {
+    "key": "Stages of a cross‑chain operation",
+    "value": "Stages of a cross‑chain operation"
+  },
+  {
+    "key": "Failed",
+    "value": "Failed"
+  },
+  {
+    "key": "This address is on cluster chains",
+    "value": "This address is on cluster chains"
+  },
+  {
+    "key": "Relayed",
+    "value": "Relayed"
+  },
+  {
+    "key": "Sent",
+    "value": "Sent"
+  },
+  {
+    "key": "There are no cross-chain transactions.",
+    "value": "There are no cross-chain transactions."
+  },
+  {
+    "key": "Latest block",
+    "value": "Latest block"
+  },
+  {
+    "key": "there is no gray color that suits well, so we use a custom one",
+    "value": "there is no gray color that suits well, so we use a custom one"
+  },
+  {
+    "key": "Add to wallet",
+    "value": "Add to wallet"
+  },
+  {
+    "key": "Open explorer",
+    "value": "Open explorer"
+  },
+  {
+    "key": "Chain ID",
+    "value": "Chain ID"
+  },
+  {
+    "key": "Gas price",
+    "value": "Gas price"
+  },
+  {
+    "key": "Latest transactions",
+    "value": "Latest transactions"
+  },
+  {
+    "key": "Search by transaction hash",
+    "value": "Search by transaction hash"
+  },
+  {
+    "key": "Internal transactions",
+    "value": "Internal transactions"
+  },
+  {
+    "key": "There are no user operations.",
+    "value": "There are no user operations."
+  },
+  {
+    "key": "Search by contract name or address",
+    "value": "Search by contract name or address"
+  },
+  {
+    "key": "Verified contracts",
+    "value": "Verified contracts"
+  },
+  {
+    "key": "There are no verified contracts.",
+    "value": "There are no verified contracts."
+  },
+  {
+    "key": "L2 output index",
+    "value": "L2 output index"
+  },
+  {
+    "key": "L1 txn hash",
+    "value": "L1 txn hash"
+  },
+  {
+    "key": "Output root",
+    "value": "Output root"
+  },
+  {
+    "key": "Search result",
+    "value": "Search result"
+  },
+  {
+    "key": "ETH RPC API",
+    "value": "ETH RPC API"
+  },
+  {
+    "key": "RPC API endpoints",
+    "value": "RPC API endpoints"
+  },
+  {
+    "key": "API documentation",
+    "value": "API documentation"
+  },
+  {
+    "key": "No API documentation available",
+    "value": "No API documentation available"
+  },
+  {
+    "key": "How to use a Blockscout API key",
+    "value": "How to use a Blockscout API key"
+  },
+  {
+    "key": "API keys",
+    "value": "API keys"
+  },
+  {
+    "key": "Txn batches",
+    "value": "Txn batches"
+  },
+  {
+    "key": "There are no txn batches.",
+    "value": "There are no txn batches."
+  },
+  {
+    "key": "Invalid transaction hash",
+    "value": "Invalid transaction hash"
+  },
+  {
+    "key": "Transaction withdrawals",
+    "value": "Transaction withdrawals"
+  },
+  {
+    "key": "There are no deposits.",
+    "value": "There are no deposits."
+  },
+  {
+    "key": "There are no withdrawals.",
+    "value": "There are no withdrawals."
+  },
+  {
+    "key": "Google calendar logo",
+    "value": "Google calendar logo"
+  },
+  {
+    "key": "Apple calendar logo",
+    "value": "Apple calendar logo"
+  },
+  {
+    "key": "Remaining blocks",
+    "value": "Remaining blocks"
+  },
+  {
+    "key": "Current block",
+    "value": "Current block"
+  },
+  {
+    "key": "Estimated target date",
+    "value": "Estimated target date"
+  },
+  {
+    "key": "Google",
+    "value": "Google"
+  },
+  {
+    "key": "Apple",
+    "value": "Apple"
+  },
+  {
+    "key": "Search by block number",
+    "value": "Search by block number"
+  },
+  {
+    "key": "Accordion",
+    "value": "Accordion"
+  },
+  {
+    "key": "Alert",
+    "value": "Alert"
+  },
+  {
+    "key": "Badge",
+    "value": "Badge"
+  },
+  {
+    "key": "Checkbox",
+    "value": "Checkbox"
+  },
+  {
+    "key": "Clipboard",
+    "value": "Clipboard"
+  },
+  {
+    "key": "Close button",
+    "value": "Close button"
+  },
+  {
+    "key": "Collapsible",
+    "value": "Collapsible"
+  },
+  {
+    "key": "Content loader",
+    "value": "Content loader"
+  },
+  {
+    "key": "Dialog",
+    "value": "Dialog"
+  },
+  {
+    "key": "Icon button",
+    "value": "Icon button"
+  },
+  {
+    "key": "Input",
+    "value": "Input"
+  },
+  {
+    "key": "Link",
+    "value": "Link"
+  },
+  {
+    "key": "Menu",
+    "value": "Menu"
+  },
+  {
+    "key": "Pagination",
+    "value": "Pagination"
+  },
+  {
+    "key": "Progress",
+    "value": "Progress"
+  },
+  {
+    "key": "Progress Circle",
+    "value": "Progress Circle"
+  },
+  {
+    "key": "Radio",
+    "value": "Radio"
+  },
+  {
+    "key": "Rating",
+    "value": "Rating"
+  },
+  {
+    "key": "Pin input",
+    "value": "Pin input"
+  },
+  {
+    "key": "Popover",
+    "value": "Popover"
+  },
+  {
+    "key": "Select",
+    "value": "Select"
+  },
+  {
+    "key": "Skeleton",
+    "value": "Skeleton"
+  },
+  {
+    "key": "Spinner",
+    "value": "Spinner"
+  },
+  {
+    "key": "Switch",
+    "value": "Switch"
+  },
+  {
+    "key": "Table",
+    "value": "Table"
+  },
+  {
+    "key": "Tabs",
+    "value": "Tabs"
+  },
+  {
+    "key": "Tag",
+    "value": "Tag"
+  },
+  {
+    "key": "Toast",
+    "value": "Toast"
+  },
+  {
+    "key": "Tooltip",
+    "value": "Tooltip"
+  },
+  {
+    "key": "Chakra UI Showcase",
+    "value": "Chakra UI Showcase"
+  },
+  {
+    "key": "Res.",
+    "value": "Res."
+  },
+  {
+    "key": "Resolution",
+    "value": "Resolution"
+  },
+  {
+    "key": "Select resolution",
+    "value": "Select resolution"
+  },
+  {
+    "key": "Period",
+    "value": "Period"
+  },
+  {
+    "key": "New smart contract verification",
+    "value": "New smart contract verification"
+  },
+  {
+    "key": "Export data to CSV file",
+    "value": "Export data to CSV file"
+  },
+  {
+    "key": "to CSV file.",
+    "value": "to CSV file."
+  },
+  {
+    "key": "Epoch finalized after Celo migrated to the OP‐stack, when it became an L2 rollup",
+    "value": "Epoch finalized after Celo migrated to the OP‐stack, when it became an L2 rollup"
+  },
+  {
+    "key": "Ranging from",
+    "value": "Ranging from"
+  },
+  {
+    "key": "Gas tracker",
+    "value": "Gas tracker"
+  },
+  {
+    "key": "Last updated",
+    "value": "Last updated"
+  },
+  {
+    "key": "No recent data available",
+    "value": "No recent data available"
+  },
+  {
+    "key": "Interop messages",
+    "value": "Interop messages"
+  },
+  {
+    "key": "There are no interop messages.",
+    "value": "There are no interop messages."
+  },
+  {
+    "key": "Computor transactions",
+    "value": "Computor transactions"
+  },
+  {
+    "key": "Render error",
+    "value": "Render error"
+  },
+  {
+    "key": "Test error",
+    "value": "Test error"
+  },
+  {
+    "key": "Test event",
+    "value": "Test event"
+  },
+  {
+    "key": "Success 🥳",
+    "value": "Success 🥳"
+  },
+  {
+    "key": "Successfully set cookie",
+    "value": "Successfully set cookie"
+  },
+  {
+    "key": "Login page 😂",
+    "value": "Login page 😂"
+  },
+  {
+    "key": "API token",
+    "value": "API token"
+  },
+  {
+    "key": "Set cookie",
+    "value": "Set cookie"
+  },
+  {
+    "key": "Check Rollbar",
+    "value": "Check Rollbar"
+  },
+  {
+    "key": "Check Mixpanel",
+    "value": "Check Mixpanel"
+  },
+  {
+    "key": "Swap",
+    "value": "Swap"
+  },
+  {
+    "key": "Revoke",
+    "value": "Revoke"
+  },
+  {
+    "key": "Multisend",
+    "value": "Multisend"
+  },
+  {
+    "key": "Essential dapp not found",
+    "value": "Essential dapp not found"
+  },
+  {
+    "key": "MUD worlds",
+    "value": "MUD worlds"
+  },
+  {
+    "key": "There are no MUD worlds.",
+    "value": "There are no MUD worlds."
+  },
+  {
+    "key": "My profile",
+    "value": "My profile"
+  },
+  {
+    "key": "History",
+    "value": "History"
+  },
+  {
+    "key": "Name details",
+    "value": "Name details"
+  },
+  {
+    "key": "Domains",
+    "value": "Domains"
+  },
+  {
+    "key": "Directories",
+    "value": "Directories"
+  },
+  {
+    "key": "Name services lookup",
+    "value": "Name services lookup"
+  },
+  {
+    "key": "Dispute games",
+    "value": "Dispute games"
+  },
+  {
+    "key": "There are no dispute games.",
+    "value": "There are no dispute games."
+  },
+  {
+    "key": "Output roots",
+    "value": "Output roots"
+  },
+  {
+    "key": "There are no output roots.",
+    "value": "There are no output roots."
+  },
+  {
+    "key": "Transaction",
+    "value": "Transaction"
+  },
+  {
+    "key": "Private tags",
+    "value": "Private tags"
+  },
+  {
+    "key": "Dashboard",
+    "value": "Dashboard"
+  },
+  {
+    "key": "All Merits",
+    "value": "All Merits"
+  },
+  {
+    "key": "Referrals",
+    "value": "Referrals"
+  },
+  {
+    "key": "Total number of users who have joined the program using your code or referral link.",
+    "value": "Total number of users who have joined the program using your code or referral link."
+  },
+  {
+    "key": "Streak",
+    "value": "Streak"
+  },
+  {
+    "key": "Activity",
+    "value": "Activity"
+  },
+  {
+    "key": "Resources",
+    "value": "Resources"
+  },
+  {
+    "key": "Failed to load some data. Please try again later.",
+    "value": "Failed to load some data. Please try again later."
+  },
+  {
+    "key": "Search results",
+    "value": "Search results"
+  },
+  {
+    "key": "Category",
+    "value": "Category"
+  },
+  {
+    "key": "Found",
+    "value": "Found"
+  },
+  {
+    "key": "Copy to clipboard",
+    "value": "Copy to clipboard"
+  },
+  {
+    "key": "No icons found",
+    "value": "No icons found"
+  },
+  {
+    "key": "Search by name...",
+    "value": "Search by name..."
+  },
+  {
+    "key": "SVG sprite 🥤",
+    "value": "SVG sprite 🥤"
+  },
+  {
+    "key": "Operation details",
+    "value": "Operation details"
+  },
+  {
+    "key": "Search by operation, tx hash, sender",
+    "value": "Search by operation, tx hash, sender"
+  },
+  {
+    "key": "Operations",
+    "value": "Operations"
+  },
+  {
+    "key": "There are no operations.",
+    "value": "There are no operations."
+  },
+  {
+    "key": "Holders",
+    "value": "Holders"
+  },
+  {
+    "key": "Metadata",
+    "value": "Metadata"
+  },
+  {
+    "key": "Cross chain",
+    "value": "Cross chain"
+  },
+  {
+    "key": "User operation details",
+    "value": "User operation details"
+  },
+  {
+    "key": "Validator details",
+    "value": "Validator details"
+  },
+  {
+    "key": "Validators",
+    "value": "Validators"
+  },
+  {
+    "key": "There are no validators.",
+    "value": "There are no validators."
+  },
+  {
+    "key": "Search by validator's address hash",
+    "value": "Search by validator's address hash"
+  },
+  {
+    "key": "Back to my verified addresses",
+    "value": "Back to my verified addresses"
+  },
+  {
+    "key": "Token info application form",
+    "value": "Token info application form"
+  },
+  {
+    "key": "My verified addresses",
+    "value": "My verified addresses"
+  },
+  {
+    "key": "Cross-chain tx details",
+    "value": "Cross-chain tx details"
+  },
+  {
+    "key": "Add tag",
+    "value": "Add tag"
+  },
+  {
+    "key": "New address tag",
+    "value": "New address tag"
+  },
+  {
+    "key": "Removal of private tag",
+    "value": "Removal of private tag"
+  },
+  {
+    "key": "Edit transaction tag",
+    "value": "Edit transaction tag"
+  },
+  {
+    "key": "New transaction tag",
+    "value": "New transaction tag"
+  },
+  {
+    "key": "ReCaptcha is not solved",
+    "value": "ReCaptcha is not solved"
+  },
+  {
+    "key": "Your name",
+    "value": "Your name"
+  },
+  {
+    "key": "Company name",
+    "value": "Company name"
+  },
+  {
+    "key": "Company website",
+    "value": "Company website"
+  },
+  {
+    "key": "Confirm the connection between addresses and tags",
+    "value": "Confirm the connection between addresses and tags"
+  },
+  {
+    "key": "Company info",
+    "value": "Company info"
+  },
+  {
+    "key": "Add new tag",
+    "value": "Add new tag"
+  },
+  {
+    "key": "Label URL",
+    "value": "Label URL"
+  },
+  {
+    "key": "Tag name",
+    "value": "Tag name"
+  },
+  {
+    "key": "Label icon URL",
+    "value": "Label icon URL"
+  },
+  {
+    "key": "John Doe",
+    "value": "John Doe"
+  },
+  {
+    "key": "jonh.doe@duck.me",
+    "value": "jonh.doe@duck.me"
+  },
+  {
+    "key": "Quack quack",
+    "value": "Quack quack"
+  },
+  {
+    "key": "Unicorn Uproar",
+    "value": "Unicorn Uproar"
+  },
+  {
+    "key": "Hello",
+    "value": "Hello"
+  },
+  {
+    "key": "Hello, it is me... I was wondering if after all these years you would like to meet",
+    "value": "Hello, it is me... I was wondering if after all these years you would like to meet"
+  },
+  {
+    "key": "duck owner 🦆",
+    "value": "duck owner 🦆"
+  },
+  {
+    "key": "Some error",
+    "value": "Some error"
+  },
+  {
+    "key": "Another nasty error",
+    "value": "Another nasty error"
+  },
+  {
+    "key": "group success result",
+    "value": "group success result"
+  },
+  {
+    "key": "group result with error",
+    "value": "group result with error"
+  },
+  {
+    "key": "Reorg",
+    "value": "Reorg"
+  },
+  {
+    "key": "First Item",
+    "value": "First Item"
+  },
+  {
+    "key": "Some value 1...",
+    "value": "Some value 1..."
+  },
+  {
+    "key": "Second Item",
+    "value": "Second Item"
+  },
+  {
+    "key": "Some value 2...",
+    "value": "Some value 2..."
+  },
+  {
+    "key": "Third Item",
+    "value": "Third Item"
+  },
+  {
+    "key": "Some value 3...",
+    "value": "Some value 3..."
+  },
+  {
+    "key": "multiple lines, no title",
+    "value": "multiple lines, no title"
+  },
+  {
+    "key": "Alert content",
+    "value": "Alert content"
+  },
+  {
+    "key": "Closable",
+    "value": "Closable"
+  },
+  {
+    "key": "Examples",
+    "value": "Examples"
+  },
+  {
+    "key": "As Link",
+    "value": "As Link"
+  },
+  {
+    "key": "Multiple lines",
+    "value": "Multiple lines"
+  },
+  {
+    "key": "Color palette",
+    "value": "Color palette"
+  },
+  {
+    "key": "Token transfer",
+    "value": "Token transfer"
+  },
+  {
+    "key": "Contract call",
+    "value": "Contract call"
+  },
+  {
+    "key": "Blob txn",
+    "value": "Blob txn"
+  },
+  {
+    "key": "Multicall",
+    "value": "Multicall"
+  },
+  {
+    "key": "Internal txn",
+    "value": "Internal txn"
+  },
+  {
+    "key": "Content",
+    "value": "Content"
+  },
+  {
+    "key": "Truncate",
+    "value": "Truncate"
+  },
+  {
+    "key": "Icon",
+    "value": "Icon"
+  },
+  {
+    "key": "Tooltip content",
+    "value": "Tooltip content"
+  },
+  {
+    "key": "option-1",
+    "value": "option-1"
+  },
+  {
+    "key": "option-2",
+    "value": "option-2"
+  },
+  {
+    "key": "option-3",
+    "value": "option-3"
+  },
+  {
+    "key": "Variants",
+    "value": "Variants"
+  },
+  {
+    "key": "Hovered",
+    "value": "Hovered"
+  },
+  {
+    "key": "Loading Skeleton",
+    "value": "Loading Skeleton"
+  },
+  {
+    "key": "Expended",
+    "value": "Expended"
+  },
+  {
+    "key": "Selected",
+    "value": "Selected"
+  },
+  {
+    "key": "First option",
+    "value": "First option"
+  },
+  {
+    "key": "Second option",
+    "value": "Second option"
+  },
+  {
+    "key": "I am link",
+    "value": "I am link"
+  },
+  {
+    "key": "Button Group Radio",
+    "value": "Button Group Radio"
+  },
+  {
+    "key": "Option 1",
+    "value": "Option 1"
+  },
+  {
+    "key": "Option 2",
+    "value": "Option 2"
+  },
+  {
+    "key": "Option 3",
+    "value": "Option 3"
+  },
+  {
+    "key": "Read-only",
+    "value": "Read-only"
+  },
+  {
+    "key": "Orientation",
+    "value": "Orientation"
+  },
+  {
+    "key": "Hello, world!",
+    "value": "Hello, world!"
+  },
+  {
+    "key": "Show details",
+    "value": "Show details"
+  },
+  {
+    "key": "Expand all list",
+    "value": "Expand all list"
+  },
+  {
+    "key": "Cut link",
+    "value": "Cut link"
+  },
+  {
+    "key": "Dialog Title",
+    "value": "Dialog Title"
+  },
+  {
+    "key": "I'll do it later",
+    "value": "I'll do it later"
+  },
+  {
+    "key": "Cancel",
+    "value": "Cancel"
+  },
+  {
+    "key": "Helper text",
+    "value": "Helper text"
+  },
+  {
+    "key": "me@example.com",
+    "value": "me@example.com"
+  },
+  {
+    "key": "no floating label",
+    "value": "no floating label"
+  },
+  {
+    "key": "On custom background",
+    "value": "On custom background"
+  },
+  {
+    "key": "with end element",
+    "value": "with end element"
+  },
+  {
+    "key": "Referral code",
+    "value": "Referral code"
+  },
+  {
+    "key": "with start element",
+    "value": "with start element"
+  },
+  {
+    "key": "Input group",
+    "value": "Input group"
+  },
+  {
+    "key": "Filter input",
+    "value": "Filter input"
+  },
+  {
+    "key": "Tether",
+    "value": "Tether"
+  },
+  {
+    "key": "Without name",
+    "value": "Without name"
+  },
+  {
+    "key": "With name",
+    "value": "With name"
+  },
+  {
+    "key": "With info",
+    "value": "With info"
+  },
+  {
+    "key": "Very looooooooong name",
+    "value": "Very looooooooong name"
+  },
+  {
+    "key": "Very looooooooong symbol",
+    "value": "Very looooooooong symbol"
+  },
+  {
+    "key": "With partial info",
+    "value": "With partial info"
+  },
+  {
+    "key": "Internal link",
+    "value": "Internal link"
+  },
+  {
+    "key": "External link",
+    "value": "External link"
+  },
+  {
+    "key": "Hover",
+    "value": "Hover"
+  },
+  {
+    "key": "hello hello hello",
+    "value": "hello hello hello"
+  },
+  {
+    "key": "Within",
+    "value": "Within"
+  },
+  {
+    "key": "Address link",
+    "value": "Address link"
+  },
+  {
+    "key": "Token link",
+    "value": "Token link"
+  },
+  {
+    "key": "Transaction link",
+    "value": "Transaction link"
+  },
+  {
+    "key": "Block link",
+    "value": "Block link"
+  },
+  {
+    "key": "NFT link",
+    "value": "NFT link"
+  },
+  {
+    "key": "ENS link",
+    "value": "ENS link"
+  },
+  {
+    "key": "Blob link",
+    "value": "Blob link"
+  },
+  {
+    "key": "Pool link",
+    "value": "Pool link"
+  },
+  {
+    "key": "Link overlay",
+    "value": "Link overlay"
+  },
+  {
+    "key": "Main link",
+    "value": "Main link"
+  },
+  {
+    "key": "Inner link",
+    "value": "Inner link"
+  },
+  {
+    "key": "Refresh metadata",
+    "value": "Refresh metadata"
+  },
+  {
+    "key": "Add token info",
+    "value": "Add token info"
+  },
+  {
+    "key": "Add private tag",
+    "value": "Add private tag"
+  },
+  {
+    "key": "Add public tag",
+    "value": "Add public tag"
+  },
+  {
+    "key": "Loaded state",
+    "value": "Loaded state"
+  },
+  {
+    "key": "Initial loading state",
+    "value": "Initial loading state"
+  },
+  {
+    "key": "List pagination",
+    "value": "List pagination"
+  },
+  {
+    "key": "Trigger",
+    "value": "Trigger"
+  },
+  {
+    "key": "Very bad",
+    "value": "Very bad"
+  },
+  {
+    "key": "Bad",
+    "value": "Bad"
+  },
+  {
+    "key": "Average",
+    "value": "Average"
+  },
+  {
+    "key": "Good",
+    "value": "Good"
+  },
+  {
+    "key": "Excellent",
+    "value": "Excellent"
+  },
+  {
+    "key": "Angular",
+    "value": "Angular"
+  },
+  {
+    "key": "Svelte",
+    "value": "Svelte"
+  },
+  {
+    "key": "Select framework",
+    "value": "Select framework"
+  },
+  {
+    "key": "Error message",
+    "value": "Error message"
+  },
+  {
+    "key": "Angular is",
+    "value": "Angular is"
+  },
+  {
+    "key": "Include nightly builds",
+    "value": "Include nightly builds"
+  },
+  {
+    "key": "Sort",
+    "value": "Sort"
+  },
+  {
+    "key": "Token transfers filter",
+    "value": "Token transfers filter"
+  },
+  {
+    "key": "Radio filter",
+    "value": "Radio filter"
+  },
+  {
+    "key": "Sizes",
+    "value": "Sizes"
+  },
+  {
+    "key": "Direction",
+    "value": "Direction"
+  },
+  {
+    "key": "Laptop",
+    "value": "Laptop"
+  },
+  {
+    "key": "Electronics",
+    "value": "Electronics"
+  },
+  {
+    "key": "Coffee Maker",
+    "value": "Coffee Maker"
+  },
+  {
+    "key": "Home Appliances",
+    "value": "Home Appliances"
+  },
+  {
+    "key": "Desk Chair",
+    "value": "Desk Chair"
+  },
+  {
+    "key": "Furniture",
+    "value": "Furniture"
+  },
+  {
+    "key": "Smartphone",
+    "value": "Smartphone"
+  },
+  {
+    "key": "Headphones",
+    "value": "Headphones"
+  },
+  {
+    "key": "Accessories",
+    "value": "Accessories"
+  },
+  {
+    "key": "Product",
+    "value": "Product"
+  },
+  {
+    "key": "Swaps",
+    "value": "Swaps"
+  },
+  {
+    "key": "Bridges",
+    "value": "Bridges"
+  },
+  {
+    "key": "Liquidity staking",
+    "value": "Liquidity staking"
+  },
+  {
+    "key": "Lending",
+    "value": "Lending"
+  },
+  {
+    "key": "Yield farming",
+    "value": "Yield farming"
+  },
+  {
+    "key": "Swaps content",
+    "value": "Swaps content"
+  },
+  {
+    "key": "Bridges content",
+    "value": "Bridges content"
+  },
+  {
+    "key": "Liquidity staking content",
+    "value": "Liquidity staking content"
+  },
+  {
+    "key": "Lending content",
+    "value": "Lending content"
+  },
+  {
+    "key": "Yield farming content",
+    "value": "Yield farming content"
+  },
+  {
+    "key": "First tab",
+    "value": "First tab"
+  },
+  {
+    "key": "Second tab",
+    "value": "Second tab"
+  },
+  {
+    "key": "First tab content",
+    "value": "First tab content"
+  },
+  {
+    "key": "Second tab content",
+    "value": "Second tab content"
+  },
+  {
+    "key": "Third tab",
+    "value": "Third tab"
+  },
+  {
+    "key": "Fourth tab",
+    "value": "Fourth tab"
+  },
+  {
+    "key": "Third tab content",
+    "value": "Third tab content"
+  },
+  {
+    "key": "Fourth tab content",
+    "value": "Fourth tab content"
+  },
+  {
+    "key": "Adaptive tabs",
+    "value": "Adaptive tabs"
+  },
+  {
+    "key": "Left element",
+    "value": "Left element"
+  },
+  {
+    "key": "Right element",
+    "value": "Right element"
+  },
+  {
+    "key": "🙈",
+    "value": "🙈"
+  },
+  {
+    "key": "My tag",
+    "value": "My tag"
+  },
+  {
+    "key": "Truncated",
+    "value": "Truncated"
+  },
+  {
+    "key": "Very very very very very looooooonggggg text",
+    "value": "Very very very very very looooooonggggg text"
+  },
+  {
+    "key": "Public tags",
+    "value": "Public tags"
+  },
+  {
+    "key": "Filter tags",
+    "value": "Filter tags"
+  },
+  {
+    "key": "Description",
+    "value": "Description"
+  },
+  {
+    "key": "Toast content",
+    "value": "Toast content"
+  },
+  {
+    "key": "Please wait for...",
+    "value": "Please wait for..."
+  },
+  {
+    "key": "Log in",
+    "value": "Log in"
+  },
+  {
+    "key": "Link email",
+    "value": "Link email"
+  },
+  {
+    "key": "Authenticated",
+    "value": "Authenticated"
+  },
+  {
+    "key": "Not authenticated",
+    "value": "Not authenticated"
+  },
+  {
+    "key": "Profile dropdown",
+    "value": "Profile dropdown"
+  },
+  {
+    "key": "Select a way to login",
+    "value": "Select a way to login"
+  },
+  {
+    "key": "Add wallet",
+    "value": "Add wallet"
+  },
+  {
+    "key": "Continue with wallet",
+    "value": "Continue with wallet"
+  },
+  {
+    "key": "Continue with email",
+    "value": "Continue with email"
+  },
+  {
+    "key": "Confirmation code",
+    "value": "Confirmation code"
+  },
+  {
+    "key": "Congrats!",
+    "value": "Congrats!"
+  },
+  {
+    "key": "Send a code",
+    "value": "Send a code"
+  },
+  {
+    "key": "Code has been sent to your email",
+    "value": "Code has been sent to your email"
+  },
+  {
+    "key": "Submit",
+    "value": "Submit"
+  },
+  {
+    "key": "Resend code",
+    "value": "Resend code"
+  },
+  {
+    "key": "Options selector",
+    "value": "Options selector"
+  },
+  {
+    "key": "Continue with Web3 wallet",
+    "value": "Continue with Web3 wallet"
+  },
+  {
+    "key": "Add your web3 wallet to safely interact with smart contracts and dapps inside Blockscout.",
+    "value": "Add your web3 wallet to safely interact with smart contracts and dapps inside Blockscout."
+  },
+  {
+    "key": " and Merits Program",
+    "value": " and Merits Program"
+  },
+  {
+    "key": "Merits ",
+    "value": "Merits "
+  },
+  {
+    "key": "Logout failed",
+    "value": "Logout failed"
+  },
+  {
+    "key": "Please try again later",
+    "value": "Please try again later"
+  },
+  {
+    "key": "Login",
+    "value": "Login"
+  },
+  {
+    "key": "Login to rewards is not enabled",
+    "value": "Login to rewards is not enabled"
+  },
+  {
+    "key": "User already has logged in to rewards",
+    "value": "User already has logged in to rewards"
+  },
+  {
+    "key": "Shared SIWE login is not enabled",
+    "value": "Shared SIWE login is not enabled"
+  },
+  {
+    "key": "Rewards user does not exist",
+    "value": "Rewards user does not exist"
+  },
+  {
+    "key": "Cannot get merits login nonce",
+    "value": "Cannot get merits login nonce"
+  },
+  {
+    "key": "Submit an issue",
+    "value": "Submit an issue"
+  },
+  {
+    "key": "Contribute",
+    "value": "Contribute"
+  },
+  {
+    "key": "Discord",
+    "value": "Discord"
+  },
+  {
+    "key": "All chains",
+    "value": "All chains"
+  },
+  {
+    "key": "Donate",
+    "value": "Donate"
+  },
+  {
+    "key": "Blockscout",
+    "value": "Blockscout"
+  },
+  {
+    "key": ", Array",
+    "value": ", Array"
+  },
+  {
+    "key": "Made with",
+    "value": "Made with"
+  },
+  {
+    "key": "This site is protected by reCAPTCHA and the Google",
+    "value": "This site is protected by reCAPTCHA and the Google"
+  },
+  {
+    "key": "Privacy Policy",
+    "value": "Privacy Policy"
+  },
+  {
+    "key": "Terms of Service",
+    "value": "Terms of Service"
+  },
+  {
+    "key": "apply.",
+    "value": "apply."
+  },
+  {
+    "key": "Menu button",
+    "value": "Menu button"
+  },
+  {
+    "key": "Promo banner icon",
+    "value": "Promo banner icon"
+  },
+  {
+    "key": "Promo banner small",
+    "value": "Promo banner small"
+  },
+  {
+    "key": "Promo banner large",
+    "value": "Promo banner large"
+  },
+  {
+    "key": "Network icon placeholder",
+    "value": "Network icon placeholder"
+  },
+  {
+    "key": "Network logo placeholder",
+    "value": "Network logo placeholder"
+  },
+  {
+    "key": "Link to main page",
+    "value": "Link to main page"
+  },
+  {
+    "key": "Mainnets",
+    "value": "Mainnets"
+  },
+  {
+    "key": "Header",
+    "value": "Header"
+  },
+  {
+    "key": "Escape",
+    "value": "Escape"
+  },
+  {
+    "key": "Search",
+    "value": "Search"
+  },
+  {
+    "key": "Recent",
+    "value": "Recent"
+  },
+  {
+    "key": "Clear all",
+    "value": "Clear all"
+  },
+  {
+    "key": "We are searching, please wait... ",
+    "value": "We are searching, please wait... "
+  },
+  {
+    "key": "Something went wrong. Try refreshing the page or come back later.",
+    "value": "Something went wrong. Try refreshing the page or come back later."
+  },
+  {
+    "key": "Learn",
+    "value": "Learn"
+  },
+  {
+    "key": "to be created.",
+    "value": "to be created."
+  },
+  {
+    "key": "Chains list",
+    "value": "Chains list"
+  },
+  {
+    "key": "Network menu",
+    "value": "Network menu"
+  },
+  {
+    "key": "Gas",
+    "value": "Gas"
+  },
+  {
+    "key": "Sign in to My Account to add tags,",
+    "value": "Sign in to My Account to add tags,"
+  },
+  {
+    "key": "create watchlists, access API keys and more",
+    "value": "create watchlists, access API keys and more"
+  },
+  {
+    "key": "Verified addrs",
+    "value": "Verified addrs"
+  },
+  {
+    "key": "Sign out",
+    "value": "Sign out"
+  },
+  {
+    "key": "Account",
+    "value": "Account"
+  },
+  {
+    "key": "Open wallet",
+    "value": "Open wallet"
+  },
+  {
+    "key": "Connected wallet",
+    "value": "Connected wallet"
+  },
+  {
+    "key": "Connect",
+    "value": "Connect"
+  },
+  {
+    "key": "Connecting",
+    "value": "Connecting"
+  },
+  {
+    "key": "My wallet",
+    "value": "My wallet"
+  },
+  {
+    "key": "Token name",
+    "value": "Token name"
+  },
+  {
+    "key": "Token contract address",
+    "value": "Token contract address"
+  },
+  {
+    "key": "Requester name",
+    "value": "Requester name"
+  },
+  {
+    "key": "Requester email",
+    "value": "Requester email"
+  },
+  {
+    "key": "Official project email address",
+    "value": "Official project email address"
+  },
+  {
+    "key": "Official project website",
+    "value": "Official project website"
+  },
+  {
+    "key": "Docs",
+    "value": "Docs"
+  },
+  {
+    "key": "Project description",
+    "value": "Project description"
+  },
+  {
+    "key": "Project info",
+    "value": "Project info"
+  },
+  {
+    "key": "Links",
+    "value": "Links"
+  },
+  {
+    "key": "Price data",
+    "value": "Price data"
+  },
+  {
+    "key": "Request in progress. Once an admin approves your request you can edit token info.",
+    "value": "Request in progress. Once an admin approves your request you can edit token info."
+  },
+  {
+    "key": "Project industry",
+    "value": "Project industry"
+  },
+  {
+    "key": "Telegram",
+    "value": "Telegram"
+  },
+  {
+    "key": "Slack",
+    "value": "Slack"
+  },
+  {
+    "key": "Facebook",
+    "value": "Facebook"
+  },
+  {
+    "key": "Reddit",
+    "value": "Reddit"
+  },
+  {
+    "key": "Invalid format",
+    "value": "Invalid format"
+  },
+  {
+    "key": "Support URL or email",
+    "value": "Support URL or email"
+  },
+  {
+    "key": "Current owner of this token instance",
+    "value": "Current owner of this token instance"
+  },
+  {
+    "key": "This token instance unique token ID",
+    "value": "This token instance unique token ID"
+  },
+  {
+    "key": "NFT item",
+    "value": "NFT item"
+  },
+  {
+    "key": "Link to the dapp",
+    "value": "Link to the dapp"
+  },
+  {
+    "key": "Ooops!",
+    "value": "Ooops!"
+  },
+  {
+    "key": "couldn't",
+    "value": "couldn't"
+  },
+  {
+    "key": "The refreshing process has failed. Please try again.",
+    "value": "The refreshing process has failed. Please try again."
+  },
+  {
+    "key": "Please wait",
+    "value": "Please wait"
+  },
+  {
+    "key": "Refetching metadata request sent",
+    "value": "Refetching metadata request sent"
+  },
+  {
+    "key": "Unable to initialize metadata update",
+    "value": "Unable to initialize metadata update"
+  },
+  {
+    "key": "Success!",
+    "value": "Success!"
+  },
+  {
+    "key": "Metadata has been refreshed",
+    "value": "Metadata has been refreshed"
+  },
+  {
+    "key": "Sending request",
+    "value": "Sending request"
+  },
+  {
+    "key": "Unknown token instance",
+    "value": "Unknown token instance"
+  },
+  {
+    "key": "Address that deployed this token contract",
+    "value": "Address that deployed this token contract"
+  },
+  {
+    "key": "NFT name",
+    "value": "NFT name"
+  },
+  {
+    "key": "NFT description",
+    "value": "NFT description"
+  },
+  {
+    "key": "NFT attributes",
+    "value": "NFT attributes"
+  },
+  {
+    "key": "Token ID",
+    "value": "Token ID"
+  },
+  {
+    "key": "Batch number indicates the length of batches produced by grouping L2 blocks to be proven on L1",
+    "value": "Batch number indicates the length of batches produced by grouping L2 blocks to be proven on L1"
+  },
+  {
+    "key": "View previous txn batch",
+    "value": "View previous txn batch"
+  },
+  {
+    "key": "View next txn batch",
+    "value": "View next txn batch"
+  },
+  {
+    "key": "Date and time at which batch is submitted to L1",
+    "value": "Date and time at which batch is submitted to L1"
+  },
+  {
+    "key": "Number of transactions in this batch",
+    "value": "Number of transactions in this batch"
+  },
+  {
+    "key": "Number of L2 blocks in this batch",
+    "value": "Number of L2 blocks in this batch"
+  },
+  {
+    "key": "Hash of L1 transaction in which transactions was committed",
+    "value": "Hash of L1 transaction in which transactions was committed"
+  },
+  {
+    "key": "Heigh of L1 block which includes L1 transactions",
+    "value": "Heigh of L1 block which includes L1 transactions"
+  },
+  {
+    "key": "Where the batch data is stored",
+    "value": "Where the batch data is stored"
+  },
+  {
+    "key": "The hash of the state before the batch",
+    "value": "The hash of the state before the batch"
+  },
+  {
+    "key": "The hash of the state after the batch",
+    "value": "The hash of the state after the batch"
+  },
+  {
+    "key": "Show data availability info",
+    "value": "Show data availability info"
+  },
+  {
+    "key": "Hide data availability info",
+    "value": "Hide data availability info"
+  },
+  {
+    "key": "Aggregated BLS signature of AnyTrust committee members",
+    "value": "Aggregated BLS signature of AnyTrust committee members"
+  },
+  {
+    "key": "The hash of the data blob stored by the AnyTrust committee",
+    "value": "The hash of the data blob stored by the AnyTrust committee"
+  },
+  {
+    "key": "Members of AnyTrust committee",
+    "value": "Members of AnyTrust committee"
+  },
+  {
+    "key": "Trusted",
+    "value": "Trusted"
+  },
+  {
+    "key": "Proof",
+    "value": "Proof"
+  },
+  {
+    "key": "The block number in Celestia where the Data Availability blob was published",
+    "value": "The block number in Celestia where the Data Availability blob was published"
+  },
+  {
+    "key": "The Data Availability blob’s unique cryptographic proof",
+    "value": "The Data Availability blob’s unique cryptographic proof"
+  },
+  {
+    "key": "Batch #",
+    "value": "Batch #"
+  },
+  {
+    "key": "L1 status",
+    "value": "L1 status"
+  },
+  {
+    "key": "L1 block",
+    "value": "L1 block"
+  },
+  {
+    "key": "Block count",
+    "value": "Block count"
+  },
+  {
+    "key": "L1 transaction",
+    "value": "L1 transaction"
+  },
+  {
+    "key": "Data container",
+    "value": "Data container"
+  },
+  {
+    "key": "Commitment",
+    "value": "Commitment"
+  },
+  {
+    "key": "Height",
+    "value": "Height"
+  },
+  {
+    "key": "Versioned hash",
+    "value": "Versioned hash"
+  },
+  {
+    "key": "Batch ID indicates the length of batches produced by grouping L2 blocks to be proven on L1",
+    "value": "Batch ID indicates the length of batches produced by grouping L2 blocks to be proven on L1"
+  },
+  {
+    "key": "Batch ID",
+    "value": "Batch ID"
+  },
+  {
+    "key": "L1 txn count",
+    "value": "L1 txn count"
+  },
+  {
+    "key": "L2 blocks",
+    "value": "L2 blocks"
+  },
+  {
+    "key": "Storage",
+    "value": "Storage"
+  },
+  {
+    "key": "Data availability container",
+    "value": "Data availability container"
+  },
+  {
+    "key": "Status of this batch",
+    "value": "Status of this batch"
+  },
+  {
+    "key": "Finalized",
+    "value": "Finalized"
+  },
+  {
+    "key": "Committed",
+    "value": "Committed"
+  },
+  {
+    "key": "Hash of L1 transaction this batch was committed in",
+    "value": "Hash of L1 transaction this batch was committed in"
+  },
+  {
+    "key": "L1 block that includes transaction with this batch commitment",
+    "value": "L1 block that includes transaction with this batch commitment"
+  },
+  {
+    "key": "Data availability",
+    "value": "Data availability"
+  },
+  {
+    "key": "Committed block",
+    "value": "Committed block"
+  },
+  {
+    "key": "Committed txn hash",
+    "value": "Committed txn hash"
+  },
+  {
+    "key": "Finalized block",
+    "value": "Finalized block"
+  },
+  {
+    "key": "Finalized txn hash",
+    "value": "Finalized txn hash"
+  },
+  {
+    "key": "Blocks count",
+    "value": "Blocks count"
+  },
+  {
+    "key": "Container",
+    "value": "Container"
+  },
+  {
+    "key": "Verify tx hash",
+    "value": "Verify tx hash"
+  },
+  {
+    "key": "Sequence hash",
+    "value": "Sequence hash"
+  },
+  {
+    "key": "Number of transactions inside the batch.",
+    "value": "Number of transactions inside the batch."
+  },
+  {
+    "key": "L1 batch root is a hash that summarizes batch data and submitted to the L1",
+    "value": "L1 batch root is a hash that summarizes batch data and submitted to the L1"
+  },
+  {
+    "key": "The gas price below which the \"baseFee\" of the batch should not fall",
+    "value": "The gas price below which the \"baseFee\" of the batch should not fall"
+  },
+  {
+    "key": "Hash of L1 tx on which the batch was committed",
+    "value": "Hash of L1 tx on which the batch was committed"
+  },
+  {
+    "key": "Commit tx",
+    "value": "Commit tx"
+  },
+  {
+    "key": "Prove tx",
+    "value": "Prove tx"
+  },
+  {
+    "key": "Smart contracts",
+    "value": "Smart contracts"
+  },
+  {
+    "key": "Claim",
+    "value": "Claim"
+  },
+  {
+    "key": "Message #",
+    "value": "Message #"
+  },
+  {
+    "key": "Receiver",
+    "value": "Receiver"
+  },
+  {
+    "key": "Additional info",
+    "value": "Additional info"
+  },
+  {
+    "key": "Transaction fee",
+    "value": "Transaction fee"
+  },
+  {
+    "key": "Others",
+    "value": "Others"
+  },
+  {
+    "key": "More details",
+    "value": "More details"
+  },
+  {
+    "key": "Contract creation",
+    "value": "Contract creation"
+  },
+  {
+    "key": "Token creation",
+    "value": "Token creation"
+  },
+  {
+    "key": "Coin transfer",
+    "value": "Coin transfer"
+  },
+  {
+    "key": "Bridge",
+    "value": "Bridge"
+  },
+  {
+    "key": "Search by addresses, hash, method...",
+    "value": "Search by addresses, hash, method..."
+  },
+  {
+    "key": "Pending transactions",
+    "value": "Pending transactions"
+  },
+  {
+    "key": "Transactions fees",
+    "value": "Transactions fees"
+  },
+  {
+    "key": "Avg. transaction fee",
+    "value": "Avg. transaction fee"
+  },
+  {
+    "key": "Value ascending",
+    "value": "Value ascending"
+  },
+  {
+    "key": "Value descending",
+    "value": "Value descending"
+  },
+  {
+    "key": "Fee ascending",
+    "value": "Fee ascending"
+  },
+  {
+    "key": "Fee descending",
+    "value": "Fee descending"
+  },
+  {
+    "key": "Block number ascending",
+    "value": "Block number ascending"
+  },
+  {
+    "key": "External call data",
+    "value": "External call data"
+  },
+  {
+    "key": "Call data",
+    "value": "Call data"
+  },
+  {
+    "key": "Show external call data",
+    "value": "Show external call data"
+  },
+  {
+    "key": "Decoded external call data",
+    "value": "Decoded external call data"
+  },
+  {
+    "key": "Decoded call data",
+    "value": "Decoded call data"
+  },
+  {
+    "key": "Unique character string assigned to every User operation",
+    "value": "Unique character string assigned to every User operation"
+  },
+  {
+    "key": "The address of the smart contract account",
+    "value": "The address of the smart contract account"
+  },
+  {
+    "key": "Target smart contract called by the User operation",
+    "value": "Target smart contract called by the User operation"
+  },
+  {
+    "key": "Current User operation state",
+    "value": "Current User operation state"
+  },
+  {
+    "key": "The revert reason of the User operation",
+    "value": "The revert reason of the User operation"
+  },
+  {
+    "key": "Date and time of User operation",
+    "value": "Date and time of User operation"
+  },
+  {
+    "key": "Total User operation fee",
+    "value": "Total User operation fee"
+  },
+  {
+    "key": "Actual gas amount used by the User operation",
+    "value": "Actual gas amount used by the User operation"
+  },
+  {
+    "key": "Hash of the transaction this User operation belongs to",
+    "value": "Hash of the transaction this User operation belongs to"
+  },
+  {
+    "key": "Block number containing this User operation",
+    "value": "Block number containing this User operation"
+  },
+  {
+    "key": "Contract that executes bundles of User operations",
+    "value": "Contract that executes bundles of User operations"
+  },
+  {
+    "key": "Gas to compensate the bundler",
+    "value": "Gas to compensate the bundler"
+  },
+  {
+    "key": "Maximum fee per gas ",
+    "value": "Maximum fee per gas "
+  },
+  {
+    "key": "Maximum priority fee per gas",
+    "value": "Maximum priority fee per gas"
+  },
+  {
+    "key": "Helper contract to validate an aggregated signature",
+    "value": "Helper contract to validate an aggregated signature"
+  },
+  {
+    "key": "Aggregator signature",
+    "value": "Aggregator signature"
+  },
+  {
+    "key": "Used to validate a User operation along with the nonce during verification",
+    "value": "Used to validate a User operation along with the nonce during verification"
+  },
+  {
+    "key": "View all",
+    "value": "View all"
+  },
+  {
+    "key": "User op hash",
+    "value": "User op hash"
+  },
+  {
+    "key": "Edit",
+    "value": "Edit"
+  },
+  {
+    "key": "Not a token",
+    "value": "Not a token"
+  },
+  {
+    "key": "Add details",
+    "value": "Add details"
+  },
+  {
+    "key": "Token Info",
+    "value": "Token Info"
+  },
+  {
+    "key": "Date",
+    "value": "Date"
+  },
+  {
+    "key": "In progress",
+    "value": "In progress"
+  },
+  {
+    "key": "Approved",
+    "value": "Approved"
+  },
+  {
+    "key": "Rejected",
+    "value": "Rejected"
+  },
+  {
+    "key": "Request status",
+    "value": "Request status"
+  },
+  {
+    "key": "Total contracts",
+    "value": "Total contracts"
+  },
+  {
+    "key": "Solidity",
+    "value": "Solidity"
+  },
+  {
+    "key": "Vyper",
+    "value": "Vyper"
+  },
+  {
+    "key": "Yul",
+    "value": "Yul"
+  },
+  {
+    "key": "Scilla",
+    "value": "Scilla"
+  },
+  {
+    "key": "Geas",
+    "value": "Geas"
+  },
+  {
+    "key": "Stylus Rust",
+    "value": "Stylus Rust"
+  },
+  {
+    "key": "Txs count",
+    "value": "Txs count"
+  },
+  {
+    "key": "Language",
+    "value": "Language"
+  },
+  {
+    "key": "Optimization",
+    "value": "Optimization"
+  },
+  {
+    "key": "Constructor args",
+    "value": "Constructor args"
+  },
+  {
+    "key": "Verified",
+    "value": "Verified"
+  },
+  {
+    "key": "Settings",
+    "value": "Settings"
+  },
+  {
+    "key": "Balance descending",
+    "value": "Balance descending"
+  },
+  {
+    "key": "Balance ascending",
+    "value": "Balance ascending"
+  },
+  {
+    "key": "Txs count descending",
+    "value": "Txs count descending"
+  },
+  {
+    "key": "Txs count ascending",
+    "value": "Txs count ascending"
+  },
+  {
+    "key": "Address that initiated the cross-chain transaction",
+    "value": "Address that initiated the cross-chain transaction"
+  },
+  {
+    "key": "Optional message data sent with the transaction",
+    "value": "Optional message data sent with the transaction"
+  },
+  {
+    "key": "Current state and status of the cross-chain transaction",
+    "value": "Current state and status of the cross-chain transaction"
+  },
+  {
+    "key": "Detailed status message",
+    "value": "Detailed status message"
+  },
+  {
+    "key": "When the transaction was first created",
+    "value": "When the transaction was first created"
+  },
+  {
+    "key": "Most recent update to transaction status",
+    "value": "Most recent update to transaction status"
+  },
+  {
+    "key": "Abort address",
+    "value": "Abort address"
+  },
+  {
+    "key": "Call",
+    "value": "Call"
+  },
+  {
+    "key": "Revert address",
+    "value": "Revert address"
+  },
+  {
+    "key": "Gas limit",
+    "value": "Gas limit"
+  },
+  {
+    "key": "Transferred",
+    "value": "Transferred"
+  },
+  {
+    "key": "Destination tx failed",
+    "value": "Destination tx failed"
+  },
+  {
+    "key": "Abort failed",
+    "value": "Abort failed"
+  },
+  {
+    "key": "Abort executed",
+    "value": "Abort executed"
+  },
+  {
+    "key": "Reverting to",
+    "value": "Reverting to"
+  },
+  {
+    "key": "Destination",
+    "value": "Destination"
+  },
+  {
+    "key": "Origin",
+    "value": "Origin"
+  },
+  {
+    "key": "There are no cross chain transactions.",
+    "value": "There are no cross chain transactions."
+  },
+  {
+    "key": "Select chains",
+    "value": "Select chains"
+  },
+  {
+    "key": "Date from",
+    "value": "Date from"
+  },
+  {
+    "key": "Date to",
+    "value": "Date to"
+  },
+  {
+    "key": "Sender Chain",
+    "value": "Sender Chain"
+  },
+  {
+    "key": "Receiver Chain",
+    "value": "Receiver Chain"
+  },
+  {
+    "key": "Receiver address",
+    "value": "Receiver address"
+  },
+  {
+    "key": "Sender address",
+    "value": "Sender address"
+  },
+  {
+    "key": "Not found",
+    "value": "Not found"
+  },
+  {
+    "key": "Rollup feature is not enabled.",
+    "value": "Rollup feature is not enabled."
+  },
+  {
+    "key": "Txn batches feature is not enabled.",
+    "value": "Txn batches feature is not enabled."
+  },
+  {
+    "key": "Celestia txn batches feature is not enabled.",
+    "value": "Celestia txn batches feature is not enabled."
+  },
+  {
+    "key": "Txn withdrawals feature is not enabled.",
+    "value": "Txn withdrawals feature is not enabled."
+  },
+  {
+    "key": "Background",
+    "value": "Background"
+  },
+  {
+    "key": "Activity pass",
+    "value": "Activity pass"
+  },
+  {
+    "key": "Available soon",
+    "value": "Available soon"
+  },
+  {
+    "key": "Streak badge",
+    "value": "Streak badge"
+  },
+  {
+    "key": "Streak progress",
+    "value": "Streak progress"
+  },
+  {
+    "key": "Day streak",
+    "value": "Day streak"
+  },
+  {
+    "key": "Rewards",
+    "value": "Rewards"
+  },
+  {
+    "key": "Blockscout activity",
+    "value": "Blockscout activity"
+  },
+  {
+    "key": "Contracts verification",
+    "value": "Contracts verification"
+  },
+  {
+    "key": "Blockscout usage",
+    "value": "Blockscout usage"
+  },
+  {
+    "key": "Current Merits period. All metrics reset weekly",
+    "value": "Current Merits period. All metrics reset weekly"
+  },
+  {
+    "key": "Performance rank",
+    "value": "Performance rank"
+  },
+  {
+    "key": "Merits earned",
+    "value": "Merits earned"
+  },
+  {
+    "key": "Estimated Merits based on your current rank. Final amount may change",
+    "value": "Estimated Merits based on your current rank. Final amount may change"
+  },
+  {
+    "key": "prev.",
+    "value": "prev."
+  },
+  {
+    "key": "Your activity",
+    "value": "Your activity"
+  },
+  {
+    "key": "Your current Merit count is not final!",
+    "value": "Your current Merit count is not final!"
+  },
+  {
+    "key": "Referral program",
+    "value": "Referral program"
+  },
+  {
+    "key": "Referral link",
+    "value": "Referral link"
+  },
+  {
+    "key": "Badges",
+    "value": "Badges"
+  },
+  {
+    "key": "View badges",
+    "value": "View badges"
+  },
+  {
+    "key": "Blockscout campaigns",
+    "value": "Blockscout campaigns"
+  },
+  {
+    "key": "Check campaigns",
+    "value": "Check campaigns"
+  },
+  {
+    "key": "Use your Merits",
+    "value": "Use your Merits"
+  },
+  {
+    "key": "Spend your Merits to get exclusive discounts and offers across several web3 products!",
+    "value": "Spend your Merits to get exclusive discounts and offers across several web3 products!"
+  },
+  {
+    "key": "Check offers",
+    "value": "Check offers"
+  },
+  {
+    "key": "Current status of the epoch",
+    "value": "Current status of the epoch"
+  },
+  {
+    "key": "Timestamp of the block where the epoch processing completed",
+    "value": "Timestamp of the block where the epoch processing completed"
+  },
+  {
+    "key": "Funds allocation to support Celo projects and community initiatives",
+    "value": "Funds allocation to support Celo projects and community initiatives"
+  },
+  {
+    "key": "Funds allocation to support projects that make Celo carbon-negative",
+    "value": "Funds allocation to support projects that make Celo carbon-negative"
+  },
+  {
+    "key": "Sum of all fund allocations",
+    "value": "Sum of all fund allocations"
+  },
+  {
+    "key": "Epochs are finalized approximately once a day",
+    "value": "Epochs are finalized approximately once a day"
+  },
+  {
+    "key": "Block range",
+    "value": "Block range"
+  },
+  {
+    "key": "Community",
+    "value": "Community"
+  },
+  {
+    "key": "Carbon offset",
+    "value": "Carbon offset"
+  },
+  {
+    "key": "Total",
+    "value": "Total"
+  },
+  {
+    "key": "Something went wrong. Unable to load next page.",
+    "value": "Something went wrong. Unable to load next page."
+  },
+  {
+    "key": "on behalf of",
+    "value": "on behalf of"
+  },
+  {
+    "key": "Election rewards",
+    "value": "Election rewards"
+  },
+  {
+    "key": "Collapse section",
+    "value": "Collapse section"
+  },
+  {
+    "key": "Expand section",
+    "value": "Expand section"
+  },
+  {
+    "key": "Beneficiary",
+    "value": "Beneficiary"
+  },
+  {
+    "key": "Validator group",
+    "value": "Validator group"
+  },
+  {
+    "key": "Associated validator",
+    "value": "Associated validator"
+  },
+  {
+    "key": "Voter",
+    "value": "Voter"
+  },
+  {
+    "key": "Epochs",
+    "value": "Epochs"
+  },
+  {
+    "key": "There are no epochs.",
+    "value": "There are no epochs."
+  },
+  {
+    "key": "Space",
+    "value": "Space"
+  },
+  {
+    "key": "Tap below to start",
+    "value": "Tap below to start"
+  },
+  {
+    "key": "Press space to start",
+    "value": "Press space to start"
+  },
+  {
+    "key": "Score 1000 to win a special prize!",
+    "value": "Score 1000 to win a special prize!"
+  },
+  {
+    "key": "You unlocked a hidden badge!",
+    "value": "You unlocked a hidden badge!"
+  },
+  {
+    "key": "Congratulations! You’re eligible to claim an epic hidden badge!",
+    "value": "Congratulations! You’re eligible to claim an epic hidden badge!"
+  },
+  {
+    "key": "all 0.3s ease",
+    "value": "all 0.3s ease"
+  },
+  {
+    "key": "Put the pieces together and win a prize",
+    "value": "Put the pieces together and win a prize"
+  },
+  {
+    "key": "Click on a square to move it",
+    "value": "Click on a square to move it"
+  },
+  {
+    "key": "Banner",
+    "value": "Banner"
+  },
+  {
+    "key": "Mark as favorite",
+    "value": "Mark as favorite"
+  },
+  {
+    "key": "Marketplace banner",
+    "value": "Marketplace banner"
+  },
+  {
+    "key": "Share it with us",
+    "value": "Share it with us"
+  },
+  {
+    "key": "Discovery",
+    "value": "Discovery"
+  },
+  {
+    "key": "Github",
+    "value": "Github"
+  },
+  {
+    "key": "This app opens in a separate tab",
+    "value": "This app opens in a separate tab"
+  },
+  {
+    "key": "This app opens in Blockscout and your Blockscout wallet connects automatically",
+    "value": "This app opens in Blockscout and your Blockscout wallet connects automatically"
+  },
+  {
+    "key": "App modal",
+    "value": "App modal"
+  },
+  {
+    "key": "Back to dApps list",
+    "value": "Back to dApps list"
+  },
+  {
+    "key": "App page",
+    "value": "App page"
+  },
+  {
+    "key": "Discovery view",
+    "value": "Discovery view"
+  },
+  {
+    "key": "Awesome! Thank you 💜",
+    "value": "Awesome! Thank you 💜"
+  },
+  {
+    "key": "Your rating improves the service",
+    "value": "Your rating improves the service"
+  },
+  {
+    "key": "Ooops! Something went wrong",
+    "value": "Ooops! Something went wrong"
+  },
+  {
+    "key": "App is already rated by you",
+    "value": "App is already rated by you"
+  },
+  {
+    "key": "Sending your feedback",
+    "value": "Sending your feedback"
+  },
+  {
+    "key": "Rate it!",
+    "value": "Rate it!"
+  },
+  {
+    "key": "Please log in to Blockscout to rate this DApp.",
+    "value": "Please log in to Blockscout to rate this DApp."
+  },
+  {
+    "key": "Click here to rate!",
+    "value": "Click here to rate!"
+  },
+  {
+    "key": "Swap tokens",
+    "value": "Swap tokens"
+  },
+  {
+    "key": "View and remove token approvals",
+    "value": "View and remove token approvals"
+  },
+  {
+    "key": "Get started",
+    "value": "Get started"
+  },
+  {
+    "key": "Send tokens to multiple addresses at once",
+    "value": "Send tokens to multiple addresses at once"
+  },
+  {
+    "key": "Send tokens",
+    "value": "Send tokens"
+  },
+  {
+    "key": "Essential dapps",
+    "value": "Essential dapps"
+  },
+  {
+    "key": "Revoke essential dapp",
+    "value": "Revoke essential dapp"
+  },
+  {
+    "key": "Click to see your approvals",
+    "value": "Click to see your approvals"
+  },
+  {
+    "key": "No approvals found",
+    "value": "No approvals found"
+  },
+  {
+    "key": "Unlimited",
+    "value": "Unlimited"
+  },
+  {
+    "key": "Approved spender",
+    "value": "Approved spender"
+  },
+  {
+    "key": "Approved amount",
+    "value": "Approved amount"
+  },
+  {
+    "key": "Value at risk",
+    "value": "Value at risk"
+  },
+  {
+    "key": "Select chain",
+    "value": "Select chain"
+  },
+  {
+    "key": "Connect a wallet to revoke approvals",
+    "value": "Connect a wallet to revoke approvals"
+  },
+  {
+    "key": "Connected",
+    "value": "Connected"
+  },
+  {
+    "key": "Not connected",
+    "value": "Not connected"
+  },
+  {
+    "key": "Search accounts by address or domain...",
+    "value": "Search accounts by address or domain..."
+  },
+  {
+    "key": "Click Connect Wallet on the top right or enter an address in the search bar.",
+    "value": "Click Connect Wallet on the top right or enter an address in the search bar."
+  },
+  {
+    "key": "Inspect your approvals by using the network selection, sorting and filtering options.",
+    "value": "Inspect your approvals by using the network selection, sorting and filtering options."
+  },
+  {
+    "key": "Revoke the approvals that you no longer use to prevent unwanted access to your funds.",
+    "value": "Revoke the approvals that you no longer use to prevent unwanted access to your funds."
+  },
+  {
+    "key": "Aborted",
+    "value": "Aborted"
+  },
+  {
+    "key": "Public client not found",
+    "value": "Public client not found"
+  },
+  {
+    "key": "Approval",
+    "value": "Approval"
+  },
+  {
+    "key": "Failed to revoke approval.",
+    "value": "Failed to revoke approval."
+  },
+  {
+    "key": "Approval revoked successfully.",
+    "value": "Approval revoked successfully."
+  },
+  {
+    "key": "Transfer",
+    "value": "Transfer"
+  },
+  {
+    "key": "Swap button",
+    "value": "Swap button"
+  },
+  {
+    "key": "Dappscout",
+    "value": "Dappscout"
+  },
+  {
+    "key": "Send Transaction",
+    "value": "Send Transaction"
+  },
+  {
+    "key": "Sign Message",
+    "value": "Sign Message"
+  },
+  {
+    "key": "Top rated",
+    "value": "Top rated"
+  },
+  {
+    "key": "Most rated",
+    "value": "Most rated"
+  },
+  {
+    "key": "Submit app",
+    "value": "Submit app"
+  },
+  {
+    "key": "Suggest ideas",
+    "value": "Suggest ideas"
+  },
+  {
+    "key": "Find app by name or keyword...",
+    "value": "Find app by name or keyword..."
+  },
+  {
+    "key": "Explore dapps",
+    "value": "Explore dapps"
+  },
+  {
+    "key": "L2 transaction",
+    "value": "L2 transaction"
+  },
+  {
+    "key": "Verify with",
+    "value": "Verify with"
+  },
+  {
+    "key": "View in",
+    "value": "View in"
+  },
+  {
+    "key": "Pool",
+    "value": "Pool"
+  },
+  {
+    "key": "DEX tracker",
+    "value": "DEX tracker"
+  },
+  {
+    "key": "There are no pools.",
+    "value": "There are no pools."
+  },
+  {
+    "key": "The base token in a liquidity pool pair",
+    "value": "The base token in a liquidity pool pair"
+  },
+  {
+    "key": "The quote token in a liquidity pool pair",
+    "value": "The quote token in a liquidity pool pair"
+  },
+  {
+    "key": "Current market capitalization of the base token",
+    "value": "Current market capitalization of the base token"
+  },
+  {
+    "key": "Current liquidity of the pool",
+    "value": "Current liquidity of the pool"
+  },
+  {
+    "key": "DEX where the pool is traded",
+    "value": "DEX where the pool is traded"
+  },
+  {
+    "key": "Pool ID",
+    "value": "Pool ID"
+  },
+  {
+    "key": "Liquidity",
+    "value": "Liquidity"
+  },
+  {
+    "key": "Website settings",
+    "value": "Website settings"
+  },
+  {
+    "key": "User settings",
+    "value": "User settings"
+  },
+  {
+    "key": "Color theme",
+    "value": "Color theme"
+  },
+  {
+    "key": "English",
+    "value": "English"
+  },
+  {
+    "key": "🇺🇸",
+    "value": "🇺🇸"
+  },
+  {
+    "key": "中文",
+    "value": "中文"
+  },
+  {
+    "key": "Show address menu",
+    "value": "Show address menu"
+  },
+  {
+    "key": "Update token info",
+    "value": "Update token info"
+  },
+  {
+    "key": "Transaction info",
+    "value": "Transaction info"
+  },
+  {
+    "key": "NFT collection",
+    "value": "NFT collection"
+  },
+  {
+    "key": "Access to this resource is restricted.",
+    "value": "Access to this resource is restricted."
+  },
+  {
+    "key": "Page not found",
+    "value": "Page not found"
+  },
+  {
+    "key": "Request cannot be processed",
+    "value": "Request cannot be processed"
+  },
+  {
+    "key": "An unexpected error has occurred. Try reloading the page, or come back soon and try again.",
+    "value": "An unexpected error has occurred. Try reloading the page, or come back soon and try again."
+  },
+  {
+    "key": "Block lost consensus",
+    "value": "Block lost consensus"
+  },
+  {
+    "key": "critical.",
+    "value": "critical."
+  },
+  {
+    "key": "Block removed due to chain reorganization",
+    "value": "Block removed due to chain reorganization"
+  },
+  {
+    "key": "View reorg",
+    "value": "View reorg"
+  },
+  {
+    "key": "Back to home",
+    "value": "Back to home"
+  },
+  {
+    "key": "Unable to get client key.",
+    "value": "Unable to get client key."
+  },
+  {
+    "key": "reCAPTCHA V2 site key is not set",
+    "value": "reCAPTCHA V2 site key is not set"
+  },
+  {
+    "key": "Rate limit exceeded.",
+    "value": "Rate limit exceeded."
+  },
+  {
+    "key": "Too many requests",
+    "value": "Too many requests"
+  },
+  {
+    "key": "I'm not a robot",
+    "value": "I'm not a robot"
+  },
+  {
+    "key": "If it still does not show up after 1 hour, please check with your",
+    "value": "If it still does not show up after 1 hour, please check with your"
+  },
+  {
+    "key": "solve the puzzle",
+    "value": "solve the puzzle"
+  },
+  {
+    "key": ", and be rewarded with a secret prize.",
+    "value": ", and be rewarded with a secret prize."
+  },
+  {
+    "key": "Placeholder",
+    "value": "Placeholder"
+  },
+  {
+    "key": "Disconnected",
+    "value": "Disconnected"
+  },
+  {
+    "key": "Connected to",
+    "value": "Connected to"
+  },
+  {
+    "key": "Disconnect",
+    "value": "Disconnect"
+  },
+  {
+    "key": "This contract has been certified by the chain developers",
+    "value": "This contract has been certified by the chain developers"
+  },
+  {
+    "key": "Sponsored banner advertisement",
+    "value": "Sponsored banner advertisement"
+  },
+  {
+    "key": "Validator rewards",
+    "value": "Validator rewards"
+  },
+  {
+    "key": "Delegated payments",
+    "value": "Delegated payments"
+  },
+  {
+    "key": "Voting rewards",
+    "value": "Voting rewards"
+  },
+  {
+    "key": "extends Omit",
+    "value": "extends Omit"
+  },
+  {
+    "key": "% of Gas Target",
+    "value": "% of Gas Target"
+  },
+  {
+    "key": "last 4 chars",
+    "value": "last 4 chars"
+  },
+  {
+    "key": "i18n Example Component",
+    "value": "i18n Example Component"
+  },
+  {
+    "key": "Loading translations...",
+    "value": "Loading translations..."
+  },
+  {
+    "key": "Show info",
+    "value": "Show info"
+  },
+  {
+    "key": ":id",
+    "value": ":id"
+  },
+  {
+    "key": "Verify with other explorers",
+    "value": "Verify with other explorers"
+  },
+  {
+    "key": "PQR-Test",
+    "value": "PQR-Test"
+  },
+  {
+    "key": "Example label",
+    "value": "Example label"
+  },
+  {
+    "key": "Example with long name",
+    "value": "Example with long name"
+  },
+  {
+    "key": "Another tag",
+    "value": "Another tag"
+  },
+  {
+    "key": "And yet more",
+    "value": "And yet more"
+  },
+  {
+    "key": "Awesome",
+    "value": "Awesome"
+  },
+  {
+    "key": "Reset filter",
+    "value": "Reset filter"
+  },
+  {
+    "key": "Connection lost, click",
+    "value": "Connection lost, click"
+  },
+  {
+    "key": "to load newer records",
+    "value": "to load newer records"
+  },
+  {
+    "key": "Live updates temporarily delayed",
+    "value": "Live updates temporarily delayed"
+  },
+  {
+    "key": "cross chain transaction",
+    "value": "cross chain transaction"
+  },
+  {
+    "key": "Outgoing transfers",
+    "value": "Outgoing transfers"
+  },
+  {
+    "key": "Incoming transfers",
+    "value": "Incoming transfers"
+  },
+  {
+    "key": "Token burning",
+    "value": "Token burning"
+  },
+  {
+    "key": "Token creating",
+    "value": "Token creating"
+  },
+  {
+    "key": "All about kitties",
+    "value": "All about kitties"
+  },
+  {
+    "key": "To see millions picture of cute kitties",
+    "value": "To see millions picture of cute kitties"
+  },
+  {
+    "key": "🎨",
+    "value": "🎨"
+  },
+  {
+    "key": "728x90",
+    "value": "728x90"
+  },
+  {
+    "key": "This is a testnet transaction only",
+    "value": "This is a testnet transaction only"
+  },
+  {
+    "key": "Blob",
+    "value": "Blob"
+  },
+  {
+    "key": "Calldata",
+    "value": "Calldata"
+  },
+  {
+    "key": "Celestia",
+    "value": "Celestia"
+  },
+  {
+    "key": "Blob page",
+    "value": "Blob page"
+  },
+  {
+    "key": "EIP-4844 blob",
+    "value": "EIP-4844 blob"
+  },
+  {
+    "key": "Celestia blob",
+    "value": "Celestia blob"
+  },
+  {
+    "key": "Text",
+    "value": "Text"
+  },
+  {
+    "key": "Gas Used %",
+    "value": "Gas Used %"
+  },
+  {
+    "key": "Block is being re-synced. Details may be incomplete until the update is finished.",
+    "value": "Block is being re-synced. Details may be incomplete until the update is finished."
+  },
+  {
+    "key": "Native token",
+    "value": "Native token"
+  },
+  {
+    "key": "Select interval",
+    "value": "Select interval"
+  },
+  {
+    "key": "Chart title placeholder",
+    "value": "Chart title placeholder"
+  },
+  {
+    "key": "Chart placeholder description chart placeholder description",
+    "value": "Chart placeholder description chart placeholder description"
+  },
+  {
+    "key": "Block on ",
+    "value": "Block on "
+  },
+  {
+    "key": "- Universal name service",
+    "value": "- Universal name service"
+  },
+  {
+    "key": "Learn more about Clusters",
+    "value": "Learn more about Clusters"
+  },
+  {
+    "key": "Documentation",
+    "value": "Documentation"
+  },
+  {
+    "key": "User operation on ",
+    "value": "User operation on "
+  },
+  {
+    "key": "Filter",
+    "value": "Filter"
+  },
+  {
+    "key": "Last update",
+    "value": "Last update"
+  },
+  {
+    "key": "Advanced",
+    "value": "Advanced"
+  },
+  {
+    "key": "Open link",
+    "value": "Open link"
+  },
+  {
+    "key": "Method id",
+    "value": "Method id"
+  },
+  {
+    "key": "Inde",
+    "value": "Inde"
+  },
+  {
+    "key": "Data",
+    "value": "Data"
+  },
+  {
+    "key": "Log index",
+    "value": "Log index"
+  },
+  {
+    "key": "Verify the contract here",
+    "value": "Verify the contract here"
+  },
+  {
+    "key": "Decode input data",
+    "value": "Decode input data"
+  },
+  {
+    "key": "Topics",
+    "value": "Topics"
+  },
+  {
+    "key": "Close current tab",
+    "value": "Close current tab"
+  },
+  {
+    "key": "Collapse folders",
+    "value": "Collapse folders"
+  },
+  {
+    "key": "The main file containing verified contract",
+    "value": "The main file containing verified contract"
+  },
+  {
+    "key": "Expand all",
+    "value": "Expand all"
+  },
+  {
+    "key": "Collapse all",
+    "value": "Collapse all"
+  },
+  {
+    "key": "Match Case",
+    "value": "Match Case"
+  },
+  {
+    "key": "Match Whole Word",
+    "value": "Match Whole Word"
+  },
+  {
+    "key": "Use Regular Expression",
+    "value": "Use Regular Expression"
+  },
+  {
+    "key": "Show File Explorer",
+    "value": "Show File Explorer"
+  },
+  {
+    "key": "Show Search in Files",
+    "value": "Show Search in Files"
+  },
+  {
+    "key": "Open sidebar",
+    "value": "Open sidebar"
+  },
+  {
+    "key": "Close sidebar",
+    "value": "Close sidebar"
+  },
+  {
+    "key": "Explorer",
+    "value": "Explorer"
+  },
+  {
+    "key": "Close",
+    "value": "Close"
+  },
+  {
+    "key": "**This is an external library linked to the verified contract**",
+    "value": "**This is an external library linked to the verified contract**"
+  },
+  {
+    "key": "builds correct file tree",
+    "value": "builds correct file tree"
+  },
+  {
+    "key": "Emp",
+    "value": "Emp"
+  },
+  {
+    "key": "Nil",
+    "value": "Nil"
+  },
+  {
+    "key": "computes correct chunks if files with the same name is not in folders with the same name",
+    "value": "computes correct chunks if files with the same name is not in folders with the same name"
+  },
+  {
+    "key": "construct correct absolute path if file is in the current directory",
+    "value": "construct correct absolute path if file is in the current directory"
+  },
+  {
+    "key": "returns undefined if imported file is outside the base file folder",
+    "value": "returns undefined if imported file is outside the base file folder"
+  },
+  {
+    "key": "returns unmodified path if it is already absolute",
+    "value": "returns unmodified path if it is already absolute"
+  },
+  {
+    "key": "correctly manages remappings",
+    "value": "correctly manages remappings"
+  },
+  {
+    "key": "with empty context",
+    "value": "with empty context"
+  },
+  {
+    "key": "t know the name of this variables in vscode\n    ",
+    "value": "t know the name of this variables in vscode\n    "
+  },
+  {
+    "key": "Token instance image",
+    "value": "Token instance image"
+  },
+  {
+    "key": "Failed to load image",
+    "value": "Failed to load image"
+  },
+  {
+    "key": "Prev page",
+    "value": "Prev page"
+  },
+  {
+    "key": "Unable to execute ReCaptcha",
+    "value": "Unable to execute ReCaptcha"
+  },
+  {
+    "key": "Addresses",
+    "value": "Addresses"
+  },
+  {
+    "key": "User ops",
+    "value": "User ops"
+  },
+  {
+    "key": "Blobs",
+    "value": "Blobs"
+  },
+  {
+    "key": "Cluster Name",
+    "value": "Cluster Name"
+  },
+  {
+    "key": "Cluster",
+    "value": "Cluster"
+  },
+  {
+    "key": "App",
+    "value": "App"
+  },
+  {
+    "key": "Public tag",
+    "value": "Public tag"
+  },
+  {
+    "key": "User operation",
+    "value": "User operation"
+  },
+  {
+    "key": "User op",
+    "value": "User op"
+  },
+  {
+    "key": "Security score",
+    "value": "Security score"
+  },
+  {
+    "key": "High",
+    "value": "High"
+  },
+  {
+    "key": "Low",
+    "value": "Low"
+  },
+  {
+    "key": "Informational",
+    "value": "Informational"
+  },
+  {
+    "key": "The contract was successfully created",
+    "value": "The contract was successfully created"
+  },
+  {
+    "key": "The creation transaction failed",
+    "value": "The creation transaction failed"
+  },
+  {
+    "key": "The contract was created at some point but has since self-destructed",
+    "value": "The contract was created at some point but has since self-destructed"
+  },
+  {
+    "key": "Self-destructed",
+    "value": "Self-destructed"
+  },
+  {
+    "key": "Table header",
+    "value": "Table header"
+  },
+  {
+    "key": "Toggle time format",
+    "value": "Toggle time format"
+  },
+  {
+    "key": "Paymaster sponsor",
+    "value": "Paymaster sponsor"
+  },
+  {
+    "key": "Wallet balance",
+    "value": "Wallet balance"
+  },
+  {
+    "key": "Wallet deposit",
+    "value": "Wallet deposit"
+  },
+  {
+    "key": "Unrecognized",
+    "value": "Unrecognized"
+  },
+  {
+    "key": "Pending outbound",
+    "value": "Pending outbound"
+  },
+  {
+    "key": "Pending inbound",
+    "value": "Pending inbound"
+  },
+  {
+    "key": "Outbound mined",
+    "value": "Outbound mined"
+  },
+  {
+    "key": "Pending revert",
+    "value": "Pending revert"
+  },
+  {
+    "key": "Reverted",
+    "value": "Reverted"
+  },
+  {
+    "key": "Unknown Status",
+    "value": "Unknown Status"
+  },
+  {
+    "key": "Transaction hash",
+    "value": "Transaction hash"
+  },
+  {
+    "key": "L1 block No",
+    "value": "L1 block No"
+  },
+  {
+    "key": "L2 txn hash",
+    "value": "L2 txn hash"
+  },
+  {
+    "key": "L1 txn origin",
+    "value": "L1 txn origin"
+  },
+  {
+    "key": "User",
+    "value": "User"
+  },
+  {
+    "key": "Merits",
+    "value": "Merits"
+  },
+  {
+    "key": "All achievements are earned",
+    "value": "All achievements are earned"
+  },
+  {
+    "key": "Congratulations",
+    "value": "Congratulations"
+  },
+  {
+    "key": "Registration",
+    "value": "Registration"
+  },
+  {
+    "key": "Open",
+    "value": "Open"
+  },
+  {
+    "key": "Add wallet to account",
+    "value": "Add wallet to account"
+  },
+  {
+    "key": "Log in to account",
+    "value": "Log in to account"
+  },
+  {
+    "key": "Merits program",
+    "value": "Merits program"
+  },
+  {
+    "key": "Referral code switch",
+    "value": "Referral code switch"
+  },
+  {
+    "key": "Sign message in your wallet",
+    "value": "Sign message in your wallet"
+  },
+  {
+    "key": "Validator index",
+    "value": "Validator index"
+  },
+  {
+    "key": "Msg nonce",
+    "value": "Msg nonce"
+  },
+  {
+    "key": "Time left",
+    "value": "Time left"
+  },
+  {
+    "key": "L2 block",
+    "value": "L2 block"
+  },
+  {
+    "key": "L2 block No",
+    "value": "L2 block No"
+  },
+  {
+    "key": "Deposits feature is not enabled.",
+    "value": "Deposits feature is not enabled."
+  },
+  {
+    "key": "Withdrawals feature is not enabled.",
+    "value": "Withdrawals feature is not enabled."
+  },
+  {
+    "key": "Latest batch",
+    "value": "Latest batch"
+  },
+  {
+    "key": "Total blocks",
+    "value": "Total blocks"
+  },
+  {
+    "key": "Average block time",
+    "value": "Average block time"
+  },
+  {
+    "key": "Total transactions",
+    "value": "Total transactions"
+  },
+  {
+    "key": "Total operational transactions",
+    "value": "Total operational transactions"
+  },
+  {
+    "key": "Latest L1 state batch",
+    "value": "Latest L1 state batch"
+  },
+  {
+    "key": "Wallet addresses",
+    "value": "Wallet addresses"
+  },
+  {
+    "key": "BTC Locked in 2WP",
+    "value": "BTC Locked in 2WP"
+  },
+  {
+    "key": "Current epoch",
+    "value": "Current epoch"
+  },
+  {
+    "key": "Total addresses",
+    "value": "Total addresses"
+  },
+  {
+    "key": "click once again.",
+    "value": "click once again."
+  },
+  {
+    "key": "All stats",
+    "value": "All stats"
+  },
+  {
+    "key": "\"section interval\"\n                \"input input\"",
+    "value": "\"section interval\"\n                \"input input\""
+  },
+  {
+    "key": "\"section interval input\"",
+    "value": "\"section interval input\""
+  },
+  {
+    "key": "Select section",
+    "value": "Select section"
+  },
+  {
+    "key": "Find chart, metric...",
+    "value": "Find chart, metric..."
+  },
+  {
+    "key": "Day",
+    "value": "Day"
+  },
+  {
+    "key": "Week",
+    "value": "Week"
+  },
+  {
+    "key": "Month",
+    "value": "Month"
+  },
+  {
+    "key": "Year",
+    "value": "Year"
+  },
+  {
+    "key": "All time",
+    "value": "All time"
+  },
+  {
+    "key": "1 month",
+    "value": "1 month"
+  },
+  {
+    "key": "3 months",
+    "value": "3 months"
+  },
+  {
+    "key": "6 months",
+    "value": "6 months"
+  },
+  {
+    "key": "1 year",
+    "value": "1 year"
+  },
+  {
+    "key": "Unnamed token",
+    "value": "Unnamed token"
+  },
+  {
+    "key": "Inventory",
+    "value": "Inventory"
+  },
+  {
+    "key": "Bridged",
+    "value": "Bridged"
+  },
+  {
+    "key": "Token on ",
+    "value": "Token on "
+  },
+  {
+    "key": "Price per token on the exchanges",
+    "value": "Price per token on the exchanges"
+  },
+  {
+    "key": "Circulating supply * Price",
+    "value": "Circulating supply * Price"
+  },
+  {
+    "key": "The total amount of tokens issued",
+    "value": "The total amount of tokens issued"
+  },
+  {
+    "key": "Number of accounts holding the token",
+    "value": "Number of accounts holding the token"
+  },
+  {
+    "key": "Number of digits that come after the decimal place when displaying token value",
+    "value": "Number of digits that come after the decimal place when displaying token value"
+  },
+  {
+    "key": "Holder",
+    "value": "Holder"
+  },
+  {
+    "key": "There are no tokens.",
+    "value": "There are no tokens."
+  },
+  {
+    "key": "Filtered by owner",
+    "value": "Filtered by owner"
+  },
+  {
+    "key": "Owner",
+    "value": "Owner"
+  },
+  {
+    "key": "Marketplaces trading this NFT",
+    "value": "Marketplaces trading this NFT"
+  },
+  {
+    "key": "Description and support info",
+    "value": "Description and support info"
+  },
+  {
+    "key": "Crypto markets",
+    "value": "Crypto markets"
+  },
+  {
+    "key": "Show bridged tokens from",
+    "value": "Show bridged tokens from"
+  },
+  {
+    "key": "On-chain market cap",
+    "value": "On-chain market cap"
+  },
+  {
+    "key": "Price ascending",
+    "value": "Price ascending"
+  },
+  {
+    "key": "Price descending",
+    "value": "Price descending"
+  },
+  {
+    "key": "Holders ascending",
+    "value": "Holders ascending"
+  },
+  {
+    "key": "Holders descending",
+    "value": "Holders descending"
+  },
+  {
+    "key": "On-chain market cap ascending",
+    "value": "On-chain market cap ascending"
+  },
+  {
+    "key": "On-chain market cap descending",
+    "value": "On-chain market cap descending"
+  },
+  {
+    "key": "Latest txn",
+    "value": "Latest txn"
+  },
+  {
+    "key": "Confidential compute tx details",
+    "value": "Confidential compute tx details"
+  },
+  {
+    "key": "Asset Flows",
+    "value": "Asset Flows"
+  },
+  {
+    "key": "Regular tx details",
+    "value": "Regular tx details"
+  },
+  {
+    "key": "State",
+    "value": "State"
+  },
+  {
+    "key": "Raw trace",
+    "value": "Raw trace"
+  },
+  {
+    "key": "Authorizations",
+    "value": "Authorizations"
+  },
+  {
+    "key": "Relay tx",
+    "value": "Relay tx"
+  },
+  {
+    "key": "Transaction details",
+    "value": "Transaction details"
+  },
+  {
+    "key": "Transaction on ",
+    "value": "Transaction on "
+  },
+  {
+    "key": "Transaction summary",
+    "value": "Transaction summary"
+  },
+  {
+    "key": "Human readable transaction provided by Noves.fi",
+    "value": "Human readable transaction provided by Noves.fi"
+  },
+  {
+    "key": "Noves logo",
+    "value": "Noves logo"
+  },
+  {
+    "key": "extracts variables names",
+    "value": "extracts variables names"
+  },
+  {
+    "key": "split string without capturing variables",
+    "value": "split string without capturing variables"
+  },
+  {
+    "key": "checks that summary is valid",
+    "value": "checks that summary is valid"
+  },
+  {
+    "key": "checks that summary is invalid",
+    "value": "checks that summary is invalid"
+  },
+  {
+    "key": "Smart contracts allowed to interact with confidential data",
+    "value": "Smart contracts allowed to interact with confidential data"
+  },
+  {
+    "key": "There are no transfers.",
+    "value": "There are no transfers."
+  },
+  {
+    "key": "Transaction method name",
+    "value": "Transaction method name"
+  },
+  {
+    "key": "Interacted with contract",
+    "value": "Interacted with contract"
+  },
+  {
+    "key": "Total transaction fee",
+    "value": "Total transaction fee"
+  },
+  {
+    "key": "Maximum amount of gas that can be used by the transaction",
+    "value": "Maximum amount of gas that can be used by the transaction"
+  },
+  {
+    "key": "Decoded input data",
+    "value": "Decoded input data"
+  },
+  {
+    "key": "No trace entries found.",
+    "value": "No trace entries found."
+  },
+  {
+    "key": "Connection is lost. Please click here to update transaction info.",
+    "value": "Connection is lost. Please click here to update transaction info."
+  },
+  {
+    "key": "Paid Gas",
+    "value": "Paid Gas"
+  },
+  {
+    "key": "Authority",
+    "value": "Authority"
+  },
+  {
+    "key": "Delegated address",
+    "value": "Delegated address"
+  },
+  {
+    "key": "Chain",
+    "value": "Chain"
+  },
+  {
+    "key": "Blob hash",
+    "value": "Blob hash"
+  },
+  {
+    "key": "Data type",
+    "value": "Data type"
+  },
+  {
+    "key": "Fee per gas",
+    "value": "Fee per gas"
+  },
+  {
+    "key": "Actual gas amount used by the transaction",
+    "value": "Actual gas amount used by the transaction"
+  },
+  {
+    "key": "The originating transaction that initiated the cross-L2 message on the source chain",
+    "value": "The originating transaction that initiated the cross-L2 message on the source chain"
+  },
+  {
+    "key": "The transaction that relays the cross-L2 message to its destination chain",
+    "value": "The transaction that relays the cross-L2 message to its destination chain"
+  },
+  {
+    "key": "Message id",
+    "value": "Message id"
+  },
+  {
+    "key": "Interop status",
+    "value": "Interop status"
+  },
+  {
+    "key": "Payload",
+    "value": "Payload"
+  },
+  {
+    "key": "Other data related to this transaction",
+    "value": "Other data related to this transaction"
+  },
+  {
+    "key": "List of tokens minted in the transaction",
+    "value": "List of tokens minted in the transaction"
+  },
+  {
+    "key": "List of tokens burnt in the transaction",
+    "value": "List of tokens burnt in the transaction"
+  },
+  {
+    "key": "List of tokens created in the transaction",
+    "value": "List of tokens created in the transaction"
+  },
+  {
+    "key": "The minimum network fee charged per transaction",
+    "value": "The minimum network fee charged per transaction"
+  },
+  {
+    "key": "Priority fee",
+    "value": "Priority fee"
+  },
+  {
+    "key": "An extra fee set by the sender to speed up transaction execution",
+    "value": "An extra fee set by the sender to speed up transaction execution"
+  },
+  {
+    "key": "Transaction fee without blob fee",
+    "value": "Transaction fee without blob fee"
+  },
+  {
+    "key": "Syncing with base layer",
+    "value": "Syncing with base layer"
+  },
+  {
+    "key": "Settlement pending",
+    "value": "Settlement pending"
+  },
+  {
+    "key": "Detailed status progress of the transaction",
+    "value": "Detailed status progress of the transaction"
+  },
+  {
+    "key": "Could not determine",
+    "value": "Could not determine"
+  },
+  {
+    "key": "Ready to prove",
+    "value": "Ready to prove"
+  },
+  {
+    "key": "In challenge period",
+    "value": "In challenge period"
+  },
+  {
+    "key": "Proven",
+    "value": "Proven"
+  },
+  {
+    "key": "Waiting a game to resolve",
+    "value": "Waiting a game to resolve"
+  },
+  {
+    "key": "Contract execution completed",
+    "value": "Contract execution completed"
+  },
+  {
+    "key": "Error occurred during contract execution",
+    "value": "Error occurred during contract execution"
+  },
+  {
+    "key": "Status and method",
+    "value": "Status and method"
+  },
+  {
+    "key": "Incoming message",
+    "value": "Incoming message"
+  },
+  {
+    "key": "Outgoing message",
+    "value": "Outgoing message"
+  },
+  {
+    "key": "Status of the transaction confirmation path to L1",
+    "value": "Status of the transaction confirmation path to L1"
+  },
+  {
+    "key": "The revert reason of the transaction",
+    "value": "The revert reason of the transaction"
+  },
+  {
+    "key": "Block number containing the transaction",
+    "value": "Block number containing the transaction"
+  },
+  {
+    "key": "Index of the batch containing this transaction",
+    "value": "Index of the batch containing this transaction"
+  },
+  {
+    "key": "Node that carried out the confidential computation",
+    "value": "Node that carried out the confidential computation"
+  },
+  {
+    "key": "The target address where this cross-chain transaction is executed",
+    "value": "The target address where this cross-chain transaction is executed"
+  },
+  {
+    "key": "A fee set by the chain operator to cover extra costs of additional services",
+    "value": "A fee set by the chain operator to cover extra costs of additional services"
+  },
+  {
+    "key": "L2 gas spent on L2 resources",
+    "value": "L2 gas spent on L2 resources"
+  },
+  {
+    "key": "Total gas used on L1",
+    "value": "Total gas used on L1"
+  },
+  {
+    "key": "L1 gas used by transaction",
+    "value": "L1 gas used by transaction"
+  },
+  {
+    "key": "L1 gas price",
+    "value": "L1 gas price"
+  },
+  {
+    "key": "Amount of gas used by the blobs in this transaction",
+    "value": "Amount of gas used by the blobs in this transaction"
+  },
+  {
+    "key": "L2 execution fee",
+    "value": "L2 execution fee"
+  },
+  {
+    "key": "Commitment scalar",
+    "value": "Commitment scalar"
+  },
+  {
+    "key": "Additional gas overhead of a data commitment transaction",
+    "value": "Additional gas overhead of a data commitment transaction"
+  },
+  {
+    "key": "L1 gas fees",
+    "value": "L1 gas fees"
+  },
+  {
+    "key": "L1 blob fees",
+    "value": "L1 blob fees"
+  },
+  {
+    "key": "Removed",
+    "value": "Removed"
+  },
+  {
+    "key": "Collected",
+    "value": "Collected"
+  },
+  {
+    "key": "Swapped",
+    "value": "Swapped"
+  },
+  {
+    "key": "Ether",
+    "value": "Ether"
+  },
+  {
+    "key": "Uniswap V3",
+    "value": "Uniswap V3"
+  },
+  {
+    "key": "Minted",
+    "value": "Minted"
+  },
+  {
+    "key": "of token ID",
+    "value": "of token ID"
+  },
+  {
+    "key": "Delegate call",
+    "value": "Delegate call"
+  },
+  {
+    "key": "Static call",
+    "value": "Static call"
+  },
+  {
+    "key": "Create",
+    "value": "Create"
+  },
+  {
+    "key": "Self-destruct",
+    "value": "Self-destruct"
+  },
+  {
+    "key": "Before",
+    "value": "Before"
+  },
+  {
+    "key": "After",
+    "value": "After"
+  },
+  {
+    "key": "Change",
+    "value": "Change"
+  },
+  {
+    "key": "A block producer who successfully included the block into the blockchain",
+    "value": "A block producer who successfully included the block into the blockchain"
+  },
+  {
+    "key": "Mint",
+    "value": "Mint"
+  },
+  {
+    "key": "Burn",
+    "value": "Burn"
+  },
+  {
+    "key": "Address used in tokens mintings and burnings",
+    "value": "Address used in tokens mintings and burnings"
+  },
+  {
+    "key": "Total validators",
+    "value": "Total validators"
+  },
+  {
+    "key": "Commission",
+    "value": "Commission"
+  },
+  {
+    "key": "Self bonded",
+    "value": "Self bonded"
+  },
+  {
+    "key": "Delegated amount",
+    "value": "Delegated amount"
+  },
+  {
+    "key": "Address descending",
+    "value": "Address descending"
+  },
+  {
+    "key": "Address ascending",
+    "value": "Address ascending"
+  },
+  {
+    "key": "Active validators",
+    "value": "Active validators"
+  },
+  {
+    "key": "Validator’s address",
+    "value": "Validator’s address"
+  },
+  {
+    "key": "Status descending",
+    "value": "Status descending"
+  },
+  {
+    "key": "Status ascending",
+    "value": "Status ascending"
+  },
+  {
+    "key": "Blocks validated descending",
+    "value": "Blocks validated descending"
+  },
+  {
+    "key": "Blocks validated ascending",
+    "value": "Blocks validated ascending"
+  },
+  {
+    "key": "Index of the staker in the committee",
+    "value": "Index of the staker in the committee"
+  },
+  {
+    "key": "Staker's balance",
+    "value": "Staker's balance"
+  },
+  {
+    "key": "libp2p peer ID, corresponding to the staker's BLS public key",
+    "value": "libp2p peer ID, corresponding to the staker's BLS public key"
+  },
+  {
+    "key": "The address whose key the validator uses to sign cross-chain events",
+    "value": "The address whose key the validator uses to sign cross-chain events"
+  },
+  {
+    "key": "Block number at which the staker was added",
+    "value": "Block number at which the staker was added"
+  },
+  {
+    "key": "BLS public key",
+    "value": "BLS public key"
+  },
+  {
+    "key": "Balance",
+    "value": "Balance"
+  },
+  {
+    "key": "Validators feature is not enabled.",
+    "value": "Validators feature is not enabled."
+  },
+  {
+    "key": "Solidity UML diagram",
+    "value": "Solidity UML diagram"
+  },
+  {
+    "key": "For contract",
+    "value": "For contract"
+  },
+  {
+    "key": "Click on image to zoom",
+    "value": "Click on image to zoom"
+  }
+]

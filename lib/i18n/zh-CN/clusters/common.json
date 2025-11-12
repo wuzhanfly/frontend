@@ -1,0 +1,8 @@
+{
+  "clusters.common.cluster_not_found": "集群未找到",
+  "clusters.common.the_unique_cluster_name": "唯一集群名称",
+  "clusters.common.the_address_attached_to_this_c": "附加到此集群名称的地址",
+  "clusters.common.when_this_cluster_name_was_cre": "此集群名称的创建时间",
+  "clusters.common.clusters": "集群",
+  "clusters.common.cluster_details": "集群详情"
+}

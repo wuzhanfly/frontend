@@ -1,0 +1,161 @@
+{
+  "stats.common.latest_batch": {
+    "defaultMessage": "Latest batch",
+    "source": [
+      "ui/home/Stats.tsx:123"
+    ]
+  },
+  "stats.common.total_blocks": {
+    "defaultMessage": "Total blocks",
+    "source": [
+      "ui/home/Stats.tsx:131"
+    ]
+  },
+  "stats.common.average_block_time": {
+    "defaultMessage": "Average block time",
+    "source": [
+      "ui/home/Stats.tsx:139"
+    ]
+  },
+  "stats.common.total_transactions": {
+    "defaultMessage": "Total transactions",
+    "source": [
+      "ui/home/Stats.tsx:150",
+      "ui/optimismSuperchain/home/Stats.tsx:11"
+    ]
+  },
+  "stats.common.total_operational_transactions": {
+    "defaultMessage": "Total operational transactions",
+    "source": [
+      "ui/home/Stats.tsx:158",
+      "ui/home/Stats.tsx:166"
+    ]
+  },
+  "stats.common.latest_l1_state_batch": {
+    "defaultMessage": "Latest L1 state batch",
+    "source": [
+      "ui/home/Stats.tsx:174"
+    ]
+  },
+  "stats.common.wallet_addresses": {
+    "defaultMessage": "Wallet addresses",
+    "source": [
+      "ui/home/Stats.tsx:182"
+    ]
+  },
+  "stats.common.gas_tracker": {
+    "defaultMessage": "Gas tracker",
+    "source": [
+      "ui/home/Stats.tsx:189"
+    ]
+  },
+  "stats.common.btc_locked_in_2wp": {
+    "defaultMessage": "BTC Locked in 2WP",
+    "source": [
+      "ui/home/Stats.tsx:197"
+    ]
+  },
+  "stats.common.current_epoch": {
+    "defaultMessage": "Current epoch",
+    "source": [
+      "ui/home/Stats.tsx:204"
+    ]
+  },
+  "stats.common.total_addresses": {
+    "defaultMessage": "Total addresses",
+    "source": [
+      "ui/optimismSuperchain/home/Stats.tsx:16"
+    ]
+  },
+  "stats.common.click_once_again": {
+    "defaultMessage": "click once again.",
+    "source": [
+      "ui/stats/ChartsLoadingErrorAlert.tsx:13"
+    ]
+  },
+  "stats.common.all_stats": {
+    "defaultMessage": "All stats",
+    "source": [
+      "ui/stats/StatsFilters.tsx:36"
+    ]
+  },
+  "stats.common.section_interval_input_input": {
+    "defaultMessage": "\"section interval\"\n                \"input input\"",
+    "source": [
+      "ui/stats/StatsFilters.tsx:50"
+    ]
+  },
+  "stats.common.section_interval_input": {
+    "defaultMessage": "\"section interval input\"",
+    "source": [
+      "ui/stats/StatsFilters.tsx:52"
+    ]
+  },
+  "stats.common.select_section": {
+    "defaultMessage": "Select section",
+    "source": [
+      "ui/stats/StatsFilters.tsx:63"
+    ]
+  },
+  "stats.common.find_chart_metric": {
+    "defaultMessage": "Find chart, metric...",
+    "source": [
+      "ui/stats/StatsFilters.tsx:86"
+    ]
+  },
+  "stats.common.day": {
+    "defaultMessage": "Day",
+    "source": [
+      "ui/stats/constants/index.ts:7"
+    ]
+  },
+  "stats.common.week": {
+    "defaultMessage": "Week",
+    "source": [
+      "ui/stats/constants/index.ts:11"
+    ]
+  },
+  "stats.common.month": {
+    "defaultMessage": "Month",
+    "source": [
+      "ui/stats/constants/index.ts:15"
+    ]
+  },
+  "stats.common.year": {
+    "defaultMessage": "Year",
+    "source": [
+      "ui/stats/constants/index.ts:19"
+    ]
+  },
+  "stats.common.all_time": {
+    "defaultMessage": "All time",
+    "source": [
+      "ui/stats/constants/index.ts:25",
+      "ui/stats/constants/index.ts:26"
+    ]
+  },
+  "stats.common.1_month": {
+    "defaultMessage": "1 month",
+    "source": [
+      "ui/stats/constants/index.ts:29"
+    ]
+  },
+  "stats.common.3_months": {
+    "defaultMessage": "3 months",
+    "source": [
+      "ui/stats/constants/index.ts:34"
+    ]
+  },
+  "stats.common.6_months": {
+    "defaultMessage": "6 months",
+    "source": [
+      "ui/stats/constants/index.ts:39"
+    ]
+  },
+  "stats.common.1_year": {
+    "defaultMessage": "1 year",
+    "source": [
+      "ui/stats/constants/index.ts:44"
+    ]
+  }
+}

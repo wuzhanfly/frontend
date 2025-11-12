@@ -1,0 +1,1219 @@
+{
+  "shared.common.show_address_menu": {
+    "defaultMessage": "Show address menu",
+    "source": [
+      "ui/shared/AccountActionsMenu/AccountActionsMenu.tsx:76"
+    ]
+  },
+  "shared.common.refresh_metadata": {
+    "defaultMessage": "Refresh metadata",
+    "source": [
+      "ui/shared/AccountActionsMenu/items/MetadataUpdateMenuItem.tsx:24",
+      "ui/shared/AccountActionsMenu/items/MetadataUpdateMenuItem.tsx:35"
+    ]
+  },
+  "shared.common.add_private_tag": {
+    "defaultMessage": "Add private tag",
+    "source": [
+      "ui/shared/AccountActionsMenu/items/PrivateTagMenuItem.tsx:61",
+      "ui/shared/AccountActionsMenu/items/PrivateTagMenuItem.tsx:72"
+    ]
+  },
+  "shared.common.add_public_tag": {
+    "defaultMessage": "Add public tag",
+    "source": [
+      "ui/shared/AccountActionsMenu/items/PublicTagMenuItem.tsx:20",
+      "ui/shared/AccountActionsMenu/items/PublicTagMenuItem.tsx:26"
+    ]
+  },
+  "shared.common.update_token_info": {
+    "defaultMessage": "Update token info",
+    "source": [
+      "ui/shared/AccountActionsMenu/items/TokenInfoMenuItem.tsx:62",
+      "ui/shared/AccountActionsMenu/items/TokenInfoMenuItem.tsx:65"
+    ]
+  },
+  "shared.common.add_token_info": {
+    "defaultMessage": "Add token info",
+    "source": [
+      "ui/shared/AccountActionsMenu/items/TokenInfoMenuItem.tsx:62",
+      "ui/shared/AccountActionsMenu/items/TokenInfoMenuItem.tsx:65"
+    ]
+  },
+  "shared.common.transaction_info": {
+    "defaultMessage": "Transaction info",
+    "source": [
+      "ui/shared/AdditionalInfoButton.tsx:24"
+    ]
+  },
+  "shared.common.txn": {
+    "defaultMessage": "Txn",
+    "source": [
+      "ui/shared/AppActionButton/AppActionButton.tsx:17",
+      "ui/shared/search/utils.ts:69"
+    ]
+  },
+  "shared.common.nft_collection": {
+    "defaultMessage": "NFT collection",
+    "source": [
+      "ui/shared/AppActionButton/AppActionButton.tsx:17"
+    ]
+  },
+  "shared.common.nft_item": {
+    "defaultMessage": "NFT item",
+    "source": [
+      "ui/shared/AppActionButton/AppActionButton.tsx:17"
+    ]
+  },
+  "shared.common.alert": {
+    "defaultMessage": "Alert",
+    "source": [
+      "ui/shared/AppError/AppError.tsx:31"
+    ]
+  },
+  "shared.common.access_to_this_resource_is_res": {
+    "defaultMessage": "Access to this resource is restricted.",
+    "source": [
+      "ui/shared/AppError/AppError.tsx:32"
+    ]
+  },
+  "shared.common.page_not_found": {
+    "defaultMessage": "Page not found",
+    "source": [
+      "ui/shared/AppError/AppError.tsx:35"
+    ]
+  },
+  "shared.common.request_cannot_be_processed": {
+    "defaultMessage": "Request cannot be processed",
+    "source": [
+      "ui/shared/AppError/AppError.tsx:39"
+    ]
+  },
+  "shared.common.oops_something_went_wrong": {
+    "defaultMessage": "Oops! Something went wrong",
+    "source": [
+      "ui/shared/AppError/AppError.tsx:43",
+      "ui/shared/monaco/CodeEditor.tsx:265"
+    ]
+  },
+  "shared.common.an_unexpected_error_has_occurr": {
+    "defaultMessage": "An unexpected error has occurred. Try reloading the page, or come back soon and try again.",
+    "source": [
+      "ui/shared/AppError/AppError.tsx:44"
+    ]
+  },
+  "shared.common.block_lost_consensus": {
+    "defaultMessage": "Block lost consensus",
+    "source": [
+      "ui/shared/AppError/AppError.tsx:62"
+    ]
+  },
+  "shared.common.critical": {
+    "defaultMessage": "critical.",
+    "source": [
+      "ui/shared/AppError/AppErrorBoundary.tsx:38",
+      "ui/shared/solidityscanReport/SolidityscanReportDetails.tsx:13"
+    ]
+  },
+  "shared.common.block_removed_due_to_chain_reo": {
+    "defaultMessage": "Block removed due to chain reorganization",
+    "source": [
+      "ui/shared/AppError/custom/AppErrorBlockConsensus.tsx:19"
+    ]
+  },
+  "shared.common.view_reorg": {
+    "defaultMessage": "View reorg",
+    "source": [
+      "ui/shared/AppError/custom/AppErrorBlockConsensus.tsx:25"
+    ]
+  },
+  "shared.common.back_to_home": {
+    "defaultMessage": "Back to home",
+    "source": [
+      "ui/shared/AppError/custom/AppErrorBlockConsensus.tsx:25"
+    ]
+  },
+  "shared.common.recaptcha_is_not_solved": {
+    "defaultMessage": "ReCaptcha is not solved",
+    "source": [
+      "ui/shared/AppError/custom/AppErrorTooManyRequests.tsx:42",
+      "ui/shared/reCaptcha/useReCaptcha.tsx:26",
+      "ui/shared/reCaptcha/useReCaptcha.tsx:56"
+    ]
+  },
+  "shared.common.unable_to_get_client_key": {
+    "defaultMessage": "Unable to get client key.",
+    "source": [
+      "ui/shared/AppError/custom/AppErrorTooManyRequests.tsx:63"
+    ]
+  },
+  "shared.common.recaptcha_v2_site_key_is_not_s": {
+    "defaultMessage": "reCAPTCHA V2 site key is not set",
+    "source": [
+      "ui/shared/AppError/custom/AppErrorTooManyRequests.tsx:93"
+    ]
+  },
+  "shared.common.rate_limit_exceeded": {
+    "defaultMessage": "Rate limit exceeded.",
+    "source": [
+      "ui/shared/AppError/custom/AppErrorTooManyRequests.tsx:98"
+    ]
+  },
+  "shared.common.too_many_requests": {
+    "defaultMessage": "Too many requests",
+    "source": [
+      "ui/shared/AppError/custom/AppErrorTooManyRequests.tsx:111"
+    ]
+  },
+  "shared.common.im_not_a_robot": {
+    "defaultMessage": "I'm not a robot",
+    "source": [
+      "ui/shared/AppError/custom/AppErrorTooManyRequests.tsx:116"
+    ]
+  },
+  "shared.common.if_it_still_does_not_show_up_a": {
+    "defaultMessage": "If it still does not show up after 1 hour, please check with your",
+    "source": [
+      "ui/shared/AppError/custom/AppErrorTxNotFound.tsx:59"
+    ]
+  },
+  "shared.common.solve_the_puzzle": {
+    "defaultMessage": "solve the puzzle",
+    "source": [
+      "ui/shared/AppError/custom/AppErrorTxNotFound.tsx:64"
+    ]
+  },
+  "shared.common._and_be_rewarded_with_a_secret": {
+    "defaultMessage": ", and be rewarded with a secret prize.",
+    "source": [
+      "ui/shared/AppError/custom/AppErrorTxNotFound.tsx:64"
+    ]
+  },
+  "shared.common.placeholder": {
+    "defaultMessage": "Placeholder",
+    "source": [
+      "ui/shared/ChainIcon.tsx:27"
+    ]
+  },
+  "shared.common.smart_contracts": {
+    "defaultMessage": "Smart contracts",
+    "source": [
+      "ui/shared/ConnectWalletAlert.tsx:17"
+    ]
+  },
+  "shared.common.connect_wallet": {
+    "defaultMessage": "Connect wallet",
+    "source": [
+      "ui/shared/ConnectWalletAlert.tsx:31"
+    ]
+  },
+  "shared.common.disconnected": {
+    "defaultMessage": "Disconnected",
+    "source": [
+      "ui/shared/ConnectWalletAlert.tsx:24"
+    ]
+  },
+  "shared.common.connected_to": {
+    "defaultMessage": "Connected to",
+    "source": [
+      "ui/shared/ConnectWalletAlert.tsx:42"
+    ]
+  },
+  "shared.common.disconnect": {
+    "defaultMessage": "Disconnect",
+    "source": [
+      "ui/shared/ConnectWalletAlert.tsx:51"
+    ]
+  },
+  "shared.common.this_contract_has_been_certifi": {
+    "defaultMessage": "This contract has been certified by the chain developers",
+    "source": [
+      "ui/shared/ContractCertifiedLabel.tsx:15"
+    ]
+  },
+  "shared.common.promise": {
+    "defaultMessage": "Promise",
+    "source": [
+      "ui/shared/DeleteModal.tsx:15",
+      "ui/shared/DeleteModal.tsx:16",
+      "ui/shared/reCaptcha/useReCaptcha.tsx:14",
+      "ui/shared/reCaptcha/useReCaptcha.tsx:46",
+      "ui/shared/reCaptcha/useReCaptcha.tsx:46"
+    ]
+  },
+  "shared.common.sponsored_banner_advertisement": {
+    "defaultMessage": "Sponsored banner advertisement",
+    "source": [
+      "ui/shared/DetailedInfo/DetailedInfoSponsoredItem.tsx:25"
+    ]
+  },
+  "shared.common.validator_rewards": {
+    "defaultMessage": "Validator rewards",
+    "source": [
+      "ui/shared/EpochRewardTypeTag.tsx:22"
+    ]
+  },
+  "shared.common.delegated_payments": {
+    "defaultMessage": "Delegated payments",
+    "source": [
+      "ui/shared/EpochRewardTypeTag.tsx:27"
+    ]
+  },
+  "shared.common.voting_rewards": {
+    "defaultMessage": "Voting rewards",
+    "source": [
+      "ui/shared/EpochRewardTypeTag.tsx:33"
+    ]
+  },
+  "shared.common.extends_omit": {
+    "defaultMessage": "extends Omit",
+    "source": [
+      "ui/shared/FormModal.tsx:8"
+    ]
+  },
+  "shared.common._of_gas_target": {
+    "defaultMessage": "% of Gas Target",
+    "source": [
+      "ui/shared/GasUsedToTargetRatio.tsx:13"
+    ]
+  },
+  "shared.common.last_4_chars": {
+    "defaultMessage": "last 4 chars",
+    "source": [
+      "ui/shared/HashStringShortenDynamic.tsx:6"
+    ]
+  },
+  "shared.common.i18n_example_component": {
+    "defaultMessage": "i18n Example Component",
+    "source": [
+      "ui/shared/I18nExample.tsx:8"
+    ]
+  },
+  "shared.common.loading_translations": {
+    "defaultMessage": "Loading translations...",
+    "source": [
+      "ui/shared/I18nTestComponent.tsx:8"
+    ]
+  },
+  "shared.common.show_info": {
+    "defaultMessage": "Show info",
+    "source": [
+      "ui/shared/InfoButton.tsx:22"
+    ]
+  },
+  "shared.common.id": {
+    "defaultMessage": ":id",
+    "source": [
+      "ui/shared/NetworkExplorers.tsx:28",
+      "ui/shared/NetworkExplorers.tsx:29"
+    ]
+  },
+  "shared.common.verify_with_other_explorers": {
+    "defaultMessage": "Verify with other explorers",
+    "source": [
+      "ui/shared/NetworkExplorers.tsx:54"
+    ]
+  },
+  "shared.common.sent_to": {
+    "defaultMessage": "Sent to",
+    "source": [
+      "ui/shared/Noves/NovesFromTo.tsx:30",
+      "ui/shared/Noves/utils.test.ts:10",
+      "ui/shared/Noves/utils.test.ts:45",
+      "ui/shared/Noves/utils.ts:36",
+      "ui/shared/Noves/utils.ts:42",
+      "ui/shared/Noves/utils.ts:51",
+      "ui/shared/Noves/utils.ts:63",
+      "ui/shared/Noves/utils.ts:71",
+      "ui/shared/Noves/utils.ts:74",
+      "ui/shared/Noves/utils.ts:85"
+    ]
+  },
+  "shared.common.sent": {
+    "defaultMessage": "Sent",
+    "source": [
+      "ui/shared/Noves/NovesFromTo.tsx:33",
+      "ui/shared/Noves/utils.test.ts:24"
+    ]
+  },
+  "shared.common.validators": {
+    "defaultMessage": "Validators",
+    "source": [
+      "ui/shared/Noves/NovesFromTo.tsx:55"
+    ]
+  },
+  "shared.common.pqrtest": {
+    "defaultMessage": "PQR-Test",
+    "source": [
+      "ui/shared/Noves/utils.test.ts:31"
+    ]
+  },
+  "shared.common.received_from": {
+    "defaultMessage": "Received from",
+    "source": [
+      "ui/shared/Noves/utils.ts:32",
+      "ui/shared/Noves/utils.ts:44",
+      "ui/shared/Noves/utils.ts:55",
+      "ui/shared/Noves/utils.ts:59",
+      "ui/shared/Noves/utils.ts:67",
+      "ui/shared/Noves/utils.ts:85"
+    ]
+  },
+  "shared.common.example_label": {
+    "defaultMessage": "Example label",
+    "source": [
+      "ui/shared/Page/specs/DefaultView.tsx:34"
+    ]
+  },
+  "shared.common.example_with_long_name": {
+    "defaultMessage": "Example with long name",
+    "source": [
+      "ui/shared/Page/specs/LongNameAndManyTags.tsx:34"
+    ]
+  },
+  "shared.common.another_tag": {
+    "defaultMessage": "Another tag",
+    "source": [
+      "ui/shared/Page/specs/LongNameAndManyTags.tsx:40"
+    ]
+  },
+  "shared.common.and_yet_more": {
+    "defaultMessage": "And yet more",
+    "source": [
+      "ui/shared/Page/specs/LongNameAndManyTags.tsx:41"
+    ]
+  },
+  "shared.common.awesome": {
+    "defaultMessage": "Awesome",
+    "source": [
+      "ui/shared/Page/specs/WithTextAd.tsx:11"
+    ]
+  },
+  "shared.common.reset_filter": {
+    "defaultMessage": "Reset filter",
+    "source": [
+      "ui/shared/ResetIconButton.tsx:12"
+    ]
+  },
+  "shared.common.connection_lost_click": {
+    "defaultMessage": "Connection lost, click",
+    "source": [
+      "ui/shared/SocketAlert.tsx:14"
+    ]
+  },
+  "shared.common.to_load_newer_records": {
+    "defaultMessage": "to load newer records",
+    "source": [
+      "ui/shared/SocketAlert.tsx:15"
+    ]
+  },
+  "shared.common.live_updates_temporarily_delay": {
+    "defaultMessage": "Live updates temporarily delayed",
+    "source": [
+      "ui/shared/SocketNewItemsNotice.tsx:34"
+    ]
+  },
+  "shared.common.cross_chain_transaction": {
+    "defaultMessage": "cross chain transaction",
+    "source": [
+      "ui/shared/SocketNewItemsNotice.tsx:56"
+    ]
+  },
+  "shared.common.edit": {
+    "defaultMessage": "Edit",
+    "source": [
+      "ui/shared/TableItemActionButtons.tsx:20"
+    ]
+  },
+  "shared.common.address": {
+    "defaultMessage": "Address",
+    "source": [
+      "ui/shared/TokenTransfer/TokenTransferFilter.tsx:45",
+      "ui/shared/logs/LogItem.tsx:61",
+      "ui/shared/search/utils.ts:67",
+      "ui/shared/search/utils.ts:67"
+    ]
+  },
+  "shared.common.all": {
+    "defaultMessage": "All",
+    "source": [
+      "ui/shared/TokenTransfer/TokenTransferFilter.tsx:55"
+    ]
+  },
+  "shared.common.outgoing_transfers": {
+    "defaultMessage": "Outgoing transfers",
+    "source": [
+      "ui/shared/TokenTransfer/TokenTransferFilter.tsx:56"
+    ]
+  },
+  "shared.common.incoming_transfers": {
+    "defaultMessage": "Incoming transfers",
+    "source": [
+      "ui/shared/TokenTransfer/TokenTransferFilter.tsx:57"
+    ]
+  },
+  "shared.common.token": {
+    "defaultMessage": "Token",
+    "source": [
+      "ui/shared/TokenTransfer/TokenTransferTable.tsx:46",
+      "ui/shared/search/utils.ts:65",
+      "ui/shared/search/utils.ts:65"
+    ]
+  },
+  "shared.common.token_id": {
+    "defaultMessage": "Token ID",
+    "source": [
+      "ui/shared/TokenTransfer/TokenTransferTable.tsx:47",
+      "ui/shared/TokenTransferSnippet/TokenTransferSnippetNft.tsx:48"
+    ]
+  },
+  "shared.common.token_burning": {
+    "defaultMessage": "Token burning",
+    "source": [
+      "ui/shared/TokenTransfer/helpers.ts:8"
+    ]
+  },
+  "shared.common.token_creating": {
+    "defaultMessage": "Token creating",
+    "source": [
+      "ui/shared/TokenTransfer/helpers.ts:10"
+    ]
+  },
+  "shared.common.token_transfer": {
+    "defaultMessage": "Token transfer",
+    "source": [
+      "ui/shared/TokenTransfer/helpers.ts:12"
+    ]
+  },
+  "shared.common.all_about_kitties": {
+    "defaultMessage": "All about kitties",
+    "source": [
+      "ui/shared/ad/CoinzillaTextAd.tsx:25"
+    ]
+  },
+  "shared.common.to_see_millions_picture_of_cut": {
+    "defaultMessage": "To see millions picture of cute kitties",
+    "source": [
+      "ui/shared/ad/CoinzillaTextAd.tsx:26"
+    ]
+  },
+  "shared.common.": {
+    "defaultMessage": "🎨",
+    "source": [
+      "ui/shared/ad/CoinzillaTextAd.tsx:90"
+    ]
+  },
+  "shared.common.728x90": {
+    "defaultMessage": "728x90",
+    "source": [
+      "ui/shared/ad/SliseBanner.tsx:24",
+      "ui/shared/ad/SliseBanner.tsx:53"
+    ]
+  },
+  "shared.common.this_is_a_testnet_transaction_": {
+    "defaultMessage": "This is a testnet transaction only",
+    "source": [
+      "ui/shared/alerts/TestnetWarning.tsx:18"
+    ]
+  },
+  "shared.common.blob": {
+    "defaultMessage": "Blob",
+    "source": [
+      "ui/shared/batch/ArbitrumL2TxnBatchDA.tsx:21",
+      "ui/shared/search/utils.ts:72",
+      "ui/shared/search/utils.ts:72"
+    ]
+  },
+  "shared.common.calldata": {
+    "defaultMessage": "Calldata",
+    "source": [
+      "ui/shared/batch/ArbitrumL2TxnBatchDA.tsx:27",
+      "ui/shared/batch/OptimisticL2TxnBatchDA.tsx:21",
+      "ui/shared/batch/ScrollL2TxnBatchDA.tsx:20"
+    ]
+  },
+  "shared.common.celestia": {
+    "defaultMessage": "Celestia",
+    "source": [
+      "ui/shared/batch/ArbitrumL2TxnBatchDA.tsx:30"
+    ]
+  },
+  "shared.common.blob_page": {
+    "defaultMessage": "Blob page",
+    "source": [
+      "ui/shared/batch/CeleniumLink.tsx:45"
+    ]
+  },
+  "shared.common.eip4844_blob": {
+    "defaultMessage": "EIP-4844 blob",
+    "source": [
+      "ui/shared/batch/OptimisticL2TxnBatchDA.tsx:19",
+      "ui/shared/batch/ScrollL2TxnBatchDA.tsx:18"
+    ]
+  },
+  "shared.common.celestia_blob": {
+    "defaultMessage": "Celestia blob",
+    "source": [
+      "ui/shared/batch/OptimisticL2TxnBatchDA.tsx:23"
+    ]
+  },
+  "shared.common.image": {
+    "defaultMessage": "Image",
+    "source": [
+      "ui/shared/blob/BlobDataType.tsx:14"
+    ]
+  },
+  "shared.common.text": {
+    "defaultMessage": "Text",
+    "source": [
+      "ui/shared/blob/BlobDataType.tsx:15"
+    ]
+  },
+  "shared.common.raw": {
+    "defaultMessage": "Raw",
+    "source": [
+      "ui/shared/blob/BlobDataType.tsx:16"
+    ]
+  },
+  "shared.common.gas_used_": {
+    "defaultMessage": "Gas Used %",
+    "source": [
+      "ui/shared/block/BlockGasUsed.tsx:33"
+    ]
+  },
+  "shared.common.block_is_being_resynced_detail": {
+    "defaultMessage": "Block is being re-synced. Details may be incomplete until the update is finished.",
+    "source": [
+      "ui/shared/block/BlockPendingUpdateAlert.tsx:17",
+      "ui/shared/block/BlockPendingUpdateHint.tsx:18",
+      "ui/shared/entities/block/BlockEntity.tsx:56"
+    ]
+  },
+  "shared.common.native_token": {
+    "defaultMessage": "Native token",
+    "source": [
+      "ui/shared/celo/NativeTokenTag.tsx:19"
+    ]
+  },
+  "shared.common.select_interval": {
+    "defaultMessage": "Select interval",
+    "source": [
+      "ui/shared/chart/ChartIntervalSelect.tsx:44"
+    ]
+  },
+  "shared.common.chart_title_placeholder": {
+    "defaultMessage": "Chart title placeholder",
+    "source": [
+      "ui/shared/chart/useChartQuery.tsx:34"
+    ]
+  },
+  "shared.common.chart_placeholder_description_": {
+    "defaultMessage": "Chart placeholder description chart placeholder description",
+    "source": [
+      "ui/shared/chart/useChartQuery.tsx:35"
+    ]
+  },
+  "shared.common.block_on": {
+    "defaultMessage": "Block on ",
+    "source": [
+      "ui/shared/entities/block/BlockEntity.tsx:53"
+    ]
+  },
+  "shared.common.clusters": {
+    "defaultMessage": "Clusters",
+    "source": [
+      "ui/shared/entities/clusters/ClustersEntity.tsx:97"
+    ]
+  },
+  "shared.common._universal_name_service": {
+    "defaultMessage": "- Universal name service",
+    "source": [
+      "ui/shared/entities/clusters/ClustersEntity.tsx:98"
+    ]
+  },
+  "shared.common.learn_more_about_clusters": {
+    "defaultMessage": "Learn more about Clusters",
+    "source": [
+      "ui/shared/entities/clusters/ClustersEntity.tsx:112"
+    ]
+  },
+  "shared.common.documentation": {
+    "defaultMessage": "Documentation",
+    "source": [
+      "ui/shared/entities/ens/EnsEntity.tsx:69"
+    ]
+  },
+  "shared.common.user_operation_on": {
+    "defaultMessage": "User operation on ",
+    "source": [
+      "ui/shared/entities/userOp/UserOpEntity.tsx:37"
+    ]
+  },
+  "shared.common.filter": {
+    "defaultMessage": "Filter",
+    "source": [
+      "ui/shared/filters/FilterButton.tsx:50"
+    ]
+  },
+  "shared.common.fast": {
+    "defaultMessage": "Fast",
+    "source": [
+      "ui/shared/gas/GasInfoTooltip.tsx:55"
+    ]
+  },
+  "shared.common.slow": {
+    "defaultMessage": "Slow",
+    "source": [
+      "ui/shared/gas/GasInfoTooltip.tsx:57"
+    ]
+  },
+  "shared.common.last_update": {
+    "defaultMessage": "Last update",
+    "source": [
+      "ui/shared/gas/GasInfoTooltip.tsx:46"
+    ]
+  },
+  "shared.common.advanced": {
+    "defaultMessage": "Advanced",
+    "source": [
+      "ui/shared/links/AdvancedFilterLink.tsx:28"
+    ]
+  },
+  "shared.common.open_link": {
+    "defaultMessage": "Open link",
+    "source": [
+      "ui/shared/links/LinkNewTab.tsx:22"
+    ]
+  },
+  "shared.common.method_id": {
+    "defaultMessage": "Method id",
+    "source": [
+      "ui/shared/logs/LogDecodedInputDataHeader.tsx:51"
+    ]
+  },
+  "shared.common.call": {
+    "defaultMessage": "Call",
+    "source": [
+      "ui/shared/logs/LogDecodedInputDataHeader.tsx:56"
+    ]
+  },
+  "shared.common.name": {
+    "defaultMessage": "Name",
+    "source": [
+      "ui/shared/logs/LogDecodedInputDataTable.tsx:96",
+      "ui/shared/search/utils.ts:63",
+      "ui/shared/search/utils.ts:63"
+    ]
+  },
+  "shared.common.inde": {
+    "defaultMessage": "Inde",
+    "source": [
+      "ui/shared/logs/LogDecodedInputDataTable.tsx:98"
+    ]
+  },
+  "shared.common.data": {
+    "defaultMessage": "Data",
+    "source": [
+      "ui/shared/logs/LogDecodedInputDataTable.tsx:99",
+      "ui/shared/logs/LogItem.tsx:115"
+    ]
+  },
+  "shared.common.log_index": {
+    "defaultMessage": "Log index",
+    "source": [
+      "ui/shared/logs/LogIndex.tsx:14"
+    ]
+  },
+  "shared.common.verify_the_contract_here": {
+    "defaultMessage": "Verify the contract here",
+    "source": [
+      "ui/shared/logs/LogItem.tsx:57"
+    ]
+  },
+  "shared.common.transaction": {
+    "defaultMessage": "Transaction",
+    "source": [
+      "ui/shared/logs/LogItem.tsx:61",
+      "ui/shared/search/utils.ts:69"
+    ]
+  },
+  "shared.common.decode_input_data": {
+    "defaultMessage": "Decode input data",
+    "source": [
+      "ui/shared/logs/LogItem.tsx:98"
+    ]
+  },
+  "shared.common.topics": {
+    "defaultMessage": "Topics",
+    "source": [
+      "ui/shared/logs/LogItem.tsx:104"
+    ]
+  },
+  "shared.common.close_current_tab": {
+    "defaultMessage": "Close current tab",
+    "source": [
+      "ui/shared/monaco/CodeEditor.tsx:127"
+    ]
+  },
+  "shared.common.collapse_folders": {
+    "defaultMessage": "Collapse folders",
+    "source": [
+      "ui/shared/monaco/CodeEditorFileExplorer.tsx:31"
+    ]
+  },
+  "shared.common.the_main_file_containing_verif": {
+    "defaultMessage": "The main file containing verified contract",
+    "source": [
+      "ui/shared/monaco/CodeEditorMainFileIndicator.tsx:13"
+    ]
+  },
+  "shared.common.expand_all": {
+    "defaultMessage": "Expand all",
+    "source": [
+      "ui/shared/monaco/CodeEditorSearch.tsx:121"
+    ]
+  },
+  "shared.common.collapse_all": {
+    "defaultMessage": "Collapse all",
+    "source": [
+      "ui/shared/monaco/CodeEditorSearch.tsx:121"
+    ]
+  },
+  "shared.common.match_case": {
+    "defaultMessage": "Match Case",
+    "source": [
+      "ui/shared/monaco/CodeEditorSearch.tsx:172",
+      "ui/shared/monaco/CodeEditorSearch.tsx:173"
+    ]
+  },
+  "shared.common.match_whole_word": {
+    "defaultMessage": "Match Whole Word",
+    "source": [
+      "ui/shared/monaco/CodeEditorSearch.tsx:181",
+      "ui/shared/monaco/CodeEditorSearch.tsx:182"
+    ]
+  },
+  "shared.common.use_regular_expression": {
+    "defaultMessage": "Use Regular Expression",
+    "source": [
+      "ui/shared/monaco/CodeEditorSearch.tsx:190",
+      "ui/shared/monaco/CodeEditorSearch.tsx:191"
+    ]
+  },
+  "shared.common.search": {
+    "defaultMessage": "Search",
+    "source": [
+      "ui/shared/monaco/CodeEditorSearch.tsx:214",
+      "ui/shared/monaco/CodeEditorSideBar.tsx:138"
+    ]
+  },
+  "shared.common.show_file_explorer": {
+    "defaultMessage": "Show File Explorer",
+    "source": [
+      "ui/shared/monaco/CodeEditorSideBar.tsx:72"
+    ]
+  },
+  "shared.common.show_search_in_files": {
+    "defaultMessage": "Show Search in Files",
+    "source": [
+      "ui/shared/monaco/CodeEditorSideBar.tsx:85"
+    ]
+  },
+  "shared.common.open_sidebar": {
+    "defaultMessage": "Open sidebar",
+    "source": [
+      "ui/shared/monaco/CodeEditorSideBar.tsx:180",
+      "ui/shared/monaco/CodeEditorSideBar.tsx:181"
+    ]
+  },
+  "shared.common.close_sidebar": {
+    "defaultMessage": "Close sidebar",
+    "source": [
+      "ui/shared/monaco/CodeEditorSideBar.tsx:180",
+      "ui/shared/monaco/CodeEditorSideBar.tsx:181"
+    ]
+  },
+  "shared.common.explorer": {
+    "defaultMessage": "Explorer",
+    "source": [
+      "ui/shared/monaco/CodeEditorSideBar.tsx:137"
+    ]
+  },
+  "shared.common.close": {
+    "defaultMessage": "Close",
+    "source": [
+      "ui/shared/monaco/CodeEditorTab.tsx:67"
+    ]
+  },
+  "shared.common.this_is_an_external_library_li": {
+    "defaultMessage": "**This is an external library linked to the verified contract**",
+    "source": [
+      "ui/shared/monaco/utils/addExternalLibraryWarningDecoration.ts:11"
+    ]
+  },
+  "shared.common.builds_correct_file_tree": {
+    "defaultMessage": "builds correct file tree",
+    "source": [
+      "ui/shared/monaco/utils/composeFileTree.test.ts:30"
+    ]
+  },
+  "shared.common.emp": {
+    "defaultMessage": "Emp",
+    "source": [
+      "ui/shared/monaco/utils/defScilla.ts:49"
+    ]
+  },
+  "shared.common.nil": {
+    "defaultMessage": "Nil",
+    "source": [
+      "ui/shared/monaco/utils/defScilla.ts:85"
+    ]
+  },
+  "shared.common.computes_correct_chunks_if_fil": {
+    "defaultMessage": "computes correct chunks if files with the same name is not in folders with the same name",
+    "source": [
+      "ui/shared/monaco/utils/getFilePathParts.test.ts:15",
+      "ui/shared/monaco/utils/getFilePathParts.test.ts:27",
+      "ui/shared/monaco/utils/getFilePathParts.test.ts:39"
+    ]
+  },
+  "shared.common.construct_correct_absolute_pat": {
+    "defaultMessage": "construct correct absolute path if file is in the current directory",
+    "source": [
+      "ui/shared/monaco/utils/getFullPathOfImportedFile.test.ts:12"
+    ]
+  },
+  "shared.common.returns_undefined_if_imported_": {
+    "defaultMessage": "returns undefined if imported file is outside the base file folder",
+    "source": [
+      "ui/shared/monaco/utils/getFullPathOfImportedFile.test.ts:21"
+    ]
+  },
+  "shared.common.returns_unmodified_path_if_it_": {
+    "defaultMessage": "returns unmodified path if it is already absolute",
+    "source": [
+      "ui/shared/monaco/utils/getFullPathOfImportedFile.test.ts:30"
+    ]
+  },
+  "shared.common.correctly_manages_remappings": {
+    "defaultMessage": "correctly manages remappings",
+    "source": [
+      "ui/shared/monaco/utils/getFullPathOfImportedFile.test.ts:50"
+    ]
+  },
+  "shared.common.with_empty_context": {
+    "defaultMessage": "with empty context",
+    "source": [
+      "ui/shared/monaco/utils/getFullPathOfImportedFile.test.ts:64"
+    ]
+  },
+  "shared.common.t_know_the_name_of_this_variab": {
+    "defaultMessage": "t know the name of this variables in vscode\n    ",
+    "source": [
+      "ui/shared/monaco/utils/themes.ts:40"
+    ]
+  },
+  "shared.common.select_chain": {
+    "defaultMessage": "Select chain",
+    "source": [
+      "ui/shared/multichain/ChainSelect.tsx:32"
+    ]
+  },
+  "shared.common.token_instance_image": {
+    "defaultMessage": "Token instance image",
+    "source": [
+      "ui/shared/nft/NftImage.tsx:60"
+    ]
+  },
+  "shared.common.failed_to_load_image": {
+    "defaultMessage": "Failed to load image",
+    "source": [
+      "ui/shared/nft/useLoadImageViaIpfs.tsx:9"
+    ]
+  },
+  "shared.common.prev_page": {
+    "defaultMessage": "Prev page",
+    "source": [
+      "ui/shared/pagination/Pagination.tsx:40"
+    ]
+  },
+  "shared.common.unable_to_execute_recaptcha": {
+    "defaultMessage": "Unable to execute ReCaptcha",
+    "source": [
+      "ui/shared/reCaptcha/useReCaptcha.tsx:16"
+    ]
+  },
+  "shared.common.tokens": {
+    "defaultMessage": "Tokens",
+    "source": [
+      "ui/shared/search/utils.ts:35"
+    ]
+  },
+  "shared.common.addresses": {
+    "defaultMessage": "Addresses",
+    "source": [
+      "ui/shared/search/utils.ts:37",
+      "ui/shared/search/utils.ts:37"
+    ]
+  },
+  "shared.common.public_tags": {
+    "defaultMessage": "Public tags",
+    "source": [
+      "ui/shared/search/utils.ts:38",
+      "ui/shared/search/utils.ts:38"
+    ]
+  },
+  "shared.common.transactions": {
+    "defaultMessage": "Transactions",
+    "source": [
+      "ui/shared/search/utils.ts:39",
+      "ui/shared/search/utils.ts:39"
+    ]
+  },
+  "shared.common.blocks": {
+    "defaultMessage": "Blocks",
+    "source": [
+      "ui/shared/search/utils.ts:40",
+      "ui/shared/search/utils.ts:40"
+    ]
+  },
+  "shared.common.operations": {
+    "defaultMessage": "Operations",
+    "source": [
+      "ui/shared/search/utils.ts:41",
+      "ui/shared/search/utils.ts:41",
+      "ui/shared/search/utils.ts:73",
+      "ui/shared/search/utils.ts:73"
+    ]
+  },
+  "shared.common.user_operations": {
+    "defaultMessage": "User operations",
+    "source": [
+      "ui/shared/search/utils.ts:46"
+    ]
+  },
+  "shared.common.user_ops": {
+    "defaultMessage": "User ops",
+    "source": [
+      "ui/shared/search/utils.ts:46"
+    ]
+  },
+  "shared.common.blobs": {
+    "defaultMessage": "Blobs",
+    "source": [
+      "ui/shared/search/utils.ts:50",
+      "ui/shared/search/utils.ts:50"
+    ]
+  },
+  "shared.common.names": {
+    "defaultMessage": "Names",
+    "source": [
+      "ui/shared/search/utils.ts:54",
+      "ui/shared/search/utils.ts:54"
+    ]
+  },
+  "shared.common.cluster_name": {
+    "defaultMessage": "Cluster Name",
+    "source": [
+      "ui/shared/search/utils.ts:58"
+    ]
+  },
+  "shared.common.cluster": {
+    "defaultMessage": "Cluster",
+    "source": [
+      "ui/shared/search/utils.ts:58",
+      "ui/shared/search/utils.ts:64",
+      "ui/shared/search/utils.ts:64"
+    ]
+  },
+  "shared.common.app": {
+    "defaultMessage": "App",
+    "source": [
+      "ui/shared/search/utils.ts:62"
+    ]
+  },
+  "shared.common.public_tag": {
+    "defaultMessage": "Public tag",
+    "source": [
+      "ui/shared/search/utils.ts:68"
+    ]
+  },
+  "shared.common.tag": {
+    "defaultMessage": "Tag",
+    "source": [
+      "ui/shared/search/utils.ts:68"
+    ]
+  },
+  "shared.common.user_operation": {
+    "defaultMessage": "User operation",
+    "source": [
+      "ui/shared/search/utils.ts:71"
+    ]
+  },
+  "shared.common.user_op": {
+    "defaultMessage": "User op",
+    "source": [
+      "ui/shared/search/utils.ts:71"
+    ]
+  },
+  "shared.common.security_score": {
+    "defaultMessage": "Security score",
+    "source": [
+      "ui/shared/solidityscanReport/SolidityscanReportButton.tsx:24"
+    ]
+  },
+  "shared.common.high": {
+    "defaultMessage": "High",
+    "source": [
+      "ui/shared/solidityscanReport/SolidityscanReportDetails.tsx:14"
+    ]
+  },
+  "shared.common.low": {
+    "defaultMessage": "Low",
+    "source": [
+      "ui/shared/solidityscanReport/SolidityscanReportDetails.tsx:16"
+    ]
+  },
+  "shared.common.informational": {
+    "defaultMessage": "Informational",
+    "source": [
+      "ui/shared/solidityscanReport/SolidityscanReportDetails.tsx:17"
+    ]
+  },
+  "shared.common.gas": {
+    "defaultMessage": "Gas",
+    "source": [
+      "ui/shared/solidityscanReport/SolidityscanReportDetails.tsx:18"
+    ]
+  },
+  "shared.common.finalized": {
+    "defaultMessage": "Finalized",
+    "source": [
+      "ui/shared/statusTag/CeloEpochStatus.tsx:15",
+      "ui/shared/statusTag/ZkEvmL2TxnBatchStatus.tsx:18"
+    ]
+  },
+  "shared.common.in_progress": {
+    "defaultMessage": "In progress",
+    "source": [
+      "ui/shared/statusTag/CeloEpochStatus.tsx:15"
+    ]
+  },
+  "shared.common.the_contract_was_successfully_": {
+    "defaultMessage": "The contract was successfully created",
+    "source": [
+      "ui/shared/statusTag/ContractCreationStatus.tsx:19"
+    ]
+  },
+  "shared.common.the_creation_transaction_faile": {
+    "defaultMessage": "The creation transaction failed",
+    "source": [
+      "ui/shared/statusTag/ContractCreationStatus.tsx:25"
+    ]
+  },
+  "shared.common.the_contract_was_created_at_so": {
+    "defaultMessage": "The contract was created at some point but has since self-destructed",
+    "source": [
+      "ui/shared/statusTag/ContractCreationStatus.tsx:31"
+    ]
+  },
+  "shared.common.selfdestructed": {
+    "defaultMessage": "Self-destructed",
+    "source": [
+      "ui/shared/statusTag/ContractCreationStatus.tsx:32"
+    ]
+  },
+  "shared.common.failed": {
+    "defaultMessage": "Failed",
+    "source": [
+      "ui/shared/statusTag/TxStatus.tsx:28",
+      "ui/shared/userOps/UserOpStatus.tsx:16",
+      "ui/shared/zetaChain/ZetaChainCCTXReducedStatus.tsx:40"
+    ]
+  },
+  "shared.common.helpblockscoutcom": {
+    "defaultMessage": "help@blockscout.com",
+    "source": [
+      "ui/shared/texts/AdminSupportText.tsx:14"
+    ]
+  },
+  "shared.common.table_header": {
+    "defaultMessage": "Table header",
+    "source": [
+      "ui/shared/time/TimeFormatToggle.tsx:18"
+    ]
+  },
+  "shared.common.toggle_time_format": {
+    "defaultMessage": "Toggle time format",
+    "source": [
+      "ui/shared/time/TimeFormatToggle.tsx:22",
+      "ui/shared/time/TimeFormatToggle.tsx:24"
+    ]
+  },
+  "shared.common.paymaster_sponsor": {
+    "defaultMessage": "Paymaster sponsor",
+    "source": [
+      "ui/shared/userOps/UserOpSponsorType.tsx:18"
+    ]
+  },
+  "shared.common.wallet_balance": {
+    "defaultMessage": "Wallet balance",
+    "source": [
+      "ui/shared/userOps/UserOpSponsorType.tsx:21"
+    ]
+  },
+  "shared.common.wallet_deposit": {
+    "defaultMessage": "Wallet deposit",
+    "source": [
+      "ui/shared/userOps/UserOpSponsorType.tsx:24"
+    ]
+  },
+  "shared.common.unrecognized": {
+    "defaultMessage": "Unrecognized",
+    "source": [
+      "ui/shared/zetaChain/ZetaChainCCTXReducedStatus.tsx:43"
+    ]
+  },
+  "shared.common.pending_outbound": {
+    "defaultMessage": "Pending outbound",
+    "source": [
+      "ui/shared/zetaChain/ZetaChainCCTXStatusTag.tsx:13"
+    ]
+  },
+  "shared.common.pending_inbound": {
+    "defaultMessage": "Pending inbound",
+    "source": [
+      "ui/shared/zetaChain/ZetaChainCCTXStatusTag.tsx:14"
+    ]
+  },
+  "shared.common.outbound_mined": {
+    "defaultMessage": "Outbound mined",
+    "source": [
+      "ui/shared/zetaChain/ZetaChainCCTXStatusTag.tsx:15"
+    ]
+  },
+  "shared.common.pending_revert": {
+    "defaultMessage": "Pending revert",
+    "source": [
+      "ui/shared/zetaChain/ZetaChainCCTXStatusTag.tsx:16"
+    ]
+  },
+  "shared.common.aborted": {
+    "defaultMessage": "Aborted",
+    "source": [
+      "ui/shared/zetaChain/ZetaChainCCTXStatusTag.tsx:17"
+    ]
+  },
+  "shared.common.reverted": {
+    "defaultMessage": "Reverted",
+    "source": [
+      "ui/shared/zetaChain/ZetaChainCCTXStatusTag.tsx:18"
+    ]
+  },
+  "shared.common.unknown_status": {
+    "defaultMessage": "Unknown Status",
+    "source": [
+      "ui/shared/zetaChain/ZetaChainCCTXStatusTag.tsx:19"
+    ]
+  }
+}

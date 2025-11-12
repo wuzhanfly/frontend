@@ -1,0 +1,38 @@
+{
+  "clusters.common.cluster_not_found": {
+    "defaultMessage": "Cluster not found",
+    "source": [
+      "ui/cluster/ClusterDetails.tsx:22"
+    ]
+  },
+  "clusters.common.the_unique_cluster_name": {
+    "defaultMessage": "The unique cluster name",
+    "source": [
+      "ui/cluster/ClusterDetails.tsx:31"
+    ]
+  },
+  "clusters.common.the_address_attached_to_this_c": {
+    "defaultMessage": "The address attached to this cluster name",
+    "source": [
+      "ui/cluster/ClusterDetails.tsx:46"
+    ]
+  },
+  "clusters.common.when_this_cluster_name_was_cre": {
+    "defaultMessage": "When this cluster name was created",
+    "source": [
+      "ui/cluster/ClusterDetails.tsx:87"
+    ]
+  },
+  "clusters.common.clusters": {
+    "defaultMessage": "Clusters",
+    "source": [
+      "ui/nameServices/directories/Clusters.tsx:142"
+    ]
+  },
+  "clusters.common.cluster_details": {
+    "defaultMessage": "Cluster details",
+    "source": [
+      "ui/pages/Cluster.tsx:28"
+    ]
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "account.common.top_accounts": {
+    "defaultMessage": "Top accounts",
+    "source": [
+      "ui/optimismSuperchain/accounts/OpSuperchainAccounts.tsx:9",
+      "ui/pages/Accounts.tsx:75"
+    ]
+  },
+  "account.common.coming_soon_": {
+    "defaultMessage": "Coming soon 🔜",
+    "source": [
+      "ui/optimismSuperchain/accounts/OpSuperchainAccounts.tsx:12"
+    ]
+  },
+  "account.common.there_are_no_accounts": {
+    "defaultMessage": "There are no accounts.",
+    "source": [
+      "ui/pages/Accounts.tsx:79"
+    ]
+  },
+  "account.common.watch_list": {
+    "defaultMessage": "Watch list",
+    "source": [
+      "ui/pages/Watchlist.tsx:152"
+    ]
+  },
+  "account.common.email_notifications": {
+    "defaultMessage": "Email notifications",
+    "source": [
+      "ui/watchlist/AddressModal/AddressForm.tsx:158"
+    ]
+  },
+  "account.common.save_changes": {
+    "defaultMessage": "Save changes",
+    "source": [
+      "ui/watchlist/AddressModal/AddressForm.tsx:178"
+    ]
+  },
+  "account.common.add_address": {
+    "defaultMessage": "Add address",
+    "source": [
+      "ui/watchlist/AddressModal/AddressForm.tsx:178"
+    ]
+  },
+  "account.common.promise": {
+    "defaultMessage": "Promise",
+    "source": [
+      "ui/watchlist/AddressModal/AddressForm.tsx:27",
+      "ui/watchlist/AddressModal/AddressModal.tsx:13",
+      "ui/watchlist/DeleteAddressModal.tsx:13"
+    ]
+  },
+  "account.common.notification_methods": {
+    "defaultMessage": "Notification methods",
+    "source": [
+      "ui/watchlist/AddressModal/AddressForm.tsx:155"
+    ]
+  },
+  "account.common.incoming": {
+    "defaultMessage": "Incoming",
+    "source": [
+      "ui/watchlist/AddressModal/AddressFormNotifications.tsx:38"
+    ]
+  },
+  "account.common.outgoing": {
+    "defaultMessage": "Outgoing",
+    "source": [
+      "ui/watchlist/AddressModal/AddressFormNotifications.tsx:44"
+    ]
+  },
+  "account.common.edit_watch_list_address": {
+    "defaultMessage": "Edit watch list address",
+    "source": [
+      "ui/watchlist/AddressModal/AddressModal.tsx:20"
+    ]
+  },
+  "account.common.new_address_to_watch_list": {
+    "defaultMessage": "New address to watch list",
+    "source": [
+      "ui/watchlist/AddressModal/AddressModal.tsx:20"
+    ]
+  },
+  "account.common.address": {
+    "defaultMessage": "Address",
+    "source": [
+      "ui/watchlist/DeleteAddressModal.tsx:33",
+      "ui/watchlist/WatchlistTable/WatchlistTable.tsx:23"
+    ]
+  },
+  "account.common.will_be_deleted": {
+    "defaultMessage": "will be deleted",
+    "source": [
+      "ui/watchlist/DeleteAddressModal.tsx:33"
+    ]
+  },
+  "account.common.add_email": {
+    "defaultMessage": "Add email",
+    "source": [
+      "ui/watchlist/WatchlistEmailAlert.tsx:20"
+    ]
+  },
+  "account.common.there_has_been_an_error_proces": {
+    "defaultMessage": "There has been an error processing your request",
+    "source": [
+      "ui/watchlist/WatchlistTable/WatchListItem.tsx:41",
+      "ui/watchlist/WatchlistTable/WatchListTableItem.tsx:40"
+    ]
+  },
+  "account.common.email_notification_is_on": {
+    "defaultMessage": "Email notification is ON",
+    "source": [
+      "ui/watchlist/WatchlistTable/WatchListItem.tsx:48",
+      "ui/watchlist/WatchlistTable/WatchListTableItem.tsx:47"
+    ]
+  },
+  "account.common.email_notification_is_off": {
+    "defaultMessage": "Email notification is OFF",
+    "source": [
+      "ui/watchlist/WatchlistTable/WatchListItem.tsx:48",
+      "ui/watchlist/WatchlistTable/WatchListTableItem.tsx:47"
+    ]
+  },
+  "account.common.email_notification": {
+    "defaultMessage": "Email notification",
+    "source": [
+      "ui/watchlist/WatchlistTable/WatchListItem.tsx:93",
+      "ui/watchlist/WatchlistTable/WatchListItem.tsx:88",
+      "ui/watchlist/WatchlistTable/WatchListTableItem.tsx:88",
+      "ui/watchlist/WatchlistTable/WatchlistTable.tsx:25"
+    ]
+  },
+  "account.common.private_tag": {
+    "defaultMessage": "Private tag",
+    "source": [
+      "ui/watchlist/WatchlistTable/WatchListItem.tsx:82",
+      "ui/watchlist/WatchlistTable/WatchlistTable.tsx:24"
+    ]
+  }
+}

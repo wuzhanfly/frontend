@@ -1,77 +1,139 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-// 语言包导入
-import addressesEn from './locales/en/addresses/text.json';
-import commonEn from './locales/en/common/text.json';
-import contractEn from './locales/en/contract/text.json';
-import dashboardEn from './locales/en/dashboard/text.json';
-import formEn from './locales/en/form/text.json';
-import settingsEn from './locales/en/settings/text.json';
-import sharedEn from './locales/en/shared/text.json';
-import tokensEn from './locales/en/tokens/text.json';
-import transactionsEn from './locales/en/transactions/text.json';
-import validatorsEn from './locales/en/validators/text.json';
-import addressesZh from './locales/zh/addresses/text.json';
-import commonZh from './locales/zh/common/text.json';
-import contractZh from './locales/zh/contract/text.json';
-import dashboardZh from './locales/zh/dashboard/text.json';
-import formZh from './locales/zh/form/text.json';
-import settingsZh from './locales/zh/settings/text.json';
-import sharedZh from './locales/zh/shared/text.json';
-import tokensZh from './locales/zh/tokens/text.json';
-import transactionsZh from './locales/zh/transactions/text.json';
-import validatorsZh from './locales/zh/validators/text.json';
+// 语言包导入 - 英文
+import accountEn from './en/account/common.json';
+import addressesEn from './en/addresses/common.json';
+import apiEn from './en/api/common.json';
+import blobsEn from './en/blobs/common.json';
+import blocksEn from './en/blocks/common.json';
+import bridgeEn from './en/bridge/common.json';
+import clustersEn from './en/clusters/common.json';
+import commonEn from './en/common/common.json';
+import dashboardEn from './en/dashboard/common.json';
+import epochsEn from './en/epochs/common.json';
+import gamesEn from './en/games/common.json';
+import marketplaceEn from './en/marketplace/common.json';
+import messagingEn from './en/messaging/common.json';
+import poolsEn from './en/pools/common.json';
+import settingsEn from './en/settings/common.json';
+import sharedEn from './en/shared/common.json';
+import stakingEn from './en/staking/common.json';
+import statsEn from './en/stats/common.json';
+import tokensEn from './en/tokens/common.json';
+import transactionsEn from './en/transactions/common.json';
+import validatorsEn from './en/validators/common.json';
+import visualizeEn from './en/visualize/common.json';
+// 语言包导入 - 中文
+import accountZh from './zh-CN/account/common.json';
+import addressesZh from './zh-CN/addresses/common.json';
+import apiZh from './zh-CN/api/common.json';
+import blobsZh from './zh-CN/blobs/common.json';
+import blocksZh from './zh-CN/blocks/common.json';
+import bridgeZh from './zh-CN/bridge/common.json';
+import clustersZh from './zh-CN/clusters/common.json';
+import commonZh from './zh-CN/common/common.json';
+import dashboardZh from './zh-CN/dashboard/common.json';
+import epochsZh from './zh-CN/epochs/common.json';
+import gamesZh from './zh-CN/games/common.json';
+import marketplaceZh from './zh-CN/marketplace/common.json';
+import messagingZh from './zh-CN/messaging/common.json';
+import poolsZh from './zh-CN/pools/common.json';
+import settingsZh from './zh-CN/settings/common.json';
+import sharedZh from './zh-CN/shared/common.json';
+import stakingZh from './zh-CN/staking/common.json';
+import statsZh from './zh-CN/stats/common.json';
+import tokensZh from './zh-CN/tokens/common.json';
+import transactionsZh from './zh-CN/transactions/common.json';
+import validatorsZh from './zh-CN/validators/common.json';
+import visualizeZh from './zh-CN/visualize/common.json';
 
 // 语言资源
 const resources = {
   en: {
-    common: commonEn,
-    form: formEn,
+    account: accountEn,
     addresses: addressesEn,
-    validators: validatorsEn,
+    api: apiEn,
+    blobs: blobsEn,
+    blocks: blocksEn,
+    bridge: bridgeEn,
+    clusters: clustersEn,
+    common: commonEn,
+    dashboard: dashboardEn,
+    epochs: epochsEn,
+    games: gamesEn,
+    marketplace: marketplaceEn,
+    messaging: messagingEn,
+    pools: poolsEn,
+    settings: settingsEn,
+    shared: sharedEn,
+    staking: stakingEn,
+    stats: statsEn,
     tokens: tokensEn,
     transactions: transactionsEn,
-    contract: contractEn,
-    shared: sharedEn,
-    settings: settingsEn,
-    dashboard: dashboardEn,
+    validators: validatorsEn,
+    visualize: visualizeEn,
   },
   zh: {
-    common: commonZh,
-    form: formZh,
+    account: accountZh,
     addresses: addressesZh,
-    validators: validatorsZh,
+    api: apiZh,
+    blobs: blobsZh,
+    blocks: blocksZh,
+    bridge: bridgeZh,
+    clusters: clustersZh,
+    common: commonZh,
+    dashboard: dashboardZh,
+    epochs: epochsZh,
+    games: gamesZh,
+    marketplace: marketplaceZh,
+    messaging: messagingZh,
+    pools: poolsZh,
+    settings: settingsZh,
+    shared: sharedZh,
+    staking: stakingZh,
+    stats: statsZh,
     tokens: tokensZh,
     transactions: transactionsZh,
-    contract: contractZh,
-    shared: sharedZh,
-    settings: settingsZh,
-    dashboard: dashboardZh,
+    validators: validatorsZh,
+    visualize: visualizeZh,
   },
 };
 
-// 预先初始化i18n实例
+// 初始化i18n实例
 i18n
   .use(initReactI18next)
   .init({
     resources,
     lng: 'en', // 默认语言
     fallbackLng: 'en', // 回退语言
+    supportedLngs: ['en', 'zh'], // 支持的语言
     interpolation: {
       escapeValue: false, // React已经安全地转义了
     },
     ns: [
-      'common',
-      'form',
+      'account',
       'addresses',
-      'validators',
+      'api',
+      'blobs',
+      'blocks',
+      'bridge',
+      'clusters',
+      'common',
+      'dashboard',
+      'epochs',
+      'games',
+      'marketplace',
+      'messaging',
+      'pools',
+      'settings',
+      'shared',
+      'staking',
+      'stats',
       'tokens',
       'transactions',
-      'contract',
-      'shared',
-      'settings',
-      'dashboard',
+      'validators',
+      'visualize',
     ], // 命名空间
     defaultNS: 'common', // 默认命名空间
     debug: process.env.NODE_ENV === 'development', // 开发模式下启用调试

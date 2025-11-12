@@ -1,0 +1,86 @@
+{
+  "pools.common.verify_with": {
+    "defaultMessage": "Verify with",
+    "source": [
+      "ui/pages/Pool.tsx:111"
+    ]
+  },
+  "pools.common.view_in": {
+    "defaultMessage": "View in",
+    "source": [
+      "ui/pages/Pool.tsx:112",
+      "ui/pools/PoolsListItem.tsx:56",
+      "ui/pools/PoolsTable.tsx:25"
+    ]
+  },
+  "pools.common.pool": {
+    "defaultMessage": "Pool",
+    "source": [
+      "ui/pages/Pool.tsx:133",
+      "ui/pools/PoolsListItem.tsx:25",
+      "ui/pools/PoolsTable.tsx:22"
+    ]
+  },
+  "pools.common.dex_tracker": {
+    "defaultMessage": "DEX tracker",
+    "source": [
+      "ui/pages/Pools.tsx:92"
+    ]
+  },
+  "pools.common.there_are_no_pools": {
+    "defaultMessage": "There are no pools.",
+    "source": [
+      "ui/pages/Pools.tsx:98"
+    ]
+  },
+  "pools.common.the_base_token_in_a_liquidity_": {
+    "defaultMessage": "The base token in a liquidity pool pair",
+    "source": [
+      "ui/pool/PoolInfo.tsx:20"
+    ]
+  },
+  "pools.common.the_quote_token_in_a_liquidity": {
+    "defaultMessage": "The quote token in a liquidity pool pair",
+    "source": [
+      "ui/pool/PoolInfo.tsx:40"
+    ]
+  },
+  "pools.common.current_market_capitalization_": {
+    "defaultMessage": "Current market capitalization of the base token",
+    "source": [
+      "ui/pool/PoolInfo.tsx:75",
+      "ui/pool/PoolInfo.tsx:105"
+    ]
+  },
+  "pools.common.current_liquidity_of_the_pool": {
+    "defaultMessage": "Current liquidity of the pool",
+    "source": [
+      "ui/pool/PoolInfo.tsx:120"
+    ]
+  },
+  "pools.common.dex_where_the_pool_is_traded": {
+    "defaultMessage": "DEX where the pool is traded",
+    "source": [
+      "ui/pool/PoolInfo.tsx:132"
+    ]
+  },
+  "pools.common.contract": {
+    "defaultMessage": "Contract",
+    "source": [
+      "ui/pools/PoolsListItem.tsx:32"
+    ]
+  },
+  "pools.common.pool_id": {
+    "defaultMessage": "Pool ID",
+    "source": [
+      "ui/pools/PoolsListItem.tsx:41"
+    ]
+  },
+  "pools.common.liquidity": {
+    "defaultMessage": "Liquidity",
+    "source": [
+      "ui/pools/PoolsListItem.tsx:49",
+      "ui/pools/PoolsTable.tsx:24"
+    ]
+  }
+}

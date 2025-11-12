@@ -1,0 +1,6174 @@
+[
+  {
+    "key": "Top accounts",
+    "value": "顶级账户"
+  },
+  {
+    "key": "Coming soon 🔜",
+    "value": "即将推出 🔜"
+  },
+  {
+    "key": "There are no accounts.",
+    "value": "暂无账户。"
+  },
+  {
+    "key": "Watch list",
+    "value": "关注列表"
+  },
+  {
+    "key": "Email notifications",
+    "value": "邮件通知"
+  },
+  {
+    "key": "Save changes",
+    "value": "保存更改"
+  },
+  {
+    "key": "Add address",
+    "value": "添加地址"
+  },
+  {
+    "key": "Promise",
+    "value": "承诺"
+  },
+  {
+    "key": "Notification methods",
+    "value": "通知方式"
+  },
+  {
+    "key": "Incoming",
+    "value": "接收"
+  },
+  {
+    "key": "Outgoing",
+    "value": "发送"
+  },
+  {
+    "key": "Edit watch list address",
+    "value": "编辑关注列表地址"
+  },
+  {
+    "key": "New address to watch list",
+    "value": "新地址添加到关注列表"
+  },
+  {
+    "key": "Address",
+    "value": "地址"
+  },
+  {
+    "key": "will be deleted",
+    "value": "将被删除"
+  },
+  {
+    "key": "Add email",
+    "value": "添加邮箱"
+  },
+  {
+    "key": "There has been an error processing your request",
+    "value": "处理您的请求时出错"
+  },
+  {
+    "key": "Email notification is ON",
+    "value": "邮件通知已开启"
+  },
+  {
+    "key": "Email notification is OFF",
+    "value": "邮件通知已关闭"
+  },
+  {
+    "key": "Email notification",
+    "value": "邮件通知"
+  },
+  {
+    "key": "Private tag",
+    "value": "私有标签"
+  },
+  {
+    "key": "There are no transactions.",
+    "value": "暂无交易。"
+  },
+  {
+    "key": "All",
+    "value": "全部"
+  },
+  {
+    "key": "Received from",
+    "value": "接收自"
+  },
+  {
+    "key": "Sent to",
+    "value": "发送至"
+  },
+  {
+    "key": "Txn",
+    "value": "交易"
+  },
+  {
+    "key": "Gas used",
+    "value": "Gas使用量"
+  },
+  {
+    "key": "Download CSV",
+    "value": "下载CSV"
+  },
+  {
+    "key": "Short identifier of an address that may change with chain state updates",
+    "value": "地址的短标识符，可能随链状态更新而变化"
+  },
+  {
+    "key": "Identifies the purpose and behavior of the address on the Filecoin network",
+    "value": "标识Filecoin网络上地址的用途和行为"
+  },
+  {
+    "key": "0x-style address to which the Filecoin address is assigned by the Ethereum Address Manager",
+    "value": "由以太坊地址管理器分配给Filecoin地址的0x格式地址"
+  },
+  {
+    "key": "Transaction and address of creation",
+    "value": "创建交易和地址"
+  },
+  {
+    "key": "All tokens in the account and total value",
+    "value": "账户中的所有代币及总价值"
+  },
+  {
+    "key": "Number of transactions related to this address",
+    "value": "与此地址相关的交易数量"
+  },
+  {
+    "key": "Gas used by the address",
+    "value": "地址使用的Gas"
+  },
+  {
+    "key": "Block number in which the address was updated",
+    "value": "地址更新的区块号"
+  },
+  {
+    "key": "Metrics provided by third party partners",
+    "value": "第三方合作伙伴提供的指标"
+  },
+  {
+    "key": "There are no token transfers.",
+    "value": "暂无代币转账。"
+  },
+  {
+    "key": "Outgoing transactions",
+    "value": "转出交易"
+  },
+  {
+    "key": "Incoming transactions",
+    "value": "转入交易"
+  },
+  {
+    "key": "Vulnerabilities distribution",
+    "value": "漏洞分布"
+  },
+  {
+    "key": "View full report",
+    "value": "查看完整报告"
+  },
+  {
+    "key": "List of clusters registered to this address",
+    "value": "注册到此地址的集群列表"
+  },
+  {
+    "key": "Address clusters",
+    "value": "地址集群"
+  },
+  {
+    "key": "Attached to this address",
+    "value": "附加到此地址"
+  },
+  {
+    "key": "More results",
+    "value": "更多结果"
+  },
+  {
+    "key": "Balances",
+    "value": "余额"
+  },
+  {
+    "key": "Delta",
+    "value": "增量"
+  },
+  {
+    "key": "Txs",
+    "value": "交易"
+  },
+  {
+    "key": "Age",
+    "value": "时间"
+  },
+  {
+    "key": "Checking contract verification",
+    "value": "正在检查合约验证"
+  },
+  {
+    "key": "Contract successfully verified",
+    "value": "合约验证成功"
+  },
+  {
+    "key": "Contract not verified automatically. Please verify manually.",
+    "value": "合约未自动验证。请手动验证。"
+  },
+  {
+    "key": "Open source code in IDE",
+    "value": "在IDE中打开源代码"
+  },
+  {
+    "key": "Open in",
+    "value": "在...中打开"
+  },
+  {
+    "key": "Redactors",
+    "value": "编辑者"
+  },
+  {
+    "key": "Contract creation failed and there is no runtime bytecode. Below is the raw creation bytecode.",
+    "value": "合约创建失败且无运行时字节码。以下是原始创建字节码。"
+  },
+  {
+    "key": "Contract creation code",
+    "value": "合约创建代码"
+  },
+  {
+    "key": "Constructor Arguments",
+    "value": "构造函数参数"
+  },
+  {
+    "key": "View external libraries",
+    "value": "查看外部库"
+  },
+  {
+    "key": "Libraries",
+    "value": "库"
+  },
+  {
+    "key": "Library",
+    "value": "库"
+  },
+  {
+    "key": "Select contract",
+    "value": "选择合约"
+  },
+  {
+    "key": "Open contract details page in new tab",
+    "value": "在新标签页中打开合约详情页"
+  },
+  {
+    "key": "Visualize contract code using Sol2Uml JS library",
+    "value": "使用Sol2Uml JS库可视化合约代码"
+  },
+  {
+    "key": "Contract source code",
+    "value": "合约源代码"
+  },
+  {
+    "key": "Minimal proxy",
+    "value": "最小代理"
+  },
+  {
+    "key": "Proxy storage slots",
+    "value": "代理存储槽"
+  },
+  {
+    "key": "Diamond proxy",
+    "value": "钻石代理"
+  },
+  {
+    "key": "Eternal storage",
+    "value": "永恒存储"
+  },
+  {
+    "key": "Minimal Upgradeable Proxies",
+    "value": "最小可升级代理"
+  },
+  {
+    "key": "Clones with immutable arguments",
+    "value": "带不可变参数的克隆"
+  },
+  {
+    "key": "Safe proxy",
+    "value": "安全代理"
+  },
+  {
+    "key": "Compound protocol proxy",
+    "value": "Compound协议代理"
+  },
+  {
+    "key": "Unknown proxy pattern",
+    "value": "未知代理模式"
+  },
+  {
+    "key": "View contract in Sourcify repository",
+    "value": "在Sourcify仓库中查看合约"
+  },
+  {
+    "key": "Partial",
+    "value": "部分匹配"
+  },
+  {
+    "key": "Exact",
+    "value": "完全匹配"
+  },
+  {
+    "key": "This is an",
+    "value": "这是一个"
+  },
+  {
+    "key": "Submit audit",
+    "value": "提交审计"
+  },
+  {
+    "key": "Something went wrong. Try again later.",
+    "value": "出错了，请稍后重试。"
+  },
+  {
+    "key": "Submitter name",
+    "value": "提交者姓名"
+  },
+  {
+    "key": "Submitter email",
+    "value": "提交者邮箱"
+  },
+  {
+    "key": "I'm the contract owner",
+    "value": "我是合约所有者"
+  },
+  {
+    "key": "Project name",
+    "value": "项目名称"
+  },
+  {
+    "key": "Project URL",
+    "value": "项目URL"
+  },
+  {
+    "key": "Audit company name",
+    "value": "审计公司名称"
+  },
+  {
+    "key": "Audit report URL",
+    "value": "审计报告URL"
+  },
+  {
+    "key": "Audit publish date",
+    "value": "审计发布日期"
+  },
+  {
+    "key": "Comment",
+    "value": "备注"
+  },
+  {
+    "key": "Textarea",
+    "value": "文本域"
+  },
+  {
+    "key": "Send request",
+    "value": "发送请求"
+  },
+  {
+    "key": "Contract name",
+    "value": "合约名称"
+  },
+  {
+    "key": "Creator",
+    "value": "创建者"
+  },
+  {
+    "key": "Compiler version",
+    "value": "编译器版本"
+  },
+  {
+    "key": "ZK compiler version",
+    "value": "ZK编译器版本"
+  },
+  {
+    "key": "EVM version",
+    "value": "EVM版本"
+  },
+  {
+    "key": "License",
+    "value": "许可证"
+  },
+  {
+    "key": "Optimization enabled",
+    "value": "启用优化"
+  },
+  {
+    "key": "Package name",
+    "value": "包名称"
+  },
+  {
+    "key": "Verified at",
+    "value": "验证时间"
+  },
+  {
+    "key": "Contract file path",
+    "value": "合约文件路径"
+  },
+  {
+    "key": "Security audit",
+    "value": "安全审计"
+  },
+  {
+    "key": "Collapse",
+    "value": "折叠"
+  },
+  {
+    "key": "Expand",
+    "value": "展开"
+  },
+  {
+    "key": "Contract information",
+    "value": "合约信息"
+  },
+  {
+    "key": "Reset",
+    "value": "重置"
+  },
+  {
+    "key": "Search by method name",
+    "value": "按方法名搜索"
+  },
+  {
+    "key": "System address",
+    "value": "系统地址"
+  },
+  {
+    "key": "Connect your wallet to enter your address.",
+    "value": "连接钱包以输入您的地址。"
+  },
+  {
+    "key": "Fallback",
+    "value": "回退函数"
+  },
+  {
+    "key": "Simulate",
+    "value": "模拟"
+  },
+  {
+    "key": "Copy calldata",
+    "value": "复制调用数据"
+  },
+  {
+    "key": "Copied",
+    "value": "已复制"
+  },
+  {
+    "key": "Something went wrong",
+    "value": "出错了"
+  },
+  {
+    "key": "View transaction details",
+    "value": "查看交易详情"
+  },
+  {
+    "key": "Transaction has been confirmed.",
+    "value": "交易已确认。"
+  },
+  {
+    "key": "Field is required",
+    "value": "字段为必填项"
+  },
+  {
+    "key": "Invalid address format",
+    "value": "地址格式无效"
+  },
+  {
+    "key": "Invalid address checksum",
+    "value": "地址校验和无效"
+  },
+  {
+    "key": "Invalid integer format",
+    "value": "整数格式无效"
+  },
+  {
+    "key": "Invalid bytes format",
+    "value": "字节格式无效"
+  },
+  {
+    "key": "t aware of this and thinks that fallback method state mutability can only be ",
+    "value": "t 知道这一点并认为回退方法状态可变性只能是 "
+  },
+  {
+    "key": "Public Client is not defined",
+    "value": "公共客户端未定义"
+  },
+  {
+    "key": "Wallet is not connected",
+    "value": "钱包未连接"
+  },
+  {
+    "key": "Wallet Client is not defined",
+    "value": "钱包客户端未定义"
+  },
+  {
+    "key": "Method name is not defined",
+    "value": "方法名未定义"
+  },
+  {
+    "key": "Read",
+    "value": "读取"
+  },
+  {
+    "key": "Write",
+    "value": "写入"
+  },
+  {
+    "key": "Code",
+    "value": "代码"
+  },
+  {
+    "key": "Compiler",
+    "value": "编译器"
+  },
+  {
+    "key": "Compiler Settings",
+    "value": "编译器设置"
+  },
+  {
+    "key": "Custom ABI",
+    "value": "自定义ABI"
+  },
+  {
+    "key": "MUD System",
+    "value": "MUD系统"
+  },
+  {
+    "key": "Not a contract",
+    "value": "非合约"
+  },
+  {
+    "key": "Address hash encoded in base16 format",
+    "value": "base16编码的地址哈希"
+  },
+  {
+    "key": "Address hash encoded in bech32 format",
+    "value": "bech32编码的地址哈希"
+  },
+  {
+    "key": "Metadata URL",
+    "value": "元数据URL"
+  },
+  {
+    "key": "Link to additional information published by the account owner",
+    "value": "账户所有者发布的附加信息链接"
+  },
+  {
+    "key": "Vote signer address",
+    "value": "投票签名者地址"
+  },
+  {
+    "key": "Address authorized to vote in governance and validator elections on behalf of this account",
+    "value": "被授权代表此账户在治理和验证者选举中投票的地址"
+  },
+  {
+    "key": "Validator signer address",
+    "value": "验证者签名者地址"
+  },
+  {
+    "key": "Attestation signer address",
+    "value": "证明签名者地址"
+  },
+  {
+    "key": "Address whose key this account uses to sign attestations on the Attestations contract",
+    "value": "此账户用于在证明合约上签名的密钥地址"
+  },
+  {
+    "key": "Token name and symbol",
+    "value": "代币名称和符号"
+  },
+  {
+    "key": "The name found in the source code of the Contract",
+    "value": "在合约源代码中找到的名称"
+  },
+  {
+    "key": "The name of the validator",
+    "value": "验证者名称"
+  },
+  {
+    "key": "Multichain",
+    "value": "多链"
+  },
+  {
+    "key": "We were unable to generate QR code.",
+    "value": "我们无法生成二维码。"
+  },
+  {
+    "key": "QR code generation failed",
+    "value": "二维码生成失败"
+  },
+  {
+    "key": "Click to view QR code",
+    "value": "点击查看二维码"
+  },
+  {
+    "key": "Show QR code",
+    "value": "显示二维码"
+  },
+  {
+    "key": "Address QR code",
+    "value": "地址二维码"
+  },
+  {
+    "key": "Invalid response schema",
+    "value": "响应模式无效"
+  },
+  {
+    "key": "List of names resolved or owned by this address",
+    "value": "此地址解析或拥有的名称列表"
+  },
+  {
+    "key": "Address domains",
+    "value": "地址域名"
+  },
+  {
+    "key": "Primary*",
+    "value": "主要*"
+  },
+  {
+    "key": "Owned by this address",
+    "value": "此地址拥有"
+  },
+  {
+    "key": "Resolved to this address",
+    "value": "解析到此地址"
+  },
+  {
+    "key": "Epoch #",
+    "value": "纪元 #"
+  },
+  {
+    "key": "Reward type",
+    "value": "奖励类型"
+  },
+  {
+    "key": "Associated address",
+    "value": "关联地址"
+  },
+  {
+    "key": "Data Cap Management",
+    "value": "数据上限管理"
+  },
+  {
+    "key": "Ethereum Address Manager",
+    "value": "以太坊地址管理器"
+  },
+  {
+    "key": "Ethereum Virtual Machine",
+    "value": "以太坊虚拟机"
+  },
+  {
+    "key": "Initialization",
+    "value": "初始化"
+  },
+  {
+    "key": "Storage Market",
+    "value": "存储市场"
+  },
+  {
+    "key": "Storage Provider",
+    "value": "存储提供商"
+  },
+  {
+    "key": "Multi-Signature Wallet",
+    "value": "多签钱包"
+  },
+  {
+    "key": "Payment Channel",
+    "value": "支付通道"
+  },
+  {
+    "key": "Placeholder Address",
+    "value": "占位符地址"
+  },
+  {
+    "key": "Power Management",
+    "value": "算力管理"
+  },
+  {
+    "key": "Incentives and Rewards",
+    "value": "激励与奖励"
+  },
+  {
+    "key": "System Operations",
+    "value": "系统操作"
+  },
+  {
+    "key": "Verification Registry",
+    "value": "验证注册表"
+  },
+  {
+    "key": "MUD World",
+    "value": "MUD世界"
+  },
+  {
+    "key": "Field",
+    "value": "字段"
+  },
+  {
+    "key": "Hide columns",
+    "value": "隐藏列"
+  },
+  {
+    "key": "Show all columns",
+    "value": "显示所有列"
+  },
+  {
+    "key": "Modified",
+    "value": "修改时间"
+  },
+  {
+    "key": "There are no records for",
+    "value": "暂无...的记录"
+  },
+  {
+    "key": "Search by name, namespace or table ID...",
+    "value": "按名称、命名空间或表ID搜索..."
+  },
+  {
+    "key": "View schema",
+    "value": "查看模式"
+  },
+  {
+    "key": "Full name",
+    "value": "全名"
+  },
+  {
+    "key": "Table ID",
+    "value": "表ID"
+  },
+  {
+    "key": "Show all tokens",
+    "value": "显示所有代币"
+  },
+  {
+    "key": "Token select",
+    "value": "代币选择"
+  },
+  {
+    "key": "Search by token name",
+    "value": "按代币名称搜索"
+  },
+  {
+    "key": "Could not find any matches.",
+    "value": "未找到匹配项。"
+  },
+  {
+    "key": "Tokens",
+    "value": "代币"
+  },
+  {
+    "key": "By collection",
+    "value": "按集合"
+  },
+  {
+    "key": "List",
+    "value": "列表"
+  },
+  {
+    "key": "Price",
+    "value": "价格"
+  },
+  {
+    "key": "Quantity",
+    "value": "数量"
+  },
+  {
+    "key": "Asset",
+    "value": "资产"
+  },
+  {
+    "key": "Contract address",
+    "value": "合约地址"
+  },
+  {
+    "key": "Qty",
+    "value": "数量"
+  },
+  {
+    "key": "Net Worth",
+    "value": "净资产"
+  },
+  {
+    "key": "Array",
+    "value": "数组"
+  },
+  {
+    "key": "No public RPC client",
+    "value": "无公共RPC客户端"
+  },
+  {
+    "key": "Percentage",
+    "value": "百分比"
+  },
+  {
+    "key": "Txn count",
+    "value": "交易数量"
+  },
+  {
+    "key": "Rank",
+    "value": "排名"
+  },
+  {
+    "key": "Details",
+    "value": "详情"
+  },
+  {
+    "key": "Contract",
+    "value": "合约"
+  },
+  {
+    "key": "Transactions",
+    "value": "交易"
+  },
+  {
+    "key": "Token transfers",
+    "value": "代币转账"
+  },
+  {
+    "key": "Internal txns",
+    "value": "内部交易"
+  },
+  {
+    "key": "Coin balance history",
+    "value": "币余额历史"
+  },
+  {
+    "key": "Logs",
+    "value": "日志"
+  },
+  {
+    "key": "Address details",
+    "value": "地址详情"
+  },
+  {
+    "key": "Chains",
+    "value": "链"
+  },
+  {
+    "key": "View by chain",
+    "value": "按链查看"
+  },
+  {
+    "key": "Cross-chain",
+    "value": "跨链"
+  },
+  {
+    "key": "Local",
+    "value": "本地"
+  },
+  {
+    "key": "Account history",
+    "value": "账户历史"
+  },
+  {
+    "key": "User operations",
+    "value": "用户操作"
+  },
+  {
+    "key": "Deposits",
+    "value": "存款"
+  },
+  {
+    "key": "Withdrawals",
+    "value": "取款"
+  },
+  {
+    "key": "Epoch rewards",
+    "value": "纪元奖励"
+  },
+  {
+    "key": "Widgets",
+    "value": "小部件"
+  },
+  {
+    "key": "Celo account",
+    "value": "Celo账户"
+  },
+  {
+    "key": "Validator",
+    "value": "验证者"
+  },
+  {
+    "key": "Proxy",
+    "value": "代理"
+  },
+  {
+    "key": "Token",
+    "value": "代币"
+  },
+  {
+    "key": "Smart contract wallet",
+    "value": "智能合约钱包"
+  },
+  {
+    "key": "XStar humanity levels",
+    "value": "XStar人性等级"
+  },
+  {
+    "key": "Successfully added token to your wallet",
+    "value": "代币已成功添加到您的钱包"
+  },
+  {
+    "key": "Add token to wallet",
+    "value": "添加代币到钱包"
+  },
+  {
+    "key": "Incoming txn",
+    "value": "转入交易"
+  },
+  {
+    "key": "Outgoing txn",
+    "value": "转出交易"
+  },
+  {
+    "key": "Txn to the same address",
+    "value": "到同一地址的交易"
+  },
+  {
+    "key": "external chain logo",
+    "value": "外部链标志"
+  },
+  {
+    "key": "Address on TON",
+    "value": "TON上的地址"
+  },
+  {
+    "key": "API fetch",
+    "value": "API获取"
+  },
+  {
+    "key": "Resource not found",
+    "value": "资源未找到"
+  },
+  {
+    "key": "Unable to process invalid API schema",
+    "value": "无法处理无效的API模式"
+  },
+  {
+    "key": "Unknown error",
+    "value": "未知错误"
+  },
+  {
+    "key": "no url provided",
+    "value": "未提供URL"
+  },
+  {
+    "key": "Image",
+    "value": "图像"
+  },
+  {
+    "key": "Raw",
+    "value": "原始"
+  },
+  {
+    "key": "Not an image",
+    "value": "非图像"
+  },
+  {
+    "key": "Blob data",
+    "value": "Blob数据"
+  },
+  {
+    "key": "Blob image representation",
+    "value": "Blob图像表示"
+  },
+  {
+    "key": "Commitment to the data in the blob",
+    "value": "对blob中数据的承诺"
+  },
+  {
+    "key": "Blob size in bytes",
+    "value": "Blob大小（字节）"
+  },
+  {
+    "key": "Hash of the transaction with this blob",
+    "value": "包含此blob的交易哈希"
+  },
+  {
+    "key": "This blob is not yet indexed",
+    "value": "此blob尚未建立索引"
+  },
+  {
+    "key": "Blob details",
+    "value": "Blob详情"
+  },
+  {
+    "key": "Displays the epoch this block belongs to before the epoch is finalized",
+    "value": "显示纪元最终确定前此区块所属的纪元"
+  },
+  {
+    "key": "Displays the epoch finalized by this block",
+    "value": "显示由此区块最终确定的纪元"
+  },
+  {
+    "key": "Static block reward",
+    "value": "静态区块奖励"
+  },
+  {
+    "key": "Txn fees",
+    "value": "交易费"
+  },
+  {
+    "key": "Burnt fees",
+    "value": "已销毁费用"
+  },
+  {
+    "key": "Uncle",
+    "value": "叔块"
+  },
+  {
+    "key": "View previous block",
+    "value": "查看前一区块"
+  },
+  {
+    "key": "View next block",
+    "value": "查看后一区块"
+  },
+  {
+    "key": "The most recent L1 block height as of this L2 block",
+    "value": "截至此L2区块的最新L1区块高度"
+  },
+  {
+    "key": "Batch number",
+    "value": "批次号"
+  },
+  {
+    "key": "Size of the block in bytes",
+    "value": "区块大小（字节）"
+  },
+  {
+    "key": "The number of transactions in the block",
+    "value": "区块中的交易数量"
+  },
+  {
+    "key": "The number of beacon withdrawals in the block",
+    "value": "区块中的信标取款数量"
+  },
+  {
+    "key": "Status is the short interpretation of the batch lifecycle",
+    "value": "状态是批次生命周期的简短解释"
+  },
+  {
+    "key": "A block producer who successfully included the block onto the blockchain",
+    "value": "成功将区块纳入区块链的区块生产者"
+  },
+  {
+    "key": "L1 transaction containing this batch commitment",
+    "value": "包含此批次承诺的L1交易"
+  },
+  {
+    "key": "L1 transaction containing confirmation of this batch",
+    "value": "包含此批次确认的L1交易"
+  },
+  {
+    "key": "The iteration of the consensus round in which the block was proposed",
+    "value": "提出该区块的共识轮次迭代"
+  },
+  {
+    "key": "The total gas amount used in the block and its percentage of gas filled in the block",
+    "value": "区块中使用的总Gas量及其在区块中的Gas填充百分比"
+  },
+  {
+    "key": "Total gas limit provided by all transactions in the block",
+    "value": "区块中所有交易提供的总Gas限制"
+  },
+  {
+    "key": "The minimum gas price a transaction should have in order to be included in this block",
+    "value": "交易要包含在此区块中应具备的最低Gas价格"
+  },
+  {
+    "key": "Minimum fee required per unit of gas. Fee adjusts based on network congestion",
+    "value": "每单位Gas所需的最低费用。费用根据网络拥堵情况调整"
+  },
+  {
+    "key": "Total difficulty of the chain until this block",
+    "value": "截至此区块的链总难度"
+  },
+  {
+    "key": "The SHA256 hash of the block",
+    "value": "区块的SHA256哈希"
+  },
+  {
+    "key": "The cumulative number of L2 to L1 transactions as of this block",
+    "value": "截至此区块的L2到L1交易累计数"
+  },
+  {
+    "key": "The root of the Merkle accumulator representing all L2 to L1 transactions as of this block",
+    "value": "表示截至此区块所有L2到L1交易的Merkle累加器根"
+  },
+  {
+    "key": "The number of delayed L1 to L2 messages read as of this block",
+    "value": "截至此区块读取的延迟L1到L2消息数量"
+  },
+  {
+    "key": "in this block",
+    "value": "在此区块中"
+  },
+  {
+    "key": "- Genesis Block",
+    "value": "- 创世区块"
+  },
+  {
+    "key": "There are no internal transactions.",
+    "value": "暂无内部交易。"
+  },
+  {
+    "key": "Green Fund",
+    "value": "绿色基金"
+  },
+  {
+    "key": "Actual amount of gas used by the blobs in this block",
+    "value": "此区块中blob实际使用的Gas量"
+  },
+  {
+    "key": "A running total of blob gas consumed in excess of the target, prior to the block.",
+    "value": "区块前超出目标的blob Gas消耗累计总量。"
+  },
+  {
+    "key": "Aggregate quorum certificate",
+    "value": "聚合法定人数证书"
+  },
+  {
+    "key": "Quorum certificate",
+    "value": "法定人数证书"
+  },
+  {
+    "key": "View",
+    "value": "查看"
+  },
+  {
+    "key": "Signature",
+    "value": "签名"
+  },
+  {
+    "key": "Signers",
+    "value": "签名者"
+  },
+  {
+    "key": "Nested quorum certificates",
+    "value": "嵌套法定人数证书"
+  },
+  {
+    "key": "Proposed by validator",
+    "value": "由验证者提议"
+  },
+  {
+    "key": "There are no blocks.",
+    "value": "暂无区块。"
+  },
+  {
+    "key": "Block countdown",
+    "value": "区块倒计时"
+  },
+  {
+    "key": "Base fee",
+    "value": "基础费"
+  },
+  {
+    "key": "Timestamp",
+    "value": "时间戳"
+  },
+  {
+    "key": "Forked",
+    "value": "分叉"
+  },
+  {
+    "key": "Uncles",
+    "value": "叔块"
+  },
+  {
+    "key": "Blocks",
+    "value": "区块"
+  },
+  {
+    "key": "Blob txns",
+    "value": "Blob交易"
+  },
+  {
+    "key": "Operation",
+    "value": "操作"
+  },
+  {
+    "key": "Status",
+    "value": "状态"
+  },
+  {
+    "key": "Sender",
+    "value": "发送者"
+  },
+  {
+    "key": "Cluster not found",
+    "value": "集群未找到"
+  },
+  {
+    "key": "The unique cluster name",
+    "value": "唯一集群名称"
+  },
+  {
+    "key": "The address attached to this cluster name",
+    "value": "附加到此集群名称的地址"
+  },
+  {
+    "key": "When this cluster name was created",
+    "value": "此集群名称的创建时间"
+  },
+  {
+    "key": "Clusters",
+    "value": "集群"
+  },
+  {
+    "key": "Cluster details",
+    "value": "集群详情"
+  },
+  {
+    "key": "Verify new address ownership",
+    "value": "验证新地址所有权"
+  },
+  {
+    "key": "Copy and sign message",
+    "value": "复制并签名消息"
+  },
+  {
+    "key": "Congrats! Address is verified.",
+    "value": "恭喜！地址已验证。"
+  },
+  {
+    "key": "Oops! Something went wrong",
+    "value": "糟糕！出错了"
+  },
+  {
+    "key": "Continue",
+    "value": "继续"
+  },
+  {
+    "key": "Specified address either does not exist or is EOA.",
+    "value": "指定地址不存在或是EOA账户。"
+  },
+  {
+    "key": "Ownership of this contract address is already verified by this account.",
+    "value": "此合约地址的所有权已由此账户验证。"
+  },
+  {
+    "key": "The contract source code you entered is not yet verified. Please follow these steps to",
+    "value": "您输入的合约源代码尚未验证。请按照以下步骤"
+  },
+  {
+    "key": "verify the contract",
+    "value": "验证合约"
+  },
+  {
+    "key": "Enter the contract address you are verifying ownership for.",
+    "value": "输入您要验证所有权的合约地址。"
+  },
+  {
+    "key": "Verifying",
+    "value": "验证中"
+  },
+  {
+    "key": "Signing",
+    "value": "签名中"
+  },
+  {
+    "key": "Sign and verify",
+    "value": "签名并验证"
+  },
+  {
+    "key": "Connect wallet",
+    "value": "连接钱包"
+  },
+  {
+    "key": "Message to sign",
+    "value": "待签名消息"
+  },
+  {
+    "key": "Signature hash",
+    "value": "签名哈希"
+  },
+  {
+    "key": "help@blockscout.com",
+    "value": "help@blockscout.com"
+  },
+  {
+    "key": "The signature could not be processed.",
+    "value": "无法处理签名。"
+  },
+  {
+    "key": "This verification message has expired. Add the contract address to restart the process.",
+    "value": "此验证消息已过期。添加合约地址以重启流程。"
+  },
+  {
+    "key": "This address",
+    "value": "此地址"
+  },
+  {
+    "key": "can verify ownership of this contract.",
+    "value": "可以验证此合约的所有权。"
+  },
+  {
+    "key": "Sign via Web3 wallet",
+    "value": "通过Web3钱包签名"
+  },
+  {
+    "key": "Sign manually",
+    "value": "手动签名"
+  },
+  {
+    "key": "The address ownership for",
+    "value": "...的地址所有权"
+  },
+  {
+    "key": "is verified.",
+    "value": "已验证。"
+  },
+  {
+    "key": "You may now submit the “Add token information” request",
+    "value": "您现在可以提交“添加代币信息”请求"
+  },
+  {
+    "key": "Columns",
+    "value": "列"
+  },
+  {
+    "key": "Method",
+    "value": "方法"
+  },
+  {
+    "key": "Address from",
+    "value": "源地址"
+  },
+  {
+    "key": "Address to",
+    "value": "目标地址"
+  },
+  {
+    "key": "Amount",
+    "value": "金额"
+  },
+  {
+    "key": "Tx hash",
+    "value": "交易哈希"
+  },
+  {
+    "key": "From",
+    "value": "从"
+  },
+  {
+    "key": "To",
+    "value": "到"
+  },
+  {
+    "key": "Fee",
+    "value": "费用"
+  },
+  {
+    "key": "Include",
+    "value": "包含"
+  },
+  {
+    "key": "Exclude",
+    "value": "排除"
+  },
+  {
+    "key": "Select mode",
+    "value": "选择模式"
+  },
+  {
+    "key": "Token name or symbol",
+    "value": "代币名称或符号"
+  },
+  {
+    "key": "Popular",
+    "value": "热门"
+  },
+  {
+    "key": "No tokens found",
+    "value": "未找到代币"
+  },
+  {
+    "key": "Set last duration",
+    "value": "设置最近持续时间"
+  },
+  {
+    "key": "Something went wrong. Please try again.",
+    "value": "出错了，请重试。"
+  },
+  {
+    "key": "No results found.",
+    "value": "未找到结果。"
+  },
+  {
+    "key": "View examples",
+    "value": "查看示例"
+  },
+  {
+    "key": "View modules",
+    "value": "查看模块"
+  },
+  {
+    "key": "Blockscout core API",
+    "value": "Blockscout核心API"
+  },
+  {
+    "key": "Stats API",
+    "value": "统计API"
+  },
+  {
+    "key": "Name service API",
+    "value": "名称服务API"
+  },
+  {
+    "key": "User ops indexer API",
+    "value": "用户操作索引器API"
+  },
+  {
+    "key": "TAC operation lifecycle API",
+    "value": "TAC操作生命周期API"
+  },
+  {
+    "key": "Auto-generated API key token",
+    "value": "自动生成的API密钥令牌"
+  },
+  {
+    "key": "Save",
+    "value": "保存"
+  },
+  {
+    "key": "Generate API key",
+    "value": "生成API密钥"
+  },
+  {
+    "key": "Edit API key",
+    "value": "编辑API密钥"
+  },
+  {
+    "key": "New API key",
+    "value": "新API密钥"
+  },
+  {
+    "key": "Remove API key",
+    "value": "移除API密钥"
+  },
+  {
+    "key": "API key for",
+    "value": "...的API密钥"
+  },
+  {
+    "key": "Days",
+    "value": "天"
+  },
+  {
+    "key": "Hours",
+    "value": "小时"
+  },
+  {
+    "key": "Minutes",
+    "value": "分钟"
+  },
+  {
+    "key": "Seconds",
+    "value": "秒"
+  },
+  {
+    "key": "Contract has already been verified",
+    "value": "合约已验证"
+  },
+  {
+    "key": "Address is not a smart contract",
+    "value": "地址不是智能合约"
+  },
+  {
+    "key": "Contract is successfully verified.",
+    "value": "合约验证成功。"
+  },
+  {
+    "key": "There was an error with socket connection. Try again later.",
+    "value": "Socket连接出错，请稍后重试。"
+  },
+  {
+    "key": "Try to fetch constructor arguments automatically",
+    "value": "尝试自动获取构造函数参数"
+  },
+  {
+    "key": "Contract code",
+    "value": "合约代码"
+  },
+  {
+    "key": "Commit hash not found in the repository",
+    "value": "仓库中未找到提交哈希"
+  },
+  {
+    "key": "Commit hash",
+    "value": "提交哈希"
+  },
+  {
+    "key": "The compiler version is specified in",
+    "value": "编译器版本指定于"
+  },
+  {
+    "key": "pragma solidity X.X.X",
+    "value": "pragma solidity X.X.X"
+  },
+  {
+    "key": "solc —version",
+    "value": "solc —version"
+  },
+  {
+    "key": "to check.",
+    "value": "进行检查。"
+  },
+  {
+    "key": "ABI-encoded Constructor Arguments",
+    "value": "ABI编码的构造函数参数"
+  },
+  {
+    "key": "Add arguments in",
+    "value": "在...中添加参数"
+  },
+  {
+    "key": "ABI hex encoded form",
+    "value": "ABI十六进制编码形式"
+  },
+  {
+    "key": "They may also be",
+    "value": "它们也可能是"
+  },
+  {
+    "key": "EVM Version",
+    "value": "EVM版本"
+  },
+  {
+    "key": "GitHub repository not found",
+    "value": "未找到GitHub仓库"
+  },
+  {
+    "key": "Invalid GitHub repository URL",
+    "value": "无效的GitHub仓库URL"
+  },
+  {
+    "key": "GitHub repository URL",
+    "value": "GitHub仓库URL"
+  },
+  {
+    "key": "Is Yul contract",
+    "value": "是否为Yul合约"
+  },
+  {
+    "key": "Verification through a single file.",
+    "value": "通过单个文件验证。"
+  },
+  {
+    "key": "Verification of multi-part Solidity files.",
+    "value": "多部分Solidity文件验证。"
+  },
+  {
+    "key": "Verification through",
+    "value": "通过...验证"
+  },
+  {
+    "key": "Sourcify",
+    "value": "Sourcify"
+  },
+  {
+    "key": "Verification using",
+    "value": "使用...验证"
+  },
+  {
+    "key": "file.",
+    "value": "文件。"
+  },
+  {
+    "key": "Verification of Vyper contract.",
+    "value": "Vyper合约验证。"
+  },
+  {
+    "key": "Verification of multi-part Vyper files.",
+    "value": "多部分Vyper文件验证。"
+  },
+  {
+    "key": "Verification through Hardhat plugin.",
+    "value": "通过Hardhat插件验证。"
+  },
+  {
+    "key": "Verification through Foundry.",
+    "value": "通过Foundry验证。"
+  },
+  {
+    "key": "Verification of Stylus contract via GitHub repository.",
+    "value": "通过GitHub仓库验证Stylus合约。"
+  },
+  {
+    "key": "Must match the name specified in the code. For example, in",
+    "value": "必须与代码中指定的名称匹配。例如，在"
+  },
+  {
+    "key": "is the contract name.",
+    "value": "是合约名称。"
+  },
+  {
+    "key": "Optimization runs",
+    "value": "优化运行次数"
+  },
+  {
+    "key": "File is too big. Maximum size is 20 Mb.",
+    "value": "文件过大。最大大小为20MB。"
+  },
+  {
+    "key": "You can upload only one file",
+    "value": "您只能上传一个文件"
+  },
+  {
+    "key": "ZK compiler",
+    "value": "ZK编译器"
+  },
+  {
+    "key": "compiler version.",
+    "value": "编译器版本。"
+  },
+  {
+    "key": "Sources *.sol or *.yul files",
+    "value": "源文件 *.sol 或 *.yul"
+  },
+  {
+    "key": "Upload all Solidity or Yul contract source files.",
+    "value": "上传所有Solidity或Yul合约源文件。"
+  },
+  {
+    "key": "Contract verification via Foundry",
+    "value": "通过Foundry验证合约"
+  },
+  {
+    "key": "Full tutorial about contract verification via Foundry on Blockscout is available",
+    "value": "关于在Blockscout上通过Foundry验证合约的完整教程可用"
+  },
+  {
+    "key": "Contract verification via Solidity Hardhat plugin",
+    "value": "通过Solidity Hardhat插件验证合约"
+  },
+  {
+    "key": "Sources and Metadata JSON",
+    "value": "源文件和元数据JSON"
+  },
+  {
+    "key": "Upload the standard input JSON file created during contract compilation.",
+    "value": "上传合约编译期间创建的标准输入JSON文件。"
+  },
+  {
+    "key": "Path prefix",
+    "value": "路径前缀"
+  },
+  {
+    "key": "The contract name is the name assigned to the verified contract in Blockscout.",
+    "value": "合约名称是在Blockscout中分配给已验证合约的名称。"
+  },
+  {
+    "key": "Add any",
+    "value": "添加任何"
+  },
+  {
+    "key": "Incorrect date",
+    "value": "日期错误"
+  },
+  {
+    "key": "Create custom ABI",
+    "value": "创建自定义ABI"
+  },
+  {
+    "key": "Edit custom ABI",
+    "value": "编辑自定义ABI"
+  },
+  {
+    "key": "New custom ABI",
+    "value": "新自定义ABI"
+  },
+  {
+    "key": "Double check the ABI matches the contract to prevent errors or incorrect results.",
+    "value": "请仔细检查ABI是否与合约匹配，以防止错误或不正确的结果。"
+  },
+  {
+    "key": "Remove custom ABI",
+    "value": "移除自定义ABI"
+  },
+  {
+    "key": "Custom ABI for",
+    "value": "...的自定义ABI"
+  },
+  {
+    "key": "Index",
+    "value": "索引"
+  },
+  {
+    "key": "Game type",
+    "value": "游戏类型"
+  },
+  {
+    "key": "L2 block #",
+    "value": "L2区块 #"
+  },
+  {
+    "key": "Resolution age",
+    "value": "解析时间"
+  },
+  {
+    "key": "Gas price history",
+    "value": "Gas价格历史"
+  },
+  {
+    "key": "Gas is the amount of native tokens required to perform a transaction on the blockchain.",
+    "value": "Gas是在区块链上执行交易所需的原生代币数量。"
+  },
+  {
+    "key": "Network utilization",
+    "value": "网络利用率"
+  },
+  {
+    "key": "Fast",
+    "value": "快速"
+  },
+  {
+    "key": "Slow",
+    "value": "慢速"
+  },
+  {
+    "key": "No data. Please reload the page.",
+    "value": "无数据，请重新加载页面。"
+  },
+  {
+    "key": "View all blocks",
+    "value": "查看所有区块"
+  },
+  {
+    "key": "Latest blocks",
+    "value": "最新区块"
+  },
+  {
+    "key": "Reward",
+    "value": "奖励"
+  },
+  {
+    "key": "View all transactions",
+    "value": "查看所有交易"
+  },
+  {
+    "key": "View all watch list transactions",
+    "value": "查看所有关注列表交易"
+  },
+  {
+    "key": "There is no data",
+    "value": "无数据"
+  },
+  {
+    "key": "Market cap",
+    "value": "市值"
+  },
+  {
+    "key": "Daily transactions",
+    "value": "每日交易量"
+  },
+  {
+    "key": "Daily op txns",
+    "value": "每日操作交易"
+  },
+  {
+    "key": "Total value locked",
+    "value": "总锁仓价值"
+  },
+  {
+    "key": "Total value of digital assets locked or staked in a chain",
+    "value": "链中锁定或质押的数字资产总价值"
+  },
+  {
+    "key": "View all batches",
+    "value": "查看所有批次"
+  },
+  {
+    "key": "Latest batches",
+    "value": "最新批次"
+  },
+  {
+    "key": "To be determined",
+    "value": "待定"
+  },
+  {
+    "key": "View all deposits",
+    "value": "查看所有存款"
+  },
+  {
+    "key": "View all cross chain transactions",
+    "value": "查看所有跨链交易"
+  },
+  {
+    "key": "Message payload",
+    "value": "消息载荷"
+  },
+  {
+    "key": "Source tx",
+    "value": "源交易"
+  },
+  {
+    "key": "Destination tx",
+    "value": "目标交易"
+  },
+  {
+    "key": "Message",
+    "value": "消息"
+  },
+  {
+    "key": "Uptime",
+    "value": "运行时间"
+  },
+  {
+    "key": "Real-time statistics",
+    "value": "实时统计"
+  },
+  {
+    "key": "Current TPS",
+    "value": "当前TPS"
+  },
+  {
+    "key": "Number of transactions processed per second on the network",
+    "value": "网络每秒处理的交易数量"
+  },
+  {
+    "key": "Number of computational gas consumed per second on the network",
+    "value": "网络每秒消耗的计算Gas量"
+  },
+  {
+    "key": "Block height",
+    "value": "区块高度"
+  },
+  {
+    "key": "Number of blocks created since the genesis block",
+    "value": "自创世区块以来创建的区块数量"
+  },
+  {
+    "key": "Block time",
+    "value": "区块时间"
+  },
+  {
+    "key": "Time taken by the sequencer to produce a new block",
+    "value": "排序器生成新区块所需的时间"
+  },
+  {
+    "key": "Refresh",
+    "value": "刷新"
+  },
+  {
+    "key": "Component unmounted",
+    "value": "组件已卸载"
+  },
+  {
+    "key": "Profile",
+    "value": "个人资料"
+  },
+  {
+    "key": "OTP sent",
+    "value": "OTP已发送"
+  },
+  {
+    "key": "Name",
+    "value": "姓名"
+  },
+  {
+    "key": "Notifications",
+    "value": "通知"
+  },
+  {
+    "key": "My linked wallet",
+    "value": "我的关联钱包"
+  },
+  {
+    "key": "Link wallet",
+    "value": "关联钱包"
+  },
+  {
+    "key": "Email",
+    "value": "邮箱"
+  },
+  {
+    "key": "The date the name was registered",
+    "value": "名称注册日期"
+  },
+  {
+    "key": "The resolver contract provides information about a domain name",
+    "value": "解析器合约提供域名信息"
+  },
+  {
+    "key": "The account that owns the domain name and has the rights to edit its ownership and records",
+    "value": "拥有域名并有权编辑其所有权和记录的账户"
+  },
+  {
+    "key": "The account that owns the rights to edit the records of this domain name",
+    "value": "拥有编辑此域名记录权限的账户"
+  },
+  {
+    "key": "Owner of this NFT domain in NameWrapper contract",
+    "value": "NameWrapper合约中此NFT域名的所有者"
+  },
+  {
+    "key": "Other cryptocurrency addresses added to this domain name",
+    "value": "添加到此域名的其他加密货币地址"
+  },
+  {
+    "key": "Expired",
+    "value": "已过期"
+  },
+  {
+    "key": "The domain name is resolved offchain using",
+    "value": "域名使用...进行链下解析"
+  },
+  {
+    "key": "Txn hash",
+    "value": "交易哈希"
+  },
+  {
+    "key": "Cluster name",
+    "value": "集群名称"
+  },
+  {
+    "key": "Active chains",
+    "value": "活跃链"
+  },
+  {
+    "key": "Names",
+    "value": "名称"
+  },
+  {
+    "key": "Total backing",
+    "value": "总支持量"
+  },
+  {
+    "key": "There are no name domains.",
+    "value": "暂无名称域名。"
+  },
+  {
+    "key": "Search by name or address",
+    "value": "按名称或地址搜索"
+  },
+  {
+    "key": "Protocol",
+    "value": "协议"
+  },
+  {
+    "key": "Domain",
+    "value": "域名"
+  },
+  {
+    "key": "Registered on",
+    "value": "注册于"
+  },
+  {
+    "key": "Expiration date",
+    "value": "过期日期"
+  },
+  {
+    "key": "Default",
+    "value": "默认"
+  },
+  {
+    "key": "Registered on descending",
+    "value": "注册时间降序"
+  },
+  {
+    "key": "Registered on ascending",
+    "value": "注册时间升序"
+  },
+  {
+    "key": "The address on the source chain that starts a cross‑chain operation",
+    "value": "源链上启动跨链操作的地址"
+  },
+  {
+    "key": "The status of the operation",
+    "value": "操作状态"
+  },
+  {
+    "key": "Block time on the source chain when a cross‑chain operation is formed and sent",
+    "value": "跨链操作形成并发送时源链的区块时间"
+  },
+  {
+    "key": "Stages of a cross‑chain operation",
+    "value": "跨链操作的阶段"
+  },
+  {
+    "key": "Failed",
+    "value": "失败"
+  },
+  {
+    "key": "This address is on cluster chains",
+    "value": "此地址在集群链上"
+  },
+  {
+    "key": "Relayed",
+    "value": "已中继"
+  },
+  {
+    "key": "Sent",
+    "value": "已发送"
+  },
+  {
+    "key": "There are no cross-chain transactions.",
+    "value": "暂无跨链交易。"
+  },
+  {
+    "key": "Latest block",
+    "value": "最新区块"
+  },
+  {
+    "key": "there is no gray color that suits well, so we use a custom one",
+    "value": "没有合适的灰色，所以我们使用自定义颜色"
+  },
+  {
+    "key": "Add to wallet",
+    "value": "添加到钱包"
+  },
+  {
+    "key": "Open explorer",
+    "value": "打开浏览器"
+  },
+  {
+    "key": "Chain ID",
+    "value": "链ID"
+  },
+  {
+    "key": "Gas price",
+    "value": "Gas价格"
+  },
+  {
+    "key": "Latest transactions",
+    "value": "最新交易"
+  },
+  {
+    "key": "Search by transaction hash",
+    "value": "按交易哈希搜索"
+  },
+  {
+    "key": "Internal transactions",
+    "value": "内部交易"
+  },
+  {
+    "key": "There are no user operations.",
+    "value": "暂无用户操作。"
+  },
+  {
+    "key": "Search by contract name or address",
+    "value": "按合约名称或地址搜索"
+  },
+  {
+    "key": "Verified contracts",
+    "value": "已验证合约"
+  },
+  {
+    "key": "There are no verified contracts.",
+    "value": "暂无已验证合约。"
+  },
+  {
+    "key": "L2 output index",
+    "value": "L2输出索引"
+  },
+  {
+    "key": "L1 txn hash",
+    "value": "L1交易哈希"
+  },
+  {
+    "key": "Output root",
+    "value": "输出根"
+  },
+  {
+    "key": "Search result",
+    "value": "搜索结果"
+  },
+  {
+    "key": "ETH RPC API",
+    "value": "ETH RPC API"
+  },
+  {
+    "key": "RPC API endpoints",
+    "value": "RPC API端点"
+  },
+  {
+    "key": "API documentation",
+    "value": "API文档"
+  },
+  {
+    "key": "No API documentation available",
+    "value": "无可用API文档"
+  },
+  {
+    "key": "How to use a Blockscout API key",
+    "value": "如何使用Blockscout API密钥"
+  },
+  {
+    "key": "API keys",
+    "value": "API密钥"
+  },
+  {
+    "key": "Txn batches",
+    "value": "交易批次"
+  },
+  {
+    "key": "There are no txn batches.",
+    "value": "暂无交易批次。"
+  },
+  {
+    "key": "Invalid transaction hash",
+    "value": "交易哈希无效"
+  },
+  {
+    "key": "Transaction withdrawals",
+    "value": "交易取款"
+  },
+  {
+    "key": "There are no deposits.",
+    "value": "暂无存款。"
+  },
+  {
+    "key": "There are no withdrawals.",
+    "value": "暂无取款。"
+  },
+  {
+    "key": "Google calendar logo",
+    "value": "Google日历标志"
+  },
+  {
+    "key": "Apple calendar logo",
+    "value": "Apple日历标志"
+  },
+  {
+    "key": "Remaining blocks",
+    "value": "剩余区块"
+  },
+  {
+    "key": "Current block",
+    "value": "当前区块"
+  },
+  {
+    "key": "Estimated target date",
+    "value": "预计目标日期"
+  },
+  {
+    "key": "Google",
+    "value": "Google"
+  },
+  {
+    "key": "Apple",
+    "value": "Apple"
+  },
+  {
+    "key": "Search by block number",
+    "value": "按区块号搜索"
+  },
+  {
+    "key": "Accordion",
+    "value": "手风琴"
+  },
+  {
+    "key": "Alert",
+    "value": "警报"
+  },
+  {
+    "key": "Badge",
+    "value": "徽章"
+  },
+  {
+    "key": "Checkbox",
+    "value": "复选框"
+  },
+  {
+    "key": "Clipboard",
+    "value": "剪贴板"
+  },
+  {
+    "key": "Close button",
+    "value": "关闭按钮"
+  },
+  {
+    "key": "Collapsible",
+    "value": "可折叠"
+  },
+  {
+    "key": "Content loader",
+    "value": "内容加载器"
+  },
+  {
+    "key": "Dialog",
+    "value": "对话框"
+  },
+  {
+    "key": "Icon button",
+    "value": "图标按钮"
+  },
+  {
+    "key": "Input",
+    "value": "输入"
+  },
+  {
+    "key": "Link",
+    "value": "链接"
+  },
+  {
+    "key": "Menu",
+    "value": "菜单"
+  },
+  {
+    "key": "Pagination",
+    "value": "分页"
+  },
+  {
+    "key": "Progress",
+    "value": "进度"
+  },
+  {
+    "key": "Progress Circle",
+    "value": "进度圆环"
+  },
+  {
+    "key": "Radio",
+    "value": "单选按钮"
+  },
+  {
+    "key": "Rating",
+    "value": "评分"
+  },
+  {
+    "key": "Pin input",
+    "value": "PIN输入"
+  },
+  {
+    "key": "Popover",
+    "value": "弹出框"
+  },
+  {
+    "key": "Select",
+    "value": "选择器"
+  },
+  {
+    "key": "Skeleton",
+    "value": "骨架屏"
+  },
+  {
+    "key": "Spinner",
+    "value": "加载器"
+  },
+  {
+    "key": "Switch",
+    "value": "开关"
+  },
+  {
+    "key": "Table",
+    "value": "表格"
+  },
+  {
+    "key": "Tabs",
+    "value": "标签页"
+  },
+  {
+    "key": "Tag",
+    "value": "标签"
+  },
+  {
+    "key": "Toast",
+    "value": "轻提示"
+  },
+  {
+    "key": "Tooltip",
+    "value": "工具提示"
+  },
+  {
+    "key": "Chakra UI Showcase",
+    "value": "Chakra UI展示"
+  },
+  {
+    "key": "Res.",
+    "value": "分辨率"
+  },
+  {
+    "key": "Resolution",
+    "value": "分辨率"
+  },
+  {
+    "key": "Select resolution",
+    "value": "选择分辨率"
+  },
+  {
+    "key": "Period",
+    "value": "周期"
+  },
+  {
+    "key": "New smart contract verification",
+    "value": "新智能合约验证"
+  },
+  {
+    "key": "Export data to CSV file",
+    "value": "导出数据到CSV文件"
+  },
+  {
+    "key": "to CSV file.",
+    "value": "到CSV文件。"
+  },
+  {
+    "key": "Epoch finalized after Celo migrated to the OP‑stack, when it became an L2 rollup",
+    "value": "Celo迁移到OP堆栈后成为L2 rollup时最终确定的纪元"
+  },
+  {
+    "key": "Ranging from",
+    "value": "范围从"
+  },
+  {
+    "key": "Gas tracker",
+    "value": "Gas追踪器"
+  },
+  {
+    "key": "Last updated",
+    "value": "最后更新"
+  },
+  {
+    "key": "No recent data available",
+    "value": "无可用近期数据"
+  },
+  {
+    "key": "Interop messages",
+    "value": "互操作消息"
+  },
+  {
+    "key": "There are no interop messages.",
+    "value": "暂无互操作消息。"
+  },
+  {
+    "key": "Computor transactions",
+    "value": "计算器交易"
+  },
+  {
+    "key": "Render error",
+    "value": "渲染错误"
+  },
+  {
+    "key": "Test error",
+    "value": "测试错误"
+  },
+  {
+    "key": "Test event",
+    "value": "测试事件"
+  },
+  {
+    "key": "Success 🥳",
+    "value": "成功 🥳"
+  },
+  {
+    "key": "Successfully set cookie",
+    "value": "Cookie设置成功"
+  },
+  {
+    "key": "Login page 😂",
+    "value": "登录页 😂"
+  },
+  {
+    "key": "API token",
+    "value": "API令牌"
+  },
+  {
+    "key": "Set cookie",
+    "value": "设置Cookie"
+  },
+  {
+    "key": "Check Rollbar",
+    "value": "检查Rollbar"
+  },
+  {
+    "key": "Check Mixpanel",
+    "value": "检查Mixpanel"
+  },
+  {
+    "key": "Swap",
+    "value": "交换"
+  },
+  {
+    "key": "Revoke",
+    "value": "撤销"
+  },
+  {
+    "key": "Multisend",
+    "value": "多发送"
+  },
+  {
+    "key": "Essential dapp not found",
+    "value": "未找到必备DApp"
+  },
+  {
+    "key": "MUD worlds",
+    "value": "MUD世界"
+  },
+  {
+    "key": "There are no MUD worlds.",
+    "value": "暂无MUD世界。"
+  },
+  {
+    "key": "My profile",
+    "value": "我的资料"
+  },
+  {
+    "key": "History",
+    "value": "历史"
+  },
+  {
+    "key": "Name details",
+    "value": "名称详情"
+  },
+  {
+    "key": "Domains",
+    "value": "域名"
+  },
+  {
+    "key": "Directories",
+    "value": "目录"
+  },
+  {
+    "key": "Name services lookup",
+    "value": "名称服务查询"
+  },
+  {
+    "key": "Dispute games",
+    "value": "争议游戏"
+  },
+  {
+    "key": "There are no dispute games.",
+    "value": "暂无争议游戏。"
+  },
+  {
+    "key": "Output roots",
+    "value": "输出根"
+  },
+  {
+    "key": "There are no output roots.",
+    "value": "暂无输出根。"
+  },
+  {
+    "key": "Transaction",
+    "value": "交易"
+  },
+  {
+    "key": "Private tags",
+    "value": "私有标签"
+  },
+  {
+    "key": "Dashboard",
+    "value": "仪表板"
+  },
+  {
+    "key": "All Merits",
+    "value": "所有功绩"
+  },
+  {
+    "key": "Referrals",
+    "value": "推荐"
+  },
+  {
+    "key": "Total number of users who have joined the program using your code or referral link.",
+    "value": "使用您的代码或推荐链接加入项目的用户总数。"
+  },
+  {
+    "key": "Streak",
+    "value": "连续天数"
+  },
+  {
+    "key": "Activity",
+    "value": "活动"
+  },
+  {
+    "key": "Resources",
+    "value": "资源"
+  },
+  {
+    "key": "Failed to load some data. Please try again later.",
+    "value": "部分数据加载失败，请稍后重试。"
+  },
+  {
+    "key": "Search results",
+    "value": "搜索结果"
+  },
+  {
+    "key": "Category",
+    "value": "类别"
+  },
+  {
+    "key": "Found",
+    "value": "找到"
+  },
+  {
+    "key": "Copy to clipboard",
+    "value": "复制到剪贴板"
+  },
+  {
+    "key": "No icons found",
+    "value": "未找到图标"
+  },
+  {
+    "key": "Search by name...",
+    "value": "按名称搜索..."
+  },
+  {
+    "key": "SVG sprite 🥤",
+    "value": "SVG精灵 🥤"
+  },
+  {
+    "key": "Operation details",
+    "value": "操作详情"
+  },
+  {
+    "key": "Search by operation, tx hash, sender",
+    "value": "按操作、交易哈希、发送者搜索"
+  },
+  {
+    "key": "Operations",
+    "value": "操作"
+  },
+  {
+    "key": "There are no operations.",
+    "value": "暂无操作。"
+  },
+  {
+    "key": "Holders",
+    "value": "持有者"
+  },
+  {
+    "key": "Metadata",
+    "value": "元数据"
+  },
+  {
+    "key": "Cross chain",
+    "value": "跨链"
+  },
+  {
+    "key": "User operation details",
+    "value": "用户操作详情"
+  },
+  {
+    "key": "Validator details",
+    "value": "验证者详情"
+  },
+  {
+    "key": "Validators",
+    "value": "验证者"
+  },
+  {
+    "key": "There are no validators.",
+    "value": "暂无验证者。"
+  },
+  {
+    "key": "Search by validator's address hash",
+    "value": "按验证者地址哈希搜索"
+  },
+  {
+    "key": "Back to my verified addresses",
+    "value": "返回我的已验证地址"
+  },
+  {
+    "key": "Token info application form",
+    "value": "代币信息申请表"
+  },
+  {
+    "key": "My verified addresses",
+    "value": "我的已验证地址"
+  },
+  {
+    "key": "Cross-chain tx details",
+    "value": "跨链交易详情"
+  },
+  {
+    "key": "Add tag",
+    "value": "添加标签"
+  },
+  {
+    "key": "New address tag",
+    "value": "新地址标签"
+  },
+  {
+    "key": "Removal of private tag",
+    "value": "移除私有标签"
+  },
+  {
+    "key": "Edit transaction tag",
+    "value": "编辑交易标签"
+  },
+  {
+    "key": "New transaction tag",
+    "value": "新交易标签"
+  },
+  {
+    "key": "ReCaptcha is not solved",
+    "value": "ReCaptcha未解决"
+  },
+  {
+    "key": "Your name",
+    "value": "您的姓名"
+  },
+  {
+    "key": "Company name",
+    "value": "公司名称"
+  },
+  {
+    "key": "Company website",
+    "value": "公司网站"
+  },
+  {
+    "key": "Confirm the connection between addresses and tags",
+    "value": "确认地址与标签的关联"
+  },
+  {
+    "key": "Company info",
+    "value": "公司信息"
+  },
+  {
+    "key": "Add new tag",
+    "value": "添加新标签"
+  },
+  {
+    "key": "Label URL",
+    "value": "标签URL"
+  },
+  {
+    "key": "Tag name",
+    "value": "标签名称"
+  },
+  {
+    "key": "Label icon URL",
+    "value": "标签图标URL"
+  },
+  {
+    "key": "John Doe",
+    "value": "John Doe"
+  },
+  {
+    "key": "jonh.doe@duck.me",
+    "value": "jonh.doe@duck.me"
+  },
+  {
+    "key": "Quack quack",
+    "value": "嘎嘎嘎"
+  },
+  {
+    "key": "Unicorn Uproar",
+    "value": "独角兽骚动"
+  },
+  {
+    "key": "Hello",
+    "value": "你好"
+  },
+  {
+    "key": "Hello, it is me... I was wondering if after all these years you would like to meet",
+    "value": "你好，是我...我在想这么多年后你是否愿意见面"
+  },
+  {
+    "key": "duck owner 🦆",
+    "value": "鸭子主人 🦆"
+  },
+  {
+    "key": "Some error",
+    "value": "一些错误"
+  },
+  {
+    "key": "Another nasty error",
+    "value": "另一个糟糕错误"
+  },
+  {
+    "key": "group success result",
+    "value": "组成功结果"
+  },
+  {
+    "key": "group result with error",
+    "value": "带错误的组结果"
+  },
+  {
+    "key": "Reorg",
+    "value": "重组"
+  },
+  {
+    "key": "First Item",
+    "value": "第一项"
+  },
+  {
+    "key": "Some value 1...",
+    "value": "一些值1..."
+  },
+  {
+    "key": "Second Item",
+    "value": "第二项"
+  },
+  {
+    "key": "Some value 2...",
+    "value": "一些值2..."
+  },
+  {
+    "key": "Third Item",
+    "value": "第三项"
+  },
+  {
+    "key": "Some value 3...",
+    "value": "一些值3..."
+  },
+  {
+    "key": "multiple lines, no title",
+    "value": "多行，无标题"
+  },
+  {
+    "key": "Alert content",
+    "value": "警报内容"
+  },
+  {
+    "key": "Closable",
+    "value": "可关闭"
+  },
+  {
+    "key": "Examples",
+    "value": "示例"
+  },
+  {
+    "key": "As Link",
+    "value": "作为链接"
+  },
+  {
+    "key": "Multiple lines",
+    "value": "多行"
+  },
+  {
+    "key": "Color palette",
+    "value": "调色板"
+  },
+  {
+    "key": "Token transfer",
+    "value": "代币转账"
+  },
+  {
+    "key": "Contract call",
+    "value": "合约调用"
+  },
+  {
+    "key": "Blob txn",
+    "value": "Blob交易"
+  },
+  {
+    "key": "Multicall",
+    "value": "多调用"
+  },
+  {
+    "key": "Internal txn",
+    "value": "内部交易"
+  },
+  {
+    "key": "Content",
+    "value": "内容"
+  },
+  {
+    "key": "Truncate",
+    "value": "截断"
+  },
+  {
+    "key": "Icon",
+    "value": "图标"
+  },
+  {
+    "key": "Tooltip content",
+    "value": "工具提示内容"
+  },
+  {
+    "key": "option-1",
+    "value": "选项1"
+  },
+  {
+    "key": "option-2",
+    "value": "选项2"
+  },
+  {
+    "key": "option-3",
+    "value": "选项3"
+  },
+  {
+    "key": "Variants",
+    "value": "变体"
+  },
+  {
+    "key": "Hovered",
+    "value": "悬停"
+  },
+  {
+    "key": "Loading Skeleton",
+    "value": "加载骨架屏"
+  },
+  {
+    "key": "Expended",
+    "value": "已展开"
+  },
+  {
+    "key": "Selected",
+    "value": "已选择"
+  },
+  {
+    "key": "First option",
+    "value": "第一选项"
+  },
+  {
+    "key": "Second option",
+    "value": "第二选项"
+  },
+  {
+    "key": "I am link",
+    "value": "我是链接"
+  },
+  {
+    "key": "Button Group Radio",
+    "value": "按钮组单选"
+  },
+  {
+    "key": "Option 1",
+    "value": "选项1"
+  },
+  {
+    "key": "Option 2",
+    "value": "选项2"
+  },
+  {
+    "key": "Option 3",
+    "value": "选项3"
+  },
+  {
+    "key": "Read-only",
+    "value": "只读"
+  },
+  {
+    "key": "Orientation",
+    "value": "方向"
+  },
+  {
+    "key": "Hello, world!",
+    "value": "你好，世界！"
+  },
+  {
+    "key": "Show details",
+    "value": "显示详情"
+  },
+  {
+    "key": "Expand all list",
+    "value": "展开所有列表"
+  },
+  {
+    "key": "Cut link",
+    "value": "剪切链接"
+  },
+  {
+    "key": "Dialog Title",
+    "value": "对话框标题"
+  },
+  {
+    "key": "I'll do it later",
+    "value": "我稍后处理"
+  },
+  {
+    "key": "Cancel",
+    "value": "取消"
+  },
+  {
+    "key": "Helper text",
+    "value": "帮助文本"
+  },
+  {
+    "key": "me@example.com",
+    "value": "me@example.com"
+  },
+  {
+    "key": "no floating label",
+    "value": "无浮动标签"
+  },
+  {
+    "key": "On custom background",
+    "value": "在自定义背景上"
+  },
+  {
+    "key": "with end element",
+    "value": "带尾部元素"
+  },
+  {
+    "key": "Referral code",
+    "value": "推荐码"
+  },
+  {
+    "key": "with start element",
+    "value": "带起始元素"
+  },
+  {
+    "key": "Input group",
+    "value": "输入组"
+  },
+  {
+    "key": "Filter input",
+    "value": "筛选输入"
+  },
+  {
+    "key": "Tether",
+    "value": "Tether"
+  },
+  {
+    "key": "Without name",
+    "value": "无名称"
+  },
+  {
+    "key": "With name",
+    "value": "带名称"
+  },
+  {
+    "key": "With info",
+    "value": "带信息"
+  },
+  {
+    "key": "Very looooooooong name",
+    "value": "非常非常长的名称"
+  },
+  {
+    "key": "Very looooooooong symbol",
+    "value": "非常非常长的符号"
+  },
+  {
+    "key": "With partial info",
+    "value": "带部分信息"
+  },
+  {
+    "key": "Internal link",
+    "value": "内部链接"
+  },
+  {
+    "key": "External link",
+    "value": "外部链接"
+  },
+  {
+    "key": "Hover",
+    "value": "悬停"
+  },
+  {
+    "key": "hello hello hello",
+    "value": "你好你好你好"
+  },
+  {
+    "key": "Within",
+    "value": "内部"
+  },
+  {
+    "key": "Address link",
+    "value": "地址链接"
+  },
+  {
+    "key": "Token link",
+    "value": "代币链接"
+  },
+  {
+    "key": "Transaction link",
+    "value": "交易链接"
+  },
+  {
+    "key": "Block link",
+    "value": "区块链接"
+  },
+  {
+    "key": "NFT link",
+    "value": "NFT链接"
+  },
+  {
+    "key": "ENS link",
+    "value": "ENS链接"
+  },
+  {
+    "key": "Blob link",
+    "value": "Blob链接"
+  },
+  {
+    "key": "Pool link",
+    "value": "池链接"
+  },
+  {
+    "key": "Link overlay",
+    "value": "链接覆盖"
+  },
+  {
+    "key": "Main link",
+    "value": "主链接"
+  },
+  {
+    "key": "Inner link",
+    "value": "内部链接"
+  },
+  {
+    "key": "Refresh metadata",
+    "value": "刷新元数据"
+  },
+  {
+    "key": "Add token info",
+    "value": "添加代币信息"
+  },
+  {
+    "key": "Add private tag",
+    "value": "添加私有标签"
+  },
+  {
+    "key": "Add public tag",
+    "value": "添加公共标签"
+  },
+  {
+    "key": "Loaded state",
+    "value": "已加载状态"
+  },
+  {
+    "key": "Initial loading state",
+    "value": "初始加载状态"
+  },
+  {
+    "key": "List pagination",
+    "value": "列表分页"
+  },
+  {
+    "key": "Trigger",
+    "value": "触发器"
+  },
+  {
+    "key": "Very bad",
+    "value": "非常差"
+  },
+  {
+    "key": "Bad",
+    "value": "差"
+  },
+  {
+    "key": "Average",
+    "value": "一般"
+  },
+  {
+    "key": "Good",
+    "value": "好"
+  },
+  {
+    "key": "Excellent",
+    "value": "优秀"
+  },
+  {
+    "key": "Angular",
+    "value": "Angular"
+  },
+  {
+    "key": "Svelte",
+    "value": "Svelte"
+  },
+  {
+    "key": "Select framework",
+    "value": "选择框架"
+  },
+  {
+    "key": "Error message",
+    "value": "错误消息"
+  },
+  {
+    "key": "Angular is",
+    "value": "Angular是"
+  },
+  {
+    "key": "Include nightly builds",
+    "value": "包含夜间构建"
+  },
+  {
+    "key": "Sort",
+    "value": "排序"
+  },
+  {
+    "key": "Token transfers filter",
+    "value": "代币转账筛选"
+  },
+  {
+    "key": "Radio filter",
+    "value": "单选筛选"
+  },
+  {
+    "key": "Sizes",
+    "value": "尺寸"
+  },
+  {
+    "key": "Direction",
+    "value": "方向"
+  },
+  {
+    "key": "Laptop",
+    "value": "笔记本电脑"
+  },
+  {
+    "key": "Electronics",
+    "value": "电子产品"
+  },
+  {
+    "key": "Coffee Maker",
+    "value": "咖啡机"
+  },
+  {
+    "key": "Home Appliances",
+    "value": "家用电器"
+  },
+  {
+    "key": "Desk Chair",
+    "value": "办公椅"
+  },
+  {
+    "key": "Furniture",
+    "value": "家具"
+  },
+  {
+    "key": "Smartphone",
+    "value": "智能手机"
+  },
+  {
+    "key": "Headphones",
+    "value": "耳机"
+  },
+  {
+    "key": "Accessories",
+    "value": "配件"
+  },
+  {
+    "key": "Product",
+    "value": "产品"
+  },
+  {
+    "key": "Swaps",
+    "value": "交换"
+  },
+  {
+    "key": "Bridges",
+    "value": "桥接"
+  },
+  {
+    "key": "Liquidity staking",
+    "value": "流动性质押"
+  },
+  {
+    "key": "Lending",
+    "value": "借贷"
+  },
+  {
+    "key": "Yield farming",
+    "value": "收益耕作"
+  },
+  {
+    "key": "Swaps content",
+    "value": "交换内容"
+  },
+  {
+    "key": "Bridges content",
+    "value": "桥接内容"
+  },
+  {
+    "key": "Liquidity staking content",
+    "value": "流动性质押内容"
+  },
+  {
+    "key": "Lending content",
+    "value": "借贷内容"
+  },
+  {
+    "key": "Yield farming content",
+    "value": "收益耕作内容"
+  },
+  {
+    "key": "First tab",
+    "value": "第一标签页"
+  },
+  {
+    "key": "Second tab",
+    "value": "第二标签页"
+  },
+  {
+    "key": "First tab content",
+    "value": "第一标签页内容"
+  },
+  {
+    "key": "Second tab content",
+    "value": "第二标签页内容"
+  },
+  {
+    "key": "Third tab",
+    "value": "第三标签页"
+  },
+  {
+    "key": "Fourth tab",
+    "value": "第四标签页"
+  },
+  {
+    "key": "Third tab content",
+    "value": "第三标签页内容"
+  },
+  {
+    "key": "Fourth tab content",
+    "value": "第四标签页内容"
+  },
+  {
+    "key": "Adaptive tabs",
+    "value": "自适应标签页"
+  },
+  {
+    "key": "Left element",
+    "value": "左侧元素"
+  },
+  {
+    "key": "Right element",
+    "value": "右侧元素"
+  },
+  {
+    "key": "🙈",
+    "value": "🙈"
+  },
+  {
+    "key": "My tag",
+    "value": "我的标签"
+  },
+  {
+    "key": "Truncated",
+    "value": "已截断"
+  },
+  {
+    "key": "Very very very very very looooooonggggg text",
+    "value": "非常非常非常非常非常长的文本"
+  },
+  {
+    "key": "Public tags",
+    "value": "公共标签"
+  },
+  {
+    "key": "Filter tags",
+    "value": "筛选标签"
+  },
+  {
+    "key": "Description",
+    "value": "描述"
+  },
+  {
+    "key": "Toast content",
+    "value": "轻提示内容"
+  },
+  {
+    "key": "Please wait for...",
+    "value": "请等待..."
+  },
+  {
+    "key": "Log in",
+    "value": "登录"
+  },
+  {
+    "key": "Link email",
+    "value": "关联邮箱"
+  },
+  {
+    "key": "Authenticated",
+    "value": "已认证"
+  },
+  {
+    "key": "Not authenticated",
+    "value": "未认证"
+  },
+  {
+    "key": "Profile dropdown",
+    "value": "个人资料下拉菜单"
+  },
+  {
+    "key": "Select a way to login",
+    "value": "选择登录方式"
+  },
+  {
+    "key": "Add wallet",
+    "value": "添加钱包"
+  },
+  {
+    "key": "Continue with wallet",
+    "value": "使用钱包继续"
+  },
+  {
+    "key": "Continue with email",
+    "value": "使用邮箱继续"
+  },
+  {
+    "key": "Confirmation code",
+    "value": "确认码"
+  },
+  {
+    "key": "Congrats!",
+    "value": "恭喜！"
+  },
+  {
+    "key": "Send a code",
+    "value": "发送验证码"
+  },
+  {
+    "key": "Code has been sent to your email",
+    "value": "验证码已发送至您的邮箱"
+  },
+  {
+    "key": "Submit",
+    "value": "提交"
+  },
+  {
+    "key": "Resend code",
+    "value": "重新发送验证码"
+  },
+  {
+    "key": "Options selector",
+    "value": "选项选择器"
+  },
+  {
+    "key": "Continue with Web3 wallet",
+    "value": "使用Web3钱包继续"
+  },
+  {
+    "key": "Add your web3 wallet to safely interact with smart contracts and dapps inside Blockscout.",
+    "value": "添加您的Web3钱包以安全地与Blockscout内的智能合约和DApp交互。"
+  },
+  {
+    "key": " and Merits Program",
+    "value": "和功绩计划"
+  },
+  {
+    "key": "Merits ",
+    "value": "功绩 "
+  },
+  {
+    "key": "Logout failed",
+    "value": "登出失败"
+  },
+  {
+    "key": "Please try again later",
+    "value": "请稍后重试"
+  },
+  {
+    "key": "Login",
+    "value": "登录"
+  },
+  {
+    "key": "Login to rewards is not enabled",
+    "value": "奖励登录未启用"
+  },
+  {
+    "key": "User already has logged in to rewards",
+    "value": "用户已登录奖励"
+  },
+  {
+    "key": "Shared SIWE login is not enabled",
+    "value": "共享SIWE登录未启用"
+  },
+  {
+    "key": "Rewards user does not exist",
+    "value": "奖励用户不存在"
+  },
+  {
+    "key": "Cannot get merits login nonce",
+    "value": "无法获取功绩登录随机数"
+  },
+  {
+    "key": "Submit an issue",
+    "value": "提交问题"
+  },
+  {
+    "key": "Contribute",
+    "value": "贡献"
+  },
+  {
+    "key": "Discord",
+    "value": "Discord"
+  },
+  {
+    "key": "All chains",
+    "value": "所有链"
+  },
+  {
+    "key": "Donate",
+    "value": "捐赠"
+  },
+  {
+    "key": "Blockscout",
+    "value": "Blockscout"
+  },
+  {
+    "key": ", Array",
+    "value": ", 数组"
+  },
+  {
+    "key": "Made with",
+    "value": "由...制作"
+  },
+  {
+    "key": "This site is protected by reCAPTCHA and the Google",
+    "value": "此网站受reCAPTCHA和Google保护"
+  },
+  {
+    "key": "Privacy Policy",
+    "value": "隐私政策"
+  },
+  {
+    "key": "Terms of Service",
+    "value": "服务条款"
+  },
+  {
+    "key": "apply.",
+    "value": "适用。"
+  },
+  {
+    "key": "Menu button",
+    "value": "菜单按钮"
+  },
+  {
+    "key": "Promo banner icon",
+    "value": "促销横幅图标"
+  },
+  {
+    "key": "Promo banner small",
+    "value": "小型促销横幅"
+  },
+  {
+    "key": "Promo banner large",
+    "value": "大型促销横幅"
+  },
+  {
+    "key": "Network icon placeholder",
+    "value": "网络图标占位符"
+  },
+  {
+    "key": "Network logo placeholder",
+    "value": "网络标志占位符"
+  },
+  {
+    "key": "Link to main page",
+    "value": "主页链接"
+  },
+  {
+    "key": "Mainnets",
+    "value": "主网"
+  },
+  {
+    "key": "Header",
+    "value": "页眉"
+  },
+  {
+    "key": "Escape",
+    "value": "退出"
+  },
+  {
+    "key": "Search",
+    "value": "搜索"
+  },
+  {
+    "key": "Recent",
+    "value": "最近"
+  },
+  {
+    "key": "Clear all",
+    "value": "清除全部"
+  },
+  {
+    "key": "We are searching, please wait... ",
+    "value": "正在搜索，请等待... "
+  },
+  {
+    "key": "Something went wrong. Try refreshing the page or come back later.",
+    "value": "出错了，请刷新页面或稍后再试。"
+  },
+  {
+    "key": "Learn",
+    "value": "学习"
+  },
+  {
+    "key": "to be created.",
+    "value": "待创建。"
+  },
+  {
+    "key": "Chains list",
+    "value": "链列表"
+  },
+  {
+    "key": "Network menu",
+    "value": "网络菜单"
+  },
+  {
+    "key": "Gas",
+    "value": "Gas"
+  },
+  {
+    "key": "Sign in to My Account to add tags,",
+    "value": "登录我的账户以添加标签，"
+  },
+  {
+    "key": "create watchlists, access API keys and more",
+    "value": "创建关注列表、访问API密钥等"
+  },
+  {
+    "key": "Verified addrs",
+    "value": "已验证地址"
+  },
+  {
+    "key": "Sign out",
+    "value": "登出"
+  },
+  {
+    "key": "Account",
+    "value": "账户"
+  },
+  {
+    "key": "Open wallet",
+    "value": "打开钱包"
+  },
+  {
+    "key": "Connected wallet",
+    "value": "已连接钱包"
+  },
+  {
+    "key": "Connect",
+    "value": "连接"
+  },
+  {
+    "key": "Connecting",
+    "value": "连接中"
+  },
+  {
+    "key": "My wallet",
+    "value": "我的钱包"
+  },
+  {
+    "key": "Token name",
+    "value": "代币名称"
+  },
+  {
+    "key": "Token contract address",
+    "value": "代币合约地址"
+  },
+  {
+    "key": "Requester name",
+    "value": "请求者姓名"
+  },
+  {
+    "key": "Requester email",
+    "value": "请求者邮箱"
+  },
+  {
+    "key": "Official project email address",
+    "value": "官方项目邮箱地址"
+  },
+  {
+    "key": "Official project website",
+    "value": "官方项目网站"
+  },
+  {
+    "key": "Docs",
+    "value": "文档"
+  },
+  {
+    "key": "Project description",
+    "value": "项目描述"
+  },
+  {
+    "key": "Project info",
+    "value": "项目信息"
+  },
+  {
+    "key": "Links",
+    "value": "链接"
+  },
+  {
+    "key": "Price data",
+    "value": "价格数据"
+  },
+  {
+    "key": "Request in progress. Once an admin approves your request you can edit token info.",
+    "value": "请求处理中。管理员批准后您可编辑代币信息。"
+  },
+  {
+    "key": "Project industry",
+    "value": "项目行业"
+  },
+  {
+    "key": "Telegram",
+    "value": "Telegram"
+  },
+  {
+    "key": "Slack",
+    "value": "Slack"
+  },
+  {
+    "key": "Facebook",
+    "value": "Facebook"
+  },
+  {
+    "key": "Reddit",
+    "value": "Reddit"
+  },
+  {
+    "key": "Invalid format",
+    "value": "格式无效"
+  },
+  {
+    "key": "Support URL or email",
+    "value": "支持URL或邮箱"
+  },
+  {
+    "key": "Current owner of this token instance",
+    "value": "此代币实例的当前所有者"
+  },
+  {
+    "key": "This token instance unique token ID",
+    "value": "此代币实例的唯一代币ID"
+  },
+  {
+    "key": "NFT item",
+    "value": "NFT项目"
+  },
+  {
+    "key": "Link to the dapp",
+    "value": "DApp链接"
+  },
+  {
+    "key": "Ooops!",
+    "value": "糟糕！"
+  },
+  {
+    "key": "couldn't",
+    "value": "无法"
+  },
+  {
+    "key": "The refreshing process has failed. Please try again.",
+    "value": "刷新过程失败，请重试。"
+  },
+  {
+    "key": "Please wait",
+    "value": "请等待"
+  },
+  {
+    "key": "Refetching metadata request sent",
+    "value": "重新获取元数据请求已发送"
+  },
+  {
+    "key": "Unable to initialize metadata update",
+    "value": "无法初始化元数据更新"
+  },
+  {
+    "key": "Success!",
+    "value": "成功！"
+  },
+  {
+    "key": "Metadata has been refreshed",
+    "value": "元数据已刷新"
+  },
+  {
+    "key": "Sending request",
+    "value": "发送请求中"
+  },
+  {
+    "key": "Unknown token instance",
+    "value": "未知代币实例"
+  },
+  {
+    "key": "Address that deployed this token contract",
+    "value": "部署此代币合约的地址"
+  },
+  {
+    "key": "NFT name",
+    "value": "NFT名称"
+  },
+  {
+    "key": "NFT description",
+    "value": "NFT描述"
+  },
+  {
+    "key": "NFT attributes",
+    "value": "NFT属性"
+  },
+  {
+    "key": "Token ID",
+    "value": "代币ID"
+  },
+  {
+    "key": "Batch number indicates the length of batches produced by grouping L2 blocks to be proven on L1",
+    "value": "批次号表示通过将L2区块分组以在L1上证明所产生的批次长度"
+  },
+  {
+    "key": "View previous txn batch",
+    "value": "查看上一交易批次"
+  },
+  {
+    "key": "View next txn batch",
+    "value": "查看下一交易批次"
+  },
+  {
+    "key": "Date and time at which batch is submitted to L1",
+    "value": "批次提交到L1的日期和时间"
+  },
+  {
+    "key": "Number of transactions in this batch",
+    "value": "此批次中的交易数量"
+  },
+  {
+    "key": "Number of L2 blocks in this batch",
+    "value": "此批次中的L2区块数量"
+  },
+  {
+    "key": "Hash of L1 transaction in which transactions was committed",
+    "value": "交易提交所在的L1交易哈希"
+  },
+  {
+    "key": "Heigh of L1 block which includes L1 transactions",
+    "value": "包含L1交易的L1区块高度"
+  },
+  {
+    "key": "Where the batch data is stored",
+    "value": "批次数据存储位置"
+  },
+  {
+    "key": "The hash of the state before the batch",
+    "value": "批次前的状态哈希"
+  },
+  {
+    "key": "The hash of the state after the batch",
+    "value": "批次后的状态哈希"
+  },
+  {
+    "key": "Show data availability info",
+    "value": "显示数据可用性信息"
+  },
+  {
+    "key": "Hide data availability info",
+    "value": "隐藏数据可用性信息"
+  },
+  {
+    "key": "Aggregated BLS signature of AnyTrust committee members",
+    "value": "AnyTrust委员会成员的聚合BLS签名"
+  },
+  {
+    "key": "The hash of the data blob stored by the AnyTrust committee",
+    "value": "AnyTrust委员会存储的数据blob哈希"
+  },
+  {
+    "key": "Members of AnyTrust committee",
+    "value": "AnyTrust委员会成员"
+  },
+  {
+    "key": "Trusted",
+    "value": "可信"
+  },
+  {
+    "key": "Proof",
+    "value": "证明"
+  },
+  {
+    "key": "The block number in Celestia where the Data Availability blob was published",
+    "value": "数据可用性blob在Celestia中发布的区块号"
+  },
+  {
+    "key": "The Data Availability blob’s unique cryptographic proof",
+    "value": "数据可用性blob的唯一加密证明"
+  },
+  {
+    "key": "Batch #",
+    "value": "批次 #"
+  },
+  {
+    "key": "L1 status",
+    "value": "L1状态"
+  },
+  {
+    "key": "L1 block",
+    "value": "L1区块"
+  },
+  {
+    "key": "Block count",
+    "value": "区块数量"
+  },
+  {
+    "key": "L1 transaction",
+    "value": "L1交易"
+  },
+  {
+    "key": "Data container",
+    "value": "数据容器"
+  },
+  {
+    "key": "Commitment",
+    "value": "承诺"
+  },
+  {
+    "key": "Height",
+    "value": "高度"
+  },
+  {
+    "key": "Versioned hash",
+    "value": "版本哈希"
+  },
+  {
+    "key": "Batch ID indicates the length of batches produced by grouping L2 blocks to be proven on L1",
+    "value": "批次ID表示通过将L2区块分组以在L1上证明所产生的批次长度"
+  },
+  {
+    "key": "Batch ID",
+    "value": "批次ID"
+  },
+  {
+    "key": "L1 txn count",
+    "value": "L1交易数量"
+  },
+  {
+    "key": "L2 blocks",
+    "value": "L2区块"
+  },
+  {
+    "key": "Storage",
+    "value": "存储"
+  },
+  {
+    "key": "Data availability container",
+    "value": "数据可用性容器"
+  },
+  {
+    "key": "Status of this batch",
+    "value": "此批次状态"
+  },
+  {
+    "key": "Finalized",
+    "value": "已最终确定"
+  },
+  {
+    "key": "Committed",
+    "value": "已提交"
+  },
+  {
+    "key": "Hash of L1 transaction this batch was committed in",
+    "value": "此批次提交所在的L1交易哈希"
+  },
+  {
+    "key": "L1 block that includes transaction with this batch commitment",
+    "value": "包含此批次承诺交易的L1区块"
+  },
+  {
+    "key": "Data availability",
+    "value": "数据可用性"
+  },
+  {
+    "key": "Committed block",
+    "value": "已提交区块"
+  },
+  {
+    "key": "Committed txn hash",
+    "value": "已提交交易哈希"
+  },
+  {
+    "key": "Finalized block",
+    "value": "已最终确定区块"
+  },
+  {
+    "key": "Finalized txn hash",
+    "value": "已最终确定交易哈希"
+  },
+  {
+    "key": "Blocks count",
+    "value": "区块数量"
+  },
+  {
+    "key": "Container",
+    "value": "容器"
+  },
+  {
+    "key": "Verify tx hash",
+    "value": "验证交易哈希"
+  },
+  {
+    "key": "Sequence hash",
+    "value": "序列哈希"
+  },
+  {
+    "key": "Number of transactions inside the batch.",
+    "value": "批次内的交易数量。"
+  },
+  {
+    "key": "L1 batch root is a hash that summarizes batch data and submitted to the L1",
+    "value": "L1批次根是汇总批次数据并提交到L1的哈希"
+  },
+  {
+    "key": "The gas price below which the \"baseFee\" of the batch should not fall",
+    "value": "批次“baseFee”不应低于的Gas价格"
+  },
+  {
+    "key": "Hash of L1 tx on which the batch was committed",
+    "value": "批次提交所在的L1交易哈希"
+  },
+  {
+    "key": "Commit tx",
+    "value": "提交交易"
+  },
+  {
+    "key": "Prove tx",
+    "value": "证明交易"
+  },
+  {
+    "key": "Smart contracts",
+    "value": "智能合约"
+  },
+  {
+    "key": "Claim",
+    "value": "领取"
+  },
+  {
+    "key": "Message #",
+    "value": "消息 #"
+  },
+  {
+    "key": "Receiver",
+    "value": "接收者"
+  },
+  {
+    "key": "Additional info",
+    "value": "附加信息"
+  },
+  {
+    "key": "Transaction fee",
+    "value": "交易费"
+  },
+  {
+    "key": "Others",
+    "value": "其他"
+  },
+  {
+    "key": "More details",
+    "value": "更多详情"
+  },
+  {
+    "key": "Contract creation",
+    "value": "合约创建"
+  },
+  {
+    "key": "Token creation",
+    "value": "代币创建"
+  },
+  {
+    "key": "Coin transfer",
+    "value": "币转账"
+  },
+  {
+    "key": "Bridge",
+    "value": "桥接"
+  },
+  {
+    "key": "Search by addresses, hash, method...",
+    "value": "按地址、哈希、方法搜索..."
+  },
+  {
+    "key": "Pending transactions",
+    "value": "待处理交易"
+  },
+  {
+    "key": "Transactions fees",
+    "value": "交易费"
+  },
+  {
+    "key": "Avg. transaction fee",
+    "value": "平均交易费"
+  },
+  {
+    "key": "Value ascending",
+    "value": "价值升序"
+  },
+  {
+    "key": "Value descending",
+    "value": "价值降序"
+  },
+  {
+    "key": "Fee ascending",
+    "value": "费用升序"
+  },
+  {
+    "key": "Fee descending",
+    "value": "费用降序"
+  },
+  {
+    "key": "Block number ascending",
+    "value": "区块号升序"
+  },
+  {
+    "key": "External call data",
+    "value": "外部调用数据"
+  },
+  {
+    "key": "Call data",
+    "value": "调用数据"
+  },
+  {
+    "key": "Show external call data",
+    "value": "显示外部调用数据"
+  },
+  {
+    "key": "Decoded external call data",
+    "value": "解码的外部调用数据"
+  },
+  {
+    "key": "Decoded call data",
+    "value": "解码的调用数据"
+  },
+  {
+    "key": "Unique character string assigned to every User operation",
+    "value": "分配给每个用户操作的唯一字符串"
+  },
+  {
+    "key": "The address of the smart contract account",
+    "value": "智能合约账户地址"
+  },
+  {
+    "key": "Target smart contract called by the User operation",
+    "value": "用户操作调用的目标智能合约"
+  },
+  {
+    "key": "Current User operation state",
+    "value": "当前用户操作状态"
+  },
+  {
+    "key": "The revert reason of the User operation",
+    "value": "用户操作的回退原因"
+  },
+  {
+    "key": "Date and time of User operation",
+    "value": "用户操作的日期和时间"
+  },
+  {
+    "key": "Total User operation fee",
+    "value": "用户操作总费用"
+  },
+  {
+    "key": "Actual gas amount used by the User operation",
+    "value": "用户操作实际使用的Gas量"
+  },
+  {
+    "key": "Hash of the transaction this User operation belongs to",
+    "value": "此用户操作所属的交易哈希"
+  },
+  {
+    "key": "Block number containing this User operation",
+    "value": "包含此用户操作的区块号"
+  },
+  {
+    "key": "Contract that executes bundles of User operations",
+    "value": "执行用户操作包的合约"
+  },
+  {
+    "key": "Gas to compensate the bundler",
+    "value": "补偿打包者的Gas"
+  },
+  {
+    "key": "Maximum fee per gas ",
+    "value": "每单位Gas最高费用 "
+  },
+  {
+    "key": "Maximum priority fee per gas",
+    "value": "每单位Gas最高优先费"
+  },
+  {
+    "key": "Helper contract to validate an aggregated signature",
+    "value": "验证聚合签名的辅助合约"
+  },
+  {
+    "key": "Aggregator signature",
+    "value": "聚合签名"
+  },
+  {
+    "key": "Used to validate a User operation along with the nonce during verification",
+    "value": "用于在验证期间与随机数一起验证用户操作"
+  },
+  {
+    "key": "View all",
+    "value": "查看全部"
+  },
+  {
+    "key": "User op hash",
+    "value": "用户操作哈希"
+  },
+  {
+    "key": "Edit",
+    "value": "编辑"
+  },
+  {
+    "key": "Not a token",
+    "value": "非代币"
+  },
+  {
+    "key": "Add details",
+    "value": "添加详情"
+  },
+  {
+    "key": "Token Info",
+    "value": "代币信息"
+  },
+  {
+    "key": "Date",
+    "value": "日期"
+  },
+  {
+    "key": "In progress",
+    "value": "处理中"
+  },
+  {
+    "key": "Approved",
+    "value": "已批准"
+  },
+  {
+    "key": "Rejected",
+    "value": "已拒绝"
+  },
+  {
+    "key": "Request status",
+    "value": "请求状态"
+  },
+  {
+    "key": "Total contracts",
+    "value": "合约总数"
+  },
+  {
+    "key": "Solidity",
+    "value": "Solidity"
+  },
+  {
+    "key": "Vyper",
+    "value": "Vyper"
+  },
+  {
+    "key": "Yul",
+    "value": "Yul"
+  },
+  {
+    "key": "Scilla",
+    "value": "Scilla"
+  },
+  {
+    "key": "Geas",
+    "value": "Geas"
+  },
+  {
+    "key": "Stylus Rust",
+    "value": "Stylus Rust"
+  },
+  {
+    "key": "Txs count",
+    "value": "交易数量"
+  },
+  {
+    "key": "Language",
+    "value": "语言"
+  },
+  {
+    "key": "Optimization",
+    "value": "优化"
+  },
+  {
+    "key": "Constructor args",
+    "value": "构造函数参数"
+  },
+  {
+    "key": "Verified",
+    "value": "已验证"
+  },
+  {
+    "key": "Settings",
+    "value": "设置"
+  },
+  {
+    "key": "Balance descending",
+    "value": "余额降序"
+  },
+  {
+    "key": "Balance ascending",
+    "value": "余额升序"
+  },
+  {
+    "key": "Txs count descending",
+    "value": "交易数量降序"
+  },
+  {
+    "key": "Txs count ascending",
+    "value": "交易数量升序"
+  },
+  {
+    "key": "Address that initiated the cross-chain transaction",
+    "value": "发起跨链交易的地址"
+  },
+  {
+    "key": "Optional message data sent with the transaction",
+    "value": "随交易发送的可选消息数据"
+  },
+  {
+    "key": "Current state and status of the cross-chain transaction",
+    "value": "跨链交易的当前状态和情况"
+  },
+  {
+    "key": "Detailed status message",
+    "value": "详细状态消息"
+  },
+  {
+    "key": "When the transaction was first created",
+    "value": "交易首次创建时间"
+  },
+  {
+    "key": "Most recent update to transaction status",
+    "value": "交易状态最新更新时间"
+  },
+  {
+    "key": "Abort address",
+    "value": "中止地址"
+  },
+  {
+    "key": "Call",
+    "value": "调用"
+  },
+  {
+    "key": "Revert address",
+    "value": "回退地址"
+  },
+  {
+    "key": "Gas limit",
+    "value": "Gas限制"
+  },
+  {
+    "key": "Transferred",
+    "value": "已转移"
+  },
+  {
+    "key": "Destination tx failed",
+    "value": "目标交易失败"
+  },
+  {
+    "key": "Abort failed",
+    "value": "中止失败"
+  },
+  {
+    "key": "Abort executed",
+    "value": "中止已执行"
+  },
+  {
+    "key": "Reverting to",
+    "value": "回退至"
+  },
+  {
+    "key": "Destination",
+    "value": "目标"
+  },
+  {
+    "key": "Origin",
+    "value": "源"
+  },
+  {
+    "key": "There are no cross chain transactions.",
+    "value": "暂无跨链交易。"
+  },
+  {
+    "key": "Select chains",
+    "value": "选择链"
+  },
+  {
+    "key": "Date from",
+    "value": "开始日期"
+  },
+  {
+    "key": "Date to",
+    "value": "结束日期"
+  },
+  {
+    "key": "Sender Chain",
+    "value": "发送链"
+  },
+  {
+    "key": "Receiver Chain",
+    "value": "接收链"
+  },
+  {
+    "key": "Receiver address",
+    "value": "接收地址"
+  },
+  {
+    "key": "Sender address",
+    "value": "发送地址"
+  },
+  {
+    "key": "Not found",
+    "value": "未找到"
+  },
+  {
+    "key": "Rollup feature is not enabled.",
+    "value": "Rollup功能未启用。"
+  },
+  {
+    "key": "Txn batches feature is not enabled.",
+    "value": "交易批次功能未启用。"
+  },
+  {
+    "key": "Celestia txn batches feature is not enabled.",
+    "value": "Celestia交易批次功能未启用。"
+  },
+  {
+    "key": "Txn withdrawals feature is not enabled.",
+    "value": "交易取款功能未启用。"
+  },
+  {
+    "key": "Background",
+    "value": "背景"
+  },
+  {
+    "key": "Activity pass",
+    "value": "活动通行证"
+  },
+  {
+    "key": "Available soon",
+    "value": "即将推出"
+  },
+  {
+    "key": "Streak badge",
+    "value": "连续徽章"
+  },
+  {
+    "key": "Streak progress",
+    "value": "连续进度"
+  },
+  {
+    "key": "Day streak",
+    "value": "连续天数"
+  },
+  {
+    "key": "Rewards",
+    "value": "奖励"
+  },
+  {
+    "key": "Blockscout activity",
+    "value": "Blockscout活动"
+  },
+  {
+    "key": "Contracts verification",
+    "value": "合约验证"
+  },
+  {
+    "key": "Blockscout usage",
+    "value": "Blockscout使用"
+  },
+  {
+    "key": "Current Merits period. All metrics reset weekly",
+    "value": "当前功绩周期。所有指标每周重置"
+  },
+  {
+    "key": "Performance rank",
+    "value": "表现排名"
+  },
+  {
+    "key": "Merits earned",
+    "value": "获得功绩"
+  },
+  {
+    "key": "Estimated Merits based on your current rank. Final amount may change",
+    "value": "基于您当前排名的预估功绩。最终金额可能变化"
+  },
+  {
+    "key": "prev.",
+    "value": "上一期。"
+  },
+  {
+    "key": "Your activity",
+    "value": "您的活动"
+  },
+  {
+    "key": "Your current Merit count is not final!",
+    "value": "您当前的功绩计数非最终值！"
+  },
+  {
+    "key": "Referral program",
+    "value": "推荐计划"
+  },
+  {
+    "key": "Referral link",
+    "value": "推荐链接"
+  },
+  {
+    "key": "Badges",
+    "value": "徽章"
+  },
+  {
+    "key": "View badges",
+    "value": "查看徽章"
+  },
+  {
+    "key": "Blockscout campaigns",
+    "value": "Blockscout活动"
+  },
+  {
+    "key": "Check campaigns",
+    "value": "查看活动"
+  },
+  {
+    "key": "Use your Merits",
+    "value": "使用您的功绩"
+  },
+  {
+    "key": "Spend your Merits to get exclusive discounts and offers across several web3 products!",
+    "value": "花费您的功绩以在多个Web3产品中获得独家折扣和优惠！"
+  },
+  {
+    "key": "Check offers",
+    "value": "查看优惠"
+  },
+  {
+    "key": "Current status of the epoch",
+    "value": "纪元当前状态"
+  },
+  {
+    "key": "Timestamp of the block where the epoch processing completed",
+    "value": "纪元处理完成的区块时间戳"
+  },
+  {
+    "key": "Funds allocation to support Celo projects and community initiatives",
+    "value": "支持Celo项目和社区倡议的资金分配"
+  },
+  {
+    "key": "Funds allocation to support projects that make Celo carbon-negative",
+    "value": "支持使Celo实现碳负排放项目的资金分配"
+  },
+  {
+    "key": "Sum of all fund allocations",
+    "value": "所有资金分配总和"
+  },
+  {
+    "key": "Epochs are finalized approximately once a day",
+    "value": "纪元大约每天最终确定一次"
+  },
+  {
+    "key": "Block range",
+    "value": "区块范围"
+  },
+  {
+    "key": "Community",
+    "value": "社区"
+  },
+  {
+    "key": "Carbon offset",
+    "value": "碳补偿"
+  },
+  {
+    "key": "Total",
+    "value": "总计"
+  },
+  {
+    "key": "Something went wrong. Unable to load next page.",
+    "value": "出错了，无法加载下一页。"
+  },
+  {
+    "key": "on behalf of",
+    "value": "代表"
+  },
+  {
+    "key": "Election rewards",
+    "value": "选举奖励"
+  },
+  {
+    "key": "Collapse section",
+    "value": "折叠部分"
+  },
+  {
+    "key": "Expand section",
+    "value": "展开部分"
+  },
+  {
+    "key": "Beneficiary",
+    "value": "受益人"
+  },
+  {
+    "key": "Validator group",
+    "value": "验证者组"
+  },
+  {
+    "key": "Associated validator",
+    "value": "关联验证者"
+  },
+  {
+    "key": "Voter",
+    "value": "投票者"
+  },
+  {
+    "key": "Epochs",
+    "value": "纪元"
+  },
+  {
+    "key": "There are no epochs.",
+    "value": "暂无纪元。"
+  },
+  {
+    "key": "Space",
+    "value": "空格"
+  },
+  {
+    "key": "Tap below to start",
+    "value": "点击下方开始"
+  },
+  {
+    "key": "Press space to start",
+    "value": "按空格键开始"
+  },
+  {
+    "key": "Score 1000 to win a special prize!",
+    "value": "得分1000赢取特别奖品！"
+  },
+  {
+    "key": "You unlocked a hidden badge!",
+    "value": "您解锁了隐藏徽章！"
+  },
+  {
+    "key": "Congratulations! You’re eligible to claim an epic hidden badge!",
+    "value": "恭喜！您有资格领取史诗隐藏徽章！"
+  },
+  {
+    "key": "all 0.3s ease",
+    "value": "全部0.3s缓动"
+  },
+  {
+    "key": "Put the pieces together and win a prize",
+    "value": "拼合碎片赢取奖品"
+  },
+  {
+    "key": "Click on a square to move it",
+    "value": "点击方块移动它"
+  },
+  {
+    "key": "Banner",
+    "value": "横幅"
+  },
+  {
+    "key": "Mark as favorite",
+    "value": "标记为收藏"
+  },
+  {
+    "key": "Marketplace banner",
+    "value": "市场横幅"
+  },
+  {
+    "key": "Share it with us",
+    "value": "与我们分享"
+  },
+  {
+    "key": "Discovery",
+    "value": "发现"
+  },
+  {
+    "key": "Github",
+    "value": "Github"
+  },
+  {
+    "key": "This app opens in a separate tab",
+    "value": "此应用在单独标签页中打开"
+  },
+  {
+    "key": "This app opens in Blockscout and your Blockscout wallet connects automatically",
+    "value": "此应用在Blockscout中打开，您的Blockscout钱包自动连接"
+  },
+  {
+    "key": "App modal",
+    "value": "应用模态框"
+  },
+  {
+    "key": "Back to dApps list",
+    "value": "返回DApp列表"
+  },
+  {
+    "key": "App page",
+    "value": "应用页面"
+  },
+  {
+    "key": "Discovery view",
+    "value": "发现视图"
+  },
+  {
+    "key": "Awesome! Thank you 💜",
+    "value": "太棒了！谢谢您 💜"
+  },
+  {
+    "key": "Your rating improves the service",
+    "value": "您的评分改善服务"
+  },
+  {
+    "key": "Ooops! Something went wrong",
+    "value": "糟糕！出错了"
+  },
+  {
+    "key": "App is already rated by you",
+    "value": "您已对此应用评分"
+  },
+  {
+    "key": "Sending your feedback",
+    "value": "发送您的反馈中"
+  },
+  {
+    "key": "Rate it!",
+    "value": "评分！"
+  },
+  {
+    "key": "Please log in to Blockscout to rate this DApp.",
+    "value": "请登录Blockscout对此DApp评分。"
+  },
+  {
+    "key": "Click here to rate!",
+    "value": "点击此处评分！"
+  },
+  {
+    "key": "Swap tokens",
+    "value": "交换代币"
+  },
+  {
+    "key": "View and remove token approvals",
+    "value": "查看和移除代币授权"
+  },
+  {
+    "key": "Get started",
+    "value": "开始使用"
+  },
+  {
+    "key": "Send tokens to multiple addresses at once",
+    "value": "一次性向多个地址发送代币"
+  },
+  {
+    "key": "Send tokens",
+    "value": "发送代币"
+  },
+  {
+    "key": "Essential dapps",
+    "value": "必备DApp"
+  },
+  {
+    "key": "Revoke essential dapp",
+    "value": "撤销必备DApp"
+  },
+  {
+    "key": "Click to see your approvals",
+    "value": "点击查看您的授权"
+  },
+  {
+    "key": "No approvals found",
+    "value": "未找到授权"
+  },
+  {
+    "key": "Unlimited",
+    "value": "无限"
+  },
+  {
+    "key": "Approved spender",
+    "value": "已授权支出者"
+  },
+  {
+    "key": "Approved amount",
+    "value": "已授权金额"
+  },
+  {
+    "key": "Value at risk",
+    "value": "风险价值"
+  },
+  {
+    "key": "Select chain",
+    "value": "选择链"
+  },
+  {
+    "key": "Connect a wallet to revoke approvals",
+    "value": "连接钱包以撤销授权"
+  },
+  {
+    "key": "Connected",
+    "value": "已连接"
+  },
+  {
+    "key": "Not connected",
+    "value": "未连接"
+  },
+  {
+    "key": "Search accounts by address or domain...",
+    "value": "按地址或域名搜索账户..."
+  },
+  {
+    "key": "Click Connect Wallet on the top right or enter an address in the search bar.",
+    "value": "点击右上角的连接钱包或在搜索栏中输入地址。"
+  },
+  {
+    "key": "Inspect your approvals by using the network selection, sorting and filtering options.",
+    "value": "使用网络选择、排序和筛选选项检查您的授权。"
+  },
+  {
+    "key": "Revoke the approvals that you no longer use to prevent unwanted access to your funds.",
+    "value": "撤销您不再使用的授权，以防止对您资金的不当访问。"
+  },
+  {
+    "key": "Aborted",
+    "value": "已中止"
+  },
+  {
+    "key": "Public client not found",
+    "value": "未找到公共客户端"
+  },
+  {
+    "key": "Approval",
+    "value": "授权"
+  },
+  {
+    "key": "Failed to revoke approval.",
+    "value": "撤销授权失败。"
+  },
+  {
+    "key": "Approval revoked successfully.",
+    "value": "授权撤销成功。"
+  },
+  {
+    "key": "Transfer",
+    "value": "转账"
+  },
+  {
+    "key": "Swap button",
+    "value": "交换按钮"
+  },
+  {
+    "key": "Dappscout",
+    "value": "Dappscout"
+  },
+  {
+    "key": "Send Transaction",
+    "value": "发送交易"
+  },
+  {
+    "key": "Sign Message",
+    "value": "签名消息"
+  },
+  {
+    "key": "Top rated",
+    "value": "最高评分"
+  },
+  {
+    "key": "Most rated",
+    "value": "最多评分"
+  },
+  {
+    "key": "Submit app",
+    "value": "提交应用"
+  },
+  {
+    "key": "Suggest ideas",
+    "value": "建议想法"
+  },
+  {
+    "key": "Find app by name or keyword...",
+    "value": "按名称或关键词查找应用..."
+  },
+  {
+    "key": "Explore dapps",
+    "value": "探索DApp"
+  },
+  {
+    "key": "L2 transaction",
+    "value": "L2交易"
+  },
+  {
+    "key": "Verify with",
+    "value": "使用...验证"
+  },
+  {
+    "key": "View in",
+    "value": "在...中查看"
+  },
+  {
+    "key": "Pool",
+    "value": "池"
+  },
+  {
+    "key": "DEX tracker",
+    "value": "DEX追踪器"
+  },
+  {
+    "key": "There are no pools.",
+    "value": "暂无池。"
+  },
+  {
+    "key": "The base token in a liquidity pool pair",
+    "value": "流动性池对中的基础代币"
+  },
+  {
+    "key": "The quote token in a liquidity pool pair",
+    "value": "流动性池对中的报价代币"
+  },
+  {
+    "key": "Current market capitalization of the base token",
+    "value": "基础代币的当前市值"
+  },
+  {
+    "key": "Current liquidity of the pool",
+    "value": "池的当前流动性"
+  },
+  {
+    "key": "DEX where the pool is traded",
+    "value": "池交易的DEX"
+  },
+  {
+    "key": "Pool ID",
+    "value": "池ID"
+  },
+  {
+    "key": "Liquidity",
+    "value": "流动性"
+  },
+  {
+    "key": "Website settings",
+    "value": "网站设置"
+  },
+  {
+    "key": "User settings",
+    "value": "用户设置"
+  },
+  {
+    "key": "Color theme",
+    "value": "颜色主题"
+  },
+  {
+    "key": "English",
+    "value": "英语"
+  },
+  {
+    "key": "🇺🇸",
+    "value": "🇺🇸"
+  },
+  {
+    "key": "中文",
+    "value": "中文"
+  },
+  {
+    "key": "Show address menu",
+    "value": "显示地址菜单"
+  },
+  {
+    "key": "Update token info",
+    "value": "更新代币信息"
+  },
+  {
+    "key": "Transaction info",
+    "value": "交易信息"
+  },
+  {
+    "key": "NFT collection",
+    "value": "NFT集合"
+  },
+  {
+    "key": "Access to this resource is restricted.",
+    "value": "访问此资源受限。"
+  },
+  {
+    "key": "Page not found",
+    "value": "页面未找到"
+  },
+  {
+    "key": "Request cannot be processed",
+    "value": "无法处理请求"
+  },
+  {
+    "key": "An unexpected error has occurred. Try reloading the page, or come back soon and try again.",
+    "value": "发生意外错误。请尝试重新加载页面，或稍后再试。"
+  },
+  {
+    "key": "Block lost consensus",
+    "value": "区块失去共识"
+  },
+  {
+    "key": "critical.",
+    "value": "关键。"
+  },
+  {
+    "key": "Block removed due to chain reorganization",
+    "value": "因链重组移除的区块"
+  },
+  {
+    "key": "View reorg",
+    "value": "查看重组"
+  },
+  {
+    "key": "Back to home",
+    "value": "返回主页"
+  },
+  {
+    "key": "Unable to get client key.",
+    "value": "无法获取客户端密钥。"
+  },
+  {
+    "key": "reCAPTCHA V2 site key is not set",
+    "value": "未设置reCAPTCHA V2站点密钥"
+  },
+  {
+    "key": "Rate limit exceeded.",
+    "value": "超出速率限制。"
+  },
+  {
+    "key": "Too many requests",
+    "value": "请求过多"
+  },
+  {
+    "key": "I'm not a robot",
+    "value": "我不是机器人"
+  },
+  {
+    "key": "If it still does not show up after 1 hour, please check with your",
+    "value": "如果1小时后仍未显示，请与您的...联系"
+  },
+  {
+    "key": "solve the puzzle",
+    "value": "解决谜题"
+  },
+  {
+    "key": ", and be rewarded with a secret prize.",
+    "value": "，并获得秘密奖品奖励。"
+  },
+  {
+    "key": "Placeholder",
+    "value": "占位符"
+  },
+  {
+    "key": "Disconnected",
+    "value": "已断开"
+  },
+  {
+    "key": "Connected to",
+    "value": "已连接到"
+  },
+  {
+    "key": "Disconnect",
+    "value": "断开"
+  },
+  {
+    "key": "This contract has been certified by the chain developers",
+    "value": "此合约已由链开发者认证"
+  },
+  {
+    "key": "Sponsored banner advertisement",
+    "value": "赞助横幅广告"
+  },
+  {
+    "key": "Validator rewards",
+    "value": "验证者奖励"
+  },
+  {
+    "key": "Delegated payments",
+    "value": "委托支付"
+  },
+  {
+    "key": "Voting rewards",
+    "value": "投票奖励"
+  },
+  {
+    "key": "extends Omit",
+    "value": "扩展Omit"
+  },
+  {
+    "key": "% of Gas Target",
+    "value": "Gas目标百分比"
+  },
+  {
+    "key": "last 4 chars",
+    "value": "最后4个字符"
+  },
+  {
+    "key": "i18n Example Component",
+    "value": "i18n示例组件"
+  },
+  {
+    "key": "Loading translations...",
+    "value": "加载翻译中..."
+  },
+  {
+    "key": "Show info",
+    "value": "显示信息"
+  },
+  {
+    "key": ":id",
+    "value": ":id"
+  },
+  {
+    "key": "Verify with other explorers",
+    "value": "使用其他浏览器验证"
+  },
+  {
+    "key": "PQR-Test",
+    "value": "PQR-测试"
+  },
+  {
+    "key": "Example label",
+    "value": "示例标签"
+  },
+  {
+    "key": "Example with long name",
+    "value": "长名称示例"
+  },
+  {
+    "key": "Another tag",
+    "value": "另一个标签"
+  },
+  {
+    "key": "And yet more",
+    "value": "还有更多"
+  },
+  {
+    "key": "Awesome",
+    "value": "很棒"
+  },
+  {
+    "key": "Reset filter",
+    "value": "重置筛选"
+  },
+  {
+    "key": "Connection lost, click",
+    "value": "连接丢失，点击"
+  },
+  {
+    "key": "to load newer records",
+    "value": "加载较新记录"
+  },
+  {
+    "key": "Live updates temporarily delayed",
+    "value": "实时更新暂时延迟"
+  },
+  {
+    "key": "cross chain transaction",
+    "value": "跨链交易"
+  },
+  {
+    "key": "Outgoing transfers",
+    "value": "转出转账"
+  },
+  {
+    "key": "Incoming transfers",
+    "value": "转入转账"
+  },
+  {
+    "key": "Token burning",
+    "value": "代币销毁"
+  },
+  {
+    "key": "Token creating",
+    "value": "代币创建"
+  },
+  {
+    "key": "All about kitties",
+    "value": "关于猫咪的一切"
+  },
+  {
+    "key": "To see millions picture of cute kitties",
+    "value": "查看数百万张可爱猫咪图片"
+  },
+  {
+    "key": "🎨",
+    "value": "🎨"
+  },
+  {
+    "key": "728x90",
+    "value": "728x90"
+  },
+  {
+    "key": "This is a testnet transaction only",
+    "value": "这仅是测试网交易"
+  },
+  {
+    "key": "Blob",
+    "value": "Blob"
+  },
+  {
+    "key": "Calldata",
+    "value": "调用数据"
+  },
+  {
+    "key": "Celestia",
+    "value": "Celestia"
+  },
+  {
+    "key": "Blob page",
+    "value": "Blob页面"
+  },
+  {
+    "key": "EIP-4844 blob",
+    "value": "EIP-4844 blob"
+  },
+  {
+    "key": "Celestia blob",
+    "value": "Celestia blob"
+  },
+  {
+    "key": "Text",
+    "value": "文本"
+  },
+  {
+    "key": "Gas Used %",
+    "value": "Gas使用率%"
+  },
+  {
+    "key": "Block is being re-synced. Details may be incomplete until the update is finished.",
+    "value": "区块正在重新同步。更新完成前详情可能不完整。"
+  },
+  {
+    "key": "Native token",
+    "value": "原生代币"
+  },
+  {
+    "key": "Select interval",
+    "value": "选择间隔"
+  },
+  {
+    "key": "Chart title placeholder",
+    "value": "图表标题占位符"
+  },
+  {
+    "key": "Chart placeholder description chart placeholder description",
+    "value": "图表占位符描述图表占位符描述"
+  },
+  {
+    "key": "Block on ",
+    "value": "区块在 "
+  },
+  {
+    "key": "- Universal name service",
+    "value": "- 通用名称服务"
+  },
+  {
+    "key": "Learn more about Clusters",
+    "value": "了解更多关于集群"
+  },
+  {
+    "key": "Documentation",
+    "value": "文档"
+  },
+  {
+    "key": "User operation on ",
+    "value": "用户操作在 "
+  },
+  {
+    "key": "Filter",
+    "value": "筛选"
+  },
+  {
+    "key": "Last update",
+    "value": "最后更新"
+  },
+  {
+    "key": "Advanced",
+    "value": "高级"
+  },
+  {
+    "key": "Open link",
+    "value": "打开链接"
+  },
+  {
+    "key": "Method id",
+    "value": "方法ID"
+  },
+  {
+    "key": "Inde",
+    "value": "索引"
+  },
+  {
+    "key": "Data",
+    "value": "数据"
+  },
+  {
+    "key": "Log index",
+    "value": "日志索引"
+  },
+  {
+    "key": "Verify the contract here",
+    "value": "在此验证合约"
+  },
+  {
+    "key": "Decode input data",
+    "value": "解码输入数据"
+  },
+  {
+    "key": "Topics",
+    "value": "主题"
+  },
+  {
+    "key": "Close current tab",
+    "value": "关闭当前标签页"
+  },
+  {
+    "key": "Collapse folders",
+    "value": "折叠文件夹"
+  },
+  {
+    "key": "The main file containing verified contract",
+    "value": "包含已验证合约的主文件"
+  },
+  {
+    "key": "Expand all",
+    "value": "展开全部"
+  },
+  {
+    "key": "Collapse all",
+    "value": "折叠全部"
+  },
+  {
+    "key": "Match Case",
+    "value": "匹配大小写"
+  },
+  {
+    "key": "Match Whole Word",
+    "value": "匹配整词"
+  },
+  {
+    "key": "Use Regular Expression",
+    "value": "使用正则表达式"
+  },
+  {
+    "key": "Show File Explorer",
+    "value": "显示文件浏览器"
+  },
+  {
+    "key": "Show Search in Files",
+    "value": "显示文件内搜索"
+  },
+  {
+    "key": "Open sidebar",
+    "value": "打开侧边栏"
+  },
+  {
+    "key": "Close sidebar",
+    "value": "关闭侧边栏"
+  },
+  {
+    "key": "Explorer",
+    "value": "浏览器"
+  },
+  {
+    "key": "Close",
+    "value": "关闭"
+  },
+  {
+    "key": "**This is an external library linked to the verified contract**",
+    "value": "**这是链接到已验证合约的外部库**"
+  },
+  {
+    "key": "builds correct file tree",
+    "value": "构建正确的文件树"
+  },
+  {
+    "key": "Emp",
+    "value": "员工"
+  },
+  {
+    "key": "Nil",
+    "value": "空"
+  },
+  {
+    "key": "computes correct chunks if files with the same name is not in folders with the same name",
+    "value": "如果同名文件不在同名文件夹中，则计算正确的块"
+  },
+  {
+    "key": "construct correct absolute path if file is in the current directory",
+    "value": "如果文件在当前目录中，则构建正确的绝对路径"
+  },
+  {
+    "key": "returns undefined if imported file is outside the base file folder",
+    "value": "如果导入的文件在基础文件文件夹外，则返回未定义"
+  },
+  {
+    "key": "returns unmodified path if it is already absolute",
+    "value": "如果路径已经是绝对路径，则返回未修改的路径"
+  },
+  {
+    "key": "correctly manages remappings",
+    "value": "正确管理重映射"
+  },
+  {
+    "key": "with empty context",
+    "value": "带空上下文"
+  },
+  {
+    "key": "t know the name of this variables in vscode\n    ",
+    "value": "不知道vscode中此变量的名称\n    "
+  },
+  {
+    "key": "Token instance image",
+    "value": "代币实例图像"
+  },
+  {
+    "key": "Failed to load image",
+    "value": "图像加载失败"
+  },
+  {
+    "key": "Prev page",
+    "value": "上一页"
+  },
+  {
+    "key": "Unable to execute ReCaptcha",
+    "value": "无法执行ReCaptcha"
+  },
+  {
+    "key": "Addresses",
+    "value": "地址"
+  },
+  {
+    "key": "User ops",
+    "value": "用户操作"
+  },
+  {
+    "key": "Blobs",
+    "value": "Blob"
+  },
+  {
+    "key": "Cluster Name",
+    "value": "集群名称"
+  },
+  {
+    "key": "Cluster",
+    "value": "集群"
+  },
+  {
+    "key": "App",
+    "value": "应用"
+  },
+  {
+    "key": "Public tag",
+    "value": "公共标签"
+  },
+  {
+    "key": "User operation",
+    "value": "用户操作"
+  },
+  {
+    "key": "User op",
+    "value": "用户操作"
+  },
+  {
+    "key": "Security score",
+    "value": "安全评分"
+  },
+  {
+    "key": "High",
+    "value": "高"
+  },
+  {
+    "key": "Low",
+    "value": "低"
+  },
+  {
+    "key": "Informational",
+    "value": "信息性"
+  },
+  {
+    "key": "The contract was successfully created",
+    "value": "合约创建成功"
+  },
+  {
+    "key": "The creation transaction failed",
+    "value": "创建交易失败"
+  },
+  {
+    "key": "The contract was created at some point but has since self-destructed",
+    "value": "合约曾在某时创建但此后已自毁"
+  },
+  {
+    "key": "Self-destructed",
+    "value": "已自毁"
+  },
+  {
+    "key": "Table header",
+    "value": "表头"
+  },
+  {
+    "key": "Toggle time format",
+    "value": "切换时间格式"
+  },
+  {
+    "key": "Paymaster sponsor",
+    "value": "支付大师赞助"
+  },
+  {
+    "key": "Wallet balance",
+    "value": "钱包余额"
+  },
+  {
+    "key": "Wallet deposit",
+    "value": "钱包存款"
+  },
+  {
+    "key": "Unrecognized",
+    "value": "未识别"
+  },
+  {
+    "key": "Pending outbound",
+    "value": "待发出"
+  },
+  {
+    "key": "Pending inbound",
+    "value": "待接收"
+  },
+  {
+    "key": "Outbound mined",
+    "value": "已发出并上链"
+  },
+  {
+    "key": "Pending revert",
+    "value": "待回退"
+  },
+  {
+    "key": "Reverted",
+    "value": "已回退"
+  },
+  {
+    "key": "Unknown Status",
+    "value": "未知状态"
+  },
+  {
+    "key": "Transaction hash",
+    "value": "交易哈希"
+  },
+  {
+    "key": "L1 block No",
+    "value": "L1区块号"
+  },
+  {
+    "key": "L2 txn hash",
+    "value": "L2交易哈希"
+  },
+  {
+    "key": "L1 txn origin",
+    "value": "L1交易源"
+  },
+  {
+    "key": "User",
+    "value": "用户"
+  },
+  {
+    "key": "Merits",
+    "value": "功绩"
+  },
+  {
+    "key": "All achievements are earned",
+    "value": "所有成就已获得"
+  },
+  {
+    "key": "Congratulations",
+    "value": "恭喜"
+  },
+  {
+    "key": "Registration",
+    "value": "注册"
+  },
+  {
+    "key": "Open",
+    "value": "打开"
+  },
+  {
+    "key": "Add wallet to account",
+    "value": "将钱包添加到账户"
+  },
+  {
+    "key": "Log in to account",
+    "value": "登录账户"
+  },
+  {
+    "key": "Merits program",
+    "value": "功绩计划"
+  },
+  {
+    "key": "Referral code switch",
+    "value": "推荐码开关"
+  },
+  {
+    "key": "Sign message in your wallet",
+    "value": "在您的钱包中签名消息"
+  },
+  {
+    "key": "Validator index",
+    "value": "验证者索引"
+  },
+  {
+    "key": "Msg nonce",
+    "value": "消息随机数"
+  },
+  {
+    "key": "Time left",
+    "value": "剩余时间"
+  },
+  {
+    "key": "L2 block",
+    "value": "L2区块"
+  },
+  {
+    "key": "L2 block No",
+    "value": "L2区块号"
+  },
+  {
+    "key": "Deposits feature is not enabled.",
+    "value": "存款功能未启用。"
+  },
+  {
+    "key": "Withdrawals feature is not enabled.",
+    "value": "取款功能未启用。"
+  },
+  {
+    "key": "Latest batch",
+    "value": "最新批次"
+  },
+  {
+    "key": "Total blocks",
+    "value": "区块总数"
+  },
+  {
+    "key": "Average block time",
+    "value": "平均区块时间"
+  },
+  {
+    "key": "Total transactions",
+    "value": "交易总数"
+  },
+  {
+    "key": "Total operational transactions",
+    "value": "操作交易总数"
+  },
+  {
+    "key": "Latest L1 state batch",
+    "value": "最新L1状态批次"
+  },
+  {
+    "key": "Wallet addresses",
+    "value": "钱包地址"
+  },
+  {
+    "key": "BTC Locked in 2WP",
+    "value": "锁定在2WP中的BTC"
+  },
+  {
+    "key": "Current epoch",
+    "value": "当前纪元"
+  },
+  {
+    "key": "Total addresses",
+    "value": "地址总数"
+  },
+  {
+    "key": "click once again.",
+    "value": "再次点击。"
+  },
+  {
+    "key": "All stats",
+    "value": "所有统计"
+  },
+  {
+    "key": "\"section interval\"\n                \"input input\"",
+    "value": "\"区间间隔\"\n                \"输入输入\""
+  },
+  {
+    "key": "\"section interval input\"",
+    "value": "\"区间间隔输入\""
+  },
+  {
+    "key": "Select section",
+    "value": "选择部分"
+  },
+  {
+    "key": "Find chart, metric...",
+    "value": "查找图表、指标..."
+  },
+  {
+    "key": "Day",
+    "value": "日"
+  },
+  {
+    "key": "Week",
+    "value": "周"
+  },
+  {
+    "key": "Month",
+    "value": "月"
+  },
+  {
+    "key": "Year",
+    "value": "年"
+  },
+  {
+    "key": "All time",
+    "value": "全部时间"
+  },
+  {
+    "key": "1 month",
+    "value": "1个月"
+  },
+  {
+    "key": "3 months",
+    "value": "3个月"
+  },
+  {
+    "key": "6 months",
+    "value": "6个月"
+  },
+  {
+    "key": "1 year",
+    "value": "1年"
+  },
+  {
+    "key": "Unnamed token",
+    "value": "未命名代币"
+  },
+  {
+    "key": "Inventory",
+    "value": "库存"
+  },
+  {
+    "key": "Bridged",
+    "value": "已桥接"
+  },
+  {
+    "key": "Token on ",
+    "value": "代币在 "
+  },
+  {
+    "key": "Price per token on the exchanges",
+    "value": "交易所代币单价"
+  },
+  {
+    "key": "Circulating supply * Price",
+    "value": "流通供应量 * 价格"
+  },
+  {
+    "key": "The total amount of tokens issued",
+    "value": "代币发行总量"
+  },
+  {
+    "key": "Number of accounts holding the token",
+    "value": "持有代币的账户数量"
+  },
+  {
+    "key": "Number of digits that come after the decimal place when displaying token value",
+    "value": "显示代币值时小数点后的位数"
+  },
+  {
+    "key": "Holder",
+    "value": "持有者"
+  },
+  {
+    "key": "There are no tokens.",
+    "value": "暂无代币。"
+  },
+  {
+    "key": "Filtered by owner",
+    "value": "按所有者筛选"
+  },
+  {
+    "key": "Owner",
+    "value": "所有者"
+  },
+  {
+    "key": "Marketplaces trading this NFT",
+    "value": "交易此NFT的市场"
+  },
+  {
+    "key": "Description and support info",
+    "value": "描述和支持信息"
+  },
+  {
+    "key": "Crypto markets",
+    "value": "加密市场"
+  },
+  {
+    "key": "Show bridged tokens from",
+    "value": "显示来自...的桥接代币"
+  },
+  {
+    "key": "On-chain market cap",
+    "value": "链上市值"
+  },
+  {
+    "key": "Price ascending",
+    "value": "价格升序"
+  },
+  {
+    "key": "Price descending",
+    "value": "价格降序"
+  },
+  {
+    "key": "Holders ascending",
+    "value": "持有者升序"
+  },
+  {
+    "key": "Holders descending",
+    "value": "持有者降序"
+  },
+  {
+    "key": "On-chain market cap ascending",
+    "value": "链上市值升序"
+  },
+  {
+    "key": "On-chain market cap descending",
+    "value": "链上市值降序"
+  },
+  {
+    "key": "Latest txn",
+    "value": "最新交易"
+  },
+  {
+    "key": "Confidential compute tx details",
+    "value": "保密计算交易详情"
+  },
+  {
+    "key": "Asset Flows",
+    "value": "资产流"
+  },
+  {
+    "key": "Regular tx details",
+    "value": "常规交易详情"
+  },
+  {
+    "key": "State",
+    "value": "状态"
+  },
+  {
+    "key": "Raw trace",
+    "value": "原始跟踪"
+  },
+  {
+    "key": "Authorizations",
+    "value": "授权"
+  },
+  {
+    "key": "Relay tx",
+    "value": "中继交易"
+  },
+  {
+    "key": "Transaction details",
+    "value": "交易详情"
+  },
+  {
+    "key": "Transaction on ",
+    "value": "交易在 "
+  },
+  {
+    "key": "Transaction summary",
+    "value": "交易摘要"
+  },
+  {
+    "key": "Human readable transaction provided by Noves.fi",
+    "value": "由Noves.fi提供的人类可读交易"
+  },
+  {
+    "key": "Noves logo",
+    "value": "Noves标志"
+  },
+  {
+    "key": "extracts variables names",
+    "value": "提取变量名"
+  },
+  {
+    "key": "split string without capturing variables",
+    "value": "拆分字符串而不捕获变量"
+  },
+  {
+    "key": "checks that summary is valid",
+    "value": "检查摘要是否有效"
+  },
+  {
+    "key": "checks that summary is invalid",
+    "value": "检查摘要是否无效"
+  },
+  {
+    "key": "Smart contracts allowed to interact with confidential data",
+    "value": "允许与机密数据交互的智能合约"
+  },
+  {
+    "key": "There are no transfers.",
+    "value": "暂无转账。"
+  },
+  {
+    "key": "Transaction method name",
+    "value": "交易方法名"
+  },
+  {
+    "key": "Interacted with contract",
+    "value": "与合约交互"
+  },
+  {
+    "key": "Total transaction fee",
+    "value": "交易总费用"
+  },
+  {
+    "key": "Maximum amount of gas that can be used by the transaction",
+    "value": "交易可使用的最大Gas量"
+  },
+  {
+    "key": "Decoded input data",
+    "value": "解码的输入数据"
+  },
+  {
+    "key": "No trace entries found.",
+    "value": "未找到跟踪条目。"
+  },
+  {
+    "key": "Connection is lost. Please click here to update transaction info.",
+    "value": "连接丢失，请点击此处更新交易信息。"
+  },
+  {
+    "key": "Paid Gas",
+    "value": "已支付Gas"
+  },
+  {
+    "key": "Authority",
+    "value": "授权方"
+  },
+  {
+    "key": "Delegated address",
+    "value": "委托地址"
+  },
+  {
+    "key": "Chain",
+    "value": "链"
+  },
+  {
+    "key": "Blob hash",
+    "value": "Blob哈希"
+  },
+  {
+    "key": "Data type",
+    "value": "数据类型"
+  },
+  {
+    "key": "Fee per gas",
+    "value": "每单位Gas费用"
+  },
+  {
+    "key": "Actual gas amount used by the transaction",
+    "value": "交易实际使用的Gas量"
+  },
+  {
+    "key": "The originating transaction that initiated cross-L2 message on the source chain",
+    "value": "在源链上发起跨L2消息的原始交易"
+  },
+  {
+    "key": "The transaction that relays cross-L2 message to its destination chain",
+    "value": "将跨L2消息中继到其目标链的交易"
+  },
+  {
+    "key": "Message id",
+    "value": "消息ID"
+  },
+  {
+    "key": "Interop status",
+    "value": "互操作状态"
+  },
+  {
+    "key": "Payload",
+    "value": "载荷"
+  },
+  {
+    "key": "Other data related to this transaction",
+    "value": "与此交易相关的其他数据"
+  },
+  {
+    "key": "List of tokens minted in the transaction",
+    "value": "交易中铸造的代币列表"
+  },
+  {
+    "key": "List of tokens burnt in the transaction",
+    "value": "交易中销毁的代币列表"
+  },
+  {
+    "key": "List of tokens created in the transaction",
+    "value": "交易中创建的代币列表"
+  },
+  {
+    "key": "The minimum network fee charged per transaction",
+    "value": "每笔交易的最低网络费"
+  },
+  {
+    "key": "Priority fee",
+    "value": "优先费"
+  },
+  {
+    "key": "An extra fee set by the sender to speed up transaction execution",
+    "value": "发送者设置的用于加速交易执行的额外费用"
+  },
+  {
+    "key": "Transaction fee without blob fee",
+    "value": "不含Blob费的交易费"
+  },
+  {
+    "key": "Syncing with base layer",
+    "value": "与基础层同步"
+  },
+  {
+    "key": "Settlement pending",
+    "value": "结算待处理"
+  },
+  {
+    "key": "Detailed status progress of the transaction",
+    "value": "交易的详细状态进度"
+  },
+  {
+    "key": "Could not determine",
+    "value": "无法确定"
+  },
+  {
+    "key": "Ready to prove",
+    "value": "准备证明"
+  },
+  {
+    "key": "In challenge period",
+    "value": "在挑战期内"
+  },
+  {
+    "key": "Proven",
+    "value": "已证明"
+  },
+  {
+    "key": "Waiting a game to resolve",
+    "value": "等待游戏解决"
+  },
+  {
+    "key": "Contract execution completed",
+    "value": "合约执行完成"
+  },
+  {
+    "key": "Error occurred during contract execution",
+    "value": "合约执行期间发生错误"
+  },
+  {
+    "key": "Status and method",
+    "value": "状态和方法"
+  },
+  {
+    "key": "Incoming message",
+    "value": "传入消息"
+  },
+  {
+    "key": "Outgoing message",
+    "value": "传出消息"
+  },
+  {
+    "key": "Status of the transaction confirmation path to L1",
+    "value": "交易到L1的确认路径状态"
+  },
+  {
+    "key": "The revert reason of the transaction",
+    "value": "交易的回退原因"
+  },
+  {
+    "key": "Block number containing the transaction",
+    "value": "包含交易的区块号"
+  },
+  {
+    "key": "Index of the batch containing this transaction",
+    "value": "包含此交易的批次索引"
+  },
+  {
+    "key": "Node that carried out the confidential computation",
+    "value": "执行保密计算的节点"
+  },
+  {
+    "key": "The target address where this cross-chain transaction is executed",
+    "value": "执行此跨链交易的目标地址"
+  },
+  {
+    "key": "A fee set by the chain operator to cover extra costs of additional services",
+    "value": "链运营商设置的用于覆盖附加服务额外成本的费用"
+  },
+  {
+    "key": "L2 gas spent on L2 resources",
+    "value": "L2资源消耗的L2 Gas"
+  },
+  {
+    "key": "Total gas used on L1",
+    "value": "L1上使用的总Gas"
+  },
+  {
+    "key": "L1 gas used by transaction",
+    "value": "交易使用的L1 Gas"
+  },
+  {
+    "key": "L1 gas price",
+    "value": "L1 Gas价格"
+  },
+  {
+    "key": "Amount of gas used by the blobs in this transaction",
+    "value": "此交易中blob使用的Gas量"
+  },
+  {
+    "key": "L2 execution fee",
+    "value": "L2执行费"
+  },
+  {
+    "key": "Commitment scalar",
+    "value": "承诺标量"
+  },
+  {
+    "key": "Additional gas overhead of a data commitment transaction",
+    "value": "数据承诺交易的额外Gas开销"
+  },
+  {
+    "key": "L1 gas fees",
+    "value": "L1 Gas费"
+  },
+  {
+    "key": "L1 blob fees",
+    "value": "L1 Blob费"
+  },
+  {
+    "key": "Removed",
+    "value": "已移除"
+  },
+  {
+    "key": "Collected",
+    "value": "已收集"
+  },
+  {
+    "key": "Swapped",
+    "value": "已交换"
+  },
+  {
+    "key": "Ether",
+    "value": "以太币"
+  },
+  {
+    "key": "Uniswap V3",
+    "value": "Uniswap V3"
+  },
+  {
+    "key": "Minted",
+    "value": "已铸造"
+  },
+  {
+    "key": "of token ID",
+    "value": "代币ID的"
+  },
+  {
+    "key": "Delegate call",
+    "value": "委托调用"
+  },
+  {
+    "key": "Static call",
+    "value": "静态调用"
+  },
+  {
+    "key": "Create",
+    "value": "创建"
+  },
+  {
+    "key": "Self-destruct",
+    "value": "自毁"
+  },
+  {
+    "key": "Before",
+    "value": "之前"
+  },
+  {
+    "key": "After",
+    "value": "之后"
+  },
+  {
+    "key": "Change",
+    "value": "变更"
+  },
+  {
+    "key": "A block producer who successfully included the block into the blockchain",
+    "value": "成功将区块纳入区块链的区块生产者"
+  },
+  {
+    "key": "Mint",
+    "value": "铸造"
+  },
+  {
+    "key": "Burn",
+    "value": "销毁"
+  },
+  {
+    "key": "Address used in tokens mintings and burnings",
+    "value": "代币铸造和销毁中使用的地址"
+  },
+  {
+    "key": "Total validators",
+    "value": "验证者总数"
+  },
+  {
+    "key": "Commission",
+    "value": "佣金"
+  },
+  {
+    "key": "Self bonded",
+    "value": "自我质押"
+  },
+  {
+    "key": "Delegated amount",
+    "value": "委托金额"
+  },
+  {
+    "key": "Address descending",
+    "value": "地址降序"
+  },
+  {
+    "key": "Address ascending",
+    "value": "地址升序"
+  },
+  {
+    "key": "Active validators",
+    "value": "活跃验证者"
+  },
+  {
+    "key": "Validator’s address",
+    "value": "验证者地址"
+  },
+  {
+    "key": "Status descending",
+    "value": "状态降序"
+  },
+  {
+    "key": "Status ascending",
+    "value": "状态升序"
+  },
+  {
+    "key": "Blocks validated descending",
+    "value": "验证区块数降序"
+  },
+  {
+    "key": "Blocks validated ascending",
+    "value": "验证区块数升序"
+  },
+  {
+    "key": "Index of the staker in the committee",
+    "value": "质押者在委员会中的索引"
+  },
+  {
+    "key": "Staker's balance",
+    "value": "质押者余额"
+  },
+  {
+    "key": "libp2p peer ID, corresponding to the staker's BLS public key",
+    "value": "libp2p对等ID，对应质押者的BLS公钥"
+  },
+  {
+    "key": "The address whose key validator uses to sign cross-chain events",
+    "value": "验证者用于签名跨链事件的密钥地址"
+  },
+  {
+    "key": "Block number at which the staker was added",
+    "value": "质押者被添加时的区块号"
+  },
+  {
+    "key": "BLS public key",
+    "value": "BLS公钥"
+  },
+  {
+    "key": "Balance",
+    "value": "余额"
+  },
+  {
+    "key": "Validators feature is not enabled.",
+    "value": "验证者功能未启用。"
+  },
+  {
+    "key": "Solidity UML diagram",
+    "value": "Solidity UML图"
+  },
+  {
+    "key": "For contract",
+    "value": "合约的"
+  },
+  {
+    "key": "Click on image to zoom",
+    "value": "点击图像放大"
+  }
+]

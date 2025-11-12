@@ -1,0 +1,355 @@
+{
+  "blocks.common.displays_the_epoch_this_block_": {
+    "defaultMessage": "Displays the epoch this block belongs to before the epoch is finalized",
+    "source": [
+      "ui/block/BlockCeloEpochTag.tsx:24"
+    ]
+  },
+  "blocks.common.displays_the_epoch_finalized_b": {
+    "defaultMessage": "Displays the epoch finalized by this block",
+    "source": [
+      "ui/block/BlockCeloEpochTag.tsx:46"
+    ]
+  },
+  "blocks.common.static_block_reward": {
+    "defaultMessage": "Static block reward",
+    "source": [
+      "ui/block/BlockDetails.tsx:90"
+    ]
+  },
+  "blocks.common.txn_fees": {
+    "defaultMessage": "Txn fees",
+    "source": [
+      "ui/block/BlockDetails.tsx:96"
+    ]
+  },
+  "blocks.common.burnt_fees": {
+    "defaultMessage": "Burnt fees",
+    "source": [
+      "ui/block/BlockDetails.tsx:104",
+      "ui/blocks/BlocksListItem.tsx:126"
+    ]
+  },
+  "blocks.common.uncle": {
+    "defaultMessage": "Uncle",
+    "source": [
+      "ui/block/BlockDetails.tsx:143"
+    ]
+  },
+  "blocks.common.view_previous_block": {
+    "defaultMessage": "View previous block",
+    "source": [
+      "ui/block/BlockDetails.tsx:165"
+    ]
+  },
+  "blocks.common.view_next_block": {
+    "defaultMessage": "View next block",
+    "source": [
+      "ui/block/BlockDetails.tsx:166"
+    ]
+  },
+  "blocks.common.the_most_recent_l1_block_heigh": {
+    "defaultMessage": "The most recent L1 block height as of this L2 block",
+    "source": [
+      "ui/block/BlockDetails.tsx:175"
+    ]
+  },
+  "blocks.common.batch_number": {
+    "defaultMessage": "Batch number",
+    "source": [
+      "ui/block/BlockDetails.tsx:189",
+      "ui/block/BlockDetails.tsx:205",
+      "ui/block/BlockDetails.tsx:283"
+    ]
+  },
+  "blocks.common.size_of_the_block_in_bytes": {
+    "defaultMessage": "Size of the block in bytes",
+    "source": [
+      "ui/block/BlockDetails.tsx:227"
+    ]
+  },
+  "blocks.common.the_number_of_transactions_in_": {
+    "defaultMessage": "The number of transactions in the block",
+    "source": [
+      "ui/block/BlockDetails.tsx:251"
+    ]
+  },
+  "blocks.common.the_number_of_beacon_withdrawa": {
+    "defaultMessage": "The number of beacon withdrawals in the block",
+    "source": [
+      "ui/block/BlockDetails.tsx:265"
+    ]
+  },
+  "blocks.common.status_is_the_short_interpreta": {
+    "defaultMessage": "Status is the short interpretation of the batch lifecycle",
+    "source": [
+      "ui/block/BlockDetails.tsx:300"
+    ]
+  },
+  "blocks.common.a_block_producer_who_successfu": {
+    "defaultMessage": "A block producer who successfully included the block onto the blockchain",
+    "source": [
+      "ui/block/BlockDetails.tsx:323"
+    ]
+  },
+  "blocks.common.l1_transaction_containing_this": {
+    "defaultMessage": "L1 transaction containing this batch commitment",
+    "source": [
+      "ui/block/BlockDetails.tsx:345"
+    ]
+  },
+  "blocks.common.l1_transaction_containing_conf": {
+    "defaultMessage": "L1 transaction containing confirmation of this batch",
+    "source": [
+      "ui/block/BlockDetails.tsx:359"
+    ]
+  },
+  "blocks.common.the_iteration_of_the_consensus": {
+    "defaultMessage": "The iteration of the consensus round in which the block was proposed",
+    "source": [
+      "ui/block/BlockDetails.tsx:412"
+    ]
+  },
+  "blocks.common.the_total_gas_amount_used_in_t": {
+    "defaultMessage": "The total gas amount used in the block and its percentage of gas filled in the block",
+    "source": [
+      "ui/block/BlockDetails.tsx:430"
+    ]
+  },
+  "blocks.common.total_gas_limit_provided_by_al": {
+    "defaultMessage": "Total gas limit provided by all transactions in the block",
+    "source": [
+      "ui/block/BlockDetails.tsx:449"
+    ]
+  },
+  "blocks.common.the_minimum_gas_price_a_transa": {
+    "defaultMessage": "The minimum gas price a transaction should have in order to be included in this block",
+    "source": [
+      "ui/block/BlockDetails.tsx:463"
+    ]
+  },
+  "blocks.common.minimum_fee_required_per_unit_": {
+    "defaultMessage": "Minimum fee required per unit of gas. Fee adjusts based on network congestion",
+    "source": [
+      "ui/block/BlockDetails.tsx:479"
+    ]
+  },
+  "blocks.common.total_difficulty_of_the_chain_": {
+    "defaultMessage": "Total difficulty of the chain until this block",
+    "source": [
+      "ui/block/BlockDetails.tsx:644"
+    ]
+  },
+  "blocks.common.the_sha256_hash_of_the_block": {
+    "defaultMessage": "The SHA256 hash of the block",
+    "source": [
+      "ui/block/BlockDetails.tsx:659"
+    ]
+  },
+  "blocks.common.the_cumulative_number_of_l2_to": {
+    "defaultMessage": "The cumulative number of L2 to L1 transactions as of this block",
+    "source": [
+      "ui/block/BlockDetails.tsx:695"
+    ]
+  },
+  "blocks.common.the_root_of_the_merkle_accumul": {
+    "defaultMessage": "The root of the Merkle accumulator representing all L2 to L1 transactions as of this block",
+    "source": [
+      "ui/block/BlockDetails.tsx:705"
+    ]
+  },
+  "blocks.common.the_number_of_delayed_l1_to_l2": {
+    "defaultMessage": "The number of delayed L1 to L2 messages read as of this block",
+    "source": [
+      "ui/block/BlockDetails.tsx:715"
+    ]
+  },
+  "blocks.common.in_this_block": {
+    "defaultMessage": "in this block",
+    "source": [
+      "ui/block/BlockDetails.tsx:133"
+    ]
+  },
+  "blocks.common._genesis_block": {
+    "defaultMessage": "- Genesis Block",
+    "source": [
+      "ui/block/BlockDetails.tsx:161"
+    ]
+  },
+  "blocks.common.there_are_no_internal_transact": {
+    "defaultMessage": "There are no internal transactions.",
+    "source": [
+      "ui/block/BlockInternalTxs.tsx:32"
+    ]
+  },
+  "blocks.common.green_fund": {
+    "defaultMessage": "Green Fund",
+    "source": [
+      "ui/block/details/BlockDetailsBaseFeeCelo.tsx:53"
+    ]
+  },
+  "blocks.common.actual_amount_of_gas_used_by_t": {
+    "defaultMessage": "Actual amount of gas used by the blobs in this block",
+    "source": [
+      "ui/block/details/BlockDetailsBlobInfo.tsx:54"
+    ]
+  },
+  "blocks.common.a_running_total_of_blob_gas_co": {
+    "defaultMessage": "A running total of blob gas consumed in excess of the target, prior to the block.",
+    "source": [
+      "ui/block/details/BlockDetailsBlobInfo.tsx:86"
+    ]
+  },
+  "blocks.common.aggregate_quorum_certificate": {
+    "defaultMessage": "Aggregate quorum certificate",
+    "source": [
+      "ui/block/details/BlockDetailsZilliqaQuorumCertificate.tsx:43"
+    ]
+  },
+  "blocks.common.quorum_certificate": {
+    "defaultMessage": "Quorum certificate",
+    "source": [
+      "ui/block/details/BlockDetailsZilliqaQuorumCertificate.tsx:43"
+    ]
+  },
+  "blocks.common.view": {
+    "defaultMessage": "View",
+    "source": [
+      "ui/block/details/BlockDetailsZilliqaQuorumCertificate.tsx:52",
+      "ui/block/details/BlockDetailsZilliqaQuorumCertificate.tsx:96"
+    ]
+  },
+  "blocks.common.signature": {
+    "defaultMessage": "Signature",
+    "source": [
+      "ui/block/details/BlockDetailsZilliqaQuorumCertificate.tsx:55",
+      "ui/block/details/BlockDetailsZilliqaQuorumCertificate.tsx:98"
+    ]
+  },
+  "blocks.common.signers": {
+    "defaultMessage": "Signers",
+    "source": [
+      "ui/block/details/BlockDetailsZilliqaQuorumCertificate.tsx:61",
+      "ui/block/details/BlockDetailsZilliqaQuorumCertificate.tsx:103"
+    ]
+  },
+  "blocks.common.nested_quorum_certificates": {
+    "defaultMessage": "Nested quorum certificates",
+    "source": [
+      "ui/block/details/BlockDetailsZilliqaQuorumCertificate.tsx:81"
+    ]
+  },
+  "blocks.common.proposed_by_validator": {
+    "defaultMessage": "Proposed by validator",
+    "source": [
+      "ui/block/details/BlockDetailsZilliqaQuorumCertificate.tsx:105"
+    ]
+  },
+  "blocks.common.there_are_no_blocks": {
+    "defaultMessage": "There are no blocks.",
+    "source": [
+      "ui/blocks/BlocksContent.tsx:139"
+    ]
+  },
+  "blocks.common.block_countdown": {
+    "defaultMessage": "Block countdown",
+    "source": [
+      "ui/blocks/BlocksContent.tsx:129",
+      "ui/blocks/BlocksTabSlot.tsx:48",
+      "ui/optimismSuperchain/blocks/OpSuperchainBlocks.tsx:106"
+    ]
+  },
+  "blocks.common.txn": {
+    "defaultMessage": "Txn",
+    "source": [
+      "ui/blocks/BlocksListItem.tsx:91",
+      "ui/blocks/BlocksTable.tsx:64",
+      "ui/blocks/flashblocks/FlashblocksListItem.tsx:36"
+    ]
+  },
+  "blocks.common.gas_used": {
+    "defaultMessage": "Gas used",
+    "source": [
+      "ui/blocks/BlocksListItem.tsx:103",
+      "ui/blocks/BlocksTable.tsx:65",
+      "ui/blocks/flashblocks/FlashblocksListItem.tsx:49"
+    ]
+  },
+  "blocks.common.base_fee": {
+    "defaultMessage": "Base fee",
+    "source": [
+      "ui/blocks/BlocksListItem.tsx:140",
+      "ui/blocks/BlocksTable.tsx:71"
+    ]
+  },
+  "blocks.common.timestamp": {
+    "defaultMessage": "Timestamp",
+    "source": [
+      "ui/blocks/flashblocks/FlashblocksListItem.tsx:31"
+    ]
+  },
+  "blocks.common.all": {
+    "defaultMessage": "All",
+    "source": [
+      "ui/optimismSuperchain/blocks/OpSuperchainBlocks.tsx:80",
+      "ui/pages/Blocks.tsx:84"
+    ]
+  },
+  "blocks.common.forked": {
+    "defaultMessage": "Forked",
+    "source": [
+      "ui/optimismSuperchain/blocks/OpSuperchainBlocks.tsx:81",
+      "ui/pages/Blocks.tsx:86"
+    ]
+  },
+  "blocks.common.uncles": {
+    "defaultMessage": "Uncles",
+    "source": [
+      "ui/optimismSuperchain/blocks/OpSuperchainBlocks.tsx:82",
+      "ui/pages/Blocks.tsx:87"
+    ]
+  },
+  "blocks.common.blocks": {
+    "defaultMessage": "Blocks",
+    "source": [
+      "ui/optimismSuperchain/blocks/OpSuperchainBlocks.tsx:116",
+      "ui/pages/Blocks.tsx:92"
+    ]
+  },
+  "blocks.common.details": {
+    "defaultMessage": "Details",
+    "source": [
+      "ui/pages/Block.tsx:73"
+    ]
+  },
+  "blocks.common.transactions": {
+    "defaultMessage": "Transactions",
+    "source": [
+      "ui/pages/Block.tsx:86"
+    ]
+  },
+  "blocks.common.internal_txns": {
+    "defaultMessage": "Internal txns",
+    "source": [
+      "ui/pages/Block.tsx:96"
+    ]
+  },
+  "blocks.common.blob_txns": {
+    "defaultMessage": "Blob txns",
+    "source": [
+      "ui/pages/Block.tsx:107"
+    ]
+  },
+  "blocks.common.deposits": {
+    "defaultMessage": "Deposits",
+    "source": [
+      "ui/pages/Block.tsx:115"
+    ]
+  },
+  "blocks.common.withdrawals": {
+    "defaultMessage": "Withdrawals",
+    "source": [
+      "ui/pages/Block.tsx:126"
+    ]
+  }
+}

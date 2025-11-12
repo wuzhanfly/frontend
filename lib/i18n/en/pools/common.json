@@ -1,0 +1,15 @@
+{
+  "pools.common.verify_with": "Verify with",
+  "pools.common.view_in": "View in",
+  "pools.common.pool": "Pool",
+  "pools.common.dex_tracker": "DEX tracker",
+  "pools.common.there_are_no_pools": "There are no pools.",
+  "pools.common.the_base_token_in_a_liquidity_": "The base token in a liquidity pool pair",
+  "pools.common.the_quote_token_in_a_liquidity": "The quote token in a liquidity pool pair",
+  "pools.common.current_market_capitalization_": "Current market capitalization of the base token",
+  "pools.common.current_liquidity_of_the_pool": "Current liquidity of the pool",
+  "pools.common.dex_where_the_pool_is_traded": "DEX where the pool is traded",
+  "pools.common.contract": "Contract",
+  "pools.common.pool_id": "Pool ID",
+  "pools.common.liquidity": "Liquidity"
+}

@@ -1,0 +1,501 @@
+{
+  "marketplace.common.banner": {
+    "defaultMessage": "Banner",
+    "source": [
+      "ui/marketplace/Banner/FeaturedApp.tsx:26",
+      "ui/marketplace/Banner/FeaturedApp.tsx:47",
+      "ui/marketplace/Banner.tsx:19",
+      "ui/marketplace/useMarketplace.tsx:37"
+    ]
+  },
+  "marketplace.common.mark_as_favorite": {
+    "defaultMessage": "Mark as favorite",
+    "source": [
+      "ui/marketplace/Banner/FeaturedApp.tsx:130",
+      "ui/marketplace/Banner/FeaturedApp.tsx:131",
+      "ui/marketplace/Banner/FeaturedAppMobile.tsx:144",
+      "ui/marketplace/Banner/FeaturedAppMobile.tsx:145",
+      "ui/marketplace/MarketplaceAppCard.tsx:173",
+      "ui/marketplace/MarketplaceAppCard.tsx:174",
+      "ui/marketplace/MarketplaceAppModal.tsx:184",
+      "ui/marketplace/MarketplaceAppModal.tsx:185"
+    ]
+  },
+  "marketplace.common.marketplace_banner": {
+    "defaultMessage": "Marketplace banner",
+    "source": [
+      "ui/marketplace/Banner/IframeBanner.tsx:46"
+    ]
+  },
+  "marketplace.common.share_it_with_us": {
+    "defaultMessage": "Share it with us",
+    "source": [
+      "ui/marketplace/EmptySearchResult.tsx:32"
+    ]
+  },
+  "marketplace.common.discovery": {
+    "defaultMessage": "Discovery",
+    "source": [
+      "ui/marketplace/MarketplaceAppCard.tsx:169"
+    ]
+  },
+  "marketplace.common.github": {
+    "defaultMessage": "Github",
+    "source": [
+      "ui/marketplace/MarketplaceAppInfo/Content.tsx:15"
+    ]
+  },
+  "marketplace.common.telegram": {
+    "defaultMessage": "Telegram",
+    "source": [
+      "ui/marketplace/MarketplaceAppInfo/Content.tsx:17"
+    ]
+  },
+  "marketplace.common.discord": {
+    "defaultMessage": "Discord",
+    "source": [
+      "ui/marketplace/MarketplaceAppInfo/Content.tsx:18"
+    ]
+  },
+  "marketplace.common.project_info": {
+    "defaultMessage": "Project info",
+    "source": [
+      "ui/marketplace/MarketplaceAppInfo/Content.tsx:37"
+    ]
+  },
+  "marketplace.common.links": {
+    "defaultMessage": "Links",
+    "source": [
+      "ui/marketplace/MarketplaceAppInfo/Content.tsx:43"
+    ]
+  },
+  "marketplace.common.this_app_opens_in_a_separate_t": {
+    "defaultMessage": "This app opens in a separate tab",
+    "source": [
+      "ui/marketplace/MarketplaceAppIntegrationIcon.tsx:22"
+    ]
+  },
+  "marketplace.common.this_app_opens_in_blockscout_a": {
+    "defaultMessage": "This app opens in Blockscout and your Blockscout wallet connects automatically",
+    "source": [
+      "ui/marketplace/MarketplaceAppIntegrationIcon.tsx:27"
+    ]
+  },
+  "marketplace.common.app_modal": {
+    "defaultMessage": "App modal",
+    "source": [
+      "ui/marketplace/MarketplaceAppModal.tsx:35",
+      "ui/marketplace/MarketplaceAppModal.tsx:98",
+      "ui/marketplace/MarketplaceAppModal.tsx:165",
+      "ui/marketplace/useMarketplace.tsx:37"
+    ]
+  },
+  "marketplace.common.back_to_dapps_list": {
+    "defaultMessage": "Back to dApps list",
+    "source": [
+      "ui/marketplace/MarketplaceAppTopBar.tsx:49"
+    ]
+  },
+  "marketplace.common.app_page": {
+    "defaultMessage": "App page",
+    "source": [
+      "ui/marketplace/MarketplaceAppTopBar.tsx:74"
+    ]
+  },
+  "marketplace.common.discovery_view": {
+    "defaultMessage": "Discovery view",
+    "source": [
+      "ui/marketplace/MarketplaceList.tsx:18",
+      "ui/marketplace/MarketplaceList.tsx:37",
+      "ui/marketplace/useMarketplace.tsx:37"
+    ]
+  },
+  "marketplace.common.very_bad": {
+    "defaultMessage": "Very bad",
+    "source": [
+      "ui/marketplace/Rating/PopoverContent.tsx:13"
+    ]
+  },
+  "marketplace.common.bad": {
+    "defaultMessage": "Bad",
+    "source": [
+      "ui/marketplace/Rating/PopoverContent.tsx:13"
+    ]
+  },
+  "marketplace.common.average": {
+    "defaultMessage": "Average",
+    "source": [
+      "ui/marketplace/Rating/PopoverContent.tsx:13"
+    ]
+  },
+  "marketplace.common.good": {
+    "defaultMessage": "Good",
+    "source": [
+      "ui/marketplace/Rating/PopoverContent.tsx:13"
+    ]
+  },
+  "marketplace.common.excellent": {
+    "defaultMessage": "Excellent",
+    "source": [
+      "ui/marketplace/Rating/PopoverContent.tsx:13"
+    ]
+  },
+  "marketplace.common.awesome_thank_you_": {
+    "defaultMessage": "Awesome! Thank you 💜",
+    "source": [
+      "ui/marketplace/Rating/PopoverContent.tsx:43"
+    ]
+  },
+  "marketplace.common.your_rating_improves_the_servi": {
+    "defaultMessage": "Your rating improves the service",
+    "source": [
+      "ui/marketplace/Rating/PopoverContent.tsx:44"
+    ]
+  },
+  "marketplace.common.ooops_something_went_wrong": {
+    "defaultMessage": "Ooops! Something went wrong",
+    "source": [
+      "ui/marketplace/Rating/PopoverContent.tsx:53"
+    ]
+  },
+  "marketplace.common.please_try_again_later": {
+    "defaultMessage": "Please try again later",
+    "source": [
+      "ui/marketplace/Rating/PopoverContent.tsx:54"
+    ]
+  },
+  "marketplace.common.app_is_already_rated_by_you": {
+    "defaultMessage": "App is already rated by you",
+    "source": [
+      "ui/marketplace/Rating/PopoverContent.tsx:77"
+    ]
+  },
+  "marketplace.common.sending_your_feedback": {
+    "defaultMessage": "Sending your feedback",
+    "source": [
+      "ui/marketplace/Rating/PopoverContent.tsx:65"
+    ]
+  },
+  "marketplace.common.rate_it": {
+    "defaultMessage": "Rate it!",
+    "source": [
+      "ui/marketplace/Rating/TriggerButton.tsx:68"
+    ]
+  },
+  "marketplace.common.please_log_in_to_blockscout_to": {
+    "defaultMessage": "Please log in to Blockscout to rate this DApp.",
+    "source": [
+      "ui/marketplace/Rating/TriggerButton.tsx:21"
+    ]
+  },
+  "marketplace.common.click_here_to_rate": {
+    "defaultMessage": "Click here to rate!",
+    "source": [
+      "ui/marketplace/Rating/TriggerButton.tsx:23"
+    ]
+  },
+  "marketplace.common.swap": {
+    "defaultMessage": "Swap",
+    "source": [
+      "ui/marketplace/essentialDapps/EssentialDappsList.tsx:15"
+    ]
+  },
+  "marketplace.common.swap_tokens": {
+    "defaultMessage": "Swap tokens",
+    "source": [
+      "ui/marketplace/essentialDapps/EssentialDappsList.tsx:17"
+    ]
+  },
+  "marketplace.common.revoke": {
+    "defaultMessage": "Revoke",
+    "source": [
+      "ui/marketplace/essentialDapps/EssentialDappsList.tsx:23"
+    ]
+  },
+  "marketplace.common.view_and_remove_token_approval": {
+    "defaultMessage": "View and remove token approvals",
+    "source": [
+      "ui/marketplace/essentialDapps/EssentialDappsList.tsx:24"
+    ]
+  },
+  "marketplace.common.get_started": {
+    "defaultMessage": "Get started",
+    "source": [
+      "ui/marketplace/essentialDapps/EssentialDappsList.tsx:25"
+    ]
+  },
+  "marketplace.common.multisend": {
+    "defaultMessage": "Multisend",
+    "source": [
+      "ui/marketplace/essentialDapps/EssentialDappsList.tsx:31"
+    ]
+  },
+  "marketplace.common.send_tokens_to_multiple_addres": {
+    "defaultMessage": "Send tokens to multiple addresses at once",
+    "source": [
+      "ui/marketplace/essentialDapps/EssentialDappsList.tsx:32"
+    ]
+  },
+  "marketplace.common.send_tokens": {
+    "defaultMessage": "Send tokens",
+    "source": [
+      "ui/marketplace/essentialDapps/EssentialDappsList.tsx:33"
+    ]
+  },
+  "marketplace.common.essential_dapps": {
+    "defaultMessage": "Essential dapps",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/Revoke.tsx:53",
+      "ui/marketplace/essentialDapps/revoke/hooks/useRevoke.tsx:43",
+      "ui/marketplace/essentialDapps/swap/Swap.tsx:32",
+      "ui/marketplace/essentialDapps/swap/Swap.tsx:119",
+      "ui/pages/Marketplace.tsx:191"
+    ]
+  },
+  "marketplace.common.revoke_essential_dapp": {
+    "defaultMessage": "Revoke essential dapp",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/Revoke.tsx:71"
+    ]
+  },
+  "marketplace.common.click_to_see_your_approvals": {
+    "defaultMessage": "Click to see your approvals",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/Revoke.tsx:178"
+    ]
+  },
+  "marketplace.common.connect_wallet": {
+    "defaultMessage": "Connect wallet",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/Revoke.tsx:203"
+    ]
+  },
+  "marketplace.common.my_wallet": {
+    "defaultMessage": "My wallet",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/Revoke.tsx:177"
+    ]
+  },
+  "marketplace.common.no_approvals_found": {
+    "defaultMessage": "No approvals found",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/Approvals.tsx:57"
+    ]
+  },
+  "marketplace.common.unlimited": {
+    "defaultMessage": "Unlimited",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/ApprovalsListItem.tsx:105",
+      "ui/marketplace/essentialDapps/revoke/components/ApprovalsTableItem.tsx:95",
+      "ui/marketplace/essentialDapps/revoke/hooks/useSearchErc20Allowances.tsx:22",
+      "ui/marketplace/essentialDapps/revoke/hooks/useSearchNftAllowances.tsx:183",
+      "ui/marketplace/essentialDapps/revoke/lib/formatAllowance.ts:5",
+      "ui/marketplace/essentialDapps/revoke/lib/formatAllowance.ts:5"
+    ]
+  },
+  "marketplace.common.token": {
+    "defaultMessage": "Token",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/ApprovalsListItem.tsx:62",
+      "ui/marketplace/essentialDapps/revoke/components/ApprovalsTable.tsx:30"
+    ]
+  },
+  "marketplace.common.approved_spender": {
+    "defaultMessage": "Approved spender",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/ApprovalsListItem.tsx:88",
+      "ui/marketplace/essentialDapps/revoke/components/ApprovalsTable.tsx:31"
+    ]
+  },
+  "marketplace.common.approved_amount": {
+    "defaultMessage": "Approved amount",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/ApprovalsListItem.tsx:99"
+    ]
+  },
+  "marketplace.common.value_at_risk": {
+    "defaultMessage": "Value at risk",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/ApprovalsListItem.tsx:110"
+    ]
+  },
+  "marketplace.common.last_updated": {
+    "defaultMessage": "Last updated",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/ApprovalsListItem.tsx:121"
+    ]
+  },
+  "marketplace.common.select_chain": {
+    "defaultMessage": "Select chain",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/ChainSelect.tsx:30"
+    ]
+  },
+  "marketplace.common.connect_a_wallet_to_revoke_app": {
+    "defaultMessage": "Connect a wallet to revoke approvals",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/Content.tsx:111"
+    ]
+  },
+  "marketplace.common.connected": {
+    "defaultMessage": "Connected",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/Content.tsx:113"
+    ]
+  },
+  "marketplace.common.not_connected": {
+    "defaultMessage": "Not connected",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/Content.tsx:113"
+    ]
+  },
+  "marketplace.common.search_accounts_by_address_or_": {
+    "defaultMessage": "Search accounts by address or domain...",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/SearchInput.tsx:58"
+    ]
+  },
+  "marketplace.common.promise": {
+    "defaultMessage": "Promise",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/SearchInput.tsx:13"
+    ]
+  },
+  "marketplace.common.click_connect_wallet_on_the_to": {
+    "defaultMessage": "Click Connect Wallet on the top right or enter an address in the search bar.",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/StartScreen.tsx:9"
+    ]
+  },
+  "marketplace.common.inspect_your_approvals_by_usin": {
+    "defaultMessage": "Inspect your approvals by using the network selection, sorting and filtering options.",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/StartScreen.tsx:13"
+    ]
+  },
+  "marketplace.common.revoke_the_approvals_that_you_": {
+    "defaultMessage": "Revoke the approvals that you no longer use to prevent unwanted access to your funds.",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/components/StartScreen.tsx:17"
+    ]
+  },
+  "marketplace.common.aborted": {
+    "defaultMessage": "Aborted",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/hooks/useApprovalsQuery.tsx:28",
+      "ui/marketplace/essentialDapps/revoke/hooks/useSearchErc20Allowances.tsx:142",
+      "ui/marketplace/essentialDapps/revoke/hooks/useSearchErc20Allowances.tsx:162",
+      "ui/marketplace/essentialDapps/revoke/hooks/useSearchNftAllowances.tsx:137",
+      "ui/marketplace/essentialDapps/revoke/lib/getLogs.ts:13"
+    ]
+  },
+  "marketplace.common.public_client_not_found": {
+    "defaultMessage": "Public client not found",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/hooks/useApprovalsQuery.tsx:31"
+    ]
+  },
+  "marketplace.common.approval": {
+    "defaultMessage": "Approval",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/hooks/useApprovalsQuery.tsx:37"
+    ]
+  },
+  "marketplace.common.failed_to_revoke_approval": {
+    "defaultMessage": "Failed to revoke approval.",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/hooks/useRevoke.tsx:54"
+    ]
+  },
+  "marketplace.common.approval_revoked_successfully": {
+    "defaultMessage": "Approval revoked successfully.",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/hooks/useRevoke.tsx:59"
+    ]
+  },
+  "marketplace.common.something_went_wrong_try_again": {
+    "defaultMessage": "Something went wrong. Try again later.",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/hooks/useRevoke.tsx:67"
+    ]
+  },
+  "marketplace.common.transfer": {
+    "defaultMessage": "Transfer",
+    "source": [
+      "ui/marketplace/essentialDapps/revoke/hooks/useSearchNftAllowances.tsx:225"
+    ]
+  },
+  "marketplace.common.swap_button": {
+    "defaultMessage": "Swap button",
+    "source": [
+      "ui/marketplace/useAutoConnectWallet.tsx:10"
+    ]
+  },
+  "marketplace.common._array": {
+    "defaultMessage": ", Array",
+    "source": [
+      "ui/marketplace/useMarketplaceApps.tsx:77",
+      "ui/marketplace/useMarketplaceCategories.tsx:17"
+    ]
+  },
+  "marketplace.common.dappscout": {
+    "defaultMessage": "Dappscout",
+    "source": [
+      "ui/marketplace/useMarketplaceWallet.tsx:36"
+    ]
+  },
+  "marketplace.common.send_transaction": {
+    "defaultMessage": "Send Transaction",
+    "source": [
+      "ui/marketplace/useMarketplaceWallet.tsx:53"
+    ]
+  },
+  "marketplace.common.sign_message": {
+    "defaultMessage": "Sign Message",
+    "source": [
+      "ui/marketplace/useMarketplaceWallet.tsx:60"
+    ]
+  },
+  "marketplace.common.default": {
+    "defaultMessage": "Default",
+    "source": [
+      "ui/marketplace/utils.ts:13"
+    ]
+  },
+  "marketplace.common.top_rated": {
+    "defaultMessage": "Top rated",
+    "source": [
+      "ui/marketplace/utils.ts:14"
+    ]
+  },
+  "marketplace.common.most_rated": {
+    "defaultMessage": "Most rated",
+    "source": [
+      "ui/marketplace/utils.ts:15"
+    ]
+  },
+  "marketplace.common.submit_app": {
+    "defaultMessage": "Submit app",
+    "source": [
+      "ui/pages/Marketplace.tsx:41"
+    ]
+  },
+  "marketplace.common.suggest_ideas": {
+    "defaultMessage": "Suggest ideas",
+    "source": [
+      "ui/pages/Marketplace.tsx:48"
+    ]
+  },
+  "marketplace.common.find_app_by_name_or_keyword": {
+    "defaultMessage": "Find app by name or keyword...",
+    "source": [
+      "ui/pages/Marketplace.tsx:228"
+    ]
+  },
+  "marketplace.common.explore_dapps": {
+    "defaultMessage": "Explore dapps",
+    "source": [
+      "ui/pages/Marketplace.tsx:193"
+    ]
+  }
+}

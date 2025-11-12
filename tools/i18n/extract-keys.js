@@ -1,25 +1,27 @@
 #!/usr/bin/env node
 
 /**
- * 键值对提取工具
- * 用于从TypeScript/TSX文件中提取硬编码的字符串文本
+ * 提取国际化内容脚本
+ * 根据文档要求重新创建
  */
 
 const fs = require('fs');
 const path = require('path');
 
-  // 配置
-  const CONFIG = {
-    // 需要处理的目录
-    TARGET_DIRS: [ 'ui', 'pages' ],
+// 配置
+const CONFIG = {
+  // 需要处理的目录
+  TARGET_DIRS: ['ui', 'pages'],
   // 需要排除的目录
-  EXCLUDE_DIRS: [ 'node_modules', '.next', 'dist', '.git', 'public', 'i18n', 'test' ],
+  EXCLUDE_DIRS: ['node_modules', '.next', 'dist', '.git', 'public', 'i18n', 'test'],
   // 文件扩展名
-  FILE_EXTENSIONS: [ '.tsx', '.ts' ],
+  FILE_EXTENSIONS: ['.tsx', '.ts'],
   // 需要排除的文本
   IGNORED_TEXTS: [
     '', ' ', '""', "''", 'null', 'undefined', 'true', 'false', 'id', 'key', 'class', 'className', 'style',
     'src', 'href', 'alt', 'role', 'htmlFor', 'type', 'value', 'children', 'react', 'next',
+    'allow-forms allow-orientation-lock ', 'allow-same-origin allow-scripts ', 
+    'min-content min-content min-content', 'opacity 0.2s'
   ],
   // 需要排除的模式
   EXCLUDE_PATTERNS: [
@@ -54,15 +56,40 @@ const path = require('path');
   ],
   // 命名空间映射
   NAMESPACE_MAPPING: {
-    'addresses': [ 'addresses', 'address' ],
-    'validators': [ 'validators', 'validator' ],
-    'tokens': [ 'tokens', 'token' ],
-    'transactions': [ 'transactions', 'transaction', 'tx' ],
-    'contract': [ 'contract', 'contracts' ],
-    'settings': [ 'settings', 'setting' ],
-    'dashboard': [ 'dashboard' ],
-    'shared': [ 'shared', 'common' ],
-    'form': [ 'form' ]
+    'addresses': ['addresses', 'address', 'addressVerification'],
+    'validators': ['validators', 'validator'],
+    'tokens': ['tokens', 'token', 'tokenInfo', 'tokenInstance'],
+    'transactions': ['transactions', 'transaction', 'tx', 'txnBatches', 'txnWithdrawals'],
+    'contract': ['contract', 'contracts', 'contractVerification'],
+    'settings': ['settings', 'setting'],
+    'dashboard': ['dashboard'],
+    'shared': ['shared', 'common'],
+    'form': ['form'],
+    'blocks': ['blocks', 'block', 'blockCountdown'],
+    'api': ['api', 'apiDocs', 'apiKey'],
+    'account': ['account', 'accounts', 'myProfile', 'privateTags', 'publicTags', 'watchlist'],
+    'search': ['searchResults', 'advancedFilter'],
+    'stats': ['stats', 'gasTracker'],
+    'nft': ['nft', 'tokens', 'tokenTransfers', 'collections'],
+    'staking': ['rewards', 'validators', 'deposits', 'withdrawals'],
+    'governance': ['governance', 'votes', 'proposals'],
+    'messaging': ['messages', 'interopMessages'],
+    'bridge': ['deposits', 'withdrawals', 'operations', 'userOps'],
+    'games': ['games', 'game'],
+    'marketplace': ['marketplace', 'dapps'],
+    'mud': ['mudWorlds', 'mud'],
+    'clusters': ['cluster', 'clusters'],
+    'names': ['nameDomain', 'nameServices'],
+    'pools': ['pools', 'pool'],
+    'blobs': ['blobs', 'blob'],
+    'zeta': ['zetaChain', 'zeta'],
+    'optimism': ['optimismSuperchain', 'op'],
+    'epochs': ['epochs'],
+    'csv': ['csvExport'],
+    'visualize': ['sol2uml', 'visualize'],
+    'dispute': ['disputeGames', 'disputes'],
+    'output': ['outputRoots'],
+    'megaeth': ['megaEth']
   }
 };
 
@@ -70,7 +97,7 @@ const path = require('path');
 const STRING_LITERAL_REGEX = /(["'`])((?!\1\1\1)(?:\1\1(?!.)|[^\\]|\\.)*?)\1/g;
 const JSX_TEXT_REGEX = />([^<>\n]{2,}?)(?=<)/g;
 // 仅提取需要国际化的JSX属性
-const JSX_ATTR_REGEX = /\b(hint|placeholder|title|tooltip|aria-label|alt|label|helperText|emptyText|fallbackText|loadingText|prevLabel|nextLabel|linkText|description|summary|message|error|success|warning|info|caption|text|modal-title)=["']((?:(?!\2).)*)\2/gi;
+const JSX_ATTR_REGEX = /\b(hint|placeholder|title|tooltip|aria-label|alt|label|helperText|emptyText|fallbackText|loadingText|prevLabel|nextLabel|linkText|description|summary|message|error|success|warning|info|caption|text|modal-title)=(["'])((?:(?!\2).)*)\2/gi;
 
 /**
  * 检查文件是否应该被处理
@@ -122,6 +149,16 @@ function isDirectory(filePath) {
 function shouldIgnoreText(text) {
   const trimmed = text.trim();
 
+  // 检查特定的技术性内容
+  if (text.includes('allow-forms allow-orientation-lock') || 
+      text.includes('allow-same-origin allow-scripts') ||
+      text.includes('min-content min-content min-content') ||
+      text.includes('opacity 0.2s') ||
+      (text.includes('"network links-top"') && text.includes('"info links-bottom"') && 
+       text.includes('"recaptcha links-bottom"'))) {
+    return true;
+  }
+
   // 检查长度
   if (trimmed.length < 2 || trimmed.length > 100) return true;
 
@@ -129,23 +166,31 @@ function shouldIgnoreText(text) {
   if (CONFIG.IGNORED_TEXTS.includes(trimmed.toLowerCase())) return true;
 
   // 检查是否匹配排除模式
-    for (const pattern of CONFIG.EXCLUDE_PATTERNS) {
-      if (pattern.test(trimmed)) return true;
-    }
-    
-    // 检查是否为组件属性名称模式（以 _filter, _form, _input, _button, _modal 结尾）
-    if (/\w+_(filter|form|input|button|modal|list|table|chart|graph|panel|dialog|popover|menu|dropdown|select|option|field|container|wrapper|header|footer|sidebar|nav|link|icon|image|avatar|card|grid|row|col|section|layout|container|group|item|element|component)$/.test(trimmed)) {
-      return true;
-    }
+  for (const pattern of CONFIG.EXCLUDE_PATTERNS) {
+    if (pattern.test(trimmed)) return true;
+  }
+  
+  // 检查是否为组件属性名称模式（以 _filter, _form, _input, _button, _modal 结尾）
+  if (/\w+_(filter|form|input|button|modal|list|table|chart|graph|panel|dialog|popover|menu|dropdown|select|option|field|container|wrapper|header|footer|sidebar|nav|link|icon|image|avatar|card|grid|row|col|section|layout|container|group|item|element|component)$/.test(trimmed)) {
+    return true;
+  }
 
   // 检查是否为数字
   if (/^\d+$/.test(trimmed)) return true;
 
   // 检查是否为路径
   if (trimmed.includes('/') || trimmed.includes('\\')) return true;
+  
+  // 检查是否为URL或文件路径
+  if (trimmed.includes('http://') || trimmed.includes('https://') || 
+      trimmed.includes('www.') || trimmed.includes('.js') || 
+      trimmed.includes('.ts') || trimmed.includes('.tsx') || 
+      trimmed.includes('.css')) {
+    return true;
+  }
 
   // 检查是否为CSS相关值
-  const cssValues = [ 'flex', 'block', 'inline', 'grid', 'absolute', 'relative', 'fixed', 'sticky', 'static',
+  const cssValues = ['flex', 'block', 'inline', 'grid', 'absolute', 'relative', 'fixed', 'sticky', 'static',
     'center', 'left', 'right', 'top', 'bottom', '100vh', '100%', '50%', 'px', 'em', 'rem', 'vh', 'vw',
     'primary', 'secondary', 'tertiary', 'success', 'error', 'warning', 'info',
     // 响应式尺寸值
@@ -165,11 +210,28 @@ function shouldIgnoreText(text) {
     // 颜色值
     'transparent', 'currentColor',
     // 尺寸值
-    'fit-content', 'min-content', 'max-content' ];
+    'fit-content', 'min-content', 'max-content'];
   if (cssValues.includes(trimmed.toLowerCase())) return true;
 
   // 检查是否为纯符号
   if (/^[,.;:!?()[\]{}\-_]+$/.test(trimmed)) return true;
+  
+  // 检查是否为操作符或技术符号
+  const technicalSymbols = ['=>', '===', '!==', '>=', '<=', '&&', '||', '...', '??', '?.'];
+  if (technicalSymbols.includes(trimmed)) return true;
+  
+  // 检查是否为大驼峰命名的属性和单词 (如 QueryWithPagesResult, SomeTypeName 等)
+  // 包括可能带有前缀符号的情况
+  const camelCasePattern = /[A-Z][a-zA-Z0-9]*[A-Z][a-zA-Z0-9]*/;
+  if (camelCasePattern.test(trimmed) && 
+      (trimmed.match(camelCasePattern)[0].length >= trimmed.length * 0.5)) {
+    return true;
+  }
+  
+  // 检查是否为CSS选择器模式 (如 &:hover svg, .class-name, #id-name 等)
+  if (/^(&|\.)[a-zA-Z0-9_-]*[:\s.#][a-zA-Z0-9_-]/.test(trimmed)) {
+    return true;
+  }
   
   // 检查是否匹配代码结构模式 - 使用正则表达式
   const codePatterns = [
@@ -269,6 +331,21 @@ function shouldIgnoreText(text) {
     // 冒号分隔的索引模式
     /\b\d+:\d+(:\d+)*\b/,  // 多级索引
 
+    // CSP策略值 (注意可能包含尾随空格)
+    /allow-forms\s+allow-orientation-lock\s*/,
+    /allow-same-origin\s+allow-scripts\s*/,
+
+    // CSS网格值
+    /min-content\s+min-content\s+min-content/,
+
+    // CSS过渡值
+    /opacity\s+\d+\.\d+s/,
+    /opacity\s+\d+s/,
+
+    // CSS网格模板值
+    /[\s\n]*"[a-zA-Z0-9\s-]+\n\s*"[a-zA-Z0-9\s-]+\n\s*"[a-zA-Z0-9\s-]+\n\s*"/,
+    /[\s\n]*"[a-zA-Z0-9\s-]+\n\s*"[a-zA-Z0-9\s-]+\n\s*"[a-zA-Z0-9\s-]+\n\s*"[a-zA-Z0-9\s-]*[\s\n]*/,
+
     // 通用数值模式，如 '40+', '50+' 等
     /\d+\+\b$/,  // 以+结尾的数值
     // 日期格式
@@ -322,6 +399,8 @@ function shouldIgnoreText(text) {
     /^(fit-content|min-content|max-content)$/,
     // CSS 颜色值模式 (如 blue.50)
     /^[a-zA-Z]+\.[0-9]+$/,
+    // CSS 颜色调色板值模式 (如 colors.blue.500, colors.gray.200)
+    /^colors\.[a-zA-Z]+\.[0-9]+$/,
     // CSS 路径值模式 (如 bg.primary, dialog.bg)
     /^[a-zA-Z]+\.[a-zA-Z]+$/,
     // CSS 颜色属性值
@@ -336,8 +415,13 @@ function shouldIgnoreText(text) {
     /^[a-z]+-[a-z]+$/,
     // CSS 尺寸值 (如 0 !important, 24px !important)
     /^\d+(px|em|rem|%|vh|vw|fr)?\s*(!important)?$/,
+    // 多个CSS尺寸值 (如 4px 8px !important)
+    /^\d+(px|em|rem|%|vh|vw|fr)?\s+\d+(px|em|rem|%|vh|vw|fr)?(\s+!important)?$/,
     // CSS flex 值 (如 1 1 auto)
     /^\d+\s+\d+\s+(auto|flex-start|flex-end|center|baseline|stretch)$/,
+    // CSS 单值 (如 0 auto, auto 0)
+    /^\d+\s+auto$/,
+    /^auto\s+\d+$/,
     // CSS 边框值 (如 1px dashed lightpink)
     /^\d+(px|em|rem|%|vh|vw|fr)?\s+(solid|dashed|dotted|double|groove|ridge|inset|outset)\s+[a-zA-Z]+$/,
     // CSS 替换值 (如 $1 $2)
@@ -345,7 +429,7 @@ function shouldIgnoreText(text) {
     // 技术标识符 (如 ERC-1155, EIP-1822)
     /^[A-Z]+-\d+$/,
     // 数字加字母的组合 (如 2d, key0)
-    /^(\w+\d+|\d+\w+)$/,
+    /^([a-zA-Z]+\d+|\d+[a-zA-Z]+)$/, // 修正了正则表达式
     // 单个字母加数字 (如 h2)
     /^[a-z]\d$/,
     // CSS伪类选择器 (如 &:active)
@@ -362,6 +446,8 @@ function shouldIgnoreText(text) {
     /^[a-zA-Z]+\.[a-zA-Z.]+$/,
     // CSS路径值 (如 text_.secondary) - 包含下划线和点的路径
     /^[a-zA-Z]+_\.[a-zA-Z]+$/,
+    // CSS变量 (如 --chakra-colors-black)
+    /^--[a-zA-Z]+-[a-zA-Z-]+$/,
     // CSS样式值 (如 semibold !important, sm !important)
     /^(semibold|bold|normal|light|regular|thin|medium|extrabold|black|hairline|extralight|light|normal|regular|medium|semibold|bold|extrabold|black)\s*!\s*important$/,
     // 响应式/尺寸值 (如 sm !important)
@@ -393,13 +479,31 @@ function shouldIgnoreText(text) {
     // 特定的技术术语
     /^Probation$/,
     // 图标类名 (如 codicon codicon-breadcrumb-separator)
-    /^[a-z]+ [a-z-]+$/,
-
+    /^[a-z]+ [a-z-]+$/
   ];
   
   // 检查是否匹配代码结构模式 - 使用正则表达式
   for (const pattern of codePatterns) {
     if (pattern.test(trimmed)) return true;
+  }
+  
+  // 检查是否为测试描述文本
+  if (trimmed.startsWith('should ') || trimmed.startsWith('it ') || 
+      trimmed.startsWith('describe ') || trimmed.startsWith('test ') ||
+      trimmed.startsWith('expect ')) {
+    return true;
+  }
+  
+  // 检查是否为多行CSS网格模板值
+  if (trimmed.includes('"network links-top"') && trimmed.includes('"info links-bottom"') && 
+      trimmed.includes('"recaptcha links-bottom"')) {
+    return true;
+  }
+  
+  // 检查是否为CSP策略值（带空格）
+  if (trimmed === 'allow-forms allow-orientation-lock ' || 
+      trimmed === 'allow-same-origin allow-scripts ') {
+    return true;
   }
   
   // 检查是否为技术术语
@@ -417,7 +521,19 @@ function shouldIgnoreText(text) {
   // 检查是否为技术短语
   const technicalPhrases = [
     '0x hash', 'address hash', 'base16', 'bech32', 'abi functionality', 'contract abi',
-    'bytecode', 'deployed bytecode', 'contract bytecode', 'source code', 'json api'
+    'bytecode', 'deployed bytecode', 'contract bytecode', 'source code', 'json api',
+    'should cast empty strings', 'should leave the arg if it is an empty array',
+    'should transform all nested empty arrays to empty arrays', 'should transform form data to method args array',
+    'should construct the new url with custom params and hash', 'should convert form data to requests body',
+    'should handle error in custom url parsing', 'should handle error in target url parsing',
+    'should handle url without query and hash', 'should sort transaction by age in ascending order if sorting is not provided',
+    'should sort transactions by fee in descending order', 'should sort transactions by value in descending order',
+    // CSP策略值
+    'allow-forms allow-orientation-lock', 'allow-same-origin allow-scripts',
+    // CSS网格值
+    'min-content min-content min-content',
+    // CSS过渡值
+    'opacity 0.2s'
   ];
   
   for (const phrase of technicalPhrases) {
@@ -534,10 +650,10 @@ function generateTranslationKey(text, context = '', filePath = '') {
   
   // 根据上下文生成不同的键
   if (context) {
-    return `${ namespace }:${ context }.${ cleanText.substring(0, 30) }`;
+    return `${namespace}.${context}.${cleanText.substring(0, 30)}`;
   }
 
-  return `${ namespace }:${ cleanText.substring(0, 30) }`;
+  return `${namespace}.${cleanText.substring(0, 30)}`;
 }
 
 /**
@@ -548,7 +664,7 @@ function extractStringsFromFile(filePath) {
   try {
     content = fs.readFileSync(filePath, 'utf8');
   } catch (error) {
-    console.error(`Error reading file ${ filePath }:`, error.message);
+    console.error(`Error reading file ${filePath}:`, error.message);
     return [];
   }
   
@@ -614,7 +730,7 @@ function extractStringsFromFile(filePath) {
     if (shouldIgnoreText(string)) continue;
 
     // 根据属性类型生成更具体的键
-    const key = generateTranslationKey(string, `form.${ attribute }`, filePath);
+    const key = generateTranslationKey(string, `form.${attribute}`, filePath);
 
     strings.push({
       text: string,
@@ -674,9 +790,9 @@ function walkDirectory(dirPath, callback) {
  */
 function main() {
   const targetPath = process.argv[2] || './';
-  const outputFile = process.argv[3] || './i18n-extracted-keys.json';
+  const outputDir = process.argv[3] || './tools/i18n/extracted';
 
-  console.log(`扫描路径: ${ targetPath }`);
+  console.log(`扫描路径: ${targetPath}`);
 
   const allStrings = [];
   const startTime = Date.now();
@@ -699,7 +815,7 @@ function main() {
     for (const dir of CONFIG.TARGET_DIRS) {
       const dirPath = path.join(targetPath, dir);
       if (isDirectory(dirPath)) {
-        console.log(`扫描目录: ${ dirPath }`);
+        console.log(`扫描目录: ${dirPath}`);
         let fileCount = 0;
         walkDirectory(dirPath, (filePath) => {
           // 确保文件在目标目录中
@@ -727,63 +843,64 @@ function main() {
         });
         console.log(`总共扫描了 ${dir} 目录中的 ${fileCount} 个文件`);
       } else {
-        console.log(`目录不存在: ${ dirPath }`);
+        console.log(`目录不存在: ${dirPath}`);
       }
     }
     console.log(`总共扫描了 ${totalFileCount} 个文件`);
   } else {
-    console.error(`无效路径: ${ targetPath }`);
+    console.error(`无效路径: ${targetPath}`);
     process.exit(1);
   }
 
   const extractionTime = Date.now() - startTime;
   console.log(`提取耗时: ${extractionTime}ms`);
 
-  // 去重并按键排序
-  console.log('去重并排序...');
-  const uniqueStrings = new Map();
-  let totalStrings = 0;
+  // 按模块分组
+  console.log('按模块分组...');
+  const moduleStrings = {};
+  
   allStrings.forEach(fileEntry => {
-    totalStrings += fileEntry.strings.length;
     fileEntry.strings.forEach(str => {
-      if (!uniqueStrings.has(str.key)) {
-        uniqueStrings.set(str.key, {
-          text: str.text,
-          source: str.source,
-          attribute: str.attribute,
-          files: [ fileEntry.file ],
-        });
+      // 确定模块（命名空间）
+      const namespace = str.key.split('.')[0];
+      
+      if (!moduleStrings[namespace]) {
+        moduleStrings[namespace] = {};
+      }
+      
+      // 如果键不存在，则添加
+      if (!moduleStrings[namespace][str.key]) {
+        moduleStrings[namespace][str.key] = {
+          defaultMessage: str.text,
+          source: [fileEntry.file + ':' + str.line]
+        };
       } else {
-        const existing = uniqueStrings.get(str.key);
-        if (!existing.files.includes(fileEntry.file)) {
-          existing.files.push(fileEntry.file);
-        }
+        // 如果键已存在，添加源文件信息
+        moduleStrings[namespace][str.key].source.push(fileEntry.file + ':' + str.line);
       }
     });
   });
 
-  // 转换为数组并排序
-  const result = Array.from(uniqueStrings.entries()).map(([ key, value ]) => ({
-    key: key,
-    text: value.text,
-    source: value.source,
-    attribute: value.attribute,
-    files: value.files,
-  })).sort((a, b) => a.key.localeCompare(b.key));
+  // 创建输出目录
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
 
-  // 输出结果
-  const output = {
-    extractedAt: new Date().toISOString(),
-    totalKeys: result.length,
-    totalStrings: totalStrings,
-    keys: result,
-  };
+  // 生成每个模块的文件
+  let moduleCount = 0;
+  Object.keys(moduleStrings).forEach(module => {
+    const moduleData = moduleStrings[module];
+    const outputPath = path.join(outputDir, `${module}.json`);
+    
+    fs.writeFileSync(outputPath, JSON.stringify(moduleData, null, 2));
+    console.log(`已生成模块文件: ${outputPath}`);
+    moduleCount++;
+  });
 
-  fs.writeFileSync(outputFile, JSON.stringify(output, null, 2));
   const endTime = Date.now();
-  console.log(`提取了 ${ totalStrings } 个字符串，合并为 ${ result.length } 个唯一键`);
+  console.log(`总共生成了 ${moduleCount} 个模块文件`);
   console.log(`总耗时: ${endTime - startTime}ms`);
-  console.log(`结果保存到: ${ outputFile }`);
+  console.log('提取完成！');
 }
 
 // 执行主函数

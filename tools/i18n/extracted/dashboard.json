@@ -1,0 +1,165 @@
+{
+  "dashboard.common.background": {
+    "defaultMessage": "Background",
+    "source": [
+      "ui/rewards/dashboard/RewardsActivityPassCard.tsx:60"
+    ]
+  },
+  "dashboard.common.activity_pass": {
+    "defaultMessage": "Activity pass",
+    "source": [
+      "ui/rewards/dashboard/RewardsActivityPassCard.tsx:69"
+    ]
+  },
+  "dashboard.common.available_soon": {
+    "defaultMessage": "Available soon",
+    "source": [
+      "ui/rewards/dashboard/RewardsDashboardCard.tsx:54"
+    ]
+  },
+  "dashboard.common.streak_badge": {
+    "defaultMessage": "Streak badge",
+    "source": [
+      "ui/rewards/dashboard/streakModal/BadgeCard.tsx:47"
+    ]
+  },
+  "dashboard.common.streak_progress": {
+    "defaultMessage": "Streak progress",
+    "source": [
+      "ui/rewards/dashboard/streakModal/RewardsStreakModal.tsx:26"
+    ]
+  },
+  "dashboard.common.day_streak": {
+    "defaultMessage": "Day streak",
+    "source": [
+      "ui/rewards/dashboard/streakModal/RewardsStreakModal.tsx:44"
+    ]
+  },
+  "dashboard.common.rewards": {
+    "defaultMessage": "Rewards",
+    "source": [
+      "ui/rewards/dashboard/streakModal/RewardsStreakModal.tsx:66"
+    ]
+  },
+  "dashboard.common.blockscout_activity": {
+    "defaultMessage": "Blockscout activity",
+    "source": [
+      "ui/rewards/dashboard/tabs/ActivityTab.tsx:112"
+    ]
+  },
+  "dashboard.common.contracts_verification": {
+    "defaultMessage": "Contracts verification",
+    "source": [
+      "ui/rewards/dashboard/tabs/ActivityTab.tsx:135"
+    ]
+  },
+  "dashboard.common.blockscout_usage": {
+    "defaultMessage": "Blockscout usage",
+    "source": [
+      "ui/rewards/dashboard/tabs/ActivityTab.tsx:152"
+    ]
+  },
+  "dashboard.common.current_merits_period_all_metr": {
+    "defaultMessage": "Current Merits period. All metrics reset weekly",
+    "source": [
+      "ui/rewards/dashboard/tabs/ActivityTab.tsx:169"
+    ]
+  },
+  "dashboard.common.performance_rank": {
+    "defaultMessage": "Performance rank",
+    "source": [
+      "ui/rewards/dashboard/tabs/ActivityTab.tsx:170"
+    ]
+  },
+  "dashboard.common.merits_earned": {
+    "defaultMessage": "Merits earned",
+    "source": [
+      "ui/rewards/dashboard/tabs/ActivityTab.tsx:171"
+    ]
+  },
+  "dashboard.common.estimated_merits_based_on_your": {
+    "defaultMessage": "Estimated Merits based on your current rank. Final amount may change",
+    "source": [
+      "ui/rewards/dashboard/tabs/ActivityTab.tsx:171"
+    ]
+  },
+  "dashboard.common.prev": {
+    "defaultMessage": "prev.",
+    "source": [
+      "ui/rewards/dashboard/tabs/ActivityTab.tsx:314",
+      "ui/rewards/dashboard/tabs/ActivityTab.tsx:340"
+    ]
+  },
+  "dashboard.common.your_activity": {
+    "defaultMessage": "Your activity",
+    "source": [
+      "ui/rewards/dashboard/tabs/ActivityTab.tsx:216"
+    ]
+  },
+  "dashboard.common.your_current_merit_count_is_no": {
+    "defaultMessage": "Your current Merit count is not final!",
+    "source": [
+      "ui/rewards/dashboard/tabs/ActivityTab.tsx:247"
+    ]
+  },
+  "dashboard.common.referral_program": {
+    "defaultMessage": "Referral program",
+    "source": [
+      "ui/rewards/dashboard/tabs/ReferralsTab.tsx:14"
+    ]
+  },
+  "dashboard.common.referral_link": {
+    "defaultMessage": "Referral link",
+    "source": [
+      "ui/rewards/dashboard/tabs/ReferralsTab.tsx:37"
+    ]
+  },
+  "dashboard.common.referral_code": {
+    "defaultMessage": "Referral code",
+    "source": [
+      "ui/rewards/dashboard/tabs/ReferralsTab.tsx:43"
+    ]
+  },
+  "dashboard.common.badges": {
+    "defaultMessage": "Badges",
+    "source": [
+      "ui/rewards/dashboard/tabs/ResourcesTab.tsx:16"
+    ]
+  },
+  "dashboard.common.view_badges": {
+    "defaultMessage": "View badges",
+    "source": [
+      "ui/rewards/dashboard/tabs/ResourcesTab.tsx:22"
+    ]
+  },
+  "dashboard.common.blockscout_campaigns": {
+    "defaultMessage": "Blockscout campaigns",
+    "source": [
+      "ui/rewards/dashboard/tabs/ResourcesTab.tsx:26"
+    ]
+  },
+  "dashboard.common.check_campaigns": {
+    "defaultMessage": "Check campaigns",
+    "source": [
+      "ui/rewards/dashboard/tabs/ResourcesTab.tsx:31"
+    ]
+  },
+  "dashboard.common.use_your_merits": {
+    "defaultMessage": "Use your Merits",
+    "source": [
+      "ui/rewards/dashboard/tabs/ResourcesTab.tsx:35"
+    ]
+  },
+  "dashboard.common.spend_your_merits_to_get_exclu": {
+    "defaultMessage": "Spend your Merits to get exclusive discounts and offers across several web3 products!",
+    "source": [
+      "ui/rewards/dashboard/tabs/ResourcesTab.tsx:36"
+    ]
+  },
+  "dashboard.common.check_offers": {
+    "defaultMessage": "Check offers",
+    "source": [
+      "ui/rewards/dashboard/tabs/ResourcesTab.tsx:40"
+    ]
+  }
+}

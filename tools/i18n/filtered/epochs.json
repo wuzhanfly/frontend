@@ -1,0 +1,153 @@
+{
+  "epochs.common.current_status_of_the_epoch": {
+    "defaultMessage": "Current status of the epoch",
+    "source": [
+      "ui/epochs/EpochDetails.tsx:54"
+    ]
+  },
+  "epochs.common.timestamp_of_the_block_where_t": {
+    "defaultMessage": "Timestamp of the block where the epoch processing completed",
+    "source": [
+      "ui/epochs/EpochDetails.tsx:66"
+    ]
+  },
+  "epochs.common.funds_allocation_to_support_ce": {
+    "defaultMessage": "Funds allocation to support Celo projects and community initiatives",
+    "source": [
+      "ui/epochs/EpochDetails.tsx:87"
+    ]
+  },
+  "epochs.common.funds_allocation_to_support_pr": {
+    "defaultMessage": "Funds allocation to support projects that make Celo carbon-negative",
+    "source": [
+      "ui/epochs/EpochDetails.tsx:104"
+    ]
+  },
+  "epochs.common.sum_of_all_fund_allocations": {
+    "defaultMessage": "Sum of all fund allocations",
+    "source": [
+      "ui/epochs/EpochDetails.tsx:121"
+    ]
+  },
+  "epochs.common.epochs_are_finalized_approxima": {
+    "defaultMessage": "Epochs are finalized approximately once a day",
+    "source": [
+      "ui/epochs/EpochDetails.tsx:74"
+    ]
+  },
+  "epochs.common.block_range": {
+    "defaultMessage": "Block range",
+    "source": [
+      "ui/epochs/EpochsListItem.tsx:49",
+      "ui/epochs/EpochsTable.tsx:27"
+    ]
+  },
+  "epochs.common.community": {
+    "defaultMessage": "Community",
+    "source": [
+      "ui/epochs/EpochsListItem.tsx:56"
+    ]
+  },
+  "epochs.common.carbon_offset": {
+    "defaultMessage": "Carbon offset",
+    "source": [
+      "ui/epochs/EpochsListItem.tsx:64"
+    ]
+  },
+  "epochs.common.total": {
+    "defaultMessage": "Total",
+    "source": [
+      "ui/epochs/EpochsListItem.tsx:72"
+    ]
+  },
+  "epochs.common.status": {
+    "defaultMessage": "Status",
+    "source": [
+      "ui/epochs/EpochsTable.tsx:26"
+    ]
+  },
+  "epochs.common.something_went_wrong_unable_to": {
+    "defaultMessage": "Something went wrong. Unable to load next page.",
+    "source": [
+      "ui/epochs/electionRewards/EpochElectionRewardDetailsDesktop.tsx:93",
+      "ui/epochs/electionRewards/EpochElectionRewardDetailsMobile.tsx:76"
+    ]
+  },
+  "epochs.common.on_behalf_of": {
+    "defaultMessage": "on behalf of",
+    "source": [
+      "ui/epochs/electionRewards/EpochElectionRewardDetailsMobile.tsx:67"
+    ]
+  },
+  "epochs.common.election_rewards": {
+    "defaultMessage": "Election rewards",
+    "source": [
+      "ui/epochs/electionRewards/EpochElectionRewards.tsx:24"
+    ]
+  },
+  "epochs.common.reward_type": {
+    "defaultMessage": "Reward type",
+    "source": [
+      "ui/epochs/electionRewards/EpochElectionRewards.tsx:30"
+    ]
+  },
+  "epochs.common.collapse_section": {
+    "defaultMessage": "Collapse section",
+    "source": [
+      "ui/epochs/electionRewards/EpochElectionRewardsListItem.tsx:45",
+      "ui/epochs/electionRewards/EpochElectionRewardsTableItem.tsx:44"
+    ]
+  },
+  "epochs.common.expand_section": {
+    "defaultMessage": "Expand section",
+    "source": [
+      "ui/epochs/electionRewards/EpochElectionRewardsListItem.tsx:45",
+      "ui/epochs/electionRewards/EpochElectionRewardsTableItem.tsx:44"
+    ]
+  },
+  "epochs.common.beneficiary": {
+    "defaultMessage": "Beneficiary",
+    "source": [
+      "ui/epochs/electionRewards/utils.ts:33"
+    ]
+  },
+  "epochs.common.validator": {
+    "defaultMessage": "Validator",
+    "source": [
+      "ui/epochs/electionRewards/utils.ts:33",
+      "ui/epochs/electionRewards/utils.ts:37"
+    ]
+  },
+  "epochs.common.validator_group": {
+    "defaultMessage": "Validator group",
+    "source": [
+      "ui/epochs/electionRewards/utils.ts:35",
+      "ui/epochs/electionRewards/utils.ts:37",
+      "ui/epochs/electionRewards/utils.ts:39"
+    ]
+  },
+  "epochs.common.associated_validator": {
+    "defaultMessage": "Associated validator",
+    "source": [
+      "ui/epochs/electionRewards/utils.ts:35"
+    ]
+  },
+  "epochs.common.voter": {
+    "defaultMessage": "Voter",
+    "source": [
+      "ui/epochs/electionRewards/utils.ts:39"
+    ]
+  },
+  "epochs.common.epochs": {
+    "defaultMessage": "Epochs",
+    "source": [
+      "ui/pages/Epochs.tsx:63"
+    ]
+  },
+  "epochs.common.there_are_no_epochs": {
+    "defaultMessage": "There are no epochs.",
+    "source": [
+      "ui/pages/Epochs.tsx:67"
+    ]
+  }
+}

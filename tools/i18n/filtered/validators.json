@@ -1,0 +1,173 @@
+{
+  "validators.common.total_validators": {
+    "defaultMessage": "Total validators",
+    "source": [
+      "ui/validators/blackfort/ValidatorsCounters.tsx:24",
+      "ui/validators/stability/ValidatorsCounters.tsx:24"
+    ]
+  },
+  "validators.common.address": {
+    "defaultMessage": "Address",
+    "source": [
+      "ui/validators/blackfort/ValidatorsListItem.tsx:24",
+      "ui/validators/stability/ValidatorsListItem.tsx:20"
+    ]
+  },
+  "validators.common.name": {
+    "defaultMessage": "Name",
+    "source": [
+      "ui/validators/blackfort/ValidatorsListItem.tsx:35",
+      "ui/validators/blackfort/ValidatorsTable.tsx:43"
+    ]
+  },
+  "validators.common.commission": {
+    "defaultMessage": "Commission",
+    "source": [
+      "ui/validators/blackfort/ValidatorsListItem.tsx:42",
+      "ui/validators/blackfort/ValidatorsTable.tsx:44"
+    ]
+  },
+  "validators.common.self_bonded": {
+    "defaultMessage": "Self bonded",
+    "source": [
+      "ui/validators/blackfort/ValidatorsListItem.tsx:49"
+    ]
+  },
+  "validators.common.delegated_amount": {
+    "defaultMessage": "Delegated amount",
+    "source": [
+      "ui/validators/blackfort/ValidatorsListItem.tsx:56"
+    ]
+  },
+  "validators.common.default": {
+    "defaultMessage": "Default",
+    "source": [
+      "ui/validators/blackfort/utils.ts:9",
+      "ui/validators/stability/utils.ts:9"
+    ]
+  },
+  "validators.common.address_descending": {
+    "defaultMessage": "Address descending",
+    "source": [
+      "ui/validators/blackfort/utils.ts:10"
+    ]
+  },
+  "validators.common.address_ascending": {
+    "defaultMessage": "Address ascending",
+    "source": [
+      "ui/validators/blackfort/utils.ts:11"
+    ]
+  },
+  "validators.common.active_validators": {
+    "defaultMessage": "Active validators",
+    "source": [
+      "ui/validators/stability/ValidatorsCounters.tsx:30"
+    ]
+  },
+  "validators.common.all": {
+    "defaultMessage": "All",
+    "source": [
+      "ui/validators/stability/ValidatorsFilter.tsx:9"
+    ]
+  },
+  "validators.common.status": {
+    "defaultMessage": "Status",
+    "source": [
+      "ui/validators/stability/ValidatorsListItem.tsx:29"
+    ]
+  },
+  "validators.common.blocks": {
+    "defaultMessage": "Blocks",
+    "source": [
+      "ui/validators/stability/ValidatorsListItem.tsx:34"
+    ]
+  },
+  "validators.common.validators_address": {
+    "defaultMessage": "Validator’s address",
+    "source": [
+      "ui/validators/stability/ValidatorsTable.tsx:34"
+    ]
+  },
+  "validators.common.status_descending": {
+    "defaultMessage": "Status descending",
+    "source": [
+      "ui/validators/stability/utils.ts:10"
+    ]
+  },
+  "validators.common.status_ascending": {
+    "defaultMessage": "Status ascending",
+    "source": [
+      "ui/validators/stability/utils.ts:11"
+    ]
+  },
+  "validators.common.blocks_validated_descending": {
+    "defaultMessage": "Blocks validated descending",
+    "source": [
+      "ui/validators/stability/utils.ts:12"
+    ]
+  },
+  "validators.common.blocks_validated_ascending": {
+    "defaultMessage": "Blocks validated ascending",
+    "source": [
+      "ui/validators/stability/utils.ts:13"
+    ]
+  },
+  "validators.common.index_of_the_staker_in_the_com": {
+    "defaultMessage": "Index of the staker in the committee",
+    "source": [
+      "ui/validators/zilliqa/ValidatorDetails.tsx:26"
+    ]
+  },
+  "validators.common.stakers_balance": {
+    "defaultMessage": "Staker's balance",
+    "source": [
+      "ui/validators/zilliqa/ValidatorDetails.tsx:38"
+    ]
+  },
+  "validators.common.libp2p_peer_id_corresponding_t": {
+    "defaultMessage": "libp2p peer ID, corresponding to the staker's BLS public key",
+    "source": [
+      "ui/validators/zilliqa/ValidatorDetails.tsx:51"
+    ]
+  },
+  "validators.common.the_address_whose_key_the_vali": {
+    "defaultMessage": "The address whose key the validator uses to sign cross-chain events",
+    "source": [
+      "ui/validators/zilliqa/ValidatorDetails.tsx:86"
+    ]
+  },
+  "validators.common.block_number_at_which_the_stak": {
+    "defaultMessage": "Block number at which the staker was added",
+    "source": [
+      "ui/validators/zilliqa/ValidatorDetails.tsx:96",
+      "ui/validators/zilliqa/ValidatorDetails.tsx:106"
+    ]
+  },
+  "validators.common.bls_public_key": {
+    "defaultMessage": "BLS public key",
+    "source": [
+      "ui/validators/zilliqa/ValidatorsListItem.tsx:21",
+      "ui/validators/zilliqa/ValidatorsTable.tsx:21"
+    ]
+  },
+  "validators.common.index": {
+    "defaultMessage": "Index",
+    "source": [
+      "ui/validators/zilliqa/ValidatorsListItem.tsx:29",
+      "ui/validators/zilliqa/ValidatorsTable.tsx:22"
+    ]
+  },
+  "validators.common.balance": {
+    "defaultMessage": "Balance",
+    "source": [
+      "ui/validators/zilliqa/ValidatorsListItem.tsx:36"
+    ]
+  },
+  "validators.common.validators_feature_is_not_enab": {
+    "defaultMessage": "Validators feature is not enabled.",
+    "source": [
+      "pages/validators/[id].tsx:17",
+      "pages/validators/index.tsx:24"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "totalKeys": 1783,
+  "generatedKeys": 1783,
+  "needsReview": [
+    {
+      "module": "filter-report",
+      "key": "duplicateKeys"
+    },
+    {
+      "module": "filter-report",
+      "key": "emptyMessages"
+    },
+    {
+      "module": "filter-report",
+      "key": "invalidFormat"
+    },
+    {
+      "module": "filter-report",
+      "key": "totalKeys"
+    },
+    {
+      "module": "filter-report",
+      "key": "filteredKeys"
+    }
+  ],
+  "modules": [
+    "account",
+    "addresses",
+    "api",
+    "blobs",
+    "blocks",
+    "bridge",
+    "clusters",
+    "common",
+    "dashboard",
+    "epochs",
+    "filter-report",
+    "games",
+    "marketplace",
+    "messaging",
+    "pools",
+    "settings",
+    "shared",
+    "staking",
+    "stats",
+    "tokens",
+    "transactions",
+    "validators",
+    "visualize"
+  ]
+}

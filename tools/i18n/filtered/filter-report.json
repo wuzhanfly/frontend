@@ -1,0 +1,15 @@
+{
+  "duplicateKeys": [],
+  "emptyMessages": [],
+  "invalidFormat": [
+    {
+      "module": "settings",
+      "key": "settings.common.中文",
+      "source": [
+        "ui/snippets/topBar/settings/SettingsIdentIcon.tsx:61"
+      ]
+    }
+  ],
+  "totalKeys": 1779,
+  "filteredKeys": 1778
+}

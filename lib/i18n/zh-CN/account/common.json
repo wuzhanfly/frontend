@@ -1,0 +1,23 @@
+{
+  "account.common.top_accounts": "顶级账户",
+  "account.common.coming_soon_": "即将推出 🔜",
+  "account.common.there_are_no_accounts": "暂无账户。",
+  "account.common.watch_list": "关注列表",
+  "account.common.email_notifications": "邮件通知",
+  "account.common.save_changes": "保存更改",
+  "account.common.add_address": "添加地址",
+  "account.common.promise": "承诺",
+  "account.common.notification_methods": "通知方式",
+  "account.common.incoming": "接收",
+  "account.common.outgoing": "发送",
+  "account.common.edit_watch_list_address": "编辑关注列表地址",
+  "account.common.new_address_to_watch_list": "新地址添加到关注列表",
+  "account.common.address": "地址",
+  "account.common.will_be_deleted": "将被删除",
+  "account.common.add_email": "添加邮箱",
+  "account.common.there_has_been_an_error_proces": "处理您的请求时出错",
+  "account.common.email_notification_is_on": "邮件通知已开启",
+  "account.common.email_notification_is_off": "邮件通知已关闭",
+  "account.common.email_notification": "邮件通知",
+  "account.common.private_tag": "私有标签"
+}

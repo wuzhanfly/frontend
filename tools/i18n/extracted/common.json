@@ -1,0 +1,5568 @@
+{
+  "common.common.verify_new_address_ownership": {
+    "defaultMessage": "Verify new address ownership",
+    "source": [
+      "ui/addressVerification/AddressVerificationModal.tsx:76"
+    ]
+  },
+  "common.common.copy_and_sign_message": {
+    "defaultMessage": "Copy and sign message",
+    "source": [
+      "ui/addressVerification/AddressVerificationModal.tsx:80"
+    ]
+  },
+  "common.common.congrats_address_is_verified": {
+    "defaultMessage": "Congrats! Address is verified.",
+    "source": [
+      "ui/addressVerification/AddressVerificationModal.tsx:90"
+    ]
+  },
+  "common.common.oops_something_went_wrong": {
+    "defaultMessage": "Oops! Something went wrong",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepAddress.tsx:63",
+      "ui/addressVerification/steps/AddressVerificationStepAddress.tsx:70",
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:121"
+    ]
+  },
+  "common.common.continue": {
+    "defaultMessage": "Continue",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepAddress.tsx:120"
+    ]
+  },
+  "common.common.specified_address_either_does_": {
+    "defaultMessage": "Specified address either does not exist or is EOA.",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepAddress.tsx:80"
+    ]
+  },
+  "common.common.ownership_of_this_contract_add": {
+    "defaultMessage": "Ownership of this contract address is already verified by this account.",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepAddress.tsx:83",
+      "ui/addressVerification/steps/AddressVerificationStepAddress.tsx:86"
+    ]
+  },
+  "common.common.the_contract_source_code_you_e": {
+    "defaultMessage": "The contract source code you entered is not yet verified. Please follow these steps to",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepAddress.tsx:92"
+    ]
+  },
+  "common.common.verify_the_contract": {
+    "defaultMessage": "verify the contract",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepAddress.tsx:93"
+    ]
+  },
+  "common.common.enter_the_contract_address_you": {
+    "defaultMessage": "Enter the contract address you are verifying ownership for.",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepAddress.tsx:110"
+    ]
+  },
+  "common.common.verifying": {
+    "defaultMessage": "Verifying",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:137",
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:148"
+    ]
+  },
+  "common.common.signing": {
+    "defaultMessage": "Signing",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:148"
+    ]
+  },
+  "common.common.sign_and_verify": {
+    "defaultMessage": "Sign and verify",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:150"
+    ]
+  },
+  "common.common.connect_wallet": {
+    "defaultMessage": "Connect wallet",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:150",
+      "ui/snippets/auth/screens/AuthModalScreenSuccessEmail.tsx:51",
+      "ui/snippets/user/profile/UserProfileContentWallet.tsx:80"
+    ]
+  },
+  "common.common.message_to_sign": {
+    "defaultMessage": "Message to sign",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:230"
+    ]
+  },
+  "common.common.textarea": {
+    "defaultMessage": "Textarea",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:232",
+      "ui/contractVerification/fields/ContractVerificationFieldCode.tsx:20",
+      "ui/contractVerification/fields/ContractVerificationFieldConstructorArgs.tsx:18",
+      "ui/customAbi/CustomAbiModal/CustomAbiForm.tsx:130",
+      "ui/pages/Chakra.tsx:71",
+      "ui/publicTags/submit/PublicTagsSubmitForm.tsx:137",
+      "ui/publicTags/submit/fields/PublicTagsSubmitFieldTag.tsx:92",
+      "ui/tokenInfo/TokenInfoForm.tsx:149",
+      "ui/tokenInfo/TokenInfoForm.tsx:183"
+    ]
+  },
+  "common.common.signature_hash": {
+    "defaultMessage": "Signature hash",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:255"
+    ]
+  },
+  "common.common.helpblockscoutcom": {
+    "defaultMessage": "help@blockscout.com",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:155"
+    ]
+  },
+  "common.common.the_signature_could_not_be_pro": {
+    "defaultMessage": "The signature could not be processed.",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:160"
+    ]
+  },
+  "common.common.this_verification_message_has_": {
+    "defaultMessage": "This verification message has expired. Add the contract address to restart the process.",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:163"
+    ]
+  },
+  "common.common.this_address": {
+    "defaultMessage": "This address",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:173"
+    ]
+  },
+  "common.common.can_verify_ownership_of_this_c": {
+    "defaultMessage": "can verify ownership of this contract.",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:177"
+    ]
+  },
+  "common.common.sign_via_web3_wallet": {
+    "defaultMessage": "Sign via Web3 wallet",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:248"
+    ]
+  },
+  "common.common.sign_manually": {
+    "defaultMessage": "Sign manually",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSignature.tsx:249"
+    ]
+  },
+  "common.common.the_address_ownership_for": {
+    "defaultMessage": "The address ownership for",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSuccess.tsx:18"
+    ]
+  },
+  "common.common.is_verified": {
+    "defaultMessage": "is verified.",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSuccess.tsx:20"
+    ]
+  },
+  "common.common.you_may_now_submit_the_add_tok": {
+    "defaultMessage": "You may now submit the “Add token information” request",
+    "source": [
+      "ui/addressVerification/steps/AddressVerificationStepSuccess.tsx:22"
+    ]
+  },
+  "common.common.txn_count": {
+    "defaultMessage": "Txn count",
+    "source": [
+      "ui/addressesLabelSearch/AddressesLabelSearchListItem.tsx:40",
+      "ui/addressesLabelSearch/AddressesLabelSearchTable.tsx:23",
+      "ui/mudWorlds/MudWorldsListItem.tsx:41",
+      "ui/mudWorlds/MudWorldsTable.tsx:23",
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesListItem.tsx:81",
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesTable.tsx:30",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesListItem.tsx:111",
+      "ui/txnBatches/zkEvmL2/ZkEvmTxnBatchesListItem.tsx:53",
+      "ui/txnBatches/zkEvmL2/ZkEvmTxnBatchesTable.tsx:27",
+      "ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesListItem.tsx:53",
+      "ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesTable.tsx:27"
+    ]
+  },
+  "common.common.address": {
+    "defaultMessage": "Address",
+    "source": [
+      "ui/addressesLabelSearch/AddressesLabelSearchTable.tsx:21",
+      "ui/disputeGames/optimisticL2/OptimisticL2DisputeGamesListItem.tsx:35",
+      "ui/disputeGames/optimisticL2/OptimisticL2DisputeGamesTable.tsx:23",
+      "ui/mudWorlds/MudWorldsTable.tsx:21",
+      "ui/nameServices/directories/ClustersDirectoryTable.tsx:23",
+      "ui/nameServices/domains/NameDomainsActionBar.tsx:126",
+      "ui/nameServices/domains/NameDomainsListItem.tsx:33",
+      "ui/nameServices/domains/NameDomainsTable.tsx:25",
+      "ui/pages/PrivateTags.tsx:12",
+      "ui/privateTags/AddressTagTable/AddressTagTable.tsx:22",
+      "ui/showcases/Tag.tsx:95",
+      "ui/snippets/user/profile/UserProfileContent.tsx:97",
+      "ui/verifiedAddresses/VerifiedAddressesListItem.tsx:87",
+      "ui/verifiedAddresses/VerifiedAddressesTable.tsx:22"
+    ]
+  },
+  "common.common.columns": {
+    "defaultMessage": "Columns",
+    "source": [
+      "ui/advancedFilter/ColumnsButton.tsx:34"
+    ]
+  },
+  "common.common.something_went_wrong_try_again": {
+    "defaultMessage": "Something went wrong. Try again later.",
+    "source": [
+      "ui/advancedFilter/ExportCSV.tsx:65",
+      "ui/csvExport/CsvExportForm.tsx:91",
+      "ui/tokenInfo/TokenInfoForm.tsx:90"
+    ]
+  },
+  "common.common.method": {
+    "defaultMessage": "Method",
+    "source": [
+      "ui/advancedFilter/FilterByColumn.tsx:47",
+      "ui/advancedFilter/constants.ts:27",
+      "ui/advancedFilter/filters/MethodFilter.tsx:73",
+      "ui/nameDomain/history/NameDomainHistoryListItem.tsx:59",
+      "ui/nameDomain/history/NameDomainHistoryTable.tsx:37",
+      "ui/optimismSuperchain/crossChainTxs/CrossChainTxsTable.tsx:38",
+      "ui/tokenTransfers/TokenTransfersListItem.tsx:57",
+      "ui/tokenTransfers/TokenTransfersTable.tsx:29",
+      "ui/txs/TxsListItem.tsx:80",
+      "ui/txs/TxsTable.tsx:71"
+    ]
+  },
+  "common.common.age": {
+    "defaultMessage": "Age",
+    "source": [
+      "ui/advancedFilter/FilterByColumn.tsx:60",
+      "ui/advancedFilter/constants.ts:32",
+      "ui/disputeGames/optimisticL2/OptimisticL2DisputeGamesListItem.tsx:52",
+      "ui/nameDomain/history/NameDomainHistoryListItem.tsx:38",
+      "ui/outputRoots/optimisticL2/OptimisticL2OutputRootsListItem.tsx:32",
+      "ui/showcases/Alert.tsx:84",
+      "ui/showcases/Alert.tsx:102",
+      "ui/tokenTransfers/TokenTransfersListItem.tsx:46",
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesListItem.tsx:71",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchesListItem.tsx:43",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesListItem.tsx:66",
+      "ui/txnBatches/zkEvmL2/ZkEvmTxnBatchesListItem.tsx:43",
+      "ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesListItem.tsx:43",
+      "ui/userOps/UserOpsListItem.tsx:37",
+      "ui/zetaChain/cctxs/ZetaChainCCTxsTable.tsx:62",
+      "ui/zetaChain/filters/ZetaChainFilterByColumn.tsx:34",
+      "ui/zetaChain/filters/ZetaChainFilterTags.tsx:31"
+    ]
+  },
+  "common.common.address_from": {
+    "defaultMessage": "Address from",
+    "source": [
+      "ui/advancedFilter/FilterByColumn.tsx:89"
+    ]
+  },
+  "common.common.address_to": {
+    "defaultMessage": "Address to",
+    "source": [
+      "ui/advancedFilter/FilterByColumn.tsx:106"
+    ]
+  },
+  "common.common.amount": {
+    "defaultMessage": "Amount",
+    "source": [
+      "ui/advancedFilter/FilterByColumn.tsx:119",
+      "ui/advancedFilter/constants.ts:52",
+      "ui/advancedFilter/filters/AmountFilter.tsx:78",
+      "ui/tokenTransfers/TokenTransfersListItem.tsx:95",
+      "ui/tokenTransfers/TokenTransfersTable.tsx:33"
+    ]
+  },
+  "common.common.asset": {
+    "defaultMessage": "Asset",
+    "source": [
+      "ui/advancedFilter/FilterByColumn.tsx:146",
+      "ui/advancedFilter/constants.ts:58",
+      "ui/advancedFilter/filters/AssetFilter.tsx:93",
+      "ui/zetaChain/cctxs/ZetaChainCCTXListItem.tsx:57",
+      "ui/zetaChain/cctxs/ZetaChainCCTxsTable.tsx:113",
+      "ui/zetaChain/filters/ZetaChainFilterByColumn.tsx:107",
+      "ui/zetaChain/filters/ZetaChainFilterTags.tsx:124"
+    ]
+  },
+  "common.common.tx_hash": {
+    "defaultMessage": "Tx hash",
+    "source": [
+      "ui/advancedFilter/constants.ts:17",
+      "ui/userOps/UserOpsListItem.tsx:67",
+      "ui/userOps/UserOpsTable.tsx:38"
+    ]
+  },
+  "common.common.from": {
+    "defaultMessage": "From",
+    "source": [
+      "ui/advancedFilter/constants.ts:37",
+      "ui/advancedFilter/filters/AmountFilter.tsx:100",
+      "ui/advancedFilter/filters/BaseAgeFilter.tsx:180",
+      "ui/nameDomain/history/NameDomainHistoryListItem.tsx:50",
+      "ui/nameDomain/history/NameDomainHistoryTable.tsx:36",
+      "ui/tokenTransfers/TokenTransfersListItem.tsx:68"
+    ]
+  },
+  "common.common.to": {
+    "defaultMessage": "To",
+    "source": [
+      "ui/advancedFilter/constants.ts:47",
+      "ui/advancedFilter/filters/AmountFilter.tsx:102",
+      "ui/advancedFilter/filters/BaseAgeFilter.tsx:187",
+      "ui/tokenTransfers/TokenTransfersListItem.tsx:73"
+    ]
+  },
+  "common.common.fee": {
+    "defaultMessage": "Fee",
+    "source": [
+      "ui/advancedFilter/constants.ts:63",
+      "ui/home/LatestTxsItem.tsx:93",
+      "ui/home/LatestTxsItemMobile.tsx:86",
+      "ui/txs/TxsListItem.tsx:126",
+      "ui/txs/TxsTable.tsx:115",
+      "ui/userOps/UserOpsListItem.tsx:91"
+    ]
+  },
+  "common.common.include": {
+    "defaultMessage": "Include",
+    "source": [
+      "ui/advancedFilter/filters/AddressFilter.tsx:24",
+      "ui/advancedFilter/filters/AssetFilter.tsx:30"
+    ]
+  },
+  "common.common.exclude": {
+    "defaultMessage": "Exclude",
+    "source": [
+      "ui/advancedFilter/filters/AddressFilter.tsx:25",
+      "ui/advancedFilter/filters/AssetFilter.tsx:31"
+    ]
+  },
+  "common.common.select_mode": {
+    "defaultMessage": "Select mode",
+    "source": [
+      "ui/advancedFilter/filters/AddressFilter.tsx:63",
+      "ui/advancedFilter/filters/AssetFilter.tsx:113"
+    ]
+  },
+  "common.common.token_name_or_symbol": {
+    "defaultMessage": "Token name or symbol",
+    "source": [
+      "ui/advancedFilter/filters/AssetFilter.tsx:103"
+    ]
+  },
+  "common.common.popular": {
+    "defaultMessage": "Popular",
+    "source": [
+      "ui/advancedFilter/filters/AssetFilter.tsx:125",
+      "ui/zetaChain/filters/ZetaChainAssetFilter.tsx:154"
+    ]
+  },
+  "common.common.no_tokens_found": {
+    "defaultMessage": "No tokens found",
+    "source": [
+      "ui/advancedFilter/filters/AssetFilter.tsx:143",
+      "ui/zetaChain/filters/ZetaChainAssetFilter.tsx:184"
+    ]
+  },
+  "common.common.set_last_duration": {
+    "defaultMessage": "Set last duration",
+    "source": [
+      "ui/advancedFilter/filters/BaseAgeFilter.tsx:160"
+    ]
+  },
+  "common.common.something_went_wrong_please_tr": {
+    "defaultMessage": "Something went wrong. Please try again.",
+    "source": [
+      "ui/advancedFilter/filters/MethodFilter.tsx:87"
+    ]
+  },
+  "common.common.no_results_found": {
+    "defaultMessage": "No results found.",
+    "source": [
+      "ui/advancedFilter/filters/MethodFilter.tsx:88",
+      "ui/snippets/searchBar/SearchBarSuggest/SearchBarSuggest.tsx:175"
+    ]
+  },
+  "common.common.view_examples": {
+    "defaultMessage": "View examples",
+    "source": [
+      "ui/apiDocs/EthRpcApi.tsx:14"
+    ]
+  },
+  "common.common.view_modules": {
+    "defaultMessage": "View modules",
+    "source": [
+      "ui/apiDocs/RpcApi.tsx:13"
+    ]
+  },
+  "common.common.blockscout_core_api": {
+    "defaultMessage": "Blockscout core API",
+    "source": [
+      "ui/apiDocs/utils.ts:24"
+    ]
+  },
+  "common.common.stats_api": {
+    "defaultMessage": "Stats API",
+    "source": [
+      "ui/apiDocs/utils.ts:52"
+    ]
+  },
+  "common.common.name_service_api": {
+    "defaultMessage": "Name service API",
+    "source": [
+      "ui/apiDocs/utils.ts:60"
+    ]
+  },
+  "common.common.user_ops_indexer_api": {
+    "defaultMessage": "User ops indexer API",
+    "source": [
+      "ui/apiDocs/utils.ts:68"
+    ]
+  },
+  "common.common.tac_operation_lifecycle_api": {
+    "defaultMessage": "TAC operation lifecycle API",
+    "source": [
+      "ui/apiDocs/utils.ts:76"
+    ]
+  },
+  "common.common.autogenerated_api_key_token": {
+    "defaultMessage": "Auto-generated API key token",
+    "source": [
+      "ui/apiKey/ApiKeyModal/ApiKeyForm.tsx:99"
+    ]
+  },
+  "common.common.save": {
+    "defaultMessage": "Save",
+    "source": [
+      "ui/apiKey/ApiKeyModal/ApiKeyForm.tsx:120",
+      "ui/customAbi/CustomAbiModal/CustomAbiForm.tsx:142",
+      "ui/showcases/Dialog.tsx:34",
+      "ui/showcases/Dialog.tsx:61",
+      "ui/showcases/Dialog.tsx:85"
+    ]
+  },
+  "common.common.generate_api_key": {
+    "defaultMessage": "Generate API key",
+    "source": [
+      "ui/apiKey/ApiKeyModal/ApiKeyForm.tsx:120"
+    ]
+  },
+  "common.common.edit_api_key": {
+    "defaultMessage": "Edit API key",
+    "source": [
+      "ui/apiKey/ApiKeyModal/ApiKeyModal.tsx:16"
+    ]
+  },
+  "common.common.new_api_key": {
+    "defaultMessage": "New API key",
+    "source": [
+      "ui/apiKey/ApiKeyModal/ApiKeyModal.tsx:16"
+    ]
+  },
+  "common.common.remove_api_key": {
+    "defaultMessage": "Remove API key",
+    "source": [
+      "ui/apiKey/DeleteApiKeyModal.tsx:44"
+    ]
+  },
+  "common.common.api_key_for": {
+    "defaultMessage": "API key for",
+    "source": [
+      "ui/apiKey/DeleteApiKeyModal.tsx:36"
+    ]
+  },
+  "common.common.will_be_deleted": {
+    "defaultMessage": "will be deleted",
+    "source": [
+      "ui/apiKey/DeleteApiKeyModal.tsx:36",
+      "ui/customAbi/DeleteCustomAbiModal.tsx:37",
+      "ui/privateTags/DeletePrivateTagModal.tsx:50"
+    ]
+  },
+  "common.common.days": {
+    "defaultMessage": "Days",
+    "source": [
+      "ui/blockCountdown/BlockCountdownTimer.tsx:45"
+    ]
+  },
+  "common.common.hours": {
+    "defaultMessage": "Hours",
+    "source": [
+      "ui/blockCountdown/BlockCountdownTimer.tsx:46"
+    ]
+  },
+  "common.common.minutes": {
+    "defaultMessage": "Minutes",
+    "source": [
+      "ui/blockCountdown/BlockCountdownTimer.tsx:47"
+    ]
+  },
+  "common.common.seconds": {
+    "defaultMessage": "Seconds",
+    "source": [
+      "ui/blockCountdown/BlockCountdownTimer.tsx:48"
+    ]
+  },
+  "common.common.contract_has_already_been_veri": {
+    "defaultMessage": "Contract has already been verified",
+    "source": [
+      "ui/contractVerification/ContractVerificationForm.tsx:68"
+    ]
+  },
+  "common.common.address_is_not_a_smart_contrac": {
+    "defaultMessage": "Address is not a smart contract",
+    "source": [
+      "ui/contractVerification/ContractVerificationForm.tsx:73"
+    ]
+  },
+  "common.common.something_went_wrong": {
+    "defaultMessage": "Something went wrong",
+    "source": [
+      "ui/contractVerification/ContractVerificationForm.tsx:73",
+      "ui/myProfile/MyProfileEmail.tsx:74",
+      "ui/publicTags/submit/PublicTagsSubmitForm.tsx:82",
+      "ui/showcases/Field.tsx:26",
+      "ui/showcases/Field.tsx:42",
+      "ui/showcases/Field.tsx:60",
+      "ui/showcases/Field.tsx:74",
+      "ui/snippets/auth/screens/AuthModalScreenEmail.tsx:72",
+      "ui/snippets/auth/screens/AuthModalScreenOtpCode.tsx:52",
+      "ui/snippets/auth/screens/AuthModalScreenOtpCode.tsx:66",
+      "ui/snippets/auth/screens/AuthModalScreenOtpCode.tsx:98",
+      "ui/snippets/auth/useSignInWithWallet.ts:133",
+      "ui/snippets/auth/useSignInWithWallet.ts:143",
+      "ui/txnWithdrawals/arbitrumL2/ArbitrumL2TxnWithdrawalsClaimButton.tsx:66"
+    ]
+  },
+  "common.common.contract_is_successfully_verif": {
+    "defaultMessage": "Contract is successfully verified.",
+    "source": [
+      "ui/contractVerification/ContractVerificationForm.tsx:124"
+    ]
+  },
+  "common.common.there_was_an_error_with_socket": {
+    "defaultMessage": "There was an error with socket connection. Try again later.",
+    "source": [
+      "ui/contractVerification/ContractVerificationForm.tsx:145"
+    ]
+  },
+  "common.common.try_to_fetch_constructor_argum": {
+    "defaultMessage": "Try to fetch constructor arguments automatically",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldAutodetectArgs.tsx:25"
+    ]
+  },
+  "common.common.contract_code": {
+    "defaultMessage": "Contract code",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldCode.tsx:19"
+    ]
+  },
+  "common.common.commit_hash_not_found_in_the_r": {
+    "defaultMessage": "Commit hash not found in the repository",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldCommit.tsx:72"
+    ]
+  },
+  "common.common.commit_hash": {
+    "defaultMessage": "Commit hash",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldCommit.tsx:101"
+    ]
+  },
+  "common.common.compiler": {
+    "defaultMessage": "Compiler",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldCompiler.tsx:81"
+    ]
+  },
+  "common.common.the_compiler_version_is_specif": {
+    "defaultMessage": "The compiler version is specified in",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldCompiler.tsx:88"
+    ]
+  },
+  "common.common.pragma_solidity_xxx": {
+    "defaultMessage": "pragma solidity X.X.X",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldCompiler.tsx:89"
+    ]
+  },
+  "common.common.solc_version": {
+    "defaultMessage": "solc —version",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldCompiler.tsx:91"
+    ]
+  },
+  "common.common.to_check": {
+    "defaultMessage": "to check.",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldCompiler.tsx:92"
+    ]
+  },
+  "common.common.abiencoded_constructor_argumen": {
+    "defaultMessage": "ABI-encoded Constructor Arguments",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldConstructorArgs.tsx:17"
+    ]
+  },
+  "common.common.add_arguments_in": {
+    "defaultMessage": "Add arguments in",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldConstructorArgs.tsx:21"
+    ]
+  },
+  "common.common.abi_hex_encoded_form": {
+    "defaultMessage": "ABI hex encoded form",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldConstructorArgs.tsx:22"
+    ]
+  },
+  "common.common.they_may_also_be": {
+    "defaultMessage": "They may also be",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldConstructorArgs.tsx:24"
+    ]
+  },
+  "common.common.contract_name": {
+    "defaultMessage": "Contract name",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldContractIndex.tsx:53",
+      "ui/contractVerification/fields/ContractVerificationFieldName.tsx:20"
+    ]
+  },
+  "common.common.evm_version": {
+    "defaultMessage": "EVM Version",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldEvmVersion.tsx:28"
+    ]
+  },
+  "common.common.github_repository_not_found": {
+    "defaultMessage": "GitHub repository not found",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldGitHubRepo.tsx:49"
+    ]
+  },
+  "common.common.invalid_github_repository_url": {
+    "defaultMessage": "Invalid GitHub repository URL",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldGitHubRepo.tsx:52"
+    ]
+  },
+  "common.common.github_repository_url": {
+    "defaultMessage": "GitHub repository URL",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldGitHubRepo.tsx:75"
+    ]
+  },
+  "common.common.is_yul_contract": {
+    "defaultMessage": "Is Yul contract",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldIsYul.tsx:14"
+    ]
+  },
+  "common.common.verification_through_a_single_": {
+    "defaultMessage": "Verification through a single file.",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:35"
+    ]
+  },
+  "common.common.verification_of_multipart_soli": {
+    "defaultMessage": "Verification of multi-part Solidity files.",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:37"
+    ]
+  },
+  "common.common.verification_through": {
+    "defaultMessage": "Verification through",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:39"
+    ]
+  },
+  "common.common.sourcify": {
+    "defaultMessage": "Sourcify",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:39"
+    ]
+  },
+  "common.common.verification_using": {
+    "defaultMessage": "Verification using",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:43"
+    ]
+  },
+  "common.common.file": {
+    "defaultMessage": "file.",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:51",
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:69"
+    ]
+  },
+  "common.common.verification_of_vyper_contract": {
+    "defaultMessage": "Verification of Vyper contract.",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:55",
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:61"
+    ]
+  },
+  "common.common.verification_of_multipart_vype": {
+    "defaultMessage": "Verification of multi-part Vyper files.",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:57"
+    ]
+  },
+  "common.common.verification_through_hardhat_p": {
+    "defaultMessage": "Verification through Hardhat plugin.",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:73"
+    ]
+  },
+  "common.common.verification_through_foundry": {
+    "defaultMessage": "Verification through Foundry.",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:75"
+    ]
+  },
+  "common.common.verification_of_stylus_contrac": {
+    "defaultMessage": "Verification of Stylus contract via GitHub repository.",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldMethod.tsx:77"
+    ]
+  },
+  "common.common.must_match_the_name_specified_": {
+    "defaultMessage": "Must match the name specified in the code. For example, in",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldName.tsx:25"
+    ]
+  },
+  "common.common.is_the_contract_name": {
+    "defaultMessage": "is the contract name.",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldName.tsx:27"
+    ]
+  },
+  "common.common.optimization_enabled": {
+    "defaultMessage": "Optimization enabled",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldOptimization.tsx:23"
+    ]
+  },
+  "common.common.optimization_runs": {
+    "defaultMessage": "Optimization runs",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldOptimization.tsx:31"
+    ]
+  },
+  "common.common.field_is_required": {
+    "defaultMessage": "Field is required",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldSources.tsx:99"
+    ]
+  },
+  "common.common.file_is_too_big_maximum_size_i": {
+    "defaultMessage": "File is too big. Maximum size is 20 Mb.",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldSources.tsx:150"
+    ]
+  },
+  "common.common.you_can_upload_only_one_file": {
+    "defaultMessage": "You can upload only one file",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldSources.tsx:160"
+    ]
+  },
+  "common.common.zk_compiler": {
+    "defaultMessage": "ZK compiler",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldZkCompiler.tsx:41",
+      "ui/verifiedContracts/VerifiedContractsListItem.tsx:83",
+      "ui/verifiedContracts/VerifiedContractsTableItem.tsx:96"
+    ]
+  },
+  "common.common.compiler_version": {
+    "defaultMessage": "compiler version.",
+    "source": [
+      "ui/contractVerification/fields/ContractVerificationFieldZkCompiler.tsx:47"
+    ]
+  },
+  "common.common.sources_sol_or_yul_files": {
+    "defaultMessage": "Sources *.sol or *.yul files",
+    "source": [
+      "ui/contractVerification/methods/ContractVerificationMultiPartFile.tsx:25"
+    ]
+  },
+  "common.common.upload_all_solidity_or_yul_con": {
+    "defaultMessage": "Upload all Solidity or Yul contract source files.",
+    "source": [
+      "ui/contractVerification/methods/ContractVerificationMultiPartFile.tsx:26"
+    ]
+  },
+  "common.common.contract_verification_via_foun": {
+    "defaultMessage": "Contract verification via Foundry",
+    "source": [
+      "ui/contractVerification/methods/ContractVerificationSolidityFoundry.tsx:26"
+    ]
+  },
+  "common.common.full_tutorial_about_contract_v": {
+    "defaultMessage": "Full tutorial about contract verification via Foundry on Blockscout is available",
+    "source": [
+      "ui/contractVerification/methods/ContractVerificationSolidityFoundry.tsx:32",
+      "ui/contractVerification/methods/ContractVerificationSolidityHardhat.tsx:59"
+    ]
+  },
+  "common.common.contract_verification_via_soli": {
+    "defaultMessage": "Contract verification via Solidity Hardhat plugin",
+    "source": [
+      "ui/contractVerification/methods/ContractVerificationSolidityHardhat.tsx:52"
+    ]
+  },
+  "common.common.sources_and_metadata_json": {
+    "defaultMessage": "Sources and Metadata JSON",
+    "source": [
+      "ui/contractVerification/methods/ContractVerificationSourcify.tsx:16"
+    ]
+  },
+  "common.common.upload_the_standard_input_json": {
+    "defaultMessage": "Upload the standard input JSON file created during contract compilation.",
+    "source": [
+      "ui/contractVerification/methods/ContractVerificationStandardInput.tsx:26",
+      "ui/contractVerification/methods/ContractVerificationVyperStandardInput.tsx:18"
+    ]
+  },
+  "common.common.path_prefix": {
+    "defaultMessage": "Path prefix",
+    "source": [
+      "ui/contractVerification/methods/ContractVerificationStylusGitHubRepo.tsx:26"
+    ]
+  },
+  "common.common.the_contract_name_is_the_name_": {
+    "defaultMessage": "The contract name is the name assigned to the verified contract in Blockscout.",
+    "source": [
+      "ui/contractVerification/methods/ContractVerificationVyperContract.tsx:15"
+    ]
+  },
+  "common.common.add_any": {
+    "defaultMessage": "Add any",
+    "source": [
+      "ui/contractVerification/methods/ContractVerificationVyperMultiPartFile.tsx:19"
+    ]
+  },
+  "common.common.incorrect_date": {
+    "defaultMessage": "Incorrect date",
+    "source": [
+      "ui/csvExport/CsvExportFormField.tsx:22",
+      "ui/csvExport/CsvExportFormField.tsx:30"
+    ]
+  },
+  "common.common.project_name": {
+    "defaultMessage": "Project name",
+    "source": [
+      "ui/customAbi/CustomAbiModal/CustomAbiForm.tsx:118",
+      "ui/tokenInfo/TokenInfoForm.tsx:133"
+    ]
+  },
+  "common.common.create_custom_abi": {
+    "defaultMessage": "Create custom ABI",
+    "source": [
+      "ui/customAbi/CustomAbiModal/CustomAbiForm.tsx:142"
+    ]
+  },
+  "common.common.promise": {
+    "defaultMessage": "Promise",
+    "source": [
+      "ui/customAbi/CustomAbiModal/CustomAbiForm.tsx:25",
+      "ui/customAbi/CustomAbiModal/CustomAbiModal.tsx:12",
+      "ui/privateTags/AddressModal/AddressForm.tsx:20",
+      "ui/privateTags/AddressModal/AddressModal.tsx:13",
+      "ui/privateTags/TransactionModal/TransactionForm.tsx:22",
+      "ui/privateTags/TransactionModal/TransactionModal.tsx:14",
+      "ui/snippets/auth/useSignInWithWallet.ts:44",
+      "ui/snippets/auth/useSignInWithWallet.ts:44"
+    ]
+  },
+  "common.common.edit_custom_abi": {
+    "defaultMessage": "Edit custom ABI",
+    "source": [
+      "ui/customAbi/CustomAbiModal/CustomAbiModal.tsx:17"
+    ]
+  },
+  "common.common.new_custom_abi": {
+    "defaultMessage": "New custom ABI",
+    "source": [
+      "ui/customAbi/CustomAbiModal/CustomAbiModal.tsx:17"
+    ]
+  },
+  "common.common.double_check_the_abi_matches_t": {
+    "defaultMessage": "Double check the ABI matches the contract to prevent errors or incorrect results.",
+    "source": [
+      "ui/customAbi/CustomAbiModal/CustomAbiModal.tsx:18"
+    ]
+  },
+  "common.common.remove_custom_abi": {
+    "defaultMessage": "Remove custom ABI",
+    "source": [
+      "ui/customAbi/DeleteCustomAbiModal.tsx:45"
+    ]
+  },
+  "common.common.custom_abi_for": {
+    "defaultMessage": "Custom ABI for",
+    "source": [
+      "ui/customAbi/DeleteCustomAbiModal.tsx:37"
+    ]
+  },
+  "common.common.index": {
+    "defaultMessage": "Index",
+    "source": [
+      "ui/disputeGames/optimisticL2/OptimisticL2DisputeGamesListItem.tsx:25",
+      "ui/disputeGames/optimisticL2/OptimisticL2DisputeGamesTable.tsx:21"
+    ]
+  },
+  "common.common.game_type": {
+    "defaultMessage": "Game type",
+    "source": [
+      "ui/disputeGames/optimisticL2/OptimisticL2DisputeGamesListItem.tsx:30",
+      "ui/disputeGames/optimisticL2/OptimisticL2DisputeGamesTable.tsx:22"
+    ]
+  },
+  "common.common.l2_block_": {
+    "defaultMessage": "L2 block #",
+    "source": [
+      "ui/disputeGames/optimisticL2/OptimisticL2DisputeGamesListItem.tsx:43",
+      "ui/disputeGames/optimisticL2/OptimisticL2DisputeGamesTable.tsx:24",
+      "ui/outputRoots/optimisticL2/OptimisticL2OutputRootsListItem.tsx:41",
+      "ui/outputRoots/optimisticL2/OptimisticL2OutputRootsTable.tsx:26"
+    ]
+  },
+  "common.common.status": {
+    "defaultMessage": "Status",
+    "source": [
+      "ui/disputeGames/optimisticL2/OptimisticL2DisputeGamesListItem.tsx:61",
+      "ui/disputeGames/optimisticL2/OptimisticL2DisputeGamesTable.tsx:29",
+      "ui/interopMessages/InteropMessagesTable.tsx:27",
+      "ui/nameServices/domains/NameDomainsActionBar.tsx:138",
+      "ui/showcases/Alert.tsx:16",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesListItem.tsx:44",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesTable.tsx:23",
+      "ui/txnBatches/zkEvmL2/ZkEvmTxnBatchesListItem.tsx:38",
+      "ui/txnBatches/zkEvmL2/ZkEvmTxnBatchesTable.tsx:22",
+      "ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesListItem.tsx:38",
+      "ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesTable.tsx:22",
+      "ui/txnWithdrawals/arbitrumL2/ArbitrumL2TxnWithdrawalsListItem.tsx:47",
+      "ui/txnWithdrawals/arbitrumL2/ArbitrumL2TxnWithdrawalsTable.tsx:23",
+      "ui/userOps/UserOpsListItem.tsx:47",
+      "ui/userOps/UserOpsTable.tsx:36",
+      "ui/verifiedAddresses/VerifiedAddressesListItem.tsx:107",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleIn.tsx:73",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:74",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:104",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:146",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:163",
+      "ui/zetaChain/cctxs/ZetaChainCCTxsTable.tsx:76",
+      "ui/zetaChain/filters/ZetaChainFilterByColumn.tsx:47",
+      "ui/zetaChain/filters/ZetaChainFilterTags.tsx:57",
+      "ui/zetaChain/filters/ZetaChainStatusFilter.tsx:71"
+    ]
+  },
+  "common.common.resolution_age": {
+    "defaultMessage": "Resolution age",
+    "source": [
+      "ui/disputeGames/optimisticL2/OptimisticL2DisputeGamesListItem.tsx:68"
+    ]
+  },
+  "common.common.gas_price_history": {
+    "defaultMessage": "Gas price history",
+    "source": [
+      "ui/gasTracker/GasTrackerChart.tsx:64"
+    ]
+  },
+  "common.common.gas_is_the_amount_of_native_to": {
+    "defaultMessage": "Gas is the amount of native tokens required to perform a transaction on the blockchain.",
+    "source": [
+      "ui/gasTracker/GasTrackerFaq.tsx:14"
+    ]
+  },
+  "common.common.network_utilization": {
+    "defaultMessage": "Network utilization",
+    "source": [
+      "ui/gasTracker/GasTrackerNetworkUtilization.tsx:18"
+    ]
+  },
+  "common.common.fast": {
+    "defaultMessage": "Fast",
+    "source": [
+      "ui/gasTracker/GasTrackerPriceSnippet.tsx:20"
+    ]
+  },
+  "common.common.slow": {
+    "defaultMessage": "Slow",
+    "source": [
+      "ui/gasTracker/GasTrackerPriceSnippet.tsx:22"
+    ]
+  },
+  "common.common.no_data_please_reload_the_page": {
+    "defaultMessage": "No data. Please reload the page.",
+    "source": [
+      "ui/home/LatestBlocks.tsx:82",
+      "ui/home/LatestTxs.tsx:32",
+      "ui/home/LatestWatchlistTxs.tsx:26",
+      "ui/home/latestBatches/LatestArbitrumL2Batches.tsx:64",
+      "ui/home/latestBatches/LatestZkEvmL2Batches.tsx:64",
+      "ui/home/latestDeposits/LatestArbitrumDeposits.tsx:53",
+      "ui/home/latestDeposits/LatestOptimisticDeposits.tsx:53",
+      "ui/home/latestZetaChainCCTX/LatestZetaChainCCTXs.tsx:113"
+    ]
+  },
+  "common.common.view_all_blocks": {
+    "defaultMessage": "View all blocks",
+    "source": [
+      "ui/home/LatestBlocks.tsx:101"
+    ]
+  },
+  "common.common.latest_blocks": {
+    "defaultMessage": "Latest blocks",
+    "source": [
+      "ui/home/LatestBlocks.tsx:111"
+    ]
+  },
+  "common.common.txn": {
+    "defaultMessage": "Txn",
+    "source": [
+      "ui/home/LatestBlocksItem.tsx:61",
+      "ui/home/latestBatches/LatestBatchItem.tsx:52",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchesListItem.tsx:70",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchesTable.tsx:29",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesTable.tsx:33"
+    ]
+  },
+  "common.common.reward": {
+    "defaultMessage": "Reward",
+    "source": [
+      "ui/home/LatestBlocksItem.tsx:66"
+    ]
+  },
+  "common.common.view_all_transactions": {
+    "defaultMessage": "View all transactions",
+    "source": [
+      "ui/home/LatestTxs.tsx:61"
+    ]
+  },
+  "common.common.there_are_no_transactions": {
+    "defaultMessage": "There are no transactions.",
+    "source": [
+      "ui/home/LatestWatchlistTxs.tsx:30",
+      "ui/txs/TxsContent.tsx:121"
+    ]
+  },
+  "common.common.view_all_watch_list_transactio": {
+    "defaultMessage": "View all watch list transactions",
+    "source": [
+      "ui/home/LatestWatchlistTxs.tsx:56"
+    ]
+  },
+  "common.common.there_is_no_data": {
+    "defaultMessage": "There is no data",
+    "source": [
+      "ui/home/indicators/ChainIndicators.tsx:91"
+    ]
+  },
+  "common.common.market_cap": {
+    "defaultMessage": "Market cap",
+    "source": [
+      "ui/home/indicators/useChartDataQuery.tsx:31",
+      "ui/home/indicators/utils/indicators.tsx:78"
+    ]
+  },
+  "common.common.daily_transactions": {
+    "defaultMessage": "Daily transactions",
+    "source": [
+      "ui/home/indicators/utils/indicators.tsx:16"
+    ]
+  },
+  "common.common.daily_op_txns": {
+    "defaultMessage": "Daily op txns",
+    "source": [
+      "ui/home/indicators/utils/indicators.tsx:30",
+      "ui/txs/TxsStats.tsx:106",
+      "ui/txs/TxsStats.tsx:116"
+    ]
+  },
+  "common.common.total_value_locked": {
+    "defaultMessage": "Total value locked",
+    "source": [
+      "ui/home/indicators/utils/indicators.tsx:88"
+    ]
+  },
+  "common.common.total_value_of_digital_assets_": {
+    "defaultMessage": "Total value of digital assets locked or staked in a chain",
+    "source": [
+      "ui/home/indicators/utils/indicators.tsx:93"
+    ]
+  },
+  "common.common.view_all_batches": {
+    "defaultMessage": "View all batches",
+    "source": [
+      "ui/home/latestBatches/LatestArbitrumL2Batches.tsx:85",
+      "ui/home/latestBatches/LatestZkEvmL2Batches.tsx:89"
+    ]
+  },
+  "common.common.latest_batches": {
+    "defaultMessage": "Latest batches",
+    "source": [
+      "ui/home/latestBatches/LatestArbitrumL2Batches.tsx:93",
+      "ui/home/latestBatches/LatestZkEvmL2Batches.tsx:97"
+    ]
+  },
+  "common.common.to_be_determined": {
+    "defaultMessage": "To be determined",
+    "source": [
+      "ui/home/latestDeposits/LatestDeposits.tsx:67"
+    ]
+  },
+  "common.common.view_all_deposits": {
+    "defaultMessage": "View all deposits",
+    "source": [
+      "ui/home/latestDeposits/LatestDeposits.tsx:173"
+    ]
+  },
+  "common.common.view_all_cross_chain_transacti": {
+    "defaultMessage": "View all cross chain transactions",
+    "source": [
+      "ui/home/latestZetaChainCCTX/LatestZetaChainCCTXs.tsx:149"
+    ]
+  },
+  "common.common.message_payload": {
+    "defaultMessage": "Message payload",
+    "source": [
+      "ui/interopMessages/InteropMessageAdditionalInfo.tsx:25"
+    ]
+  },
+  "common.common.source_tx": {
+    "defaultMessage": "Source tx",
+    "source": [
+      "ui/interopMessages/InteropMessagesListItem.tsx:35",
+      "ui/interopMessages/InteropMessagesTable.tsx:28",
+      "ui/optimismSuperchain/crossChainTxs/CrossChainTxsTable.tsx:39"
+    ]
+  },
+  "common.common.destination_tx": {
+    "defaultMessage": "Destination tx",
+    "source": [
+      "ui/interopMessages/InteropMessagesListItem.tsx:37",
+      "ui/interopMessages/InteropMessagesTable.tsx:29",
+      "ui/optimismSuperchain/crossChainTxs/CrossChainTxsTable.tsx:40"
+    ]
+  },
+  "common.common.message": {
+    "defaultMessage": "Message",
+    "source": [
+      "ui/interopMessages/InteropMessagesTable.tsx:22",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetails.tsx:311"
+    ]
+  },
+  "common.common.sender": {
+    "defaultMessage": "Sender",
+    "source": [
+      "ui/interopMessages/InteropMessagesTable.tsx:30",
+      "ui/userOps/UserOpsListItem.tsx:54",
+      "ui/userOps/UserOpsTable.tsx:37",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleIn.tsx:80",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:200",
+      "ui/zetaChain/cctxs/ZetaChainCCTXListItem.tsx:43",
+      "ui/zetaChain/cctxs/ZetaChainCCTxsTable.tsx:89",
+      "ui/zetaChain/filters/ZetaChainFilterByColumn.tsx:61",
+      "ui/zetaChain/filters/ZetaChainFilterTags.tsx:67",
+      "ui/zetaChain/filters/ZetaChainSenderFilter.tsx:23"
+    ]
+  },
+  "common.common.uptime": {
+    "defaultMessage": "Uptime",
+    "source": [
+      "ui/megaEth/uptime/Uptime.tsx:17"
+    ]
+  },
+  "common.common.realtime_statistics": {
+    "defaultMessage": "Real-time statistics",
+    "source": [
+      "ui/megaEth/uptime/UptimeCharts.tsx:210"
+    ]
+  },
+  "common.common.current_tps": {
+    "defaultMessage": "Current TPS",
+    "source": [
+      "ui/megaEth/uptime/UptimeStats.tsx:23"
+    ]
+  },
+  "common.common.number_of_transactions_process": {
+    "defaultMessage": "Number of transactions processed per second on the network",
+    "source": [
+      "ui/megaEth/uptime/UptimeStats.tsx:24"
+    ]
+  },
+  "common.common.number_of_computational_gas_co": {
+    "defaultMessage": "Number of computational gas consumed per second on the network",
+    "source": [
+      "ui/megaEth/uptime/UptimeStats.tsx:29"
+    ]
+  },
+  "common.common.block_height": {
+    "defaultMessage": "Block height",
+    "source": [
+      "ui/megaEth/uptime/UptimeStats.tsx:33"
+    ]
+  },
+  "common.common.number_of_blocks_created_since": {
+    "defaultMessage": "Number of blocks created since the genesis block",
+    "source": [
+      "ui/megaEth/uptime/UptimeStats.tsx:34"
+    ]
+  },
+  "common.common.block_time": {
+    "defaultMessage": "Block time",
+    "source": [
+      "ui/megaEth/uptime/UptimeStats.tsx:38"
+    ]
+  },
+  "common.common.time_taken_by_the_sequencer_to": {
+    "defaultMessage": "Time taken by the sequencer to produce a new block",
+    "source": [
+      "ui/megaEth/uptime/UptimeStats.tsx:39"
+    ]
+  },
+  "common.common.refresh": {
+    "defaultMessage": "Refresh",
+    "source": [
+      "ui/megaEth/uptime/UptimeStatus.tsx:36"
+    ]
+  },
+  "common.common.component_unmounted": {
+    "defaultMessage": "Component unmounted",
+    "source": [
+      "ui/megaEth/uptime/useUptimeSocketData.ts:85"
+    ]
+  },
+  "common.common.profile": {
+    "defaultMessage": "Profile",
+    "source": [
+      "ui/myProfile/MyProfileEmail.tsx:28",
+      "ui/pages/MyProfile.tsx:20",
+      "ui/pages/MyProfile.tsx:23",
+      "ui/snippets/auth/screens/AuthModalScreenEmail.tsx:57"
+    ]
+  },
+  "common.common.otp_sent": {
+    "defaultMessage": "OTP sent",
+    "source": [
+      "ui/myProfile/MyProfileEmail.tsx:66",
+      "ui/snippets/auth/screens/AuthModalScreenEmail.tsx:59"
+    ]
+  },
+  "common.common.name": {
+    "defaultMessage": "Name",
+    "source": [
+      "ui/myProfile/MyProfileEmail.tsx:89"
+    ]
+  },
+  "common.common.save_changes": {
+    "defaultMessage": "Save changes",
+    "source": [
+      "ui/myProfile/MyProfileEmail.tsx:103",
+      "ui/privateTags/AddressModal/AddressForm.tsx:106",
+      "ui/privateTags/TransactionModal/TransactionForm.tsx:117"
+    ]
+  },
+  "common.common.notifications": {
+    "defaultMessage": "Notifications",
+    "source": [
+      "ui/myProfile/MyProfileEmail.tsx:83"
+    ]
+  },
+  "common.common.my_linked_wallet": {
+    "defaultMessage": "My linked wallet",
+    "source": [
+      "ui/myProfile/MyProfileWallet.tsx:22"
+    ]
+  },
+  "common.common.link_wallet": {
+    "defaultMessage": "Link wallet",
+    "source": [
+      "ui/myProfile/MyProfileWallet.tsx:42"
+    ]
+  },
+  "common.common.email": {
+    "defaultMessage": "Email",
+    "source": [
+      "ui/myProfile/fields/MyProfileFieldsEmail.tsx:18",
+      "ui/publicTags/submit/PublicTagsSubmitResult.tsx:51",
+      "ui/showcases/Field.tsx:17",
+      "ui/showcases/Field.tsx:33",
+      "ui/showcases/Field.tsx:51",
+      "ui/showcases/Field.tsx:65",
+      "ui/snippets/auth/screens/AuthModalScreenEmail.tsx:65",
+      "ui/snippets/auth/screens/AuthModalScreenEmail.tsx:87",
+      "ui/snippets/user/profile/UserProfileContent.tsx:108"
+    ]
+  },
+  "common.common.the_date_the_name_was_register": {
+    "defaultMessage": "The date the name was registered",
+    "source": [
+      "ui/nameDomain/NameDomainDetails.tsx:42"
+    ]
+  },
+  "common.common.the_resolver_contract_provides": {
+    "defaultMessage": "The resolver contract provides information about a domain name",
+    "source": [
+      "ui/nameDomain/NameDomainDetails.tsx:89"
+    ]
+  },
+  "common.common.the_account_that_owns_the_doma": {
+    "defaultMessage": "The account that owns the domain name and has the rights to edit its ownership and records",
+    "source": [
+      "ui/nameDomain/NameDomainDetails.tsx:107"
+    ]
+  },
+  "common.common.the_account_that_owns_the_righ": {
+    "defaultMessage": "The account that owns the rights to edit the records of this domain name",
+    "source": [
+      "ui/nameDomain/NameDomainDetails.tsx:139"
+    ]
+  },
+  "common.common.owner_of_this_nft_domain_in_na": {
+    "defaultMessage": "Owner of this NFT domain in NameWrapper contract",
+    "source": [
+      "ui/nameDomain/NameDomainDetails.tsx:171"
+    ]
+  },
+  "common.common.other_cryptocurrency_addresses": {
+    "defaultMessage": "Other cryptocurrency addresses added to this domain name",
+    "source": [
+      "ui/nameDomain/NameDomainDetails.tsx:231"
+    ]
+  },
+  "common.common.expired": {
+    "defaultMessage": "Expired",
+    "source": [
+      "ui/nameDomain/NameDomainExpiryStatus.tsx:18",
+      "ui/optimismSuperchain/components/CrossChainTxStatusTag.tsx:21"
+    ]
+  },
+  "common.common.the_domain_name_is_resolved_of": {
+    "defaultMessage": "The domain name is resolved offchain using",
+    "source": [
+      "ui/nameDomain/details/NameDomainDetailsAlert.tsx:20"
+    ]
+  },
+  "common.common.txn_hash": {
+    "defaultMessage": "Txn hash",
+    "source": [
+      "ui/nameDomain/history/NameDomainHistoryListItem.tsx:33",
+      "ui/nameDomain/history/NameDomainHistoryTable.tsx:25",
+      "ui/tokenTransfers/TokenTransfersListItem.tsx:39"
+    ]
+  },
+  "common.common.cluster_name": {
+    "defaultMessage": "Cluster name",
+    "source": [
+      "ui/nameServices/directories/ClustersDirectoryTable.tsx:22",
+      "ui/nameServices/directories/ClustersLeaderboardTable.tsx:21"
+    ]
+  },
+  "common.common.active_chains": {
+    "defaultMessage": "Active chains",
+    "source": [
+      "ui/nameServices/directories/ClustersDirectoryTable.tsx:28",
+      "ui/nameServices/directories/ClustersLeaderboardTable.tsx:24"
+    ]
+  },
+  "common.common.rank": {
+    "defaultMessage": "Rank",
+    "source": [
+      "ui/nameServices/directories/ClustersLeaderboardTable.tsx:20"
+    ]
+  },
+  "common.common.names": {
+    "defaultMessage": "Names",
+    "source": [
+      "ui/nameServices/directories/ClustersLeaderboardTable.tsx:22"
+    ]
+  },
+  "common.common.total_backing": {
+    "defaultMessage": "Total backing",
+    "source": [
+      "ui/nameServices/directories/ClustersLeaderboardTable.tsx:23"
+    ]
+  },
+  "common.common.there_are_no_name_domains": {
+    "defaultMessage": "There are no name domains.",
+    "source": [
+      "ui/nameServices/domains/NameDomains.tsx:235"
+    ]
+  },
+  "common.common.search_by_name_or_address": {
+    "defaultMessage": "Search by name or address",
+    "source": [
+      "ui/nameServices/domains/NameDomainsActionBar.tsx:61"
+    ]
+  },
+  "common.common.protocol": {
+    "defaultMessage": "Protocol",
+    "source": [
+      "ui/nameServices/domains/NameDomainsActionBar.tsx:89"
+    ]
+  },
+  "common.common.domain": {
+    "defaultMessage": "Domain",
+    "source": [
+      "ui/nameServices/domains/NameDomainsListItem.tsx:26",
+      "ui/nameServices/domains/NameDomainsTable.tsx:24"
+    ]
+  },
+  "common.common.registered_on": {
+    "defaultMessage": "Registered on",
+    "source": [
+      "ui/nameServices/domains/NameDomainsListItem.tsx:42"
+    ]
+  },
+  "common.common.expiration_date": {
+    "defaultMessage": "Expiration date",
+    "source": [
+      "ui/nameServices/domains/NameDomainsListItem.tsx:54"
+    ]
+  },
+  "common.common.default": {
+    "defaultMessage": "Default",
+    "source": [
+      "ui/nameServices/domains/utils.ts:10",
+      "ui/showcases/Button.tsx:39",
+      "ui/showcases/Button.tsx:47",
+      "ui/showcases/Button.tsx:55",
+      "ui/showcases/Button.tsx:64",
+      "ui/showcases/Button.tsx:127",
+      "ui/showcases/Button.tsx:163",
+      "ui/showcases/Button.tsx:196",
+      "ui/showcases/Field.tsx:13",
+      "ui/showcases/Link.tsx:149",
+      "ui/showcases/Link.tsx:161",
+      "ui/showcases/Link.tsx:173",
+      "ui/showcases/Link.tsx:184",
+      "ui/showcases/Link.tsx:199",
+      "ui/showcases/Link.tsx:210",
+      "ui/showcases/Link.tsx:47",
+      "ui/showcases/Link.tsx:51",
+      "ui/showcases/Link.tsx:55",
+      "ui/showcases/Link.tsx:59",
+      "ui/showcases/Link.tsx:65",
+      "ui/showcases/Link.tsx:69",
+      "ui/showcases/Tag.tsx:25",
+      "ui/showcases/Tooltip.tsx:16",
+      "ui/showcases/Tooltip.tsx:24",
+      "ui/txs/useTxsSort.tsx:13",
+      "ui/verifiedContracts/utils.ts:6"
+    ]
+  },
+  "common.common.registered_on_descending": {
+    "defaultMessage": "Registered on descending",
+    "source": [
+      "ui/nameServices/domains/utils.ts:11"
+    ]
+  },
+  "common.common.registered_on_ascending": {
+    "defaultMessage": "Registered on ascending",
+    "source": [
+      "ui/nameServices/domains/utils.ts:12"
+    ]
+  },
+  "common.common.the_address_on_the_source_chai": {
+    "defaultMessage": "The address on the source chain that starts a cross‑chain operation",
+    "source": [
+      "ui/operation/tac/TacOperationDetails.tsx:29"
+    ]
+  },
+  "common.common.the_status_of_the_operation": {
+    "defaultMessage": "The status of the operation",
+    "source": [
+      "ui/operation/tac/TacOperationDetails.tsx:45"
+    ]
+  },
+  "common.common.block_time_on_the_source_chain": {
+    "defaultMessage": "Block time on the source chain when a cross‑chain operation is formed and sent",
+    "source": [
+      "ui/operation/tac/TacOperationDetails.tsx:57"
+    ]
+  },
+  "common.common.stages_of_a_crosschain_operati": {
+    "defaultMessage": "Stages of a cross‑chain operation",
+    "source": [
+      "ui/operation/tac/TacOperationDetails.tsx:71"
+    ]
+  },
+  "common.common.failed": {
+    "defaultMessage": "Failed",
+    "source": [
+      "ui/operation/tac/TacOperationLifecycleAccordionItemContent.tsx:41",
+      "ui/optimismSuperchain/components/CrossChainTxStatusTag.tsx:19",
+      "ui/showcases/Badge.tsx:23",
+      "ui/zetaChain/ZetaChainCCTXsTab.tsx:68",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleIn.tsx:76",
+      "ui/zetaChain/filters/ZetaChainStatusFilter.tsx:16",
+      "ui/zetaChain/filters/ZetaChainStatusFilter.tsx:16"
+    ]
+  },
+  "common.common.this_address_is_on_cluster_cha": {
+    "defaultMessage": "This address is on cluster chains",
+    "source": [
+      "ui/optimismSuperchain/components/ClusterChainsPopover.tsx:33",
+      "ui/optimismSuperchain/components/ClusterChainsPopover.tsx:46"
+    ]
+  },
+  "common.common.relayed": {
+    "defaultMessage": "Relayed",
+    "source": [
+      "ui/optimismSuperchain/components/CrossChainTxStatusTag.tsx:17"
+    ]
+  },
+  "common.common.sent": {
+    "defaultMessage": "Sent",
+    "source": [
+      "ui/optimismSuperchain/components/CrossChainTxStatusTag.tsx:23"
+    ]
+  },
+  "common.common.there_are_no_crosschain_transa": {
+    "defaultMessage": "There are no cross-chain transactions.",
+    "source": [
+      "ui/optimismSuperchain/crossChainTxs/CrossChainTxs.tsx:29"
+    ]
+  },
+  "common.common.latest_block": {
+    "defaultMessage": "Latest block",
+    "source": [
+      "ui/optimismSuperchain/home/ChainLatestBlockInfo.tsx:53"
+    ]
+  },
+  "common.common.there_is_no_gray_color_that_su": {
+    "defaultMessage": "there is no gray color that suits well, so we use a custom one",
+    "source": [
+      "ui/optimismSuperchain/home/ChainWidget.tsx:37"
+    ]
+  },
+  "common.common.add_to_wallet": {
+    "defaultMessage": "Add to wallet",
+    "source": [
+      "ui/optimismSuperchain/home/ChainWidget.tsx:49"
+    ]
+  },
+  "common.common.open_explorer": {
+    "defaultMessage": "Open explorer",
+    "source": [
+      "ui/optimismSuperchain/home/ChainWidget.tsx:63"
+    ]
+  },
+  "common.common.chain_id": {
+    "defaultMessage": "Chain ID",
+    "source": [
+      "ui/optimismSuperchain/home/ChainWidget.tsx:84"
+    ]
+  },
+  "common.common.gas_price": {
+    "defaultMessage": "Gas price",
+    "source": [
+      "ui/optimismSuperchain/home/ChainWidget.tsx:91"
+    ]
+  },
+  "common.common.crosschain": {
+    "defaultMessage": "Cross-chain",
+    "source": [
+      "ui/optimismSuperchain/home/LatestTxs.tsx:24",
+      "ui/optimismSuperchain/tokenTransfers/OpSuperchainTokenTransfers.tsx:46",
+      "ui/optimismSuperchain/txs/OpSuperchainTxs.tsx:45"
+    ]
+  },
+  "common.common.local": {
+    "defaultMessage": "Local",
+    "source": [
+      "ui/optimismSuperchain/home/LatestTxs.tsx:29",
+      "ui/optimismSuperchain/tokenTransfers/OpSuperchainTokenTransfers.tsx:51",
+      "ui/optimismSuperchain/txs/OpSuperchainTxs.tsx:50"
+    ]
+  },
+  "common.common.latest_transactions": {
+    "defaultMessage": "Latest transactions",
+    "source": [
+      "ui/optimismSuperchain/home/LatestTxs.tsx:34"
+    ]
+  },
+  "common.common.search_by_transaction_hash": {
+    "defaultMessage": "Search by transaction hash",
+    "source": [
+      "ui/optimismSuperchain/internalTxs/OpSuperchainInternalTxs.tsx:28",
+      "ui/pages/ArbitrumL2TxnWithdrawals.tsx:86",
+      "ui/pages/InternalTxs.tsx:27"
+    ]
+  },
+  "common.common.internal_transactions": {
+    "defaultMessage": "Internal transactions",
+    "source": [
+      "ui/optimismSuperchain/internalTxs/OpSuperchainInternalTxs.tsx:70",
+      "ui/pages/InternalTxs.tsx:62"
+    ]
+  },
+  "common.common.there_are_no_internal_transact": {
+    "defaultMessage": "There are no internal transactions.",
+    "source": [
+      "ui/optimismSuperchain/internalTxs/OpSuperchainInternalTxs.tsx:76",
+      "ui/pages/InternalTxs.tsx:68"
+    ]
+  },
+  "common.common.token_transfers": {
+    "defaultMessage": "Token transfers",
+    "source": [
+      "ui/optimismSuperchain/tokenTransfers/OpSuperchainTokenTransfers.tsx:87",
+      "ui/pages/TokenInstance.tsx:99",
+      "ui/pages/TokenTransfers.tsx:57",
+      "ui/pages/UserOp.tsx:74"
+    ]
+  },
+  "common.common.coming_soon_": {
+    "defaultMessage": "Coming soon 🔜",
+    "source": [
+      "ui/optimismSuperchain/tokenTransfers/OpSuperchainTokenTransfers.tsx:47"
+    ]
+  },
+  "common.common.there_are_no_token_transfers": {
+    "defaultMessage": "There are no token transfers.",
+    "source": [
+      "ui/optimismSuperchain/tokenTransfers/OpSuperchainTokenTransfersLocal.tsx:45",
+      "ui/pages/TokenTransfers.tsx:63"
+    ]
+  },
+  "common.common.transactions": {
+    "defaultMessage": "Transactions",
+    "source": [
+      "ui/optimismSuperchain/txs/OpSuperchainTxs.tsx:72",
+      "ui/pages/ArbitrumL2TxnBatch.tsx:85",
+      "ui/pages/OptimisticL2TxnBatch.tsx:83",
+      "ui/pages/ScrollL2TxnBatch.tsx:90",
+      "ui/pages/TransactionsZetaChain.tsx:141",
+      "ui/pages/ZkEvmL2TxnBatch.tsx:48",
+      "ui/pages/ZkSyncL2TxnBatch.tsx:67",
+      "ui/txs/TxsStats.tsx:95"
+    ]
+  },
+  "common.common.blob_txns": {
+    "defaultMessage": "Blob txns",
+    "source": [
+      "ui/optimismSuperchain/txs/OpSuperchainTxsLocal.tsx:106",
+      "ui/pages/TransactionsZetaChain.tsx:116"
+    ]
+  },
+  "common.common.user_operations": {
+    "defaultMessage": "User operations",
+    "source": [
+      "ui/optimismSuperchain/userOps/OpSuperchainUserOps.tsx:71",
+      "ui/pages/UserOps.tsx:24"
+    ]
+  },
+  "common.common.there_are_no_user_operations": {
+    "defaultMessage": "There are no user operations.",
+    "source": [
+      "ui/optimismSuperchain/userOps/OpSuperchainUserOps.tsx:77",
+      "ui/userOps/UserOpsContent.tsx:59"
+    ]
+  },
+  "common.common.search_by_contract_name_or_add": {
+    "defaultMessage": "Search by contract name or address",
+    "source": [
+      "ui/optimismSuperchain/verifiedContracts/OpSuperchainVerifiedContracts.tsx:44",
+      "ui/pages/VerifiedContracts.tsx:43"
+    ]
+  },
+  "common.common.verified_contracts": {
+    "defaultMessage": "Verified contracts",
+    "source": [
+      "ui/optimismSuperchain/verifiedContracts/OpSuperchainVerifiedContracts.tsx:92",
+      "ui/pages/VerifiedContracts.tsx:91",
+      "ui/verifiedContracts/VerifiedContractsCounters.tsx:54"
+    ]
+  },
+  "common.common.there_are_no_verified_contract": {
+    "defaultMessage": "There are no verified contracts.",
+    "source": [
+      "ui/optimismSuperchain/verifiedContracts/OpSuperchainVerifiedContracts.tsx:105",
+      "ui/pages/VerifiedContracts.tsx:98"
+    ]
+  },
+  "common.common.l2_output_index": {
+    "defaultMessage": "L2 output index",
+    "source": [
+      "ui/outputRoots/optimisticL2/OptimisticL2OutputRootsListItem.tsx:27",
+      "ui/outputRoots/optimisticL2/OptimisticL2OutputRootsTable.tsx:21"
+    ]
+  },
+  "common.common.l1_txn_hash": {
+    "defaultMessage": "L1 txn hash",
+    "source": [
+      "ui/outputRoots/optimisticL2/OptimisticL2OutputRootsListItem.tsx:50",
+      "ui/outputRoots/optimisticL2/OptimisticL2OutputRootsTable.tsx:27",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchBlobCelestia.tsx:41",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchBlobEip4844.tsx:31"
+    ]
+  },
+  "common.common.output_root": {
+    "defaultMessage": "Output root",
+    "source": [
+      "ui/outputRoots/optimisticL2/OptimisticL2OutputRootsListItem.tsx:60",
+      "ui/outputRoots/optimisticL2/OptimisticL2OutputRootsTable.tsx:28"
+    ]
+  },
+  "common.common.search_result": {
+    "defaultMessage": "Search result",
+    "source": [
+      "ui/pages/AccountsLabelSearch.tsx:99",
+      "ui/pages/SearchResults.tsx:190"
+    ]
+  },
+  "common.common.eth_rpc_api": {
+    "defaultMessage": "ETH RPC API",
+    "source": [
+      "ui/pages/ApiDocs.tsx:20"
+    ]
+  },
+  "common.common.rpc_api_endpoints": {
+    "defaultMessage": "RPC API endpoints",
+    "source": [
+      "ui/pages/ApiDocs.tsx:21"
+    ]
+  },
+  "common.common.api_documentation": {
+    "defaultMessage": "API documentation",
+    "source": [
+      "ui/pages/ApiDocs.tsx:28"
+    ]
+  },
+  "common.common.no_api_documentation_available": {
+    "defaultMessage": "No API documentation available",
+    "source": [
+      "ui/pages/ApiDocs.tsx:30"
+    ]
+  },
+  "common.common.how_to_use_a_blockscout_api_ke": {
+    "defaultMessage": "How to use a Blockscout API key",
+    "source": [
+      "ui/pages/ApiKeys.tsx:61",
+      "ui/pages/ApiKeys.tsx:61"
+    ]
+  },
+  "common.common.api_keys": {
+    "defaultMessage": "API keys",
+    "source": [
+      "ui/pages/ApiKeys.tsx:130",
+      "ui/snippets/user/profile/UserProfileContent.tsx:39"
+    ]
+  },
+  "common.common.details": {
+    "defaultMessage": "Details",
+    "source": [
+      "ui/pages/ArbitrumL2TxnBatch.tsx:82",
+      "ui/pages/NameDomain.tsx:37",
+      "ui/pages/OptimisticL2TxnBatch.tsx:80",
+      "ui/pages/ScrollL2TxnBatch.tsx:87",
+      "ui/pages/UserOp.tsx:71",
+      "ui/pages/ZkEvmL2TxnBatch.tsx:47",
+      "ui/pages/ZkSyncL2TxnBatch.tsx:64"
+    ]
+  },
+  "common.common.blocks": {
+    "defaultMessage": "Blocks",
+    "source": [
+      "ui/pages/ArbitrumL2TxnBatch.tsx:90",
+      "ui/pages/OptimisticL2TxnBatch.tsx:88",
+      "ui/pages/ScrollL2TxnBatch.tsx:95",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesTable.tsx:32"
+    ]
+  },
+  "common.common.txn_batches": {
+    "defaultMessage": "Txn batches",
+    "source": [
+      "ui/pages/ArbitrumL2TxnBatches.tsx:75",
+      "ui/pages/OptimisticL2TxnBatches.tsx:75",
+      "ui/pages/ScrollL2TxnBatches.tsx:75",
+      "ui/pages/ZkEvmL2TxnBatches.tsx:75",
+      "ui/pages/ZkSyncL2TxnBatches.tsx:75"
+    ]
+  },
+  "common.common.there_are_no_txn_batches": {
+    "defaultMessage": "There are no txn batches.",
+    "source": [
+      "ui/pages/ArbitrumL2TxnBatches.tsx:79",
+      "ui/pages/OptimisticL2TxnBatches.tsx:79",
+      "ui/pages/ScrollL2TxnBatches.tsx:79",
+      "ui/pages/ZkEvmL2TxnBatches.tsx:79",
+      "ui/pages/ZkSyncL2TxnBatches.tsx:79"
+    ]
+  },
+  "common.common.invalid_transaction_hash": {
+    "defaultMessage": "Invalid transaction hash",
+    "source": [
+      "ui/pages/ArbitrumL2TxnWithdrawals.tsx:53"
+    ]
+  },
+  "common.common.transaction_withdrawals": {
+    "defaultMessage": "Transaction withdrawals",
+    "source": [
+      "ui/pages/ArbitrumL2TxnWithdrawals.tsx:78"
+    ]
+  },
+  "common.common.deposits": {
+    "defaultMessage": "Deposits",
+    "source": [
+      "ui/pages/BeaconChainDeposits.tsx:83"
+    ]
+  },
+  "common.common.there_are_no_deposits": {
+    "defaultMessage": "There are no deposits.",
+    "source": [
+      "ui/pages/BeaconChainDeposits.tsx:89",
+      "ui/pages/OptimisticL2Deposits.tsx:78",
+      "ui/pages/ScrollL2Deposits.tsx:75",
+      "ui/pages/ShibariumDeposits.tsx:80",
+      "ui/pages/ZkEvmL2Deposits.tsx:75"
+    ]
+  },
+  "common.common.withdrawals": {
+    "defaultMessage": "Withdrawals",
+    "source": [
+      "ui/pages/BeaconChainWithdrawals.tsx:87"
+    ]
+  },
+  "common.common.there_are_no_withdrawals": {
+    "defaultMessage": "There are no withdrawals.",
+    "source": [
+      "ui/pages/BeaconChainWithdrawals.tsx:93",
+      "ui/pages/OptimisticL2Withdrawals.tsx:80",
+      "ui/pages/ScrollL2Withdrawals.tsx:75",
+      "ui/pages/ShibariumWithdrawals.tsx:77",
+      "ui/pages/ZkEvmL2Withdrawals.tsx:75"
+    ]
+  },
+  "common.common.google_calendar_logo": {
+    "defaultMessage": "Google calendar logo",
+    "source": [
+      "ui/pages/BlockCountdown.tsx:94"
+    ]
+  },
+  "common.common.apple_calendar_logo": {
+    "defaultMessage": "Apple calendar logo",
+    "source": [
+      "ui/pages/BlockCountdown.tsx:108"
+    ]
+  },
+  "common.common.remaining_blocks": {
+    "defaultMessage": "Remaining blocks",
+    "source": [
+      "ui/pages/BlockCountdown.tsx:140"
+    ]
+  },
+  "common.common.current_block": {
+    "defaultMessage": "Current block",
+    "source": [
+      "ui/pages/BlockCountdown.tsx:141"
+    ]
+  },
+  "common.common.estimated_target_date": {
+    "defaultMessage": "Estimated target date",
+    "source": [
+      "ui/pages/BlockCountdown.tsx:82"
+    ]
+  },
+  "common.common.google": {
+    "defaultMessage": "Google",
+    "source": [
+      "ui/pages/BlockCountdown.tsx:95"
+    ]
+  },
+  "common.common.apple": {
+    "defaultMessage": "Apple",
+    "source": [
+      "ui/pages/BlockCountdown.tsx:109"
+    ]
+  },
+  "common.common.search_by_block_number": {
+    "defaultMessage": "Search by block number",
+    "source": [
+      "ui/pages/BlockCountdownIndex.tsx:64"
+    ]
+  },
+  "common.common.accordion": {
+    "defaultMessage": "Accordion",
+    "source": [
+      "ui/pages/Chakra.tsx:42"
+    ]
+  },
+  "common.common.alert": {
+    "defaultMessage": "Alert",
+    "source": [
+      "ui/pages/Chakra.tsx:43"
+    ]
+  },
+  "common.common.badge": {
+    "defaultMessage": "Badge",
+    "source": [
+      "ui/pages/Chakra.tsx:44"
+    ]
+  },
+  "common.common.checkbox": {
+    "defaultMessage": "Checkbox",
+    "source": [
+      "ui/pages/Chakra.tsx:46"
+    ]
+  },
+  "common.common.clipboard": {
+    "defaultMessage": "Clipboard",
+    "source": [
+      "ui/pages/Chakra.tsx:47"
+    ]
+  },
+  "common.common.close_button": {
+    "defaultMessage": "Close button",
+    "source": [
+      "ui/pages/Chakra.tsx:48"
+    ]
+  },
+  "common.common.collapsible": {
+    "defaultMessage": "Collapsible",
+    "source": [
+      "ui/pages/Chakra.tsx:49"
+    ]
+  },
+  "common.common.content_loader": {
+    "defaultMessage": "Content loader",
+    "source": [
+      "ui/pages/Chakra.tsx:50"
+    ]
+  },
+  "common.common.dialog": {
+    "defaultMessage": "Dialog",
+    "source": [
+      "ui/pages/Chakra.tsx:51"
+    ]
+  },
+  "common.common.icon_button": {
+    "defaultMessage": "Icon button",
+    "source": [
+      "ui/pages/Chakra.tsx:52"
+    ]
+  },
+  "common.common.input": {
+    "defaultMessage": "Input",
+    "source": [
+      "ui/pages/Chakra.tsx:53"
+    ]
+  },
+  "common.common.field": {
+    "defaultMessage": "Field",
+    "source": [
+      "ui/pages/Chakra.tsx:54"
+    ]
+  },
+  "common.common.link": {
+    "defaultMessage": "Link",
+    "source": [
+      "ui/pages/Chakra.tsx:55"
+    ]
+  },
+  "common.common.menu": {
+    "defaultMessage": "Menu",
+    "source": [
+      "ui/pages/Chakra.tsx:56"
+    ]
+  },
+  "common.common.pagination": {
+    "defaultMessage": "Pagination",
+    "source": [
+      "ui/pages/Chakra.tsx:57"
+    ]
+  },
+  "common.common.progress": {
+    "defaultMessage": "Progress",
+    "source": [
+      "ui/pages/Chakra.tsx:58"
+    ]
+  },
+  "common.common.progress_circle": {
+    "defaultMessage": "Progress Circle",
+    "source": [
+      "ui/pages/Chakra.tsx:59"
+    ]
+  },
+  "common.common.radio": {
+    "defaultMessage": "Radio",
+    "source": [
+      "ui/pages/Chakra.tsx:60"
+    ]
+  },
+  "common.common.rating": {
+    "defaultMessage": "Rating",
+    "source": [
+      "ui/pages/Chakra.tsx:61"
+    ]
+  },
+  "common.common.pin_input": {
+    "defaultMessage": "Pin input",
+    "source": [
+      "ui/pages/Chakra.tsx:62"
+    ]
+  },
+  "common.common.popover": {
+    "defaultMessage": "Popover",
+    "source": [
+      "ui/pages/Chakra.tsx:63"
+    ]
+  },
+  "common.common.select": {
+    "defaultMessage": "Select",
+    "source": [
+      "ui/pages/Chakra.tsx:64"
+    ]
+  },
+  "common.common.skeleton": {
+    "defaultMessage": "Skeleton",
+    "source": [
+      "ui/pages/Chakra.tsx:65",
+      "ui/showcases/Skeleton.tsx:16"
+    ]
+  },
+  "common.common.spinner": {
+    "defaultMessage": "Spinner",
+    "source": [
+      "ui/pages/Chakra.tsx:66",
+      "ui/showcases/Spinner.tsx:11"
+    ]
+  },
+  "common.common.switch": {
+    "defaultMessage": "Switch",
+    "source": [
+      "ui/pages/Chakra.tsx:67"
+    ]
+  },
+  "common.common.table": {
+    "defaultMessage": "Table",
+    "source": [
+      "ui/pages/Chakra.tsx:68",
+      "ui/tokenInstance/TokenInstanceMetadata.tsx:17",
+      "ui/tokenInstance/TokenInstanceMetadata.tsx:17",
+      "ui/tokenInstance/TokenInstanceMetadata.tsx:31",
+      "ui/tokenInstance/TokenInstanceMetadata.tsx:47"
+    ]
+  },
+  "common.common.tabs": {
+    "defaultMessage": "Tabs",
+    "source": [
+      "ui/pages/Chakra.tsx:69"
+    ]
+  },
+  "common.common.tag": {
+    "defaultMessage": "Tag",
+    "source": [
+      "ui/pages/Chakra.tsx:70",
+      "ui/privateTags/DeletePrivateTagModal.tsx:50",
+      "ui/publicTags/submit/result/PublicTagsSubmitResultSuccess.tsx:32",
+      "ui/publicTags/submit/result/PublicTagsSubmitResultWithErrors.tsx:57"
+    ]
+  },
+  "common.common.toast": {
+    "defaultMessage": "Toast",
+    "source": [
+      "ui/pages/Chakra.tsx:72"
+    ]
+  },
+  "common.common.tooltip": {
+    "defaultMessage": "Tooltip",
+    "source": [
+      "ui/pages/Chakra.tsx:73"
+    ]
+  },
+  "common.common.chakra_ui_showcase": {
+    "defaultMessage": "Chakra UI Showcase",
+    "source": [
+      "ui/pages/Chakra.tsx:82"
+    ]
+  },
+  "common.common.res": {
+    "defaultMessage": "Res.",
+    "source": [
+      "ui/pages/Chart.tsx:205"
+    ]
+  },
+  "common.common.resolution": {
+    "defaultMessage": "Resolution",
+    "source": [
+      "ui/pages/Chart.tsx:205"
+    ]
+  },
+  "common.common.select_resolution": {
+    "defaultMessage": "Select resolution",
+    "source": [
+      "ui/pages/Chart.tsx:209"
+    ]
+  },
+  "common.common.reset": {
+    "defaultMessage": "Reset",
+    "source": [
+      "ui/pages/Chart.tsx:226"
+    ]
+  },
+  "common.common.period": {
+    "defaultMessage": "Period",
+    "source": [
+      "ui/pages/Chart.tsx:196"
+    ]
+  },
+  "common.common.new_smart_contract_verificatio": {
+    "defaultMessage": "New smart contract verification",
+    "source": [
+      "ui/pages/ContractVerificationForAddress.tsx:71"
+    ]
+  },
+  "common.common.export_data_to_csv_file": {
+    "defaultMessage": "Export data to CSV file",
+    "source": [
+      "ui/pages/CsvExport.tsx:201"
+    ]
+  },
+  "common.common.to_csv_file": {
+    "defaultMessage": "to CSV file.",
+    "source": [
+      "ui/pages/CsvExport.tsx:172",
+      "ui/pages/CsvExport.tsx:193"
+    ]
+  },
+  "common.common.custom_abi": {
+    "defaultMessage": "Custom ABI",
+    "source": [
+      "ui/pages/CustomAbi.tsx:108",
+      "ui/snippets/user/profile/UserProfileContent.tsx:44"
+    ]
+  },
+  "common.common.epoch_finalized_after_celo_mig": {
+    "defaultMessage": "Epoch finalized after Celo migrated to the OP‐stack, when it became an L2 rollup",
+    "source": [
+      "ui/pages/Epoch.tsx:45"
+    ]
+  },
+  "common.common.ranging_from": {
+    "defaultMessage": "Ranging from",
+    "source": [
+      "ui/pages/Epoch.tsx:64"
+    ]
+  },
+  "common.common.gas_tracker": {
+    "defaultMessage": "Gas tracker",
+    "source": [
+      "ui/pages/GasTracker.tsx:87"
+    ]
+  },
+  "common.common.last_updated": {
+    "defaultMessage": "Last updated",
+    "source": [
+      "ui/pages/GasTracker.tsx:52"
+    ]
+  },
+  "common.common.no_recent_data_available": {
+    "defaultMessage": "No recent data available",
+    "source": [
+      "ui/pages/GasTracker.tsx:76"
+    ]
+  },
+  "common.common.interop_messages": {
+    "defaultMessage": "Interop messages",
+    "source": [
+      "ui/pages/InteropMessages.tsx:72"
+    ]
+  },
+  "common.common.there_are_no_interop_messages": {
+    "defaultMessage": "There are no interop messages.",
+    "source": [
+      "ui/pages/InteropMessages.tsx:78"
+    ]
+  },
+  "common.common.computor_transactions": {
+    "defaultMessage": "Computor transactions",
+    "source": [
+      "ui/pages/KettleTxs.tsx:32"
+    ]
+  },
+  "common.common.render_error": {
+    "defaultMessage": "Render error",
+    "source": [
+      "ui/pages/Login.tsx:28"
+    ]
+  },
+  "common.common.test_error": {
+    "defaultMessage": "Test error",
+    "source": [
+      "ui/pages/Login.tsx:32"
+    ]
+  },
+  "common.common.test_event": {
+    "defaultMessage": "Test event",
+    "source": [
+      "ui/pages/Login.tsx:36"
+    ]
+  },
+  "common.common.success_": {
+    "defaultMessage": "Success 🥳",
+    "source": [
+      "ui/pages/Login.tsx:47"
+    ]
+  },
+  "common.common.successfully_set_cookie": {
+    "defaultMessage": "Successfully set cookie",
+    "source": [
+      "ui/pages/Login.tsx:48"
+    ]
+  },
+  "common.common.login_page_": {
+    "defaultMessage": "Login page 😂",
+    "source": [
+      "ui/pages/Login.tsx:66"
+    ]
+  },
+  "common.common.api_token": {
+    "defaultMessage": "API token",
+    "source": [
+      "ui/pages/Login.tsx:78"
+    ]
+  },
+  "common.common.set_cookie": {
+    "defaultMessage": "Set cookie",
+    "source": [
+      "ui/pages/Login.tsx:79"
+    ]
+  },
+  "common.common.check_rollbar": {
+    "defaultMessage": "Check Rollbar",
+    "source": [
+      "ui/pages/Login.tsx:83"
+    ]
+  },
+  "common.common.check_mixpanel": {
+    "defaultMessage": "Check Mixpanel",
+    "source": [
+      "ui/pages/Login.tsx:84"
+    ]
+  },
+  "common.common.swap": {
+    "defaultMessage": "Swap",
+    "source": [
+      "ui/pages/MarketplaceEssentialDapp.tsx:25"
+    ]
+  },
+  "common.common.revoke": {
+    "defaultMessage": "Revoke",
+    "source": [
+      "ui/pages/MarketplaceEssentialDapp.tsx:30"
+    ]
+  },
+  "common.common.multisend": {
+    "defaultMessage": "Multisend",
+    "source": [
+      "ui/pages/MarketplaceEssentialDapp.tsx:34"
+    ]
+  },
+  "common.common.essential_dapp_not_found": {
+    "defaultMessage": "Essential dapp not found",
+    "source": [
+      "ui/pages/MarketplaceEssentialDapp.tsx:41"
+    ]
+  },
+  "common.common.mud_worlds": {
+    "defaultMessage": "MUD worlds",
+    "source": [
+      "ui/pages/MudWorlds.tsx:56"
+    ]
+  },
+  "common.common.there_are_no_mud_worlds": {
+    "defaultMessage": "There are no MUD worlds.",
+    "source": [
+      "ui/pages/MudWorlds.tsx:60"
+    ]
+  },
+  "common.common.my_profile": {
+    "defaultMessage": "My profile",
+    "source": [
+      "ui/pages/MyProfile.tsx:67",
+      "ui/snippets/user/profile/UserProfileButton.tsx:67",
+      "ui/snippets/user/profile/UserProfileContent.tsx:24"
+    ]
+  },
+  "common.common.history": {
+    "defaultMessage": "History",
+    "source": [
+      "ui/pages/NameDomain.tsx:38"
+    ]
+  },
+  "common.common.name_details": {
+    "defaultMessage": "Name details",
+    "source": [
+      "ui/pages/NameDomain.tsx:88"
+    ]
+  },
+  "common.common.domains": {
+    "defaultMessage": "Domains",
+    "source": [
+      "ui/pages/NameServices.tsx:15"
+    ]
+  },
+  "common.common.directories": {
+    "defaultMessage": "Directories",
+    "source": [
+      "ui/pages/NameServices.tsx:16"
+    ]
+  },
+  "common.common.name_services_lookup": {
+    "defaultMessage": "Name services lookup",
+    "source": [
+      "ui/pages/NameServices.tsx:22"
+    ]
+  },
+  "common.common.dispute_games": {
+    "defaultMessage": "Dispute games",
+    "source": [
+      "ui/pages/OptimisticL2DisputeGames.tsx:75"
+    ]
+  },
+  "common.common.there_are_no_dispute_games": {
+    "defaultMessage": "There are no dispute games.",
+    "source": [
+      "ui/pages/OptimisticL2DisputeGames.tsx:79"
+    ]
+  },
+  "common.common.output_roots": {
+    "defaultMessage": "Output roots",
+    "source": [
+      "ui/pages/OptimisticL2OutputRoots.tsx:75"
+    ]
+  },
+  "common.common.there_are_no_output_roots": {
+    "defaultMessage": "There are no output roots.",
+    "source": [
+      "ui/pages/OptimisticL2OutputRoots.tsx:79"
+    ]
+  },
+  "common.common.transaction": {
+    "defaultMessage": "Transaction",
+    "source": [
+      "ui/pages/PrivateTags.tsx:13",
+      "ui/privateTags/TransactionTagTable/TransactionTagTable.tsx:22",
+      "ui/showcases/Badge.tsx:26",
+      "ui/txs/TxType.tsx:64",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleIn.tsx:65",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:60"
+    ]
+  },
+  "common.common.private_tags": {
+    "defaultMessage": "Private tags",
+    "source": [
+      "ui/pages/PrivateTags.tsx:21",
+      "ui/snippets/user/profile/UserProfileContent.tsx:34"
+    ]
+  },
+  "common.common.dashboard": {
+    "defaultMessage": "Dashboard",
+    "source": [
+      "ui/pages/RewardsDashboard.tsx:51"
+    ]
+  },
+  "common.common.all_merits": {
+    "defaultMessage": "All Merits",
+    "source": [
+      "ui/pages/RewardsDashboard.tsx:68"
+    ]
+  },
+  "common.common.referrals": {
+    "defaultMessage": "Referrals",
+    "source": [
+      "ui/pages/RewardsDashboard.tsx:89",
+      "ui/pages/RewardsDashboard.tsx:142"
+    ]
+  },
+  "common.common.total_number_of_users_who_have": {
+    "defaultMessage": "Total number of users who have joined the program using your code or referral link.",
+    "source": [
+      "ui/pages/RewardsDashboard.tsx:90"
+    ]
+  },
+  "common.common.streak": {
+    "defaultMessage": "Streak",
+    "source": [
+      "ui/pages/RewardsDashboard.tsx:103"
+    ]
+  },
+  "common.common.activity": {
+    "defaultMessage": "Activity",
+    "source": [
+      "ui/pages/RewardsDashboard.tsx:137"
+    ]
+  },
+  "common.common.resources": {
+    "defaultMessage": "Resources",
+    "source": [
+      "ui/pages/RewardsDashboard.tsx:147"
+    ]
+  },
+  "common.common.failed_to_load_some_data_pleas": {
+    "defaultMessage": "Failed to load some data. Please try again later.",
+    "source": [
+      "ui/pages/RewardsDashboard.tsx:65"
+    ]
+  },
+  "common.common.search_results": {
+    "defaultMessage": "Search results",
+    "source": [
+      "ui/pages/SearchResults.tsx:272"
+    ]
+  },
+  "common.common.category": {
+    "defaultMessage": "Category",
+    "source": [
+      "ui/pages/SearchResults.tsx:193"
+    ]
+  },
+  "common.common.found": {
+    "defaultMessage": "Found",
+    "source": [
+      "ui/pages/SearchResults.tsx:232"
+    ]
+  },
+  "common.common.copied": {
+    "defaultMessage": "Copied",
+    "source": [
+      "ui/pages/Sprite.tsx:48"
+    ]
+  },
+  "common.common.copy_to_clipboard": {
+    "defaultMessage": "Copy to clipboard",
+    "source": [
+      "ui/pages/Sprite.tsx:48"
+    ]
+  },
+  "common.common.no_icons_found": {
+    "defaultMessage": "No icons found",
+    "source": [
+      "ui/pages/Sprite.tsx:81"
+    ]
+  },
+  "common.common.search_by_name": {
+    "defaultMessage": "Search by name...",
+    "source": [
+      "ui/pages/Sprite.tsx:102"
+    ]
+  },
+  "common.common.svg_sprite_": {
+    "defaultMessage": "SVG sprite 🥤",
+    "source": [
+      "ui/pages/Sprite.tsx:114"
+    ]
+  },
+  "common.common.operation_details": {
+    "defaultMessage": "Operation details",
+    "source": [
+      "ui/pages/TacOperation.tsx:39"
+    ]
+  },
+  "common.common.search_by_operation_tx_hash_se": {
+    "defaultMessage": "Search by operation, tx hash, sender",
+    "source": [
+      "ui/pages/TacOperations.tsx:50"
+    ]
+  },
+  "common.common.operations": {
+    "defaultMessage": "Operations",
+    "source": [
+      "ui/pages/TacOperations.tsx:93"
+    ]
+  },
+  "common.common.there_are_no_operations": {
+    "defaultMessage": "There are no operations.",
+    "source": [
+      "ui/pages/TacOperations.tsx:97"
+    ]
+  },
+  "common.common.holders": {
+    "defaultMessage": "Holders",
+    "source": [
+      "ui/pages/TokenInstance.tsx:114"
+    ]
+  },
+  "common.common.metadata": {
+    "defaultMessage": "Metadata",
+    "source": [
+      "ui/pages/TokenInstance.tsx:118",
+      "ui/tokenInstance/TokenInstanceMetadata.tsx:59"
+    ]
+  },
+  "common.common.cross_chain": {
+    "defaultMessage": "Cross chain",
+    "source": [
+      "ui/pages/TransactionsZetaChain.tsx:100"
+    ]
+  },
+  "common.common.watch_list": {
+    "defaultMessage": "Watch list",
+    "source": [
+      "ui/pages/TransactionsZetaChain.tsx:127",
+      "ui/snippets/user/profile/UserProfileContent.tsx:29"
+    ]
+  },
+  "common.common.logs": {
+    "defaultMessage": "Logs",
+    "source": [
+      "ui/pages/UserOp.tsx:77"
+    ]
+  },
+  "common.common.raw": {
+    "defaultMessage": "Raw",
+    "source": [
+      "ui/pages/UserOp.tsx:78"
+    ]
+  },
+  "common.common.user_operation_details": {
+    "defaultMessage": "User operation details",
+    "source": [
+      "ui/pages/UserOp.tsx:90"
+    ]
+  },
+  "common.common.validator_details": {
+    "defaultMessage": "Validator details",
+    "source": [
+      "ui/pages/ValidatorZilliqa.tsx:49"
+    ]
+  },
+  "common.common.validators": {
+    "defaultMessage": "Validators",
+    "source": [
+      "ui/pages/ValidatorsBlackfort.tsx:98",
+      "ui/pages/ValidatorsStability.tsx:150",
+      "ui/pages/ValidatorsZilliqa.tsx:47"
+    ]
+  },
+  "common.common.there_are_no_validators": {
+    "defaultMessage": "There are no validators.",
+    "source": [
+      "ui/pages/ValidatorsBlackfort.tsx:103",
+      "ui/pages/ValidatorsStability.tsx:155",
+      "ui/pages/ValidatorsZilliqa.tsx:51"
+    ]
+  },
+  "common.common.search_by_validators_address_h": {
+    "defaultMessage": "Search by validator's address hash",
+    "source": [
+      "ui/pages/ValidatorsStability.tsx:104"
+    ]
+  },
+  "common.common.back_to_my_verified_addresses": {
+    "defaultMessage": "Back to my verified addresses",
+    "source": [
+      "ui/pages/VerifiedAddresses.tsx:133"
+    ]
+  },
+  "common.common.token_info_application_form": {
+    "defaultMessage": "Token info application form",
+    "source": [
+      "ui/pages/VerifiedAddresses.tsx:137"
+    ]
+  },
+  "common.common.my_verified_addresses": {
+    "defaultMessage": "My verified addresses",
+    "source": [
+      "ui/pages/VerifiedAddresses.tsx:189"
+    ]
+  },
+  "common.common.crosschain_tx_details": {
+    "defaultMessage": "Cross-chain tx details",
+    "source": [
+      "ui/pages/ZetaChainCCTX.tsx:31"
+    ]
+  },
+  "common.common.add_tag": {
+    "defaultMessage": "Add tag",
+    "source": [
+      "ui/privateTags/AddressModal/AddressForm.tsx:106",
+      "ui/privateTags/TransactionModal/TransactionForm.tsx:117"
+    ]
+  },
+  "common.common.new_address_tag": {
+    "defaultMessage": "New address tag",
+    "source": [
+      "ui/privateTags/AddressModal/AddressModal.tsx:19"
+    ]
+  },
+  "common.common.private_tag": {
+    "defaultMessage": "Private tag",
+    "source": [
+      "ui/privateTags/AddressTagTable/AddressTagListItem.tsx:38",
+      "ui/privateTags/AddressTagTable/AddressTagTable.tsx:23",
+      "ui/privateTags/TransactionTagTable/TransactionTagListItem.tsx:37",
+      "ui/privateTags/TransactionTagTable/TransactionTagTable.tsx:23"
+    ]
+  },
+  "common.common.removal_of_private_tag": {
+    "defaultMessage": "Removal of private tag",
+    "source": [
+      "ui/privateTags/DeletePrivateTagModal.tsx:58"
+    ]
+  },
+  "common.common.edit_transaction_tag": {
+    "defaultMessage": "Edit transaction tag",
+    "source": [
+      "ui/privateTags/TransactionModal/TransactionModal.tsx:19"
+    ]
+  },
+  "common.common.new_transaction_tag": {
+    "defaultMessage": "New transaction tag",
+    "source": [
+      "ui/privateTags/TransactionModal/TransactionModal.tsx:19"
+    ]
+  },
+  "common.common.recaptcha_is_not_solved": {
+    "defaultMessage": "ReCaptcha is not solved",
+    "source": [
+      "ui/publicTags/submit/PublicTagsSubmitForm.tsx:63"
+    ]
+  },
+  "common.common.your_name": {
+    "defaultMessage": "Your name",
+    "source": [
+      "ui/publicTags/submit/PublicTagsSubmitForm.tsx:110",
+      "ui/publicTags/submit/PublicTagsSubmitResult.tsx:49"
+    ]
+  },
+  "common.common.company_name": {
+    "defaultMessage": "Company name",
+    "source": [
+      "ui/publicTags/submit/PublicTagsSubmitForm.tsx:114",
+      "ui/publicTags/submit/PublicTagsSubmitResult.tsx:55"
+    ]
+  },
+  "common.common.company_website": {
+    "defaultMessage": "Company website",
+    "source": [
+      "ui/publicTags/submit/PublicTagsSubmitForm.tsx:115",
+      "ui/publicTags/submit/PublicTagsSubmitResult.tsx:61"
+    ]
+  },
+  "common.common.confirm_the_connection_between": {
+    "defaultMessage": "Confirm the connection between addresses and tags",
+    "source": [
+      "ui/publicTags/submit/PublicTagsSubmitForm.tsx:132"
+    ]
+  },
+  "common.common.send_request": {
+    "defaultMessage": "Send request",
+    "source": [
+      "ui/publicTags/submit/PublicTagsSubmitForm.tsx:152",
+      "ui/tokenInfo/TokenInfoForm.tsx:192"
+    ]
+  },
+  "common.common.company_info": {
+    "defaultMessage": "Company info",
+    "source": [
+      "ui/publicTags/submit/PublicTagsSubmitResult.tsx:47"
+    ]
+  },
+  "common.common.add_new_tag": {
+    "defaultMessage": "Add new tag",
+    "source": [
+      "ui/publicTags/submit/PublicTagsSubmitResult.tsx:81"
+    ]
+  },
+  "common.common.label_url": {
+    "defaultMessage": "Label URL",
+    "source": [
+      "ui/publicTags/submit/fields/PublicTagsSubmitFieldTag.tsx:70"
+    ]
+  },
+  "common.common.tag_name": {
+    "defaultMessage": "Tag name",
+    "source": [
+      "ui/publicTags/submit/fields/PublicTagsSubmitFieldTag.tsx:123"
+    ]
+  },
+  "common.common.label_icon_url": {
+    "defaultMessage": "Label icon URL",
+    "source": [
+      "ui/publicTags/submit/fields/PublicTagsSubmitFieldTagIcon.tsx:25"
+    ]
+  },
+  "common.common.john_doe": {
+    "defaultMessage": "John Doe",
+    "source": [
+      "ui/publicTags/submit/mocks.ts:10"
+    ]
+  },
+  "common.common.jonhdoeduckme": {
+    "defaultMessage": "jonh.doe@duck.me",
+    "source": [
+      "ui/publicTags/submit/mocks.ts:11"
+    ]
+  },
+  "common.common.quack_quack": {
+    "defaultMessage": "Quack quack",
+    "source": [
+      "ui/publicTags/submit/mocks.ts:14"
+    ]
+  },
+  "common.common.unicorn_uproar": {
+    "defaultMessage": "Unicorn Uproar",
+    "source": [
+      "ui/publicTags/submit/mocks.ts:18"
+    ]
+  },
+  "common.common.hello": {
+    "defaultMessage": "Hello",
+    "source": [
+      "ui/publicTags/submit/mocks.ts:29"
+    ]
+  },
+  "common.common.hello_it_is_me_i_was_wondering": {
+    "defaultMessage": "Hello, it is me... I was wondering if after all these years you would like to meet",
+    "source": [
+      "ui/publicTags/submit/mocks.ts:32"
+    ]
+  },
+  "common.common.duck_owner_": {
+    "defaultMessage": "duck owner 🦆",
+    "source": [
+      "ui/publicTags/submit/mocks.ts:37"
+    ]
+  },
+  "common.common.some_error": {
+    "defaultMessage": "Some error",
+    "source": [
+      "ui/publicTags/submit/mocks.ts:68",
+      "ui/publicTags/submit/mocks.ts:72",
+      "ui/publicTags/submit/mocks.ts:77",
+      "ui/publicTags/submit/mocks.ts:81",
+      "ui/publicTags/submit/mocks.ts:86",
+      "ui/publicTags/submit/utils.test.ts:58",
+      "ui/publicTags/submit/utils.test.ts:63"
+    ]
+  },
+  "common.common.another_nasty_error": {
+    "defaultMessage": "Another nasty error",
+    "source": [
+      "ui/publicTags/submit/mocks.ts:90",
+      "ui/publicTags/submit/utils.test.ts:68"
+    ]
+  },
+  "common.common.group_success_result": {
+    "defaultMessage": "group success result",
+    "source": [
+      "ui/publicTags/submit/utils.test.ts:22"
+    ]
+  },
+  "common.common.group_result_with_error": {
+    "defaultMessage": "group result with error",
+    "source": [
+      "ui/publicTags/submit/utils.test.ts:39"
+    ]
+  },
+  "common.common.reorg": {
+    "defaultMessage": "Reorg",
+    "source": [
+      "ui/searchResults/SearchResultListItem.tsx:195",
+      "ui/searchResults/SearchResultTableItem.tsx:285",
+      "ui/snippets/searchBar/SearchBarSuggest/SearchBarSuggestBlock.tsx:48",
+      "ui/snippets/searchBar/SearchBarSuggest/SearchBarSuggestBlock.tsx:64"
+    ]
+  },
+  "common.common.uncle": {
+    "defaultMessage": "Uncle",
+    "source": [
+      "ui/searchResults/SearchResultListItem.tsx:196",
+      "ui/searchResults/SearchResultTableItem.tsx:286",
+      "ui/snippets/searchBar/SearchBarSuggest/SearchBarSuggestBlock.tsx:49",
+      "ui/snippets/searchBar/SearchBarSuggest/SearchBarSuggestBlock.tsx:65"
+    ]
+  },
+  "common.common.first_item": {
+    "defaultMessage": "First Item",
+    "source": [
+      "ui/showcases/Accordion.tsx:8"
+    ]
+  },
+  "common.common.some_value_1": {
+    "defaultMessage": "Some value 1...",
+    "source": [
+      "ui/showcases/Accordion.tsx:8"
+    ]
+  },
+  "common.common.second_item": {
+    "defaultMessage": "Second Item",
+    "source": [
+      "ui/showcases/Accordion.tsx:9"
+    ]
+  },
+  "common.common.some_value_2": {
+    "defaultMessage": "Some value 2...",
+    "source": [
+      "ui/showcases/Accordion.tsx:9"
+    ]
+  },
+  "common.common.third_item": {
+    "defaultMessage": "Third Item",
+    "source": [
+      "ui/showcases/Accordion.tsx:10"
+    ]
+  },
+  "common.common.some_value_3": {
+    "defaultMessage": "Some value 3...",
+    "source": [
+      "ui/showcases/Accordion.tsx:10"
+    ]
+  },
+  "common.common.multiple_lines_no_title": {
+    "defaultMessage": "multiple lines, no title",
+    "source": [
+      "ui/showcases/Alert.tsx:126"
+    ]
+  },
+  "common.common.alert_content": {
+    "defaultMessage": "Alert content",
+    "source": [
+      "ui/showcases/Alert.tsx:19",
+      "ui/showcases/Alert.tsx:22",
+      "ui/showcases/Alert.tsx:25",
+      "ui/showcases/Alert.tsx:28",
+      "ui/showcases/Alert.tsx:36",
+      "ui/showcases/Alert.tsx:44",
+      "ui/showcases/Alert.tsx:47",
+      "ui/showcases/Alert.tsx:55",
+      "ui/showcases/Alert.tsx:63",
+      "ui/showcases/Alert.tsx:73"
+    ]
+  },
+  "common.common.closable": {
+    "defaultMessage": "Closable",
+    "source": [
+      "ui/showcases/Alert.tsx:52",
+      "ui/showcases/Tag.tsx:53"
+    ]
+  },
+  "common.common.examples": {
+    "defaultMessage": "Examples",
+    "source": [
+      "ui/showcases/Alert.tsx:68",
+      "ui/showcases/Badge.tsx:101",
+      "ui/showcases/Button.tsx:226",
+      "ui/showcases/Collapsible.tsx:38",
+      "ui/showcases/Input.tsx:61",
+      "ui/showcases/Link.tsx:90",
+      "ui/showcases/Pagination.tsx:33",
+      "ui/showcases/Select.tsx:131",
+      "ui/showcases/Tabs.tsx:61",
+      "ui/showcases/Tag.tsx:76"
+    ]
+  },
+  "common.common.as_link": {
+    "defaultMessage": "As Link",
+    "source": [
+      "ui/showcases/Alert.tsx:69",
+      "ui/showcases/Button.tsx:227"
+    ]
+  },
+  "common.common.gas_used": {
+    "defaultMessage": "Gas used",
+    "source": [
+      "ui/showcases/Alert.tsx:85",
+      "ui/showcases/Alert.tsx:103",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:91",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:173"
+    ]
+  },
+  "common.common.multiple_lines": {
+    "defaultMessage": "Multiple lines",
+    "source": [
+      "ui/showcases/Alert.tsx:117"
+    ]
+  },
+  "common.common.color_palette": {
+    "defaultMessage": "Color palette",
+    "source": [
+      "ui/showcases/Badge.tsx:14"
+    ]
+  },
+  "common.common.token_transfer": {
+    "defaultMessage": "Token transfer",
+    "source": [
+      "ui/showcases/Badge.tsx:29",
+      "ui/txs/TxType.tsx:44"
+    ]
+  },
+  "common.common.contract_call": {
+    "defaultMessage": "Contract call",
+    "source": [
+      "ui/showcases/Badge.tsx:32",
+      "ui/txs/TxType.tsx:32"
+    ]
+  },
+  "common.common.blob_txn": {
+    "defaultMessage": "Blob txn",
+    "source": [
+      "ui/showcases/Badge.tsx:35",
+      "ui/txs/TxType.tsx:36"
+    ]
+  },
+  "common.common.multicall": {
+    "defaultMessage": "Multicall",
+    "source": [
+      "ui/showcases/Badge.tsx:38"
+    ]
+  },
+  "common.common.internal_txn": {
+    "defaultMessage": "Internal txn",
+    "source": [
+      "ui/showcases/Badge.tsx:41"
+    ]
+  },
+  "common.common.content": {
+    "defaultMessage": "Content",
+    "source": [
+      "ui/showcases/Badge.tsx:55",
+      "ui/showcases/Badge.tsx:63",
+      "ui/showcases/Badge.tsx:66",
+      "ui/showcases/Badge.tsx:74",
+      "ui/showcases/Button.tsx:20",
+      "ui/showcases/Button.tsx:23",
+      "ui/showcases/Button.tsx:26",
+      "ui/showcases/Button.tsx:29",
+      "ui/showcases/Button.tsx:208",
+      "ui/showcases/Button.tsx:209",
+      "ui/showcases/Button.tsx:210",
+      "ui/showcases/Button.tsx:211",
+      "ui/showcases/Button.tsx:214",
+      "ui/showcases/Button.tsx:217",
+      "ui/showcases/Button.tsx:218",
+      "ui/showcases/Button.tsx:219",
+      "ui/showcases/Button.tsx:220"
+    ]
+  },
+  "common.common.truncate": {
+    "defaultMessage": "Truncate",
+    "source": [
+      "ui/showcases/Badge.tsx:79"
+    ]
+  },
+  "common.common.icon": {
+    "defaultMessage": "Icon",
+    "source": [
+      "ui/showcases/Badge.tsx:91"
+    ]
+  },
+  "common.common.tooltip_content": {
+    "defaultMessage": "Tooltip content",
+    "source": [
+      "ui/showcases/Button.tsx:108",
+      "ui/showcases/Tooltip.tsx:15",
+      "ui/showcases/Tooltip.tsx:18",
+      "ui/showcases/Tooltip.tsx:23"
+    ]
+  },
+  "common.common.option1": {
+    "defaultMessage": "option-1",
+    "source": [
+      "ui/showcases/Button.tsx:240",
+      "ui/showcases/Button.tsx:245"
+    ]
+  },
+  "common.common.option2": {
+    "defaultMessage": "option-2",
+    "source": [
+      "ui/showcases/Button.tsx:241",
+      "ui/showcases/Button.tsx:246"
+    ]
+  },
+  "common.common.option3": {
+    "defaultMessage": "option-3",
+    "source": [
+      "ui/showcases/Button.tsx:242",
+      "ui/showcases/Button.tsx:247"
+    ]
+  },
+  "common.common.variants": {
+    "defaultMessage": "Variants",
+    "source": [
+      "ui/showcases/Button.tsx:35",
+      "ui/showcases/CloseButton.tsx:12",
+      "ui/showcases/ContentLoader.tsx:12",
+      "ui/showcases/Link.tsx:44",
+      "ui/showcases/Skeleton.tsx:12",
+      "ui/showcases/Tabs.tsx:21"
+    ]
+  },
+  "common.common.hovered": {
+    "defaultMessage": "Hovered",
+    "source": [
+      "ui/showcases/Button.tsx:40",
+      "ui/showcases/Button.tsx:48",
+      "ui/showcases/Button.tsx:56",
+      "ui/showcases/Button.tsx:74",
+      "ui/showcases/Button.tsx:128",
+      "ui/showcases/Button.tsx:164",
+      "ui/showcases/Button.tsx:197"
+    ]
+  },
+  "common.common.loading_skeleton": {
+    "defaultMessage": "Loading Skeleton",
+    "source": [
+      "ui/showcases/Button.tsx:43",
+      "ui/showcases/Button.tsx:51",
+      "ui/showcases/Button.tsx:105",
+      "ui/showcases/Button.tsx:192",
+      "ui/showcases/Button.tsx:199"
+    ]
+  },
+  "common.common.expended": {
+    "defaultMessage": "Expended",
+    "source": [
+      "ui/showcases/Button.tsx:84"
+    ]
+  },
+  "common.common.selected": {
+    "defaultMessage": "Selected",
+    "source": [
+      "ui/showcases/Button.tsx:94",
+      "ui/showcases/Button.tsx:132",
+      "ui/showcases/Button.tsx:168",
+      "ui/showcases/Link.tsx:61",
+      "ui/showcases/Tag.tsx:26"
+    ]
+  },
+  "common.common.first_option": {
+    "defaultMessage": "First option",
+    "source": [
+      "ui/showcases/Button.tsx:98",
+      "ui/showcases/IconButton.tsx:91"
+    ]
+  },
+  "common.common.second_option": {
+    "defaultMessage": "Second option",
+    "source": [
+      "ui/showcases/Button.tsx:99",
+      "ui/showcases/IconButton.tsx:92"
+    ]
+  },
+  "common.common.i_am_link": {
+    "defaultMessage": "I am link",
+    "source": [
+      "ui/showcases/Button.tsx:231"
+    ]
+  },
+  "common.common.button_group_radio": {
+    "defaultMessage": "Button Group Radio",
+    "source": [
+      "ui/showcases/Button.tsx:236"
+    ]
+  },
+  "common.common.option_1": {
+    "defaultMessage": "Option 1",
+    "source": [
+      "ui/showcases/Button.tsx:240",
+      "ui/showcases/Button.tsx:245",
+      "ui/showcases/Checkbox.tsx:15",
+      "ui/showcases/Checkbox.tsx:25",
+      "ui/showcases/Checkbox.tsx:35",
+      "ui/showcases/Checkbox.tsx:45",
+      "ui/showcases/Checkbox.tsx:56",
+      "ui/showcases/Checkbox.tsx:62",
+      "ui/showcases/Radio.tsx:16",
+      "ui/showcases/Radio.tsx:28",
+      "ui/showcases/Radio.tsx:34",
+      "ui/showcases/Radio.tsx:40",
+      "ui/showcases/Radio.tsx:52",
+      "ui/showcases/Radio.tsx:58",
+      "ui/showcases/Radio.tsx:70",
+      "ui/showcases/Radio.tsx:82"
+    ]
+  },
+  "common.common.option_2": {
+    "defaultMessage": "Option 2",
+    "source": [
+      "ui/showcases/Button.tsx:241",
+      "ui/showcases/Button.tsx:246",
+      "ui/showcases/Checkbox.tsx:16",
+      "ui/showcases/Checkbox.tsx:26",
+      "ui/showcases/Checkbox.tsx:36",
+      "ui/showcases/Checkbox.tsx:46",
+      "ui/showcases/Checkbox.tsx:57",
+      "ui/showcases/Checkbox.tsx:63",
+      "ui/showcases/Radio.tsx:17",
+      "ui/showcases/Radio.tsx:29",
+      "ui/showcases/Radio.tsx:35",
+      "ui/showcases/Radio.tsx:41",
+      "ui/showcases/Radio.tsx:53",
+      "ui/showcases/Radio.tsx:59",
+      "ui/showcases/Radio.tsx:71",
+      "ui/showcases/Radio.tsx:83"
+    ]
+  },
+  "common.common.option_3": {
+    "defaultMessage": "Option 3",
+    "source": [
+      "ui/showcases/Button.tsx:242",
+      "ui/showcases/Button.tsx:247"
+    ]
+  },
+  "common.common.readonly": {
+    "defaultMessage": "Read-only",
+    "source": [
+      "ui/showcases/Checkbox.tsx:42",
+      "ui/showcases/Radio.tsx:78",
+      "ui/showcases/Rating.tsx:19"
+    ]
+  },
+  "common.common.orientation": {
+    "defaultMessage": "Orientation",
+    "source": [
+      "ui/showcases/Checkbox.tsx:52",
+      "ui/showcases/Radio.tsx:48"
+    ]
+  },
+  "common.common.hello_world": {
+    "defaultMessage": "Hello, world!",
+    "source": [
+      "ui/showcases/Clipboard.tsx:30"
+    ]
+  },
+  "common.common.show_details": {
+    "defaultMessage": "Show details",
+    "source": [
+      "ui/showcases/Collapsible.tsx:42"
+    ]
+  },
+  "common.common.expand_all_list": {
+    "defaultMessage": "Expand all list",
+    "source": [
+      "ui/showcases/Collapsible.tsx:47"
+    ]
+  },
+  "common.common.cut_link": {
+    "defaultMessage": "Cut link",
+    "source": [
+      "ui/showcases/Collapsible.tsx:40"
+    ]
+  },
+  "common.common.dialog_title": {
+    "defaultMessage": "Dialog Title",
+    "source": [
+      "ui/showcases/Dialog.tsx:28",
+      "ui/showcases/Dialog.tsx:52",
+      "ui/showcases/Dialog.tsx:76"
+    ]
+  },
+  "common.common.ill_do_it_later": {
+    "defaultMessage": "I'll do it later",
+    "source": [
+      "ui/showcases/Dialog.tsx:36"
+    ]
+  },
+  "common.common.cancel": {
+    "defaultMessage": "Cancel",
+    "source": [
+      "ui/showcases/Dialog.tsx:59",
+      "ui/showcases/Dialog.tsx:83"
+    ]
+  },
+  "common.common.helper_text": {
+    "defaultMessage": "Helper text",
+    "source": [
+      "ui/showcases/Field.tsx:17",
+      "ui/showcases/Field.tsx:33",
+      "ui/showcases/Field.tsx:51",
+      "ui/showcases/Field.tsx:65"
+    ]
+  },
+  "common.common.meexamplecom": {
+    "defaultMessage": "me@example.com",
+    "source": [
+      "ui/showcases/Field.tsx:21",
+      "ui/showcases/Field.tsx:24",
+      "ui/showcases/Field.tsx:37",
+      "ui/showcases/Field.tsx:40",
+      "ui/showcases/Field.tsx:55",
+      "ui/showcases/Field.tsx:58",
+      "ui/showcases/Field.tsx:69",
+      "ui/showcases/Field.tsx:72"
+    ]
+  },
+  "common.common.no_floating_label": {
+    "defaultMessage": "no floating label",
+    "source": [
+      "ui/showcases/Field.tsx:50"
+    ]
+  },
+  "common.common.on_custom_background": {
+    "defaultMessage": "On custom background",
+    "source": [
+      "ui/showcases/Field.tsx:48"
+    ]
+  },
+  "common.common.with_end_element": {
+    "defaultMessage": "with end element",
+    "source": [
+      "ui/showcases/Input.tsx:45"
+    ]
+  },
+  "common.common.referral_code": {
+    "defaultMessage": "Referral code",
+    "source": [
+      "ui/showcases/Input.tsx:46"
+    ]
+  },
+  "common.common.with_start_element": {
+    "defaultMessage": "with start element",
+    "source": [
+      "ui/showcases/Input.tsx:52"
+    ]
+  },
+  "common.common.search_by_method_name": {
+    "defaultMessage": "Search by method name",
+    "source": [
+      "ui/showcases/Input.tsx:65",
+      "ui/showcases/Input.tsx:66"
+    ]
+  },
+  "common.common.input_group": {
+    "defaultMessage": "Input group",
+    "source": [
+      "ui/showcases/Input.tsx:43"
+    ]
+  },
+  "common.common.filter_input": {
+    "defaultMessage": "Filter input",
+    "source": [
+      "ui/showcases/Input.tsx:62"
+    ]
+  },
+  "common.common.tether": {
+    "defaultMessage": "Tether",
+    "source": [
+      "ui/showcases/Link.tsx:30"
+    ]
+  },
+  "common.common.without_name": {
+    "defaultMessage": "Without name",
+    "source": [
+      "ui/showcases/Link.tsx:94"
+    ]
+  },
+  "common.common.with_name": {
+    "defaultMessage": "With name",
+    "source": [
+      "ui/showcases/Link.tsx:107"
+    ]
+  },
+  "common.common.contract": {
+    "defaultMessage": "Contract",
+    "source": [
+      "ui/showcases/Link.tsx:115",
+      "ui/verifiedContracts/VerifiedContractsTable.tsx:38"
+    ]
+  },
+  "common.common.with_info": {
+    "defaultMessage": "With info",
+    "source": [
+      "ui/showcases/Link.tsx:125"
+    ]
+  },
+  "common.common.very_looooooooong_name": {
+    "defaultMessage": "Very looooooooong name",
+    "source": [
+      "ui/showcases/Link.tsx:128"
+    ]
+  },
+  "common.common.very_looooooooong_symbol": {
+    "defaultMessage": "Very looooooooong symbol",
+    "source": [
+      "ui/showcases/Link.tsx:131"
+    ]
+  },
+  "common.common.with_partial_info": {
+    "defaultMessage": "With partial info",
+    "source": [
+      "ui/showcases/Link.tsx:137"
+    ]
+  },
+  "common.common.internal_link": {
+    "defaultMessage": "Internal link",
+    "source": [
+      "ui/showcases/Link.tsx:225"
+    ]
+  },
+  "common.common.external_link": {
+    "defaultMessage": "External link",
+    "source": [
+      "ui/showcases/Link.tsx:231"
+    ]
+  },
+  "common.common.hover": {
+    "defaultMessage": "Hover",
+    "source": [
+      "ui/showcases/Link.tsx:48",
+      "ui/showcases/Link.tsx:52",
+      "ui/showcases/Link.tsx:56",
+      "ui/showcases/Link.tsx:60",
+      "ui/showcases/Link.tsx:66",
+      "ui/showcases/Link.tsx:70"
+    ]
+  },
+  "common.common.hello_hello_hello": {
+    "defaultMessage": "hello hello hello",
+    "source": [
+      "ui/showcases/Link.tsx:79",
+      "ui/showcases/Link.tsx:83"
+    ]
+  },
+  "common.common.within": {
+    "defaultMessage": "Within",
+    "source": [
+      "ui/showcases/Link.tsx:80",
+      "ui/showcases/Link.tsx:84"
+    ]
+  },
+  "common.common.address_link": {
+    "defaultMessage": "Address link",
+    "source": [
+      "ui/showcases/Link.tsx:92"
+    ]
+  },
+  "common.common.token_link": {
+    "defaultMessage": "Token link",
+    "source": [
+      "ui/showcases/Link.tsx:123"
+    ]
+  },
+  "common.common.transaction_link": {
+    "defaultMessage": "Transaction link",
+    "source": [
+      "ui/showcases/Link.tsx:147"
+    ]
+  },
+  "common.common.block_link": {
+    "defaultMessage": "Block link",
+    "source": [
+      "ui/showcases/Link.tsx:159"
+    ]
+  },
+  "common.common.nft_link": {
+    "defaultMessage": "NFT link",
+    "source": [
+      "ui/showcases/Link.tsx:171"
+    ]
+  },
+  "common.common.ens_link": {
+    "defaultMessage": "ENS link",
+    "source": [
+      "ui/showcases/Link.tsx:182"
+    ]
+  },
+  "common.common.blob_link": {
+    "defaultMessage": "Blob link",
+    "source": [
+      "ui/showcases/Link.tsx:197"
+    ]
+  },
+  "common.common.pool_link": {
+    "defaultMessage": "Pool link",
+    "source": [
+      "ui/showcases/Link.tsx:208"
+    ]
+  },
+  "common.common.link_overlay": {
+    "defaultMessage": "Link overlay",
+    "source": [
+      "ui/showcases/Link.tsx:223"
+    ]
+  },
+  "common.common.main_link": {
+    "defaultMessage": "Main link",
+    "source": [
+      "ui/showcases/Link.tsx:227",
+      "ui/showcases/Link.tsx:233"
+    ]
+  },
+  "common.common.inner_link": {
+    "defaultMessage": "Inner link",
+    "source": [
+      "ui/showcases/Link.tsx:228",
+      "ui/showcases/Link.tsx:234"
+    ]
+  },
+  "common.common.refresh_metadata": {
+    "defaultMessage": "Refresh metadata",
+    "source": [
+      "ui/showcases/Menu.tsx:24",
+      "ui/showcases/Menu.tsx:38"
+    ]
+  },
+  "common.common.add_token_info": {
+    "defaultMessage": "Add token info",
+    "source": [
+      "ui/showcases/Menu.tsx:25",
+      "ui/showcases/Menu.tsx:39"
+    ]
+  },
+  "common.common.add_private_tag": {
+    "defaultMessage": "Add private tag",
+    "source": [
+      "ui/showcases/Menu.tsx:26",
+      "ui/showcases/Menu.tsx:40"
+    ]
+  },
+  "common.common.add_public_tag": {
+    "defaultMessage": "Add public tag",
+    "source": [
+      "ui/showcases/Menu.tsx:27",
+      "ui/showcases/Menu.tsx:41"
+    ]
+  },
+  "common.common.loaded_state": {
+    "defaultMessage": "Loaded state",
+    "source": [
+      "ui/showcases/Pagination.tsx:37"
+    ]
+  },
+  "common.common.initial_loading_state": {
+    "defaultMessage": "Initial loading state",
+    "source": [
+      "ui/showcases/Pagination.tsx:40"
+    ]
+  },
+  "common.common.list_pagination": {
+    "defaultMessage": "List pagination",
+    "source": [
+      "ui/showcases/Pagination.tsx:35"
+    ]
+  },
+  "common.common.trigger": {
+    "defaultMessage": "Trigger",
+    "source": [
+      "ui/showcases/Popover.tsx:17"
+    ]
+  },
+  "common.common.very_bad": {
+    "defaultMessage": "Very bad",
+    "source": [
+      "ui/showcases/Rating.tsx:14",
+      "ui/showcases/Rating.tsx:22"
+    ]
+  },
+  "common.common.bad": {
+    "defaultMessage": "Bad",
+    "source": [
+      "ui/showcases/Rating.tsx:14",
+      "ui/showcases/Rating.tsx:22"
+    ]
+  },
+  "common.common.average": {
+    "defaultMessage": "Average",
+    "source": [
+      "ui/showcases/Rating.tsx:14",
+      "ui/showcases/Rating.tsx:22"
+    ]
+  },
+  "common.common.good": {
+    "defaultMessage": "Good",
+    "source": [
+      "ui/showcases/Rating.tsx:14",
+      "ui/showcases/Rating.tsx:22"
+    ]
+  },
+  "common.common.excellent": {
+    "defaultMessage": "Excellent",
+    "source": [
+      "ui/showcases/Rating.tsx:14",
+      "ui/showcases/Rating.tsx:22"
+    ]
+  },
+  "common.common.angular": {
+    "defaultMessage": "Angular",
+    "source": [
+      "ui/showcases/Select.tsx:20"
+    ]
+  },
+  "common.common.svelte": {
+    "defaultMessage": "Svelte",
+    "source": [
+      "ui/showcases/Select.tsx:21"
+    ]
+  },
+  "common.common.select_framework": {
+    "defaultMessage": "Select framework",
+    "source": [
+      "ui/showcases/Select.tsx:43",
+      "ui/showcases/Select.tsx:60",
+      "ui/showcases/Select.tsx:66",
+      "ui/showcases/Select.tsx:73",
+      "ui/showcases/Select.tsx:81",
+      "ui/showcases/Select.tsx:89",
+      "ui/showcases/Select.tsx:98",
+      "ui/showcases/Select.tsx:117"
+    ]
+  },
+  "common.common.error_message": {
+    "defaultMessage": "Error message",
+    "source": [
+      "ui/showcases/Select.tsx:94",
+      "ui/showcases/Select.tsx:104"
+    ]
+  },
+  "common.common.angular_is": {
+    "defaultMessage": "Angular is",
+    "source": [
+      "ui/showcases/Select.tsx:20"
+    ]
+  },
+  "common.common.include_nightly_builds": {
+    "defaultMessage": "Include nightly builds",
+    "source": [
+      "ui/showcases/Select.tsx:124"
+    ]
+  },
+  "common.common.sort": {
+    "defaultMessage": "Sort",
+    "source": [
+      "ui/showcases/Select.tsx:133"
+    ]
+  },
+  "common.common.token_transfers_filter": {
+    "defaultMessage": "Token transfers filter",
+    "source": [
+      "ui/showcases/Select.tsx:152"
+    ]
+  },
+  "common.common.radio_filter": {
+    "defaultMessage": "Radio filter",
+    "source": [
+      "ui/showcases/Select.tsx:161"
+    ]
+  },
+  "common.common.sizes": {
+    "defaultMessage": "Sizes",
+    "source": [
+      "ui/showcases/Spinner.tsx:12"
+    ]
+  },
+  "common.common.direction": {
+    "defaultMessage": "Direction",
+    "source": [
+      "ui/showcases/Switch.tsx:42"
+    ]
+  },
+  "common.common.laptop": {
+    "defaultMessage": "Laptop",
+    "source": [
+      "ui/showcases/Table.tsx:10"
+    ]
+  },
+  "common.common.electronics": {
+    "defaultMessage": "Electronics",
+    "source": [
+      "ui/showcases/Table.tsx:10",
+      "ui/showcases/Table.tsx:13"
+    ]
+  },
+  "common.common.coffee_maker": {
+    "defaultMessage": "Coffee Maker",
+    "source": [
+      "ui/showcases/Table.tsx:11"
+    ]
+  },
+  "common.common.home_appliances": {
+    "defaultMessage": "Home Appliances",
+    "source": [
+      "ui/showcases/Table.tsx:11"
+    ]
+  },
+  "common.common.desk_chair": {
+    "defaultMessage": "Desk Chair",
+    "source": [
+      "ui/showcases/Table.tsx:12"
+    ]
+  },
+  "common.common.furniture": {
+    "defaultMessage": "Furniture",
+    "source": [
+      "ui/showcases/Table.tsx:12"
+    ]
+  },
+  "common.common.smartphone": {
+    "defaultMessage": "Smartphone",
+    "source": [
+      "ui/showcases/Table.tsx:13"
+    ]
+  },
+  "common.common.headphones": {
+    "defaultMessage": "Headphones",
+    "source": [
+      "ui/showcases/Table.tsx:14"
+    ]
+  },
+  "common.common.accessories": {
+    "defaultMessage": "Accessories",
+    "source": [
+      "ui/showcases/Table.tsx:14"
+    ]
+  },
+  "common.common.product": {
+    "defaultMessage": "Product",
+    "source": [
+      "ui/showcases/Table.tsx:60"
+    ]
+  },
+  "common.common.swaps": {
+    "defaultMessage": "Swaps",
+    "source": [
+      "ui/showcases/Tabs.tsx:11"
+    ]
+  },
+  "common.common.bridges": {
+    "defaultMessage": "Bridges",
+    "source": [
+      "ui/showcases/Tabs.tsx:12"
+    ]
+  },
+  "common.common.liquidity_staking": {
+    "defaultMessage": "Liquidity staking",
+    "source": [
+      "ui/showcases/Tabs.tsx:13"
+    ]
+  },
+  "common.common.lending": {
+    "defaultMessage": "Lending",
+    "source": [
+      "ui/showcases/Tabs.tsx:14"
+    ]
+  },
+  "common.common.yield_farming": {
+    "defaultMessage": "Yield farming",
+    "source": [
+      "ui/showcases/Tabs.tsx:15"
+    ]
+  },
+  "common.common.swaps_content": {
+    "defaultMessage": "Swaps content",
+    "source": [
+      "ui/showcases/Tabs.tsx:11"
+    ]
+  },
+  "common.common.bridges_content": {
+    "defaultMessage": "Bridges content",
+    "source": [
+      "ui/showcases/Tabs.tsx:12"
+    ]
+  },
+  "common.common.liquidity_staking_content": {
+    "defaultMessage": "Liquidity staking content",
+    "source": [
+      "ui/showcases/Tabs.tsx:13"
+    ]
+  },
+  "common.common.lending_content": {
+    "defaultMessage": "Lending content",
+    "source": [
+      "ui/showcases/Tabs.tsx:14"
+    ]
+  },
+  "common.common.yield_farming_content": {
+    "defaultMessage": "Yield farming content",
+    "source": [
+      "ui/showcases/Tabs.tsx:15"
+    ]
+  },
+  "common.common.first_tab": {
+    "defaultMessage": "First tab",
+    "source": [
+      "ui/showcases/Tabs.tsx:26",
+      "ui/showcases/Tabs.tsx:36",
+      "ui/showcases/Tabs.tsx:46"
+    ]
+  },
+  "common.common.second_tab": {
+    "defaultMessage": "Second tab",
+    "source": [
+      "ui/showcases/Tabs.tsx:27",
+      "ui/showcases/Tabs.tsx:37",
+      "ui/showcases/Tabs.tsx:47"
+    ]
+  },
+  "common.common.first_tab_content": {
+    "defaultMessage": "First tab content",
+    "source": [
+      "ui/showcases/Tabs.tsx:29",
+      "ui/showcases/Tabs.tsx:39",
+      "ui/showcases/Tabs.tsx:51"
+    ]
+  },
+  "common.common.second_tab_content": {
+    "defaultMessage": "Second tab content",
+    "source": [
+      "ui/showcases/Tabs.tsx:30",
+      "ui/showcases/Tabs.tsx:40",
+      "ui/showcases/Tabs.tsx:52"
+    ]
+  },
+  "common.common.third_tab": {
+    "defaultMessage": "Third tab",
+    "source": [
+      "ui/showcases/Tabs.tsx:48"
+    ]
+  },
+  "common.common.fourth_tab": {
+    "defaultMessage": "Fourth tab",
+    "source": [
+      "ui/showcases/Tabs.tsx:49"
+    ]
+  },
+  "common.common.third_tab_content": {
+    "defaultMessage": "Third tab content",
+    "source": [
+      "ui/showcases/Tabs.tsx:53"
+    ]
+  },
+  "common.common.fourth_tab_content": {
+    "defaultMessage": "Fourth tab content",
+    "source": [
+      "ui/showcases/Tabs.tsx:54"
+    ]
+  },
+  "common.common.adaptive_tabs": {
+    "defaultMessage": "Adaptive tabs",
+    "source": [
+      "ui/showcases/Tabs.tsx:63"
+    ]
+  },
+  "common.common.left_element": {
+    "defaultMessage": "Left element",
+    "source": [
+      "ui/showcases/Tabs.tsx:71"
+    ]
+  },
+  "common.common.right_element": {
+    "defaultMessage": "Right element",
+    "source": [
+      "ui/showcases/Tabs.tsx:73"
+    ]
+  },
+  "common.common.": {
+    "defaultMessage": "🙈",
+    "source": [
+      "ui/showcases/Tabs.tsx:73"
+    ]
+  },
+  "common.common.my_tag": {
+    "defaultMessage": "My tag",
+    "source": [
+      "ui/showcases/Tag.tsx:16",
+      "ui/showcases/Tag.tsx:19",
+      "ui/showcases/Tag.tsx:22",
+      "ui/showcases/Tag.tsx:35",
+      "ui/showcases/Tag.tsx:38",
+      "ui/showcases/Tag.tsx:56",
+      "ui/showcases/Tag.tsx:65",
+      "ui/showcases/Tag.tsx:69"
+    ]
+  },
+  "common.common.truncated": {
+    "defaultMessage": "Truncated",
+    "source": [
+      "ui/showcases/Tag.tsx:44"
+    ]
+  },
+  "common.common.very_very_very_very_very_loooo": {
+    "defaultMessage": "Very very very very very looooooonggggg text",
+    "source": [
+      "ui/showcases/Tag.tsx:47",
+      "ui/showcases/Tag.tsx:66",
+      "ui/showcases/Tag.tsx:70"
+    ]
+  },
+  "common.common.public_tags": {
+    "defaultMessage": "Public tags",
+    "source": [
+      "ui/showcases/Tag.tsx:77"
+    ]
+  },
+  "common.common.filter_tags": {
+    "defaultMessage": "Filter tags",
+    "source": [
+      "ui/showcases/Tag.tsx:91"
+    ]
+  },
+  "common.common.all": {
+    "defaultMessage": "All",
+    "source": [
+      "ui/showcases/Tag.tsx:94",
+      "ui/showcases/Tag.tsx:96",
+      "ui/verifiedContracts/VerifiedContractsFilter.tsx:13",
+      "ui/zetaChain/filters/ZetaChainStatusFilter.tsx:14"
+    ]
+  },
+  "common.common.description": {
+    "defaultMessage": "Description",
+    "source": [
+      "ui/showcases/Textarea.tsx:20",
+      "ui/showcases/Textarea.tsx:23",
+      "ui/showcases/Textarea.tsx:36"
+    ]
+  },
+  "common.common.toast_content": {
+    "defaultMessage": "Toast content",
+    "source": [
+      "ui/showcases/Toast.tsx:16",
+      "ui/showcases/Toast.tsx:21",
+      "ui/showcases/Toast.tsx:26",
+      "ui/showcases/Toast.tsx:31"
+    ]
+  },
+  "common.common.please_wait_for": {
+    "defaultMessage": "Please wait for...",
+    "source": [
+      "ui/showcases/Toast.tsx:36"
+    ]
+  },
+  "common.common.log_in": {
+    "defaultMessage": "Log in",
+    "source": [
+      "ui/snippets/auth/AuthModal.pwstory.tsx:26",
+      "ui/snippets/user/profile/UserProfileButton.tsx:61",
+      "ui/snippets/user/profile/UserProfileContent.tsx:77"
+    ]
+  },
+  "common.common.link_email": {
+    "defaultMessage": "Link email",
+    "source": [
+      "ui/snippets/auth/AuthModal.pwstory.tsx:26"
+    ]
+  },
+  "common.common.authenticated": {
+    "defaultMessage": "Authenticated",
+    "source": [
+      "ui/snippets/auth/AuthModal.pwstory.tsx:28"
+    ]
+  },
+  "common.common.not_authenticated": {
+    "defaultMessage": "Not authenticated",
+    "source": [
+      "ui/snippets/auth/AuthModal.pwstory.tsx:28"
+    ]
+  },
+  "common.common.profile_dropdown": {
+    "defaultMessage": "Profile dropdown",
+    "source": [
+      "ui/snippets/auth/AuthModal.tsx:53",
+      "ui/snippets/auth/AuthModal.tsx:82",
+      "ui/snippets/auth/screens/AuthModalScreenEmail.tsx:58",
+      "ui/snippets/user/profile/UserProfileContentWallet.tsx:19"
+    ]
+  },
+  "common.common.select_a_way_to_login": {
+    "defaultMessage": "Select a way to login",
+    "source": [
+      "ui/snippets/auth/AuthModal.tsx:115"
+    ]
+  },
+  "common.common.add_wallet": {
+    "defaultMessage": "Add wallet",
+    "source": [
+      "ui/snippets/auth/AuthModal.tsx:117"
+    ]
+  },
+  "common.common.continue_with_wallet": {
+    "defaultMessage": "Continue with wallet",
+    "source": [
+      "ui/snippets/auth/AuthModal.tsx:117"
+    ]
+  },
+  "common.common.add_email": {
+    "defaultMessage": "Add email",
+    "source": [
+      "ui/snippets/auth/AuthModal.tsx:119",
+      "ui/snippets/auth/screens/AuthModalScreenSuccessWallet.tsx:60",
+      "ui/snippets/user/profile/UserProfileContent.tsx:110",
+      "ui/verifiedAddresses/VerifiedAddressesEmailAlert.tsx:22"
+    ]
+  },
+  "common.common.continue_with_email": {
+    "defaultMessage": "Continue with email",
+    "source": [
+      "ui/snippets/auth/AuthModal.tsx:119",
+      "ui/snippets/auth/screens/AuthModalScreenSelectMethod.tsx:34"
+    ]
+  },
+  "common.common.confirmation_code": {
+    "defaultMessage": "Confirmation code",
+    "source": [
+      "ui/snippets/auth/AuthModal.tsx:121"
+    ]
+  },
+  "common.common.congrats": {
+    "defaultMessage": "Congrats!",
+    "source": [
+      "ui/snippets/auth/AuthModal.tsx:124"
+    ]
+  },
+  "common.common.send_a_code": {
+    "defaultMessage": "Send a code",
+    "source": [
+      "ui/snippets/auth/screens/AuthModalScreenEmail.tsx:97"
+    ]
+  },
+  "common.common.code_has_been_sent_to_your_ema": {
+    "defaultMessage": "Code has been sent to your email",
+    "source": [
+      "ui/snippets/auth/screens/AuthModalScreenOtpCode.tsx:91"
+    ]
+  },
+  "common.common.submit": {
+    "defaultMessage": "Submit",
+    "source": [
+      "ui/snippets/auth/screens/AuthModalScreenOtpCode.tsx:133"
+    ]
+  },
+  "common.common.resend_code": {
+    "defaultMessage": "Resend code",
+    "source": [
+      "ui/snippets/auth/screens/AuthModalScreenOtpCode.tsx:125"
+    ]
+  },
+  "common.common.options_selector": {
+    "defaultMessage": "Options selector",
+    "source": [
+      "ui/snippets/auth/screens/AuthModalScreenSelectMethod.tsx:18",
+      "ui/snippets/auth/screens/AuthModalScreenSelectMethod.tsx:26"
+    ]
+  },
+  "common.common.continue_with_web3_wallet": {
+    "defaultMessage": "Continue with Web3 wallet",
+    "source": [
+      "ui/snippets/auth/screens/AuthModalScreenSelectMethod.tsx:33"
+    ]
+  },
+  "common.common.add_your_web3_wallet_to_safely": {
+    "defaultMessage": "Add your web3 wallet to safely interact with smart contracts and dapps inside Blockscout.",
+    "source": [
+      "ui/snippets/auth/screens/AuthModalScreenSuccessEmail.tsx:50"
+    ]
+  },
+  "common.common.and_merits_program": {
+    "defaultMessage": " and Merits Program",
+    "source": [
+      "ui/snippets/auth/screens/AuthModalScreenSuccessWallet.tsx:51"
+    ]
+  },
+  "common.common.merits": {
+    "defaultMessage": "Merits ",
+    "source": [
+      "ui/snippets/auth/screens/AuthModalScreenSuccessWallet.tsx:56",
+      "ui/snippets/navigation/vertical/NavLinkRewards.tsx:38"
+    ]
+  },
+  "common.common.logout_failed": {
+    "defaultMessage": "Logout failed",
+    "source": [
+      "ui/snippets/auth/useLogout.ts:65"
+    ]
+  },
+  "common.common.please_try_again_later": {
+    "defaultMessage": "Please try again later",
+    "source": [
+      "ui/snippets/auth/useLogout.ts:66"
+    ]
+  },
+  "common.common.login": {
+    "defaultMessage": "Login",
+    "source": [
+      "ui/snippets/auth/useSignInWithWallet.ts:47"
+    ]
+  },
+  "common.common.login_to_rewards_is_not_enable": {
+    "defaultMessage": "Login to rewards is not enabled",
+    "source": [
+      "ui/snippets/auth/useSignInWithWallet.ts:59"
+    ]
+  },
+  "common.common.user_already_has_logged_in_to_": {
+    "defaultMessage": "User already has logged in to rewards",
+    "source": [
+      "ui/snippets/auth/useSignInWithWallet.ts:63"
+    ]
+  },
+  "common.common.shared_siwe_login_is_not_enabl": {
+    "defaultMessage": "Shared SIWE login is not enabled",
+    "source": [
+      "ui/snippets/auth/useSignInWithWallet.ts:68"
+    ]
+  },
+  "common.common.rewards_user_does_not_exist": {
+    "defaultMessage": "Rewards user does not exist",
+    "source": [
+      "ui/snippets/auth/useSignInWithWallet.ts:73"
+    ]
+  },
+  "common.common.cannot_get_merits_login_nonce": {
+    "defaultMessage": "Cannot get merits login nonce",
+    "source": [
+      "ui/snippets/auth/useSignInWithWallet.ts:81"
+    ]
+  },
+  "common.common.submit_an_issue": {
+    "defaultMessage": "Submit an issue",
+    "source": [
+      "ui/snippets/footer/Footer.tsx:44"
+    ]
+  },
+  "common.common.contribute": {
+    "defaultMessage": "Contribute",
+    "source": [
+      "ui/snippets/footer/Footer.tsx:50"
+    ]
+  },
+  "common.common.discord": {
+    "defaultMessage": "Discord",
+    "source": [
+      "ui/snippets/footer/Footer.tsx:62",
+      "ui/tokenInfo/fields/TokenInfoFieldSocialLink.tsx:20"
+    ]
+  },
+  "common.common.all_chains": {
+    "defaultMessage": "All chains",
+    "source": [
+      "ui/snippets/footer/Footer.tsx:68",
+      "ui/zetaChain/filters/ZetaChainAddressFilter.tsx:71"
+    ]
+  },
+  "common.common.donate": {
+    "defaultMessage": "Donate",
+    "source": [
+      "ui/snippets/footer/Footer.tsx:74"
+    ]
+  },
+  "common.common.blockscout": {
+    "defaultMessage": "Blockscout",
+    "source": [
+      "ui/snippets/footer/Footer.tsx:209"
+    ]
+  },
+  "common.common._array": {
+    "defaultMessage": ", Array",
+    "source": [
+      "ui/snippets/footer/Footer.tsx:93",
+      "ui/snippets/navigation/utils.ts:6",
+      "ui/snippets/networkMenu/useNetworkMenu.tsx:17",
+      "ui/snippets/searchBar/useSearchWithClusters.tsx:68",
+      "ui/zetaChain/filters/ZetaChainAddressFilter.tsx:23",
+      "ui/zetaChain/filters/ZetaChainReceiverFilter.tsx:11",
+      "ui/zetaChain/filters/ZetaChainSenderFilter.tsx:11",
+      "ui/zetaChain/useZetaChainConfig.ts:15"
+    ]
+  },
+  "common.common.made_with": {
+    "defaultMessage": "Made with",
+    "source": [
+      "ui/snippets/footer/Footer.tsx:125"
+    ]
+  },
+  "common.common.this_site_is_protected_by_reca": {
+    "defaultMessage": "This site is protected by reCAPTCHA and the Google",
+    "source": [
+      "ui/snippets/footer/Footer.tsx:178"
+    ]
+  },
+  "common.common.privacy_policy": {
+    "defaultMessage": "Privacy Policy",
+    "source": [
+      "ui/snippets/footer/Footer.tsx:179"
+    ]
+  },
+  "common.common.terms_of_service": {
+    "defaultMessage": "Terms of Service",
+    "source": [
+      "ui/snippets/footer/Footer.tsx:181"
+    ]
+  },
+  "common.common.apply": {
+    "defaultMessage": "apply.",
+    "source": [
+      "ui/snippets/footer/Footer.tsx:182"
+    ]
+  },
+  "common.common.menu_button": {
+    "defaultMessage": "Menu button",
+    "source": [
+      "ui/snippets/header/Burger.tsx:27"
+    ]
+  },
+  "common.common.promo_banner_icon": {
+    "defaultMessage": "Promo banner icon",
+    "source": [
+      "ui/snippets/navigation/promoBanner/NavigationPromoBannerContent.tsx:38"
+    ]
+  },
+  "common.common.promo_banner_small": {
+    "defaultMessage": "Promo banner small",
+    "source": [
+      "ui/snippets/navigation/promoBanner/NavigationPromoBannerContent.tsx:59"
+    ]
+  },
+  "common.common.promo_banner_large": {
+    "defaultMessage": "Promo banner large",
+    "source": [
+      "ui/snippets/navigation/promoBanner/NavigationPromoBannerContent.tsx:73"
+    ]
+  },
+  "common.common.network_icon_placeholder": {
+    "defaultMessage": "Network icon placeholder",
+    "source": [
+      "ui/snippets/networkMenu/NetworkLogo.tsx:35"
+    ]
+  },
+  "common.common.network_logo_placeholder": {
+    "defaultMessage": "Network logo placeholder",
+    "source": [
+      "ui/snippets/networkMenu/NetworkLogo.tsx:35"
+    ]
+  },
+  "common.common.link_to_main_page": {
+    "defaultMessage": "Link to main page",
+    "source": [
+      "ui/snippets/networkMenu/NetworkLogo.tsx:57"
+    ]
+  },
+  "common.common.mainnets": {
+    "defaultMessage": "Mainnets",
+    "source": [
+      "ui/snippets/networkMenu/NetworkMenuContent.tsx:23"
+    ]
+  },
+  "common.common.header": {
+    "defaultMessage": "Header",
+    "source": [
+      "ui/snippets/networkMenu/useNetworkMenu.tsx:26",
+      "ui/snippets/user/wallet/UserWalletDesktop.tsx:21",
+      "ui/snippets/user/wallet/UserWalletMobile.tsx:15"
+    ]
+  },
+  "common.common.escape": {
+    "defaultMessage": "Escape",
+    "source": [
+      "ui/snippets/searchBar/SearchBarInput.tsx:65"
+    ]
+  },
+  "common.common.search": {
+    "defaultMessage": "Search",
+    "source": [
+      "ui/snippets/searchBar/SearchBarMobile.tsx:78",
+      "ui/snippets/searchBar/SearchBarMobile.tsx:112"
+    ]
+  },
+  "common.common.recent": {
+    "defaultMessage": "Recent",
+    "source": [
+      "ui/snippets/searchBar/SearchBarRecentKeywords.tsx:53"
+    ]
+  },
+  "common.common.clear_all": {
+    "defaultMessage": "Clear all",
+    "source": [
+      "ui/snippets/searchBar/SearchBarRecentKeywords.tsx:54"
+    ]
+  },
+  "common.common.we_are_searching_please_wait": {
+    "defaultMessage": "We are searching, please wait... ",
+    "source": [
+      "ui/snippets/searchBar/SearchBarSuggest/SearchBarSuggest.tsx:161"
+    ]
+  },
+  "common.common.something_went_wrong_try_refre": {
+    "defaultMessage": "Something went wrong. Try refreshing the page or come back later.",
+    "source": [
+      "ui/snippets/searchBar/SearchBarSuggest/SearchBarSuggest.tsx:165"
+    ]
+  },
+  "common.common.learn": {
+    "defaultMessage": "Learn",
+    "source": [
+      "ui/snippets/searchBar/SearchBarSuggest/SearchBarSuggestBlockCountdown.tsx:17"
+    ]
+  },
+  "common.common.to_be_created": {
+    "defaultMessage": "to be created.",
+    "source": [
+      "ui/snippets/searchBar/SearchBarSuggest/SearchBarSuggestBlockCountdown.tsx:21"
+    ]
+  },
+  "common.common.chains_list": {
+    "defaultMessage": "Chains list",
+    "source": [
+      "ui/snippets/topBar/NetworkMenu.tsx:34"
+    ]
+  },
+  "common.common.network_menu": {
+    "defaultMessage": "Network menu",
+    "source": [
+      "ui/snippets/topBar/NetworkMenu.tsx:40"
+    ]
+  },
+  "common.common.gas": {
+    "defaultMessage": "Gas",
+    "source": [
+      "ui/snippets/topBar/TopBarStats.tsx:89"
+    ]
+  },
+  "common.common.sign_in_to_my_account_to_add_t": {
+    "defaultMessage": "Sign in to My Account to add tags,",
+    "source": [
+      "ui/snippets/user/profile/UserProfileButton.tsx:74"
+    ]
+  },
+  "common.common.create_watchlists_access_api_k": {
+    "defaultMessage": "create watchlists, access API keys and more",
+    "source": [
+      "ui/snippets/user/profile/UserProfileButton.tsx:74"
+    ]
+  },
+  "common.common.verified_addrs": {
+    "defaultMessage": "Verified addrs",
+    "source": [
+      "ui/snippets/user/profile/UserProfileContent.tsx:49"
+    ]
+  },
+  "common.common.sign_out": {
+    "defaultMessage": "Sign out",
+    "source": [
+      "ui/snippets/user/profile/UserProfileContent.tsx:129"
+    ]
+  },
+  "common.common.account": {
+    "defaultMessage": "Account",
+    "source": [
+      "ui/snippets/user/profile/UserProfileContent.tsx:86"
+    ]
+  },
+  "common.common.add_address": {
+    "defaultMessage": "Add address",
+    "source": [
+      "ui/snippets/user/profile/UserProfileContent.tsx:104"
+    ]
+  },
+  "common.common.open_wallet": {
+    "defaultMessage": "Open wallet",
+    "source": [
+      "ui/snippets/user/profile/UserProfileContentWallet.tsx:62",
+      "ui/snippets/user/wallet/UserWalletMenuContent.tsx:44"
+    ]
+  },
+  "common.common.connected_wallet": {
+    "defaultMessage": "Connected wallet",
+    "source": [
+      "ui/snippets/user/profile/UserProfileContentWallet.tsx:91"
+    ]
+  },
+  "common.common.connect": {
+    "defaultMessage": "Connect",
+    "source": [
+      "ui/snippets/user/wallet/UserWalletButton.tsx:27"
+    ]
+  },
+  "common.common.connecting": {
+    "defaultMessage": "Connecting",
+    "source": [
+      "ui/snippets/user/wallet/UserWalletButton.tsx:57"
+    ]
+  },
+  "common.common.my_wallet": {
+    "defaultMessage": "My wallet",
+    "source": [
+      "ui/snippets/user/wallet/UserWalletMenuContent.tsx:31"
+    ]
+  },
+  "common.common.token_name": {
+    "defaultMessage": "Token name",
+    "source": [
+      "ui/tokenInfo/TokenInfoForm.tsx:127"
+    ]
+  },
+  "common.common.token_contract_address": {
+    "defaultMessage": "Token contract address",
+    "source": [
+      "ui/tokenInfo/TokenInfoForm.tsx:128"
+    ]
+  },
+  "common.common.requester_name": {
+    "defaultMessage": "Requester name",
+    "source": [
+      "ui/tokenInfo/TokenInfoForm.tsx:129"
+    ]
+  },
+  "common.common.requester_email": {
+    "defaultMessage": "Requester email",
+    "source": [
+      "ui/tokenInfo/TokenInfoForm.tsx:130"
+    ]
+  },
+  "common.common.official_project_email_address": {
+    "defaultMessage": "Official project email address",
+    "source": [
+      "ui/tokenInfo/TokenInfoForm.tsx:135"
+    ]
+  },
+  "common.common.official_project_website": {
+    "defaultMessage": "Official project website",
+    "source": [
+      "ui/tokenInfo/TokenInfoForm.tsx:136"
+    ]
+  },
+  "common.common.docs": {
+    "defaultMessage": "Docs",
+    "source": [
+      "ui/tokenInfo/TokenInfoForm.tsx:137"
+    ]
+  },
+  "common.common.project_description": {
+    "defaultMessage": "Project description",
+    "source": [
+      "ui/tokenInfo/TokenInfoForm.tsx:146"
+    ]
+  },
+  "common.common.comment": {
+    "defaultMessage": "Comment",
+    "source": [
+      "ui/tokenInfo/TokenInfoForm.tsx:180"
+    ]
+  },
+  "common.common.project_info": {
+    "defaultMessage": "Project info",
+    "source": [
+      "ui/tokenInfo/TokenInfoForm.tsx:132"
+    ]
+  },
+  "common.common.links": {
+    "defaultMessage": "Links",
+    "source": [
+      "ui/tokenInfo/TokenInfoForm.tsx:158"
+    ]
+  },
+  "common.common.price_data": {
+    "defaultMessage": "Price data",
+    "source": [
+      "ui/tokenInfo/TokenInfoForm.tsx:170"
+    ]
+  },
+  "common.common.request_in_progress_once_an_ad": {
+    "defaultMessage": "Request in progress. Once an admin approves your request you can edit token info.",
+    "source": [
+      "ui/tokenInfo/TokenInfoFormStatusText.tsx:22"
+    ]
+  },
+  "common.common.project_industry": {
+    "defaultMessage": "Project industry",
+    "source": [
+      "ui/tokenInfo/fields/TokenInfoFieldProjectSector.tsx:24"
+    ]
+  },
+  "common.common.telegram": {
+    "defaultMessage": "Telegram",
+    "source": [
+      "ui/tokenInfo/fields/TokenInfoFieldSocialLink.tsx:18"
+    ]
+  },
+  "common.common.slack": {
+    "defaultMessage": "Slack",
+    "source": [
+      "ui/tokenInfo/fields/TokenInfoFieldSocialLink.tsx:21"
+    ]
+  },
+  "common.common.facebook": {
+    "defaultMessage": "Facebook",
+    "source": [
+      "ui/tokenInfo/fields/TokenInfoFieldSocialLink.tsx:24"
+    ]
+  },
+  "common.common.reddit": {
+    "defaultMessage": "Reddit",
+    "source": [
+      "ui/tokenInfo/fields/TokenInfoFieldSocialLink.tsx:26"
+    ]
+  },
+  "common.common.invalid_format": {
+    "defaultMessage": "Invalid format",
+    "source": [
+      "ui/tokenInfo/fields/TokenInfoFieldSupport.tsx:28"
+    ]
+  },
+  "common.common.support_url_or_email": {
+    "defaultMessage": "Support URL or email",
+    "source": [
+      "ui/tokenInfo/fields/TokenInfoFieldSupport.tsx:34"
+    ]
+  },
+  "common.common.current_owner_of_this_token_in": {
+    "defaultMessage": "Current owner of this token instance",
+    "source": [
+      "ui/tokenInstance/TokenInstanceDetails.tsx:55"
+    ]
+  },
+  "common.common.this_token_instance_unique_tok": {
+    "defaultMessage": "This token instance unique token ID",
+    "source": [
+      "ui/tokenInstance/TokenInstanceDetails.tsx:72"
+    ]
+  },
+  "common.common.nft_item": {
+    "defaultMessage": "NFT item",
+    "source": [
+      "ui/tokenInstance/TokenInstanceDetails.tsx:93",
+      "ui/tokenInstance/TokenInstanceDetails.tsx:104"
+    ]
+  },
+  "common.common.link_to_the_dapp": {
+    "defaultMessage": "Link to the dapp",
+    "source": [
+      "ui/tokenInstance/TokenInstanceDetails.tsx:99"
+    ]
+  },
+  "common.common.ooops": {
+    "defaultMessage": "Ooops!",
+    "source": [
+      "ui/tokenInstance/TokenInstanceMetadata.tsx:54"
+    ]
+  },
+  "common.common.couldnt": {
+    "defaultMessage": "couldn't",
+    "source": [
+      "ui/tokenInstance/TokenInstanceMetadata.tsx:55"
+    ]
+  },
+  "common.common.the_refreshing_process_has_fai": {
+    "defaultMessage": "The refreshing process has failed. Please try again.",
+    "source": [
+      "ui/tokenInstance/TokenInstanceMetadataFetcher.tsx:42"
+    ]
+  },
+  "common.common.please_wait": {
+    "defaultMessage": "Please wait",
+    "source": [
+      "ui/tokenInstance/TokenInstanceMetadataFetcher.tsx:67"
+    ]
+  },
+  "common.common.refetching_metadata_request_se": {
+    "defaultMessage": "Refetching metadata request sent",
+    "source": [
+      "ui/tokenInstance/TokenInstanceMetadataFetcher.tsx:68"
+    ]
+  },
+  "common.common.unable_to_initialize_metadata_": {
+    "defaultMessage": "Unable to initialize metadata update",
+    "source": [
+      "ui/tokenInstance/TokenInstanceMetadataFetcher.tsx:76"
+    ]
+  },
+  "common.common.success": {
+    "defaultMessage": "Success!",
+    "source": [
+      "ui/tokenInstance/TokenInstanceMetadataFetcher.tsx:116"
+    ]
+  },
+  "common.common.metadata_has_been_refreshed": {
+    "defaultMessage": "Metadata has been refreshed",
+    "source": [
+      "ui/tokenInstance/TokenInstanceMetadataFetcher.tsx:117"
+    ]
+  },
+  "common.common.sending_request": {
+    "defaultMessage": "Sending request",
+    "source": [
+      "ui/tokenInstance/TokenInstanceMetadataFetcher.tsx:172"
+    ]
+  },
+  "common.common.unknown_token_instance": {
+    "defaultMessage": "Unknown token instance",
+    "source": [
+      "ui/tokenInstance/TokenInstancePageTitle.tsx:33"
+    ]
+  },
+  "common.common.address_that_deployed_this_tok": {
+    "defaultMessage": "Address that deployed this token contract",
+    "source": [
+      "ui/tokenInstance/details/TokenInstanceCreatorAddress.tsx:41"
+    ]
+  },
+  "common.common.nft_name": {
+    "defaultMessage": "NFT name",
+    "source": [
+      "ui/tokenInstance/details/TokenInstanceMetadataInfo.tsx:90"
+    ]
+  },
+  "common.common.nft_description": {
+    "defaultMessage": "NFT description",
+    "source": [
+      "ui/tokenInstance/details/TokenInstanceMetadataInfo.tsx:108"
+    ]
+  },
+  "common.common.nft_attributes": {
+    "defaultMessage": "NFT attributes",
+    "source": [
+      "ui/tokenInstance/details/TokenInstanceMetadataInfo.tsx:126"
+    ]
+  },
+  "common.common.token_id": {
+    "defaultMessage": "Token ID",
+    "source": [
+      "ui/tokenTransfers/TokenTransfersListItem.tsx:80",
+      "ui/tokenTransfers/TokenTransfersTable.tsx:32"
+    ]
+  },
+  "common.common.batch_number_indicates_the_len": {
+    "defaultMessage": "Batch number indicates the length of batches produced by grouping L2 blocks to be proven on L1",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:69",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:63"
+    ]
+  },
+  "common.common.view_previous_txn_batch": {
+    "defaultMessage": "View previous txn batch",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:80",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchDetails.tsx:75",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:74",
+      "ui/txnBatches/zkEvmL2/ZkEvmL2TxnBatchDetails.tsx:73",
+      "ui/txnBatches/zkSyncL2/ZkSyncL2TxnBatchDetails.tsx:84"
+    ]
+  },
+  "common.common.view_next_txn_batch": {
+    "defaultMessage": "View next txn batch",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:81",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchDetails.tsx:76",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:75",
+      "ui/txnBatches/zkEvmL2/ZkEvmL2TxnBatchDetails.tsx:74",
+      "ui/txnBatches/zkSyncL2/ZkSyncL2TxnBatchDetails.tsx:85"
+    ]
+  },
+  "common.common.date_and_time_at_which_batch_i": {
+    "defaultMessage": "Date and time at which batch is submitted to L1",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:89",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchDetails.tsx:84",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:103",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:144",
+      "ui/txnBatches/zkSyncL2/ZkSyncL2TxnBatchDetails.tsx:102"
+    ]
+  },
+  "common.common.number_of_transactions_in_this": {
+    "defaultMessage": "Number of transactions in this batch",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:102",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchDetails.tsx:97",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:118"
+    ]
+  },
+  "common.common.number_of_l2_blocks_in_this_ba": {
+    "defaultMessage": "Number of L2 blocks in this batch",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:114",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchDetails.tsx:112",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:132"
+    ]
+  },
+  "common.common.hash_of_l1_transaction_in_whic": {
+    "defaultMessage": "Hash of L1 transaction in which transactions was committed",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:126"
+    ]
+  },
+  "common.common.heigh_of_l1_block_which_includ": {
+    "defaultMessage": "Heigh of L1 block which includes L1 transactions",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:141"
+    ]
+  },
+  "common.common.where_the_batch_data_is_stored": {
+    "defaultMessage": "Where the batch data is stored",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:156",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchDetails.tsx:127"
+    ]
+  },
+  "common.common.the_hash_of_the_state_before_t": {
+    "defaultMessage": "The hash of the state before the batch",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:167"
+    ]
+  },
+  "common.common.the_hash_of_the_state_after_th": {
+    "defaultMessage": "The hash of the state after the batch",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:180"
+    ]
+  },
+  "common.common.show_data_availability_info": {
+    "defaultMessage": "Show data availability info",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:196"
+    ]
+  },
+  "common.common.hide_data_availability_info": {
+    "defaultMessage": "Hide data availability info",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetails.tsx:196"
+    ]
+  },
+  "common.common.aggregated_bls_signature_of_an": {
+    "defaultMessage": "Aggregated BLS signature of AnyTrust committee members",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetailsAnyTrustDA.tsx:22"
+    ]
+  },
+  "common.common.the_hash_of_the_data_blob_stor": {
+    "defaultMessage": "The hash of the data blob stored by the AnyTrust committee",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetailsAnyTrustDA.tsx:28"
+    ]
+  },
+  "common.common.members_of_anytrust_committee": {
+    "defaultMessage": "Members of AnyTrust committee",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetailsAnyTrustDA.tsx:52"
+    ]
+  },
+  "common.common.trusted": {
+    "defaultMessage": "Trusted",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetailsAnyTrustDA.tsx:67",
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetailsAnyTrustDA.tsx:98"
+    ]
+  },
+  "common.common.proof": {
+    "defaultMessage": "Proof",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetailsAnyTrustDA.tsx:68",
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetailsAnyTrustDA.tsx:102"
+    ]
+  },
+  "common.common.the_block_number_in_celestia_w": {
+    "defaultMessage": "The block number in Celestia where the Data Availability blob was published",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetailsCelestiaDA.tsx:22"
+    ]
+  },
+  "common.common.the_data_availability_blobs_un": {
+    "defaultMessage": "The Data Availability blob’s unique cryptographic proof",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchDetailsCelestiaDA.tsx:31"
+    ]
+  },
+  "common.common.batch_": {
+    "defaultMessage": "Batch #",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesListItem.tsx:30",
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesTable.tsx:21",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesListItem.tsx:30",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesTable.tsx:21",
+      "ui/txnBatches/zkEvmL2/ZkEvmTxnBatchesListItem.tsx:28",
+      "ui/txnBatches/zkEvmL2/ZkEvmTxnBatchesTable.tsx:21",
+      "ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesListItem.tsx:28",
+      "ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesTable.tsx:21"
+    ]
+  },
+  "common.common.l1_status": {
+    "defaultMessage": "L1 status",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesListItem.tsx:39",
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesTable.tsx:22"
+    ]
+  },
+  "common.common.l1_block": {
+    "defaultMessage": "L1 block",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesListItem.tsx:44",
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesTable.tsx:23"
+    ]
+  },
+  "common.common.block_count": {
+    "defaultMessage": "Block count",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesListItem.tsx:54",
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesTable.tsx:24"
+    ]
+  },
+  "common.common.l1_transaction": {
+    "defaultMessage": "L1 transaction",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesListItem.tsx:61",
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesTable.tsx:25"
+    ]
+  },
+  "common.common.data_container": {
+    "defaultMessage": "Data container",
+    "source": [
+      "ui/txnBatches/arbitrumL2/ArbitrumL2TxnBatchesListItem.tsx:93"
+    ]
+  },
+  "common.common.timestamp": {
+    "defaultMessage": "Timestamp",
+    "source": [
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchBlobCallData.tsx:18",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchBlobCelestia.tsx:37",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchBlobEip4844.tsx:27"
+    ]
+  },
+  "common.common.commitment": {
+    "defaultMessage": "Commitment",
+    "source": [
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchBlobCelestia.tsx:25"
+    ]
+  },
+  "common.common.height": {
+    "defaultMessage": "Height",
+    "source": [
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchBlobCelestia.tsx:33"
+    ]
+  },
+  "common.common.versioned_hash": {
+    "defaultMessage": "Versioned hash",
+    "source": [
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchBlobEip4844.tsx:23"
+    ]
+  },
+  "common.common.batch_id_indicates_the_length_": {
+    "defaultMessage": "Batch ID indicates the length of batches produced by grouping L2 blocks to be proven on L1",
+    "source": [
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchDetails.tsx:64"
+    ]
+  },
+  "common.common.batch_id": {
+    "defaultMessage": "Batch ID",
+    "source": [
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchesListItem.tsx:27",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchesTable.tsx:21"
+    ]
+  },
+  "common.common.l1_txn_count": {
+    "defaultMessage": "L1 txn count",
+    "source": [
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchesListItem.tsx:52",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchesTable.tsx:27"
+    ]
+  },
+  "common.common.l2_blocks": {
+    "defaultMessage": "L2 blocks",
+    "source": [
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchesListItem.tsx:59",
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchesTable.tsx:28"
+    ]
+  },
+  "common.common.storage": {
+    "defaultMessage": "Storage",
+    "source": [
+      "ui/txnBatches/optimisticL2/OptimisticL2TxnBatchesTable.tsx:22"
+    ]
+  },
+  "common.common.data_availability_container": {
+    "defaultMessage": "Data availability container",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:83"
+    ]
+  },
+  "common.common.status_of_this_batch": {
+    "defaultMessage": "Status of this batch",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:93"
+    ]
+  },
+  "common.common.finalized": {
+    "defaultMessage": "Finalized",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:98",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesListItem.tsx:46",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesTableItem.tsx:41"
+    ]
+  },
+  "common.common.committed": {
+    "defaultMessage": "Committed",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:98",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesListItem.tsx:46",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesTableItem.tsx:41"
+    ]
+  },
+  "common.common.hash_of_l1_transaction_this_ba": {
+    "defaultMessage": "Hash of L1 transaction this batch was committed in",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:157",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:186"
+    ]
+  },
+  "common.common.l1_block_that_includes_transac": {
+    "defaultMessage": "L1 block that includes transaction with this batch commitment",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:173",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchDetails.tsx:203"
+    ]
+  },
+  "common.common.data_availability": {
+    "defaultMessage": "Data availability",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesListItem.tsx:39"
+    ]
+  },
+  "common.common.committed_block": {
+    "defaultMessage": "Committed block",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesListItem.tsx:49",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesTable.tsx:24"
+    ]
+  },
+  "common.common.committed_txn_hash": {
+    "defaultMessage": "Committed txn hash",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesListItem.tsx:57",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesTable.tsx:25"
+    ]
+  },
+  "common.common.finalized_block": {
+    "defaultMessage": "Finalized block",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesListItem.tsx:76",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesTable.tsx:30"
+    ]
+  },
+  "common.common.finalized_txn_hash": {
+    "defaultMessage": "Finalized txn hash",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesListItem.tsx:86",
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesTable.tsx:31"
+    ]
+  },
+  "common.common.blocks_count": {
+    "defaultMessage": "Blocks count",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesListItem.tsx:97"
+    ]
+  },
+  "common.common.container": {
+    "defaultMessage": "Container",
+    "source": [
+      "ui/txnBatches/scrollL2/ScrollL2TxnBatchesTable.tsx:22"
+    ]
+  },
+  "common.common.verify_tx_hash": {
+    "defaultMessage": "Verify tx hash",
+    "source": [
+      "ui/txnBatches/zkEvmL2/ZkEvmTxnBatchesListItem.tsx:65",
+      "ui/txnBatches/zkEvmL2/ZkEvmTxnBatchesTable.tsx:28"
+    ]
+  },
+  "common.common.sequence_hash": {
+    "defaultMessage": "Sequence hash",
+    "source": [
+      "ui/txnBatches/zkEvmL2/ZkEvmTxnBatchesListItem.tsx:78",
+      "ui/txnBatches/zkEvmL2/ZkEvmTxnBatchesTable.tsx:29"
+    ]
+  },
+  "common.common.status_is_the_short_interpreta": {
+    "defaultMessage": "Status is the short interpretation of the batch lifecycle",
+    "source": [
+      "ui/txnBatches/zkSyncL2/ZkSyncL2TxnBatchDetails.tsx:92"
+    ]
+  },
+  "common.common.number_of_transactions_inside_": {
+    "defaultMessage": "Number of transactions inside the batch.",
+    "source": [
+      "ui/txnBatches/zkSyncL2/ZkSyncL2TxnBatchDetails.tsx:112"
+    ]
+  },
+  "common.common.l1_batch_root_is_a_hash_that_s": {
+    "defaultMessage": "L1 batch root is a hash that summarizes batch data and submitted to the L1",
+    "source": [
+      "ui/txnBatches/zkSyncL2/ZkSyncL2TxnBatchDetails.tsx:133"
+    ]
+  },
+  "common.common.the_gas_price_below_which_the_": {
+    "defaultMessage": "The gas price below which the \"baseFee\" of the batch should not fall",
+    "source": [
+      "ui/txnBatches/zkSyncL2/ZkSyncL2TxnBatchDetails.tsx:156"
+    ]
+  },
+  "common.common.hash_of_l1_tx_on_which_the_bat": {
+    "defaultMessage": "Hash of L1 tx on which the batch was committed",
+    "source": [
+      "ui/txnBatches/zkSyncL2/ZkSyncL2TxnBatchHashesInfo.tsx:28",
+      "ui/txnBatches/zkSyncL2/ZkSyncL2TxnBatchHashesInfo.tsx:51",
+      "ui/txnBatches/zkSyncL2/ZkSyncL2TxnBatchHashesInfo.tsx:74"
+    ]
+  },
+  "common.common.commit_tx": {
+    "defaultMessage": "Commit tx",
+    "source": [
+      "ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesListItem.tsx:65",
+      "ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesTable.tsx:28"
+    ]
+  },
+  "common.common.prove_tx": {
+    "defaultMessage": "Prove tx",
+    "source": [
+      "ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesListItem.tsx:78",
+      "ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesTable.tsx:29"
+    ]
+  },
+  "common.common.smart_contracts": {
+    "defaultMessage": "Smart contracts",
+    "source": [
+      "ui/txnWithdrawals/arbitrumL2/ArbitrumL2TxnWithdrawalsClaimButton.tsx:75"
+    ]
+  },
+  "common.common.claim": {
+    "defaultMessage": "Claim",
+    "source": [
+      "ui/txnWithdrawals/arbitrumL2/ArbitrumL2TxnWithdrawalsClaimButton.tsx:131"
+    ]
+  },
+  "common.common.message_": {
+    "defaultMessage": "Message #",
+    "source": [
+      "ui/txnWithdrawals/arbitrumL2/ArbitrumL2TxnWithdrawalsListItem.tsx:30",
+      "ui/txnWithdrawals/arbitrumL2/ArbitrumL2TxnWithdrawalsTable.tsx:20"
+    ]
+  },
+  "common.common.receiver": {
+    "defaultMessage": "Receiver",
+    "source": [
+      "ui/txnWithdrawals/arbitrumL2/ArbitrumL2TxnWithdrawalsListItem.tsx:35",
+      "ui/txnWithdrawals/arbitrumL2/ArbitrumL2TxnWithdrawalsTable.tsx:21",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:76",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:186",
+      "ui/zetaChain/cctxs/ZetaChainCCTXListItem.tsx:50",
+      "ui/zetaChain/cctxs/ZetaChainCCTxsTable.tsx:101",
+      "ui/zetaChain/filters/ZetaChainFilterByColumn.tsx:75",
+      "ui/zetaChain/filters/ZetaChainFilterTags.tsx:91",
+      "ui/zetaChain/filters/ZetaChainReceiverFilter.tsx:23"
+    ]
+  },
+  "common.common.additional_info": {
+    "defaultMessage": "Additional info",
+    "source": [
+      "ui/txs/TxAdditionalInfo.tsx:55"
+    ]
+  },
+  "common.common.transaction_fee": {
+    "defaultMessage": "Transaction fee",
+    "source": [
+      "ui/txs/TxAdditionalInfoContent.tsx:63"
+    ]
+  },
+  "common.common.others": {
+    "defaultMessage": "Others",
+    "source": [
+      "ui/txs/TxAdditionalInfoContent.tsx:106"
+    ]
+  },
+  "common.common.more_details": {
+    "defaultMessage": "More details",
+    "source": [
+      "ui/txs/TxAdditionalInfoContent.tsx:122"
+    ]
+  },
+  "common.common.contract_creation": {
+    "defaultMessage": "Contract creation",
+    "source": [
+      "ui/txs/TxType.tsx:40"
+    ]
+  },
+  "common.common.token_creation": {
+    "defaultMessage": "Token creation",
+    "source": [
+      "ui/txs/TxType.tsx:48"
+    ]
+  },
+  "common.common.coin_transfer": {
+    "defaultMessage": "Coin transfer",
+    "source": [
+      "ui/txs/TxType.tsx:52"
+    ]
+  },
+  "common.common.bridge": {
+    "defaultMessage": "Bridge",
+    "source": [
+      "ui/txs/TxType.tsx:60"
+    ]
+  },
+  "common.common.search_by_addresses_hash_metho": {
+    "defaultMessage": "Search by addresses, hash, method...",
+    "source": [
+      "ui/txs/TxsHeaderMobile.tsx:57"
+    ]
+  },
+  "common.common.pending_transactions": {
+    "defaultMessage": "Pending transactions",
+    "source": [
+      "ui/txs/TxsStats.tsx:126"
+    ]
+  },
+  "common.common.transactions_fees": {
+    "defaultMessage": "Transactions fees",
+    "source": [
+      "ui/txs/TxsStats.tsx:136"
+    ]
+  },
+  "common.common.avg_transaction_fee": {
+    "defaultMessage": "Avg. transaction fee",
+    "source": [
+      "ui/txs/TxsStats.tsx:148"
+    ]
+  },
+  "common.common.value_ascending": {
+    "defaultMessage": "Value ascending",
+    "source": [
+      "ui/txs/useTxsSort.tsx:14"
+    ]
+  },
+  "common.common.value_descending": {
+    "defaultMessage": "Value descending",
+    "source": [
+      "ui/txs/useTxsSort.tsx:15"
+    ]
+  },
+  "common.common.fee_ascending": {
+    "defaultMessage": "Fee ascending",
+    "source": [
+      "ui/txs/useTxsSort.tsx:16"
+    ]
+  },
+  "common.common.fee_descending": {
+    "defaultMessage": "Fee descending",
+    "source": [
+      "ui/txs/useTxsSort.tsx:17"
+    ]
+  },
+  "common.common.block_number_ascending": {
+    "defaultMessage": "Block number ascending",
+    "source": [
+      "ui/txs/useTxsSort.tsx:18"
+    ]
+  },
+  "common.common.external_call_data": {
+    "defaultMessage": "External call data",
+    "source": [
+      "ui/userOp/UserOpCallData.tsx:35",
+      "ui/userOp/UserOpCallDataSwitch.tsx:38"
+    ]
+  },
+  "common.common.call_data": {
+    "defaultMessage": "Call data",
+    "source": [
+      "ui/userOp/UserOpCallData.tsx:35"
+    ]
+  },
+  "common.common.show_external_call_data": {
+    "defaultMessage": "Show external call data",
+    "source": [
+      "ui/userOp/UserOpCallDataSwitch.tsx:37"
+    ]
+  },
+  "common.common.decoded_external_call_data": {
+    "defaultMessage": "Decoded external call data",
+    "source": [
+      "ui/userOp/UserOpDecodedCallData.tsx:37"
+    ]
+  },
+  "common.common.decoded_call_data": {
+    "defaultMessage": "Decoded call data",
+    "source": [
+      "ui/userOp/UserOpDecodedCallData.tsx:37"
+    ]
+  },
+  "common.common.unique_character_string_assign": {
+    "defaultMessage": "Unique character string assigned to every User operation",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:58"
+    ]
+  },
+  "common.common.the_address_of_the_smart_contr": {
+    "defaultMessage": "The address of the smart contract account",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:70"
+    ]
+  },
+  "common.common.target_smart_contract_called_b": {
+    "defaultMessage": "Target smart contract called by the User operation",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:82"
+    ]
+  },
+  "common.common.current_user_operation_state": {
+    "defaultMessage": "Current User operation state",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:94"
+    ]
+  },
+  "common.common.the_revert_reason_of_the_user_": {
+    "defaultMessage": "The revert reason of the User operation",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:106"
+    ]
+  },
+  "common.common.date_and_time_of_user_operatio": {
+    "defaultMessage": "Date and time of User operation",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:125"
+    ]
+  },
+  "common.common.total_user_operation_fee": {
+    "defaultMessage": "Total User operation fee",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:139"
+    ]
+  },
+  "common.common.actual_gas_amount_used_by_the_": {
+    "defaultMessage": "Actual gas amount used by the User operation",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:167"
+    ]
+  },
+  "common.common.hash_of_the_transaction_this_u": {
+    "defaultMessage": "Hash of the transaction this User operation belongs to",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:185"
+    ]
+  },
+  "common.common.block_number_containing_this_u": {
+    "defaultMessage": "Block number containing this User operation",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:195"
+    ]
+  },
+  "common.common.contract_that_executes_bundles": {
+    "defaultMessage": "Contract that executes bundles of User operations",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:205"
+    ]
+  },
+  "common.common.gas_to_compensate_the_bundler": {
+    "defaultMessage": "Gas to compensate the bundler",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:239"
+    ]
+  },
+  "common.common.maximum_fee_per_gas": {
+    "defaultMessage": "Maximum fee per gas ",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:250"
+    ]
+  },
+  "common.common.maximum_priority_fee_per_gas": {
+    "defaultMessage": "Maximum priority fee per gas",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:262"
+    ]
+  },
+  "common.common.helper_contract_to_validate_an": {
+    "defaultMessage": "Helper contract to validate an aggregated signature",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:280"
+    ]
+  },
+  "common.common.aggregator_signature": {
+    "defaultMessage": "Aggregator signature",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:293"
+    ]
+  },
+  "common.common.used_to_validate_a_user_operat": {
+    "defaultMessage": "Used to validate a User operation along with the nonce during verification",
+    "source": [
+      "ui/userOp/UserOpDetails.tsx:350"
+    ]
+  },
+  "common.common.view_all": {
+    "defaultMessage": "View all",
+    "source": [
+      "ui/userOp/UserOpSubHeading.tsx:52"
+    ]
+  },
+  "common.common.user_op_hash": {
+    "defaultMessage": "User op hash",
+    "source": [
+      "ui/userOps/UserOpsListItem.tsx:32",
+      "ui/userOps/UserOpsTable.tsx:31"
+    ]
+  },
+  "common.common.edit": {
+    "defaultMessage": "Edit",
+    "source": [
+      "ui/verifiedAddresses/VerifiedAddressesListItem.tsx:70",
+      "ui/verifiedAddresses/VerifiedAddressesTableItem.tsx:87"
+    ]
+  },
+  "common.common.not_a_token": {
+    "defaultMessage": "Not a token",
+    "source": [
+      "ui/verifiedAddresses/VerifiedAddressesListItem.tsx:46",
+      "ui/verifiedAddresses/VerifiedAddressesTableItem.tsx:47"
+    ]
+  },
+  "common.common.add_details": {
+    "defaultMessage": "Add details",
+    "source": [
+      "ui/verifiedAddresses/VerifiedAddressesListItem.tsx:50",
+      "ui/verifiedAddresses/VerifiedAddressesTableItem.tsx:51"
+    ]
+  },
+  "common.common.token_info": {
+    "defaultMessage": "Token Info",
+    "source": [
+      "ui/verifiedAddresses/VerifiedAddressesListItem.tsx:98",
+      "ui/verifiedAddresses/VerifiedAddressesTable.tsx:23"
+    ]
+  },
+  "common.common.date": {
+    "defaultMessage": "Date",
+    "source": [
+      "ui/verifiedAddresses/VerifiedAddressesListItem.tsx:118",
+      "ui/verifiedAddresses/VerifiedAddressesTable.tsx:26"
+    ]
+  },
+  "common.common.in_progress": {
+    "defaultMessage": "In progress",
+    "source": [
+      "ui/verifiedAddresses/VerifiedAddressesStatus.tsx:13"
+    ]
+  },
+  "common.common.approved": {
+    "defaultMessage": "Approved",
+    "source": [
+      "ui/verifiedAddresses/VerifiedAddressesStatus.tsx:16"
+    ]
+  },
+  "common.common.rejected": {
+    "defaultMessage": "Rejected",
+    "source": [
+      "ui/verifiedAddresses/VerifiedAddressesStatus.tsx:22"
+    ]
+  },
+  "common.common.request_status": {
+    "defaultMessage": "Request status",
+    "source": [
+      "ui/verifiedAddresses/VerifiedAddressesTable.tsx:25"
+    ]
+  },
+  "common.common.total_contracts": {
+    "defaultMessage": "Total contracts",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsCounters.tsx:45"
+    ]
+  },
+  "common.common.solidity": {
+    "defaultMessage": "Solidity",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsFilter.tsx:14"
+    ]
+  },
+  "common.common.vyper": {
+    "defaultMessage": "Vyper",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsFilter.tsx:15"
+    ]
+  },
+  "common.common.yul": {
+    "defaultMessage": "Yul",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsFilter.tsx:16"
+    ]
+  },
+  "common.common.scilla": {
+    "defaultMessage": "Scilla",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsFilter.tsx:17"
+    ]
+  },
+  "common.common.geas": {
+    "defaultMessage": "Geas",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsFilter.tsx:18"
+    ]
+  },
+  "common.common.stylus_rust": {
+    "defaultMessage": "Stylus Rust",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsFilter.tsx:19"
+    ]
+  },
+  "common.common.txs_count": {
+    "defaultMessage": "Txs count",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsListItem.tsx:69"
+    ]
+  },
+  "common.common.language": {
+    "defaultMessage": "Language",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsListItem.tsx:75"
+    ]
+  },
+  "common.common.optimization": {
+    "defaultMessage": "Optimization",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsListItem.tsx:90",
+      "ui/verifiedContracts/VerifiedContractsTableItem.tsx:104"
+    ]
+  },
+  "common.common.constructor_args": {
+    "defaultMessage": "Constructor args",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsListItem.tsx:96",
+      "ui/verifiedContracts/VerifiedContractsTableItem.tsx:111"
+    ]
+  },
+  "common.common.verified": {
+    "defaultMessage": "Verified",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsListItem.tsx:102"
+    ]
+  },
+  "common.common.license": {
+    "defaultMessage": "License",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsListItem.tsx:113",
+      "ui/verifiedContracts/VerifiedContractsTable.tsx:65"
+    ]
+  },
+  "common.common.settings": {
+    "defaultMessage": "Settings",
+    "source": [
+      "ui/verifiedContracts/VerifiedContractsTable.tsx:60"
+    ]
+  },
+  "common.common.balance_descending": {
+    "defaultMessage": "Balance descending",
+    "source": [
+      "ui/verifiedContracts/utils.ts:7"
+    ]
+  },
+  "common.common.balance_ascending": {
+    "defaultMessage": "Balance ascending",
+    "source": [
+      "ui/verifiedContracts/utils.ts:8"
+    ]
+  },
+  "common.common.txs_count_descending": {
+    "defaultMessage": "Txs count descending",
+    "source": [
+      "ui/verifiedContracts/utils.ts:9"
+    ]
+  },
+  "common.common.txs_count_ascending": {
+    "defaultMessage": "Txs count ascending",
+    "source": [
+      "ui/verifiedContracts/utils.ts:10"
+    ]
+  },
+  "common.common.address_that_initiated_the_cro": {
+    "defaultMessage": "Address that initiated the cross-chain transaction",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetails.tsx:62"
+    ]
+  },
+  "common.common.optional_message_data_sent_wit": {
+    "defaultMessage": "Optional message data sent with the transaction",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetails.tsx:129"
+    ]
+  },
+  "common.common.current_state_and_status_of_th": {
+    "defaultMessage": "Current state and status of the cross-chain transaction",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetails.tsx:157"
+    ]
+  },
+  "common.common.detailed_status_message": {
+    "defaultMessage": "Detailed status message",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetails.tsx:176"
+    ]
+  },
+  "common.common.when_the_transaction_was_first": {
+    "defaultMessage": "When the transaction was first created",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetails.tsx:189"
+    ]
+  },
+  "common.common.most_recent_update_to_transact": {
+    "defaultMessage": "Most recent update to transaction status",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetails.tsx:202"
+    ]
+  },
+  "common.common.abort_address": {
+    "defaultMessage": "Abort address",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetails.tsx:295"
+    ]
+  },
+  "common.common.call": {
+    "defaultMessage": "Call",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetails.tsx:301"
+    ]
+  },
+  "common.common.revert_address": {
+    "defaultMessage": "Revert address",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetails.tsx:303"
+    ]
+  },
+  "common.common.gas_limit": {
+    "defaultMessage": "Gas limit",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetails.tsx:325"
+    ]
+  },
+  "common.common.transferred": {
+    "defaultMessage": "Transferred",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleIn.tsx:91",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:83",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:165"
+    ]
+  },
+  "common.common.destination_tx_failed": {
+    "defaultMessage": "Destination tx failed",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:108",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:150",
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:195"
+    ]
+  },
+  "common.common.abort_failed": {
+    "defaultMessage": "Abort failed",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:210"
+    ]
+  },
+  "common.common.abort_executed": {
+    "defaultMessage": "Abort executed",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:210"
+    ]
+  },
+  "common.common.reverting_to": {
+    "defaultMessage": "Reverting to",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:113"
+    ]
+  },
+  "common.common.destination": {
+    "defaultMessage": "Destination",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:128"
+    ]
+  },
+  "common.common.origin": {
+    "defaultMessage": "Origin",
+    "source": [
+      "ui/zetaChain/cctxDetails/ZetaChainCCTXDetailsLifecycleOut.tsx:155"
+    ]
+  },
+  "common.common.there_are_no_cross_chain_trans": {
+    "defaultMessage": "There are no cross chain transactions.",
+    "source": [
+      "ui/zetaChain/cctxs/ZetaChainCCTxs.tsx:186"
+    ]
+  },
+  "common.common.select_chains": {
+    "defaultMessage": "Select chains",
+    "source": [
+      "ui/zetaChain/filters/ZetaChainAddressFilter.tsx:105"
+    ]
+  },
+  "common.common.date_from": {
+    "defaultMessage": "Date from",
+    "source": [
+      "ui/zetaChain/filters/ZetaChainFilterTags.tsx:38"
+    ]
+  },
+  "common.common.date_to": {
+    "defaultMessage": "Date to",
+    "source": [
+      "ui/zetaChain/filters/ZetaChainFilterTags.tsx:46"
+    ]
+  },
+  "common.common.sender_chain": {
+    "defaultMessage": "Sender Chain",
+    "source": [
+      "ui/zetaChain/filters/ZetaChainFilterTags.tsx:81"
+    ]
+  },
+  "common.common.receiver_chain": {
+    "defaultMessage": "Receiver Chain",
+    "source": [
+      "ui/zetaChain/filters/ZetaChainFilterTags.tsx:105"
+    ]
+  },
+  "common.common.receiver_address": {
+    "defaultMessage": "Receiver address",
+    "source": [
+      "ui/zetaChain/filters/ZetaChainReceiverFilter.tsx:24"
+    ]
+  },
+  "common.common.sender_address": {
+    "defaultMessage": "Sender address",
+    "source": [
+      "ui/zetaChain/filters/ZetaChainSenderFilter.tsx:24"
+    ]
+  },
+  "common.common.not_found": {
+    "defaultMessage": "Not found",
+    "source": [
+      "pages/404.tsx:10"
+    ]
+  },
+  "common.common.rollup_feature_is_not_enabled": {
+    "defaultMessage": "Rollup feature is not enabled.",
+    "source": [
+      "pages/batches/[number].tsx:14",
+      "pages/batches/celestia/[height]/[commitment].tsx:14",
+      "pages/batches/index.tsx:12"
+    ]
+  },
+  "common.common.txn_batches_feature_is_not_ena": {
+    "defaultMessage": "Txn batches feature is not enabled.",
+    "source": [
+      "pages/batches/[number].tsx:29",
+      "pages/batches/index.tsx:27"
+    ]
+  },
+  "common.common.celestia_txn_batches_feature_i": {
+    "defaultMessage": "Celestia txn batches feature is not enabled.",
+    "source": [
+      "pages/batches/celestia/[height]/[commitment].tsx:23"
+    ]
+  },
+  "common.common.txn_withdrawals_feature_is_not": {
+    "defaultMessage": "Txn withdrawals feature is not enabled.",
+    "source": [
+      "pages/txn-withdrawals/index.tsx:15"
+    ]
+  }
+}

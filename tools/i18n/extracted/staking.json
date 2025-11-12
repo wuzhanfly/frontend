@@ -1,0 +1,329 @@
+{
+  "staking.common.transaction_hash": {
+    "defaultMessage": "Transaction hash",
+    "source": [
+      "ui/deposits/beaconChain/BeaconChainDepositsListItem.tsx:33",
+      "ui/deposits/beaconChain/BeaconChainDepositsTable.tsx:32"
+    ]
+  },
+  "staking.common.age": {
+    "defaultMessage": "Age",
+    "source": [
+      "ui/deposits/beaconChain/BeaconChainDepositsListItem.tsx:49",
+      "ui/deposits/optimisticL2/OptimisticDepositsListItem.tsx:45",
+      "ui/deposits/scrollL2/ScrollL2DepositsListItem.tsx:55",
+      "ui/deposits/shibarium/DepositsListItem.tsx:66",
+      "ui/deposits/zkEvmL2/ZkEvmL2DepositsListItem.tsx:55",
+      "ui/withdrawals/beaconChain/BeaconChainWithdrawalsListItem.tsx:74",
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsListItem.tsx:60",
+      "ui/withdrawals/scrollL2/ScrollL2WithdrawalsListItem.tsx:54",
+      "ui/withdrawals/shibarium/WithdrawalsListItem.tsx:65",
+      "ui/withdrawals/zkEvmL2/ZkEvmL2WithdrawalsListItem.tsx:54"
+    ]
+  },
+  "staking.common.from": {
+    "defaultMessage": "From",
+    "source": [
+      "ui/deposits/beaconChain/BeaconChainDepositsListItem.tsx:67",
+      "ui/deposits/beaconChain/BeaconChainDepositsTable.tsx:36",
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsListItem.tsx:38",
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsTable.tsx:22"
+    ]
+  },
+  "staking.common.signature": {
+    "defaultMessage": "Signature",
+    "source": [
+      "ui/deposits/beaconChain/BeaconChainDepositsListItem.tsx:83",
+      "ui/deposits/beaconChain/BeaconChainDepositsTable.tsx:38"
+    ]
+  },
+  "staking.common.status": {
+    "defaultMessage": "Status",
+    "source": [
+      "ui/deposits/beaconChain/BeaconChainDepositsListItem.tsx:88",
+      "ui/deposits/beaconChain/BeaconChainDepositsTable.tsx:39",
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsListItem.tsx:71",
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsTable.tsx:28"
+    ]
+  },
+  "staking.common.timestamp": {
+    "defaultMessage": "Timestamp",
+    "source": [
+      "ui/deposits/beaconChain/BeaconChainDepositsTable.tsx:34",
+      "ui/withdrawals/beaconChain/BeaconChainWithdrawalsTable.tsx:45"
+    ]
+  },
+  "staking.common.l1_block_no": {
+    "defaultMessage": "L1 block No",
+    "source": [
+      "ui/deposits/optimisticL2/OptimisticDepositsListItem.tsx:27",
+      "ui/deposits/optimisticL2/OptimisticDepositsTable.tsx:21",
+      "ui/deposits/shibarium/DepositsListItem.tsx:25",
+      "ui/deposits/shibarium/DepositsTable.tsx:21"
+    ]
+  },
+  "staking.common.l2_txn_hash": {
+    "defaultMessage": "L2 txn hash",
+    "source": [
+      "ui/deposits/optimisticL2/OptimisticDepositsListItem.tsx:36",
+      "ui/deposits/optimisticL2/OptimisticDepositsTable.tsx:22",
+      "ui/deposits/scrollL2/ScrollL2DepositsListItem.tsx:64",
+      "ui/deposits/scrollL2/ScrollL2DepositsTable.tsx:29",
+      "ui/deposits/shibarium/DepositsListItem.tsx:46",
+      "ui/deposits/shibarium/DepositsTable.tsx:23",
+      "ui/deposits/zkEvmL2/ZkEvmL2DepositsListItem.tsx:64",
+      "ui/deposits/zkEvmL2/ZkEvmL2DepositsTable.tsx:28",
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsListItem.tsx:49",
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsTable.tsx:23",
+      "ui/withdrawals/scrollL2/ScrollL2WithdrawalsListItem.tsx:45",
+      "ui/withdrawals/scrollL2/ScrollL2WithdrawalsTable.tsx:24",
+      "ui/withdrawals/shibarium/WithdrawalsListItem.tsx:35",
+      "ui/withdrawals/shibarium/WithdrawalsTable.tsx:22",
+      "ui/withdrawals/zkEvmL2/ZkEvmL2WithdrawalsListItem.tsx:44",
+      "ui/withdrawals/zkEvmL2/ZkEvmL2WithdrawalsTable.tsx:23"
+    ]
+  },
+  "staking.common.l1_txn_hash": {
+    "defaultMessage": "L1 txn hash",
+    "source": [
+      "ui/deposits/optimisticL2/OptimisticDepositsListItem.tsx:54",
+      "ui/deposits/optimisticL2/OptimisticDepositsTable.tsx:27",
+      "ui/deposits/scrollL2/ScrollL2DepositsListItem.tsx:45",
+      "ui/deposits/scrollL2/ScrollL2DepositsTable.tsx:24",
+      "ui/deposits/shibarium/DepositsListItem.tsx:35",
+      "ui/deposits/shibarium/DepositsTable.tsx:22",
+      "ui/deposits/zkEvmL2/ZkEvmL2DepositsListItem.tsx:44",
+      "ui/deposits/zkEvmL2/ZkEvmL2DepositsTable.tsx:23",
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsListItem.tsx:80",
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsTable.tsx:29",
+      "ui/withdrawals/scrollL2/ScrollL2WithdrawalsListItem.tsx:63",
+      "ui/withdrawals/scrollL2/ScrollL2WithdrawalsTable.tsx:29",
+      "ui/withdrawals/shibarium/WithdrawalsListItem.tsx:45",
+      "ui/withdrawals/shibarium/WithdrawalsTable.tsx:23",
+      "ui/withdrawals/zkEvmL2/ZkEvmL2WithdrawalsListItem.tsx:63",
+      "ui/withdrawals/zkEvmL2/ZkEvmL2WithdrawalsTable.tsx:28"
+    ]
+  },
+  "staking.common.l1_txn_origin": {
+    "defaultMessage": "L1 txn origin",
+    "source": [
+      "ui/deposits/optimisticL2/OptimisticDepositsListItem.tsx:64",
+      "ui/deposits/optimisticL2/OptimisticDepositsTable.tsx:28"
+    ]
+  },
+  "staking.common.gas_limit": {
+    "defaultMessage": "Gas limit",
+    "source": [
+      "ui/deposits/optimisticL2/OptimisticDepositsListItem.tsx:74",
+      "ui/deposits/optimisticL2/OptimisticDepositsTable.tsx:29"
+    ]
+  },
+  "staking.common.l1_block": {
+    "defaultMessage": "L1 block",
+    "source": [
+      "ui/deposits/scrollL2/ScrollL2DepositsListItem.tsx:29",
+      "ui/deposits/scrollL2/ScrollL2DepositsTable.tsx:22",
+      "ui/deposits/zkEvmL2/ZkEvmL2DepositsListItem.tsx:27",
+      "ui/deposits/zkEvmL2/ZkEvmL2DepositsTable.tsx:21"
+    ]
+  },
+  "staking.common.index": {
+    "defaultMessage": "Index",
+    "source": [
+      "ui/deposits/scrollL2/ScrollL2DepositsListItem.tsx:38",
+      "ui/deposits/scrollL2/ScrollL2DepositsTable.tsx:23",
+      "ui/deposits/zkEvmL2/ZkEvmL2DepositsListItem.tsx:37",
+      "ui/deposits/zkEvmL2/ZkEvmL2DepositsTable.tsx:22",
+      "ui/withdrawals/beaconChain/BeaconChainWithdrawalsListItem.tsx:37",
+      "ui/withdrawals/beaconChain/BeaconChainWithdrawalsTable.tsx:41",
+      "ui/withdrawals/scrollL2/ScrollL2WithdrawalsListItem.tsx:38",
+      "ui/withdrawals/scrollL2/ScrollL2WithdrawalsTable.tsx:23",
+      "ui/withdrawals/zkEvmL2/ZkEvmL2WithdrawalsListItem.tsx:37",
+      "ui/withdrawals/zkEvmL2/ZkEvmL2WithdrawalsTable.tsx:22"
+    ]
+  },
+  "staking.common.user": {
+    "defaultMessage": "User",
+    "source": [
+      "ui/deposits/shibarium/DepositsListItem.tsx:56",
+      "ui/deposits/shibarium/DepositsTable.tsx:24",
+      "ui/withdrawals/shibarium/WithdrawalsListItem.tsx:56",
+      "ui/withdrawals/shibarium/WithdrawalsTable.tsx:24"
+    ]
+  },
+  "staking.common.token": {
+    "defaultMessage": "Token",
+    "source": [
+      "ui/deposits/zkEvmL2/ZkEvmL2DepositsListItem.tsx:87",
+      "ui/deposits/zkEvmL2/ZkEvmL2DepositsTable.tsx:30",
+      "ui/withdrawals/zkEvmL2/ZkEvmL2WithdrawalsListItem.tsx:87",
+      "ui/withdrawals/zkEvmL2/ZkEvmL2WithdrawalsTable.tsx:30"
+    ]
+  },
+  "staking.common.merits": {
+    "defaultMessage": "Merits",
+    "source": [
+      "ui/rewards/RewardsButton.tsx:57",
+      "ui/rewards/login/RewardsLoginModal.tsx:16",
+      "ui/rewards/login/RewardsLoginModal.tsx:19",
+      "ui/rewards/login/RewardsLoginModal.tsx:24",
+      "ui/rewards/login/steps/LoginStepContent.tsx:28"
+    ]
+  },
+  "staking.common.all_achievements_are_earned": {
+    "defaultMessage": "All achievements are earned",
+    "source": [
+      "ui/rewards/hooks/useStreakBadges.ts:41"
+    ]
+  },
+  "staking.common.login": {
+    "defaultMessage": "Login",
+    "source": [
+      "ui/rewards/login/RewardsLoginModal.tsx:77"
+    ]
+  },
+  "staking.common.congratulations": {
+    "defaultMessage": "Congratulations",
+    "source": [
+      "ui/rewards/login/RewardsLoginModal.tsx:77"
+    ]
+  },
+  "staking.common.registration": {
+    "defaultMessage": "Registration",
+    "source": [
+      "ui/rewards/login/steps/CongratsStepContent.tsx:56"
+    ]
+  },
+  "staking.common.referral_program": {
+    "defaultMessage": "Referral program",
+    "source": [
+      "ui/rewards/login/steps/CongratsStepContent.tsx:60"
+    ]
+  },
+  "staking.common.referral_link": {
+    "defaultMessage": "Referral link",
+    "source": [
+      "ui/rewards/login/steps/CongratsStepContent.tsx:105"
+    ]
+  },
+  "staking.common.open": {
+    "defaultMessage": "Open",
+    "source": [
+      "ui/rewards/login/steps/CongratsStepContent.tsx:138"
+    ]
+  },
+  "staking.common.continue_with_wallet": {
+    "defaultMessage": "Continue with wallet",
+    "source": [
+      "ui/rewards/login/steps/LoginStepContent.tsx:103"
+    ]
+  },
+  "staking.common.connect_wallet": {
+    "defaultMessage": "Connect wallet",
+    "source": [
+      "ui/rewards/login/steps/LoginStepContent.tsx:107"
+    ]
+  },
+  "staking.common.get_started": {
+    "defaultMessage": "Get started",
+    "source": [
+      "ui/rewards/login/steps/LoginStepContent.tsx:110"
+    ]
+  },
+  "staking.common.continue": {
+    "defaultMessage": "Continue",
+    "source": [
+      "ui/rewards/login/steps/LoginStepContent.tsx:110"
+    ]
+  },
+  "staking.common.add_wallet_to_account": {
+    "defaultMessage": "Add wallet to account",
+    "source": [
+      "ui/rewards/login/steps/LoginStepContent.tsx:112"
+    ]
+  },
+  "staking.common.log_in_to_account": {
+    "defaultMessage": "Log in to account",
+    "source": [
+      "ui/rewards/login/steps/LoginStepContent.tsx:112"
+    ]
+  },
+  "staking.common.merits_program": {
+    "defaultMessage": "Merits program",
+    "source": [
+      "ui/rewards/login/steps/LoginStepContent.tsx:119"
+    ]
+  },
+  "staking.common.referral_code_switch": {
+    "defaultMessage": "Referral code switch",
+    "source": [
+      "ui/rewards/login/steps/LoginStepContent.tsx:138"
+    ]
+  },
+  "staking.common.code": {
+    "defaultMessage": "Code",
+    "source": [
+      "ui/rewards/login/steps/LoginStepContent.tsx:143"
+    ]
+  },
+  "staking.common.sign_message_in_your_wallet": {
+    "defaultMessage": "Sign message in your wallet",
+    "source": [
+      "ui/rewards/login/steps/LoginStepContent.tsx:172"
+    ]
+  },
+  "staking.common.validator_index": {
+    "defaultMessage": "Validator index",
+    "source": [
+      "ui/withdrawals/beaconChain/BeaconChainWithdrawalsListItem.tsx:42",
+      "ui/withdrawals/beaconChain/BeaconChainWithdrawalsTable.tsx:42"
+    ]
+  },
+  "staking.common.to": {
+    "defaultMessage": "To",
+    "source": [
+      "ui/withdrawals/beaconChain/BeaconChainWithdrawalsListItem.tsx:62",
+      "ui/withdrawals/beaconChain/BeaconChainWithdrawalsTable.tsx:44"
+    ]
+  },
+  "staking.common.msg_nonce": {
+    "defaultMessage": "Msg nonce",
+    "source": [
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsListItem.tsx:29",
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsTable.tsx:21"
+    ]
+  },
+  "staking.common.time_left": {
+    "defaultMessage": "Time left",
+    "source": [
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsListItem.tsx:94",
+      "ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsTable.tsx:30"
+    ]
+  },
+  "staking.common.l2_block": {
+    "defaultMessage": "L2 block",
+    "source": [
+      "ui/withdrawals/scrollL2/ScrollL2WithdrawalsListItem.tsx:29",
+      "ui/withdrawals/scrollL2/ScrollL2WithdrawalsTable.tsx:22"
+    ]
+  },
+  "staking.common.l2_block_no": {
+    "defaultMessage": "L2 block No",
+    "source": [
+      "ui/withdrawals/shibarium/WithdrawalsListItem.tsx:25",
+      "ui/withdrawals/shibarium/WithdrawalsTable.tsx:21"
+    ]
+  },
+  "staking.common.deposits_feature_is_not_enable": {
+    "defaultMessage": "Deposits feature is not enabled.",
+    "source": [
+      "pages/deposits/index.tsx:36"
+    ]
+  },
+  "staking.common.withdrawals_feature_is_not_ena": {
+    "defaultMessage": "Withdrawals feature is not enabled.",
+    "source": [
+      "pages/withdrawals/index.tsx:36"
+    ]
+  }
+}

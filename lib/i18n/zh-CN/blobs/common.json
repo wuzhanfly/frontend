@@ -1,0 +1,12 @@
+{
+  "blobs.common.image": "图像",
+  "blobs.common.raw": "原始",
+  "blobs.common.not_an_image": "非图像",
+  "blobs.common.blob_data": "Blob数据",
+  "blobs.common.blob_image_representation": "Blob图像表示",
+  "blobs.common.commitment_to_the_data_in_the_": "对blob中数据的承诺",
+  "blobs.common.blob_size_in_bytes": "Blob大小（字节）",
+  "blobs.common.hash_of_the_transaction_with_t": "包含此blob的交易哈希",
+  "blobs.common.this_blob_is_not_yet_indexed": "此blob尚未建立索引",
+  "blobs.common.blob_details": "Blob详情"
+}

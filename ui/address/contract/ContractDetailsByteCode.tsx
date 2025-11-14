@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Address } from 'types/api/address';
 import type { SmartContract } from 'types/api/contract';
@@ -17,6 +18,7 @@ interface Props {
 }
 
 const ContractDetailsByteCode = ({ data, isLoading, addressData }: Props) => {
+  const { t } = useTranslation();
   const canBeVerified = ![ 'selfdestructed', 'failed' ].includes(data.creation_status || '') && !data?.is_verified && addressData.proxy_type !== 'eip7702';
 
   const creationStatusText = (() => {
@@ -24,7 +26,7 @@ const ContractDetailsByteCode = ({ data, isLoading, addressData }: Props) => {
       case 'selfdestructed':
         return 'This contract self-destructed after deployment and there is no runtime bytecode. Below is the raw creation bytecode.';
       case 'failed':
-        return 'Contract creation failed and there is no runtime bytecode. Below is the raw creation bytecode.';
+        return t('addresses.common.contract_creation_failed_and_t');
       default:
         return null;
     }
@@ -35,7 +37,7 @@ const ContractDetailsByteCode = ({ data, isLoading, addressData }: Props) => {
       { data?.creation_bytecode && (
         <RawDataSnippet
           data={ data.creation_bytecode }
-          title="Contract creation code"
+          title={ t('addresses.common.contract_creation_code') }
           rightSlot={ canBeVerified ? (
             <ContractDetailsVerificationButton
               isLoading={ isLoading }

@@ -1,6 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressMudRecords, AddressMudRecordsFilter, AddressMudRecordsSorting } from 'types/api/address';
 
@@ -42,12 +43,13 @@ const AddressMudRecordsTable = ({
   top,
   sorting,
   toggleSorting,
-  filters,
   setFilters,
+  filters,
   toggleTableHasHorizontalScroll,
   scrollRef,
   hash,
 }: Props) => {
+  const { t } = useTranslation();
   const totalColsCut = data.schema.key_names.length + data.schema.value_names.length;
   const isMobile = useIsMobile(false);
   const [ colsCutCount, setColsCutCount ] = React.useState<number>(isMobile ? MIN_CUT_COUNT : 0);
@@ -131,7 +133,7 @@ const AddressMudRecordsTable = ({
 
   const cutButton = (
     <TableColumnHeader width={ `${ CUT_COL_WIDTH }px ` } verticalAlign="baseline">
-      <Tooltip content={ isOpened ? 'Hide columns' : 'Show all columns' }>
+      <Tooltip content={ isOpened ? t('addresses.common.hide_columns') : t('addresses.common.show_all_columns') }>
         <Link onClick={ toggleIsOpen } aria-label="show/hide columns">{ middot }{ middot }{ middot }</Link>
       </Tooltip>
     </TableColumnHeader>

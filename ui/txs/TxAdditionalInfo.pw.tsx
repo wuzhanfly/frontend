@@ -7,18 +7,18 @@ import TxAdditionalInfo from './TxAdditionalInfo';
 
 test('regular transaction +@dark-mode', async({ render, page }) => {
   const component = await render(<TxAdditionalInfo tx={ txMock.base }/>);
-  await component.getByLabel('Transaction info').click();
+  await component.getByLabel('shared.common.transaction_info').click();
   await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 400, height: 600 } });
 });
 
 test('regular transaction +@mobile -@default', async({ render, page }) => {
   const component = await render(<TxAdditionalInfo tx={ txMock.base } isMobile/>);
-  await component.getByLabel('Transaction info').click();
+  await component.getByLabel('shared.common.transaction_info').click();
   await expect(page).toHaveScreenshot();
 });
 
 test('blob transaction', async({ render, page }) => {
   const component = await render(<TxAdditionalInfo tx={ txMock.withBlob }/>);
-  await component.getByLabel('Transaction info').click();
+  await component.getByLabel('shared.common.transaction_info').click();
   await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 400, height: 600 } });
 });

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import type { ZetaChainCCTXFilterParams } from 'types/client/zetaChain';
 
 import ZetaChainAddressFilter from './ZetaChainAddressFilter';
@@ -15,13 +16,14 @@ type Props = {
 };
 
 const ZetaChainReceiverFilter = (props: Props) => {
+  const { t } = useTranslation();
   return (
     <ZetaChainAddressFilter
       { ...props }
       filterParam={ FILTER_PARAM_RECEIVER }
       chainFilterParam={ FILTER_PARAM_RECEIVER_CHAIN }
-      title="Receiver"
-      placeholder="Receiver address"
+      title={t('common.common.receiver')}
+      placeholder={t('common.common.receiver_address')}
     />
   );
 };

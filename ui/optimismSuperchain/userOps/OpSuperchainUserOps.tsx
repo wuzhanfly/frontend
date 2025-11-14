@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import multichainConfig from 'configs/multichain';
 import { MultichainProvider } from 'lib/contexts/multichain';
@@ -15,6 +16,7 @@ import UserOpsListItem from 'ui/userOps/UserOpsListItem';
 import UserOpsTable from 'ui/userOps/UserOpsTable';
 
 const OpSuperchainUserOps = () => {
+  const { t } = useTranslation();
 
   const query = useQueryWithPages({
     resourceName: 'general:user_ops',
@@ -68,13 +70,13 @@ const OpSuperchainUserOps = () => {
   return (
     <>
       <PageTitle
-        title="User operations"
+        title={t('transactions.common.user_operations')}
         withTextAd
       />
       <DataListDisplay
         isError={ query.isError }
         itemsNum={ query.data?.items?.length }
-        emptyText="There are no user operations."
+        emptyText={t('common.common.there_are_no_user_operations')}
         actionBar={ actionBar }
         showActionBarIfError
         showActionBarIfEmpty

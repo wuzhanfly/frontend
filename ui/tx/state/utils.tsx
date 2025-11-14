@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TxStateChange } from 'types/api/txStateChanges';
 
@@ -18,10 +19,12 @@ import TokenEntity from 'ui/shared/entities/token/TokenEntity';
 import TxStateTokenIdList from './TxStateTokenIdList';
 
 export function getStateElements(data: TxStateChange, isLoading?: boolean) {
+  const { t } = useTranslation();
   const tag = (() => {
+  const { t } = useTranslation();
     if (data.is_miner) {
       return (
-        <Tooltip content="A block producer who successfully included the block into the blockchain">
+        <Tooltip content={t('transactions.common.a_block_producer_who_successfu')}>
           <Badge textTransform="capitalize" colorPalette="yellow" loading={ isLoading }>
             { getNetworkValidatorTitle() }
           </Badge>
@@ -31,6 +34,7 @@ export function getStateElements(data: TxStateChange, isLoading?: boolean) {
 
     if (data.address.hash === ZERO_ADDRESS) {
       const changeDirection = (() => {
+  const { t } = useTranslation();
         if (Array.isArray(data.change)) {
           const firstChange = data.change[0];
           return firstChange.direction;
@@ -39,9 +43,9 @@ export function getStateElements(data: TxStateChange, isLoading?: boolean) {
       })();
 
       if (changeDirection) {
-        const text = changeDirection === 'from' ? 'Mint' : 'Burn';
+        const text = changeDirection === 'from' ? t('transactions.common.mint') : t('transactions.common.burn');
         return (
-          <Tooltip content="Address used in tokens mintings and burnings">
+          <Tooltip content={t('transactions.common.address_used_in_tokens_minting')}>
             <Badge textTransform="capitalize" colorPalette="yellow" loading={ isLoading }>{ text } address</Badge>
           </Tooltip>
         );
@@ -92,6 +96,7 @@ export function getStateElements(data: TxStateChange, isLoading?: boolean) {
       const beforeBn = BigNumber(data.balance_before || '0').div(BigNumber(10 ** (Number(data.token.decimals))));
       const afterBn = BigNumber(data.balance_after || '0').div(BigNumber(10 ** (Number(data.token.decimals))));
       const change = (() => {
+  const { t } = useTranslation();
         let differenceBn;
         if (typeof data.change === 'string') {
           differenceBn = BigNumber(data.change || '0').div(BigNumber(10 ** (Number(data.token.decimals))));
@@ -114,6 +119,7 @@ export function getStateElements(data: TxStateChange, isLoading?: boolean) {
       })();
 
       const tokenId = (() => {
+  const { t } = useTranslation();
         if (!Array.isArray(data.change)) {
           if ('token_id' in data && data.token_id) {
             return (

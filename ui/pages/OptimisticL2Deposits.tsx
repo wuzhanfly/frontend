@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { L2_DEPOSIT_ITEM } from 'stubs/L2';
@@ -15,6 +16,7 @@ import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 import StickyPaginationWithText from 'ui/shared/StickyPaginationWithText';
 
 const OptimisticL2Deposits = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:optimistic_l2_deposits',
     options: {
@@ -56,6 +58,7 @@ const OptimisticL2Deposits = () => {
   ) : null;
 
   const text = (() => {
+  const { t } = useTranslation();
     if (countersQuery.isError) {
       return null;
     }
@@ -75,7 +78,7 @@ const OptimisticL2Deposits = () => {
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items?.length }
-        emptyText="There are no deposits."
+        emptyText={t('common.common.there_are_no_deposits')}
         actionBar={ actionBar }
       >
         { content }

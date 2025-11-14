@@ -3,6 +3,7 @@ import React from 'react';
 
 import { Tooltip } from 'toolkit/chakra/tooltip';
 import IconSvg from 'ui/shared/IconSvg';
+import { useTranslation } from 'react-i18next';
 
 import type { TxCourseType } from './utils';
 
@@ -13,6 +14,8 @@ interface Props {
 }
 
 const AddressFromToIcon = ({ isLoading, type, className }: Props) => {
+  const { t } = useTranslation();
+
   const styles = {
     'in': {
       color: { _light: 'green.500', _dark: 'green.200' },
@@ -32,9 +35,9 @@ const AddressFromToIcon = ({ isLoading, type, className }: Props) => {
     },
   };
   const labels = {
-    'in': 'Incoming txn',
-    out: 'Outgoing txn',
-    self: 'Txn to the same address',
+    'in': t('addresses.common.incoming_txn'),
+    out: t('addresses.common.outgoing_txn'),
+    self: t('addresses.common.txn_to_the_same_address'),
   };
 
   const icon = (

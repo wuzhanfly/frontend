@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ArbitrumL2TxnBatchDACelestia } from 'types/api/arbitrumL2';
 
@@ -16,10 +17,11 @@ interface Props {
 }
 
 const ArbitrumL2TxnBatchDetailsCelestiaDA = ({ data }: Props) => {
+  const { t } = useTranslation();
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="The block number in Celestia where the Data Availability blob was published"
+        hint={t('common.common.the_block_number_in_celestia_w')}
       >
         Height
       </DetailedInfo.ItemLabel>
@@ -28,7 +30,7 @@ const ArbitrumL2TxnBatchDetailsCelestiaDA = ({ data }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="The Data Availability blob’s unique cryptographic proof"
+        hint={t('common.common.the_data_availability_blobs_un')}
       >
         Commitment
       </DetailedInfo.ItemLabel>

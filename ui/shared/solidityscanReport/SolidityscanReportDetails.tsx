@@ -1,5 +1,6 @@
 import { Box, Flex, Text, Grid, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SolidityScanReportSeverityDistribution } from 'lib/solidityScan/schema';
 
@@ -9,13 +10,13 @@ type DistributionItem = {
   color: string;
 };
 
-const DISTRIBUTION_ITEMS: Array<DistributionItem> = [
+const getDistributionItems = (t: (key: string) => string): Array<DistributionItem> => [
   { id: 'critical', name: 'Critical', color: '#891F11' },
-  { id: 'high', name: 'High', color: '#EC672C' },
-  { id: 'medium', name: 'Medium', color: '#FBE74D' },
-  { id: 'low', name: 'Low', color: '#68C88E' },
-  { id: 'informational', name: 'Informational', color: '#A3AEBE' },
-  { id: 'gas', name: 'Gas', color: '#A47585' },
+  { id: 'high', name: t('shared.common.high'), color: '#EC672C' },
+  { id: 'medium', name: t('shared.common.medium'), color: '#FBE74D' },
+  { id: 'low', name: t('shared.common.low'), color: '#68C88E' },
+  { id: 'informational', name: t('shared.common.informational'), color: '#A3AEBE' },
+  { id: 'gas', name: t('shared.common.gas'), color: '#A47585' },
 ];
 
 interface Props {
@@ -30,6 +31,7 @@ type ItemProps = {
 };
 
 const SolidityScanReportItem = ({ item, vulnerabilities, vulnerabilitiesCount }: ItemProps) => {
+  const { t } = useTranslation();
   const vulnerability = vulnerabilities[item.id];
 
   if (vulnerability === undefined) {
@@ -51,9 +53,11 @@ const SolidityScanReportItem = ({ item, vulnerabilities, vulnerabilitiesCount }:
 };
 
 const SolidityscanReportDetails = ({ vulnerabilities, vulnerabilitiesCount }: Props) => {
+  const { t } = useTranslation();
+  const distributionItems = getDistributionItems(t);
   return (
     <Grid templateColumns="20px 1fr 100px" alignItems="center" rowGap={ 2 }>
-      { DISTRIBUTION_ITEMS.map(item => (
+      { distributionItems.map(item => (
         <SolidityScanReportItem item={ item } key={ item.id } vulnerabilities={ vulnerabilities } vulnerabilitiesCount={ vulnerabilitiesCount }/>
       )) }
     </Grid>

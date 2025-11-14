@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 import type { TokenType } from 'types/api/token';
@@ -31,6 +32,7 @@ const TAB_LIST_PROPS = {
 };
 
 const OpSuperchainTokenTransfers = () => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const router = useRouter();
   const tab = getQueryParamString(router.query.tab);
@@ -43,12 +45,12 @@ const OpSuperchainTokenTransfers = () => {
     return [
       {
         id: 'index',
-        title: 'Cross-chain',
-        component: <div>Coming soon 🔜</div>,
+        title: t('transactions.common.crosschain'),
+        component: <div>{t('account.common.coming_soon_')}</div>,
       },
       {
         id: 'local',
-        title: 'Local',
+        title: t('common.common.local'),
         component: (
           <MultichainProvider chainSlug={ queryLocal.query.chainValue?.[0] }>
             <OpSuperchainTokenTransfersLocal
@@ -84,7 +86,7 @@ const OpSuperchainTokenTransfers = () => {
     <>
       <PageTitle
         withTextAd
-        title="Token transfers"
+        title={t('transactions.common.token_transfers')}
       />
       <RoutedTabs
         tabs={ tabs }

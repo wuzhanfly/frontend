@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Field } from 'toolkit/chakra/field';
 import { Input } from 'toolkit/chakra/input';
@@ -9,19 +10,20 @@ import IconSvg from 'ui/shared/IconSvg';
 import { Section, Container, SectionHeader, SamplesStack, Sample, SectionSubHeader } from './parts';
 
 const InputShowcase = () => {
+  const { t } = useTranslation();
   return (
     <Container value="input">
       <Section>
         <SectionHeader>Size</SectionHeader>
         <SamplesStack>
           <Sample label="size: sm">
-            <Input type="text" placeholder="Name" size="sm"/>
+            <Input type="text" placeholder={t('validators.common.name')} size="sm"/>
           </Sample>
           <Sample label="size: md">
-            <Input type="text" placeholder="Name" size="md"/>
+            <Input type="text" placeholder={t('validators.common.name')} size="md"/>
           </Sample>
           <Sample label="size: lg">
-            <Input type="text" placeholder="Name" size="lg"/>
+            <Input type="text" placeholder={t('validators.common.name')} size="lg"/>
           </Sample>
         </SamplesStack>
       </Section>
@@ -30,7 +32,7 @@ const InputShowcase = () => {
         <SectionHeader>Variant</SectionHeader>
         <SamplesStack>
           <Sample label="variant: outline" maxW="300px">
-            <Input type="text" placeholder="Name"/>
+            <Input type="text" placeholder={t('validators.common.name')}/>
             <Input type="text" placeholder="Name (disabled)" disabled/>
             <Input type="text" placeholder="Name (readOnly)" readOnly/>
             <Input type="text" placeholder="Name (invalid)" data-invalid/>
@@ -42,14 +44,14 @@ const InputShowcase = () => {
       <Section>
         <SectionHeader>Input group</SectionHeader>
         <SamplesStack>
-          <Sample label="with end element">
-            <Field label="Referral code" required floating size="lg" w="300px" flexShrink={ 0 }>
+          <Sample label={t('common.common.with_end_element')}>
+            <Field label={t('dashboard.common.referral_code')} required floating size="lg" w="300px" flexShrink={ 0 }>
               <InputGroup endElement={ <IconSvg name="copy" boxSize={ 5 }/> } endElementProps={{ px: 3 }}>
                 <Input/>
               </InputGroup>
             </Field>
           </Sample>
-          <Sample label="with start element">
+          <Sample label={t('common.common.with_start_element')}>
             <InputGroup startElement={ <IconSvg name="collection" boxSize={ 5 }/> } startElementProps={{ px: 2 }}>
               <Input placeholder="Type in something"/>
             </InputGroup>
@@ -62,8 +64,8 @@ const InputShowcase = () => {
         <SectionSubHeader>Filter input</SectionSubHeader>
         <SamplesStack>
           <Sample>
-            <FilterInput placeholder="Search by method name"/>
-            <FilterInput placeholder="Search by method name" loading/>
+            <FilterInput placeholder={t('common.common.search_by_method_name')}/>
+            <FilterInput placeholder={t('common.common.search_by_method_name')} loading/>
           </Sample>
         </SamplesStack>
       </Section>

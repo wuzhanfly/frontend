@@ -1,5 +1,6 @@
 import { chakra, HStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Button } from 'toolkit/chakra/button';
 import IconSvg from 'ui/shared/IconSvg';
@@ -13,14 +14,16 @@ interface Props {
 }
 
 const UptimeStatus = ({ status, onReconnect }: Props) => {
+  const { t } = useTranslation();
 
   const statusTag = (() => {
+  const { t } = useTranslation();
     switch (status) {
       case 'connected':
-        return <StatusTag type="ok" text="Connected"/>;
+        return <StatusTag type="ok" text={t('marketplace.common.connected')}/>;
       case 'disconnected':
       case 'error':
-        return <StatusTag type="error" text="Disconnected"/>;
+        return <StatusTag type="error" text={t('shared.common.disconnected')}/>;
       case 'initial':
         return <StatusTag type="pending" text="Initializing"/>;
     }

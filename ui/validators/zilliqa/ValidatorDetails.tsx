@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ValidatorZilliqa } from 'types/api/validators';
 
@@ -20,10 +21,11 @@ interface Props {
 }
 
 const ValidatorDetails = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
   return (
     <DetailedInfo.Container>
       <DetailedInfo.ItemLabel
-        hint="Index of the staker in the committee"
+        hint={t('validators.common.index_of_the_staker_in_the_com')}
         isLoading={ isLoading }
       >
         Index
@@ -35,7 +37,7 @@ const ValidatorDetails = ({ data, isLoading }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Staker's balance"
+        hint={t('validators.common.stakers_balance')}
         isLoading={ isLoading }
       >
         Staked
@@ -48,7 +50,7 @@ const ValidatorDetails = ({ data, isLoading }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="libp2p peer ID, corresponding to the staker's BLS public key"
+        hint={t('validators.common.libp2p_peer_id_corresponding_t')}
         isLoading={ isLoading }
       >
         Peer ID
@@ -83,7 +85,7 @@ const ValidatorDetails = ({ data, isLoading }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="The address whose key the validator uses to sign cross-chain events"
+        hint={t('validators.common.the_address_whose_key_the_vali')}
         isLoading={ isLoading }
       >
         Signing address
@@ -93,7 +95,7 @@ const ValidatorDetails = ({ data, isLoading }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Block number at which the staker was added"
+        hint={t('validators.common.block_number_at_which_the_stak')}
         isLoading={ isLoading }
       >
         Added at block

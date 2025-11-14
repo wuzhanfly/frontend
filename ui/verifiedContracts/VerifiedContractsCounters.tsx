@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useApiQuery from 'lib/api/useApiQuery';
@@ -9,6 +10,7 @@ import StatsWidget from 'ui/shared/stats/StatsWidget';
 const isStatsFeatureEnabled = config.features.stats.isEnabled;
 
 const VerifiedContractsCounters = () => {
+  const { t } = useTranslation();
   const countersStatsQuery = useApiQuery('stats:pages_contracts', {
     queryOptions: {
       enabled: isStatsFeatureEnabled,
@@ -42,7 +44,7 @@ const VerifiedContractsCounters = () => {
   return (
     <Box columnGap={ 3 } rowGap={ 3 } mb={ 6 } display="grid" gridTemplateColumns={{ base: '1fr', lg: 'repeat(2, 1fr)' }}>
       <StatsWidget
-        label="Total contracts"
+        label={t('common.common.total_contracts')}
         value={ Number(contractsCount).toLocaleString() }
         diff={ newContractsCount }
         diffFormatted={ Number(newContractsCount).toLocaleString() }
@@ -51,7 +53,7 @@ const VerifiedContractsCounters = () => {
         // href={ config.features.stats.isEnabled ? { pathname: '/stats/[id]', query: { id: 'contractsGrowth' } } : undefined }
       />
       <StatsWidget
-        label="Verified contracts"
+        label={t('common.common.verified_contracts')}
         value={ Number(verifiedContractsCount).toLocaleString() }
         diff={ newVerifiedContractsCount }
         diffFormatted={ Number(newVerifiedContractsCount).toLocaleString() }

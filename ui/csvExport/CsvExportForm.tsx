@@ -2,6 +2,7 @@ import { chakra, Flex } from '@chakra-ui/react';
 import React from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm, FormProvider } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from './types';
 import type { CsvExportParams } from 'types/client/address';
@@ -30,6 +31,7 @@ interface Props {
 }
 
 const CsvExportForm = ({ hash, resource, filterType, filterValue, fileNameTemplate, exportType }: Props) => {
+  const { t } = useTranslation();
   const formApi = useForm<FormFields>({
     mode: 'onBlur',
     defaultValues: {
@@ -88,7 +90,7 @@ const CsvExportForm = ({ hash, resource, filterType, filterValue, fileNameTempla
     } catch (error) {
       toaster.error({
         title: 'Error',
-        description: (error as Error)?.message || 'Something went wrong. Try again later.',
+        description: (error as Error)?.message || t('marketplace.common.something_went_wrong_try_again'),
       });
     }
 

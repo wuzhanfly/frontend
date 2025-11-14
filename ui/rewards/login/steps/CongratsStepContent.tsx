@@ -1,5 +1,6 @@
 import { Text, Box, Flex, Center } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -17,6 +18,7 @@ type Props = {
 };
 
 const CongratsStepContent = ({ isReferral, customReferralReward }: Props) => {
+  const { t } = useTranslation();
   const { referralsQuery, rewardsConfigQuery } = useRewardsContext();
 
   const registrationReward = Number(rewardsConfigQuery.data?.rewards?.registration);
@@ -53,11 +55,11 @@ const CongratsStepContent = ({ isReferral, customReferralReward }: Props) => {
             <Flex flexDirection="column" justifyContent="space-between" gap={ 2 }>
               { [
                 {
-                  title: 'Registration',
+                  title: t('staking.common.registration'),
                   value: registrationReward || 'N/A',
                 },
                 {
-                  title: 'Referral program',
+                  title: t('staking.common.referral_program'),
                   value: referralReward || 'N/A',
                 },
               ].map(({ title, value }) => (
@@ -102,7 +104,7 @@ const CongratsStepContent = ({ isReferral, customReferralReward }: Props) => {
           { ' ' }bonus on all Merits earned by your referrals
         </Text>
         <RewardsReadOnlyInputWithCopy
-          label="Referral link"
+          label={t('staking.common.referral_link')}
           value={ refLink }
           isLoading={ referralsQuery.isLoading }
           mt={ 3 }

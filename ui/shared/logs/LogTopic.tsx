@@ -1,6 +1,7 @@
 import { createListCollection, Flex } from '@chakra-ui/react';
 import { capitalize } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import hexToAddress from 'lib/hexToAddress';
 import hexToUtf8 from 'lib/hexToUtf8';
@@ -36,6 +37,7 @@ const collection = createListCollection({
 });
 
 const LogTopic = ({ hex, index, isLoading }: Props) => {
+  const { t } = useTranslation();
   const [ selectedDataType, setSelectedDataType ] = React.useState<DataType>('hex');
 
   const handleSelectChange = React.useCallback((details: { value: Array<string> }) => {
@@ -45,6 +47,7 @@ const LogTopic = ({ hex, index, isLoading }: Props) => {
   const value = VALUE_CONVERTERS[selectedDataType.toLowerCase() as Lowercase<DataType>](hex);
 
   const content = (() => {
+  const { t } = useTranslation();
     switch (selectedDataType) {
       case 'hex':
       case 'number':
@@ -92,7 +95,7 @@ const LogTopic = ({ hex, index, isLoading }: Props) => {
           width="fit-content"
         >
           <SelectControl w="105px" loading={ isLoading }>
-            <SelectValueText placeholder="Data type"/>
+            <SelectValueText placeholder={t('transactions.common.data_type')}/>
           </SelectControl>
           <SelectContent>
             { collection.items.map((item) => (

@@ -78,7 +78,8 @@ export const formatAbi = (abi: Abi) => {
     });
 };
 
-export const TYPE_FILTER_OPTIONS: Array<{ value: MethodType; title: string }> = [
+// These values will be provided by components using i18n
+export const getDefaultTypeFilterOptions = (): Array<{ value: MethodType; title: string }> => [
   { value: 'all', title: 'All' },
   { value: 'read', title: 'Read' },
   { value: 'write', title: 'Write' },

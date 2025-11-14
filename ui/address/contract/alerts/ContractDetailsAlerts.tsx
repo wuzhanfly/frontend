@@ -1,6 +1,7 @@
 import { chakra, Box, Flex } from '@chakra-ui/react';
 import type { Channel } from 'phoenix';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SocketMessage } from 'lib/socket/types';
 import type { Address } from 'types/api/address';
@@ -25,6 +26,7 @@ export interface Props {
 }
 
 const ContractDetailsAlerts = ({ data, isLoading, addressData, channel }: Props) => {
+  const { t } = useTranslation();
   const [ isChangedBytecodeSocket, setIsChangedBytecodeSocket ] = React.useState<boolean>();
 
   const handleChangedBytecodeMessage: SocketMessage.AddressChangedBytecode['handler'] = React.useCallback(() => {
@@ -49,7 +51,7 @@ const ContractDetailsAlerts = ({ data, isLoading, addressData, channel }: Props)
       ) }
       { data?.is_verified && (
         <Alert status="success" loading={ isLoading } descriptionProps={{ alignItems: 'center', flexWrap: 'wrap', rowGap: 2, columnGap: 5 }}>
-          <span>Contract Source Code Verified ({ data.is_partially_verified ? 'Partial' : 'Exact' } Match)</span>
+          <span>Contract Source Code Verified ({ data.is_partially_verified ? t('addresses.common.partial') : t('addresses.common.exact') } Match)</span>
           {
             data.is_partially_verified ? (
               <ContractDetailsVerificationButton

@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FeaturedNetwork } from 'types/networks';
 import { NETWORK_GROUPS } from 'types/networks';
@@ -11,6 +12,7 @@ import * as mixpanel from 'lib/mixpanel/index';
 import { useDisclosure } from 'toolkit/hooks/useDisclosure';
 
 export default function useNetworkMenu() {
+  const { t } = useTranslation();
   const { open, onClose, onOpen, onOpenChange, onToggle } = useDisclosure();
 
   const fetch = useFetch();
@@ -23,7 +25,7 @@ export default function useNetworkMenu() {
 
   const handleOpenChange = React.useCallback((details: { open: boolean }) => {
     if (details.open) {
-      mixpanel.logEvent(mixpanel.EventTypes.BUTTON_CLICK, { Content: 'Network menu', Source: 'Header' });
+      mixpanel.logEvent(mixpanel.EventTypes.BUTTON_CLICK, { Content: t('common.common.network_menu'), Source: t('common.common.header') });
     }
     onOpenChange(details);
   }, [ onOpenChange ]);

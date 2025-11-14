@@ -2,6 +2,7 @@ import { Box, useToken } from '@chakra-ui/react';
 import type { RouteExecutionUpdate, WidgetConfig } from '@lifi/widget';
 import { LiFiWidget, useWidgetEvents, WidgetEvent } from '@lifi/widget';
 import { useEffect, useMemo, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import essentialDappsChainsConfig from 'configs/essential-dapps-chains';
@@ -29,6 +30,7 @@ function getUrls(isRpc = false) {
 }
 
 const Widget = () => {
+  const { t } = useTranslation();
   const web3Wallet = useWeb3Wallet({ source: 'Essential dapps' });
   const { colorMode } = useColorMode();
   const [ color ] = useToken('colors', 'blue.600');

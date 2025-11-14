@@ -1,6 +1,7 @@
 import { Text } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CustomAbi, CustomAbis } from 'types/api/account';
 
@@ -15,6 +16,7 @@ type Props = {
 };
 
 const DeleteCustomAbiModal: React.FC<Props> = ({ open, onOpenChange, data }) => {
+  const { t } = useTranslation();
 
   const queryClient = useQueryClient();
   const apiFetch = useApiFetch();
@@ -42,7 +44,7 @@ const DeleteCustomAbiModal: React.FC<Props> = ({ open, onOpenChange, data }) => 
     <DeleteModal
       open={ open }
       onOpenChange={ onOpenChange }
-      title="Remove custom ABI"
+      title={t('common.common.remove_custom_abi')}
       renderContent={ renderText }
       mutationFn={ mutationFn }
       onSuccess={ onSuccess }

@@ -37,7 +37,7 @@ testWithAuth('base view +@dark-mode', async({ render, mockApiResponse, mockEnvs,
 
   const component = await render(<NavigationDesktop/>, { hooksConfig });
   await component.getByText('Blockchain').hover();
-  await expect(page.getByText('Blocks')).toBeVisible();
+  await expect(page.getByText('validators.common.blocks')).toBeVisible();
   await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 1500, height: 450 } });
 });
 
@@ -60,7 +60,7 @@ test('with groped items', async({ render, mockEnvs, page }) => {
 
   const component = await render(<NavigationDesktop/>, { hooksConfig });
   await component.getByText('Blockchain').hover();
-  await expect(page.getByText('Blocks')).toBeVisible();
+  await expect(page.getByText('validators.common.blocks')).toBeVisible();
   await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 1500, height: 450 } });
 });
 
@@ -68,7 +68,7 @@ const promoBannerTest = (type: 'text' | 'image') => {
   test.describe(`with promo banner (${ type })`, () => {
     let component: Locator;
     const darkModeRule = type === 'text' ? '+@dark-mode' : '';
-    const imageAltText = type === 'text' ? 'Promo banner icon' : 'Promo banner small';
+    const imageAltText = type === 'text' ? 'common.common.promo_banner_icon' : 'common.common.promo_banner_small';
 
     test.beforeEach(async({ render, mockEnvs, mockAssetResponse }) => {
       await mockEnvs([

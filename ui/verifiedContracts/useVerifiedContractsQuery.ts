@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { VerifiedContractsFilters } from 'types/api/contracts';
 import type { VerifiedContractsSorting, VerifiedContractsSortingField, VerifiedContractsSortingValue } from 'types/api/verifiedContracts';
@@ -12,7 +13,7 @@ import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 import getSortParamsFromValue from 'ui/shared/sort/getSortParamsFromValue';
 import getSortValueFromQuery from 'ui/shared/sort/getSortValueFromQuery';
 
-import { SORT_OPTIONS } from './utils';
+import { getSortOptions } from './utils';
 
 interface Props {
   isMultichain?: boolean;
@@ -20,10 +21,11 @@ interface Props {
 
 export default function useVerifiedContractsQuery({ isMultichain }: Props = {}) {
   const router = useRouter();
+  const { t } = useTranslation();
   const [ searchTerm, setSearchTerm ] = React.useState(getQueryParamString(router.query.q) || undefined);
   const [ type, setType ] = React.useState(getQueryParamString(router.query.filter) as VerifiedContractsFilters['filter'] || undefined);
   const [ sort, setSort ] =
-      React.useState<VerifiedContractsSortingValue>(getSortValueFromQuery<VerifiedContractsSortingValue>(router.query, SORT_OPTIONS) ?? 'default');
+      React.useState<VerifiedContractsSortingValue>(getSortValueFromQuery<VerifiedContractsSortingValue>(router.query, getSortOptions(t)) ?? 'default');
 
   const debouncedSearchTerm = useDebounce(searchTerm || '', 300);
 

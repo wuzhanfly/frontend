@@ -101,23 +101,26 @@ test.describe('mobile view', () => {
   });
 });
 
-test('verified with multiple sources', async({ render, page, mockApiResponse, createSocket }) => {
-  await mockApiResponse('general:contract', contractMock.withMultiplePaths, { pathParams: { hash: addressMock.contract.hash } });
-  await render(<ContractDetails/>, { hooksConfig }, { withSocket: true });
-  const socket = await createSocket();
-  await socketServer.joinChannel(socket, `addresses:${ addressMock.contract.hash.toLowerCase() }`);
+  test('verified with multiple sources', async({ render, page, mockApiResponse, createSocket }) => {
+    const t = (key: string) => key;
+    await mockApiResponse('general:contract', contractMock.withMultiplePaths, { pathParams: { hash: addressMock.contract.hash } });
 
-  const section = page.locator('section', { hasText: 'Contract source code' });
-  await expect(section).toHaveScreenshot();
+    const component = await render(<ContractDetails/>, { hooksConfig }, { withSocket: true });
+    const socket = await createSocket();
+    await socketServer.joinChannel(socket, `addresses:${ addressMock.contract.hash.toLowerCase() }`);
 
-  await page.getByRole('button', { name: 'View external libraries' }).click();
-  await expect(section).toHaveScreenshot();
+    const section = page.locator('section', { hasText: t('addresses.common.contract_source_code') });
+    await expect(section).toHaveScreenshot();
 
-  await page.getByRole('button', { name: 'Open source code in IDE' }).click();
-  await expect(section).toHaveScreenshot();
-});
+    await page.getByRole('button', { name: t('addresses.common.view_external_libraries') }).click();
+    await expect(section).toHaveScreenshot();
+
+    await page.getByRole('button', { name: t('addresses.common.open_source_code_in_ide') }).click();
+    await expect(section).toHaveScreenshot();
+  });
 
 test('self destructed', async({ render, mockApiResponse, page, createSocket }) => {
+  const t = (key: string) => key;
   const hooksConfig = {
     router: {
       query: { hash: addressMock.contract.hash, tab: 'contract_bytecode' },
@@ -128,7 +131,7 @@ test('self destructed', async({ render, mockApiResponse, page, createSocket }) =
   const socket = await createSocket();
   await socketServer.joinChannel(socket, `addresses:${ addressMock.contract.hash.toLowerCase() }`);
 
-  const section = page.locator('section', { hasText: 'Contract creation code' });
+  const section = page.locator('section', { hasText: t('addresses.common.contract_creation_code') });
   await expect(section).toHaveScreenshot();
 });
 

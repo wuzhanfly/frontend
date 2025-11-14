@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 
@@ -26,6 +27,7 @@ const ZETACHAIN_TABS = [ 'zetachain_validated', 'zetachain_pending' ];
 const CROSS_CHAIN_TABS = [ 'cctx_pending', 'cctx_mined' ];
 
 const TransactionsZetaChain = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMobile = useIsMobile();
   const tab = getQueryParamString(router.query.tab);
@@ -97,7 +99,7 @@ const TransactionsZetaChain = () => {
   const tabs: Array<TabItemRegular> = [
     {
       id: 'cctx',
-      title: 'Cross chain',
+      title: t('common.common.cross_chain'),
       component: (
         <SocketProvider url={ config.apis.zetachain?.socketEndpoint } name="zetachain">
           <ZetaChainCCTXsTab/>
@@ -113,7 +115,7 @@ const TransactionsZetaChain = () => {
     },
     config.features.dataAvailability.isEnabled && {
       id: 'blob_txs',
-      title: 'Blob txns',
+      title: t('transactions.common.blob_txns'),
       component: (
         <>
           <TxsStats/>
@@ -124,7 +126,7 @@ const TransactionsZetaChain = () => {
     },
     isAuth ? {
       id: 'watchlist',
-      title: 'Watch list',
+      title: t('transactions.common.watch_list'),
       component: (
         <>
           <TxsStats/>
@@ -138,7 +140,7 @@ const TransactionsZetaChain = () => {
   return (
     <>
       <PageTitle
-        title={ config.meta.seo.enhancedDataEnabled ? `${ config.chain.name } transactions` : 'Transactions' }
+        title={ config.meta.seo.enhancedDataEnabled ? `${ config.chain.name } transactions` : t('transactions.common.transactions') }
         withTextAd
       />
       <RoutedTabs tabs={ tabs } defaultTabId="zetachain"/>

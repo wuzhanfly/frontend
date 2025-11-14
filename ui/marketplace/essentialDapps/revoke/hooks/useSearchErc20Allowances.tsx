@@ -1,6 +1,7 @@
 import ERC20Artifact from '@openzeppelin/contracts/build/contracts/ERC20.json';
 import { uniq } from 'es-toolkit';
 import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { getAddress, formatUnits, slice } from 'viem';
 import type { PublicClient, Log } from 'viem';
 
@@ -17,9 +18,10 @@ function formatAllowance(
   allowance: bigint,
   decimals: number = 18,
   totalSupply: bigint | undefined,
+  t: (key: string) => string,
 ): string {
   if (totalSupply && allowance > totalSupply) {
-    return 'Unlimited';
+    return t('marketplace.common.unlimited');
   }
 
   return formatUnits(allowance, decimals);
@@ -119,6 +121,7 @@ const useGetERC20Allowances = () => {
     searchQuery: string,
     approvals: Array<Log>,
     publicClient: PublicClient,
+    t: (key: string) => string,
     signal?: AbortSignal,
   ) => {
     const allowances: Array<AllowanceType> = [];
@@ -139,7 +142,7 @@ const useGetERC20Allowances = () => {
     await Promise.all(
       tokenAddresses.map(async(tokenAddress) => {
         if (signal?.aborted) {
-          throw new DOMException('Aborted', 'AbortError');
+          throw new DOMException(t('shared.common.aborted'), 'AbortError');
         }
         const tokenData = await getERC20TokenData(tokenAddress, chain, signal);
 
@@ -159,7 +162,7 @@ const useGetERC20Allowances = () => {
             await Promise.all(
               tokenAllowances.map(async(allowance) => {
                 if (signal?.aborted) {
-                  throw new DOMException('Aborted', 'AbortError');
+                  throw new DOMException(t('shared.common.aborted'), 'AbortError');
                 }
                 const timestampMs = await getBlockTimestamp(chain, allowance.blockNumber, signal);
 
@@ -196,6 +199,7 @@ const useGetERC20Allowances = () => {
                         allowance.allowance,
                         tokenData.decimals,
                         tokenData.totalSupply,
+                        t,
                       ) : undefined,
                     valueAtRiskUsd,
                   });
@@ -212,6 +216,7 @@ const useGetERC20Allowances = () => {
 };
 
 export default function useSearchErc20Allowances() {
+  const { t } = useTranslation();
   const getERC20Allowances = useGetERC20Allowances();
 
   return useCallback(async(
@@ -219,6 +224,7 @@ export default function useSearchErc20Allowances() {
     searchQuery: string,
     approvalEvents: Array<Log>,
     publicClient: PublicClient,
+    t: (key: string) => string,
     signal?: AbortSignal,
   ) => {
     const erc20Events = approvalEvents.filter((ev) => ev.topics.length === 3);
@@ -233,6 +239,7 @@ export default function useSearchErc20Allowances() {
       searchQuery,
       erc20Events,
       publicClient,
+      t,
       signal,
     );
   }, [ getERC20Allowances ]);

@@ -6,6 +6,7 @@ import { Alert } from 'toolkit/chakra/alert';
 import { Link } from 'toolkit/chakra/link';
 import { Skeleton } from 'toolkit/chakra/skeleton';
 import { TableCell, TableRow } from 'toolkit/chakra/table';
+import { useTranslation } from 'react-i18next';
 
 const flashblocksFeature = config.features.flashblocks;
 
@@ -25,13 +26,15 @@ interface Props {
 }
 
 const SocketNewItemsNotice = chakra(({ children, className, url, num, showErrorAlert, type = 'transaction', isLoading, onLinkClick }: Props) => {
+  const { t } = useTranslation();
+
   const handleLinkClick = React.useCallback(() => {
     onLinkClick ? onLinkClick() : window.location.reload();
   }, [ onLinkClick ]);
 
   const alertContent = (() => {
     if (showErrorAlert) {
-      return 'Live updates temporarily delayed';
+      return t('shared.common.live_updates_temporarily_delay');
     }
 
     let name;
@@ -53,7 +56,7 @@ const SocketNewItemsNotice = chakra(({ children, className, url, num, showErrorA
         break;
       }
       case 'cross_chain_transaction':
-        name = 'cross chain transaction';
+        name = t('shared.common.cross_chain_transaction');
         break;
       default:
         name = 'transaction';

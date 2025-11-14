@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSignMessage, useSwitchChain } from 'wagmi';
 
 import type * as rewards from '@blockscout/points-types';
@@ -16,6 +17,7 @@ import { toaster } from 'toolkit/chakra/toaster';
 import { YEAR } from 'toolkit/utils/consts';
 
 function composeMessage(address: string, nonceBlockscout: string, nonceRewards: string) {
+  const { t } = useTranslation();
   const urlObj = window.location.hostname === 'localhost' && config.apis.rewards ?
     new URL(config.apis.rewards.endpoint) :
     window.location;
@@ -60,7 +62,7 @@ function useSignInWithWallet({ onSuccess, onError, source = 'Login', isAuth, log
       }
 
       if (cookies.get(cookies.NAMES.REWARDS_API_TOKEN)) {
-        throw new Error('User already has logged in to rewards');
+        throw new Error('User already has logged in');
       }
 
       const rewardsConfig = await apiFetch('rewards:config') as rewards.GetConfigResponse;
@@ -168,6 +170,7 @@ function useSignInWithWallet({ onSuccess, onError, source = 'Login', isAuth, log
 }
 
 function useSignInWithWalletFallback() {
+  const { t } = useTranslation();
   return React.useMemo(() => ({ start: () => {}, isPending: false }), [ ]);
 }
 

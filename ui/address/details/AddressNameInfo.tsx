@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Address } from 'types/api/address';
 
@@ -12,11 +13,12 @@ interface Props {
 }
 
 const AddressNameInfo = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
   if (data.token) {
     return (
       <>
         <DetailedInfo.ItemLabel
-          hint="Token name and symbol"
+          hint={ t('addresses.common.token_name_and_symbol') }
           isLoading={ isLoading }
         >
           Token name
@@ -37,7 +39,7 @@ const AddressNameInfo = ({ data, isLoading }: Props) => {
     return (
       <>
         <DetailedInfo.ItemLabel
-          hint="The name found in the source code of the Contract"
+          hint={ t('addresses.common.the_name_found_in_the_source_c') }
           isLoading={ isLoading }
         >
           Contract name
@@ -55,7 +57,7 @@ const AddressNameInfo = ({ data, isLoading }: Props) => {
     return (
       <>
         <DetailedInfo.ItemLabel
-          hint="The name of the validator"
+          hint={ t('addresses.common.the_name_of_the_validator') }
           isLoading={ isLoading }
         >
           Validator name

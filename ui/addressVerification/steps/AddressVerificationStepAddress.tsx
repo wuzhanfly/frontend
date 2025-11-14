@@ -1,5 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type { SubmitHandler } from 'react-hook-form';
 import { FormProvider, useForm } from 'react-hook-form';
 
@@ -30,6 +31,7 @@ interface Props {
 }
 
 const AddressVerificationStepAddress = ({ defaultAddress, onContinue }: Props) => {
+  const { t } = useTranslation();
   const formApi = useForm<Fields>({
     mode: 'onBlur',
     defaultValues: {
@@ -60,14 +62,14 @@ const AddressVerificationStepAddress = ({ defaultAddress, onContinue }: Props) =
 
       if (response.status !== 'SUCCESS') {
         const type = typeof response.status === 'number' ? 'UNKNOWN_ERROR' : response.status;
-        const message = ('payload' in response ? response.payload?.message : undefined) || 'Oops! Something went wrong';
+        const message = ('payload' in response ? response.payload?.message : undefined) || t('shared.common.oops_something_went_wrong');
         return setError('root', { type, message });
       }
 
       onContinue({ ...response.result, address: data.address });
     } catch (_error) {
       const error = _error as ResourceError<AddressVerificationResponseError>;
-      setError('root', { type: 'manual', message: error.payload?.message || 'Oops! Something went wrong' });
+      setError('root', { type: 'manual', message: error.payload?.message || t('shared.common.oops_something_went_wrong') });
     }
 
   }, [ apiFetch, onContinue, setError ]);
@@ -117,7 +119,7 @@ const AddressVerificationStepAddress = ({ defaultAddress, onContinue }: Props) =
           mt={ 8 }
         />
         <Flex alignItems={{ base: 'flex-start', lg: 'center' }} mt={ 8 } columnGap={ 5 } rowGap={ 2 } flexDir={{ base: 'column', lg: 'row' }}>
-          <Button type="submit" loading={ formState.isSubmitting } loadingText="Continue" flexShrink={ 0 }>
+          <Button type="submit" loading={ formState.isSubmitting } loadingText={ t('staking.common.continue') } flexShrink={ 0 }>
             Continue
           </Button>
           <AdminSupportText/>

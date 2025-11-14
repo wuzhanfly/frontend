@@ -1,6 +1,7 @@
 import BigNumber from 'bignumber.js';
 import { upperFirst } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Address } from 'types/api/address';
 import type { ExcludeNull, ExcludeUndefined } from 'types/utils';
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const AddressCeloAccount = ({ isLoading, data }: Props) => {
+  const { t } = useTranslation();
   return (
     <>
       <DetailedInfo.ItemLabel
@@ -39,8 +41,8 @@ const AddressCeloAccount = ({ isLoading, data }: Props) => {
 
           { data.metadata_url && (
             <DetailedInfoItemBreakdown.Row
-              label="Metadata URL"
-              hint="Link to additional information published by the account owner"
+              label={ t('addresses.common.metadata_url') }
+              hint={ t('addresses.common.link_to_additional_information') }
             >
               <Link href={ data.metadata_url } external>
                 <TruncatedValue value={ data.metadata_url }/>
@@ -64,8 +66,8 @@ const AddressCeloAccount = ({ isLoading, data }: Props) => {
 
           { data.vote_signer_address && (
             <DetailedInfoItemBreakdown.Row
-              label="Vote signer address"
-              hint="Address authorized to vote in governance and validator elections on behalf of this account"
+              label={ t('addresses.common.vote_signer_address') }
+              hint={ t('addresses.common.address_authorized_to_vote_in_') }
             >
               <AddressEntity address={ data.vote_signer_address }/>
             </DetailedInfoItemBreakdown.Row>
@@ -73,7 +75,7 @@ const AddressCeloAccount = ({ isLoading, data }: Props) => {
 
           { data.validator_signer_address && (
             <DetailedInfoItemBreakdown.Row
-              label="Validator signer address"
+              label={ t('addresses.common.validator_signer_address') }
               hint="Address authorized to manage a validator or validator group and sign consensus messages for this account"
             >
               <AddressEntity address={ data.validator_signer_address }/>
@@ -82,8 +84,8 @@ const AddressCeloAccount = ({ isLoading, data }: Props) => {
 
           { data.attestation_signer_address && (
             <DetailedInfoItemBreakdown.Row
-              label="Attestation signer address"
-              hint="Address whose key this account uses to sign attestations on the Attestations contract"
+              label={ t('addresses.common.attestation_signer_address') }
+              hint={ t('addresses.common.address_whose_key_this_account') }
             >
               <AddressEntity address={ data.attestation_signer_address }/>
             </DetailedInfoItemBreakdown.Row>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -13,16 +14,17 @@ interface Props {
 }
 
 const AppErrorBlockConsensus = ({ hash }: Props) => {
+  const { t } = useTranslation();
   return (
     <>
       <AppErrorIcon statusCode={ 404 }/>
-      <AppErrorTitle title="Block removed due to chain reorganization"/>
+      <AppErrorTitle title={t('shared.common.block_removed_due_to_chain_reo')}/>
       <Link href={ hash ? route({ pathname: '/block/[height_or_hash]', query: { height_or_hash: hash } }) : route({ pathname: '/' }) } asChild>
         <Button
           mt={ 8 }
           variant="outline"
         >
-          { hash ? 'View reorg' : 'Back to home' }
+          { hash ? t('shared.common.view_reorg') : t('shared.common.back_to_home') }
         </Button>
       </Link>
     </>

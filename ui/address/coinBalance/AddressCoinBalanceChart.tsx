@@ -1,5 +1,6 @@
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useApiQuery from 'lib/api/useApiQuery';
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const AddressCoinBalanceChart = ({ addressHash }: Props) => {
+  const { t } = useTranslation();
   const { data, isPending, isError } = useApiQuery('general:address_coin_balance_chart', {
     pathParams: { hash: addressHash },
   });
@@ -39,7 +41,7 @@ const AddressCoinBalanceChart = ({ addressHash }: Props) => {
   return (
     <ChartWidget
       isError={ isError }
-      title="Balances"
+      title={ t('addresses.common.balances') }
       charts={ charts }
       isLoading={ isPending }
       h="300px"

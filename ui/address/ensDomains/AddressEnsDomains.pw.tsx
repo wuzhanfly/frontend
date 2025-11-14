@@ -12,6 +12,7 @@ import AddressEnsDomains from './AddressEnsDomains';
 const ADDRESS_HASH = ensDomainMock.ensDomainA.owner?.hash as string;
 
 test('base view', async({ render, page, mockAssetResponse }) => {
+  const t = (key: string) => key;
   const query = {
     data: {
       items: [
@@ -34,6 +35,6 @@ test('base view', async({ render, page, mockAssetResponse }) => {
       mainDomainName={ ensDomainMock.ensDomainA.name }
     />,
   );
-  await component.getByLabel('Address domains').click();
+  await component.getByLabel(t('addresses.common.address_domains')).click();
   await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 550, height: 350 } });
 });

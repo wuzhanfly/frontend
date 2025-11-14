@@ -2,6 +2,7 @@
 import { Box, Text, Flex } from '@chakra-ui/react';
 import Script from 'next/script';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useIsMobile from 'lib/hooks/useIsMobile';
@@ -11,13 +12,14 @@ import { Link } from 'toolkit/chakra/link';
 const easterEggBadgeFeature = config.features.easterEggBadge;
 
 const CapybaraRunner = () => {
+  const { t } = useTranslation();
   const [ hasReachedHighScore, setHasReachedHighScore ] = React.useState(false);
 
   const isMobile = useIsMobile();
 
   React.useEffect(() => {
     const preventDefaultKeys = (e: KeyboardEvent) => {
-      if (e.code === 'Space' || e.code === 'ArrowUp' || e.code === 'ArrowDown') {
+      if (e.code === t('games.common.space') || e.code === 'ArrowUp' || e.code === 'ArrowDown') {
         e.preventDefault();
       }
     };
@@ -38,7 +40,7 @@ const CapybaraRunner = () => {
   return (
     <>
       <Heading level="2" mt={ 12 } mb={ 2 }>Score 1000 to win a special prize!</Heading>
-      <Box mb={ 4 }>{ isMobile ? 'Tap below to start' : 'Press space to start' }</Box>
+      <Box mb={ 4 }>{ isMobile ? t('games.common.tap_below_to_start') : t('games.common.press_space_to_start') }</Box>
       <Script strategy="lazyOnload" src="/static/capibara/index.js"/>
       <Box width={{ base: '100%', lg: '600px' }} height="300px" p="50px 0">
         <div id="main-frame-error" className="interstitial-wrapper" style={{ marginTop: '20px' }}>

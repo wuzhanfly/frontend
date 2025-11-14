@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { AddressFromToFilterValues } from 'types/api/address';
 import type { CsvExportParams } from 'types/client/address';
@@ -70,6 +71,7 @@ const EXPORT_TYPES: Record<CsvExportParams['type'], ExportTypeEntity> = {
 const isCorrectExportType = (type: string): type is CsvExportParams['type'] => Object.keys(EXPORT_TYPES).includes(type);
 
 const CsvExport = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMobile = useIsMobile();
   const multichainContext = useMultichainContext();
@@ -111,6 +113,7 @@ const CsvExport = () => {
 
   const filterType = filterTypeFromQuery === exportType.filterType ? filterTypeFromQuery : null;
   const filterValue = (() => {
+  const { t } = useTranslation();
     if (!filterType || !filterValueFromQuery) {
       return null;
     }
@@ -123,6 +126,7 @@ const CsvExport = () => {
   })();
 
   const content = (() => {
+  const { t } = useTranslation();
     throwOnResourceLoadError(addressQuery);
 
     if (isLoading) {
@@ -142,6 +146,7 @@ const CsvExport = () => {
   })();
 
   const description = (() => {
+  const { t } = useTranslation();
     if (isLoading) {
       return null;
     }
@@ -198,7 +203,7 @@ const CsvExport = () => {
 
   return (
     <>
-      <PageTitle title="Export data to CSV file"/>
+      <PageTitle title={t('common.common.export_data_to_csv_file')}/>
       { description }
       { content }
     </>

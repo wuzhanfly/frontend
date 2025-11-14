@@ -1,5 +1,6 @@
 import { Flex, Text, Grid } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenVerifiedInfo } from 'types/api/token';
 
@@ -12,17 +13,17 @@ interface Props {
   data: TokenVerifiedInfo;
 }
 
-const SOCIAL_LINKS: Array<Omit<ServiceLinkProps, 'href'>> = [
-  { field: 'github', icon: 'social/github_filled', title: 'Github' },
+const getSocialLinks = (t: (key: string) => string): Array<Omit<ServiceLinkProps, 'href'>> => [
+  { field: 'github', icon: 'social/github_filled', title: t('tokens.common.github') },
   { field: 'twitter', icon: 'social/twitter_filled', title: 'X (ex-Twitter)' },
-  { field: 'telegram', icon: 'social/telegram_filled', title: 'Telegram' },
+  { field: 'telegram', icon: 'social/telegram_filled', title: t('tokens.common.telegram') },
   { field: 'openSea', icon: 'social/opensea_filled', title: 'OpenSea' },
   { field: 'linkedin', icon: 'social/linkedin_filled', title: 'LinkedIn' },
-  { field: 'facebook', icon: 'social/facebook_filled', title: 'Facebook' },
-  { field: 'discord', icon: 'social/discord_filled', title: 'Discord' },
+  { field: 'facebook', icon: 'social/facebook_filled', title: t('tokens.common.facebook') },
+  { field: 'discord', icon: 'social/discord_filled', title: t('tokens.common.discord') },
   { field: 'medium', icon: 'social/medium_filled', title: 'Medium' },
-  { field: 'slack', icon: 'social/slack_filled', title: 'Slack' },
-  { field: 'reddit', icon: 'social/reddit_filled', title: 'Reddit' },
+  { field: 'slack', icon: 'social/slack_filled', title: t('tokens.common.slack') },
+  { field: 'reddit', icon: 'social/reddit_filled', title: t('tokens.common.reddit') },
 ];
 
 const PRICE_TICKERS: Array<Omit<ServiceLinkProps, 'href'>> = [
@@ -31,7 +32,8 @@ const PRICE_TICKERS: Array<Omit<ServiceLinkProps, 'href'>> = [
   { field: 'defiLlamaTicker', icon: 'social/defi_llama', title: 'DefiLlama' },
 ];
 
-export function hasContent(data: TokenVerifiedInfo): boolean {
+export function hasContent(data: TokenVerifiedInfo, t: (key: string) => string): boolean {
+  const SOCIAL_LINKS = getSocialLinks(t);
   const fields: Array<keyof TokenVerifiedInfo> = [
     'projectDescription',
     'docs',
@@ -43,6 +45,8 @@ export function hasContent(data: TokenVerifiedInfo): boolean {
 }
 
 const Content = ({ data }: Props) => {
+  const { t } = useTranslation();
+  const SOCIAL_LINKS = getSocialLinks(t);
   const docs = data.docs ? <DocsLink href={ data.docs }/> : null;
   const support = data.support ? <SupportLink url={ data.support }/> : null;
   const description = data.projectDescription ? <Text fontSize="sm" mt={ 3 }>{ data.projectDescription }</Text> : null;

@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useApiQuery from 'lib/api/useApiQuery';
@@ -20,6 +21,7 @@ import BeaconChainWithdrawalsTable from 'ui/withdrawals/beaconChain/BeaconChainW
 const feature = config.features.beaconChain;
 
 const BeaconChainWithdrawals = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:withdrawals',
     options: {
@@ -63,6 +65,7 @@ const BeaconChainWithdrawals = () => {
   ) : null;
 
   const text = (() => {
+  const { t } = useTranslation();
     if (countersQuery.isError || !feature.isEnabled) {
       return null;
     }
@@ -84,13 +87,13 @@ const BeaconChainWithdrawals = () => {
   return (
     <>
       <PageTitle
-        title={ config.meta.seo.enhancedDataEnabled ? `${ config.chain.name } withdrawals` : 'Withdrawals' }
+        title={ config.meta.seo.enhancedDataEnabled ? `${ config.chain.name } withdrawals` : t('common.common.withdrawals') }
         withTextAd
       />
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no withdrawals."
+        emptyText={t('common.common.there_are_no_withdrawals')}
         actionBar={ actionBar }
       >
         { content }

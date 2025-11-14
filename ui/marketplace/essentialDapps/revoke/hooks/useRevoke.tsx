@@ -2,6 +2,7 @@ import ERC20Artifact from '@openzeppelin/contracts/build/contracts/ERC20.json';
 import NftArtifact from '@openzeppelin/contracts/build/contracts/ERC721.json';
 import { waitForTransactionReceipt } from '@wagmi/core';
 import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useAccount, useWriteContract, useSwitchChain } from 'wagmi';
 
 import type { AllowanceType } from 'types/client/revoke';
@@ -12,6 +13,7 @@ import wagmiConfig from 'lib/web3/wagmiConfig';
 import { toaster } from 'toolkit/chakra/toaster';
 
 export default function useRevoke() {
+  const { t } = useTranslation();
   const { address: userAddress } = useAccount();
   const { switchChainAsync } = useSwitchChain();
   const { writeContractAsync } = useWriteContract();
@@ -51,12 +53,12 @@ export default function useRevoke() {
       const receipt = await waitForTransactionReceipt(wagmiConfig.config, { hash, chainId });
 
       if (receipt.status === 'reverted') {
-        throw new Error('Failed to revoke approval.');
+        throw new Error(t('marketplace.common.failed_to_revoke_approval'));
       }
 
       toaster.success({
         title: 'Success',
-        description: 'Approval revoked successfully.',
+        description: t('marketplace.common.approval_revoked_successfully'),
       });
 
       return true;
@@ -64,7 +66,7 @@ export default function useRevoke() {
     } catch (error) {
       toaster.error({
         title: 'Error',
-        description: (error as Error)?.message || 'Something went wrong. Try again later.',
+        description: (error as Error)?.message || t('marketplace.common.something_went_wrong_try_again'),
       });
 
       return false;

@@ -6,6 +6,7 @@ import * as tac from '@blockscout/tac-operation-lifecycle-types';
 import { route } from 'nextjs-routes';
 
 import config from 'configs/app';
+import { useTranslation } from 'react-i18next';
 
 import * as AddressEntity from './AddressEntity';
 
@@ -16,6 +17,8 @@ interface Props extends AddressEntity.EntityProps {
 }
 
 const AddressEntityTacTon = (props: Props) => {
+  const { t } = useTranslation();
+
   if (!tacFeature.isEnabled) {
     return null;
   }
@@ -54,7 +57,7 @@ const AddressEntityTacTon = (props: Props) => {
       link={{ external: props.chainType === tac.BlockchainType.TON }}
       icon={ props.chainType === tac.BlockchainType.TON ? {
         shield: { name: 'brands/ton' },
-        hint: 'Address on TON',
+        hint: t('addresses.common.address_on_ton'),
         hintPostfix: ' on TON',
       } : undefined }
     />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useFormContext } from 'react-hook-form';
 
 import type { FormFields } from '../types';
@@ -9,6 +10,7 @@ import ContractVerificationFormRow from '../ContractVerificationFormRow';
 import ContractVerificationFieldConstructorArgs from './ContractVerificationFieldConstructorArgs';
 
 const ContractVerificationFieldAutodetectArgs = () => {
+  const { t } = useTranslation();
   const [ isOn, setIsOn ] = React.useState(true);
   const { resetField } = useFormContext<FormFields>();
 
@@ -22,7 +24,7 @@ const ContractVerificationFieldAutodetectArgs = () => {
       <ContractVerificationFormRow>
         <FormFieldCheckbox<FormFields, 'autodetect_constructor_args'>
           name="autodetect_constructor_args"
-          label="Try to fetch constructor arguments automatically"
+          label={t('common.common.try_to_fetch_constructor_argum')}
           onChange={ handleCheckboxChange }
         />
       </ContractVerificationFormRow>

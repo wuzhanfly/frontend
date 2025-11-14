@@ -1,5 +1,6 @@
 import { Box, Flex, Grid, VStack, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CrossChainTx } from '@blockscout/zetachain-cctx-types';
 
@@ -32,6 +33,7 @@ type Props = {
 };
 
 const getTransactionsBeforeAndAfter = (data: CrossChainTx) => {
+  const { t } = useTranslation();
   const relatedTransactions = data?.related_cctxs || [];
   const currentTransactionIndex = relatedTransactions.findIndex(tx => tx.index === data.index);
   const transactionsBefore = currentTransactionIndex > 0 ? relatedTransactions.slice(0, currentTransactionIndex) : [];
@@ -42,6 +44,7 @@ const getTransactionsBeforeAndAfter = (data: CrossChainTx) => {
 };
 
 const ZetaChainCCTXDetails = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
   const statsQuery = useApiQuery('general:stats', {
     queryOptions: {
       placeholderData: HOMEPAGE_STATS,
@@ -59,7 +62,7 @@ const ZetaChainCCTXDetails = ({ data, isLoading }: Props) => {
       { data.inbound_params?.sender && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Address that initiated the cross-chain transaction"
+            hint={t('common.common.address_that_initiated_the_cro')}
             isLoading={ isLoading }
           >
             Sender
@@ -126,7 +129,7 @@ const ZetaChainCCTXDetails = ({ data, isLoading }: Props) => {
       { data.relayed_message && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Optional message data sent with the transaction"
+            hint={t('common.common.optional_message_data_sent_wit')}
             isLoading={ isLoading }
           >
             Message
@@ -154,7 +157,7 @@ const ZetaChainCCTXDetails = ({ data, isLoading }: Props) => {
         </Skeleton>
       </DetailedInfo.ItemValue>
       <DetailedInfo.ItemLabel
-        hint="Current state and status of the cross-chain transaction"
+        hint={t('common.common.current_state_and_status_of_th')}
         isLoading={ isLoading }
       >
         Status and state
@@ -173,7 +176,7 @@ const ZetaChainCCTXDetails = ({ data, isLoading }: Props) => {
       { data.cctx_status?.status_message && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Detailed status message"
+            hint={t('common.common.detailed_status_message')}
             isLoading={ isLoading }
           >
             Status message
@@ -186,7 +189,7 @@ const ZetaChainCCTXDetails = ({ data, isLoading }: Props) => {
       { Boolean(Number(data.cctx_status?.created_timestamp)) && (
         <>
           <DetailedInfo.ItemLabel
-            hint="When the transaction was first created"
+            hint={t('common.common.when_the_transaction_was_first')}
             isLoading={ isLoading }
           >
             Created
@@ -199,7 +202,7 @@ const ZetaChainCCTXDetails = ({ data, isLoading }: Props) => {
       { Boolean(Number(data.cctx_status?.last_update_timestamp)) && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Most recent update to transaction status"
+            hint={t('common.common.most_recent_update_to_transact')}
             isLoading={ isLoading }
           >
             Last updated

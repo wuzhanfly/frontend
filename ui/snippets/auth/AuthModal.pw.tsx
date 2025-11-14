@@ -13,17 +13,17 @@ test('email login', async({ render, page, mockApiResponse }) => {
 
   await expect(page.getByText('Status: Not authenticated')).toBeVisible();
 
-  await page.getByText('Log in').click();
+  await page.getByText('common.common.log_in').click();
   await expect(page).toHaveScreenshot();
 
   // fill email
-  await page.getByText('Continue with email').click();
+  await page.getByText('common.common.continue_with_email').click();
   await page.getByLabel(/email/i).getByPlaceholder(' ').fill('john.doe@example.com');
   await expect(page).toHaveScreenshot();
 
   // send otp code
   await mockApiResponse('general:auth_send_otp', {} as never);
-  await page.getByText('Send a code').click();
+  await page.getByText('common.common.send_a_code').click();
 
   // fill otp code
   await page.getByLabel('pin code 1 of 6').fill('1');
@@ -36,10 +36,10 @@ test('email login', async({ render, page, mockApiResponse }) => {
 
   // submit otp code
   await mockApiResponse('general:auth_confirm_otp', profileMock.base as never);
-  await page.getByText('Submit').click();
+  await page.getByText('common.common.submit').click();
   await expect(page).toHaveScreenshot();
 
-  await page.getByLabel('Close').click();
+  await page.getByLabel('shared.common.close').click();
   await expect(page.getByText('Status: Authenticated')).toBeVisible();
 });
 
@@ -54,13 +54,13 @@ linkEmailTest('link email to account', async({ render, page, mockApiResponse }) 
   await expect(page.getByText('Status: Authenticated')).toBeVisible();
 
   // fill email
-  await page.getByText('Link email').click();
+  await page.getByText('common.common.link_email').click();
   await page.getByLabel(/email/i).getByPlaceholder(' ').fill('john.doe@example.com');
   await expect(page).toHaveScreenshot();
 
   // send and fill otp code
   await mockApiResponse('general:auth_send_otp', {} as never);
-  await page.getByText('Send a code').click();
+  await page.getByText('common.common.send_a_code').click();
   await page.getByLabel('pin code 1 of 6').fill('1');
   await page.getByLabel('pin code 2 of 6').fill('2');
   await page.getByLabel('pin code 3 of 6').fill('3');
@@ -68,7 +68,7 @@ linkEmailTest('link email to account', async({ render, page, mockApiResponse }) 
   await page.getByLabel('pin code 5 of 6').fill('5');
   await page.getByLabel('pin code 6 of 6').fill('6');
   await mockApiResponse('general:auth_link_email', profileMock.base as never);
-  await page.getByText('Submit').click();
+  await page.getByText('common.common.submit').click();
 
   await expect(page).toHaveScreenshot();
 });

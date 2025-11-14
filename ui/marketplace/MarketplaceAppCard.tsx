@@ -1,5 +1,6 @@
 import { chakra, Flex, Text } from '@chakra-ui/react';
 import type { MouseEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 import React, { useCallback } from 'react';
 
 import type { MarketplaceApp } from 'types/client/marketplace';
@@ -49,6 +50,7 @@ const MarketplaceAppCard = ({
   userRating,
   graphLinks,
 }: Props) => {
+  const { t } = useTranslation();
   const categoriesLabel = categories.join(', ');
 
   const handleInfoClick = useCallback((event: MouseEvent) => {
@@ -170,8 +172,8 @@ const MarketplaceAppCard = ({
               />
               <Flex gap={ 2 }>
                 <IconButton
-                  aria-label="Mark as favorite"
-                  title="Mark as favorite"
+                  aria-label={t('marketplace.common.mark_as_favorite')}
+                  title={t('marketplace.common.mark_as_favorite')}
                   variant="icon_background"
                   size="md"
                   onClick={ handleFavoriteClick }

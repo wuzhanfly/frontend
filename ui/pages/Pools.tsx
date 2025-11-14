@@ -1,6 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useDebounce from 'lib/hooks/useDebounce';
@@ -17,6 +18,7 @@ import Pagination from 'ui/shared/pagination/Pagination';
 import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 
 const Pools = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const q = getQueryParamString(router.query.query);
 
@@ -89,13 +91,13 @@ const Pools = () => {
   return (
     <>
       <PageTitle
-        title="DEX tracker"
+        title={t('pools.common.dex_tracker')}
         withTextAd
       />
       <DataListDisplay
         isError={ poolsQuery.isError }
         itemsNum={ poolsQuery.data?.items.length }
-        emptyText="There are no pools."
+        emptyText={t('pools.common.there_are_no_pools')}
         actionBar={ actionBar }
         filterProps={{
           emptyFilteredText: `Couldn${ apos }t find pools that matches your filter query.`,

@@ -1,5 +1,6 @@
 import { Grid, GridItem } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Log } from 'types/api/log';
 import type { ChainConfig } from 'types/multichain';
@@ -34,6 +35,7 @@ const RowHeader = ({ children, isLoading }: { children: React.ReactNode; isLoadi
 );
 
 const LogItem = ({ address, index, topics, data, decoded, type, transaction_hash: txHash, isLoading, defaultDataType, chainData }: Props) => {
+  const { t } = useTranslation();
 
   const hasTxInfo = type === 'address' && txHash;
 
@@ -58,7 +60,7 @@ const LogItem = ({ address, index, topics, data, decoded, type, transaction_hash
           </Alert>
         </GridItem>
       ) }
-      { hasTxInfo ? <RowHeader isLoading={ isLoading }>Transaction</RowHeader> : <RowHeader isLoading={ isLoading }>Address</RowHeader> }
+      { hasTxInfo ? <RowHeader isLoading={ isLoading }>{t('transactions.common.transaction')}</RowHeader> : <RowHeader isLoading={ isLoading }>{t('addresses.common.address')}</RowHeader> }
       <GridItem display="flex" alignItems="center">
         { type === 'address' && txHash ? (
           <TxEntity

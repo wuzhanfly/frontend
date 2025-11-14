@@ -15,6 +15,7 @@ import TxEntity from 'ui/shared/entities/tx/TxEntity';
 import ListItemMobile from 'ui/shared/ListItemMobile/ListItemMobile';
 import TimeWithTooltip from 'ui/shared/time/TimeWithTooltip';
 import { getTokenTransferTypeText } from 'ui/shared/TokenTransfer/helpers';
+import { useTranslation } from 'react-i18next';
 import TxAdditionalInfo from 'ui/txs/TxAdditionalInfo';
 
 type Props = TokenTransfer & {
@@ -39,6 +40,8 @@ const TokenTransferListItem = ({
   isLoading,
   chainData,
 }: Props) => {
+  const { t } = useTranslation();
+
   const { usd, valueStr } = total && 'value' in total && total.value !== null ? getCurrencyValue({
     value: total.value,
     exchangeRate: token?.exchange_rate,
@@ -63,7 +66,7 @@ const TokenTransferListItem = ({
               <Badge flexShrink={ 0 } loading={ isLoading }>{ getTokenTypeName(token.type) }</Badge>
             </>
           ) }
-          <Badge colorPalette="orange" loading={ isLoading }>{ getTokenTransferTypeText(type) }</Badge>
+          <Badge colorPalette="orange" loading={ isLoading }>{ getTokenTransferTypeText(type, t) }</Badge>
         </Flex>
         { showTxInfo && txHash && (
           <TxAdditionalInfo hash={ txHash } isMobile isLoading={ isLoading }/>

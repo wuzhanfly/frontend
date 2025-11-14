@@ -1,6 +1,7 @@
 import { Box, chakra, Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { EntityTag as TEntityTag, EntityTagType } from 'ui/shared/EntityTags/types';
 
@@ -18,6 +19,7 @@ import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 import StickyPaginationWithText from 'ui/shared/StickyPaginationWithText';
 
 const AccountsLabelSearch = () => {
+  const { t } = useTranslation();
 
   const router = useRouter();
   const slug = getQueryParamString(router.query.slug);
@@ -65,6 +67,7 @@ const AccountsLabelSearch = () => {
   ) : null;
 
   const text = (() => {
+  const { t } = useTranslation();
     if (isError) {
       return null;
     }
@@ -96,7 +99,7 @@ const AccountsLabelSearch = () => {
 
   return (
     <>
-      <PageTitle title="Search result" withTextAd/>
+      <PageTitle title={t('common.common.search_result')} withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }

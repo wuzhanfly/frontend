@@ -1,6 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 import type { EntityTag } from 'ui/shared/EntityTags/types';
@@ -28,6 +29,7 @@ import OpSuperchainAddressTxs, { ADDRESS_OP_SUPERCHAIN_TXS_TAB_IDS } from './OpS
 const PREDEFINED_TAG_PRIORITY = 100;
 
 const OpSuperchainAddress = () => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const hash = getQueryParamString(router.query.hash);
@@ -46,46 +48,46 @@ const OpSuperchainAddress = () => {
     return [
       {
         id: 'index',
-        title: 'Details',
+        title: t('transactions.common.details'),
         component: <OpSuperchainAddressDetails addressHash={ checkSummedHash }/>,
       },
       {
         id: 'contract',
-        title: 'Contract',
+        title: t('tokens.common.contract'),
         component: <OpSuperchainAddressContract addressHash={ checkSummedHash }/>,
         subTabs: CONTRACT_TAB_IDS,
       },
       {
         id: 'txs',
-        title: 'Transactions',
+        title: t('transactions.common.transactions'),
         component: <OpSuperchainAddressTxs/>,
         subTabs: ADDRESS_OP_SUPERCHAIN_TXS_TAB_IDS,
       },
       {
         id: 'token_transfers',
-        title: 'Token transfers',
+        title: t('transactions.common.token_transfers'),
         component: <OpSuperchainAddressTokenTransfers/>,
         subTabs: ADDRESS_OP_SUPERCHAIN_TOKEN_TRANSFERS_TAB_IDS,
       },
       {
         id: 'tokens',
-        title: 'Tokens',
+        title: t('tokens.common.tokens'),
         component: <OpSuperchainAddressTokens/>,
         subTabs: ADDRESS_OP_SUPERCHAIN_TOKENS_TAB_IDS,
       },
       {
         id: 'internal_txs',
-        title: 'Internal txns',
+        title: t('transactions.common.internal_txns'),
         component: <OpSuperchainAddressInternalTxs/>,
       },
       {
         id: 'coin_balance_history',
-        title: 'Coin balance history',
+        title: t('addresses.common.coin_balance_history'),
         component: <OpSuperchainAddressCoinBalanceHistory/>,
       },
       {
         id: 'logs',
-        title: 'Logs',
+        title: t('transactions.common.logs'),
         component: <OpSuperchainAddressLogs/>,
       },
     ];
@@ -132,7 +134,7 @@ const OpSuperchainAddress = () => {
     <>
       <TextAd mb={ 6 }/>
       <PageTitle
-        title="Address details"
+        title={t('addresses.common.address_details')}
         isLoading={ isLoading }
         secondRow={ titleSecondRow }
         contentAfter={ titleContentAfter }

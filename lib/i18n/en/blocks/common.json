@@ -31,6 +31,8 @@
   "blocks.common.there_are_no_internal_transact": "There are no internal transactions.",
   "blocks.common.green_fund": "Green Fund",
   "blocks.common.actual_amount_of_gas_used_by_t": "Actual amount of gas used by the blobs in this block",
+  "blocks.common.bbf": "Blob burnt fees / Txn fees * 100%",
+  "blocks.common.ppuogu": "Price per unit of gas used for for blob deployment. Blob gas is independent of normal gas. Both gas prices can affect the priority of transaction execution.",
   "blocks.common.a_running_total_of_blob_gas_co": "A running total of blob gas consumed in excess of the target, prior to the block.",
   "blocks.common.aggregate_quorum_certificate": "Aggregate quorum certificate",
   "blocks.common.quorum_certificate": "Quorum certificate",
@@ -44,6 +46,7 @@
   "blocks.common.txn": "Txn",
   "blocks.common.gas_used": "Gas used",
   "blocks.common.base_fee": "Base fee",
+  "blocks.common.block": "Block",
   "blocks.common.timestamp": "Timestamp",
   "blocks.common.all": "All",
   "blocks.common.forked": "Forked",
@@ -54,5 +57,9 @@
   "blocks.common.internal_txns": "Internal txns",
   "blocks.common.blob_txns": "Blob txns",
   "blocks.common.deposits": "Deposits",
-  "blocks.common.withdrawals": "Withdrawals"
+  "blocks.common.withdrawals": "Withdrawals",
+  "blocks.common.base_fee_handler": "Base fee handler",
+  "blocks.common.base_fee_total": "Base fee total",
+  "blocks.common.native_token": "Native Token",
+  "blocks.common.the_contract_receiving_the_base_fee_responsible_for_handling_fee_usage_this_contract_is_controlled_by_governance_process": "The Contract Receiving The Base Fee Responsible For Handling Fee Usage This Contract Is Controlled By Governance Process"
 }

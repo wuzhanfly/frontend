@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { SHIBARIUM_WITHDRAWAL_ITEM } from 'stubs/shibarium';
@@ -15,6 +16,7 @@ import WithdrawalsListItem from 'ui/withdrawals/shibarium/WithdrawalsListItem';
 import WithdrawalsTable from 'ui/withdrawals/shibarium/WithdrawalsTable';
 
 const ShibariumWithdrawals = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:shibarium_withdrawals',
     options: {
@@ -55,6 +57,7 @@ const ShibariumWithdrawals = () => {
   ) : null;
 
   const text = (() => {
+  const { t } = useTranslation();
     if (countersQuery.isError) {
       return null;
     }
@@ -74,7 +77,7 @@ const ShibariumWithdrawals = () => {
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no withdrawals."
+        emptyText={t('common.common.there_are_no_withdrawals')}
         actionBar={ actionBar }
       >
         { content }

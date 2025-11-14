@@ -9,11 +9,13 @@ const feature = config.features.marketplace;
 
 export type SortValue = 'default' | 'rating_score' | 'rating_count';
 
-export const SORT_OPTIONS: Array<SelectOption<SortValue>> = [
-  { label: 'Default', value: 'default' },
-  (feature.isEnabled && 'api' in feature) && { label: 'Top rated', value: 'rating_score' },
-  (feature.isEnabled && 'api' in feature) && { label: 'Most rated', value: 'rating_count' },
-].filter(Boolean) as Array<SelectOption<SortValue>>;
+export function getSortOptions(t: (key: string) => string): Array<SelectOption<SortValue>> {
+  return [
+    { label: t('validators.common.default'), value: 'default' },
+    (feature.isEnabled && 'api' in feature) && { label: t('marketplace.common.top_rated'), value: 'rating_score' },
+    (feature.isEnabled && 'api' in feature) && { label: t('marketplace.common.most_rated'), value: 'rating_count' },
+  ].filter(Boolean) as Array<SelectOption<SortValue>>;
+}
 
 export function getAppUrl(url: string | undefined, router: NextRouter) {
   if (!url) {
@@ -39,7 +41,7 @@ export function getAppUrl(url: string | undefined, router: NextRouter) {
     // get hash and params (using asPath to avoid conflicts with dynamic route params)
     const [ , queryAndHash ] = router.asPath.split('?');
     const [ queryString, hash ] = queryAndHash ? queryAndHash.split('#') : [ '', '' ];
-    const customHash = hash ? `#${ hash }` : '';
+    const [ , customHash ] = hash ? [ '', `#${ hash }` ] : [ '', '' ];
     const customParams = new URLSearchParams(queryString);
 
     // remove reserved params

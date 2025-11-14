@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { useSettingsContext } from 'lib/contexts/settings';
 import * as mixpanel from 'lib/mixpanel/index';
@@ -10,18 +11,19 @@ import IconSvg from 'ui/shared/IconSvg';
 interface Props extends IconButtonProps {}
 
 const TimeFormatToggle = (props: Props) => {
+  const { t } = useTranslation();
   const settings = useSettingsContext();
   const timeFormat = settings?.timeFormat || 'relative';
 
   const handleClick = React.useCallback(() => {
     settings?.toggleTimeFormat();
-    mixpanel.logEvent(mixpanel.EventTypes.BUTTON_CLICK, { Content: 'Switch time format', Source: 'Table header' });
+    mixpanel.logEvent(mixpanel.EventTypes.BUTTON_CLICK, { Content: 'Switch time format', Source: t('shared.common.table_header') });
   }, [ settings ]);
 
   return (
-    <Tooltip content="Toggle time format">
+    <Tooltip content={t('shared.common.toggle_time_format')}>
       <IconButton
-        aria-label="Toggle time format"
+        aria-label={t('shared.common.toggle_time_format')}
         variant="icon_secondary"
         onClick={ handleClick }
         boxSize={ 5 }

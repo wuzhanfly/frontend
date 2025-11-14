@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ZkSyncBatch } from 'types/api/zkSyncL2';
 
@@ -22,10 +23,11 @@ interface Props {
 }
 
 const ZkSyncL2TxnBatchHashesInfo = ({ isLoading, data }: Props) => {
+  const { t } = useTranslation();
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="Hash of L1 tx on which the batch was committed"
+        hint={t('common.common.hash_of_l1_tx_on_which_the_bat')}
         isLoading={ isLoading }
       >
         Commit tx hash

@@ -1,11 +1,13 @@
 import { chakra } from '@chakra-ui/react';
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import * as mixpanel from 'lib/mixpanel/index';
 import { Link } from 'toolkit/chakra/link';
 import { Skeleton } from 'toolkit/chakra/skeleton';
 
 const IframeBanner = ({ contentUrl, linkUrl }: { contentUrl: string; linkUrl: string }) => {
+  const { t } = useTranslation();
   const [ isFrameLoading, setIsFrameLoading ] = useState(true);
 
   const handleIframeLoad = useCallback(() => {
@@ -43,7 +45,7 @@ const IframeBanner = ({ contentUrl, linkUrl }: { contentUrl: string; linkUrl: st
         h="100%"
         w="100%"
         src={ contentUrl }
-        title="Marketplace banner"
+        title={t('marketplace.common.marketplace_banner')}
         onLoad={ handleIframeLoad }
       />
     </Skeleton>

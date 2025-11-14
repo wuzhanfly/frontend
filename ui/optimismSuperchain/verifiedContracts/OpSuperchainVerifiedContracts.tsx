@@ -1,5 +1,6 @@
 import { Box, createListCollection, HStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { MultichainProvider } from 'lib/contexts/multichain';
 import useIsMobile from 'lib/hooks/useIsMobile';
@@ -12,17 +13,19 @@ import PageTitle from 'ui/shared/Page/PageTitle';
 import Pagination from 'ui/shared/pagination/Pagination';
 import Sort from 'ui/shared/sort/Sort';
 import useVerifiedContractsQuery from 'ui/verifiedContracts/useVerifiedContractsQuery';
-import { SORT_OPTIONS } from 'ui/verifiedContracts/utils';
+import { getSortOptions } from 'ui/verifiedContracts/utils';
 import VerifiedContractsCounters from 'ui/verifiedContracts/VerifiedContractsCounters';
 import VerifiedContractsFilter from 'ui/verifiedContracts/VerifiedContractsFilter';
 import VerifiedContractsList from 'ui/verifiedContracts/VerifiedContractsList';
 import VerifiedContractsTable from 'ui/verifiedContracts/VerifiedContractsTable';
 
-const sortCollection = createListCollection({
-  items: SORT_OPTIONS,
-});
-
 const OpSuperchainVerifiedContracts = () => {
+  const { t } = useTranslation();
+  
+  const sortCollection = React.useMemo(() => createListCollection({
+    items: getSortOptions(t),
+  }), [t]);
+
   const isMobile = useIsMobile();
 
   const { query, type, searchTerm, sort, onSearchTermChange, onTypeChange, onSortChange } = useVerifiedContractsQuery({ isMultichain: true });
@@ -41,7 +44,7 @@ const OpSuperchainVerifiedContracts = () => {
       w={{ base: '100%', lg: '350px' }}
       size="sm"
       onChange={ onSearchTermChange }
-      placeholder="Search by contract name or address"
+      placeholder={t('common.common.search_by_contract_name_or_add')}
       initialValue={ searchTerm }
     />
   );
@@ -89,7 +92,7 @@ const OpSuperchainVerifiedContracts = () => {
   return (
     <Box>
       <PageTitle
-        title="Verified contracts"
+        title={t('common.common.verified_contracts')}
         withTextAd
       />
       <ChainSelect
@@ -102,7 +105,7 @@ const OpSuperchainVerifiedContracts = () => {
         <DataListDisplay
           isError={ isError }
           itemsNum={ data?.items.length }
-          emptyText="There are no verified contracts."
+          emptyText={t('common.common.there_are_no_verified_contract')}
           filterProps={{
             emptyFilteredText: `Couldn${ apos }t find any contract that matches your query.`,
             hasActiveFilters: Boolean(searchTerm || type),

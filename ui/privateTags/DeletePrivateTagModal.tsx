@@ -1,6 +1,7 @@
 import { Text } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressTag, TransactionTag, AddressTagsResponse, TransactionTagsResponse } from 'types/api/account';
 
@@ -16,6 +17,7 @@ type Props = {
 };
 
 const DeletePrivateTagModal: React.FC<Props> = ({ open, onOpenChange, data, type }) => {
+  const { t } = useTranslation();
   const tag = data.name;
   const id = data.id;
 
@@ -55,7 +57,7 @@ const DeletePrivateTagModal: React.FC<Props> = ({ open, onOpenChange, data, type
     <DeleteModal
       open={ open }
       onOpenChange={ onOpenChange }
-      title="Removal of private tag"
+      title={t('common.common.removal_of_private_tag')}
       renderContent={ renderText }
       mutationFn={ mutationFn }
       onSuccess={ onSuccess }

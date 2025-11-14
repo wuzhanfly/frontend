@@ -1,5 +1,6 @@
 import { Flex, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TChainIndicator } from './types';
 import type { ChainIndicatorId } from 'types/homepage';
@@ -15,25 +16,27 @@ import ChainIndicatorChartContainer from './ChainIndicatorChartContainer';
 import ChainIndicatorItem from './ChainIndicatorItem';
 import useChartDataQuery from './useChartDataQuery';
 import getIndicatorValues from './utils/getIndicatorValues';
-import INDICATORS from './utils/indicators';
+import { getIndicators } from './utils/indicators';
 
 const isStatsFeatureEnabled = config.features.stats.isEnabled;
 
-const indicators = INDICATORS
-  .filter(({ id }) => config.UI.homepage.charts.includes(id))
-  .sort((a, b) => {
-    if (config.UI.homepage.charts.indexOf(a.id) > config.UI.homepage.charts.indexOf(b.id)) {
-      return 1;
-    }
-
-    if (config.UI.homepage.charts.indexOf(a.id) < config.UI.homepage.charts.indexOf(b.id)) {
-      return -1;
-    }
-
-    return 0;
-  });
-
 const ChainIndicators = () => {
+  const { t } = useTranslation();
+  const INDICATORS = getIndicators(t);
+  
+  const indicators = INDICATORS
+    .filter(({ id }) => config.UI.homepage.charts.includes(id))
+    .sort((a, b) => {
+      if (config.UI.homepage.charts.indexOf(a.id) > config.UI.homepage.charts.indexOf(b.id)) {
+        return 1;
+      }
+
+      if (config.UI.homepage.charts.indexOf(a.id) < config.UI.homepage.charts.indexOf(b.id)) {
+        return -1;
+      }
+
+      return 0;
+    });
   const [ selectedIndicator, selectIndicator ] = React.useState(indicators[0]?.id);
   const selectedIndicatorData = indicators.find(({ id }) => id === selectedIndicator);
 

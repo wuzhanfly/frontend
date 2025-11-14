@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import getQueryParamString from 'lib/router/getQueryParamString';
 import AddressQrCode from 'ui/address/details/AddressQrCode';
@@ -9,6 +10,7 @@ import AddressEntity from 'ui/shared/entities/address/AddressEntity';
 import PageTitle from 'ui/shared/Page/PageTitle';
 
 const OpSuperchainToken = () => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const isLoading = false;
@@ -29,10 +31,10 @@ const OpSuperchainToken = () => {
     <>
       <TextAd mb={ 6 }/>
       <PageTitle
-        title="Unnamed token"
+        title={t('tokens.common.unnamed_token')}
         secondRow={ secondRow }
       />
-      <div>Coming soon 🔜</div>
+      <div>{t('account.common.coming_soon_')}</div>
     </>
   );
 };

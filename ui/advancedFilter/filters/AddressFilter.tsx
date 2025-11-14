@@ -2,11 +2,13 @@ import { createListCollection, Flex, VStack } from '@chakra-ui/react';
 import { isEqual } from 'es-toolkit';
 import type { ChangeEvent } from 'react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AdvancedFilterParams } from 'types/api/advancedFilter';
 
 import { Input } from 'toolkit/chakra/input';
 import { InputGroup } from 'toolkit/chakra/input-group';
+import type { SelectOption } from 'toolkit/chakra/select';
 import { Select } from 'toolkit/chakra/select';
 import AddButton from 'toolkit/components/buttons/AddButton';
 import { ClearButton } from 'toolkit/components/buttons/ClearButton';
@@ -19,13 +21,6 @@ const FILTER_PARAM_FROM_EXCLUDE = 'from_address_hashes_to_exclude';
 
 export type AddressFilterMode = 'include' | 'exclude';
 
-const collection = createListCollection({
-  items: [
-    { label: 'Include', value: 'include' },
-    { label: 'Exclude', value: 'exclude' },
-  ],
-});
-
 type Value = Array<{ address: string; mode: AddressFilterMode }>;
 
 type Props = {
@@ -36,15 +31,17 @@ type Props = {
   isLoading?: boolean;
 };
 
-type InputProps = {
-  address?: string;
-  mode?: AddressFilterMode;
-  isLast: boolean;
-  onModeChange: ({ value }: { value: Array<string> }) => void;
+interface InputProps {
+  address: string;
+  mode: AddressFilterMode;
+  onModeChange: (value: { value: Array<string> }) => void;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   onClear: () => void;
+  isLast: boolean;
   onAddFieldClick: () => void;
-};
+  collection: ReturnType<typeof createListCollection<SelectOption<string>>>;
+  t: (key: string) => string;
+}
 
 type AddressFilter = {
   address: string;
@@ -55,12 +52,12 @@ function addressFilterToKey(filter: AddressFilter) {
   return `${ filter.address.toLowerCase() }-${ filter.mode }`;
 }
 
-const AddressFilterInput = ({ address, mode, onModeChange, onChange, onClear, isLast, onAddFieldClick }: InputProps) => {
+const AddressFilterInput = ({ address, mode, onModeChange, onChange, onClear, isLast, onAddFieldClick, collection, t }: InputProps) => {
   return (
     <Flex alignItems="center" w="100%">
       <Select
         collection={ collection }
-        placeholder="Select mode"
+        placeholder={ t('common.common.select_mode') }
         defaultValue={ [ mode || 'include' ] }
         onValueChange={ onModeChange }
         portalled={ false }
@@ -72,7 +69,7 @@ const AddressFilterInput = ({ address, mode, onModeChange, onChange, onClear, is
         flexGrow={ 1 }
         endElement={ <ClearButton onClick={ onClear } mx={ 2 } disabled={ !address }/> }
       >
-        <Input value={ address } onChange={ onChange } placeholder="Smart contract / Address (0x...)*" size="sm" autoComplete="off"/>
+        <Input value={ address } onChange={ onChange } placeholder={ t('common.common.s_c_a') } size="sm" autoComplete="off"/>
       </InputGroup>
       { isLast && (
         <AddButton
@@ -87,6 +84,13 @@ const AddressFilterInput = ({ address, mode, onModeChange, onChange, onClear, is
 const emptyItem = { address: '', mode: 'include' as AddressFilterMode };
 
 const AddressFilter = ({ type, value = [], handleFilterChange }: Props) => {
+  const { t } = useTranslation();
+  const collection = createListCollection<SelectOption<string>>({
+    items: [
+      { label: t('common.common.include'), value: 'include' },
+      { label: t('common.common.exclude'), value: 'exclude' },
+    ],
+  });
   const [ currentValue, setCurrentValue ] =
     React.useState<Array<AddressFilter>>([ ...value, emptyItem ]);
 
@@ -133,7 +137,7 @@ const AddressFilter = ({ type, value = [], handleFilterChange }: Props) => {
 
   return (
     <TableColumnFilter
-      title={ type === 'from' ? 'From address' : 'To address' }
+      title={ type === 'from' ? t('common.common.from_address') : t('common.common.to_address') }
       isFilled={ Boolean(currentValue[0].address) }
       isTouched={ !isEqual(currentValue.filter(i => i.address).map(addressFilterToKey).sort(), value.map(addressFilterToKey).sort()) }
       onFilter={ onFilter }
@@ -151,6 +155,8 @@ const AddressFilter = ({ type, value = [], handleFilterChange }: Props) => {
             onChange={ handleAddressChange(index) }
             onClear={ handleAddressClear(index) }
             onAddFieldClick={ onAddFieldClick }
+            collection={ collection }
+            t={ t }
           />
         )) }
       </VStack>

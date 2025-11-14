@@ -1,6 +1,7 @@
 import { Text, Box, Flex, Separator } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import type { ChangeEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import { useRewardsContext } from 'lib/contexts/rewards';
@@ -24,8 +25,9 @@ type Props = {
 };
 
 const LoginStepContent = ({ goNext, closeModal, openAuthModal }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
-  const { connect, isConnected, address } = useWallet({ source: 'Merits' });
+  const { connect, isConnected, address } = useWallet({ source: t('staking.common.merits') as 'Merits' });
   const savedRefCode = cookies.get(cookies.NAMES.REWARDS_REFERRAL_CODE);
   const [ isRefCodeUsed, setIsRefCodeUsed ] = React.useState(Boolean(savedRefCode));
   const [ isLoading, setIsLoading ] = React.useState(false);
@@ -100,23 +102,23 @@ const LoginStepContent = ({ goNext, closeModal, openAuthModal }: Props) => {
 
   const buttonText = React.useMemo(() => {
     if (canTrySharedLogin) {
-      return 'Continue with wallet';
+      return t('staking.common.continue_with_wallet');
     }
 
     if (!isConnected) {
-      return 'Connect wallet';
+      return t('staking.common.connect_wallet');
     }
     if (isLoggedIntoAccountWithWallet) {
-      return isSignUp ? 'Get started' : 'Continue';
+      return isSignUp ? t('staking.common.get_started') : t('staking.common.continue');
     }
-    return profileQuery.data?.email ? 'Add wallet to account' : 'Log in to account';
+    return profileQuery.data?.email ? t('staking.common.add_wallet_to_account') : t('staking.common.log_in_to_account');
   }, [ canTrySharedLogin, isConnected, isLoggedIntoAccountWithWallet, profileQuery.data?.email, isSignUp ]);
 
   return (
     <>
       <Image
         src="/static/merits/merits_program.png"
-        alt="Merits program"
+        alt={t('staking.common.merits_program')}
         mb={ 3 }
         fallback={ <Skeleton loading w="full" h="120px"/> }
       />
@@ -135,12 +137,12 @@ const LoginStepContent = ({ goNext, closeModal, openAuthModal }: Props) => {
               size="md"
               checked={ isRefCodeUsed }
               onCheckedChange={ handleToggleChange }
-              aria-label="Referral code switch"
+              aria-label={t('staking.common.referral_code_switch')}
             />
           </Flex>
           { isRefCodeUsed && (
             <Field
-              label="Code"
+              label={t('staking.common.code')}
               floating
               id="referral-code"
               size="lg"
@@ -169,7 +171,7 @@ const LoginStepContent = ({ goNext, closeModal, openAuthModal }: Props) => {
         mb={ 4 }
         onClick={ handleButtonClick }
         loading={ isLoading || profileQuery.isLoading || checkUserQuery.isFetching }
-        loadingText={ isLoading ? 'Sign message in your wallet' : undefined }
+        loadingText={ isLoading ? t('staking.common.sign_message_in_your_wallet') : undefined }
         disabled={ isAddressMismatch || refCodeError }
       >
         { buttonText }

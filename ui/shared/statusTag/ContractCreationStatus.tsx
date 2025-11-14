@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContractCreationStatus } from 'types/api/contract';
 
@@ -13,22 +14,23 @@ interface Props extends BadgeProps {
 }
 
 const ContractCreationStatus = ({ status, ...rest }: Props) => {
+  const { t } = useTranslation();
   switch (status) {
     case 'success':
       return (
-        <Tooltip content="The contract was successfully created">
+        <Tooltip content={t('shared.common.the_contract_was_successfully_')}>
           <StatusTag type="ok" text="Success" { ...rest }/>
         </Tooltip>
       );
     case 'failed':
       return (
-        <Tooltip content="The creation transaction failed">
-          <StatusTag type="error" text="Failed" { ...rest }/>
+        <Tooltip content={t('shared.common.the_creation_transaction_faile')}>
+          <StatusTag type="error" text={t('shared.common.failed')} { ...rest }/>
         </Tooltip>
       );
     case 'selfdestructed':
       return (
-        <Tooltip content="The contract was created at some point but has since self-destructed">
+        <Tooltip content={t('shared.common.the_contract_was_created_at_so')}>
           <Badge colorPalette="gray" { ...rest }>Self-destructed</Badge>
         </Tooltip>
       );

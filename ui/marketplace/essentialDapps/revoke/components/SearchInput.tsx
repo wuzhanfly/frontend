@@ -1,5 +1,6 @@
 import { chakra, Spinner } from '@chakra-ui/react';
 import type { ChangeEvent, FormEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useCallback, useRef, useState } from 'react';
 
 import { Input } from 'toolkit/chakra/input';
@@ -14,6 +15,7 @@ type Props = {
 };
 
 export default function SearchInput({ value, onChange, onSubmit }: Props) {
+  const { t } = useTranslation();
   const inputRef = useRef<HTMLInputElement>(null);
   const [ isLoading, setIsLoading ] = useState(false);
 
@@ -55,7 +57,7 @@ export default function SearchInput({ value, onChange, onSubmit }: Props) {
           size="sm"
           value={ value }
           onChange={ handleValueChange }
-          placeholder="Search accounts by address or domain..."
+          placeholder={t('marketplace.common.search_accounts_by_address_or_')}
           borderWidth="2px"
           textOverflow="ellipsis"
           whiteSpace="nowrap"

@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TransactionTag } from 'types/api/account';
 
@@ -16,7 +17,8 @@ type Props = {
 };
 
 const TransactionModal: React.FC<Props> = ({ open, onOpenChange, onSuccess, data }) => {
-  const title = data ? 'Edit transaction tag' : 'New transaction tag';
+  const { t } = useTranslation();
+  const title = data ? t('common.common.edit_transaction_tag') : t('common.common.new_transaction_tag');
   const text = !data ? 'Label any transaction with a private transaction tag (up to 35 chars) to customize your explorer experience.' : '';
 
   const [ isAlertVisible, setAlertVisible ] = useState(false);
@@ -33,7 +35,7 @@ const TransactionModal: React.FC<Props> = ({ open, onOpenChange, onSuccess, data
     if (!data?.id) {
       mixpanel.logEvent(
         mixpanel.EventTypes.PRIVATE_TAG,
-        { Action: 'Submit', 'Page type': PAGE_TYPE_DICT['/account/tag-address'], 'Tag type': 'Tx' },
+        { Action: t('common.common.submit') as 'Form opened' | 'Submit', 'Page type': PAGE_TYPE_DICT['/account/tag-address'], 'Tag type': 'Tx' },
       );
     }
   }, [ data?.id, onSuccess ]);

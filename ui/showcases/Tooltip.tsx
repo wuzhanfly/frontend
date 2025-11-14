@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Tooltip } from 'toolkit/chakra/tooltip';
 import Utilization from 'ui/shared/Utilization/Utilization';
@@ -6,21 +7,22 @@ import Utilization from 'ui/shared/Utilization/Utilization';
 import { Section, Container, SectionHeader, SamplesStack, Sample } from './parts';
 
 const TooltipShowcase = () => {
+  const { t } = useTranslation();
   return (
     <Container value="tooltip">
       <Section>
         <SectionHeader>Variant</SectionHeader>
         <SamplesStack>
           <Sample label="variant: regular">
-            <Tooltip content="Tooltip content">
+            <Tooltip content={t('common.common.tooltip_content')}>
               <span>Default</span>
             </Tooltip>
-            <Tooltip content="Tooltip content" interactive>
+            <Tooltip content={t('common.common.tooltip_content')} interactive>
               <Utilization value={ 0.5 }/>
             </Tooltip>
           </Sample>
           <Sample label="variant: popover">
-            <Tooltip content="Tooltip content" variant="popover">
+            <Tooltip content={t('common.common.tooltip_content')} variant="popover">
               <span>Default</span>
             </Tooltip>
           </Sample>

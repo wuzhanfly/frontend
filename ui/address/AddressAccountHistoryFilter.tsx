@@ -1,18 +1,11 @@
 import { createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { NovesHistoryFilterValue } from 'types/api/noves';
 
 import useIsInitialLoading from 'lib/hooks/useIsInitialLoading';
 import PopoverFilterRadio from 'ui/shared/filters/PopoverFilterRadio';
-
-const OPTIONS = [
-  { value: 'all', label: 'All' },
-  { value: 'received', label: 'Received from' },
-  { value: 'sent', label: 'Sent to' },
-];
-
-const collection = createListCollection({ items: OPTIONS });
 
 interface Props {
   hasActiveFilter: boolean;
@@ -22,6 +15,15 @@ interface Props {
 }
 
 const AccountHistoryFilter = ({ onFilterChange, defaultFilter, hasActiveFilter, isLoading }: Props) => {
+  const { t } = useTranslation();
+  const OPTIONS = [
+    { value: 'all', label: t('validators.common.all') },
+    { value: 'received', label: t('shared.common.received_from') },
+    { value: 'sent', label: t('shared.common.sent_to') },
+  ];
+
+  const collection = createListCollection({ items: OPTIONS });
+  
   const isInitialLoading = useIsInitialLoading(isLoading);
 
   return (

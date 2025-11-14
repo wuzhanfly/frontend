@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { InteropMessage } from 'types/api/interop';
 
@@ -11,18 +12,19 @@ export interface Props {
 }
 
 const InteropMessageStatus = ({ status, isLoading }: Props) => {
+  const { t } = useTranslation();
   let type: StatusTagType;
 
   switch (status) {
-    case 'Relayed': {
+    case t('transactions.common.relayed'): {
       type = 'ok';
       break;
     }
-    case 'Failed': {
+    case t('shared.common.failed'): {
       type = 'error';
       break;
     }
-    case 'Sent': {
+    case t('transactions.common.sent'): {
       type = 'pending';
       break;
     }

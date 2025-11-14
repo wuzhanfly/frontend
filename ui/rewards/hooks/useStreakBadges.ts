@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { GetAvailableBadgesResponse } from '@blockscout/points-types';
 
@@ -9,6 +10,7 @@ import { useRewardsContext } from 'lib/contexts/rewards';
 const feature = config.features.rewards;
 
 export default function useStreakBadges() {
+  const { t } = useTranslation();
   const { apiToken, dailyRewardQuery } = useRewardsContext();
 
   const badgesQuery = useApiQuery<'rewards:user_badges', unknown, GetAvailableBadgesResponse>('rewards:user_badges', {
@@ -38,7 +40,7 @@ export default function useStreakBadges() {
         Number(b.requirements?.streak) > currentStreak,
       );
       if (!next) {
-        return 'All achievements are earned';
+        return t('staking.common.all_achievements_are_earned');
       }
       const target = Number(next.requirements?.streak || 0);
       const diff = target - currentStreak;

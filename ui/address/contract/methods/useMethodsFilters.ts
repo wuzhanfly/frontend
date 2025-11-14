@@ -1,13 +1,14 @@
 import { pickBy } from 'es-toolkit';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { MethodType, SmartContractMethod } from './types';
 
 import getQueryParamString from 'lib/router/getQueryParamString';
 
 import type { CONTRACT_MAIN_TAB_IDS } from '../utils';
-import { TYPE_FILTER_OPTIONS, isReadMethod, isWriteMethod } from './utils';
+import { getDefaultTypeFilterOptions, isReadMethod, isWriteMethod } from './utils';
 
 function getInitialMethodType(tab: string) {
   switch (tab) {
@@ -47,6 +48,7 @@ interface Params {
 }
 
 export default function useMethodsFilters({ abi }: Params) {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const tab = getQueryParamString(router.query.tab);
@@ -55,6 +57,11 @@ export default function useMethodsFilters({ abi }: Params) {
   const [ searchTerm, setSearchTerm ] = React.useState<string>('');
 
   const changeTabInQuery = React.useCallback((methodType: MethodType) => {
+    const TYPE_FILTER_OPTIONS = [
+      { value: 'all', title: t('validators.common.all') },
+      { value: 'read', title: t('addresses.common.read') },
+      { value: 'write', title: t('addresses.common.write') },
+    ];
     const currentTab = getQueryParamString(router.query.tab);
     const tabIndex = TYPE_FILTER_OPTIONS.findIndex(({ value }) => value === methodType);
     const nextTab = METHOD_TABS_MATRIX.find((tabsSet) => tabsSet.includes(currentTab))?.[tabIndex];
@@ -70,7 +77,7 @@ export default function useMethodsFilters({ abi }: Params) {
       { shallow: true },
     );
 
-  }, [ router ]);
+  }, [ router, t ]);
 
   const onChange = React.useCallback((filters: MethodsFilters) => {
     if (filters.type === 'method_type') {

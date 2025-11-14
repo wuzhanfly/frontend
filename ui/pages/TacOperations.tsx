@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useDebounce from 'lib/hooks/useDebounce';
 import useIsMobile from 'lib/hooks/useIsMobile';
@@ -18,6 +19,7 @@ import Pagination from 'ui/shared/pagination/Pagination';
 import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 
 const TacOperations = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const [ searchTerm, setSearchTerm ] = React.useState(getQueryParamString(router.query.q) || undefined);
 
@@ -47,7 +49,7 @@ const TacOperations = () => {
       w={{ base: '100%', lg: '460px' }}
       size="sm"
       onChange={ handleSearchTermChange }
-      placeholder="Search by operation, tx hash, sender"
+      placeholder={t('common.common.search_by_operation_tx_hash_se')}
       initialValue={ searchTerm }
     />
   );
@@ -90,11 +92,11 @@ const TacOperations = () => {
 
   return (
     <>
-      <PageTitle title="Operations" withTextAd/>
+      <PageTitle title={t('shared.common.operations')} withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items?.length }
-        emptyText="There are no operations."
+        emptyText={t('common.common.there_are_no_operations')}
         filterProps={{
           emptyFilteredText: `Couldn${ apos }t find any operation that matches your query.`,
           hasActiveFilters: Boolean(debouncedSearchTerm),

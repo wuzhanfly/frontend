@@ -2,6 +2,7 @@ import { chakra, Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import QRCode from 'qrcode';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import getPageType from 'lib/mixpanel/getPageType';
 import * as mixpanel from 'lib/mixpanel/index';
@@ -26,6 +27,7 @@ interface Props {
 }
 
 const AddressQrCode = ({ hash, className, isLoading }: Props) => {
+  const { t } = useTranslation();
   const { open, onOpen, onOpenChange } = useDisclosure();
 
   const router = useRouter();
@@ -40,8 +42,8 @@ const AddressQrCode = ({ hash, className, isLoading }: Props) => {
     if (open) {
       QRCode.toString(hash, SVG_OPTIONS, (error: Error | null | undefined, svg: string) => {
         if (error) {
-          setError('We were unable to generate QR code.');
-          rollbar?.warn('QR code generation failed');
+          setError(t('addresses.common.we_were_unable_to_generate_qr_'));
+          rollbar?.warn(t('addresses.common.qr_code_generation_failed'));
           return;
         }
 
@@ -58,10 +60,10 @@ const AddressQrCode = ({ hash, className, isLoading }: Props) => {
 
   return (
     <>
-      <Tooltip content="Click to view QR code" disableOnMobile>
+      <Tooltip content={ t('addresses.common.click_to_view_qr_code') } disableOnMobile>
         <IconButton
           className={ className }
-          aria-label="Show QR code"
+          aria-label={ t('addresses.common.show_qr_code') }
           variant="icon_background"
           size="md"
           onClick={ onOpen }

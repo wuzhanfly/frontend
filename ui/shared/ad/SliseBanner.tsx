@@ -1,6 +1,7 @@
 import { Flex, chakra } from '@chakra-ui/react';
 import { SliseAd } from '@slise/embed-react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { BannerProps } from './types';
 
@@ -14,6 +15,7 @@ import {
 } from './consts';
 
 const SliseBanner = ({ className, platform }: BannerProps) => {
+  const { t } = useTranslation();
 
   if (platform === 'desktop') {
     return (
@@ -21,7 +23,7 @@ const SliseBanner = ({ className, platform }: BannerProps) => {
         <SliseAd
           slotId={ config.chain.name || '' }
           pub="pub-10"
-          format="728x90"
+          format={t('shared.common.728x90')}
           style={{ width: `${ DESKTOP_BANNER_WIDTH }px`, height: `${ DESKTOP_BANNER_HEIGHT }px` }}/>
       </Flex>
     );
@@ -50,7 +52,7 @@ const SliseBanner = ({ className, platform }: BannerProps) => {
         <SliseAd
           slotId={ config.chain.name || '' }
           pub="pub-10"
-          format="728x90"
+          format={t('shared.common.728x90')}
           style={{ width: `${ DESKTOP_BANNER_WIDTH }px`, height: `${ DESKTOP_BANNER_HEIGHT }px` }}/>
       </Flex>
       <Flex

@@ -64,6 +64,7 @@
   "marketplace.common.failed_to_revoke_approval": "撤销授权失败。",
   "marketplace.common.approval_revoked_successfully": "授权撤销成功。",
   "marketplace.common.something_went_wrong_try_again": "出错了，请稍后重试。",
+  "marketplace.common.tfin_pctp": "功能暂不可用，原因：reCAPTCHA 初始化失败。请在 Discord 上联系项目团队报告问题。",
   "marketplace.common.transfer": "转账",
   "marketplace.common.swap_button": "交换按钮",
   "marketplace.common._array": ", 数组",

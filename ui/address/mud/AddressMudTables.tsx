@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useDebounce from 'lib/hooks/useDebounce';
 import useIsInitialLoading from 'lib/hooks/useIsInitialLoading';
@@ -22,6 +23,7 @@ type Props = {
 };
 
 const AddressMudTables = ({ isQueryEnabled = true }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const hash = getQueryParamString(router.query.hash);
@@ -50,7 +52,7 @@ const AddressMudTables = ({ isQueryEnabled = true }: Props) => {
       minW={{ base: 'auto', lg: '250px' }}
       size="sm"
       onChange={ setSearchTerm }
-      placeholder="Search by name, namespace or table ID..."
+      placeholder={ t('addresses.common.search_by_name_namespace_or_ta') }
       initialValue={ searchTerm }
       loading={ isInitialLoading }
     />
@@ -90,7 +92,7 @@ const AddressMudTables = ({ isQueryEnabled = true }: Props) => {
     <DataListDisplay
       isError={ isError }
       itemsNum={ data?.items?.length }
-      emptyText="There are no tables for this address."
+      emptyText={ t('addresses.common.there_are_no_tables_for_this_address') }
       filterProps={{
         emptyFilteredText: `Couldn${ apos }t find tables that match your filter query.`,
         hasActiveFilters: Boolean(debouncedSearchTerm),

@@ -5,18 +5,21 @@ import * as blobUtils from 'lib/blob';
 import { Skeleton } from 'toolkit/chakra/skeleton';
 import type { IconName } from 'ui/shared/IconSvg';
 import IconSvg from 'ui/shared/IconSvg';
+import { useTranslation } from 'react-i18next';
 interface Props {
   data: string;
   isLoading?: boolean;
 }
 
-const TYPES: Record<string, { iconName: IconName; label: string }> = {
-  image: { iconName: 'blobs/image', label: 'Image' },
-  text: { iconName: 'blobs/text', label: 'Text' },
-  raw: { iconName: 'blobs/raw', label: 'Raw' },
-};
-
 const BlobDataType = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
+
+  const TYPES: Record<string, { iconName: IconName; label: string }> = {
+    image: { iconName: 'blobs/image', label: t('shared.common.image') },
+    text: { iconName: 'blobs/text', label: t('shared.common.text') },
+    raw: { iconName: 'blobs/raw', label: t('shared.common.raw') },
+  };
+
   const guessedType = React.useMemo(() => {
     if (isLoading) {
       return;

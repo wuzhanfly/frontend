@@ -6,6 +6,8 @@
   "account.common.email_notifications": "邮件通知",
   "account.common.save_changes": "保存更改",
   "account.common.add_address": "添加地址",
+  "account.common.remove_address_from_watch_list": "从关注列表中移除地址",
+  "account.common.add_address_tag": "添加地址标签",
   "account.common.promise": "承诺",
   "account.common.notification_methods": "通知方式",
   "account.common.incoming": "接收",

@@ -1,5 +1,6 @@
 import { HStack, chakra, createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TransactionsSortingValue } from 'types/api/transaction';
 import type { PaginationParams } from 'ui/shared/pagination/types';
@@ -10,7 +11,7 @@ import ActionBar from 'ui/shared/ActionBar';
 import Pagination from 'ui/shared/pagination/Pagination';
 import Sort from 'ui/shared/sort/Sort';
 
-import { SORT_OPTIONS } from './useTxsSort';
+import { getSortOptions } from './useTxsSort';
 
 type Props = {
   sorting: TransactionsSortingValue;
@@ -22,11 +23,11 @@ type Props = {
   linkSlot?: React.ReactNode;
 };
 
-const collection = createListCollection({
-  items: SORT_OPTIONS,
-});
-
 const TxsHeaderMobile = ({ filterComponent, sorting, setSorting, paginationProps, className, showPagination = true, linkSlot }: Props) => {
+  const { t } = useTranslation();
+  const collection = createListCollection({
+    items: getSortOptions(t),
+  });
   const handleSortValueChange = React.useCallback(({ value }: { value: Array<string> }) => {
     setSorting?.(value[0] as TransactionsSortingValue);
   }, [ setSorting ]);
@@ -54,7 +55,7 @@ const TxsHeaderMobile = ({ filterComponent, sorting, setSorting, paginationProps
           onChange={ () => {} }
           maxW="360px"
           size="xs"
-          placeholder="Search by addresses, hash, method..."
+          placeholder={t('transactions.common.search_by_addresses_hash_metho')}
         /> */ }
         { linkSlot }
       </HStack>

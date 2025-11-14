@@ -1,6 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressParam } from 'types/api/addressParams';
 import type { BlockBaseFeeCelo } from 'types/api/block';
@@ -45,6 +46,7 @@ interface Props {
 }
 
 const BlockDetailsBaseFeeCelo = ({ data }: Props) => {
+  const { t } = useTranslation();
   const totalBaseFee = BigNumber(data.amount).dividedBy(WEI).toFixed();
 
   const totalFeeLabel = (
@@ -58,15 +60,15 @@ const BlockDetailsBaseFeeCelo = ({ data }: Props) => {
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="The contract receiving the base fee, responsible for handling fee usage. This contract is controlled by governance process."
+        hint={t('blocks.common.the_contract_receiving_the_base_fee_responsible_for_handling_fee_usage_this_contract_is_controlled_by_governance_process')}
       >
-        Base fee handler
+        {t('blocks.common.base_fee_handler')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <AddressEntity address={ data.recipient }/>
       </DetailedInfo.ItemValue>
       <DetailedInfo.ItemLabel hint={ totalFeeLabel }>
-        Base fee total
+        {t('blocks.common.base_fee_total')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue multiRow flexDirection="column" alignItems="flex-start">
         <Flex columnGap={ 2 }>

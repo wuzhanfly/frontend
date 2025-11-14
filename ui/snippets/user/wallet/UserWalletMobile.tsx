@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { useMarketplaceContext } from 'lib/contexts/marketplace';
 import useWeb3AccountWithDomain from 'lib/web3/useAccountWithDomain';
@@ -10,6 +11,7 @@ import UserWalletButton from './UserWalletButton';
 import UserWalletMenuContent from './UserWalletMenuContent';
 
 const UserWalletMobile = () => {
+  const { t } = useTranslation();
   const walletMenu = useDisclosure();
 
   const web3Wallet = useWeb3Wallet({ source: 'Header' });

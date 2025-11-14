@@ -1,5 +1,6 @@
 import { Flex, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContract } from 'types/api/contract';
 
@@ -51,6 +52,7 @@ interface Props {
 }
 
 export const ContractSourceCode = ({ data, isLoading, sourceAddress }: Props) => {
+  const { t } = useTranslation();
 
   const editorData = React.useMemo(() => {
     return getEditorData(data);
@@ -69,7 +71,7 @@ export const ContractSourceCode = ({ data, isLoading, sourceAddress }: Props) =>
     null;
 
   const diagramLink = data?.can_be_visualized_via_sol2uml ? (
-    <Tooltip content="Visualize contract code using Sol2Uml JS library">
+    <Tooltip content={ t('addresses.common.visualize_contract_code_using_') }>
       <Link
         href={ route({ pathname: '/visualize/sol2uml', query: { address: sourceAddress } }) }
         ml={{ base: '0', lg: 'auto' }}

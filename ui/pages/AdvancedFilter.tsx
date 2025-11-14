@@ -8,6 +8,7 @@ import {
 import { omit } from 'es-toolkit';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AdvancedFilterParams } from 'types/api/advancedFilter';
 import { ADVANCED_FILTER_TYPES, ADVANCED_FILTER_AGES, ADVANCED_FILTER_ADDRESS_RELATION } from 'types/api/advancedFilter';
@@ -44,6 +45,7 @@ const COLUMNS_CHECKED = {} as Record<ColumnsIds, boolean>;
 TABLE_COLUMNS.forEach(c => COLUMNS_CHECKED[c.id] = true);
 
 const AdvancedFilter = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const multichainContext = useMultichainContext();
 
@@ -138,7 +140,7 @@ const AdvancedFilter = () => {
     return null;
   }
 
-  const filterTags = getFilterTags(filters);
+  const filterTags = getFilterTags(filters, t);
 
   const content = (
     <AddressHighlightProvider>
@@ -158,7 +160,7 @@ const AdvancedFilter = () => {
                   >
                     { Boolean(column.name) && (
                       <chakra.span mr={ 2 } lineHeight="24px" verticalAlign="middle">
-                        { column.id === 'age' ? 'Timestamp' : column.name }
+                        { column.id === 'age' ? t('staking.common.timestamp') : column.name }
                       </chakra.span>
                     ) }
                     { column.id === 'age' && <TimeFormatToggle ml={ 0 } mr={ 1 } verticalAlign="middle"/> }
@@ -180,6 +182,7 @@ const AdvancedFilter = () => {
               <TableRow key={ item.hash + String(index) }>
                 { columnsToShow.map(column => {
                   const textAlign = (() => {
+  const { t } = useTranslation();
                     if (column.id === 'or_and') {
                       return 'center';
                     }
@@ -224,7 +227,7 @@ const AdvancedFilter = () => {
   return (
     <>
       <PageTitle
-        title="Advanced filter"
+        title={t('advanced_filter.common.advanced_filter')}
         withTextAd
       />
       <Flex mb={ 4 } justifyContent="space-between" alignItems="start">
@@ -238,7 +241,7 @@ const AdvancedFilter = () => {
       </Flex>
       <HStack gap={ 2 } flexWrap="wrap" mb={ 6 }>
         { multichainContext?.chain && (
-          <Tag variant="filter" label="Chain">
+          <Tag variant="filter" label={t('transactions.common.chain')}>
             { multichainContext.chain.config.chain.name }
           </Tag>
         ) }
@@ -252,7 +255,7 @@ const AdvancedFilter = () => {
             <Tag variant="filter" label="Type">
               All
             </Tag>
-            <Tag variant="filter" label="Age">
+            <Tag variant="filter" label={t('staking.common.age')}>
               7d
             </Tag>
           </>
@@ -261,7 +264,7 @@ const AdvancedFilter = () => {
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no transactions."
+        emptyText={t('common.common.there_are_no_transactions')}
         actionBar={ actionBar }
         filterProps={{
           hasActiveFilters: Object.values(filters).some(Boolean),

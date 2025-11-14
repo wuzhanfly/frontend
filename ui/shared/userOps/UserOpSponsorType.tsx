@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { UserOpSponsorType as TUserOpSponsorType } from 'types/api/userOps';
 
@@ -9,19 +10,20 @@ type Props = {
 };
 
 const UserOpSponsorType = ({ sponsorType }: Props) => {
+  const { t } = useTranslation();
   let text: string = sponsorType;
   switch (sponsorType) {
     case 'paymaster_hybrid':
       text = 'Paymaster hybrid';
       break;
     case 'paymaster_sponsor':
-      text = 'Paymaster sponsor';
+      text = t('shared.common.paymaster_sponsor');
       break;
     case 'wallet_balance':
-      text = 'Wallet balance';
+      text = t('shared.common.wallet_balance');
       break;
     case 'wallet_deposit':
-      text = 'Wallet deposit';
+      text = t('shared.common.wallet_deposit');
   }
   return <Badge>{ text }</Badge>;
 };

@@ -1,5 +1,6 @@
 import { Flex, chakra, Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { alt } from 'toolkit/utils/htmlEntities';
 import useThemeColors from 'ui/shared/monaco/utils/useThemeColors';
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const CodeEditorTab = ({ isActive, isMainFile, path, onClick, onClose, isCloseDisabled, tabsPathChunks }: Props) => {
+  const { t } = useTranslation();
   const [ fileName, folderName ] = getFilePathParts(path, tabsPathChunks);
   const themeColors = useThemeColors();
 
@@ -64,7 +66,7 @@ const CodeEditorTab = ({ isActive, isMainFile, path, onClick, onClose, isCloseDi
         ml="4px"
         p="2px"
         title={ `Close ${ isActive ? `(${ alt }W)` : '' }` }
-        aria-label="Close"
+        aria-label={t('shared.common.close')}
         onClick={ handleClose }
         borderRadius="sm"
         opacity={ isCloseDisabled ? 0.3 : 1 }

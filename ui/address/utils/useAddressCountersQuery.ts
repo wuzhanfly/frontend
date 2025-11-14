@@ -1,5 +1,6 @@
 import type { UseQueryResult } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressCounters } from 'types/api/address';
 
@@ -26,6 +27,7 @@ interface Params {
 }
 
 export default function useAddressCountersQuery({ hash, isLoading, isDegradedData, isEnabled = true, chainSlug }: Params): AddressCountersQuery {
+  const { t } = useTranslation();
   const enabled = isEnabled && Boolean(hash) && !isLoading;
 
   const apiQuery = useApiQuery<'general:address_counters', { status: number }>('general:address_counters', {
@@ -42,7 +44,7 @@ export default function useAddressCountersQuery({ hash, isLoading, isDegradedDat
     queryKey: [ 'RPC', 'address_counters', { hash } ],
     queryFn: async() => {
       if (!publicClient) {
-        throw new Error('No public RPC client');
+        throw new Error(t('transactions.common.no_public_rpc_client'));
       }
 
       const txCount = publicClient.getTransactionCount({ address: hash as `0x${ string }` }).catch(() => null);

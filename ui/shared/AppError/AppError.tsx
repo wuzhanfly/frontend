@@ -1,5 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -26,26 +27,28 @@ interface Props {
   error: Error | undefined;
 }
 
-const ERROR_TEXTS: Record<string, { title: string; text: string }> = {
-  '403': {
-    title: 'Alert',
-    text: 'Access to this resource is restricted.',
-  },
-  '404': {
-    title: 'Page not found',
-    text: 'This page is no longer explorable! If you are lost, use the search bar to find what you are looking for.',
-  },
-  '422': {
-    title: 'Request cannot be processed',
-    text: 'Your request contained an error, perhaps a mistyped tx/block/address hash. Try again, and check the developer tools console for more info.',
-  },
-  '500': {
-    title: 'Oops! Something went wrong',
-    text: 'An unexpected error has occurred. Try reloading the page, or come back soon and try again.',
-  },
-};
-
 const AppError = ({ error, className }: Props) => {
+  const { t } = useTranslation();
+
+  const ERROR_TEXTS: Record<string, { title: string; text: string }> = {
+    '403': {
+      title: t('shared.common.alert'),
+      text: t('shared.common.access_to_this_resource_is_res'),
+    },
+    '404': {
+      title: t('shared.common.page_not_found'),
+      text: 'This page is no longer explorable! If you are lost, use the search bar to find what you are looking for.',
+    },
+    '422': {
+      title: t('shared.common.request_cannot_be_processed'),
+      text: 'Your request contained an error, perhaps a mistyped tx/block/address hash. Try again, and check the developer tools console for more info.',
+    },
+    '500': {
+      title: t('shared.common.oops_something_went_wrong'),
+      text: t('shared.common.an_unexpected_error_has_occurr'),
+    },
+  };
+
   const content = (() => {
     const resourceErrorPayload = getResourceErrorPayload(error);
     const cause = getErrorCause(error);
@@ -59,7 +62,7 @@ const AppError = ({ error, className }: Props) => {
     const statusCode = getErrorCauseStatusCode(error) || getErrorObjStatusCode(error);
 
     const isInvalidTxHash = cause && 'resource' in cause && cause.resource === 'general:tx' && statusCode === 404;
-    const isBlockConsensus = messageInPayload?.includes('Block lost consensus');
+    const isBlockConsensus = messageInPayload?.includes(t('shared.common.block_lost_consensus'));
 
     if (isInvalidTxHash) {
       return <AppErrorTxNotFound/>;
@@ -97,7 +100,7 @@ const AppError = ({ error, className }: Props) => {
           <>
             <AppErrorIcon statusCode={ statusCode }/>
             <AppErrorTitle title={ title }/>
-            <Text color="text.secondary" mt={ 3 }>{ text }</Text>
+            text={ error ? t('shared.common.an_unexpected_error_has_occurr') : t('shared.common.unknown_error') }
             <Link
               href={ route({ pathname: '/' }) }
               asChild

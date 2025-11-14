@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressTag } from 'types/api/account';
 
@@ -16,7 +17,8 @@ type Props = {
 };
 
 const AddressModal: React.FC<Props> = ({ open, onOpenChange, onSuccess, data, pageType }) => {
-  const title = data?.id ? 'Edit address tag' : 'New address tag';
+  const { t } = useTranslation();
+  const title = data?.id ? 'Edit address tag' : t('common.common.new_address_tag');
   const text = !data?.id ? 'Label any address with a private address tag (up to 35 chars) to customize your explorer experience.' : '';
 
   const [ isAlertVisible, setAlertVisible ] = useState(false);
@@ -24,7 +26,7 @@ const AddressModal: React.FC<Props> = ({ open, onOpenChange, onSuccess, data, pa
   React.useEffect(() => {
     open && !data?.id && mixpanel.logEvent(
       mixpanel.EventTypes.PRIVATE_TAG,
-      { Action: 'Form opened', 'Page type': pageType, 'Tag type': 'Address' },
+      { Action: 'Form opened', 'Page type': pageType, 'Tag type': t('validators.common.address') as 'Address' | 'Tx' },
     );
   }, [ data?.id, open, pageType ]);
 
@@ -32,7 +34,7 @@ const AddressModal: React.FC<Props> = ({ open, onOpenChange, onSuccess, data, pa
     if (!data?.id) {
       mixpanel.logEvent(
         mixpanel.EventTypes.PRIVATE_TAG,
-        { Action: 'Submit', 'Page type': pageType, 'Tag type': 'Address' },
+        { Action: t('common.common.submit') as 'Form opened' | 'Submit', 'Page type': pageType, 'Tag type': t('validators.common.address') as 'Address' | 'Tx' },
       );
     }
     return onSuccess();

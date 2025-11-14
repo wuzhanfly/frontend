@@ -16,10 +16,10 @@ class I18nUtils {
    * 切换语言
    * @param language 语言代码 ('en' 或 'zh')
    */
-  changeLanguage = async (language: string): Promise<void> => {
+  changeLanguage = async(language: string): Promise<void> => {
     try {
       await i18n.changeLanguage(language);
-      console.log(`Language changed to ${language}`);
+      console.log(`Language changed to ${ language }`);
     } catch (error) {
       console.error('Failed to change language:', error);
     }
@@ -28,7 +28,7 @@ class I18nUtils {
   /**
    * 获取支持的语言列表
    */
-  getSupportedLanguages = (): string[] => {
+  getSupportedLanguages = (): Array<string> => {
     const supportedLngs = i18n.options.supportedLngs;
     if (Array.isArray(supportedLngs)) {
       return supportedLngs.filter((lang): lang is string => typeof lang === 'string');

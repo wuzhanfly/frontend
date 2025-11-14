@@ -1,5 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useFormContext } from 'react-hook-form';
 
 import type { FormFields } from '../types';
@@ -12,6 +13,7 @@ import ContractVerificationFormRow from '../ContractVerificationFormRow';
 import ContractVerificationMethod from '../ContractVerificationMethod';
 
 const ContractVerificationSolidityFoundry = () => {
+  const { t } = useTranslation();
   const { watch } = useFormContext<FormFields>();
   const address = watch('address');
 
@@ -23,7 +25,7 @@ const ContractVerificationSolidityFoundry = () => {
   [contractFile]:[contractName]`;
 
   return (
-    <ContractVerificationMethod title="Contract verification via Foundry">
+    <ContractVerificationMethod title={t('common.common.contract_verification_via_foun')}>
       <ContractVerificationFormRow>
         <Flex flexDir="column">
           <ContractVerificationFormCodeSnippet code={ codeSnippet }/>

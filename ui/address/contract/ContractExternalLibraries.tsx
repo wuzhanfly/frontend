@@ -1,5 +1,6 @@
 import { Box, Flex, Separator, VStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContractExternalLibrary } from 'types/api/contract';
 
@@ -37,6 +38,7 @@ const Item = (data: SmartContractExternalLibrary) => {
 };
 
 const ContractExternalLibraries = ({ className, data, isLoading }: Props) => {
+  const { t } = useTranslation();
   const { open, onToggle, onOpenChange } = useDisclosure();
   const isMobile = useIsMobile();
 
@@ -58,9 +60,9 @@ const ContractExternalLibraries = ({ className, data, isLoading }: Props) => {
       fontWeight={ 600 }
       px={ 2 }
       gap={ 0 }
-      aria-label="View external libraries"
+      aria-label={ t('addresses.common.view_external_libraries') }
     >
-      <span>{ data.length } { data.length > 1 ? 'Libraries' : 'Library' } </span>
+      <span>{ data.length } { data.length > 1 ? t('addresses.common.libraries') : t('addresses.common.library') } </span>
       <IconSvg name="status/warning" boxSize={ 5 } color="orange.400" ml="2px"/>
       <IconSvg name="arrows/east-mini" transform={ open ? 'rotate(90deg)' : 'rotate(-90deg)' } transitionDuration="faster" boxSize={ 5 } ml={ 2 }/>
     </Button>

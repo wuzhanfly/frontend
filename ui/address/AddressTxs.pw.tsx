@@ -43,7 +43,7 @@ test.describe('base view', () => {
 
   test('desktop', async({ page }) => {
     await expect(component).toHaveScreenshot();
-    await component.locator('button[aria-label="Toggle time format"]').click();
+    await component.locator(`button[aria-label="$t('shared.common.toggle_time_format')"]`).click();
     await page.mouse.move(0, 0);
     await expect(component).toHaveScreenshot();
   });

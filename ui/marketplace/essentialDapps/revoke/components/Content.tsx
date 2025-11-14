@@ -1,5 +1,6 @@
 import { Flex, Text, Separator } from '@chakra-ui/react';
 import React, { useState, useCallback, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AllowanceType } from 'types/client/revoke';
 import type { ChainConfig } from 'types/multichain';
@@ -35,6 +36,7 @@ const Content = ({
   coinBalanceQuery,
   approvalsQuery,
 }: Props) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const [ hiddenApprovals, setHiddenApprovals ] = useState<Array<AllowanceType>>([]);
 
@@ -108,9 +110,9 @@ const Content = ({
                 icon={{ size: isMobile ? undefined : 30 }}
                 noLink
               />
-              <Tooltip content="Connect a wallet to revoke approvals" disabled={ isAddressMatch } disableOnMobile>
+              <Tooltip content={t('marketplace.common.connect_a_wallet_to_revoke_app')} disabled={ isAddressMatch } disableOnMobile>
                 <Badge colorPalette={ isAddressMatch ? 'green' : 'gray' }>
-                  { isAddressMatch ? 'Connected' : 'Not connected' }
+                  { isAddressMatch ? t('marketplace.common.connected') : t('marketplace.common.not_connected') }
                 </Badge>
               </Tooltip>
             </Flex>

@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import CopyToClipboard from 'ui/shared/CopyToClipboard';
 
 import { Section, Container, SectionHeader, SamplesStack, Sample } from './parts';
 
 const ClipboardShowcase = () => {
+  const { t } = useTranslation();
 
   return (
     <Container value="clipboard">
@@ -12,13 +14,13 @@ const ClipboardShowcase = () => {
         <SectionHeader>Type</SectionHeader>
         <SamplesStack>
           <Sample label="type: text">
-            <CopyToClipboard text="Hello, world!" type="text"/>
+            <CopyToClipboard text={t('common.common.hello_world')} type="text"/>
           </Sample>
           <Sample label="type: link">
-            <CopyToClipboard text="Hello, world!" type="link"/>
+            <CopyToClipboard text={t('common.common.hello_world')} type="link"/>
           </Sample>
           <Sample label="type: share">
-            <CopyToClipboard text="Hello, world!" type="share"/>
+            <CopyToClipboard text={t('common.common.hello_world')} type="share"/>
           </Sample>
         </SamplesStack>
       </Section>
@@ -27,7 +29,7 @@ const ClipboardShowcase = () => {
         <SectionHeader>Loading</SectionHeader>
         <SamplesStack>
           <Sample label="loading: true">
-            <CopyToClipboard text="Hello, world!" type="text" isLoading/>
+            <CopyToClipboard text={t('common.common.hello_world')} type="text" isLoading/>
           </Sample>
         </SamplesStack>
       </Section>

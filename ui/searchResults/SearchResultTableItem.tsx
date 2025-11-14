@@ -1,5 +1,6 @@
 import { chakra, Text, Flex, Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import xss from 'xss';
 
 import type { SearchResultItem } from 'types/client/search';
@@ -32,7 +33,7 @@ import * as UserOpEntity from 'ui/shared/entities/userOp/UserOpEntity';
 import HashStringShortenDynamic from 'ui/shared/HashStringShortenDynamic';
 import IconSvg from 'ui/shared/IconSvg';
 import type { SearchResultAppItem } from 'ui/shared/search/utils';
-import { getItemCategory, searchItemTitles } from 'ui/shared/search/utils';
+import { getItemCategory, getSearchItemTitles } from 'ui/shared/search/utils';
 import TacOperationStatus from 'ui/shared/statusTag/TacOperationStatus';
 
 import SearchResultEntityTag from './SearchResultEntityTag';
@@ -45,12 +46,13 @@ interface Props {
 }
 
 const SearchResultTableItem = ({ data, searchTerm, isLoading, addressFormat }: Props) => {
+  const { t } = useTranslation();
 
   const handleLinkClick = React.useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
     saveToRecentKeywords(searchTerm);
     mixpanel.logEvent(mixpanel.EventTypes.SEARCH_QUERY, {
       'Search query': searchTerm,
-      'Source page type': 'Search results',
+      'Source page type': t('common.common.search_results'),
       'Result URL': e.currentTarget.href,
     });
   }, [ searchTerm ]);
@@ -487,7 +489,7 @@ const SearchResultTableItem = ({ data, searchTerm, isLoading, addressFormat }: P
       { content }
       <TableCell fontSize="sm" textTransform="capitalize" verticalAlign="middle">
         <Skeleton loading={ isLoading } color="text.secondary" display="inline-block">
-          <span>{ category ? searchItemTitles[category].itemTitle : '' }</span>
+          <span>{ category ? getSearchItemTitles(t)[category].itemTitle : '' }</span>
         </Skeleton>
       </TableCell>
     </TableRow>

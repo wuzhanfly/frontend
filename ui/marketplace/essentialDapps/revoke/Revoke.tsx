@@ -2,6 +2,7 @@ import { Flex, Text } from '@chakra-ui/react';
 import { getEnsAddress } from '@wagmi/core';
 import { useRouter } from 'next/router';
 import React, { useMemo, useCallback, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { isAddress } from 'viem';
 import { mainnet } from 'viem/chains';
 import { normalize } from 'viem/ens';
@@ -37,6 +38,7 @@ const defaultChainId = (
 ) as string;
 
 const Revoke = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const { updateQuery } = useQueryParams();
   const chainIdFromQuery: string | undefined = getQueryParamString(router.query.chainId);
@@ -175,7 +177,7 @@ const Revoke = () => {
             { connectedAddress ? (
               <Flex gap={ 2 } alignItems="center" flexShrink={ 0 }>
                 <Text textStyle="sm" fontWeight="500" color="text.secondary">My wallet</Text>
-                <Tooltip content="Click to see your approvals" disableOnMobile>
+                <Tooltip content={t('marketplace.common.click_to_see_your_approvals')} disableOnMobile>
                   <Button
                     variant="plain"
                     size="sm"
@@ -200,10 +202,10 @@ const Revoke = () => {
                 variant="outline"
                 onClick={ web3Wallet.connect }
                 loading={ web3Wallet.isOpen }
-                loadingText="Connect wallet"
+                loadingText={t('staking.common.connect_wallet')}
                 flexShrink={ 0 }
               >
-                Connect wallet
+                {t('common.common.connect_wallet')}
               </Button>
             ) }
             <ChainSelect

@@ -4,6 +4,7 @@ import {
   Grid,
 } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { HomeStats } from 'types/api/stats';
 import type { ExcludeUndefined } from 'types/utils';
@@ -29,6 +30,7 @@ interface Props {
 const feature = config.features.gasTracker;
 
 const GasInfoTooltip = ({ children, data, dataUpdatedAt, placement }: Props) => {
+  const { t } = useTranslation();
   if (!data.gas_prices) {
     return null;
   }
@@ -52,9 +54,9 @@ const GasInfoTooltip = ({ children, data, dataUpdatedAt, placement }: Props) => 
         </Flex>
       ) }
       <Grid rowGap={ 2 } columnGap="10px" gridTemplateColumns={ `repeat(${ columnNum }, minmax(min-content, auto))` }>
-        <GasInfoTooltipRow name="Fast" info={ data.gas_prices.fast }/>
+        <GasInfoTooltipRow name={t('shared.common.fast')} info={ data.gas_prices.fast }/>
         <GasInfoTooltipRow name="Normal" info={ data.gas_prices.average }/>
-        <GasInfoTooltipRow name="Slow" info={ data.gas_prices.slow }/>
+        <GasInfoTooltipRow name={t('shared.common.slow')} info={ data.gas_prices.slow }/>
       </Grid>
       <Link href={ route({ pathname: '/gas-tracker' }) }>
         Gas tracker overview

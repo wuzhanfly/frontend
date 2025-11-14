@@ -1,71 +1,8 @@
 {
-  "blobs.common.image": {
-    "defaultMessage": "Image",
-    "source": [
-      "ui/blob/BlobData.tsx:22",
-      "ui/blob/BlobData.tsx:22",
-      "ui/blob/BlobData.tsx:48",
-      "ui/blob/BlobData.tsx:56",
-      "ui/blob/BlobData.tsx:67",
-      "ui/blob/BlobData.tsx:90"
-    ]
-  },
-  "blobs.common.raw": {
-    "defaultMessage": "Raw",
-    "source": [
-      "ui/blob/BlobData.tsx:23",
-      "ui/blob/BlobData.tsx:23",
-      "ui/blob/BlobData.tsx:37",
-      "ui/blob/BlobData.tsx:78",
-      "ui/blob/BlobData.tsx:107"
-    ]
-  },
-  "blobs.common.not_an_image": {
-    "defaultMessage": "Not an image",
-    "source": [
-      "ui/blob/BlobData.tsx:92"
-    ]
-  },
-  "blobs.common.blob_data": {
-    "defaultMessage": "Blob data",
-    "source": [
-      "ui/blob/BlobData.tsx:117"
-    ]
-  },
-  "blobs.common.blob_image_representation": {
-    "defaultMessage": "Blob image representation",
-    "source": [
-      "ui/blob/BlobDataImage.tsx:25"
-    ]
-  },
-  "blobs.common.commitment_to_the_data_in_the_": {
-    "defaultMessage": "Commitment to the data in the blob",
-    "source": [
-      "ui/blob/BlobInfo.tsx:53"
-    ]
-  },
-  "blobs.common.blob_size_in_bytes": {
-    "defaultMessage": "Blob size in bytes",
-    "source": [
-      "ui/blob/BlobInfo.tsx:70"
-    ]
-  },
-  "blobs.common.hash_of_the_transaction_with_t": {
-    "defaultMessage": "Hash of the transaction with this blob",
-    "source": [
-      "ui/blob/BlobInfo.tsx:86"
-    ]
-  },
   "blobs.common.this_blob_is_not_yet_indexed": {
     "defaultMessage": "This blob is not yet indexed",
     "source": [
-      "ui/blob/BlobInfo.tsx:28"
-    ]
-  },
-  "blobs.common.blob_details": {
-    "defaultMessage": "Blob details",
-    "source": [
-      "ui/pages/Blob.tsx:59"
+      "ui/blob/BlobInfo.tsx:30"
     ]
   }
 }

@@ -1,5 +1,6 @@
 import { chakra, Code } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 
@@ -12,12 +13,13 @@ interface Props {
 }
 
 const ContractVerificationFieldName = ({ hint }: Props) => {
+  const { t } = useTranslation();
   return (
     <ContractVerificationFormRow>
       <FormFieldText<FormFields>
         name="name"
         required
-        placeholder="Contract name"
+        placeholder={t('common.common.contract_name')}
         rules={{ maxLength: 255 }}
       />
       { hint ? <span>{ hint }</span> : (

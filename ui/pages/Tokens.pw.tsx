@@ -7,6 +7,17 @@ import { test, expect } from 'playwright/lib';
 
 import Tokens from './Tokens';
 
+const { t } = (() => {
+  // Mock translation function for tests
+  const mockT = (key: string) => {
+    const keyMap: Record<string, string> = {
+      'tokens.common.token_name_or_symbol': 'Token name or symbol',
+    };
+    return keyMap[key] || key;
+  };
+  return { t: mockT };
+})();
+
 test.beforeEach(async({ mockTextAd, mockAssetResponse }) => {
   await mockTextAd();
   await mockAssetResponse(tokens.tokenInfoERC20a.icon_url as string, './playwright/mocks/image_svg.svg');
@@ -59,9 +70,9 @@ test('with search +@mobile +@dark-mode', async({ render, mockApiResponse }) => {
     </div>,
   );
 
-  await component.getByRole('textbox', { name: 'Token name or symbol' }).focus();
-  await component.getByRole('textbox', { name: 'Token name or symbol' }).fill('foo');
-  await component.getByRole('textbox', { name: 'Token name or symbol' }).blur();
+  await component.getByRole('textbox', { name: t('tokens.common.token_name_or_symbol') }).focus();
+  await component.getByRole('textbox', { name: t('tokens.common.token_name_or_symbol') }).fill('foo');
+  await component.getByRole('textbox', { name: t('tokens.common.token_name_or_symbol') }).blur();
 
   await expect(component).toHaveScreenshot();
 });

@@ -1,6 +1,7 @@
 import { Flex, useToken } from '@chakra-ui/react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Address } from 'types/api/address';
 import type { TokenInfo } from 'types/api/token';
@@ -37,6 +38,7 @@ interface Props {
 }
 
 const TokenPageTitle = ({ tokenQuery, addressQuery, hash }: Props) => {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
   const addressHash = !tokenQuery.isPlaceholderData ? (tokenQuery.data?.address_hash || '') : '';
 
@@ -68,7 +70,7 @@ const TokenPageTitle = ({ tokenQuery, addressQuery, hash }: Props) => {
       config.features.bridgedTokens.isEnabled && tokenQuery.data?.is_bridged ?
         {
           slug: 'bridged',
-          name: 'Bridged',
+          name: t('tokens.common.bridged'),
           tagType: 'custom' as const,
           ordinal: PREDEFINED_TAG_PRIORITY,
           meta: { bgColor: bridgedTokenTagBgColor, textColor: bridgedTokenTagTextColor },
@@ -132,7 +134,7 @@ const TokenPageTitle = ({ tokenQuery, addressQuery, hash }: Props) => {
   return (
     <>
       <PageTitle
-        title={ `${ tokenQuery.data?.name || 'Unnamed token' }${ tokenSymbolText }` }
+        title={ `${ tokenQuery.data?.name || t('tokens.common.unnamed_token') }${ tokenSymbolText }` }
         isLoading={ tokenQuery.isPlaceholderData }
         beforeTitle={ tokenQuery.data ? (
           <TokenEntity.Icon

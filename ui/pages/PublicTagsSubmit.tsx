@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormSubmitResult } from 'ui/publicTags/submit/types';
 
@@ -13,6 +14,7 @@ import useProfileQuery from 'ui/snippets/auth/useProfileQuery';
 type Screen = 'form' | 'result' | 'initializing' | 'error';
 
 const PublicTagsSubmit = () => {
+  const { t } = useTranslation();
 
   const [ screen, setScreen ] = React.useState<Screen>('initializing');
   const [ submitResult, setSubmitResult ] = React.useState<FormSubmitResult>();
@@ -48,7 +50,7 @@ const PublicTagsSubmit = () => {
 
   return (
     <>
-      <PageTitle title="Request a public tag/label"/>
+      <PageTitle title={t('public_tags.common.request_a_public_tag_label')}/>
       { content }
     </>
   );

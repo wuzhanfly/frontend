@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import * as cookies from 'lib/cookies';
@@ -13,6 +14,7 @@ interface Props {
 }
 
 const DetailedInfoSponsoredItem = ({ isLoading }: Props) => {
+  const { t } = useTranslation();
   const hasAdblockCookie = cookies.get(cookies.NAMES.ADBLOCK_DETECTED);
 
   if (!feature.isEnabled || hasAdblockCookie === 'true') {
@@ -22,7 +24,7 @@ const DetailedInfoSponsoredItem = ({ isLoading }: Props) => {
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="Sponsored banner advertisement"
+        hint={t('shared.common.sponsored_banner_advertisement')}
         isLoading={ isLoading }
       >
         Sponsored

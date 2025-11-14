@@ -1,5 +1,6 @@
 import { Flex, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CctxListItem } from '@blockscout/zetachain-cctx-types';
 import type { ZetaChainCCTXFilterParams } from 'types/client/zetaChain';
@@ -40,6 +41,7 @@ const ZetaChainCCTxsTable = ({
   showSocketErrorAlert = false,
   socketInfoNum = 0,
 }: Props) => {
+  const { t } = useTranslation();
   const initialList = useInitialList({
     data: txs ?? [],
     idFn: (item) => item.index,
@@ -59,7 +61,7 @@ const ZetaChainCCTxsTable = ({
                 <TimeFormatToggle mr={ 2 }/>
                 <ZetaChainFilterByColumn
                   column="age"
-                  columnName="Age"
+                  columnName={t('staking.common.age')}
                   filters={ filters }
                   handleFilterChange={ onFilterChange }
                   isLoading={ isPlaceholderData }
@@ -73,7 +75,7 @@ const ZetaChainCCTxsTable = ({
               { showStatusFilter && (
                 <ZetaChainFilterByColumn
                   column="status"
-                  columnName="Status"
+                  columnName={t('validators.common.status')}
                   filters={ filters }
                   handleFilterChange={ onFilterChange }
                   isLoading={ isPlaceholderData }
@@ -86,7 +88,7 @@ const ZetaChainCCTxsTable = ({
               </chakra.span>
               <ZetaChainFilterByColumn
                 column="sender"
-                columnName="Sender"
+                columnName={t('transactions.common.sender')}
                 filters={ filters }
                 handleFilterChange={ onFilterChange }
                 isLoading={ isPlaceholderData }
@@ -98,7 +100,7 @@ const ZetaChainCCTxsTable = ({
               </chakra.span>
               <ZetaChainFilterByColumn
                 column="receiver"
-                columnName="Receiver"
+                columnName={t('common.common.receiver')}
                 filters={ filters }
                 handleFilterChange={ onFilterChange }
                 isLoading={ isPlaceholderData }
@@ -110,7 +112,7 @@ const ZetaChainCCTxsTable = ({
               </chakra.span>
               <ZetaChainFilterByColumn
                 column="asset"
-                columnName="Asset"
+                columnName={t('common.common.asset')}
                 filters={ filters }
                 handleFilterChange={ onFilterChange }
                 isLoading={ isPlaceholderData }

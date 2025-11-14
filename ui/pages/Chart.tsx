@@ -27,7 +27,8 @@ import useChartQuery from 'ui/shared/chart/useChartQuery';
 import CopyToClipboard from 'ui/shared/CopyToClipboard';
 import IconSvg from 'ui/shared/IconSvg';
 import PageTitle from 'ui/shared/Page/PageTitle';
-import { STATS_RESOLUTIONS } from 'ui/stats/constants';
+import { getStatsResolutions } from 'ui/stats/constants';
+import { useTranslation } from 'react-i18next';
 
 const DEFAULT_RESOLUTION = Resolution.DAY;
 
@@ -67,6 +68,7 @@ const getResolutionFromQuery = (router: NextRouter) => {
 };
 
 const Chart = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const id = getQueryParamString(router.query.id);
   const intervalFromQuery = getIntervalFromQuery(router);
@@ -112,7 +114,7 @@ const Chart = () => {
     onResolutionChange({ value: [ DEFAULT_RESOLUTION ] });
   }, [ handleZoomReset, onResolutionChange ]);
 
-  const { items, info, lineQuery } = useChartQuery(id, resolution, interval);
+  const { items, info, lineQuery } = useChartQuery(id, resolution, interval, t);
 
   const charts = React.useMemo(() => {
     if (!info || !items) {
@@ -174,12 +176,13 @@ const Chart = () => {
 
   const resolutionCollection = React.useMemo(() => {
     const resolutions = lineQuery.data?.info?.resolutions || [];
+    const STATS_RESOLUTIONS = getStatsResolutions(t);
     const items = STATS_RESOLUTIONS
       .filter((resolution) => resolutions.includes(resolution.id))
       .map((resolution) => ({ value: resolution.id, label: resolution.title }));
 
     return createListCollection<SelectOption>({ items });
-  }, [ lineQuery.data?.info?.resolutions ]);
+  }, [ lineQuery.data?.info?.resolutions, t ]);
 
   return (
     <>
@@ -193,7 +196,7 @@ const Chart = () => {
       <Flex alignItems="center" justifyContent="space-between">
         <Flex alignItems="center" gap={{ base: 3, lg: 6 }} maxW="100%">
           <Flex alignItems="center" gap={ 3 }>
-            { !isMobile && <Text>Period</Text> }
+            { !isMobile && <Text>{t('charts.common.period')}</Text> }
             <ChartIntervalSelect interval={ interval } onIntervalChange={ onIntervalChange }/>
           </Flex>
           { (
@@ -202,11 +205,11 @@ const Chart = () => {
           ) && (
             <Flex alignItems="center" gap={ 3 }>
               <Skeleton loading={ isInfoLoading }>
-                { isMobile ? 'Res.' : 'Resolution' }
+                { isMobile ? t('common.common.res') : t('common.common.resolution') }
               </Skeleton>
               <Select
                 collection={ resolutionCollection }
-                placeholder="Select resolution"
+                placeholder={t('common.common.select_resolution')}
                 defaultValue={ [ defaultResolution ] }
                 onValueChange={ onResolutionChange }
                 w={{ base: 'fit-content', lg: '160px' }}
@@ -223,7 +226,7 @@ const Chart = () => {
               gap={ 2 }
             >
               <IconSvg name="repeat" w={ 5 } h={ 5 }/>
-              { !isMobile && 'Reset' }
+              { !isMobile && t('common.common.reset') }
             </Button>
           ) }
         </Flex>

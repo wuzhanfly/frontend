@@ -1,5 +1,6 @@
 import { createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { StatsInterval, StatsIntervalIds } from 'types/client/stats';
 
@@ -7,19 +8,9 @@ import { Select } from 'toolkit/chakra/select';
 import { Skeleton } from 'toolkit/chakra/skeleton';
 import type { TagProps } from 'toolkit/chakra/tag';
 import TagGroupSelect from 'ui/shared/tagGroupSelect/TagGroupSelect';
-import { STATS_INTERVALS } from 'ui/stats/constants';
+import { getStatsIntervals } from 'ui/stats/constants';
 
-const intervalCollection = createListCollection({
-  items: Object.keys(STATS_INTERVALS).map((id: string) => ({
-    value: id,
-    label: STATS_INTERVALS[id as StatsIntervalIds].title,
-  })),
-});
 
-const intervalListShort = Object.keys(STATS_INTERVALS).map((id: string) => ({
-  id: id,
-  title: STATS_INTERVALS[id as StatsIntervalIds].shortTitle,
-})) as Array<StatsInterval>;
 
 type Props = {
   interval: StatsIntervalIds;
@@ -29,6 +20,20 @@ type Props = {
 };
 
 const ChartIntervalSelect = ({ interval, onIntervalChange, isLoading, selectTagSize }: Props) => {
+  const { t } = useTranslation();
+  const STATS_INTERVALS = getStatsIntervals(t);
+  
+  const intervalCollection = React.useMemo(() => createListCollection({
+    items: Object.keys(STATS_INTERVALS).map((id: string) => ({
+      value: id,
+      label: STATS_INTERVALS[id as StatsIntervalIds].title,
+    })),
+  }), [t]);
+
+  const intervalListShort = React.useMemo(() => Object.keys(STATS_INTERVALS).map((id: string) => ({
+    id: id,
+    title: STATS_INTERVALS[id as StatsIntervalIds].shortTitle,
+  })) as Array<StatsInterval>, [t]);
 
   const handleItemSelect = React.useCallback(({ value }: { value: Array<string> }) => {
     onIntervalChange(value[0] as StatsIntervalIds);
@@ -41,7 +46,7 @@ const ChartIntervalSelect = ({ interval, onIntervalChange, isLoading, selectTagS
       </Skeleton>
       <Select
         collection={ intervalCollection }
-        placeholder="Select interval"
+        placeholder={t('shared.common.select_interval')}
         defaultValue={ [ interval ] }
         onValueChange={ handleItemSelect }
         hideFrom="lg"

@@ -3,6 +3,7 @@ import type { UseQueryResult } from '@tanstack/react-query';
 import BigNumber from 'bignumber.js';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { ZKSYNC_L2_TX_BATCH_STATUSES, type ZkSyncBatch } from 'types/api/zkSyncL2';
 
@@ -34,6 +35,7 @@ interface Props {
 }
 
 const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const { data, isPlaceholderData, isError, error } = query;
@@ -81,15 +83,15 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         <PrevNext
           ml={ 6 }
           onClick={ handlePrevNextClick }
-          prevLabel="View previous txn batch"
-          nextLabel="View next txn batch"
+          prevLabel={t('common.common.view_previous_txn_batch')}
+          nextLabel={t('common.common.view_next_txn_batch')}
           isPrevDisabled={ data.number === 0 }
           isLoading={ isPlaceholderData }
         />
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Status is the short interpretation of the batch lifecycle"
+        hint={t('transactions.common.status_is_the_short_interpreta')}
         isLoading={ isPlaceholderData }
       >
         Status
@@ -109,7 +111,7 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Number of transactions inside the batch."
+        hint={t('common.common.number_of_transactions_inside_')}
         isLoading={ isPlaceholderData }
       >
         Transactions
@@ -130,7 +132,7 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         <GridItem colSpan={{ base: undefined, lg: 2 }} mt={{ base: 1, lg: 4 }}/>
 
         <DetailedInfo.ItemLabel
-          hint="L1 batch root is a hash that summarizes batch data and submitted to the L1"
+          hint={t('common.common.l1_batch_root_is_a_hash_that_s')}
         >
           Root hash
         </DetailedInfo.ItemLabel>
@@ -153,7 +155,7 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         </DetailedInfo.ItemValue>
 
         <DetailedInfo.ItemLabel
-          hint='The gas price below which the "baseFee" of the batch should not fall'
+          hint={t('common.common.the_gas_price_below_which_the_')}
         >
           L2 fair gas price
         </DetailedInfo.ItemLabel>

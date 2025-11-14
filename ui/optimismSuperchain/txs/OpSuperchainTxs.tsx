@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 
@@ -19,6 +20,7 @@ const TABS_RIGHT_SLOT_PROPS = {
 const QUERY_PRESERVED_PARAMS = [ 'tab' ];
 
 const OpSuperchainTxs = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const chainSelect = useRoutedChainSelect({ persistedParams: QUERY_PRESERVED_PARAMS });
 
@@ -42,12 +44,12 @@ const OpSuperchainTxs = () => {
     return [
       {
         id: 'index',
-        title: 'Cross-chain',
+        title: t('transactions.common.crosschain'),
         component: <OpSuperchainTxsCrossChain/>,
       },
       {
         id: 'txs_local',
-        title: 'Local',
+        title: t('common.common.local'),
         component: (
           <MultichainProvider chainSlug={ chainSelect.value?.[0] }>
             <OpSuperchainTxsLocal/>
@@ -69,7 +71,7 @@ const OpSuperchainTxs = () => {
     <>
       <PageTitle
         withTextAd
-        title="Transactions"
+        title={t('transactions.common.transactions')}
       />
       <RoutedTabs
         tabs={ tabs }

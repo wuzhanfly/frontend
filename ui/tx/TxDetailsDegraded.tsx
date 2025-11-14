@@ -46,7 +46,7 @@ const TxDetailsDegraded = ({ hash, txQuery }: Props) => {
       const tx = await publicClient.getTransaction({ hash: hash as `0x${ string }` });
 
       if (!tx) {
-        throw new Error('Not found');
+        throw new Error('Transaction not found');
       }
 
       const txReceipt = await publicClient.getTransactionReceipt({ hash: hash as `0x${ string }` }).catch(() => null);

@@ -8,7 +8,7 @@ import TopBar from './TopBar';
 
 test.beforeEach(async({ mockEnvs }) => {
   await mockEnvs([
-    [ 'NEXT_PUBLIC_DEFI_DROPDOWN_ITEMS', '[{"text":"Swap","icon":"swap","dappId":"uniswap"}]' ],
+    [ 'NEXT_PUBLIC_DEFI_DROPDOWN_ITEMS', '[{"text":"marketplace.common.swap","icon":"swap","dappId":"uniswap"}]' ],
     [ 'NEXT_PUBLIC_NETWORK_SECONDARY_COIN_SYMBOL', 'DUCK' ],
     [ 'NEXT_PUBLIC_VIEWS_TOKEN_SCAM_TOGGLE_ENABLED', 'true' ],
   ]);
@@ -22,7 +22,7 @@ test('default view +@dark-mode', async({ render, mockApiResponse, page }) => {
   await expect(page.getByText(/last update/i)).toBeVisible();
   await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 1500, height: 220 } });
 
-  await component.getByLabel('User settings').click();
+  await component.getByLabel('settings.common.user_settings').click();
   await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 1500, height: 400 } });
 });
 
@@ -30,7 +30,7 @@ test('default view +@mobile -@default', async({ render, mockApiResponse, page })
   await mockApiResponse('general:stats', statsMock.base);
   const component = await render(<TopBar/>);
 
-  await component.getByLabel('User settings').click();
+  await component.getByLabel('settings.common.user_settings').click();
   await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 1500, height: 400 } });
 });
 
@@ -52,7 +52,7 @@ test('with network menu +@dark-mode +@mobile', async({ render, mockApiResponse, 
   await mockAssetResponse('https://localhost:3000/my-logo.png', './playwright/mocks/image_s.jpg');
 
   const component = await render(<TopBar/>);
-  await component.getByLabel('Network menu').click();
+  await component.getByLabel('common.common.network_menu').click();
   await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 1500, height: 500 } });
 
   await page.getByRole('link', { name: 'POA' }).hover();
@@ -63,7 +63,7 @@ test('with DeFi dropdown +@dark-mode +@mobile', async({ render, page, mockApiRes
   await mockEnvs([
     [
       'NEXT_PUBLIC_DEFI_DROPDOWN_ITEMS',
-      '[{"text":"Swap","icon":"swap","dappId":"uniswap"},{"text":"Payment link","icon":"payment_link","url":"https://example.com"}]',
+      '[{"text":"marketplace.common.swap","icon":"swap","dappId":"uniswap"},{"text":"Payment link","icon":"payment_link","url":"https://example.com"}]',
     ],
   ]);
   await mockApiResponse('general:stats', statsMock.base);

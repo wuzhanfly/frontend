@@ -1,15 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { CloseButton } from 'toolkit/chakra/close-button';
 
 import { Section, Container, SectionHeader, SamplesStack, Sample } from './parts';
 
 const CloseButtonShowcase = () => {
+  const { t } = useTranslation();
 
   return (
     <Container value="close-button">
       <Section>
-        <SectionHeader>Variants</SectionHeader>
+        <SectionHeader>{t('common.common.showcase.close_button.variants')}</SectionHeader>
         <SamplesStack>
           <Sample label="variant: default">
             <CloseButton/>
@@ -20,7 +22,7 @@ const CloseButtonShowcase = () => {
       </Section>
 
       <Section>
-        <SectionHeader>Size</SectionHeader>
+        <SectionHeader>{t('common.common.showcase.close_button.size')}</SectionHeader>
         <SamplesStack>
           <Sample label="size: md">
             <CloseButton size="md" outline="1px dashed lightpink"/>

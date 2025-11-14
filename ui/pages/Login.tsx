@@ -1,6 +1,7 @@
 import { VStack, Code, Flex, Box } from '@chakra-ui/react';
 import mixpanel from 'mixpanel-browser';
 import type { ChangeEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import config from 'configs/app';
@@ -15,6 +16,7 @@ import { toaster } from 'toolkit/chakra/toaster';
 import PageTitle from 'ui/shared/Page/PageTitle';
 
 const Login = () => {
+  const { t } = useTranslation();
   const rollbar = useRollbar();
   const [ num, setNum ] = useGradualIncrement(0);
   const testFeature = useFeatureValue('test_value', 'fallback');
@@ -25,15 +27,15 @@ const Login = () => {
   React.useEffect(() => {
     const token = cookies.get(cookies.NAMES.API_TOKEN);
     setFormVisibility(Boolean(!token && config.features.account.isEnabled));
-    // throw new Error('Render error');
+    // throw new Error(t('common.common.render_error'));
   }, []);
 
   const checkRollbar = React.useCallback(() => {
-    rollbar?.error('Test error', { payload: 'foo' });
+    rollbar?.error(t('common.common.test_error'), { payload: 'foo' });
   }, [ rollbar ]);
 
   const checkMixpanel = React.useCallback(() => {
-    mixpanel.track('Test event', { my_prop: 'foo bar' });
+    mixpanel.track(t('common.common.test_event'), { my_prop: 'foo bar' });
   }, []);
 
   const handleTokenChange = React.useCallback((event: ChangeEvent<HTMLTextAreaElement>) => {
@@ -44,8 +46,8 @@ const Login = () => {
     cookies.set(cookies.NAMES.API_TOKEN, token);
     setToken('');
     toaster.create({
-      title: 'Success 🥳',
-      description: 'Successfully set cookie',
+      title: t('common.common.success_'),
+      description: t('common.common.successfully_set_cookie'),
       type: 'success',
       onStatusChange: (details) => {
         if (details.status === 'unmounted') {
@@ -63,7 +65,7 @@ const Login = () => {
 
   return (
     <VStack gap={ 4 } alignItems="flex-start" maxW="1000px">
-      <PageTitle title="Login page 😂"/>
+      <PageTitle title={t('common.common.login_page_')}/>
       { isFormVisible && (
         <>
           <Alert
@@ -75,7 +77,7 @@ const Login = () => {
             <Code ml={ 1 }>{ cookies.NAMES.API_TOKEN }</Code> and paste it in the form below. After submitting the form you should be successfully
             authenticated in current environment
           </Alert>
-          <Textarea value={ token } onChange={ handleTokenChange } placeholder="API token"/>
+          <Textarea value={ token } onChange={ handleTokenChange } placeholder={t('common.common.api_token')}/>
           <Button onClick={ handleSetTokenClick }>Set cookie</Button>
         </>
       ) }

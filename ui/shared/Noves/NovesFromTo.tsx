@@ -7,6 +7,7 @@ import type { NovesResponseData } from 'types/api/noves';
 import { Badge } from 'toolkit/chakra/badge';
 import { Skeleton } from 'toolkit/chakra/skeleton';
 import type { NovesFlowViewItem } from 'ui/tx/assetFlows/utils/generateFlowViewData';
+import { useTranslation } from 'react-i18next';
 
 import AddressEntity from '../entities/address/AddressEntity';
 import { getActionFromTo, getFromTo } from './utils';
@@ -19,18 +20,20 @@ interface Props {
 }
 
 const NovesFromTo: FC<Props> = ({ isLoaded, txData, currentAddress = '', item }) => {
+  const { t } = useTranslation();
+
   const data = React.useMemo(() => {
     if (txData) {
-      return getFromTo(txData, currentAddress);
+      return getFromTo(txData, currentAddress, t);
     }
     if (item) {
-      return getActionFromTo(item);
+      return getActionFromTo(item, t);
     }
 
-    return { text: 'Sent to', address: '' };
-  }, [ currentAddress, item, txData ]);
+    return { text: t('shared.common.sent_to'), address: '' };
+  }, [ currentAddress, item, txData, t ]);
 
-  const isSent = data.text.startsWith('Sent');
+  const isSent = data.text.startsWith(t('transactions.common.sent'));
 
   const address = { hash: data.address || '', name: data.name || '' };
 
@@ -52,7 +55,7 @@ const NovesFromTo: FC<Props> = ({ isLoaded, txData, currentAddress = '', item })
           fontWeight="500"
           noCopy={ !data.address }
           noLink={ !data.address }
-          noIcon={ address.name === 'Validators' }
+          noIcon={ address.name === t('transactions.common.validators') }
           ml={ 2 }
           truncation="dynamic"
         />

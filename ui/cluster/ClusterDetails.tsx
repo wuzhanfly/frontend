@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ClusterByNameResponse } from 'types/api/clusters';
 
@@ -18,8 +19,9 @@ interface Props {
 }
 
 const ClusterDetails = ({ clusterData, clusterName, isLoading }: Props) => {
+  const { t } = useTranslation();
   if (!clusterData && !isLoading) {
-    throw new Error('Cluster not found', { cause: { status: 404 } });
+    throw new Error(t('clusters.common.cluster_not_found'), { cause: { status: 404 } });
   }
 
   const ownerIsEvm = clusterData?.owner ? isEvmAddress(clusterData.owner) : false;
@@ -28,7 +30,7 @@ const ClusterDetails = ({ clusterData, clusterName, isLoading }: Props) => {
   return (
     <DetailedInfo.Container>
       <DetailedInfo.ItemLabel
-        hint="The unique cluster name"
+        hint={t('clusters.common.the_unique_cluster_name')}
         isLoading={ isLoading }
       >
         Cluster name
@@ -43,7 +45,7 @@ const ClusterDetails = ({ clusterData, clusterName, isLoading }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="The address attached to this cluster name"
+        hint={t('clusters.common.the_address_attached_to_this_c')}
         isLoading={ isLoading }
       >
         Owner address
@@ -84,7 +86,7 @@ const ClusterDetails = ({ clusterData, clusterName, isLoading }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="When this cluster name was created"
+        hint={t('clusters.common.when_this_cluster_name_was_cre')}
         isLoading={ isLoading }
       >
         Created

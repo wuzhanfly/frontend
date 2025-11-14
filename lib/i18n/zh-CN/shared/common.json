@@ -76,7 +76,7 @@
   "shared.common.token_transfer": "代币转账",
   "shared.common.all_about_kitties": "关于猫咪的一切",
   "shared.common.to_see_millions_picture_of_cut": "查看数百万张可爱猫咪图片",
-  "shared.common.": "🎨",
+  "shared.common.art_palette": "🎨",
   "shared.common.728x90": "728x90",
   "shared.common.this_is_a_testnet_transaction_": "这仅是测试网交易",
   "shared.common.blob": "Blob",
@@ -189,5 +189,9 @@
   "shared.common.pending_revert": "待回退",
   "shared.common.aborted": "已中止",
   "shared.common.reverted": "已回退",
-  "shared.common.unknown_status": "未知状态"
+  "shared.common.unknown_status": "未知状态",
+  "shared.common.medium": "Medium",
+  "shared.common.unknown_error": "未知错误",
+  "shared.common.": "",
+  "shared.common.sharedcommon728x90": "Sharedcommon728x90"
 }

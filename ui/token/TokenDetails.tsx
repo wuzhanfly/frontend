@@ -3,6 +3,7 @@ import type { UseQueryResult } from '@tanstack/react-query';
 import BigNumber from 'bignumber.js';
 import { useRouter } from 'next/router';
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { scroller } from 'react-scroll';
 
 import type { TokenInfo } from 'types/api/token';
@@ -30,6 +31,7 @@ interface Props {
 }
 
 const TokenDetails = ({ tokenQuery }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMounted = useIsMounted();
 
@@ -104,7 +106,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       { exchangeRate && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Price per token on the exchanges"
+            hint={t('tokens.common.price_per_token_on_the_exchang')}
             isLoading={ tokenQuery.isPlaceholderData }
           >
             Price
@@ -120,7 +122,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       { marketCap && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Circulating supply * Price"
+            hint={t('tokens.common.circulating_supply_price')}
             isLoading={ tokenQuery.isPlaceholderData }
           >
             Market cap
@@ -134,7 +136,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       ) }
 
       <DetailedInfo.ItemLabel
-        hint="The total amount of tokens issued"
+        hint={t('tokens.common.the_total_amount_of_tokens_iss')}
         isLoading={ tokenQuery.isPlaceholderData }
       >
         Max total supply
@@ -157,7 +159,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Number of accounts holding the token"
+        hint={t('tokens.common.number_of_accounts_holding_the')}
         isLoading={ tokenQuery.isPlaceholderData }
       >
         Holders
@@ -183,7 +185,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       { decimals && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Number of digits that come after the decimal place when displaying token value"
+            hint={t('tokens.common.number_of_digits_that_come_aft')}
             isLoading={ tokenQuery.isPlaceholderData }
           >
             Decimals
@@ -201,21 +203,21 @@ const TokenDetails = ({ tokenQuery }: Props) => {
           hash={ hash }
           isLoading={ tokenQuery.isPlaceholderData }
           appActionData={ appActionData }
-          source="NFT collection"
+          source="nft_collection"
         />
       ) }
 
       { (type !== 'ERC-20' && config.UI.views.nft.marketplaces.length === 0 && appActionData) && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Link to the dapp"
+            hint={t('tokens.common.link_to_the_dapp')}
           >
             Dapp
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue
             py="1px"
           >
-            <AppActionButton data={ appActionData } height="30px" source="NFT collection"/>
+            <AppActionButton data={ appActionData } height="30px" source={t('tokens.common.nft_collection')}/>
           </DetailedInfo.ItemValue>
         </>
       ) }

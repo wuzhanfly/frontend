@@ -1,6 +1,7 @@
 import type { UseQueryResult } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { OptimismL2TxnBatch } from 'types/api/optimisticL2';
 
@@ -26,6 +27,7 @@ interface Props {
 }
 
 const OptimisticL2TxnBatchDetails = ({ query }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const { data, isError, error, isPlaceholderData } = query;
@@ -61,7 +63,7 @@ const OptimisticL2TxnBatchDetails = ({ query }: Props) => {
     >
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Batch ID indicates the length of batches produced by grouping L2 blocks to be proven on L1"
+        hint={t('common.common.batch_id_indicates_the_length_')}
       >
         Batch ID
       </DetailedInfo.ItemLabel>
@@ -72,8 +74,8 @@ const OptimisticL2TxnBatchDetails = ({ query }: Props) => {
         <PrevNext
           ml={ 6 }
           onClick={ handlePrevNextClick }
-          prevLabel="View previous txn batch"
-          nextLabel="View next txn batch"
+          prevLabel={t('common.common.view_previous_txn_batch')}
+          nextLabel={t('common.common.view_next_txn_batch')}
           isPrevDisabled={ data.number === 0 }
           isLoading={ isPlaceholderData }
         />
@@ -81,7 +83,7 @@ const OptimisticL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Date and time at which batch is submitted to L1"
+        hint={t('common.common.date_and_time_at_which_batch_i')}
       >
         Timestamp
       </DetailedInfo.ItemLabel>
@@ -94,7 +96,7 @@ const OptimisticL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Number of transactions in this batch"
+        hint={t('common.common.number_of_transactions_in_this')}
       >
         Transactions
       </DetailedInfo.ItemLabel>
@@ -109,7 +111,7 @@ const OptimisticL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Number of L2 blocks in this batch"
+        hint={t('common.common.number_of_l2_blocks_in_this_ba')}
       >
         Blocks
       </DetailedInfo.ItemLabel>
@@ -124,7 +126,7 @@ const OptimisticL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Where the batch data is stored"
+        hint={t('common.common.where_the_batch_data_is_stored')}
       >
         Batch data container
       </DetailedInfo.ItemLabel>

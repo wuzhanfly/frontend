@@ -1,208 +1,20 @@
 {
-  "transactions.common.crosschain": {
-    "defaultMessage": "Cross-chain",
-    "source": [
-      "ui/home/Transactions.tsx:24"
-    ]
-  },
-  "transactions.common.latest_txn": {
-    "defaultMessage": "Latest txn",
-    "source": [
-      "ui/home/Transactions.tsx:31"
-    ]
-  },
-  "transactions.common.watch_list": {
-    "defaultMessage": "Watch list",
-    "source": [
-      "ui/home/Transactions.tsx:36",
-      "ui/pages/Transactions.tsx:126"
-    ]
-  },
   "transactions.common.transactions": {
     "defaultMessage": "Transactions",
     "source": [
-      "ui/home/Transactions.tsx:40",
-      "ui/pages/Transactions.tsx:162"
+      "ui/home/Transactions.tsx:42"
     ]
   },
   "transactions.common.latest_transactions": {
     "defaultMessage": "Latest transactions",
     "source": [
-      "ui/home/Transactions.tsx:48"
-    ]
-  },
-  "transactions.common.crosschain_tx_details": {
-    "defaultMessage": "Cross-chain tx details",
-    "source": [
-      "ui/optimismSuperchain/tx/OpSuperchainTx.tsx:11"
+      "ui/home/Transactions.tsx:50"
     ]
   },
   "transactions.common.coming_soon_": {
     "defaultMessage": "Coming soon 🔜",
     "source": [
-      "ui/optimismSuperchain/tx/OpSuperchainTx.tsx:13"
-    ]
-  },
-  "transactions.common.confidential_compute_tx_detail": {
-    "defaultMessage": "Confidential compute tx details",
-    "source": [
-      "ui/pages/Transaction.tsx:65"
-    ]
-  },
-  "transactions.common.details": {
-    "defaultMessage": "Details",
-    "source": [
-      "ui/pages/Transaction.tsx:65"
-    ]
-  },
-  "transactions.common.asset_flows": {
-    "defaultMessage": "Asset Flows",
-    "source": [
-      "ui/pages/Transaction.tsx:69"
-    ]
-  },
-  "transactions.common.regular_tx_details": {
-    "defaultMessage": "Regular tx details",
-    "source": [
-      "ui/pages/Transaction.tsx:72"
-    ]
-  },
-  "transactions.common.token_transfers": {
-    "defaultMessage": "Token transfers",
-    "source": [
-      "ui/pages/Transaction.tsx:74"
-    ]
-  },
-  "transactions.common.user_operations": {
-    "defaultMessage": "User operations",
-    "source": [
-      "ui/pages/Transaction.tsx:76"
-    ]
-  },
-  "transactions.common.internal_txns": {
-    "defaultMessage": "Internal txns",
-    "source": [
-      "ui/pages/Transaction.tsx:78"
-    ]
-  },
-  "transactions.common.blobs": {
-    "defaultMessage": "Blobs",
-    "source": [
-      "ui/pages/Transaction.tsx:80"
-    ]
-  },
-  "transactions.common.logs": {
-    "defaultMessage": "Logs",
-    "source": [
-      "ui/pages/Transaction.tsx:82"
-    ]
-  },
-  "transactions.common.state": {
-    "defaultMessage": "State",
-    "source": [
-      "ui/pages/Transaction.tsx:83"
-    ]
-  },
-  "transactions.common.raw_trace": {
-    "defaultMessage": "Raw trace",
-    "source": [
-      "ui/pages/Transaction.tsx:84"
-    ]
-  },
-  "transactions.common.authorizations": {
-    "defaultMessage": "Authorizations",
-    "source": [
-      "ui/pages/Transaction.tsx:86"
-    ]
-  },
-  "transactions.common.relay_tx": {
-    "defaultMessage": "Relay tx",
-    "source": [
-      "ui/pages/Transaction.tsx:96"
-    ]
-  },
-  "transactions.common.source_tx": {
-    "defaultMessage": "Source tx",
-    "source": [
-      "ui/pages/Transaction.tsx:99"
-    ]
-  },
-  "transactions.common.transaction_details": {
-    "defaultMessage": "Transaction details",
-    "source": [
-      "ui/pages/Transaction.tsx:127"
-    ]
-  },
-  "transactions.common.blob_txns": {
-    "defaultMessage": "Blob txns",
-    "source": [
-      "ui/pages/Transactions.tsx:116"
-    ]
-  },
-  "transactions.common.transaction_on": {
-    "defaultMessage": "Transaction on ",
-    "source": [
-      "ui/shared/entities/tx/TxEntity.tsx:51"
-    ]
-  },
-  "transactions.common.external_chain_logo": {
-    "defaultMessage": "external chain logo",
-    "source": [
-      "ui/shared/entities/tx/TxEntityInterop.tsx:65"
-    ]
-  },
-  "transactions.common.transaction_summary": {
-    "defaultMessage": "Transaction summary",
-    "source": [
-      "ui/shared/tx/interpretation/TxInterpretation.tsx:208"
-    ]
-  },
-  "transactions.common.human_readable_transaction_pro": {
-    "defaultMessage": "Human readable transaction provided by Noves.fi",
-    "source": [
-      "ui/shared/tx/interpretation/TxInterpretation.tsx:253"
-    ]
-  },
-  "transactions.common.noves_logo": {
-    "defaultMessage": "Noves logo",
-    "source": [
-      "ui/shared/tx/interpretation/TxInterpretation.tsx:256"
-    ]
-  },
-  "transactions.common.extracts_variables_names": {
-    "defaultMessage": "extracts variables names",
-    "source": [
-      "ui/shared/tx/interpretation/utils.test.ts:5"
-    ]
-  },
-  "transactions.common.split_string_without_capturing": {
-    "defaultMessage": "split string without capturing variables",
-    "source": [
-      "ui/shared/tx/interpretation/utils.test.ts:10"
-    ]
-  },
-  "transactions.common.checks_that_summary_is_valid": {
-    "defaultMessage": "checks that summary is valid",
-    "source": [
-      "ui/shared/tx/interpretation/utils.test.ts:15"
-    ]
-  },
-  "transactions.common.checks_that_summary_is_invalid": {
-    "defaultMessage": "checks that summary is invalid",
-    "source": [
-      "ui/shared/tx/interpretation/utils.test.ts:20"
-    ]
-  },
-  "transactions.common.smart_contracts_allowed_to_int": {
-    "defaultMessage": "Smart contracts allowed to interact with confidential data",
-    "source": [
-      "ui/tx/TxAllowedPeekers.tsx:19"
-    ]
-  },
-  "transactions.common.there_are_no_transfers": {
-    "defaultMessage": "There are no transfers.",
-    "source": [
-      "ui/tx/TxAssetFlows.tsx:115"
+      "ui/optimismSuperchain/tx/OpSuperchainTx.tsx:15"
     ]
   },
   "transactions.common.no_public_rpc_client": {
@@ -211,56 +23,16 @@
       "ui/tx/TxDetailsDegraded.tsx:43"
     ]
   },
-  "transactions.common.not_found": {
-    "defaultMessage": "Not found",
+  "transactions.common.transaction_not_found": {
+    "defaultMessage": "Transaction not found",
     "source": [
       "ui/tx/TxDetailsDegraded.tsx:49"
-    ]
-  },
-  "transactions.common.transaction_method_name": {
-    "defaultMessage": "Transaction method name",
-    "source": [
-      "ui/tx/TxDetailsWrapped.tsx:37"
-    ]
-  },
-  "transactions.common.interacted_with_contract": {
-    "defaultMessage": "Interacted with contract",
-    "source": [
-      "ui/tx/TxDetailsWrapped.tsx:54",
-      "ui/tx/details/TxInfo.tsx:463"
     ]
   },
   "transactions.common.to": {
     "defaultMessage": "To",
     "source": [
-      "ui/tx/TxDetailsWrapped.tsx:54",
-      "ui/tx/details/TxInfo.tsx:463"
-    ]
-  },
-  "transactions.common.total_transaction_fee": {
-    "defaultMessage": "Total transaction fee",
-    "source": [
-      "ui/tx/TxDetailsWrapped.tsx:82",
-      "ui/tx/details/TxDetailsTxFee.tsx:89"
-    ]
-  },
-  "transactions.common.maximum_amount_of_gas_that_can": {
-    "defaultMessage": "Maximum amount of gas that can be used by the transaction",
-    "source": [
-      "ui/tx/TxDetailsWrapped.tsx:97"
-    ]
-  },
-  "transactions.common.decoded_input_data": {
-    "defaultMessage": "Decoded input data",
-    "source": [
-      "ui/tx/TxDetailsWrapped.tsx:123",
-      "ui/tx/details/TxInfo.tsx:932"
-    ]
-  },
-  "transactions.common.search_by_addresses_hash_metho": {
-    "defaultMessage": "Search by addresses, hash, method...",
-    "source": [
-      "ui/tx/TxInternals.tsx:119"
+      "ui/tx/TxDetailsWrapped.tsx:56"
     ]
   },
   "transactions.common.no_trace_entries_found": {
@@ -269,53 +41,16 @@
       "ui/tx/TxRawTrace.tsx:66"
     ]
   },
-  "transactions.common.connection_is_lost_please_clic": {
-    "defaultMessage": "Connection is lost. Please click here to update transaction info.",
-    "source": [
-      "ui/tx/TxSocketAlert.tsx:11"
-    ]
-  },
-  "transactions.common.txn": {
-    "defaultMessage": "Txn",
-    "source": [
-      "ui/tx/TxSubHeading.tsx:147"
-    ]
-  },
   "transactions.common.view_all": {
     "defaultMessage": "View all",
     "source": [
-      "ui/tx/TxSubHeading.tsx:96"
+      "ui/tx/TxSubHeading.tsx:99"
     ]
   },
-  "transactions.common.there_are_no_token_transfers": {
-    "defaultMessage": "There are no token transfers.",
+  "transactions.common.creates_asset_flows_items": {
+    "defaultMessage": "creates asset flows items",
     "source": [
-      "ui/tx/TxTokenTransfer.tsx:100"
-    ]
-  },
-  "transactions.common.sent": {
-    "defaultMessage": "Sent",
-    "source": [
-      "ui/tx/assetFlows/utils/generateFlowViewData.test.ts:12"
-    ]
-  },
-  "transactions.common.pqrtest": {
-    "defaultMessage": "PQR-Test",
-    "source": [
-      "ui/tx/assetFlows/utils/generateFlowViewData.test.ts:18"
-    ]
-  },
-  "transactions.common.paid_gas": {
-    "defaultMessage": "Paid Gas",
-    "source": [
-      "ui/tx/assetFlows/utils/generateFlowViewData.test.ts:30"
-    ]
-  },
-  "transactions.common.validators": {
-    "defaultMessage": "Validators",
-    "source": [
-      "ui/tx/assetFlows/utils/generateFlowViewData.test.ts:42",
-      "ui/tx/assetFlows/utils/generateFlowViewData.ts:31"
+      "ui/tx/assetFlows/utils/generateFlowViewData.test.ts:7"
     ]
   },
   "transactions.common.authority": {
@@ -360,414 +95,94 @@
       "ui/tx/blobs/TxBlobsTable.tsx:22"
     ]
   },
-  "transactions.common.fee_per_gas": {
-    "defaultMessage": "Fee per gas",
+  "transactions.common.list_of_tokens_transferred_in_": {
+    "defaultMessage": "List of tokens transferred in the transaction",
     "source": [
-      "ui/tx/details/TxDetailsFeePerGas.tsx:23"
-    ]
-  },
-  "transactions.common.actual_gas_amount_used_by_the_": {
-    "defaultMessage": "Actual gas amount used by the transaction",
-    "source": [
-      "ui/tx/details/TxDetailsGasUsage.tsx:20"
-    ]
-  },
-  "transactions.common.the_originating_transaction_th": {
-    "defaultMessage": "The originating transaction that initiated the cross-L2 message on the source chain",
-    "source": [
-      "ui/tx/details/TxDetailsInterop.tsx:89"
-    ]
-  },
-  "transactions.common.the_transaction_that_relays_th": {
-    "defaultMessage": "The transaction that relays the cross-L2 message to its destination chain",
-    "source": [
-      "ui/tx/details/TxDetailsInterop.tsx:108"
-    ]
-  },
-  "transactions.common.message_id": {
-    "defaultMessage": "Message id",
-    "source": [
-      "ui/tx/details/TxDetailsInterop.tsx:42"
-    ]
-  },
-  "transactions.common.interop_status": {
-    "defaultMessage": "Interop status",
-    "source": [
-      "ui/tx/details/TxDetailsInterop.tsx:44"
-    ]
-  },
-  "transactions.common.sender": {
-    "defaultMessage": "Sender",
-    "source": [
-      "ui/tx/details/TxDetailsInterop.tsx:48"
-    ]
-  },
-  "transactions.common.payload": {
-    "defaultMessage": "Payload",
-    "source": [
-      "ui/tx/details/TxDetailsInterop.tsx:70"
-    ]
-  },
-  "transactions.common.other_data_related_to_this_tra": {
-    "defaultMessage": "Other data related to this transaction",
-    "source": [
-      "ui/tx/details/TxDetailsOther.tsx:15"
-    ]
-  },
-  "transactions.common.list_of_tokens_minted_in_the_t": {
-    "defaultMessage": "List of tokens minted in the transaction",
-    "source": [
-      "ui/tx/details/TxDetailsTokenTransfers.tsx:20"
-    ]
-  },
-  "transactions.common.list_of_tokens_burnt_in_the_tr": {
-    "defaultMessage": "List of tokens burnt in the transaction",
-    "source": [
-      "ui/tx/details/TxDetailsTokenTransfers.tsx:21"
-    ]
-  },
-  "transactions.common.list_of_tokens_created_in_the_": {
-    "defaultMessage": "List of tokens created in the transaction",
-    "source": [
-      "ui/tx/details/TxDetailsTokenTransfers.tsx:22"
-    ]
-  },
-  "transactions.common.base_fee": {
-    "defaultMessage": "Base fee",
-    "source": [
-      "ui/tx/details/TxDetailsTxFee.tsx:53"
-    ]
-  },
-  "transactions.common.the_minimum_network_fee_charge": {
-    "defaultMessage": "The minimum network fee charged per transaction",
-    "source": [
-      "ui/tx/details/TxDetailsTxFee.tsx:54"
-    ]
-  },
-  "transactions.common.priority_fee": {
-    "defaultMessage": "Priority fee",
-    "source": [
-      "ui/tx/details/TxDetailsTxFee.tsx:67"
-    ]
-  },
-  "transactions.common.an_extra_fee_set_by_the_sender": {
-    "defaultMessage": "An extra fee set by the sender to speed up transaction execution",
-    "source": [
-      "ui/tx/details/TxDetailsTxFee.tsx:68"
-    ]
-  },
-  "transactions.common.transaction_fee_without_blob_f": {
-    "defaultMessage": "Transaction fee without blob fee",
-    "source": [
-      "ui/tx/details/TxDetailsTxFee.tsx:89"
+      "ui/tx/details/TxDetailsTokenTransfers.tsx:26"
     ]
   },
   "transactions.common.syncing_with_base_layer": {
     "defaultMessage": "Syncing with base layer",
     "source": [
-      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:14"
+      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:24"
     ]
   },
   "transactions.common.settlement_pending": {
     "defaultMessage": "Settlement pending",
     "source": [
-      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:15"
+      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:25"
     ]
   },
   "transactions.common.relayed": {
     "defaultMessage": "Relayed",
     "source": [
-      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:18",
-      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:34",
-      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:35",
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:21",
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:28",
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:37",
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:57",
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:60",
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:61"
-    ]
-  },
-  "transactions.common.detailed_status_progress_of_th": {
-    "defaultMessage": "Detailed status progress of the transaction",
-    "source": [
-      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:68",
-      "ui/tx/details/TxInfo.tsx:223"
+      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:28",
+      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:38",
+      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:39",
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:29",
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:36",
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:45",
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:62",
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:65"
     ]
   },
   "transactions.common.could_not_determine": {
     "defaultMessage": "Could not determine",
     "source": [
-      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:78"
+      "ui/tx/details/TxDetailsWithdrawalStatusArbitrum.tsx:82"
     ]
   },
   "transactions.common.ready_to_prove": {
     "defaultMessage": "Ready to prove",
     "source": [
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:18",
       "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:26",
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:33"
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:34",
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:41"
     ]
   },
   "transactions.common.in_challenge_period": {
     "defaultMessage": "In challenge period",
     "source": [
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:19",
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:35"
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:27",
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:43"
     ]
   },
   "transactions.common.proven": {
     "defaultMessage": "Proven",
     "source": [
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:27",
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:53"
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:35",
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:58"
     ]
   },
   "transactions.common.waiting_a_game_to_resolve": {
     "defaultMessage": "Waiting a game to resolve",
     "source": [
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:34",
-      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:55"
-    ]
-  },
-  "transactions.common.contract_execution_completed": {
-    "defaultMessage": "Contract execution completed",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:125"
-    ]
-  },
-  "transactions.common.error_occurred_during_contract": {
-    "defaultMessage": "Error occurred during contract execution",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:132"
-    ]
-  },
-  "transactions.common.status_and_method": {
-    "defaultMessage": "Status and method",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:200"
-    ]
-  },
-  "transactions.common.incoming_message": {
-    "defaultMessage": "Incoming message",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:213"
-    ]
-  },
-  "transactions.common.outgoing_message": {
-    "defaultMessage": "Outgoing message",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:213"
-    ]
-  },
-  "transactions.common.status_of_the_transaction_conf": {
-    "defaultMessage": "Status of the transaction confirmation path to L1",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:249",
-      "ui/tx/details/TxInfo.tsx:263"
-    ]
-  },
-  "transactions.common.the_revert_reason_of_the_trans": {
-    "defaultMessage": "The revert reason of the transaction",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:282"
-    ]
-  },
-  "transactions.common.status_is_the_short_interpreta": {
-    "defaultMessage": "Status is the short interpretation of the batch lifecycle",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:295"
-    ]
-  },
-  "transactions.common.block_number_containing_the_tr": {
-    "defaultMessage": "Block number containing the transaction",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:307"
-    ]
-  },
-  "transactions.common.batch_number": {
-    "defaultMessage": "Batch number",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:357"
-    ]
-  },
-  "transactions.common.index_of_the_batch_containing_": {
-    "defaultMessage": "Index of the batch containing this transaction",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:376"
-    ]
-  },
-  "transactions.common.node_that_carried_out_the_conf": {
-    "defaultMessage": "Node that carried out the confidential computation",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:416"
-    ]
-  },
-  "transactions.common.the_target_address_where_this_": {
-    "defaultMessage": "The target address where this cross-chain transaction is executed",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:510"
-    ]
-  },
-  "transactions.common.l1_transaction_containing_this": {
-    "defaultMessage": "L1 transaction containing this batch commitment",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:544"
-    ]
-  },
-  "transactions.common.l1_transaction_containing_conf": {
-    "defaultMessage": "L1 transaction containing confirmation of this batch",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:558"
-    ]
-  },
-  "transactions.common.a_fee_set_by_the_chain_operato": {
-    "defaultMessage": "A fee set by the chain operator to cover extra costs of additional services",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:633"
-    ]
-  },
-  "transactions.common.l2_gas_spent_on_l2_resources": {
-    "defaultMessage": "L2 gas spent on L2 resources",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:709"
-    ]
-  },
-  "transactions.common.total_gas_used_on_l1": {
-    "defaultMessage": "Total gas used on L1",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:729"
-    ]
-  },
-  "transactions.common.l1_gas_used_by_transaction": {
-    "defaultMessage": "L1 gas used by transaction",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:785"
-    ]
-  },
-  "transactions.common.l1_gas_price": {
-    "defaultMessage": "L1 gas price",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:799"
-    ]
-  },
-  "transactions.common.amount_of_gas_used_by_the_blob": {
-    "defaultMessage": "Amount of gas used by the blobs in this transaction",
-    "source": [
-      "ui/tx/details/TxInfo.tsx:882"
-    ]
-  },
-  "transactions.common.l2_execution_fee": {
-    "defaultMessage": "L2 execution fee",
-    "source": [
-      "ui/tx/details/TxInfoScrollFees.tsx:45"
-    ]
-  },
-  "transactions.common.commitment_scalar": {
-    "defaultMessage": "Commitment scalar",
-    "source": [
-      "ui/tx/details/TxInfoScrollFees.tsx:64"
-    ]
-  },
-  "transactions.common.additional_gas_overhead_of_a_d": {
-    "defaultMessage": "Additional gas overhead of a data commitment transaction",
-    "source": [
-      "ui/tx/details/TxInfoScrollFees.tsx:83"
-    ]
-  },
-  "transactions.common.l1_gas_fees": {
-    "defaultMessage": "L1 gas fees",
-    "source": [
-      "ui/tx/details/TxInfoScrollFees.tsx:103"
-    ]
-  },
-  "transactions.common.l1_blob_fees": {
-    "defaultMessage": "L1 blob fees",
-    "source": [
-      "ui/tx/details/TxInfoScrollFees.tsx:128"
-    ]
-  },
-  "transactions.common.removed": {
-    "defaultMessage": "Removed",
-    "source": [
-      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:20"
-    ]
-  },
-  "transactions.common.collected": {
-    "defaultMessage": "Collected",
-    "source": [
-      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:21"
-    ]
-  },
-  "transactions.common.swapped": {
-    "defaultMessage": "Swapped",
-    "source": [
-      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:22"
-    ]
-  },
-  "transactions.common.ether": {
-    "defaultMessage": "Ether",
-    "source": [
-      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:42",
-      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:43",
-      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:50",
-      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:51",
-      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:66",
-      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:81"
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:42",
+      "ui/tx/details/TxDetailsWithdrawalStatusOptimistic.tsx:60"
     ]
   },
   "transactions.common.uniswap_v3": {
     "defaultMessage": "Uniswap V3",
     "source": [
-      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:94"
+      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:97"
     ]
   },
   "transactions.common.minted": {
     "defaultMessage": "Minted",
     "source": [
-      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:113"
+      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:116"
     ]
   },
   "transactions.common.of_token_id": {
     "defaultMessage": "of token ID",
     "source": [
-      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:138"
+      "ui/tx/details/txDetailsActions/TxDetailsAction.tsx:141"
     ]
   },
   "transactions.common.gas_limit": {
     "defaultMessage": "Gas limit",
     "source": [
-      "ui/tx/internals/TxInternalsListItem.tsx:44"
-    ]
-  },
-  "transactions.common.delegate_call": {
-    "defaultMessage": "Delegate call",
-    "source": [
-      "ui/tx/internals/utils.ts:13"
-    ]
-  },
-  "transactions.common.static_call": {
-    "defaultMessage": "Static call",
-    "source": [
-      "ui/tx/internals/utils.ts:14"
-    ]
-  },
-  "transactions.common.create": {
-    "defaultMessage": "Create",
-    "source": [
-      "ui/tx/internals/utils.ts:15"
-    ]
-  },
-  "transactions.common.selfdestruct": {
-    "defaultMessage": "Self-destruct",
-    "source": [
-      "ui/tx/internals/utils.ts:17"
-    ]
-  },
-  "transactions.common.reward": {
-    "defaultMessage": "Reward",
-    "source": [
-      "ui/tx/internals/utils.ts:18"
+      "ui/tx/internals/TxInternalsListItem.tsx:46"
     ]
   },
   "transactions.common.address": {
@@ -803,30 +218,6 @@
     "source": [
       "ui/tx/state/TxStateListItem.tsx:55",
       "ui/tx/state/TxStateTable.tsx:26"
-    ]
-  },
-  "transactions.common.a_block_producer_who_successfu": {
-    "defaultMessage": "A block producer who successfully included the block into the blockchain",
-    "source": [
-      "ui/tx/state/utils.tsx:24"
-    ]
-  },
-  "transactions.common.mint": {
-    "defaultMessage": "Mint",
-    "source": [
-      "ui/tx/state/utils.tsx:42"
-    ]
-  },
-  "transactions.common.burn": {
-    "defaultMessage": "Burn",
-    "source": [
-      "ui/tx/state/utils.tsx:42"
-    ]
-  },
-  "transactions.common.address_used_in_tokens_minting": {
-    "defaultMessage": "Address used in tokens mintings and burnings",
-    "source": [
-      "ui/tx/state/utils.tsx:44"
     ]
   }
 }

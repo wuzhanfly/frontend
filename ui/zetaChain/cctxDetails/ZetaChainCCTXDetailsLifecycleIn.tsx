@@ -1,5 +1,6 @@
 import { Flex, Grid, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CrossChainTx } from '@blockscout/zetachain-cctx-types';
 import { InboundStatus } from '@blockscout/zetachain-cctx-types';
@@ -21,6 +22,7 @@ type Props = {
 };
 
 const ZetaChainCCTXDetailsLifecycleIn = ({ tx, isLoading }: Props) => {
+  const { t } = useTranslation();
   const { data: chainsConfig } = useZetaChainConfig();
   const inboundParams = tx.inbound_params;
   if (!inboundParams) {
@@ -73,7 +75,7 @@ const ZetaChainCCTXDetailsLifecycleIn = ({ tx, isLoading }: Props) => {
           <Text color="text.secondary" fontWeight="medium">Status</Text>
           <StatusTag
             type={ inboundParams.status === InboundStatus.INBOUND_SUCCESS ? 'ok' : 'error' }
-            text={ inboundParams.status === InboundStatus.INBOUND_SUCCESS ? 'Success' : 'Failed' }
+            text={ inboundParams.status === InboundStatus.INBOUND_SUCCESS ? 'Success' : t('shared.common.failed') }
           />
           { inboundParams.sender && (
             <>

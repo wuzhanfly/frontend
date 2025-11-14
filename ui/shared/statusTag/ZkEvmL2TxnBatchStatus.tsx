@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ZkEvmL2TxnBatchesItem } from 'types/api/zkEvmL2';
 
@@ -11,11 +12,12 @@ export interface Props {
 }
 
 const ZkEvmL2TxnBatchStatus = ({ status, isLoading }: Props) => {
+  const { t } = useTranslation();
   let type: StatusTagType;
 
   switch (status) {
     case 'L1 Sequence Confirmed':
-    case 'Finalized':
+    case t('shared.common.finalized'):
       type = 'ok';
       break;
     default:

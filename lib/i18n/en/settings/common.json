@@ -3,5 +3,9 @@
   "settings.common.user_settings": "User settings",
   "settings.common.color_theme": "Color theme",
   "settings.common.english": "English",
-  "settings.common.": "🇺🇸"
+  "settings.common.chinese": "中文",
+  "settings.common.flag_us": "🇺🇸",
+  "settings.common.flag_china": "🇨🇳",
+  "settings.common.settings": "Settings",
+  "settings.common.language": "Language"
 }

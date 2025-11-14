@@ -2,6 +2,7 @@ import { Box } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SocketMessage } from 'lib/socket/types';
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
@@ -48,6 +49,7 @@ const TABS_RIGHT_SLOT_PROPS = {
 };
 
 const TokenPageContent = () => {
+  const { t } = useTranslation();
   const [ isQueryEnabled, setIsQueryEnabled ] = React.useState(false);
   const [ totalSupplySocket, setTotalSupplySocket ] = React.useState<number>();
   const router = useRouter();
@@ -173,17 +175,17 @@ const TokenPageContent = () => {
   const tabs: Array<TabItemRegular> = [
     hasInventoryTab ? {
       id: 'inventory',
-      title: 'Inventory',
+      title: t('tokens.common.inventory'),
       component: <TokenInventory inventoryQuery={ inventoryQuery } tokenQuery={ tokenQuery } ownerFilter={ ownerFilter } shouldRender={ !isLoading }/>,
     } : undefined,
     {
       id: 'token_transfers',
-      title: 'Token transfers',
+      title: t('transactions.common.token_transfers'),
       component: <TokenTransfer transfersQuery={ transfersQuery } tokenQuery={ tokenQuery } shouldRender={ !isLoading }/>,
     },
     {
       id: 'holders',
-      title: 'Holders',
+      title: t('tokens.common.holders'),
       component: <TokenHolders token={ tokenQuery.data } holdersQuery={ holdersQuery } shouldRender={ !isLoading }/>,
     },
     addressQuery.data?.is_contract ? {
@@ -198,14 +200,14 @@ const TokenPageContent = () => {
           );
         }
 
-        return 'Contract';
+        return t('tokens.common.contract');
       },
       component: <AddressContract addressData={ addressQuery.data } isLoading={ isLoading }/>,
       subTabs: CONTRACT_TAB_IDS,
     } : undefined,
     (address3rdPartyWidgets.isEnabled && address3rdPartyWidgets.items.length > 0) ? {
       id: 'widgets',
-      title: 'Widgets',
+      title: t('tokens.common.widgets'),
       count: address3rdPartyWidgets.items.length,
       component: <Address3rdPartyWidgets shouldRender={ !isLoading } addressType="token" showAll/>,
     } : undefined,

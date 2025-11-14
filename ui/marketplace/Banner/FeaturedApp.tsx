@@ -1,5 +1,6 @@
 import { Flex, Text } from '@chakra-ui/react';
 import type { MouseEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 import React, { useCallback } from 'react';
 
 import type { MarketplaceApp } from 'types/client/marketplace';
@@ -23,7 +24,7 @@ type FeaturedAppProps = {
   isFavorite: boolean;
   isLoading: boolean;
   onInfoClick: (id: string) => void;
-  onFavoriteClick: (id: string, isFavorite: boolean, source: 'Banner') => void;
+  onFavoriteClick: (id: string, isFavorite: boolean, source: 'banner') => void;
   onAppClick: (event: MouseEvent, id: string) => void;
 };
 
@@ -31,6 +32,7 @@ const FeaturedApp = ({
   app, isFavorite, isLoading, onAppClick,
   onInfoClick, onFavoriteClick,
 }: FeaturedAppProps) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
 
   const { id, url, external, title, logo, logoDarkMode, shortDescription, categories, internalWallet } = app;
@@ -44,7 +46,7 @@ const FeaturedApp = ({
   }, [ onInfoClick, id ]);
 
   const handleFavoriteClick = useCallback(() => {
-    onFavoriteClick(id, isFavorite, 'Banner');
+    onFavoriteClick(id, isFavorite, 'banner');
   }, [ onFavoriteClick, id, isFavorite ]);
 
   if (isMobile) {
@@ -127,8 +129,8 @@ const FeaturedApp = ({
 
             { !isLoading && (
               <IconButton
-                aria-label="Mark as favorite"
-                title="Mark as favorite"
+                aria-label={t('marketplace.common.mark_as_favorite')}
+                title={t('marketplace.common.mark_as_favorite')}
                 variant="icon_background"
                 size="md"
                 onClick={ handleFavoriteClick }

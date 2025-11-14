@@ -8,6 +8,7 @@ import * as TokenEntity from 'ui/shared/entities/token/TokenEntity';
 import EntityTags from 'ui/shared/EntityTags/EntityTags';
 import IconSvg from 'ui/shared/IconSvg';
 import NetworkExplorers from 'ui/shared/NetworkExplorers';
+import { useTranslation } from 'react-i18next';
 
 import PageTitle from '../PageTitle';
 
@@ -26,12 +27,14 @@ const DefaultView = () => {
     reputation: 'ok',
   };
 
+  const { t } = useTranslation();
+
   const contentAfter = (
     <>
       <IconSvg name="certified" color="green.500" boxSize={ 6 } cursor="pointer"/>
       <EntityTags
         tags={ [
-          { slug: 'example', name: 'Example label', tagType: 'custom', ordinal: 0 },
+          { slug: 'example', name: t('shared.common.example_label'), tagType: 'custom', ordinal: 0 },
         ] }
         flexGrow={ 1 }
       />

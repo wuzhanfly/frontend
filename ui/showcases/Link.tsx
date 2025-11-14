@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import * as addressMock from 'mocks/address/address';
 import * as implementationsMock from 'mocks/address/implementations';
@@ -20,22 +21,24 @@ import TxEntity from 'ui/shared/entities/tx/TxEntity';
 
 import { Section, Container, SectionHeader, SamplesStack, Sample, SectionSubHeader } from './parts';
 
-const TOKEN = {
+const getToken = (t: (key: string) => string) => ({
   address_hash: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
   circulating_market_cap: '139446916652.6728',
   decimals: '6',
   exchange_rate: '0.999921',
   holders: '8348277',
   icon_url: 'https://assets.coingecko.com/coins/images/325/small/Tether.png?1696501661',
-  name: 'Tether',
+  name: t('common.common.tether'),
   symbol: 'USDT',
   total_supply: '76923002799740785',
   type: 'ERC-20' as const,
   volume_24h: '82069586622.4918',
   reputation: 'ok' as const,
-};
+});
 
 const LinkShowcase = () => {
+  const { t } = useTranslation();
+  const TOKEN = getToken(t);
 
   return (
     <Container value="link">
@@ -91,7 +94,7 @@ const LinkShowcase = () => {
 
         <SectionSubHeader>Address link</SectionSubHeader>
         <SamplesStack>
-          <Sample label="Without name" vertical>
+          <Sample label={t('common.common.without_name')} vertical>
             <AddressEntity address={ addressMock.withoutName }/>
             <AddressEntity address={ addressMock.withoutName } link={{ external: true }}/>
             <AddressEntity address={{ ...addressMock.filecoin, name: null }}/>
@@ -104,7 +107,7 @@ const LinkShowcase = () => {
             <AddressEntity address={ addressMock.withoutName } variant="content"/>
             <AddressEntity address={ addressMock.withoutName } variant="subheading"/>
           </Sample>
-          <Sample label="With name" vertical>
+          <Sample label={t('common.common.with_name')} vertical>
             <AddressEntity address={ addressMock.withName }/>
             <AddressEntity address={ addressMock.withNameTag }/>
             <AddressEntity address={ addressMock.withEns }/>
@@ -112,7 +115,7 @@ const LinkShowcase = () => {
               <AddressEntity address={ addressMock.withEns }/>
             </Box>
           </Sample>
-          <Sample label="Contract" vertical>
+          <Sample label={t('tokens.common.contract')} vertical>
             <AddressEntity address={{ ...addressMock.contract, is_verified: false, name: null, implementations: [] }}/>
             <AddressEntity address={{ ...addressMock.contract, implementations: [] }}/>
             <AddressEntity address={{ ...addressMock.contract, implementations: implementationsMock.multiple }}/>
@@ -122,19 +125,19 @@ const LinkShowcase = () => {
 
         <SectionSubHeader>Token link</SectionSubHeader>
         <SamplesStack>
-          <Sample label="With info" vertical w="100%">
+          <Sample label={t('common.common.with_info')} vertical w="100%">
             <TokenEntity token={ TOKEN }/>
             <Box maxW="200px">
-              <TokenEntity token={{ ...TOKEN, name: 'Very looooooooong name' }} noSymbol/>
+              <TokenEntity token={{ ...TOKEN, name: t('common.common.very_looooooooong_name') }} noSymbol/>
             </Box>
             <Box maxW="300px">
-              <TokenEntity token={{ ...TOKEN, symbol: 'Very looooooooong symbol' }}/>
+              <TokenEntity token={{ ...TOKEN, symbol: t('common.common.very_looooooooong_symbol') }}/>
             </Box>
             <TokenEntity token={ TOKEN } jointSymbol/>
             <TokenEntity token={ TOKEN } onlySymbol/>
             <TokenEntity token={ TOKEN } isLoading/>
           </Sample>
-          <Sample label="With partial info" vertical w="100%">
+          <Sample label={t('common.common.with_partial_info')} vertical w="100%">
             <TokenEntity token={{ ...TOKEN, icon_url: null }}/>
             <TokenEntity token={{ ...TOKEN, icon_url: null, name: null, symbol: null }}/>
           </Sample>
@@ -146,7 +149,7 @@ const LinkShowcase = () => {
 
         <SectionSubHeader>Transaction link</SectionSubHeader>
         <SamplesStack>
-          <Sample label="Default" vertical w="100%">
+          <Sample label={t('validators.common.default')} vertical w="100%">
             <TxEntity hash={ txMock.base.hash }/>
             <TxEntity hash={ txMock.base.hash } link={{ external: true }}/>
             <Box maxW="200px">
@@ -158,7 +161,7 @@ const LinkShowcase = () => {
 
         <SectionSubHeader>Block link</SectionSubHeader>
         <SamplesStack>
-          <Sample label="Default" vertical w="100%">
+          <Sample label={t('validators.common.default')} vertical w="100%">
             <BlockEntity number={ blockMock.base.height }/>
             <BlockEntity number={ blockMock.base.height } link={{ external: true }} icon={{ name: 'txn_batches_slim' }}/>
             <Box maxW="150px">
@@ -170,7 +173,7 @@ const LinkShowcase = () => {
 
         <SectionSubHeader>NFT link</SectionSubHeader>
         <SamplesStack>
-          <Sample label="Default" vertical w="100%">
+          <Sample label={t('validators.common.default')} vertical w="100%">
             <NftEntity id="42" hash={ TOKEN.address_hash }/>
             <Box maxW="250px">
               <NftEntity id="32925298983216553915666621415831103694597106215670571463977478984525997408266" hash={ TOKEN.address_hash }/>
@@ -181,7 +184,7 @@ const LinkShowcase = () => {
 
         <SectionSubHeader>ENS link</SectionSubHeader>
         <SamplesStack>
-          <Sample label="Default" vertical w="100%">
+          <Sample label={t('validators.common.default')} vertical w="100%">
             <EnsEntity domain={ ensMock.ensDomainA.name } protocol={ ensMock.ensDomainA.protocol }/>
             <Box maxW="150px">
               <EnsEntity domain={ ensMock.ensDomainB.name } protocol={ ensMock.ensDomainB.protocol }/>
@@ -196,7 +199,7 @@ const LinkShowcase = () => {
 
         <SectionSubHeader>Blob link</SectionSubHeader>
         <SamplesStack>
-          <Sample label="Default" vertical w="100%">
+          <Sample label={t('validators.common.default')} vertical w="100%">
             <BlobEntity hash={ blobsMock.base1.hash }/>
             <Box maxW="200px">
               <BlobEntity hash={ blobsMock.base1.hash } link={{ external: true }}/>
@@ -207,7 +210,7 @@ const LinkShowcase = () => {
 
         <SectionSubHeader>Pool link</SectionSubHeader>
         <SamplesStack>
-          <Sample label="Default" vertical w="100%">
+          <Sample label={t('validators.common.default')} vertical w="100%">
             <PoolEntity pool={{
               ...poolMock.base,
               base_token_icon_url: 'https://coin-images.coingecko.com/coins/images/39926/large/usds.webp?1726666683',
@@ -222,13 +225,13 @@ const LinkShowcase = () => {
 
         <SectionSubHeader>Link overlay</SectionSubHeader>
         <SamplesStack>
-          <Sample label="Internal link">
+          <Sample label={t('common.common.internal_link')}>
             <LinkBox p={ 2 } display="flex" flexDirection="column" columnGap={ 2 } borderWidth="1px" borderColor="border.divider" borderRadius="base">
               <LinkOverlay href="/blocks">Main link</LinkOverlay>
               <Link href="/txs">Inner link</Link>
             </LinkBox>
           </Sample>
-          <Sample label="External link">
+          <Sample label={t('common.common.external_link')}>
             <LinkBox p={ 2 } display="flex" flexDirection="column" columnGap={ 2 } borderWidth="1px" borderColor="border.divider" borderRadius="base">
               <LinkOverlay href="https://blockscout.com" external>Main link</LinkOverlay>
               <Link href="https://blockscout.com/txs" external>Inner link</Link>

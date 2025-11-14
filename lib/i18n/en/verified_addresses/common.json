@@ -1,0 +1,7 @@
+{
+  "verified_addresses.common.before_starting_make_sure_that": "Before starting, make sure that:",
+  "verified_addresses.common.the_source_code_for_the_smart_contract_is_deployed_on_chain": "The source code for the smart contract is deployed on \"{chain}\".",
+  "verified_addresses.common.the_source_code_is_verified_if_not_yet_verified_you_can_use": "The source code is verified (if not yet verified, you can use",
+  "verified_addresses.common.once_these_steps_are_complete_click_the_add_address_button_below_to_get_started": "Once these steps are complete, click the Add address button below to get started.",
+  "verified_addresses.common.you_need_a_valid_email_address_to_verify_contracts_please_add_your_email_to_your_account": "You need a valid email address to verify contracts. Please add your email to your account."
+}

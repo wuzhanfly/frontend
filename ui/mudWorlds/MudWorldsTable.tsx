@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { MudWorldItem } from 'types/api/mudWorlds';
 
@@ -14,13 +15,14 @@ type Props = {
 };
 
 const MudWorldsTable = ({ items, top, isLoading }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRoot style={{ tableLayout: 'auto' }}>
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader>Address</TableColumnHeader>
+          <TableColumnHeader>{t('addresses.common.address')}</TableColumnHeader>
           <TableColumnHeader isNumeric>{ `Balance ${ currencyUnits.ether }` }</TableColumnHeader>
-          <TableColumnHeader isNumeric>Txn count</TableColumnHeader>
+          <TableColumnHeader isNumeric>{t('common.common.txn_count')}</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

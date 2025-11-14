@@ -1,5 +1,6 @@
 import { Box, Flex, chakra, createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenInstance } from 'types/api/token';
 
@@ -13,14 +14,9 @@ import RawDataSnippet from 'ui/shared/RawDataSnippet';
 import { useMetadataUpdateContext } from './contexts/metadataUpdate';
 import MetadataAccordion from './metadata/MetadataAccordion';
 
-const OPTIONS = [
-  { label: 'Table', value: 'Table' as const },
-  { label: 'JSON', value: 'JSON' as const },
-];
 
-const collection = createListCollection<SelectOption>({ items: OPTIONS });
 
-type Format = (typeof OPTIONS)[number]['value'];
+type Format = 'table' | 'JSON';
 
 interface Props {
   data: TokenInstance['metadata'] | undefined;
@@ -28,7 +24,14 @@ interface Props {
 }
 
 const TokenInstanceMetadata = ({ data, isPlaceholderData }: Props) => {
-  const [ format, setFormat ] = React.useState<Array<Format>>([ 'Table' ]);
+  const { t } = useTranslation();
+  const OPTIONS = React.useMemo(() => [
+    { label: t('common.common.table'), value: 'table' as const },
+    { label: 'JSON', value: 'JSON' as const },
+  ], [t]);
+  
+  const collection = React.useMemo(() => createListCollection<SelectOption>({ items: OPTIONS }), [t]);
+  const [ format, setFormat ] = React.useState<Array<Format>>([ 'table' ]);
 
   const { status: refetchStatus } = useMetadataUpdateContext() || {};
 
@@ -44,15 +47,15 @@ const TokenInstanceMetadata = ({ data, isPlaceholderData }: Props) => {
     return <Box>There is no metadata for this NFT</Box>;
   }
 
-  const content = format[0] === 'Table' ?
+  const content = format[0] === t('common.common.table') ?
     <MetadataAccordion data={ data }/> :
     <RawDataSnippet data={ JSON.stringify(data, undefined, 4) } showCopy={ false }/>;
 
   return (
     <Box>
       { refetchStatus === 'ERROR' && (
-        <Alert status="warning" mb={ 6 } title="Ooops!" display={{ base: 'block', lg: 'flex' }}>
-          <span>We { `couldn't` } refresh metadata. Please try again now or later.</span>
+        <Alert status="warning" mb={ 6 } title={t('common.common.ooops')} display={{ base: 'block', lg: 'flex' }}>
+          <span>We { t('common.common.couldnt') } refresh metadata. Please try again now or later.</span>
         </Alert>
       ) }
       <Flex alignItems="center" mb={ 6 }>

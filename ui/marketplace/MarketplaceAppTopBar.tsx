@@ -1,5 +1,6 @@
 import { chakra, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { MarketplaceApp } from 'types/client/marketplace';
 
@@ -27,6 +28,7 @@ type Props = {
 };
 
 const MarketplaceAppTopBar = ({ appId, data, isLoading }: Props) => {
+  const { t } = useTranslation();
   const appProps = useAppContext();
   const isMobile = useIsMobile();
 
@@ -46,7 +48,7 @@ const MarketplaceAppTopBar = ({ appId, data, isLoading }: Props) => {
       { !isMobile && <NetworkLogo isCollapsed mr={ 4 }/> }
       <BackToButton
         href={ goBackUrl }
-        hint="Back to dApps list"
+        hint={t('marketplace.common.back_to_dapps_list')}
         loading={ isLoading }
         onClick={ handleBackToClick }
       />

@@ -1,6 +1,7 @@
 import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Route } from 'nextjs-routes';
 
@@ -22,6 +23,7 @@ const PROTECTED_ROUTES: Array<Route['pathname']> = [
 ];
 
 export default function useLogout() {
+  const { t } = useTranslation();
   const router = useRouter();
   const queryClient = useQueryClient();
   const apiFetch = useApiFetch();
@@ -62,8 +64,8 @@ export default function useLogout() {
       }
     } catch (error) {
       toaster.error({
-        title: 'Logout failed',
-        description: 'Please try again later',
+        title: t('common.common.logout_failed'),
+        description: t('marketplace.common.please_try_again_later'),
       });
     }
   }, [ apiFetch, queryClient, router ]);

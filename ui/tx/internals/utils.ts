@@ -8,12 +8,12 @@ interface TxInternalsTypeItem {
   id: TxInternalsType;
 }
 
-export const TX_INTERNALS_ITEMS: Array<TxInternalsTypeItem> = [
-  { title: 'Call', id: 'call' },
-  { title: 'Delegate call', id: 'delegatecall' },
-  { title: 'Static call', id: 'staticcall' },
-  { title: 'Create', id: 'create' },
+export const getTxInternalsItems = (t: (key: string) => string): Array<TxInternalsTypeItem> => [
+  { title: t('shared.common.call'), id: 'call' },
+  { title: t('transactions.common.delegate_call'), id: 'delegatecall' },
+  { title: t('transactions.common.static_call'), id: 'staticcall' },
+  { title: t('transactions.common.create'), id: 'create' },
   { title: 'Create2', id: 'create2' },
-  { title: 'Self-destruct', id: 'selfdestruct' },
-  { title: 'Reward', id: 'reward' },
+  { title: t('transactions.common.selfdestruct'), id: 'selfdestruct' },
+  { title: t('transactions.common.reward'), id: 'reward' },
 ];

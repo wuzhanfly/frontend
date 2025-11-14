@@ -1,5 +1,6 @@
 import { chakra, Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Screen } from '../types';
 import type { UserInfo } from 'types/api/account';
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const AuthModalScreenSuccessEmail = ({ email, onConnectWallet, onClose, isAuth, profile }: Props) => {
+  const { t } = useTranslation();
   const handleConnectWalletClick = React.useCallback(() => {
     onConnectWallet({ type: 'connect_wallet', isAuth: true, loginToRewards: true });
   }, [ onConnectWallet ]);
@@ -24,16 +26,14 @@ const AuthModalScreenSuccessEmail = ({ email, onConnectWallet, onClose, isAuth, 
     return (
       <Box>
         <Text>
-          Your account was linked to{ ' ' }
-          <chakra.span fontWeight="700">{ email }</chakra.span>{ ' ' }
-          email. Use for the next login.
+          {t('common.common.your_account_was_linked_to')}<chakra.span fontWeight="700">{ email }</chakra.span>{t('common.common.email_use_for_the_next_login')}
         </Text>
         <Button
           mt={ 6 }
           variant="outline"
           onClick={ onClose }
         >
-          Got it!
+          {t('common.common.got_it')}
         </Button>
       </Box>
     );
@@ -47,8 +47,8 @@ const AuthModalScreenSuccessEmail = ({ email, onConnectWallet, onClose, isAuth, 
       </Text>
       { !profile?.address_hash && config.features.blockchainInteraction.isEnabled ? (
         <>
-          <Text mt={ 6 }>Add your web3 wallet to safely interact with smart contracts and dapps inside Blockscout.</Text>
-          <Button mt={ 6 } onClick={ handleConnectWalletClick }>Connect wallet</Button>
+          <Text mt={ 6 }>{t('common.common.add_your_web3_wallet_to_safely_interact_with_smart_contracts_and_dapps_inside_blockscout')}</Text>
+          <Button mt={ 6 } onClick={ handleConnectWalletClick }>{t('common.common.connect_wallet')}</Button>
         </>
       ) : (
         <Button
@@ -56,7 +56,7 @@ const AuthModalScreenSuccessEmail = ({ email, onConnectWallet, onClose, isAuth, 
           mt={ 6 }
           onClick={ onClose }
         >
-          Got it!
+          {t('common.common.got_it')}
         </Button>
       ) }
     </Box>

@@ -1,5 +1,24 @@
 import type { FormSubmitResultItem } from './types';
 
+const { t } = (() => {
+  // Mock translation function for tests
+  const mockT = (key: string) => {
+    const keyMap: Record<string, string> = {
+      'common.common.john_doe': 'John Doe',
+      'common.common.jonhdoeduckme': 'john@duckme.com',
+      'common.common.quack_quack': 'Quack quack!',
+      'common.common.unicorn_uproar': 'Unicorn Uproar',
+      'common.common.hello': 'Hello',
+      'common.common.hello_it_is_me_i_was_wondering': 'Hello, it is me, I was wondering',
+      'common.common.duck_owner_': 'Duck owner',
+      'common.common.some_error': 'Some error',
+      'common.common.another_nasty_error': 'Another nasty error',
+    };
+    return keyMap[key] || key;
+  };
+  return { t: mockT };
+})();
+
 export const address1 = '0xd789a607CEac2f0E14867de4EB15b15C9FFB5851';
 export const address2 = '0xd789a607CEac2f0E14867de4EB15b15C9FFB5852';
 export const address3 = '0xd789a607CEac2f0E14867de4EB15b15C9FFB5853';
@@ -7,15 +26,15 @@ export const address4 = '0xd789a607CEac2f0E14867de4EB15b15C9FFB5854';
 export const address5 = '0xd789a607CEac2f0E14867de4EB15b15C9FFB5855';
 
 export const baseFields = {
-  requesterName: 'John Doe',
-  requesterEmail: 'jonh.doe@duck.me',
+  requesterName: t('common.common.john_doe'),
+  requesterEmail: t('common.common.jonhdoeduckme'),
   companyName: 'DuckDuckMe',
   companyWebsite: 'https://duck.me',
-  description: 'Quack quack',
+  description: t('common.common.quack_quack'),
 };
 
 export const tag1 = {
-  name: 'Unicorn Uproar',
+  name: t('common.common.unicorn_uproar'),
   tagType: 'name' as const,
   meta: {
     tagUrl: 'https://example.com',
@@ -26,15 +45,15 @@ export const tag1 = {
 };
 
 export const tag2 = {
-  name: 'Hello',
+  name: t('common.common.hello'),
   tagType: 'generic' as const,
   meta: {
-    tooltipDescription: 'Hello, it is me... I was wondering if after all these years you would like to meet',
+    tooltipDescription: t('common.common.hello_it_is_me_i_was_wondering'),
   },
 };
 
 export const tag3 = {
-  name: 'duck owner 🦆',
+  name: t('common.common.duck_owner_'),
   tagType: 'classifier' as const,
   meta: {
     bgColor: '#fff300',
@@ -65,29 +84,29 @@ export const mixedResponses: Array<FormSubmitResultItem> = [
     payload: { address: address1, ...tag1 },
   },
   {
-    error: 'Some error',
+    error: t('common.common.some_error'),
     payload: { address: address1, ...tag2 },
   },
   {
-    error: 'Some error',
+    error: t('common.common.some_error'),
     payload: { address: address1, ...tag3 },
   },
   // address2
   {
-    error: 'Some error',
+    error: t('common.common.some_error'),
     payload: { address: address2, ...tag2 },
   },
   {
-    error: 'Some error',
+    error: t('common.common.some_error'),
     payload: { address: address2, ...tag3 },
   },
   // address3
   {
-    error: 'Some error',
+    error: t('common.common.some_error'),
     payload: { address: address3, ...tag1 },
   },
   {
-    error: 'Another nasty error',
+    error: t('common.common.another_nasty_error'),
     payload: { address: address3, ...tag2 },
   },
   {

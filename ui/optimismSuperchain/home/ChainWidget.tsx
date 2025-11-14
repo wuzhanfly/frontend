@@ -1,5 +1,6 @@
 import { Box, HStack, VStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ChainConfig } from 'types/multichain';
 
@@ -23,6 +24,7 @@ interface Props {
 }
 
 const ChainWidget = ({ data }: Props) => {
+  const { t } = useTranslation();
   const statsQuery = useApiQuery('general:stats', {
     chainSlug: data.slug,
     queryOptions: {
@@ -34,7 +36,7 @@ const ChainWidget = ({ data }: Props) => {
 
   return (
     <Box
-      // as the designer said, for the light theme "there is no gray color that suits well, so we use a custom one"
+      // as the designer said, for the light theme t('common.common.there_is_no_gray_color_that_su')
       bgColor={{ _light: 'rgba(246, 246, 248, 0.5)', _dark: 'whiteAlpha.50' }}
       borderRadius="xl"
       border="1px solid"
@@ -46,7 +48,7 @@ const ChainWidget = ({ data }: Props) => {
       <HStack justifyContent="space-between">
         <ChainIcon data={ data } boxSize="30px"/>
         <HStack gap={ 2 }>
-          <Tooltip content="Add to wallet">
+          <Tooltip content={t('common.common.add_to_wallet')}>
             <Link
               onClick={ handleAddToWalletClick }
               p={ 1.5 }
@@ -60,7 +62,7 @@ const ChainWidget = ({ data }: Props) => {
               <IconSvg name="wallet" boxSize={ 5 }/>
             </Link>
           </Tooltip>
-          <Tooltip content="Open explorer">
+          <Tooltip content={t('common.common.open_explorer')}>
             <Link
               href={ data.config.app.baseUrl }
               external

@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import React, { useEffect, useState } from 'react';
 import { I18nextProvider } from 'react-i18next';
+
 import i18n from './i18n';
 
 interface GlobalI18nProviderProps {
@@ -12,8 +13,8 @@ interface GlobalI18nProviderProps {
  * 确保语言包在其他组件之前加载
  */
 const GlobalI18nProvider: React.FC<GlobalI18nProviderProps> = ({ children }) => {
-  const [isI18nReady, setIsI18nReady] = useState(false);
-  const [, setLanguageChange] = useState(0);
+  const [ isI18nReady, setIsI18nReady ] = useState(false);
+  const [ , setLanguageChange ] = useState(0);
 
   useEffect(() => {
     // 确保i18n实例完全初始化
@@ -26,14 +27,14 @@ const GlobalI18nProvider: React.FC<GlobalI18nProviderProps> = ({ children }) => 
     } else {
       i18n.on('initialized', handleInitialized);
     }
-    
+
     // 监听语言变化并强制重新渲染
     const handleLanguageChange = () => {
       setLanguageChange(prev => prev + 1);
     };
-    
+
     i18n.on('languageChanged', handleLanguageChange);
-    
+
     // 清理事件监听器
     return () => {
       i18n.off('initialized', handleInitialized);
@@ -51,8 +52,8 @@ const GlobalI18nProvider: React.FC<GlobalI18nProviderProps> = ({ children }) => 
   }
 
   return (
-    <I18nextProvider i18n={i18n}>
-      {children}
+    <I18nextProvider i18n={ i18n }>
+      { children }
     </I18nextProvider>
   );
 };

@@ -1,5 +1,6 @@
 import { VStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Screen } from '../types';
 
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const AuthModalScreenSelectMethod = ({ onSelectMethod }: Props) => {
+  const { t } = useTranslation();
 
   const handleEmailClick = React.useCallback(() => {
     mixpanel.logEvent(mixpanel.EventTypes.LOGIN, {

@@ -1,5 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { NetworkExplorer as TNetworkExplorer } from 'types/networks';
 
@@ -17,6 +18,7 @@ interface Props {
 }
 
 const NetworkExplorers = ({ className, type, pathParam }: Props) => {
+  const { t } = useTranslation();
   const explorersLinks = React.useMemo(() => {
     return config.UI.explorers.items
       .filter((explorer) => typeof explorer.paths[type] === 'string')
@@ -25,8 +27,8 @@ const NetworkExplorers = ({ className, type, pathParam }: Props) => {
         let pathWithParam;
         if (path.includes(':id_lowercase')) {
           pathWithParam = path.replace(':id_lowercase', pathParam.toLowerCase());
-        } else if (path.includes(':id')) {
-          pathWithParam = path.replace(':id', pathParam);
+        } else if (path.includes(t('shared.common.id'))) {
+          pathWithParam = path.replace(t('shared.common.id'), pathParam);
         } else {
           pathWithParam = stripTrailingSlash(path) + '/' + pathParam.toLowerCase();
         }
@@ -51,7 +53,7 @@ const NetworkExplorers = ({ className, type, pathParam }: Props) => {
     <VerifyWith
       className={ className }
       links={ explorersLinks }
-      label="Verify with other explorers"
+      label={t('shared.common.verify_with_other_explorers')}
       longText={ `${ explorersLinks.length } Explorer${ explorersLinks.length > 1 ? 's' : '' }` }
       shortText={ explorersLinks.length.toString() }
     />

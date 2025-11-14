@@ -1,5 +1,6 @@
 import { Flex, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { Button } from 'toolkit/chakra/button';
@@ -17,6 +18,7 @@ interface Props {
 }
 
 const ContractCodeIde = ({ className, hash, isLoading }: Props) => {
+  const { t } = useTranslation();
   const { open, onOpenChange } = useDisclosure();
 
   const ideLinks = React.useMemo(() => {
@@ -51,7 +53,7 @@ const ContractCodeIde = ({ className, hash, isLoading }: Props) => {
           className={ className }
           size="sm"
           variant="dropdown"
-          aria-label="Open source code in IDE"
+          aria-label={ t('addresses.common.open_source_code_in_ide') }
           fontWeight={ 500 }
           gap={ 0 }
           h="32px"

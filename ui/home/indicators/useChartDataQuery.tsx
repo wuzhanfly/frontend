@@ -3,6 +3,7 @@ import type { ChainIndicatorId } from 'types/homepage';
 
 import config from 'configs/app';
 import useApiQuery from 'lib/api/useApiQuery';
+import { useTranslation } from 'react-i18next';
 
 import prepareChartItems from './utils/prepareChartItems';
 
@@ -10,32 +11,34 @@ const rollupFeature = config.features.rollup;
 const isOptimisticRollup = rollupFeature.isEnabled && rollupFeature.type === 'optimistic';
 const isArbitrumRollup = rollupFeature.isEnabled && rollupFeature.type === 'arbitrum';
 
-const CHART_ITEMS: Record<ChainIndicatorId, Pick<TimeChartDataItem, 'name' | 'valueFormatter'>> = {
-  daily_txs: {
-    name: 'Tx/day',
-    valueFormatter: (x: number) => x.toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
-  },
-  daily_operational_txs: {
-    name: 'Tx/day',
-    valueFormatter: (x: number) => x.toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
-  },
-  coin_price: {
-    name: `${ config.chain.currency.symbol } price`,
-    valueFormatter: (x: number) => '$' + x.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 }),
-  },
-  secondary_coin_price: {
-    name: `${ config.chain.currency.symbol } price`,
-    valueFormatter: (x: number) => '$' + x.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 }),
-  },
-  market_cap: {
-    name: 'Market cap',
-    valueFormatter: (x: number) => '$' + x.toLocaleString(undefined, { maximumFractionDigits: 2 }),
-  },
-  tvl: {
-    name: 'TVL',
-    valueFormatter: (x: number) => '$' + x.toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
-  },
-};
+function createChartItems(t: (key: string) => string): Record<ChainIndicatorId, Pick<TimeChartDataItem, 'name' | 'valueFormatter'>> {
+  return {
+    daily_txs: {
+      name: 'Tx/day',
+      valueFormatter: (x: number) => x.toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
+    },
+    daily_operational_txs: {
+      name: 'Tx/day',
+      valueFormatter: (x: number) => x.toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
+    },
+    coin_price: {
+      name: `${ config.chain.currency.symbol } price`,
+      valueFormatter: (x: number) => '$' + x.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 }),
+    },
+    secondary_coin_price: {
+      name: `${ config.chain.currency.symbol } price`,
+      valueFormatter: (x: number) => '$' + x.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 }),
+    },
+    market_cap: {
+      name: t('common.common.market_cap'),
+      valueFormatter: (x: number) => '$' + x.toLocaleString(undefined, { maximumFractionDigits: 2 }),
+    },
+    tvl: {
+      name: 'TVL',
+      valueFormatter: (x: number) => '$' + x.toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
+    },
+  };
+}
 
 const isStatsFeatureEnabled = config.features.stats.isEnabled;
 
@@ -45,17 +48,20 @@ type UseFetchChartDataResult = {
   data: TimeChartData;
 };
 
-function getChartData(indicatorId: ChainIndicatorId, data: Array<TimeChartItemRaw>): TimeChartData {
+function getChartData(indicatorId: ChainIndicatorId, data: Array<TimeChartItemRaw>, chartItems: Record<ChainIndicatorId, Pick<TimeChartDataItem, 'name' | 'valueFormatter'>>): TimeChartData {
   return [ {
     id: indicatorId,
     charts: [],
     items: prepareChartItems(data),
-    name: CHART_ITEMS[indicatorId].name,
-    valueFormatter: CHART_ITEMS[indicatorId].valueFormatter,
+    name: chartItems[indicatorId].name,
+    valueFormatter: chartItems[indicatorId].valueFormatter,
   } ];
 }
 
 export default function useChartDataQuery(indicatorId: ChainIndicatorId): UseFetchChartDataResult {
+  const { t } = useTranslation();
+  const CHART_ITEMS = createChartItems(t);
+  
   const statsDailyTxsQuery = useApiQuery('stats:pages_main', {
     queryOptions: {
       refetchOnMount: false,
@@ -141,42 +147,42 @@ export default function useChartDataQuery(indicatorId: ChainIndicatorId): UseFet
     case 'daily_txs': {
       const query = isStatsFeatureEnabled ? statsDailyTxsQuery : apiDailyTxsQuery;
       return {
-        data: getChartData(indicatorId, query.data || []),
+        data: getChartData(indicatorId, query.data || [], CHART_ITEMS),
         isError: query.isError,
         isPending: query.isPending,
       };
     }
     case 'daily_operational_txs': {
       return {
-        data: getChartData(indicatorId, statsDailyOperationalTxsQuery.data || []),
+        data: getChartData(indicatorId, statsDailyOperationalTxsQuery.data || [], CHART_ITEMS),
         isError: statsDailyOperationalTxsQuery.isError,
         isPending: statsDailyOperationalTxsQuery.isPending,
       };
     }
     case 'coin_price': {
       return {
-        data: getChartData(indicatorId, coinPriceQuery.data || []),
+        data: getChartData(indicatorId, coinPriceQuery.data || [], CHART_ITEMS),
         isError: coinPriceQuery.isError,
         isPending: coinPriceQuery.isPending,
       };
     }
     case 'secondary_coin_price': {
       return {
-        data: getChartData(indicatorId, secondaryCoinPriceQuery.data || []),
+        data: getChartData(indicatorId, secondaryCoinPriceQuery.data || [], CHART_ITEMS),
         isError: secondaryCoinPriceQuery.isError,
         isPending: secondaryCoinPriceQuery.isPending,
       };
     }
     case 'market_cap': {
       return {
-        data: getChartData(indicatorId, marketCapQuery.data || []),
+        data: getChartData(indicatorId, marketCapQuery.data || [], CHART_ITEMS),
         isError: marketCapQuery.isError,
         isPending: marketCapQuery.isPending,
       };
     }
     case 'tvl': {
       return {
-        data: getChartData(indicatorId, tvlQuery.data || []),
+        data: getChartData(indicatorId, tvlQuery.data || [], CHART_ITEMS),
         isError: tvlQuery.isError,
         isPending: tvlQuery.isPending,
       };

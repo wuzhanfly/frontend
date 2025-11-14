@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressTag } from 'types/api/account';
 
@@ -20,6 +21,7 @@ import AddressTagTable from './AddressTagTable/AddressTagTable';
 import DeletePrivateTagModal from './DeletePrivateTagModal';
 
 const PrivateAddressTags = () => {
+  const { t } = useTranslation();
   const { data: addressTagsData, isError, isPlaceholderData, refetch, pagination } = useQueryWithPages({
     resourceName: 'general:private_tags_address',
     options: {
@@ -101,7 +103,7 @@ const PrivateAddressTags = () => {
         <Button
           onClick={ addressModalProps.onOpen }
         >
-          Add address tag
+          {t('account.common.add_address_tag')}
         </Button>
       </Skeleton>
       <AddressModal

@@ -1,4 +1,5 @@
 import { Flex } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 import { useRewardsContext } from 'lib/contexts/rewards';
 import { Skeleton } from 'toolkit/chakra/skeleton';
@@ -7,11 +8,12 @@ import RewardsReadOnlyInputWithCopy from '../../RewardsReadOnlyInputWithCopy';
 import RewardsDashboardCard from '../RewardsDashboardCard';
 
 export default function ReferralsTab() {
+  const { t } = useTranslation();
   const { rewardsConfigQuery, referralsQuery } = useRewardsContext();
 
   return (
     <RewardsDashboardCard
-      title="Referral program"
+      title={t('staking.common.referral_program')}
       description={ (
         <>
           Refer friends and boost your Merits! You receive a{ ' ' }
@@ -34,13 +36,13 @@ export default function ReferralsTab() {
         flexDirection={{ base: 'column', lg: 'row' }}
       >
         <RewardsReadOnlyInputWithCopy
-          label="Referral link"
+          label={t('staking.common.referral_link')}
           value={ referralsQuery.data?.link || 'N/A' }
           isLoading={ referralsQuery.isPending }
           flex={ 2 }
         />
         <RewardsReadOnlyInputWithCopy
-          label="Referral code"
+          label={t('dashboard.common.referral_code')}
           value={ referralsQuery.data?.code || 'N/A' }
           isLoading={ referralsQuery.isPending }
           flex={ 1 }

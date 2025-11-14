@@ -1,5 +1,6 @@
 import { createListCollection, Grid, GridItem } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as stats from '@blockscout/stats-types';
 import type { StatsIntervalIds } from 'types/client/stats';
@@ -29,11 +30,12 @@ const StatsFilters = ({
   isLoading,
   initialFilterValue,
 }: Props) => {
+  const { t } = useTranslation();
 
   const collection = React.useMemo(() => {
     return createListCollection({
       items: [
-        { value: 'all', label: 'All stats' },
+        { value: 'all', label: t('stats.common.all_stats') },
         ...(sections || []).map((section) => ({ value: section.id, label: section.title })),
       ],
     });
@@ -47,9 +49,8 @@ const StatsFilters = ({
     <Grid
       gap={{ base: 2, lg: 6 }}
       templateAreas={{
-        base: `"section interval"
-                "input input"`,
-        lg: `"section interval input"`,
+        base: t('stats.common.section_interval_input_input'),
+        lg: t('stats.common.section_interval_input'),
       }}
       gridTemplateColumns={{ base: 'repeat(2, minmax(0, 1fr))', lg: 'auto auto 1fr' }}
       alignItems="center"
@@ -60,7 +61,7 @@ const StatsFilters = ({
       >
         <Select
           collection={ collection }
-          placeholder="Select section"
+          placeholder={t('stats.common.select_section')}
           defaultValue={ [ currentSection ] }
           onValueChange={ handleItemSelect }
           w={{ base: '100%', lg: '136px' }}
@@ -83,7 +84,7 @@ const StatsFilters = ({
           key={ initialFilterValue }
           loading={ isLoading }
           onChange={ onFilterInputChange }
-          placeholder="Find chart, metric..."
+          placeholder={t('stats.common.find_chart_metric')}
           initialValue={ initialFilterValue }
           size="sm"
         />

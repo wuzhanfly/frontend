@@ -64,6 +64,7 @@
   "marketplace.common.failed_to_revoke_approval": "Failed to revoke approval.",
   "marketplace.common.approval_revoked_successfully": "Approval revoked successfully.",
   "marketplace.common.something_went_wrong_try_again": "Something went wrong. Try again later.",
+  "marketplace.common.tfin_pctp": "This feature is not available due to a reCAPTCHA initialization error. Please contact the project team on Discord to report this issue.",
   "marketplace.common.transfer": "Transfer",
   "marketplace.common.swap_button": "Swap button",
   "marketplace.common._array": ", Array",

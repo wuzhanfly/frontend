@@ -1,6 +1,7 @@
 import { inRange } from 'es-toolkit';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 import type { Log } from 'types/api/log';
@@ -22,6 +23,7 @@ import UserOpRaw from 'ui/userOp/UserOpRaw';
 import UserOpSubHeading from 'ui/userOp/UserOpSubHeading';
 
 const UserOp = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const hash = getQueryParamString(router.query.hash);
 
@@ -68,14 +70,14 @@ const UserOp = () => {
   }, [ userOpQuery.data ]);
 
   const tabs: Array<TabItemRegular> = React.useMemo(() => ([
-    { id: 'index', title: 'Details', component: <UserOpDetails query={ userOpQuery }/> },
+    { id: 'index', title: t('transactions.common.details'), component: <UserOpDetails query={ userOpQuery }/> },
     {
       id: 'token_transfers',
-      title: 'Token transfers',
+      title: t('transactions.common.token_transfers'),
       component: <TxTokenTransfer txQuery={ txQuery } tokenTransferFilter={ filterTokenTransfersByLogIndex }/>,
     },
-    { id: 'logs', title: 'Logs', component: <TxLogs txQuery={ txQuery } logsFilter={ filterLogsByLogIndex }/> },
-    { id: 'raw', title: 'Raw', component: <UserOpRaw rawData={ userOpQuery.data?.raw } isLoading={ userOpQuery.isPlaceholderData }/> },
+    { id: 'logs', title: t('transactions.common.logs'), component: <TxLogs txQuery={ txQuery } logsFilter={ filterLogsByLogIndex }/> },
+    { id: 'raw', title: t('shared.common.raw'), component: <UserOpRaw rawData={ userOpQuery.data?.raw } isLoading={ userOpQuery.isPlaceholderData }/> },
   ]), [ userOpQuery, txQuery, filterTokenTransfersByLogIndex, filterLogsByLogIndex ]);
 
   throwOnAbsentParamError(hash);
@@ -87,7 +89,7 @@ const UserOp = () => {
     <>
       <TextAd mb={ 6 }/>
       <PageTitle
-        title="User operation details"
+        title={t('common.common.user_operation_details')}
         secondRow={ titleSecondRow }
       />
       <RoutedTabs tabs={ tabs } isLoading={ userOpQuery.isPlaceholderData }/>

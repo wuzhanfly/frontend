@@ -1,27 +1,29 @@
 import React, { useCallback, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Screen } from 'ui/snippets/auth/types';
 
 import { useRewardsContext } from 'lib/contexts/rewards';
 import useWallet from 'lib/web3/useWallet';
-import { DialogBody, DialogContent, DialogRoot, DialogHeader } from 'toolkit/chakra/dialog';
+import { DialogBody, DialogContent, DialogHeader, DialogRoot, DialogTrigger } from 'toolkit/chakra/dialog';
 import { useDisclosure } from 'toolkit/hooks/useDisclosure';
 import AuthModal from 'ui/snippets/auth/AuthModal';
 
 import CongratsStepContent from './steps/CongratsStepContent';
 import LoginStepContent from './steps/LoginStepContent';
 
-const MIXPANEL_CONFIG = {
-  account_link_info: {
-    source: 'Merits' as const,
-  },
-  wallet_connect: {
-    source: 'Merits' as const,
-  },
-};
-
 const RewardsLoginModal = () => {
-  const { isOpen: isWalletModalOpen } = useWallet({ source: 'Merits' });
+  const { t } = useTranslation();
+  const MIXPANEL_CONFIG = {
+    account_link_info: {
+      source: t('staking.common.merits') as 'Merits',
+    },
+    wallet_connect: {
+      source: t('staking.common.merits') as 'Merits',
+    },
+  };
+
+  const { isOpen: isWalletModalOpen } = useWallet({ source: t('staking.common.merits') as 'Merits' });
   const { isLoginModalOpen, closeLoginModal, openLoginModal } = useRewardsContext();
 
   const [ isLoginStep, setIsLoginStep ] = React.useState(true);
@@ -74,7 +76,7 @@ const RewardsLoginModal = () => {
       >
         <DialogContent>
           <DialogHeader>
-            { isLoginStep ? 'Login' : 'Congratulations' }
+            { isLoginStep ? t('staking.common.login') : t('staking.common.congratulations') }
           </DialogHeader>
           <DialogBody>
             { isLoginStep ?

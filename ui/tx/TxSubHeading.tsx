@@ -1,5 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressParam } from 'types/api/addressParams';
 
@@ -27,6 +28,7 @@ type Props = {
 };
 
 const TxSubHeading = ({ hash, hasTag, txQuery }: Props) => {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
   const feature = multichainContext?.chain?.config.features.txInterpretation || config.features.txInterpretation;
 
@@ -68,6 +70,7 @@ const TxSubHeading = ({ hash, hasTag, txQuery }: Props) => {
     });
 
   const content = (() => {
+  const { t } = useTranslation();
     if (hasNovesInterpretation && novesInterpretationQuery.data) {
       const novesSummary = createNovesSummaryObject(novesInterpretationQuery.data);
       return (
@@ -144,7 +147,7 @@ const TxSubHeading = ({ hash, hasTag, txQuery }: Props) => {
       >
         { !hasTag && <AccountActionsMenu isLoading={ isLoading }/> }
         { appActionData && (
-          <AppActionButton data={ appActionData } txHash={ hash } source="Txn"/>
+          <AppActionButton data={ appActionData } txHash={ hash } source={t('transactions.common.txn')}/>
         ) }
         <NetworkExplorers type="tx" pathParam={ hash } ml="auto"/>
       </Flex>

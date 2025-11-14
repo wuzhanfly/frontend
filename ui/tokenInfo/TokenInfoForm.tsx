@@ -1,5 +1,6 @@
 import { Grid, GridItem, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type { SubmitHandler } from 'react-hook-form';
 import { FormProvider, useForm } from 'react-hook-form';
 
@@ -38,6 +39,7 @@ interface Props {
 }
 
 const TokenInfoForm = ({ address, tokenName, application, onSubmit }: Props) => {
+  const { t } = useTranslation();
 
   const containerRef = React.useRef<HTMLFormElement>(null);
   const openEventSent = React.useRef<boolean>(false);
@@ -87,7 +89,7 @@ const TokenInfoForm = ({ address, tokenName, application, onSubmit }: Props) => 
     } catch (error) {
       toaster.error({
         title: 'Error',
-        description: (error as ResourceError<{ message: string }>)?.payload?.message || 'Something went wrong. Try again later.',
+        description: (error as ResourceError<{ message: string }>)?.payload?.message || t('marketplace.common.something_went_wrong_try_again'),
       });
     }
   }, [ apiFetch, application?.id, application?.status, onSubmit ]);
@@ -124,17 +126,17 @@ const TokenInfoForm = ({ address, tokenName, application, onSubmit }: Props) => 
         <TokenInfoFormStatusText application={ application }/>
         <Grid mt={ 8 } gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }} columnGap={ 5 } rowGap={ 5 }>
 
-          <FormFieldText<Fields> name="token_name" required placeholder="Token name" { ...fieldProps } readOnly/>
-          <FormFieldAddress<Fields> name="address" required placeholder="Token contract address" { ...fieldProps } readOnly/>
-          <FormFieldText<Fields> name="requester_name" required placeholder="Requester name" { ...fieldProps }/>
-          <FormFieldEmail<Fields> name="requester_email" required placeholder="Requester email" { ...fieldProps }/>
+          <FormFieldText<Fields> name="token_name" required placeholder={t('common.common.token_name')} { ...fieldProps } readOnly/>
+          <FormFieldAddress<Fields> name="address" required placeholder={t('common.common.token_contract_address')} { ...fieldProps } readOnly/>
+          <FormFieldText<Fields> name="requester_name" required placeholder={t('common.common.requester_name')} { ...fieldProps }/>
+          <FormFieldEmail<Fields> name="requester_email" required placeholder={t('common.common.requester_email')} { ...fieldProps }/>
 
           <TokenInfoFormSectionHeader>Project info</TokenInfoFormSectionHeader>
-          <FormFieldText<Fields> name="project_name" placeholder="Project name" { ...fieldProps } rules={ nonWhitespaceFieldRules }/>
+          <FormFieldText<Fields> name="project_name" placeholder={t('common.common.project_name')} { ...fieldProps } rules={ nonWhitespaceFieldRules }/>
           <TokenInfoFieldProjectSector { ...fieldProps } config={ configQuery.data.projectSectors }/>
-          <FormFieldEmail<Fields> name="project_email" required placeholder="Official project email address" { ...fieldProps }/>
-          <FormFieldUrl<Fields> name="project_website" required placeholder="Official project website" { ...fieldProps }/>
-          <FormFieldUrl<Fields> name="docs" placeholder="Docs" { ...fieldProps }/>
+          <FormFieldEmail<Fields> name="project_email" required placeholder={t('common.common.official_project_email_address')} { ...fieldProps }/>
+          <FormFieldUrl<Fields> name="project_website" required placeholder={t('common.common.official_project_website')} { ...fieldProps }/>
+          <FormFieldUrl<Fields> name="docs" placeholder={t('common.common.docs')} { ...fieldProps }/>
           <TokenInfoFieldSupport { ...fieldProps }/>
           <GridItem colSpan={{ base: 1, lg: 2 }}>
             <TokenInfoFieldIconUrl { ...fieldProps }/>
@@ -143,7 +145,7 @@ const TokenInfoForm = ({ address, tokenName, application, onSubmit }: Props) => 
             <FormFieldText<Fields>
               name="project_description"
               required
-              placeholder="Project description"
+              placeholder={t('common.common.project_description')}
               maxH="160px"
               rules={{ maxLength: 300, ...nonWhitespaceFieldRules }}
               asComponent="Textarea"
@@ -177,7 +179,7 @@ const TokenInfoForm = ({ address, tokenName, application, onSubmit }: Props) => 
           <GridItem colSpan={{ base: 1, lg: 2 }}>
             <FormFieldText<Fields>
               name="comment"
-              placeholder="Comment"
+              placeholder={t('common.common.comment')}
               maxH="160px"
               rules={{ maxLength: 300 }}
               asComponent="Textarea"
@@ -189,7 +191,7 @@ const TokenInfoForm = ({ address, tokenName, application, onSubmit }: Props) => 
           type="submit"
           mt={ 8 }
           loading={ formState.isSubmitting }
-          loadingText="Send request"
+          loadingText={t('common.common.send_request')}
           disabled={ application?.status === 'IN_PROCESS' }
         >
           Send request

@@ -34,8 +34,14 @@ export default function useMarketplace() {
   const [ isAppInfoModalOpen, setIsAppInfoModalOpen ] = React.useState<boolean>(false);
   const [ isDisclaimerModalOpen, setIsDisclaimerModalOpen ] = React.useState<boolean>(false);
 
-  const handleFavoriteClick = React.useCallback((id: string, isFavorite: boolean, source: 'Discovery view' | 'App modal' | 'Banner') => {
-    mixpanel.logEvent(mixpanel.EventTypes.PAGE_WIDGET, { Type: 'Favorite app', Info: id, Source: source });
+  const handleFavoriteClick = React.useCallback((id: string, isFavorite: boolean, source: 'discovery_view' | 'app_modal' | 'banner') => {
+    const sourceMap: Record<string, string> = {
+      'discovery_view': 'Discovery view',
+      'app_modal': 'App modal', 
+      'banner': 'Banner'
+    };
+    
+    mixpanel.logEvent(mixpanel.EventTypes.PAGE_WIDGET, { Type: 'Favorite app', Info: id, Source: sourceMap[source] as 'Discovery view' | 'App modal' | 'App page' | 'Banner' });
 
     const favoriteApps = getFavoriteApps();
 

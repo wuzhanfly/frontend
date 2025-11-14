@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenInfoApplication, VerifiedAddress } from 'types/api/account';
 
@@ -15,11 +16,12 @@ interface Props {
 }
 
 const VerifiedAddressesTable = ({ data, applications, onItemEdit, onItemAdd, isLoading }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRoot>
       <TableHeader>
         <TableRow>
-          <TableColumnHeader>Address</TableColumnHeader>
+          <TableColumnHeader>{t('addresses.common.address')}</TableColumnHeader>
           <TableColumnHeader w="168px" pr={ 1 }>Token info</TableColumnHeader>
           <TableColumnHeader w="36px" pl="0"></TableColumnHeader>
           <TableColumnHeader w="160px">Request status</TableColumnHeader>

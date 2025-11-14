@@ -1,5 +1,6 @@
 import { Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ArbitrumTransactionMessageStatus, Transaction } from 'types/api/transaction';
 
@@ -10,19 +11,22 @@ import * as DetailedInfo from 'ui/shared/DetailedInfo/DetailedInfo';
 import TxEntityL1 from 'ui/shared/entities/tx/TxEntityL1';
 import VerificationSteps from 'ui/shared/verificationSteps/VerificationSteps';
 
-const WITHDRAWAL_STATUS_STEPS: Array<ArbitrumTransactionMessageStatus> = [
-  'Syncing with base layer',
-  'Settlement pending',
-  'Waiting for confirmation',
-  'Ready for relay',
-  'Relayed',
-];
+
 
 interface Props {
   data: Transaction;
 }
 
 const TxDetailsWithdrawalStatusArbitrum = ({ data }: Props) => {
+  const { t } = useTranslation();
+  
+  const WITHDRAWAL_STATUS_STEPS: Array<ArbitrumTransactionMessageStatus> = [
+    'Syncing with base layer',
+    'Settlement pending',
+    'Waiting for confirmation',
+    'Ready for relay',
+    'Relayed',
+  ];
 
   const steps = React.useMemo(() => {
     if (!data.arbitrum?.message_related_info) {
@@ -55,7 +59,7 @@ const TxDetailsWithdrawalStatusArbitrum = ({ data }: Props) => {
       default:
         return WITHDRAWAL_STATUS_STEPS;
     }
-  }, [ data.arbitrum?.message_related_info, data.hash ]);
+  }, [ data.arbitrum?.message_related_info, data.hash, t ]);
 
   if (!data.arbitrum || !data.arbitrum?.contains_message || !data.arbitrum?.message_related_info) {
     return null;
@@ -65,7 +69,7 @@ const TxDetailsWithdrawalStatusArbitrum = ({ data }: Props) => {
     return (
       <>
         <DetailedInfo.ItemLabel
-          hint="Detailed status progress of the transaction"
+          hint={t('transactions.common.detailed_status_progress_of_th')}
         >
           Withdrawal status
         </DetailedInfo.ItemLabel>

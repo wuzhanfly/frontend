@@ -2,6 +2,7 @@ import { chakra } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { getResourceKey } from 'lib/api/useApiQuery';
@@ -59,21 +60,25 @@ const AddressFavoriteButton = ({ className, hash, watchListId }: Props) => {
   return (
     <>
       <AuthGuard onAuthSuccess={ handleAddToFavorite }>
-        { ({ onClick }) => (
-          <Tooltip content={ `${ watchListId ? 'Remove address from Watch list' : 'Add address to Watch list' }` } disableOnMobile>
-            <IconButton
-              className={ className }
-              aria-label="edit"
-              variant="icon_background"
-              size="md"
-              selected={ Boolean(watchListId) }
-              onClick={ onClick }
-              onFocusCapture={ onFocusCapture }
-            >
-              <IconSvg name={ watchListId ? 'star_filled' : 'star_outline' }/>
-            </IconButton>
-          </Tooltip>
-        ) }
+        { ({ onClick }) => {
+          const { t } = useTranslation();
+          const tooltipContent = watchListId ? t('account.common.remove_address_from_watch_list') : t('account.common.add_address');
+          return (
+            <Tooltip content={tooltipContent} disableOnMobile>
+              <IconButton
+                className={ className }
+                aria-label="edit"
+                variant="icon_background"
+                size="md"
+                selected={ Boolean(watchListId) }
+                onClick={ onClick }
+                onFocusCapture={ onFocusCapture }
+              >
+                <IconSvg name={ watchListId ? 'star_filled' : 'star_outline' }/>
+              </IconButton>
+            </Tooltip>
+          );
+        } }
       </AuthGuard>
       <WatchlistAddModal
         { ...addModalProps }

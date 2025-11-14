@@ -1,6 +1,7 @@
 import { Spinner, Center } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SocketMessage } from 'lib/socket/types';
 import type { TokenInstance } from 'types/api/token';
@@ -28,6 +29,7 @@ interface Props {
 }
 
 const TokenInstanceMetadataFetcher = ({ hash, id }: Props) => {
+  const { t } = useTranslation();
   const timeoutId = React.useRef<number | undefined>(undefined);
 
   const { status, setStatus } = useMetadataUpdateContext() || {};
@@ -39,7 +41,7 @@ const TokenInstanceMetadataFetcher = ({ hash, id }: Props) => {
     setStatus?.('ERROR');
     toaster.update(TOAST_ID, {
       title: 'Error',
-      description: 'The refreshing process has failed. Please try again.',
+      description: t('common.common.the_refreshing_process_has_fai'),
       type: 'error',
       duration: 5 * SECOND,
     });
@@ -64,8 +66,8 @@ const TokenInstanceMetadataFetcher = ({ hash, id }: Props) => {
       setStatus?.('WAITING_FOR_RESPONSE');
       toaster.loading({
         id: TOAST_ID,
-        title: 'Please wait',
-        description: 'Refetching metadata request sent',
+        title: t('common.common.please_wait'),
+        description: t('common.common.refetching_metadata_request_se'),
         duration: Infinity,
       });
       timeoutId.current = window.setTimeout(handleRefreshError, 2 * MINUTE);
@@ -73,7 +75,7 @@ const TokenInstanceMetadataFetcher = ({ hash, id }: Props) => {
       toaster.error({
         id: TOAST_ID,
         title: 'Error',
-        description: getErrorMessage(error) || 'Unable to initialize metadata update',
+        description: getErrorMessage(error) || t('common.common.unable_to_initialize_metadata_'),
       });
       setStatus?.('ERROR');
     }
@@ -113,8 +115,8 @@ const TokenInstanceMetadataFetcher = ({ hash, id }: Props) => {
     });
 
     toaster.update(TOAST_ID, {
-      title: 'Success!',
-      description: 'Metadata has been refreshed',
+      title: t('common.common.success'),
+      description: t('common.common.metadata_has_been_refreshed'),
       type: 'success',
       duration: 5 * SECOND,
     });

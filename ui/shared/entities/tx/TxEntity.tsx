@@ -8,6 +8,7 @@ import { useMultichainContext } from 'lib/contexts/multichain';
 import getChainTooltipText from 'lib/multichain/getChainTooltipText';
 import getIconUrl from 'lib/multichain/getIconUrl';
 import * as EntityBase from 'ui/shared/entities/base/components';
+import { useTranslation } from 'react-i18next';
 
 import { distributeEntityProps } from '../base/utils';
 
@@ -32,6 +33,8 @@ const Link = chakra((props: LinkProps) => {
 type IconProps = EntityBase.IconBaseProps & Pick<EntityProps, 'isPendingUpdate'>;
 
 const Icon = (props: IconProps) => {
+  const { t } = useTranslation();
+
   const isPendingUpdate = props.isPendingUpdate && config.UI.views.block.pendingUpdateAlertEnabled;
 
   const name = (() => {
@@ -48,7 +51,7 @@ const Icon = (props: IconProps) => {
     }
 
     if (props.chain) {
-      return getChainTooltipText(props.chain, 'Transaction on ');
+      return getChainTooltipText(props.chain, t('transactions.common.transaction_on'));
     }
 
     return isPendingUpdate ?

@@ -8,6 +8,7 @@ import * as TokenEntity from 'ui/shared/entities/token/TokenEntity';
 import EntityTags from 'ui/shared/EntityTags/EntityTags';
 import formatUserTags from 'ui/shared/EntityTags/formatUserTags';
 import IconSvg from 'ui/shared/IconSvg';
+import { useTranslation } from 'react-i18next';
 
 import PageTitle from '../PageTitle';
 
@@ -26,19 +27,21 @@ const LongNameAndManyTags = () => {
     reputation: 'ok',
   };
 
+  const { t } = useTranslation();
+
   const contentAfter = (
     <>
       <IconSvg name="certified" color="green.500" boxSize={ 6 } cursor="pointer" flexShrink={ 0 }/>
       <EntityTags
         tags={ [
-          { slug: 'example', name: 'Example with long name', tagType: 'custom', ordinal: 0 },
+          { slug: 'example', name: t('shared.common.example_with_long_name'), tagType: 'custom', ordinal: 0 },
           ...formatUserTags({
             private_tags: [ privateTag ],
             public_tags: [ publicTag ],
             watchlist_names: [ watchlistName ],
           }),
-          { slug: 'after_1', name: 'Another tag', tagType: 'custom', ordinal: 0 },
-          { slug: 'after_2', name: 'And yet more', tagType: 'custom', ordinal: 0 },
+          { slug: 'after_1', name: t('shared.common.another_tag'), tagType: 'custom', ordinal: 0 },
+          { slug: 'after_2', name: t('shared.common.and_yet_more'), tagType: 'custom', ordinal: 0 },
         ] }
         flexGrow={ 1 }
       />

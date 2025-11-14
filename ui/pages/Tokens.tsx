@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 import type { TokenType } from 'types/api/token';
@@ -23,7 +24,7 @@ import getSortValueFromQuery from 'ui/shared/sort/getSortValueFromQuery';
 import TokensList from 'ui/tokens/Tokens';
 import TokensActionBar from 'ui/tokens/TokensActionBar';
 import TokensBridgedChainsFilter from 'ui/tokens/TokensBridgedChainsFilter';
-import { SORT_OPTIONS, getTokenFilterValue, getBridgedChainsFilterValue } from 'ui/tokens/utils';
+import { getSortOptions, getTokenFilterValue, getBridgedChainsFilterValue } from 'ui/tokens/utils';
 
 const TAB_LIST_PROPS = {
   marginBottom: 0,
@@ -42,6 +43,7 @@ const TABS_RIGHT_SLOT_PROPS: SlotProps = {
 const bridgedTokensFeature = config.features.bridgedTokens;
 
 const Tokens = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMobile = useIsMobile();
 
@@ -49,7 +51,7 @@ const Tokens = () => {
   const q = getQueryParamString(router.query.q);
 
   const [ searchTerm, setSearchTerm ] = React.useState<string>(q ?? '');
-  const [ sort, setSort ] = React.useState<TokensSortingValue>(getSortValueFromQuery<TokensSortingValue>(router.query, SORT_OPTIONS) ?? 'default');
+  const [ sort, setSort ] = React.useState<TokensSortingValue>(getSortValueFromQuery<TokensSortingValue>(router.query, getSortOptions(t)) ?? 'default');
   const [ tokenTypes, setTokenTypes ] = React.useState<Array<TokenType> | undefined>(getTokenFilterValue(router.query.type));
   const [ bridgeChains, setBridgeChains ] = React.useState<Array<string> | undefined>(getBridgedChainsFilterValue(router.query.chain_ids));
 
@@ -148,7 +150,7 @@ const Tokens = () => {
   const tabs: Array<TabItemRegular> = [
     {
       id: 'all',
-      title: 'All',
+      title: t('validators.common.all'),
       component: (
         <TokensList
           query={ tokensQuery }
@@ -162,7 +164,7 @@ const Tokens = () => {
     },
     bridgedTokensFeature.isEnabled ? {
       id: 'bridged',
-      title: 'Bridged',
+      title: t('tokens.common.bridged'),
       component: (
         <TokensList
           query={ tokensQuery }
@@ -180,7 +182,7 @@ const Tokens = () => {
   return (
     <>
       <PageTitle
-        title={ config.meta.seo.enhancedDataEnabled ? `Tokens on ${ config.chain.name }` : 'Tokens' }
+        title={ config.meta.seo.enhancedDataEnabled ? `Tokens on ${ config.chain.name }` : t('tokens.common.tokens') }
         withTextAd
       />
       { !hasMultipleTabs && !isMobile && actionBar }

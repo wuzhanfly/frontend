@@ -1,6 +1,7 @@
 import { Flex, Grid } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Transaction } from 'types/api/transaction';
 import type { ExcludeUndefined } from 'types/utils';
@@ -22,6 +23,7 @@ interface Props {
 }
 
 const TxDetailsWrapped = ({ data }: Props) => {
+  const { t } = useTranslation();
   return (
     <Grid columnGap={ 8 } rowGap={{ base: 3, lg: 3 }} templateColumns={{ base: 'minmax(0, 1fr)', lg: 'auto minmax(0, 1fr)' }}>
       <DetailedInfo.ItemLabel
@@ -34,7 +36,7 @@ const TxDetailsWrapped = ({ data }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Transaction method name"
+        hint={t('transactions.common.transaction_method_name')}
       >
         Method
       </DetailedInfo.ItemLabel>
@@ -51,7 +53,7 @@ const TxDetailsWrapped = ({ data }: Props) => {
           <DetailedInfo.ItemLabel
             hint="Address (external or contract) receiving the transaction"
           >
-            { data.to.is_contract ? 'Interacted with contract' : 'To' }
+            { data.to.is_contract ? t('transactions.common.interacted_with_contract') : 'To' }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Flex flexWrap="nowrap" alignItems="center" maxW="100%">
@@ -79,7 +81,7 @@ const TxDetailsWrapped = ({ data }: Props) => {
       { data.fee.value !== null && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Total transaction fee"
+            hint={t('transactions.common.total_transaction_fee')}
           >
             Transaction fee
           </DetailedInfo.ItemLabel>
@@ -94,7 +96,7 @@ const TxDetailsWrapped = ({ data }: Props) => {
       { data.gas_limit && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Maximum amount of gas that can be used by the transaction"
+            hint={t('transactions.common.maximum_amount_of_gas_that_can')}
           >
             Gas limit
           </DetailedInfo.ItemLabel>
@@ -120,7 +122,7 @@ const TxDetailsWrapped = ({ data }: Props) => {
       { data.decoded_input && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Decoded input data"
+            hint={t('transactions.common.decoded_input_data')}
           >
             Decoded input data
           </DetailedInfo.ItemLabel>

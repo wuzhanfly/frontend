@@ -1,5 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { IconButton } from 'toolkit/chakra/icon-button';
 import IconSvg from 'ui/shared/IconSvg';
@@ -10,6 +11,7 @@ interface Props {
 }
 
 const AdditionalInfoButton = (props: Props, ref: React.ForwardedRef<HTMLButtonElement>) => {
+  const { t } = useTranslation();
   const { loading, ...rest } = props;
 
   return (
@@ -21,7 +23,7 @@ const AdditionalInfoButton = (props: Props, ref: React.ForwardedRef<HTMLButtonEl
         color: 'selected.control.text',
       }}
       borderRadius="base"
-      aria-label="Transaction info"
+      aria-label={t('shared.common.transaction_info')}
       boxSize={ 6 }
       loadingSkeleton={ loading }
       { ...rest }

@@ -1,5 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as visualizer from '@blockscout/visualizer-types';
 import type { SmartContract } from 'types/api/contract';
@@ -31,6 +32,7 @@ function composeSources(contract: SmartContract | undefined): visualizer.Visuali
 }
 
 const Sol2UmlDiagram = ({ addressHash }: Props) => {
+  const { t } = useTranslation();
   const contractQuery = useApiQuery<'general:contract', ResourceError>('general:contract', {
     pathParams: { hash: addressHash },
     queryOptions: {
@@ -76,7 +78,7 @@ const Sol2UmlDiagram = ({ addressHash }: Props) => {
   }
 
   return (
-    <Tooltip content="Click on image to zoom" positioning={{ placement: 'top' }}>
+    <Tooltip content={t('visualize.common.click_on_image_to_zoom')} positioning={{ placement: 'top' }}>
       <chakra.img
         src={ imgUrl }
         alt={ `Contract ${ contractQuery.data.name } UML diagram` }

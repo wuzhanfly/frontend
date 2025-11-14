@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenInfo, TokenInstance } from 'types/api/token';
 
@@ -28,6 +29,7 @@ interface Props {
 }
 
 const TokenInstanceDetails = ({ data, token, scrollRef, isLoading }: Props) => {
+  const { t } = useTranslation();
   const appActionData = useAppActionData(token?.address_hash, !isLoading);
   const isMounted = useIsMounted();
 
@@ -52,7 +54,7 @@ const TokenInstanceDetails = ({ data, token, scrollRef, isLoading }: Props) => {
           { data.is_unique && data.owner && (
             <>
               <DetailedInfo.ItemLabel
-                hint="Current owner of this token instance"
+                hint={t('common.common.current_owner_of_this_token_in')}
                 isLoading={ isLoading }
               >
                 Owner
@@ -69,7 +71,7 @@ const TokenInstanceDetails = ({ data, token, scrollRef, isLoading }: Props) => {
           <TokenInstanceCreatorAddress hash={ isLoading ? '' : token.address_hash }/>
 
           <DetailedInfo.ItemLabel
-            hint="This token instance unique token ID"
+            hint={t('common.common.this_token_instance_unique_tok')}
             isLoading={ isLoading }
           >
             Token ID
@@ -90,18 +92,18 @@ const TokenInstanceDetails = ({ data, token, scrollRef, isLoading }: Props) => {
             hash={ token.address_hash }
             id={ data.id }
             appActionData={ appActionData }
-            source="NFT item"
+            source="nft_item"
           />
 
           { (config.UI.views.nft.marketplaces.length === 0 && appActionData) && (
             <>
               <DetailedInfo.ItemLabel
-                hint="Link to the dapp"
+                hint={t('tokens.common.link_to_the_dapp')}
               >
                 Dapp
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue py="1px">
-                <AppActionButton data={ appActionData } height="30px" source="NFT item"/>
+                <AppActionButton data={ appActionData } height="30px" source={t('tokens.common.nft_item')}/>
               </DetailedInfo.ItemValue>
             </>
           ) }

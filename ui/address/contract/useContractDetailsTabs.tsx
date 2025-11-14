@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Address } from 'types/api/address';
 import type { SmartContract } from 'types/api/contract';
@@ -25,6 +26,7 @@ interface Props {
 }
 
 export default function useContractDetailsTabs({ data, isLoading, addressData, sourceAddress }: Props): Array<Tab> {
+  const { t } = useTranslation();
 
   return React.useMemo(() => {
 
@@ -35,7 +37,7 @@ export default function useContractDetailsTabs({ data, isLoading, addressData, s
     return [
       (data?.constructor_args || data?.source_code) ? {
         id: 'contract_source_code' as const,
-        title: 'Code',
+        title: t('staking.common.code'),
         component: (
           <Flex flexDir="column" rowGap={ 6 }>
             <ContractDetailsConstructorArgs data={ data } isLoading={ isLoading }/>
@@ -52,12 +54,12 @@ export default function useContractDetailsTabs({ data, isLoading, addressData, s
 
       data?.compiler_settings ? {
         id: 'contract_compiler' as const,
-        title: 'Compiler',
+        title: t('common.common.compiler'),
         component: (
           <CodeViewSnippet
             data={ JSON.stringify(data.compiler_settings, undefined, 2) }
             language="json"
-            title="Compiler Settings"
+            title={ t('addresses.common.compiler_settings') }
             copyData={ JSON.stringify(data.compiler_settings) }
             isLoading={ isLoading }
           />

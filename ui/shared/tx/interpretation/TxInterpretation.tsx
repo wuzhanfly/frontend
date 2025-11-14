@@ -2,6 +2,7 @@ import type { BoxProps } from '@chakra-ui/react';
 import { Box, chakra } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressParam } from 'types/api/addressParams';
 import type {
@@ -56,6 +57,7 @@ type NonStringTxInterpretationVariable = Exclude<TxInterpretationVariable, TxInt
 const TxInterpretationElementByType = (
   { variable, addressDataMap }: { variable?: NonStringTxInterpretationVariable; addressDataMap?: Record<string, AddressParam> },
 ) => {
+  const { t } = useTranslation();
   const onAddressClick = React.useCallback(() => {
     mixpanel.logEvent(mixpanel.EventTypes.TX_INTERPRETATION_INTERACTION, { Type: 'Address click' });
   }, []);
@@ -142,7 +144,7 @@ const TxInterpretationElementByType = (
     case 'method': {
       return (
         <Badge
-          colorPalette={ value === 'Multicall' ? 'teal' : 'gray' }
+          colorPalette={ value === t('common.common.multicall') ? 'teal' : 'gray' }
           truncated
           ml={ 1 }
           mr={ 2 }
@@ -155,6 +157,7 @@ const TxInterpretationElementByType = (
     case 'dexTag': {
       const icon = value.app_icon || value.icon;
       const name = (() => {
+  const { t } = useTranslation();
         if (value.app_id && config.features.marketplace.isEnabled) {
           return (
             <Link
@@ -188,6 +191,7 @@ const TxInterpretationElementByType = (
 };
 
 const TxInterpretation = ({ summary, isLoading, addressDataMap, className, chainData, isNoves, ...rest }: Props) => {
+  const { t } = useTranslation();
   const novesLogoUrl = useColorModeValue('/static/noves-logo.svg', '/static/noves-logo-dark.svg');
   if (!summary) {
     return null;
@@ -205,7 +209,7 @@ const TxInterpretation = ({ summary, isLoading, addressDataMap, className, chain
   const variablesNames = extractVariables(intermediateResult);
   const chunks = getStringChunks(intermediateResult);
 
-  const tooltipContent = 'Transaction summary' + (chainData ? `\n${ getChainTooltipText(chainData) }` : '');
+  const tooltipContent = t('transactions.common.transaction_summary') + (chainData ? `\n${ getChainTooltipText(chainData) }` : '');
 
   return (
     <Skeleton loading={ isLoading } className={ className } fontWeight={ 500 } whiteSpace="pre-wrap" { ...rest }>
@@ -250,10 +254,10 @@ const TxInterpretation = ({ summary, isLoading, addressDataMap, className, chain
         );
       }) }
       { isNoves && (
-        <Tooltip content="Human readable transaction provided by Noves.fi">
+        <Tooltip content={t('transactions.common.human_readable_transaction_pro')}>
           <Badge ml={ 2 } verticalAlign="unset" transform="translateY(-2px)">
             by
-            <Image src={ novesLogoUrl } alt="Noves logo" h="12px" ml={ 1.5 } display="inline"/>
+            <Image src={ novesLogoUrl } alt={t('transactions.common.noves_logo')} h="12px" ml={ 1.5 } display="inline"/>
           </Badge>
         </Tooltip>
       ) }

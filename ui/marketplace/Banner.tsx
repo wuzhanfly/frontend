@@ -16,7 +16,7 @@ type BannerProps = {
   favoriteApps: Array<string>;
   isLoading: boolean;
   onInfoClick: (id: string) => void;
-  onFavoriteClick: (id: string, isFavorite: boolean, source: 'Banner') => void;
+  onFavoriteClick: (id: string, isFavorite: boolean, source: 'banner') => void;
   onAppClick: (event: MouseEvent, id: string) => void;
 };
 

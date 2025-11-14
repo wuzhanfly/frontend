@@ -12,7 +12,7 @@ it('computes correct chunks if all file name are unique', () => {
   expect(result).toEqual([ 'Ownable.sol', undefined ]);
 });
 
-it('computes correct chunks if files with the same name is not in folders with the same name', () => {
+it('shared.common.computes_correct_chunks_if_fil', () => {
   const result = getFilePathParts(
     '/src/utils/Ownable.sol',
     [

@@ -1,5 +1,6 @@
 import { Box, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CeloEpochDetails } from 'types/api/epochs';
 
@@ -22,6 +23,7 @@ interface Props {
 }
 
 const EpochDetails = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
 
   const totalFunRewards = data.distribution?.transfers_total?.total ? getCurrencyValue({
@@ -30,6 +32,7 @@ const EpochDetails = ({ data, isLoading }: Props) => {
   }) : null;
 
   const processingRange = (() => {
+  const { t } = useTranslation();
     if (!data.start_processing_block_number || !data.end_processing_block_number) {
       return <Box color="text.secondary">N/A</Box>;
     }
@@ -51,7 +54,7 @@ const EpochDetails = ({ data, isLoading }: Props) => {
     <>
       <DetailedInfo.Container>
         <DetailedInfo.ItemLabel
-          hint="Current status of the epoch"
+          hint={t('epochs.common.current_status_of_the_epoch')}
           isLoading={ isLoading }
         >
           Status
@@ -63,7 +66,7 @@ const EpochDetails = ({ data, isLoading }: Props) => {
           />
         </DetailedInfo.ItemValue>
         <DetailedInfo.ItemLabel
-          hint="Timestamp of the block where the epoch processing completed"
+          hint={t('epochs.common.timestamp_of_the_block_where_t')}
           isLoading={ isLoading }
         >
           Timestamp
@@ -84,7 +87,7 @@ const EpochDetails = ({ data, isLoading }: Props) => {
           { processingRange }
         </DetailedInfo.ItemValue>
         <DetailedInfo.ItemLabel
-          hint="Funds allocation to support Celo projects and community initiatives"
+          hint={t('epochs.common.funds_allocation_to_support_ce')}
           isLoading={ isLoading }
         >
           Community fund
@@ -101,7 +104,7 @@ const EpochDetails = ({ data, isLoading }: Props) => {
           ) }
         </DetailedInfo.ItemValue>
         <DetailedInfo.ItemLabel
-          hint="Funds allocation to support projects that make Celo carbon-negative"
+          hint={t('epochs.common.funds_allocation_to_support_pr')}
           isLoading={ isLoading }
         >
           Carbon offset fund
@@ -118,7 +121,7 @@ const EpochDetails = ({ data, isLoading }: Props) => {
           ) }
         </DetailedInfo.ItemValue>
         <DetailedInfo.ItemLabel
-          hint="Sum of all fund allocations"
+          hint={t('epochs.common.sum_of_all_fund_allocations')}
           isLoading={ isLoading }
         >
           Total fund rewards

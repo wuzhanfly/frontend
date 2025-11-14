@@ -32,7 +32,7 @@ test.beforeEach(async({ mockEnvs, mockConfigResponse, mockAssetResponse }) => {
 test('base view', async({ render, page }) => {
   const component = await render(<Burger/>, { hooksConfig });
 
-  await component.getByRole('button', { name: 'Menu button' }).click();
+  await component.getByRole('button', { name: 'common.common.menu_button' }).click();
   await expect(page).toHaveScreenshot();
 });
 
@@ -42,7 +42,7 @@ test.describe('dark mode', () => {
   test('base view', async({ render, page }) => {
     const component = await render(<Burger/>, { hooksConfig });
 
-    await component.getByRole('button', { name: 'Menu button' }).click();
+    await component.getByRole('button', { name: 'common.common.menu_button' }).click();
     await expect(page).toHaveScreenshot();
   });
 });
@@ -50,7 +50,7 @@ test.describe('dark mode', () => {
 test('submenu', async({ render, page }) => {
   const component = await render(<Burger/>, { hooksConfig });
 
-  await component.getByRole('button', { name: 'Menu button' }).click();
+  await component.getByRole('button', { name: 'common.common.menu_button' }).click();
   await page.locator('div[aria-label="Blockchain link group"]').click();
   await expect(page).toHaveScreenshot();
 });
@@ -65,7 +65,7 @@ authTest.describe('auth', () => {
   authTest('base view', async({ render, page }) => {
     const component = await render(<Burger/>, { hooksConfig });
 
-    await component.getByRole('button', { name: 'Menu button' }).click();
+    await component.getByRole('button', { name: 'common.common.menu_button' }).click();
     await expect(page).toHaveScreenshot();
   });
 });
@@ -83,7 +83,7 @@ const promoBannerTest = (type: 'text' | 'image') => {
 
     test(`${ darkModeRule }`, async({ render, page }) => {
       const component = await render(<Burger/>);
-      await component.getByRole('button', { name: 'Menu button' }).click();
+      await component.getByRole('button', { name: 'common.common.menu_button' }).click();
       await expect(page).toHaveScreenshot();
     });
   });

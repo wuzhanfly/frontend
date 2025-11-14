@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenType } from 'types/api/token';
 
@@ -24,6 +25,7 @@ interface Props {
 }
 
 const OpSuperchainTokenTransfersLocal = ({ query, typeFilter, onTokenTypesChange }: Props) => {
+  const { t } = useTranslation();
 
   const isMobile = useIsMobile();
   const multichainContext = useMultichainContext();
@@ -42,7 +44,7 @@ const OpSuperchainTokenTransfersLocal = ({ query, typeFilter, onTokenTypesChange
     <DataListDisplay
       isError={ query.isError }
       itemsNum={ query.data?.items.length }
-      emptyText="There are no token transfers."
+      emptyText={t('transactions.common.there_are_no_token_transfers')}
       actionBar={ actionBar }
     >
       <Box hideFrom="lg">

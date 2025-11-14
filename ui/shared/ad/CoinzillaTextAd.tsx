@@ -1,5 +1,6 @@
 import { Box, Text, chakra } from '@chakra-ui/react';
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Image } from 'toolkit/chakra/image';
 import { Link } from 'toolkit/chakra/link';
@@ -22,13 +23,14 @@ type AdData = {
 //   ad: {
 //     url: 'https://unsplash.com/s/photos/cute-kitten',
 //     thumbnail: 'https://raw.githubusercontent.com/blockscout/frontend-configs/main/configs/network-icons/gnosis.svg',
-//     name: 'All about kitties',
-//     description_short: 'To see millions picture of cute kitties',
+//     name: t('shared.common.all_about_kitties'),
+//     description_short: t('shared.common.to_see_millions_picture_of_cut'),
 //     cta_button: 'click here',
 //   },
 // };
 
 const CoinzillaTextAd = ({ className }: { className?: string }) => {
+  const { t } = useTranslation();
   const [ adData, setAdData ] = React.useState<AdData | null>(null);
   const [ isLoading, setIsLoading ] = React.useState(true);
 

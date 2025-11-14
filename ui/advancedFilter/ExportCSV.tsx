@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AdvancedFilterParams } from 'types/api/advancedFilter';
 
@@ -18,6 +19,7 @@ type Props = {
 };
 
 const ExportCSV = ({ filters }: Props) => {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
   const recaptcha = useReCaptcha();
 
@@ -62,7 +64,7 @@ const ExportCSV = ({ filters }: Props) => {
     } catch (error) {
       toaster.error({
         title: 'Error',
-        description: (error as Error)?.message || 'Something went wrong. Try again later.',
+        description: (error as Error)?.message || t('marketplace.common.something_went_wrong_try_again'),
       });
     } finally {
       setIsLoading(false);
@@ -78,7 +80,7 @@ const ExportCSV = ({ filters }: Props) => {
   return (
     <>
       <Tooltip
-        content="This feature is not available due to a reCAPTCHA initialization error. Please contact the project team on Discord to report this issue."
+        content={ t('marketplace.common.tfin_pctp') }
         disabled={ !recaptcha.isInitError }
       >
         <Button

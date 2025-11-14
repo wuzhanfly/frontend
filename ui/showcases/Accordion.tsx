@@ -1,19 +1,22 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { AccordionItemContent, AccordionItemTrigger, AccordionItem, AccordionRoot } from 'toolkit/chakra/accordion';
 
 import { Section, Container, SectionHeader, SamplesStack, Sample } from './parts';
 
-const items = [
-  { value: 'first-item', title: 'First Item', text: 'Some value 1...' },
-  { value: 'second-item', title: 'Second Item', text: 'Some value 2...' },
-  { value: 'third-item', title: 'Third Item', text: 'Some value 3...' },
+const getItems = (t: (key: string) => string) => [
+  { value: 'first-item', title: t('common.common.first_item'), text: t('common.common.some_value_1') },
+  { value: 'second-item', title: t('common.common.second_item'), text: t('common.common.some_value_2') },
+  { value: 'third-item', title: t('common.common.third_item'), text: t('common.common.some_value_3') },
 ];
 
 // https://eth-sepolia.k8s-dev.blockscout.com/address/0x00000000000000ADc04C56Bf30aC9d3c0aAF14dC?tab=read_write_contract
 // https://base.blockscout.com/token/0x8f9C456C928a33a3859Fa283fb57B23c908fE843/instance/1924977?tab=metadata
 
 const AccordionShowcase = () => {
+  const { t } = useTranslation();
+  const items = getItems(t);
   return (
     <Container value="accordion">
       <Section>

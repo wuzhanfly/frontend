@@ -1,5 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { L2_DISPUTE_GAMES_ITEM } from 'stubs/L2';
@@ -14,6 +15,7 @@ import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 import StickyPaginationWithText from 'ui/shared/StickyPaginationWithText';
 
 const OptimisticL2DisputeGames = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:optimistic_l2_dispute_games',
     options: {
@@ -54,6 +56,7 @@ const OptimisticL2DisputeGames = () => {
   ) : null;
 
   const text = (() => {
+  const { t } = useTranslation();
     if (countersQuery.isError || isError || !data?.items.length) {
       return null;
     }
@@ -72,11 +75,11 @@ const OptimisticL2DisputeGames = () => {
 
   return (
     <>
-      <PageTitle title="Dispute games" withTextAd/>
+      <PageTitle title={t('common.common.dispute_games')} withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no dispute games."
+        emptyText={t('common.common.there_are_no_dispute_games')}
         actionBar={ actionBar }
       >
         { content }

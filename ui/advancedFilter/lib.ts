@@ -34,34 +34,37 @@ function getFilterValueWithNames(values?: Array<string>, names?: Array<string>) 
   }
 }
 
-const filterParamNames: Record<keyof AdvancedFilterParams, string> = {
-  // we don't show address_relation as filter tag
-  address_relation: '',
-  age: 'Age',
-  age_from: 'Date from',
-  age_to: 'Date to',
-  amount_from: 'Amount from',
-  amount_to: 'Amount to',
-  from_address_hashes_to_exclude: 'From Exc',
-  from_address_hashes_to_include: 'From',
-  methods: 'Methods',
-  methods_names: '',
-  to_address_hashes_to_exclude: 'To Exc',
-  to_address_hashes_to_include: 'To',
-  token_contract_address_hashes_to_exclude: 'Asset Exc',
-  token_contract_symbols_to_exclude: '',
-  token_contract_address_hashes_to_include: 'Asset',
-  token_contract_symbols_to_include: '',
-  transaction_types: 'Type',
-};
+function getFilterParamNames(t: (key: string) => string): Record<keyof AdvancedFilterParams, string> {
+  return {
+    // we don't show address_relation as filter tag
+    address_relation: '',
+    age: t('staking.common.age'),
+    age_from: t('common.common.date_from'),
+    age_to: t('common.common.date_to'),
+    amount_from: 'Amount from',
+    amount_to: 'Amount to',
+    from_address_hashes_to_exclude: 'From Exc',
+    from_address_hashes_to_include: t('staking.common.from'),
+    methods: 'Methods',
+    methods_names: '',
+    to_address_hashes_to_exclude: 'To Exc',
+    to_address_hashes_to_include: 'To',
+    token_contract_address_hashes_to_exclude: 'Asset Exc',
+    token_contract_symbols_to_exclude: '',
+    token_contract_address_hashes_to_include: t('common.common.asset'),
+    token_contract_symbols_to_include: '',
+    transaction_types: 'Type',
+  };
+}
 
-export function getFilterTags(filters: AdvancedFilterParams) {
+export function getFilterTags(filters: AdvancedFilterParams, t: (key: string) => string) {
   const filtersToShow = { ...filters };
   if (filtersToShow.age) {
     filtersToShow.age_from = undefined;
     filtersToShow.age_to = undefined;
   }
 
+  const filterParamNames = getFilterParamNames(t);
   return (Object.entries(filtersToShow) as Array<[keyof AdvancedFilterParams, AdvancedFilterParams[keyof AdvancedFilterParams]]>).map(([ key, value ]) => {
     if (!value) {
       return;

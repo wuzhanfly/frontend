@@ -1,0 +1,13 @@
+{
+  "gas_tracker.common.last_updated": "最后更新",
+  "gas_tracker.common.no_recent_data_available": "暂无最新数据",
+  "gas_tracker.common.gas_price_history": "Gas价格历史",
+  "gas_tracker.common.charts_and_stats": "图表与统计",
+  "gas_tracker.common.faq": "常见问题",
+  "gas_tracker.common.normal": "正常",
+  "gas_tracker.common.per_transaction": "每笔交易",
+  "gas_tracker.common.base": "基础",
+  "gas_tracker.common.priority": "优先",
+  "gas_tracker.common.network_utilization": "网络利用率",
+  "gas_tracker.common.load": "负载"
+}

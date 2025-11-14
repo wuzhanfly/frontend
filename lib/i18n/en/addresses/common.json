@@ -11,6 +11,8 @@
   "addresses.common.0xstyle_address_to_which_the_f": "0x-style address to which the Filecoin address is assigned by the Ethereum Address Manager",
   "addresses.common.transaction_and_address_of_cre": "Transaction and address of creation",
   "addresses.common.all_tokens_in_the_account_and_": "All tokens in the account and total value",
+  "addresses.common.total_net_worth_in_usd_of_all_tokens_for_the_address": "Total net worth in USD of all tokens for the address",
+  "addresses.common.number_of_transfers_to_or_from_this_address": "Number of transfers to/from this address",
   "addresses.common.number_of_transactions_related": "Number of transactions related to this address",
   "addresses.common.gas_used_by_the_address": "Gas used by the address",
   "addresses.common.block_number_in_which_the_addr": "Block number in which the address was updated",
@@ -161,6 +163,7 @@
   "addresses.common.modified": "Modified",
   "addresses.common.there_are_no_records_for": "There are no records for",
   "addresses.common.search_by_name_namespace_or_ta": "Search by name, namespace or table ID...",
+  "addresses.common.there_are_no_tables_for_this_address": "There are no tables for this address.",
   "addresses.common.view_schema": "View schema",
   "addresses.common.full_name": "Full name",
   "addresses.common.table_id": "Table ID",
@@ -212,7 +215,12 @@
   "addresses.common.add_token_to_wallet": "Add token to wallet",
   "addresses.common.incoming_txn": "Incoming txn",
   "addresses.common.outgoing_txn": "Outgoing txn",
+  "addresses.common.incoming_txn": "Incoming txn",
+  "addresses.common.outgoing_txn": "Outgoing txn",
   "addresses.common.txn_to_the_same_address": "Txn to the same address",
   "addresses.common.external_chain_logo": "external chain logo",
-  "addresses.common.address_on_ton": "Address on TON"
+  "addresses.common.external_chain_logo": "external chain logo",
+  "addresses.common.address_on_ton": "Address on TON",
+  "addresses.common.scheduled_tasks": "Scheduled Tasks",
+  "addresses.common.tokenscommonerc20": "Tokenscommonerc20"
 }

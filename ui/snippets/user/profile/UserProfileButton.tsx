@@ -2,6 +2,7 @@ import type { ButtonProps } from '@chakra-ui/react';
 import { Box, HStack } from '@chakra-ui/react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { UserInfo } from 'types/api/account';
 
@@ -25,6 +26,7 @@ interface Props {
 }
 
 const UserProfileButton = ({ profileQuery, size, variant, onClick, isPending, ...rest }: Props, ref: React.ForwardedRef<HTMLButtonElement>) => {
+  const { t } = useTranslation();
   const [ isFetched, setIsFetched ] = useState(false);
   const isMobile = useIsMobile();
 
@@ -46,6 +48,7 @@ const UserProfileButton = ({ profileQuery, size, variant, onClick, isPending, ..
   const dataExists = !isButtonLoading && (Boolean(data) || Boolean(web3AccountWithDomain.address));
 
   const content = (() => {
+  const { t } = useTranslation();
     if (web3AccountWithDomain.address && !isButtonLoading) {
       return (
         <HStack gap={ 2 }>
@@ -58,13 +61,13 @@ const UserProfileButton = ({ profileQuery, size, variant, onClick, isPending, ..
     }
 
     if (!data || isButtonLoading) {
-      return 'Log in';
+      return t('common.common.log_in');
     }
 
     return (
       <HStack gap={ 2 }>
         <IconSvg name="profile" boxSize={ 5 }/>
-        <Box display={{ base: 'none', md: 'block' }}>{ data.email ? getUserHandle(data.email) : 'My profile' }</Box>
+        <Box display={{ base: 'none', md: 'block' }}>{ data.email ? getUserHandle(data.email) : t('common.common.my_profile') }</Box>
       </HStack>
     );
   })();

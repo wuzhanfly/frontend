@@ -163,113 +163,16 @@
   "staking.common.merits": {
     "defaultMessage": "Merits",
     "source": [
-      "ui/rewards/RewardsButton.tsx:57",
-      "ui/rewards/login/RewardsLoginModal.tsx:16",
       "ui/rewards/login/RewardsLoginModal.tsx:19",
-      "ui/rewards/login/RewardsLoginModal.tsx:24",
-      "ui/rewards/login/steps/LoginStepContent.tsx:28"
-    ]
-  },
-  "staking.common.all_achievements_are_earned": {
-    "defaultMessage": "All achievements are earned",
-    "source": [
-      "ui/rewards/hooks/useStreakBadges.ts:41"
-    ]
-  },
-  "staking.common.login": {
-    "defaultMessage": "Login",
-    "source": [
-      "ui/rewards/login/RewardsLoginModal.tsx:77"
-    ]
-  },
-  "staking.common.congratulations": {
-    "defaultMessage": "Congratulations",
-    "source": [
-      "ui/rewards/login/RewardsLoginModal.tsx:77"
-    ]
-  },
-  "staking.common.registration": {
-    "defaultMessage": "Registration",
-    "source": [
-      "ui/rewards/login/steps/CongratsStepContent.tsx:56"
-    ]
-  },
-  "staking.common.referral_program": {
-    "defaultMessage": "Referral program",
-    "source": [
-      "ui/rewards/login/steps/CongratsStepContent.tsx:60"
-    ]
-  },
-  "staking.common.referral_link": {
-    "defaultMessage": "Referral link",
-    "source": [
-      "ui/rewards/login/steps/CongratsStepContent.tsx:105"
+      "ui/rewards/login/RewardsLoginModal.tsx:22",
+      "ui/rewards/login/RewardsLoginModal.tsx:26",
+      "ui/rewards/login/steps/LoginStepContent.tsx:30"
     ]
   },
   "staking.common.open": {
     "defaultMessage": "Open",
     "source": [
-      "ui/rewards/login/steps/CongratsStepContent.tsx:138"
-    ]
-  },
-  "staking.common.continue_with_wallet": {
-    "defaultMessage": "Continue with wallet",
-    "source": [
-      "ui/rewards/login/steps/LoginStepContent.tsx:103"
-    ]
-  },
-  "staking.common.connect_wallet": {
-    "defaultMessage": "Connect wallet",
-    "source": [
-      "ui/rewards/login/steps/LoginStepContent.tsx:107"
-    ]
-  },
-  "staking.common.get_started": {
-    "defaultMessage": "Get started",
-    "source": [
-      "ui/rewards/login/steps/LoginStepContent.tsx:110"
-    ]
-  },
-  "staking.common.continue": {
-    "defaultMessage": "Continue",
-    "source": [
-      "ui/rewards/login/steps/LoginStepContent.tsx:110"
-    ]
-  },
-  "staking.common.add_wallet_to_account": {
-    "defaultMessage": "Add wallet to account",
-    "source": [
-      "ui/rewards/login/steps/LoginStepContent.tsx:112"
-    ]
-  },
-  "staking.common.log_in_to_account": {
-    "defaultMessage": "Log in to account",
-    "source": [
-      "ui/rewards/login/steps/LoginStepContent.tsx:112"
-    ]
-  },
-  "staking.common.merits_program": {
-    "defaultMessage": "Merits program",
-    "source": [
-      "ui/rewards/login/steps/LoginStepContent.tsx:119"
-    ]
-  },
-  "staking.common.referral_code_switch": {
-    "defaultMessage": "Referral code switch",
-    "source": [
-      "ui/rewards/login/steps/LoginStepContent.tsx:138"
-    ]
-  },
-  "staking.common.code": {
-    "defaultMessage": "Code",
-    "source": [
-      "ui/rewards/login/steps/LoginStepContent.tsx:143"
-    ]
-  },
-  "staking.common.sign_message_in_your_wallet": {
-    "defaultMessage": "Sign message in your wallet",
-    "source": [
-      "ui/rewards/login/steps/LoginStepContent.tsx:172"
+      "ui/rewards/login/steps/CongratsStepContent.tsx:140"
     ]
   },
   "staking.common.validator_index": {

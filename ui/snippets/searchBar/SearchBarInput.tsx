@@ -1,6 +1,7 @@
 import type { HTMLChakraProps } from '@chakra-ui/react';
 import { chakra, Center } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type { ChangeEvent, FormEvent, FocusEvent } from 'react';
 
 import config from 'configs/app';
@@ -31,6 +32,7 @@ const SearchBarInput = (
   { onChange, onSubmit, isHeroBanner, isSuggestOpen, onFocus, onBlur, onHide, onClear, onFormClick, value, readOnly, ...rest }: Props,
   ref: React.ForwardedRef<HTMLFormElement>,
 ) => {
+  const { t } = useTranslation();
   const innerRef = React.useRef<HTMLFormElement>(null);
   React.useImperativeHandle(ref, () => innerRef.current as HTMLFormElement, []);
   const isMobile = useIsMobile();
@@ -62,7 +64,7 @@ const SearchBarInput = (
         }
         break;
       }
-      case 'Escape': {
+      case t('common.common.escape'): {
         if (isSuggestOpen) {
           innerRef.current?.querySelector('input')?.blur();
           onHide?.();
@@ -80,6 +82,7 @@ const SearchBarInput = (
   }, [ handleKeyPress ]);
 
   const getPlaceholder = () => {
+  const { t } = useTranslation();
     const clusterText = nameServicesFeature.isEnabled && nameServicesFeature.clusters.isEnabled ? ' / cluster ' : '';
     return `Search by address / txn hash / block / token${ clusterText }/... `;
   };

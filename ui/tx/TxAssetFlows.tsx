@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import { chunk } from 'es-toolkit';
 import React, { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { PaginationParams } from 'ui/shared/pagination/types';
 
@@ -15,13 +16,14 @@ import Pagination from 'ui/shared/pagination/Pagination';
 
 import TxAssetFlowsListItem from './assetFlows/TxAssetFlowsListItem';
 import TxAssetFlowsTableItem from './assetFlows/TxAssetFlowsTableItem';
-import { generateFlowViewData } from './assetFlows/utils/generateFlowViewData';
+import generateFlowViewData from './assetFlows/utils/generateFlowViewData';
 
 interface FlowViewProps {
   hash: string;
 }
 
 export default function TxAssetFlows(props: FlowViewProps) {
+  const { t } = useTranslation();
 
   const { data: queryData, isPlaceholderData, isError } = useApiQuery('general:noves_transaction', {
     pathParams: { hash: props.hash },
@@ -33,7 +35,7 @@ export default function TxAssetFlows(props: FlowViewProps) {
 
   const [ page, setPage ] = useState<number>(1);
 
-  const ViewData = useMemo(() => (queryData ? generateFlowViewData(queryData) : []), [ queryData ]);
+  const ViewData = useMemo(() => (queryData ? generateFlowViewData(queryData, queryData.accountAddress, t) : []), [ queryData, t ]);
   const chunkedViewData = chunk(ViewData, 50);
 
   const paginationProps: PaginationParams = useMemo(() => ({
@@ -112,7 +114,7 @@ export default function TxAssetFlows(props: FlowViewProps) {
     <DataListDisplay
       isError={ isError }
       itemsNum={ data?.length }
-      emptyText="There are no transfers."
+      emptyText={t('transactions.common.there_are_no_transfers')}
       actionBar={ actionBar }
     >
       { content }

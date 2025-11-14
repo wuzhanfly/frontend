@@ -1,5 +1,6 @@
 import { chakra, Code, createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useFormContext } from 'react-hook-form';
 
 import type { FormFields } from '../types';
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const ContractVerificationFieldCompiler = ({ isVyper, isStylus, config }: Props) => {
+  const { t } = useTranslation();
   const [ isNightly, setIsNightly ] = React.useState(false);
   const { formState, getValues, resetField } = useFormContext<FormFields>();
 
@@ -78,7 +80,7 @@ const ContractVerificationFieldCompiler = ({ isVyper, isStylus, config }: Props)
     <ContractVerificationFormRow>
       <FormFieldSelectAsync<FormFields, 'compiler'>
         name="compiler"
-        placeholder="Compiler"
+        placeholder={t('common.common.compiler')}
         loadOptions={ loadOptions }
         extraControls={ extraControls }
         required

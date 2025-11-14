@@ -1,6 +1,7 @@
 import { Box, createListCollection, HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type {
   ValidatorsStabilityFilters,
@@ -25,23 +26,24 @@ import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 import getSortParamsFromValue from 'ui/shared/sort/getSortParamsFromValue';
 import getSortValueFromQuery from 'ui/shared/sort/getSortValueFromQuery';
 import Sort from 'ui/shared/sort/Sort';
-import { VALIDATORS_STABILITY_SORT_OPTIONS } from 'ui/validators/stability/utils';
+import { getValidatorsStabilitySortOptions } from 'ui/validators/stability/utils';
 import ValidatorsCounters from 'ui/validators/stability/ValidatorsCounters';
 import ValidatorsFilter from 'ui/validators/stability/ValidatorsFilter';
 import ValidatorsList from 'ui/validators/stability/ValidatorsList';
 import ValidatorsTable from 'ui/validators/stability/ValidatorsTable';
 
-const sortCollection = createListCollection({
-  items: VALIDATORS_STABILITY_SORT_OPTIONS,
-});
-
 const ValidatorsStability = () => {
+  const { t } = useTranslation();
+  
+  const sortCollection = createListCollection({
+    items: getValidatorsStabilitySortOptions(t),
+  });
   const router = useRouter();
   // const [ searchTerm, setSearchTerm ] = React.useState(getQueryParamString(router.query.address_hash) || undefined);
   const [ statusFilter, setStatusFilter ] =
     React.useState(getQueryParamString(router.query.state_filter) as ValidatorsStabilityFilters['state_filter'] || undefined);
   const [ sort, setSort ] = React.useState<ValidatorsStabilitySortingValue>(
-    getSortValueFromQuery<ValidatorsStabilitySortingValue>(router.query, VALIDATORS_STABILITY_SORT_OPTIONS) ?? 'default',
+    getSortValueFromQuery<ValidatorsStabilitySortingValue>(router.query, getValidatorsStabilitySortOptions(t)) ?? 'default',
   );
 
   // const debouncedSearchTerm = useDebounce(searchTerm || '', 300);
@@ -101,7 +103,7 @@ const ValidatorsStability = () => {
   //     w={{ base: '100%', lg: '350px' }}
   //     size="xs"
   //     onChange={ handleSearchTermChange }
-  //     placeholder="Search by validator's address hash"
+  //     placeholder={t('common.common.search_by_validators_address_h')}
   //     initialValue={ searchTerm }
   //   />
   // );
@@ -147,12 +149,12 @@ const ValidatorsStability = () => {
 
   return (
     <Box>
-      <PageTitle title="Validators" withTextAd/>
+      <PageTitle title={t('transactions.common.validators')} withTextAd/>
       <ValidatorsCounters/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no validators."
+        emptyText={t('common.common.there_are_no_validators')}
         filterProps={{
           emptyFilteredText: `Couldn${ apos }t find any validator that matches your query.`,
           hasActiveFilters: Boolean(

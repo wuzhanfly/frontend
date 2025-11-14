@@ -44,7 +44,7 @@ test.describe('no auth', () => {
   });
 
   test('+@dark-mode', async({ page }) => {
-    await page.locator('a[aria-label="Link to main page"]').hover();
+    await page.locator('a[aria-label="common.common.link_to_main_page"]').hover();
     await expect(component).toHaveScreenshot();
   });
 
@@ -52,7 +52,7 @@ test.describe('no auth', () => {
     test.use({ viewport: pwConfig.viewport.xl });
 
     test('+@dark-mode', async({ page }) => {
-      await page.locator('a[aria-label="Link to main page"]').hover();
+      await page.locator('a[aria-label="common.common.link_to_main_page"]').hover();
       await expect(component).toHaveScreenshot();
     });
   });
@@ -158,7 +158,7 @@ noSideBarCookieTest.describe('cookie set to false', () => {
   });
 
   noSideBarCookieTest('', async() => {
-    const chainIcon = component.getByLabel('Network icon placeholder');
+    const chainIcon = component.getByLabel('common.common.network_icon_placeholder');
     await expect(chainIcon).toBeHidden();
   });
 
@@ -166,7 +166,7 @@ noSideBarCookieTest.describe('cookie set to false', () => {
     noSideBarCookieTest.use({ viewport: pwConfig.viewport.xl });
 
     noSideBarCookieTest('', async() => {
-      const chainIcon = component.getByLabel('Network icon placeholder');
+      const chainIcon = component.getByLabel('common.common.network_icon_placeholder');
       await expect(chainIcon).toBeHidden();
     });
   });
@@ -189,7 +189,7 @@ sideBarCookieTest.describe('cookie set to true', () => {
       { hooksConfig },
     );
 
-    const chainIcon = component.getByLabel('Network icon placeholder');
+    const chainIcon = component.getByLabel('common.common.network_icon_placeholder');
     await expect(chainIcon).toBeVisible();
   });
 });
@@ -261,7 +261,7 @@ const promoBannerTest = (type: 'text' | 'image') => {
   test.describe(`with promo banner (${ type })`, () => {
     let component: Locator;
     const darkModeRule = type === 'text' ? '+@dark-mode' : '';
-    const imageAltText = type === 'text' ? 'Promo banner icon' : 'Promo banner small';
+    const imageAltText = type === 'text' ? 'common.common.promo_banner_icon' : 'common.common.promo_banner_small';
 
     test.beforeEach(async({ render, mockEnvs, mockAssetResponse }) => {
       await mockEnvs(type === 'text' ? ENVS_MAP.navigationPromoBannerText : ENVS_MAP.navigationPromoBannerImage);

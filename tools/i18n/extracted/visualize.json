@@ -1,20 +1,8 @@
 {
-  "visualize.common.solidity_uml_diagram": {
-    "defaultMessage": "Solidity UML diagram",
-    "source": [
-      "ui/pages/Sol2Uml.tsx:16"
-    ]
-  },
   "visualize.common.for_contract": {
     "defaultMessage": "For contract",
     "source": [
-      "ui/pages/Sol2Uml.tsx:18"
-    ]
-  },
-  "visualize.common.click_on_image_to_zoom": {
-    "defaultMessage": "Click on image to zoom",
-    "source": [
-      "ui/sol2uml/Sol2UmlDiagram.tsx:79"
+      "ui/pages/Sol2Uml.tsx:20"
     ]
   }
 }

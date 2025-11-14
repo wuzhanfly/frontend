@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Screen } from 'ui/snippets/auth/types';
 
@@ -15,16 +16,16 @@ import AuthModal from 'ui/snippets/auth/AuthModal';
 import useProfileQuery from 'ui/snippets/auth/useProfileQuery';
 import useRedirectForInvalidAuthToken from 'ui/snippets/auth/useRedirectForInvalidAuthToken';
 
-const MIXPANEL_CONFIG = {
-  wallet_connect: {
-    source: 'Profile' as const,
-  },
-  account_link_info: {
-    source: 'Profile' as const,
-  },
-};
-
 const MyProfile = () => {
+  const { t } = useTranslation();
+  const MIXPANEL_CONFIG = {
+    wallet_connect: {
+      source: t('common.common.profile') as 'Profile',
+    },
+    account_link_info: {
+      source: t('common.common.profile') as 'Profile',
+    },
+  };
   const [ authInitialScreen, setAuthInitialScreen ] = React.useState<Screen>();
   const authModal = useDisclosure();
 
@@ -64,7 +65,7 @@ const MyProfile = () => {
 
   return (
     <>
-      <PageTitle title="My profile"/>
+      <PageTitle title={t('common.common.my_profile')}/>
       { content }
     </>
   );

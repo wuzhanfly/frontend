@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressVerificationFormFirstStepFields, AddressCheckStatusSuccess } from './types';
 import type { VerifiedAddress } from 'types/api/account';
@@ -25,6 +26,7 @@ interface Props {
 }
 
 const AddressVerificationModal = ({ defaultAddress, open, onOpenChange, onSubmit, onAddTokenInfoClick, onShowListClick, pageType }: Props) => {
+  const { t } = useTranslation();
   const [ stepIndex, setStepIndex ] = React.useState(0);
   const [ data, setData ] = React.useState<StateData>({ address: '', signingMessage: '' });
 
@@ -73,11 +75,11 @@ const AddressVerificationModal = ({ defaultAddress, open, onOpenChange, onSubmit
 
   const steps = [
     {
-      title: 'Verify new address ownership',
+      title: t('common.common.verify_new_address_ownership'),
       content: <AddressVerificationStepAddress onContinue={ handleGoToSecondStep } defaultAddress={ defaultAddress }/>,
     },
     {
-      title: 'Copy and sign message',
+      title: t('common.common.copy_and_sign_message'),
       content: (
         <AddressVerificationStepSignature
           { ...data }
@@ -87,7 +89,7 @@ const AddressVerificationModal = ({ defaultAddress, open, onOpenChange, onSubmit
       ),
     },
     {
-      title: 'Congrats! Address is verified.',
+      title: t('common.common.congrats_address_is_verified'),
       content: (
         <AddressVerificationStepSuccess
           onShowListClick={ onShowListClick }

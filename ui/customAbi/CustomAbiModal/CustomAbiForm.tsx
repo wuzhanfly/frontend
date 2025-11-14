@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm, FormProvider } from 'react-hook-form';
 
@@ -47,6 +48,8 @@ const CustomAbiForm: React.FC<Props> = ({ data, onOpenChange, onSuccess, setAler
   const queryClient = useQueryClient();
   const apiFetch = useApiFetch();
 
+  const { t } = useTranslation();
+  
   const customAbiKey = (data: Inputs & { id?: string }) => {
     const body = { name: data.name, contract_address_hash: data.contract_address_hash, abi: data.abi };
 
@@ -115,7 +118,7 @@ const CustomAbiForm: React.FC<Props> = ({ data, onOpenChange, onSuccess, setAler
         />
         <FormFieldText<Inputs>
           name="name"
-          placeholder="Project name"
+          placeholder={t('common.common.project_name')}
           required
           rules={{
             maxLength: NAME_MAX_LENGTH,
@@ -139,7 +142,7 @@ const CustomAbiForm: React.FC<Props> = ({ data, onOpenChange, onSuccess, setAler
             disabled={ !formApi.formState.isDirty }
             loading={ isPending }
           >
-            { data && 'id' in data ? 'Save' : 'Create custom ABI' }
+            { data && 'id' in data ? t('common.common.save') : t('common.common.create_custom_abi') }
           </Button>
         </Box>
       </form>

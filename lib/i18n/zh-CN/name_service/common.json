@@ -1,0 +1,4 @@
+{
+  "name_service.common.the_date_the_name_expires_upon_which_there_is_a_grace_period_for_the_owner_to_renew_after_grace_period_ends_the_name_is_released_to_the_market": "名称到期的日期，在此之后所有者有一个宽限期来续期，宽限期结束后名称将被释放到市场",
+  "name_service.common.wrapped": "封装"
+}

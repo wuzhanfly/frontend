@@ -2,6 +2,7 @@ import { Grid, Box } from '@chakra-ui/react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import React, { useCallback } from 'react';
 import type { MouseEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { MarketplaceApp } from 'types/client/marketplace';
 
@@ -15,7 +16,7 @@ type Props = {
   apps: Array<MarketplaceApp>;
   showAppInfo: (id: string) => void;
   favoriteApps: Array<string>;
-  onFavoriteClick: (id: string, isFavorite: boolean, source: 'Discovery view') => void;
+  onFavoriteClick: (id: string, isFavorite: boolean, source: 'discovery_view') => void;
   isLoading: boolean;
   selectedCategoryId?: string;
   onAppClick: (event: MouseEvent, id: string) => void;
@@ -26,16 +27,17 @@ const MarketplaceList = ({
   apps, showAppInfo, favoriteApps, onFavoriteClick, isLoading, selectedCategoryId,
   onAppClick, graphLinksQuery,
 }: Props) => {
+  const { t } = useTranslation();
   const { cutRef, renderedItemsNum } = useLazyRenderedList(apps, !isLoading, 16);
 
   const handleInfoClick = useCallback((id: string) => {
     mixpanel.logEvent(mixpanel.EventTypes.PAGE_WIDGET, { Type: 'More button', Info: id, Source: 'Discovery view' });
     showAppInfo(id);
-  }, [ showAppInfo ]);
+  }, [ showAppInfo, t ]);
 
   const handleFavoriteClick = useCallback((id: string, isFavorite: boolean) => {
-    onFavoriteClick(id, isFavorite, 'Discovery view');
-  }, [ onFavoriteClick ]);
+    onFavoriteClick(id, isFavorite, 'discovery_view');
+  }, [ onFavoriteClick, t ]);
 
   return apps.length > 0 ? (
     <>

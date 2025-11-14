@@ -3,6 +3,7 @@ import BigNumber from 'bignumber.js';
 import { capitalize } from 'es-toolkit';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { ZKSYNC_L2_TX_BATCH_STATUSES } from 'types/api/zkSyncL2';
 
@@ -51,6 +52,7 @@ interface Props {
 const rollupFeature = config.features.rollup;
 
 const BlockDetails = ({ query }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
   const heightOrHash = getQueryParamString(router.query.height_or_hash);
   const multichainContext = useMultichainContext();
@@ -77,6 +79,7 @@ const BlockDetails = ({ query }: Props) => {
   const validatorTitle = getNetworkValidatorTitle();
 
   const rewardBreakDown = (() => {
+    const { t } = useTranslation();
     if (rollupFeature.isEnabled || totalReward.isEqualTo(ZERO) || txFees.isEqualTo(ZERO) || burntFees.isEqualTo(ZERO)) {
       return null;
     }
@@ -87,13 +90,13 @@ const BlockDetails = ({ query }: Props) => {
 
     return (
       <Text color="text.secondary" whiteSpace="break-spaces">
-        <Tooltip content="Static block reward">
+        <Tooltip content={ t('blocks.common.static_block_reward') }>
           <span>{ staticReward.dividedBy(WEI).toFixed() }</span>
         </Tooltip>
         { !txFees.isEqualTo(ZERO) && (
           <>
             { space }+{ space }
-            <Tooltip content="Txn fees">
+            <Tooltip content={ t('blocks.common.txn_fees') }>
               <span>{ txFees.dividedBy(WEI).toFixed() }</span>
             </Tooltip>
           </>
@@ -101,7 +104,7 @@ const BlockDetails = ({ query }: Props) => {
         { !burntFees.isEqualTo(ZERO) && (
           <>
             { space }-{ space }
-            <Tooltip content="Burnt fees">
+            <Tooltip content={ t('blocks.common.burnt_fees') }>
               <span>{ burntFees.dividedBy(WEI).toFixed() }</span>
             </Tooltip>
           </>
@@ -111,6 +114,7 @@ const BlockDetails = ({ query }: Props) => {
   })();
 
   const txsNum = (() => {
+    const { t } = useTranslation();
     const blockTxsNum = (
       <Link href={ route({ pathname: '/block/[height_or_hash]', query: { height_or_hash: heightOrHash, tab: 'txs' } }, multichainContext) }>
         { data.transactions_count } txn{ data.transactions_count === 1 ? '' : 's' }
@@ -136,11 +140,12 @@ const BlockDetails = ({ query }: Props) => {
   })();
 
   const blockTypeLabel = (() => {
+    const { t } = useTranslation();
     switch (data.type) {
       case 'reorg':
-        return 'Reorg';
+        return t('common.common.reorg');
       case 'uncle':
-        return 'Uncle';
+        return t('common.common.uncle');
       default:
         return 'Block';
     }
@@ -149,7 +154,7 @@ const BlockDetails = ({ query }: Props) => {
   return (
     <DetailedInfo.Container templateColumns={{ base: 'minmax(0, 1fr)', lg: 'minmax(min-content, 200px) minmax(0, 1fr)' }} >
       <DetailedInfo.ItemLabel
-        hint="The block height of a particular block is defined as the number of blocks preceding it in the blockchain"
+        hint={ t('common.common.tbhoa') }
         isLoading={ isPlaceholderData }
       >
         { blockTypeLabel } height
@@ -162,8 +167,8 @@ const BlockDetails = ({ query }: Props) => {
         <PrevNext
           ml={ 6 }
           onClick={ handlePrevNextClick }
-          prevLabel="View previous block"
-          nextLabel="View next block"
+          prevLabel={ t('blocks.common.view_previous_block') }
+          nextLabel={ t('blocks.common.view_next_block') }
           isPrevDisabled={ data.height === 0 }
           isLoading={ isPlaceholderData }
         />
@@ -172,7 +177,7 @@ const BlockDetails = ({ query }: Props) => {
       { rollupFeature.isEnabled && rollupFeature.type === 'arbitrum' && data.arbitrum && (
         <>
           <DetailedInfo.ItemLabel
-            hint="The most recent L1 block height as of this L2 block"
+            hint={ t('blocks.common.the_most_recent_l1_block_heigh') }
             isLoading={ isPlaceholderData }
           >
             L1 block height
@@ -186,7 +191,7 @@ const BlockDetails = ({ query }: Props) => {
       { rollupFeature.isEnabled && rollupFeature.type === 'arbitrum' && data.arbitrum && !config.UI.views.block.hiddenFields?.batch && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Batch number"
+            hint={ t('transactions.common.batch_number') }
             isLoading={ isPlaceholderData }
           >
             Batch
@@ -202,7 +207,7 @@ const BlockDetails = ({ query }: Props) => {
       { rollupFeature.isEnabled && rollupFeature.type === 'optimistic' && data.optimism && !config.UI.views.block.hiddenFields?.batch && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Batch number"
+            hint={ t('transactions.common.batch_number') }
             isLoading={ isPlaceholderData }
           >
             Batch
@@ -224,7 +229,7 @@ const BlockDetails = ({ query }: Props) => {
       { typeof data.size === 'number' && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Size of the block in bytes"
+            hint={ t('blocks.common.size_of_the_block_in_bytes') }
             isLoading={ isPlaceholderData }
           >
             Size
@@ -238,7 +243,7 @@ const BlockDetails = ({ query }: Props) => {
       ) }
 
       <DetailedInfo.ItemLabel
-        hint="Date & time at which block was produced."
+        hint={ t('common.common.dta') }
         isLoading={ isPlaceholderData }
       >
         Timestamp
@@ -248,7 +253,7 @@ const BlockDetails = ({ query }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="The number of transactions in the block"
+        hint={ t('blocks.common.the_number_of_transactions_in_') }
         isLoading={ isPlaceholderData }
       >
         Transactions
@@ -262,7 +267,7 @@ const BlockDetails = ({ query }: Props) => {
       { config.features.beaconChain.isEnabled && Boolean(data.withdrawals_count) && (
         <>
           <DetailedInfo.ItemLabel
-            hint="The number of beacon withdrawals in the block"
+            hint={ t('blocks.common.the_number_of_beacon_withdrawa') }
             isLoading={ isPlaceholderData }
           >
             Withdrawals
@@ -280,7 +285,7 @@ const BlockDetails = ({ query }: Props) => {
       { rollupFeature.isEnabled && rollupFeature.type === 'zkSync' && data.zksync && !config.UI.views.block.hiddenFields?.batch && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Batch number"
+            hint={ t('transactions.common.batch_number') }
             isLoading={ isPlaceholderData }
           >
             Batch
@@ -297,7 +302,7 @@ const BlockDetails = ({ query }: Props) => {
       (
         <>
           <DetailedInfo.ItemLabel
-            hint="Status is the short interpretation of the batch lifecycle"
+            hint={ t('transactions.common.status_is_the_short_interpreta') }
             isLoading={ isPlaceholderData }
           >
             Status
@@ -320,7 +325,7 @@ const BlockDetails = ({ query }: Props) => {
       { !config.UI.views.block.hiddenFields?.miner && (
         <>
           <DetailedInfo.ItemLabel
-            hint="A block producer who successfully included the block onto the blockchain"
+            hint={ t('blocks.common.a_block_producer_who_successfu') }
             isLoading={ isPlaceholderData }
           >
             { capitalize(validatorTitle) }
@@ -342,28 +347,28 @@ const BlockDetails = ({ query }: Props) => {
           { data.arbitrum?.commitment_transaction.hash && (
             <>
               <DetailedInfo.ItemLabel
-                hint="L1 transaction containing this batch commitment"
+                hint={ t('transactions.common.l1_transaction_containing_this') }
                 isLoading={ isPlaceholderData }
               >
                 Commitment tx
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue>
                 <TxEntityL1 hash={ data.arbitrum?.commitment_transaction.hash } isLoading={ isPlaceholderData }/>
-                { data.arbitrum?.commitment_transaction.status === 'finalized' && <StatusTag type="ok" text="Finalized" ml={ 2 }/> }
+                { data.arbitrum?.commitment_transaction.status === 'finalized' && <StatusTag type="ok" text={ t('shared.common.finalized') } ml={ 2 }/> }
               </DetailedInfo.ItemValue>
             </>
           ) }
           { data.arbitrum?.confirmation_transaction.hash && (
             <>
               <DetailedInfo.ItemLabel
-                hint="L1 transaction containing confirmation of this batch"
+                hint={ t('transactions.common.l1_transaction_containing_conf') }
                 isLoading={ isPlaceholderData }
               >
                 Confirmation tx
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue>
                 <TxEntityL1 hash={ data.arbitrum?.confirmation_transaction.hash } isLoading={ isPlaceholderData }/>
-                { data.arbitrum?.commitment_transaction.status === 'finalized' && <StatusTag type="ok" text="Finalized" ml={ 2 }/> }
+                { data.arbitrum?.commitment_transaction.status === 'finalized' && <StatusTag type="ok" text={ t('shared.common.finalized') } ml={ 2 }/> }
               </DetailedInfo.ItemValue>
             </>
           ) }
@@ -373,10 +378,7 @@ const BlockDetails = ({ query }: Props) => {
       { !rollupFeature.isEnabled && !totalReward.isEqualTo(ZERO) && !config.UI.views.block.hiddenFields?.total_reward && (
         <>
           <DetailedInfo.ItemLabel
-            hint={
-              `For each block, the ${ validatorTitle } is rewarded with a finite amount of ${ config.chain.currency.symbol || 'native token' } 
-          on top of the fees paid for all transactions in the block`
-            }
+            hint={t('blocks.common.for_each_block_the_validator_is_rewarded_with_a_finite_amount_of_currency_on_top_of_the_fees_paid_for_all_transactions_in_the_block', { validatorTitle, currency: config.chain.currency.symbol || t('blocks.common.native_token') })}
             isLoading={ isPlaceholderData }
           >
             Block reward
@@ -395,7 +397,7 @@ const BlockDetails = ({ query }: Props) => {
         .map(({ type, reward }) => (
           <React.Fragment key={ type }>
             <DetailedInfo.ItemLabel
-              hint={ `Amount of distributed reward. ${ capitalize(validatorTitle) }s receive a static block reward + Tx fees + uncle fees` }
+              hint={t('blocks.common.amount_of_distributed_reward_validator_receive_a_static_block_reward_tx_fees_uncle_fees', { validatorTitle: capitalize(validatorTitle) })}
             >
               { type }
             </DetailedInfo.ItemLabel>
@@ -409,7 +411,7 @@ const BlockDetails = ({ query }: Props) => {
       { typeof data.zilliqa?.view === 'number' && (
         <>
           <DetailedInfo.ItemLabel
-            hint="The iteration of the consensus round in which the block was proposed"
+            hint={ t('blocks.common.the_iteration_of_the_consensus') }
             isLoading={ isPlaceholderData }
           >
             View
@@ -427,7 +429,7 @@ const BlockDetails = ({ query }: Props) => {
       { data.celo?.base_fee && <BlockDetailsBaseFeeCelo data={ data.celo.base_fee }/> }
 
       <DetailedInfo.ItemLabel
-        hint="The total gas amount used in the block and its percentage of gas filled in the block"
+        hint={ t('blocks.common.the_total_gas_amount_used_in_t') }
         isLoading={ isPlaceholderData }
       >
         Gas used
@@ -446,7 +448,7 @@ const BlockDetails = ({ query }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Total gas limit provided by all transactions in the block"
+        hint={ t('blocks.common.total_gas_limit_provided_by_al') }
         isLoading={ isPlaceholderData }
       >
         Gas limit
@@ -460,7 +462,7 @@ const BlockDetails = ({ query }: Props) => {
       { data.minimum_gas_price && (
         <>
           <DetailedInfo.ItemLabel
-            hint="The minimum gas price a transaction should have in order to be included in this block"
+            hint={ t('blocks.common.the_minimum_gas_price_a_transa') }
             isLoading={ isPlaceholderData }
           >
             Minimum gas price
@@ -476,7 +478,7 @@ const BlockDetails = ({ query }: Props) => {
       { data.base_fee_per_gas && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Minimum fee required per unit of gas. Fee adjusts based on network congestion"
+            hint={ t('blocks.common.minimum_fee_required_per_unit_') }
             isLoading={ isPlaceholderData }
           >
             Base fee per gas
@@ -513,7 +515,7 @@ const BlockDetails = ({ query }: Props) => {
               { burntFees.dividedBy(WEI).toFixed() } { currencyUnits.ether }
             </Skeleton>
             { !txFees.isEqualTo(ZERO) && (
-              <Tooltip content="Burnt fees / Txn fees * 100%">
+              <Tooltip content={ t('blocks.common.bbf') }>
                 <Utilization
                   ml={ 4 }
                   value={ burntFees.dividedBy(txFees).toNumber() }
@@ -528,7 +530,7 @@ const BlockDetails = ({ query }: Props) => {
       { data.priority_fee !== null && BigNumber(data.priority_fee).gt(ZERO) && (
         <>
           <DetailedInfo.ItemLabel
-            hint="User-defined tips sent to validator for transaction priority/inclusion"
+            hint={ t('common.common.udtst') }
             isLoading={ isPlaceholderData }
           >
             Priority fee / Tip
@@ -553,7 +555,7 @@ const BlockDetails = ({ query }: Props) => {
         { data.bitcoin_merged_mining_header && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Merged-mining field: Bitcoin header"
+              hint={ t('common.common.mmfbh') }
             >
               Bitcoin merged mining header
             </DetailedInfo.ItemLabel>
@@ -572,7 +574,7 @@ const BlockDetails = ({ query }: Props) => {
         { data.bitcoin_merged_mining_coinbase_transaction && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Merged-mining field: Coinbase transaction"
+              hint={ t('common.common.mmfct') }
             >
               Bitcoin merged mining coinbase transaction
             </DetailedInfo.ItemLabel>
@@ -590,7 +592,7 @@ const BlockDetails = ({ query }: Props) => {
         { data.bitcoin_merged_mining_merkle_proof && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Merged-mining field: Merkle proof"
+              hint={ t('common.common.mmfmp') }
             >
               Bitcoin merged mining Merkle proof
             </DetailedInfo.ItemLabel>
@@ -608,7 +610,7 @@ const BlockDetails = ({ query }: Props) => {
         { data.hash_for_merged_mining && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Merged-mining field: Rootstock block header hash"
+              hint={ t('common.common.mmfrbhh') }
             >
               Hash for merged mining
             </DetailedInfo.ItemLabel>
@@ -641,7 +643,7 @@ const BlockDetails = ({ query }: Props) => {
         { data.total_difficulty && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Total difficulty of the chain until this block"
+              hint={ t('blocks.common.total_difficulty_of_the_chain_') }
             >
               Total difficulty
             </DetailedInfo.ItemLabel>
@@ -656,7 +658,7 @@ const BlockDetails = ({ query }: Props) => {
         <DetailedInfo.ItemDivider/>
 
         <DetailedInfo.ItemLabel
-          hint="The SHA256 hash of the block"
+          hint={ t('blocks.common.the_sha256_hash_of_the_block') }
         >
           Hash
         </DetailedInfo.ItemLabel>
@@ -670,7 +672,7 @@ const BlockDetails = ({ query }: Props) => {
         { data.height > 0 && (
           <>
             <DetailedInfo.ItemLabel
-              hint="The hash of the block from which this block was generated"
+              hint={ t('common.common.thotb') }
             >
               Parent hash
             </DetailedInfo.ItemLabel>
@@ -692,7 +694,7 @@ const BlockDetails = ({ query }: Props) => {
         { rollupFeature.isEnabled && rollupFeature.type === 'arbitrum' && data.arbitrum && data.arbitrum.send_count && (
           <>
             <DetailedInfo.ItemLabel
-              hint="The cumulative number of L2 to L1 transactions as of this block"
+              hint={ t('blocks.common.the_cumulative_number_of_l2_to') }
               isLoading={ isPlaceholderData }
             >
               Send count
@@ -702,7 +704,7 @@ const BlockDetails = ({ query }: Props) => {
             </DetailedInfo.ItemValue>
 
             <DetailedInfo.ItemLabel
-              hint="The root of the Merkle accumulator representing all L2 to L1 transactions as of this block"
+              hint={ t('blocks.common.the_root_of_the_merkle_accumul') }
               isLoading={ isPlaceholderData }
             >
               Send root
@@ -712,7 +714,7 @@ const BlockDetails = ({ query }: Props) => {
             </DetailedInfo.ItemValue>
 
             <DetailedInfo.ItemLabel
-              hint="The number of delayed L1 to L2 messages read as of this block"
+              hint={ t('blocks.common.the_number_of_delayed_l1_to_l2') }
               isLoading={ isPlaceholderData }
             >
               Delayed messages
@@ -726,7 +728,7 @@ const BlockDetails = ({ query }: Props) => {
         { !config.UI.views.block.hiddenFields?.nonce && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Block nonce is a value used during mining to demonstrate proof of work for a block"
+              hint={ t('common.common.bniav') }
             >
               Nonce
             </DetailedInfo.ItemLabel>

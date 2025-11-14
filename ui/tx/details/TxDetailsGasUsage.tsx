@@ -1,5 +1,6 @@
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Transaction } from 'types/api/transaction';
 
@@ -14,10 +15,11 @@ interface Props {
 }
 
 const TxDetailsGasUsage = ({ isLoading, data }: Props) => {
+  const { t } = useTranslation();
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="Actual gas amount used by the transaction"
+        hint={t('transactions.common.actual_gas_amount_used_by_the_')}
         isLoading={ isLoading }
       >
         Gas usage & limit by txn

@@ -2,6 +2,7 @@ import type { GridProps, HTMLChakraProps } from '@chakra-ui/react';
 import { Box, Grid, Flex, Text, VStack } from '@chakra-ui/react';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CustomLinksGroup } from 'types/footerLinks';
 
@@ -27,6 +28,7 @@ const FRONT_VERSION_URL = `https://github.com/blockscout/frontend/tree/${ config
 const FRONT_COMMIT_URL = `https://github.com/blockscout/frontend/commit/${ config.UI.footer.frontendCommit }`;
 
 const Footer = () => {
+  const { t } = useTranslation();
 
   const { data: backendVersionData } = useApiQuery('general:config_backend_version', {
     queryOptions: {
@@ -41,13 +43,13 @@ const Footer = () => {
     {
       icon: 'edit' as const,
       iconSize: '16px',
-      text: 'Submit an issue',
+      text: t('common.common.submit_an_issue'),
       url: issueUrl,
     },
     {
       icon: 'social/git' as const,
       iconSize: '18px',
-      text: 'Contribute',
+      text: t('common.common.contribute'),
       url: 'https://github.com/blockscout/blockscout',
     },
     {
@@ -59,24 +61,25 @@ const Footer = () => {
     {
       icon: 'social/discord' as const,
       iconSize: '24px',
-      text: 'Discord',
+      text: t('tokens.common.discord'),
       url: 'https://discord.gg/blockscout',
     },
     {
       icon: 'brands/blockscout' as const,
       iconSize: '18px',
-      text: 'All chains',
+      text: t('common.common.all_chains'),
       url: 'https://www.blockscout.com/chains-and-projects',
     },
     {
       icon: 'donate' as const,
       iconSize: '20px',
-      text: 'Donate',
+      text: t('common.common.donate'),
       url: 'https://eth.blockscout.com/address/0xfB4aF6A8592041E9BcE186E5aC4BDbd2B137aD11',
     },
   ];
 
   const frontendLink = (() => {
+  const { t } = useTranslation();
     if (config.UI.footer.frontendVersion) {
       return <Link href={ FRONT_VERSION_URL } external noIcon>{ config.UI.footer.frontendVersion }</Link>;
     }
@@ -169,6 +172,7 @@ const Footer = () => {
   };
 
   const renderRecaptcha = (gridArea?: GridProps['gridArea']) => {
+  const { t } = useTranslation();
     if (!config.services.reCaptchaV2.siteKey) {
       return <Box gridArea={ gridArea }/>;
     }
@@ -206,7 +210,7 @@ const Footer = () => {
           >
             {
               ([
-                { title: 'Blockscout', links: BLOCKSCOUT_LINKS },
+                { title: t('common.common.blockscout'), links: BLOCKSCOUT_LINKS },
                 ...(linksData || []),
               ])
                 .slice(0, colNum)

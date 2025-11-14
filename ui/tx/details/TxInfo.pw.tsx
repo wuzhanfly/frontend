@@ -164,7 +164,7 @@ test('with interop message in +@mobile', async({ render, page, mockEnvs, mockAss
   await mockAssetResponse('https://example.com/logo.png', './playwright/mocks/image_s.jpg');
   const component = await render(<TxInfo data={ txMock.withInteropInMessage } isLoading={ false }/>);
   await page.getByText('View details').first().click();
-  await expect(page.getByText('Interop status')).toBeVisible();
+  await expect(page.getByText('transactions.common.interop_status')).toBeVisible();
 
   await expect(component).toHaveScreenshot({
     mask: [ page.locator(pwConfig.adsBannerSelector) ],
@@ -177,7 +177,7 @@ test('with interop message out +@mobile', async({ page, render, mockEnvs, mockAs
   await mockAssetResponse('https://example.com/logo.png', './playwright/mocks/image_s.jpg');
   const component = await render(<TxInfo data={ txMock.withInteropOutMessage } isLoading={ false }/>);
   await component.getByText('View details').first().click();
-  await expect(component.getByText('Interop status')).toBeVisible();
+  await expect(component.getByText('transactions.common.interop_status')).toBeVisible();
 
   await expect(component).toHaveScreenshot({
     mask: [ page.locator(pwConfig.adsBannerSelector) ],

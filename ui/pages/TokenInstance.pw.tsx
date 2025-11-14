@@ -10,6 +10,17 @@ import * as pwConfig from 'playwright/utils/config';
 
 import TokenInstance from './TokenInstance';
 
+const { t } = (() => {
+  // Mock translation function for tests
+  const mockT = (key: string) => {
+    const keyMap: Record<string, string> = {
+      'validators.common.name': 'Name',
+    };
+    return keyMap[key] || key;
+  };
+  return { t: mockT };
+})();
+
 const hash = tokenMock.tokenInfo.address_hash;
 const id = '42';
 
@@ -38,7 +49,7 @@ test('metadata update', async({ render, page, createSocket, mockApiResponse, moc
   const newMetadata = {
     attributes: [
       { value: 'yellow', trait_type: 'Color' },
-      { value: 'Mrs. Duckie', trait_type: 'Name' },
+      { value: 'Mrs. Duckie', trait_type: t('validators.common.name') },
     ],
     external_url: 'https://yellow-duck.nft',
     image_url: 'https://yellow-duck.nft/duck.jpg',
@@ -61,14 +72,14 @@ test('metadata update', async({ render, page, createSocket, mockApiResponse, moc
 
   // open the menu, click the button and submit form
   await page.getByLabel('Address menu').click();
-  await page.getByRole('menuitem', { name: 'Refresh metadata' }).click();
+  await page.getByRole('menuitem', { name: t('shared.common.refresh_metadata') }).click();
 
   // join socket channel
   const channel = await socketServer.joinChannel(socket, `token_instances:${ hash.toLowerCase() }`);
 
   // check that button is disabled
   await page.getByLabel('Address menu').click();
-  await expect(page.getByRole('menuitem', { name: 'Refresh metadata' })).toBeDisabled();
+  await expect(page.getByRole('menuitem', { name: t('shared.common.refresh_metadata') })).toBeDisabled();
   await page.getByLabel('Address menu').click();
 
   // take a screenshot of loading state
@@ -109,11 +120,11 @@ test('metadata update failed', async({ render, page }) => {
 
   // open the menu, click the button and submit form
   await page.getByLabel('Address menu').click();
-  await page.getByRole('menuitem', { name: 'Refresh metadata' }).click();
+  await page.getByRole('menuitem', { name: t('shared.common.refresh_metadata') }).click();
 
   // check that button is not disabled
   await page.getByLabel('Address menu').click();
-  await expect(page.getByRole('menuitem', { name: 'Refresh metadata' })).toBeEnabled();
+  await expect(page.getByRole('menuitem', { name: t('shared.common.refresh_metadata') })).toBeEnabled();
   await page.getByLabel('Address menu').click();
 
   // take a screenshot of error state

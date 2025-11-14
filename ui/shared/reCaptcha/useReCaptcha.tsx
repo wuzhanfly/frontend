@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type ReCAPTCHA from 'react-google-recaptcha';
 
 import getErrorCauseStatusCode from 'lib/errors/getErrorCauseStatusCode';
 import getErrorObjStatusCode from 'lib/errors/getErrorObjStatusCode';
 
 export default function useReCaptcha() {
+  const { t } = useTranslation();
   const ref = React.useRef<ReCAPTCHA>(null);
   const rejectCb = React.useRef<((error: Error) => void) | null>(null);
 
@@ -13,7 +15,7 @@ export default function useReCaptcha() {
 
   const executeAsync: () => Promise<string | null> = React.useCallback(async() => {
     setIsOpen(true);
-    const tokenPromise = ref.current?.executeAsync() || Promise.reject(new Error('Unable to execute ReCaptcha'));
+    const tokenPromise = ref.current?.executeAsync() || Promise.reject(new Error(t('shared.common.unable_to_execute_recaptcha')));
     const modalOpenPromise = new Promise<null>((resolve, reject) => {
       rejectCb.current = reject;
     });
@@ -23,7 +25,7 @@ export default function useReCaptcha() {
 
   const handleContainerClick = React.useCallback(() => {
     setIsOpen(false);
-    rejectCb.current?.(new Error('ReCaptcha is not solved'));
+    rejectCb.current?.(new Error(t('shared.common.recaptcha_is_not_solved')));
   }, []);
 
   const handleInitError = React.useCallback(() => {
@@ -53,7 +55,7 @@ export default function useReCaptcha() {
         const token = await executeAsync();
 
         if (!token) {
-          throw new Error('ReCaptcha is not solved');
+          throw new Error(t('shared.common.recaptcha_is_not_solved'));
         }
 
         return fetchProtectedResource(fetcher, token);

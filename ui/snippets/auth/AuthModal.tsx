@@ -1,6 +1,7 @@
 import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Screen, ScreenSuccess } from './types';
 
@@ -35,6 +36,7 @@ interface Props {
 }
 
 const AuthModal = ({ initialScreen, onClose, mixpanelConfig, closeOnError }: Props) => {
+  const { t } = useTranslation();
   const [ steps, setSteps ] = React.useState<Array<Screen>>([ initialScreen ]);
   const [ isSuccess, setIsSuccess ] = React.useState(false);
   const [ rewardsApiToken, setRewardsApiToken ] = React.useState<string | undefined>(undefined);
@@ -110,22 +112,24 @@ const AuthModal = ({ initialScreen, onClose, mixpanelConfig, closeOnError }: Pro
   const currentStep = steps[steps.length - 1];
 
   const header = (() => {
+  const { t } = useTranslation();
     switch (currentStep.type) {
       case 'select_method':
-        return 'Select a way to login';
+        return t('common.common.select_a_way_to_login');
       case 'connect_wallet':
-        return currentStep.isAuth ? 'Add wallet' : 'Continue with wallet';
+        return currentStep.isAuth ? t('common.common.add_wallet') : t('staking.common.continue_with_wallet');
       case 'email':
-        return currentStep.isAuth ? 'Add email' : 'Continue with email';
+        return currentStep.isAuth ? t('common.common.add_email') : t('common.common.continue_with_email');
       case 'otp_code':
-        return 'Confirmation code';
+        return t('common.common.confirmation_code');
       case 'success_email':
       case 'success_wallet':
-        return 'Congrats!';
+        return t('common.common.congrats');
     }
   })();
 
   const content = (() => {
+  const { t } = useTranslation();
     switch (currentStep.type) {
       case 'select_method':
         return <AuthModalScreenSelectMethod onSelectMethod={ onNextStep }/>;

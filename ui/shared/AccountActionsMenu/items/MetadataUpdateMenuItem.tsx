@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ItemProps } from '../types';
 
@@ -9,6 +10,7 @@ import { useMetadataUpdateContext } from 'ui/tokenInstance/contexts/metadataUpda
 import ButtonItem from '../parts/ButtonItem';
 
 const MetadataUpdateMenuItem = ({ type }: ItemProps) => {
+  const { t } = useTranslation();
 
   const { status, setStatus } = useMetadataUpdateContext() || {};
 
@@ -17,11 +19,12 @@ const MetadataUpdateMenuItem = ({ type }: ItemProps) => {
   }, [ setStatus ]);
 
   const element = (() => {
+  const { t } = useTranslation();
     switch (type) {
       case 'button': {
         return (
           <ButtonItem
-            label="Refresh metadata"
+            label={t('shared.common.refresh_metadata')}
             icon="refresh"
             onClick={ handleClick }
             isDisabled={ status === 'WAITING_FOR_RESPONSE' }

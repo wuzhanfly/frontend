@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { INTEROP_MESSAGE } from 'stubs/interop';
@@ -14,6 +15,7 @@ import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 import StickyPaginationWithText from 'ui/shared/StickyPaginationWithText';
 
 const InteropMessages = () => {
+  const { t } = useTranslation();
   const interopMessagesQuery = useQueryWithPages({
     resourceName: 'general:optimistic_l2_interop_messages',
     options: {
@@ -32,6 +34,7 @@ const InteropMessages = () => {
   });
 
   const text = (() => {
+  const { t } = useTranslation();
     if (countQuery.isError) {
       return null;
     }
@@ -69,13 +72,13 @@ const InteropMessages = () => {
   return (
     <>
       <PageTitle
-        title="Interop messages"
+        title={t('common.common.interop_messages')}
         withTextAd
       />
       <DataListDisplay
         isError={ interopMessagesQuery.isError }
         itemsNum={ interopMessagesQuery.data?.items.length }
-        emptyText="There are no interop messages."
+        emptyText={t('common.common.there_are_no_interop_messages')}
         actionBar={ actionBar }
       >
         { content }

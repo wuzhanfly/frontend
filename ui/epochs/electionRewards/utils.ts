@@ -27,16 +27,16 @@ export function getRewardNumText(type: keyof CeloEpochDetails['aggregated_electi
   return `${ num } ${ text }`;
 }
 
-export function getRewardDetailsTableTitles(type: keyof ExcludeNull<CeloEpochDetails['aggregated_election_rewards']>): [string, string] {
+export function getRewardDetailsTableTitles(type: keyof ExcludeNull<CeloEpochDetails['aggregated_election_rewards']>, t: (key: string) => string): [string, string] {
   switch (type) {
     case 'delegated_payment':
-      return [ 'Beneficiary', 'Validator' ];
+      return [ t('epochs.common.beneficiary'), t('epochs.common.validator') ];
     case 'group':
-      return [ 'Validator group', 'Associated validator' ];
+      return [ t('epochs.common.validator_group'), t('epochs.common.associated_validator') ];
     case 'validator':
-      return [ 'Validator', 'Validator group' ];
+      return [ t('epochs.common.validator'), t('epochs.common.validator_group') ];
     case 'voter':
-      return [ 'Voter', 'Validator group' ];
+      return [ t('epochs.common.voter'), t('epochs.common.validator_group') ];
   }
 }
 

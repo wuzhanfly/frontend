@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type { Abi } from 'viem';
 
 import * as addressMock from 'mocks/address/address';
@@ -23,6 +24,8 @@ test.describe('ABI functionality', () => {
   });
 
   test('read', async({ render, createSocket }) => {
+    // Mock translation function for tests
+    const t = (key: string) => key;
     const hooksConfig = {
       router: {
         query: { hash, tab: 'read_contract' },
@@ -32,12 +35,14 @@ test.describe('ABI functionality', () => {
     const socket = await createSocket();
     await socketServer.joinChannel(socket, 'addresses:' + addressMock.contract.hash.toLowerCase());
 
-    await expect(component.getByRole('button', { name: 'Connect wallet' })).toBeVisible();
+    await expect(component.getByRole('button', { name: t('staking.common.connect_wallet') })).toBeVisible();
     await component.getByText('FLASHLOAN_PREMIUM_TOTAL').click();
-    await expect(component.getByLabel('FLASHLOAN_PREMIUM_TOTAL').getByRole('button', { name: 'Read' })).toBeVisible();
+    await expect(component.getByLabel('FLASHLOAN_PREMIUM_TOTAL').getByRole('button', { name: t('addresses.common.read') })).toBeVisible();
   });
 
   test('read, no wallet client', async({ render, createSocket, mockEnvs }) => {
+    // Mock translation function for tests
+    const t = (key: string) => key;
     const hooksConfig = {
       router: {
         query: { hash, tab: 'read_contract' },
@@ -48,12 +53,14 @@ test.describe('ABI functionality', () => {
     const socket = await createSocket();
     await socketServer.joinChannel(socket, 'addresses:' + addressMock.contract.hash.toLowerCase());
 
-    await expect(component.getByRole('button', { name: 'Connect wallet' })).toBeHidden();
+    await expect(component.getByRole('button', { name: t('staking.common.connect_wallet') })).toBeHidden();
     await component.getByText('FLASHLOAN_PREMIUM_TOTAL').click();
-    await expect(component.getByLabel('FLASHLOAN_PREMIUM_TOTAL').getByRole('button', { name: 'Read' })).toBeVisible();
+    await expect(component.getByLabel('FLASHLOAN_PREMIUM_TOTAL').getByRole('button', { name: t('addresses.common.read') })).toBeVisible();
   });
 
   test('write', async({ render, createSocket }) => {
+    // Mock translation function for tests
+    const t = (key: string) => key;
     const hooksConfig = {
       router: {
         query: { hash, tab: 'write_contract' },
@@ -63,17 +70,19 @@ test.describe('ABI functionality', () => {
     const socket = await createSocket();
     await socketServer.joinChannel(socket, 'addresses:' + addressMock.contract.hash.toLowerCase());
 
-    await expect(component.getByRole('button', { name: 'Connect wallet' })).toBeVisible();
+    await expect(component.getByRole('button', { name: t('staking.common.connect_wallet') })).toBeVisible();
     await component.getByText('setReserveInterestRateStrategyAddress').click();
-    await expect(component.getByLabel('9.').getByRole('button', { name: 'Simulate' })).toBeEnabled();
-    await expect(component.getByLabel('9.').getByRole('button', { name: 'Write' })).toBeEnabled();
+    await expect(component.getByLabel('9.').getByRole('button', { name: t('addresses.common.simulate') })).toBeEnabled();
+    await expect(component.getByLabel('9.').getByRole('button', { name: t('addresses.common.write') })).toBeEnabled();
 
     await component.getByText('pause').click();
-    await expect(component.getByLabel('5.').getByRole('button', { name: 'Simulate' })).toBeEnabled();
-    await expect(component.getByLabel('5.').getByRole('button', { name: 'Write' })).toBeEnabled();
+    await expect(component.getByLabel('5.').getByRole('button', { name: t('addresses.common.simulate') })).toBeEnabled();
+    await expect(component.getByLabel('5.').getByRole('button', { name: t('addresses.common.write') })).toBeEnabled();
   });
 
   test('write, no wallet client', async({ render, createSocket, mockEnvs }) => {
+    // Mock translation function for tests
+    const t = (key: string) => key;
     const hooksConfig = {
       router: {
         query: { hash, tab: 'write_contract' },
@@ -85,14 +94,14 @@ test.describe('ABI functionality', () => {
     const socket = await createSocket();
     await socketServer.joinChannel(socket, 'addresses:' + addressMock.contract.hash.toLowerCase());
 
-    await expect(component.getByRole('button', { name: 'Connect wallet' })).toBeHidden();
+    await expect(component.getByRole('button', { name: t('staking.common.connect_wallet') })).toBeHidden();
     await component.getByText('setReserveInterestRateStrategyAddress').click();
-    await expect(component.getByLabel('9.').getByRole('button', { name: 'Simulate' })).toBeEnabled();
-    await expect(component.getByLabel('9.').getByRole('button', { name: 'Write' })).toBeDisabled();
+    await expect(component.getByLabel('9.').getByRole('button', { name: t('addresses.common.simulate') })).toBeEnabled();
+    await expect(component.getByLabel('9.').getByRole('button', { name: t('addresses.common.write') })).toBeDisabled();
 
     await component.getByText('pause').click();
-    await expect(component.getByLabel('5.').getByRole('button', { name: 'Simulate' })).toBeEnabled();
-    await expect(component.getByLabel('5.').getByRole('button', { name: 'Write' })).toBeDisabled();
+    await expect(component.getByLabel('5.').getByRole('button', { name: t('addresses.common.simulate') })).toBeEnabled();
+    await expect(component.getByLabel('5.').getByRole('button', { name: t('addresses.common.write') })).toBeDisabled();
   });
 });
 

@@ -21,6 +21,9 @@
   "epochs.common.validator_group": "Validator group",
   "epochs.common.associated_validator": "Associated validator",
   "epochs.common.voter": "Voter",
+  "epochs.common.epoch": "Epoch",
   "epochs.common.epochs": "Epochs",
-  "epochs.common.there_are_no_epochs": "There are no epochs."
+  "epochs.common.there_are_no_epochs": "There are no epochs.",
+  "epochs.common.ranging_from": "Ranging from",
+  "epochs.common.to": "to"
 }

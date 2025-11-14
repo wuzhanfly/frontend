@@ -14,7 +14,7 @@ type Props = {
   data: NonNullable<AddressMetadataTagFormatted['meta']>;
   className?: string;
   txHash?: string;
-  source: 'Txn' | 'NFT collection' | 'NFT item';
+  source: string;
 };
 
 const AppActionButton = ({ data, className, txHash, source }: Props) => {
@@ -25,7 +25,7 @@ const AppActionButton = ({ data, className, txHash, source }: Props) => {
   const handleClick = React.useCallback(() => {
     const info = appID || actionURL;
     if (info) {
-      mixpanel.logEvent(mixpanel.EventTypes.PAGE_WIDGET, { Type: 'Action button', Info: info, Source: source });
+      mixpanel.logEvent(mixpanel.EventTypes.PAGE_WIDGET, { Type: 'Action button', Info: info, Source: source as 'Txn' | 'NFT collection' | 'NFT item' });
     }
   }, [ source, appID, actionURL ]);
 

@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContractMudSystemItem } from 'types/api/contract';
 
@@ -21,6 +22,7 @@ interface Props {
 }
 
 const ContractMethodsMudSystem = ({ items }: Props) => {
+  const { t } = useTranslation();
 
   const router = useRouter();
 
@@ -53,7 +55,7 @@ const ContractMethodsMudSystem = ({ items }: Props) => {
           items={ items }
           selectedItem={ selectedItem }
           onItemSelect={ handleItemSelect }
-          label="System address"
+          label={ t('addresses.common.system_address') }
           mb={ 3 }
         />
         <ContractMethodsFilters

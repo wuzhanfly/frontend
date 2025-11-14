@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressFromToFilter } from 'types/api/address';
 import { AddressFromToFilterValues } from 'types/api/address';
@@ -11,7 +12,7 @@ import { generateListStub } from 'stubs/utils';
 import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 import getSortParamsFromValue from 'ui/shared/sort/getSortParamsFromValue';
 import getSortValueFromQuery from 'ui/shared/sort/getSortValueFromQuery';
-import { SORT_OPTIONS } from 'ui/txs/useTxsSort';
+import { getSortOptions } from 'ui/txs/useTxsSort';
 
 const getFilterValue = (getFilterValueFromQuery<AddressFromToFilter>).bind(null, AddressFromToFilterValues);
 
@@ -23,8 +24,9 @@ interface Props {
 
 export default function useAddressTxsQuery({ addressHash, enabled, isMultichain }: Props) {
   const router = useRouter();
+  const { t } = useTranslation();
 
-  const [ sort, setSort ] = React.useState<TransactionsSortingValue>(getSortValueFromQuery<TransactionsSortingValue>(router.query, SORT_OPTIONS) || 'default');
+  const [ sort, setSort ] = React.useState<TransactionsSortingValue>(getSortValueFromQuery<TransactionsSortingValue>(router.query, getSortOptions(t)) || 'default');
 
   const initialFilterValue = getFilterValue(router.query.filter);
   const [ filterValue, setFilterValue ] = React.useState<AddressFromToFilter>(initialFilterValue);

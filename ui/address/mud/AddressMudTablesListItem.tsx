@@ -1,6 +1,7 @@
 import { Text, Flex, VStack, chakra, Box, Grid, GridItem, Separator } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressMudTableItem } from 'types/api/address';
 
@@ -21,6 +22,7 @@ type Props = {
 };
 
 const AddressMudTablesListItem = ({ item, isLoading, scrollRef, hash }: Props) => {
+  const { t } = useTranslation();
   const [ isOpened, setIsOpened ] = React.useState(false);
 
   const router = useRouter();
@@ -61,7 +63,7 @@ const AddressMudTablesListItem = ({ item, isLoading, scrollRef, hash }: Props) =
               cursor="pointer"
               onClick={ handleIconClick }
               transitionDuration="faster"
-              aria-label="View schema"
+              aria-label={ t('addresses.common.view_schema') }
             />
           </Link>
         </Skeleton>

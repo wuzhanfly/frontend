@@ -1,0 +1,5 @@
+{
+  "contract_verification.common.contract_verification_via_vyper_standard_json_input": "Contract verification via Vyper (standard JSON input)",
+  "contract_verification.common.standard_input_json": "Standard Input JSON",
+  "contract_verification.common.verify_and_publish_contract": "Verify And Publish Contract"
+}

@@ -16,6 +16,7 @@ import TokenEntity from 'ui/shared/entities/token/TokenEntity';
 import TxEntity from 'ui/shared/entities/tx/TxEntity';
 import TimeWithTooltip from 'ui/shared/time/TimeWithTooltip';
 import { getTokenTransferTypeText } from 'ui/shared/TokenTransfer/helpers';
+import { useTranslation } from 'react-i18next';
 import TxAdditionalInfo from 'ui/txs/TxAdditionalInfo';
 
 type Props = TokenTransfer & {
@@ -40,6 +41,8 @@ const TokenTransferTableItem = ({
   isLoading,
   chainData,
 }: Props) => {
+  const { t } = useTranslation();
+
   const { usd, valueStr } = total && 'value' in total && total.value !== null ? getCurrencyValue({
     value: total.value,
     exchangeRate: token?.exchange_rate,
@@ -80,7 +83,7 @@ const TokenTransferTableItem = ({
             />
             <Flex columnGap={ 2 } rowGap={ 2 } mt={ 2 } flexWrap="wrap">
               <Badge loading={ isLoading }>{ getTokenTypeName(token.type) }</Badge>
-              <Badge colorPalette="orange" loading={ isLoading }>{ getTokenTransferTypeText(type) }</Badge>
+              <Badge colorPalette="orange" loading={ isLoading }>{ getTokenTransferTypeText(type, t) }</Badge>
             </Flex>
           </>
         ) : 'N/A' }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Button, ButtonGroupRadio } from 'toolkit/chakra/button';
 import { Checkbox } from 'toolkit/chakra/checkbox';
@@ -11,6 +12,7 @@ import IconSvg from 'ui/shared/IconSvg';
 import { Section, Container, SectionHeader, SamplesStack, Sample, SectionSubHeader } from './parts';
 
 const ButtonShowcase = () => {
+  const { t } = useTranslation();
   return (
     <Container value="button">
       <Section>
@@ -105,7 +107,7 @@ const ButtonShowcase = () => {
             <Button variant="dropdown" loadingSkeleton>Loading Skeleton</Button>
 
             <PopoverRoot>
-              <Tooltip content="Tooltip content">
+              <Tooltip content={t('common.common.tooltip_content')}>
                 <div>
                   <PopoverTrigger>
                     <Button variant="dropdown" size="md" px={ 2 }>
@@ -237,14 +239,14 @@ const ButtonShowcase = () => {
         <SamplesStack>
           <Sample>
             <ButtonGroupRadio>
-              <Button value="option-1">Option 1</Button>
-              <Button value="option-2">Option 2</Button>
-              <Button value="option-3">Option 3</Button>
+              <Button value={t('common.common.option1')}>Option 1</Button>
+              <Button value={t('common.common.option2')}>Option 2</Button>
+              <Button value={t('common.common.option3')}>Option 3</Button>
             </ButtonGroupRadio>
             <ButtonGroupRadio loading>
-              <Button value="option-1">Option 1</Button>
-              <Button value="option-2">Option 2</Button>
-              <Button value="option-3">Option 3</Button>
+              <Button value={t('common.common.option1')}>Option 1</Button>
+              <Button value={t('common.common.option2')}>Option 2</Button>
+              <Button value={t('common.common.option3')}>Option 3</Button>
             </ButtonGroupRadio>
           </Sample>
         </SamplesStack>

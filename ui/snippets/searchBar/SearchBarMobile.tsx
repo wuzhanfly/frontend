@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -31,6 +32,7 @@ type Props = {
 };
 
 const SearchBarMobile = ({ isHeroBanner }: Props) => {
+  const { t } = useTranslation();
   const inputRef = React.useRef<HTMLFormElement>(null);
   const router = useRouter();
 
@@ -75,7 +77,7 @@ const SearchBarMobile = ({ isHeroBanner }: Props) => {
         />
         <Box
           onClick={ handleOverlayClick }
-          aria-label="Search"
+          aria-label={t('shared.common.search')}
           cursor="pointer"
           zIndex={ 1 }
           position="absolute"

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as tac from '@blockscout/tac-operation-lifecycle-types';
 
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const TacOperationDetails = ({ isLoading, data }: Props) => {
+  const { t } = useTranslation();
 
   const statusHistory = data.status_history.filter((item) => item.is_exist).sort(sortStatusHistory);
 
@@ -26,7 +28,7 @@ const TacOperationDetails = ({ isLoading, data }: Props) => {
       { data?.sender && (
         <>
           <DetailedInfo.ItemLabel
-            hint="The address on the source chain that starts a cross‑chain operation"
+            hint={t('common.common.the_address_on_the_source_chai')}
             isLoading={ isLoading }
           >
             Sender
@@ -42,7 +44,7 @@ const TacOperationDetails = ({ isLoading, data }: Props) => {
       ) }
 
       <DetailedInfo.ItemLabel
-        hint="The status of the operation"
+        hint={t('common.common.the_status_of_the_operation')}
         isLoading={ isLoading }
       >
         Status
@@ -54,7 +56,7 @@ const TacOperationDetails = ({ isLoading, data }: Props) => {
       { data.timestamp && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Block time on the source chain when a cross‑chain operation is formed and sent"
+            hint={t('common.common.block_time_on_the_source_chain')}
             isLoading={ isLoading }
           >
             Timestamp
@@ -68,7 +70,7 @@ const TacOperationDetails = ({ isLoading, data }: Props) => {
       { statusHistory.length > 0 && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Stages of a cross‑chain operation"
+            hint={t('common.common.stages_of_a_crosschain_operati')}
             isLoading={ isLoading }
           >
             Lifecycle

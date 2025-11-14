@@ -1,6 +1,7 @@
 import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ItemProps } from '../types';
 import type { Address } from 'types/api/address';
@@ -22,6 +23,7 @@ interface Props extends ItemProps {
 }
 
 const PrivateTagMenuItem = ({ hash, entityType = 'address', type }: Props) => {
+  const { t } = useTranslation();
   const modal = useDisclosure();
   const queryClient = useQueryClient();
   const router = useRouter();
@@ -53,12 +55,13 @@ const PrivateTagMenuItem = ({ hash, entityType = 'address', type }: Props) => {
   };
 
   const element = (() => {
+  const { t } = useTranslation();
     switch (type) {
       case 'button': {
         return (
           <AuthGuard onAuthSuccess={ modal.onOpen }>
             { ({ onClick }) => (
-              <ButtonItem label="Add private tag" icon="privattags" onClick={ onClick }/>
+              <ButtonItem label={t('shared.common.add_private_tag')} icon="privattags" onClick={ onClick }/>
             ) }
           </AuthGuard>
         );

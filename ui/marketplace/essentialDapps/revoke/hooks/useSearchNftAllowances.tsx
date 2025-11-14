@@ -1,5 +1,6 @@
 import NftArtifact from '@openzeppelin/contracts/build/contracts/ERC721.json';
 import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { getAbiItem, getAddress, slice } from 'viem';
 import type { PublicClient, GetLogsParameters, Log } from 'viem';
 
@@ -126,6 +127,7 @@ function useGetNftAllowances() {
     approvalsForAll: Array<Log>,
     publicClient: PublicClient,
     chain: ChainConfig | undefined,
+    t: (key: string) => string,
     signal?: AbortSignal,
   ) => {
     const allowances: Array<AllowanceType> = [];
@@ -134,7 +136,7 @@ function useGetNftAllowances() {
       await Promise.all(
         tokenAddresses.map(async(tokenAddress) => {
           if (signal?.aborted) {
-            throw new DOMException('Aborted', 'AbortError');
+            throw new DOMException(t('shared.common.aborted'), 'AbortError');
           }
 
           const tokenData = await apiFetch('general:token', {
@@ -180,7 +182,7 @@ function useGetNftAllowances() {
                 if (allowance?.allowance && allowance?.allowance !== BigInt(0)) {
                   allowances.push({
                     type: 'ERC-721',
-                    allowance: allowance?.allowance === BigInt(-1) ? 'Unlimited' : allowance?.allowance.toString(),
+                    allowance: allowance?.allowance === BigInt(-1) ? t('marketplace.common.unlimited') : allowance?.allowance.toString(),
                     address: tokenAddress,
                     name: tokenData.name || undefined,
                     symbol: tokenData.symbol || undefined,
@@ -208,6 +210,9 @@ function useGetNftAllowances() {
 }
 
 export default function useSearchNftAllowances() {
+  const { t } = useTranslation();
+  const apiFetch = useApiFetch();
+  const getBlockTimestamp = useGetBlockTimestamp();
   const getNftAllowances = useGetNftAllowances();
 
   return useCallback(async(
@@ -216,17 +221,19 @@ export default function useSearchNftAllowances() {
     approvalEvents: Array<Log>,
     publicClient: PublicClient,
     latestBlockNumber: bigint,
+    t: (key: string) => string,
     signal?: AbortSignal,
   ) => {
     try {
       const transferEventsPromise = getLogs(
         publicClient,
         {
-          event: getAbiItem({ abi: NftArtifact.abi, name: 'Transfer' }),
+          event: getAbiItem({ abi: NftArtifact.abi, name: t('marketplace.common.transfer') }),
           args: { to: searchQuery },
         } as unknown as GetLogsParameters,
         BigInt(0),
         latestBlockNumber,
+        t,
         signal,
       );
 
@@ -238,6 +245,7 @@ export default function useSearchNftAllowances() {
         } as unknown as GetLogsParameters,
         BigInt(0),
         latestBlockNumber,
+        t,
         signal,
       );
 
@@ -263,17 +271,18 @@ export default function useSearchNftAllowances() {
         .filter(
           (event, i) =>
             i ===
-            approvalEvents.findIndex((other) => event.address === other.address),
+            nftEvents.findIndex((other) => event.address === other.address),
         )
         .map((event) => getAddress(event.address));
 
       return getNftAllowances(
         nftAddresses,
         searchQuery,
-        nftApprovalEvents,
+        nftEvents,
         approvalForAllEvents,
         publicClient,
         chain,
+        t,
         signal,
       );
     } catch {

@@ -1,6 +1,7 @@
 import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SocketMessage } from 'lib/socket/types';
 import type { AddressFromToFilter, AddressTransactionsResponse } from 'types/api/address';
@@ -15,7 +16,7 @@ import useSocketMessage from 'lib/socket/useSocketMessage';
 import getSortValueFromQuery from 'ui/shared/sort/getSortValueFromQuery';
 
 import { sortTxsFromSocket } from '../sortTxs';
-import { SORT_OPTIONS } from '../useTxsSort';
+import { getSortOptions } from '../useTxsSort';
 
 const matchFilter = (filterValue: AddressFromToFilter, transaction: Transaction, address?: string) => {
   if (!filterValue) {
@@ -43,11 +44,12 @@ export default function useTxsSocketTypeAddress({ isLoading }: Params) {
 
   const router = useRouter();
   const queryClient = useQueryClient();
+  const { t } = useTranslation();
 
   const currentAddress = getQueryParamString(router.query.hash);
   const filterValue = getQueryParamString(router.query.filter);
   const page = getQueryParamString(router.query.page);
-  const sort = getSortValueFromQuery<TransactionsSortingValue>(router.query, SORT_OPTIONS) || 'default';
+  const sort = getSortValueFromQuery<TransactionsSortingValue>(router.query, getSortOptions(t)) || 'default';
   const { chain } = useMultichainContext() || {};
 
   const handleNewSocketMessage: SocketMessage.AddressTxs['handler'] = React.useCallback((payload) => {

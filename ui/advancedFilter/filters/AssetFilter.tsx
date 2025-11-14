@@ -1,9 +1,11 @@
 import { Flex, Text, Spinner, createListCollection } from '@chakra-ui/react';
 import { isEqual } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AdvancedFilterParams } from 'types/api/advancedFilter';
 import type { TokenInfo } from 'types/api/token';
+import type { SelectOption } from 'toolkit/chakra/select';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import useDebounce from 'lib/hooks/useDebounce';
@@ -25,13 +27,6 @@ const NAME_PARAM_EXCLUDE = 'token_contract_symbols_to_exclude';
 
 export type AssetFilterMode = 'include' | 'exclude';
 
-const collection = createListCollection({
-  items: [
-    { label: 'Include', value: 'include' },
-    { label: 'Exclude', value: 'exclude' },
-  ],
-});
-
 // add native token
 type Value = Array<{ token: TokenInfo; mode: AssetFilterMode }>;
 
@@ -43,6 +38,13 @@ type Props = {
 };
 
 const AssetFilter = ({ value = [], handleFilterChange }: Props) => {
+  const { t } = useTranslation();
+  const collection = createListCollection<SelectOption<string>>({
+    items: [
+      { label: t('common.common.include'), value: 'include' },
+      { label: t('common.common.exclude'), value: 'exclude' },
+    ],
+  });
   const [ currentValue, setCurrentValue ] = React.useState<Value>([ ...value ]);
   const [ searchTerm, setSearchTerm ] = React.useState<string>('');
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
@@ -90,7 +92,7 @@ const AssetFilter = ({ value = [], handleFilterChange }: Props) => {
 
   return (
     <TableColumnFilter
-      title="Asset"
+      title={ t('common.common.asset') }
       isFilled={ Boolean(currentValue.length) }
       isTouched={ !isEqual(currentValue.map(i => JSON.stringify(i)).sort(), value.map(i => JSON.stringify(i)).sort()) }
       onFilter={ onFilter }
@@ -100,7 +102,7 @@ const AssetFilter = ({ value = [], handleFilterChange }: Props) => {
       <FilterInput
         size="sm"
         onChange={ onSearchChange }
-        placeholder="Token name or symbol"
+        placeholder={ t('tokens.common.token_name_or_symbol') }
         initialValue={ searchTerm }
       />
       { !searchTerm && currentValue.map((item, index) => (
@@ -110,7 +112,7 @@ const AssetFilter = ({ value = [], handleFilterChange }: Props) => {
             value={ [ item.mode ] }
             onValueChange={ handleModeSelectChange(index) }
             collection={ collection }
-            placeholder="Select mode"
+            placeholder={ t('common.common.select_mode') }
             minW="105px"
             w="105px"
             mr={ 3 }

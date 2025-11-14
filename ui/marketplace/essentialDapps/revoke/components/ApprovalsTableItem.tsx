@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AllowanceType } from 'types/client/revoke';
 import type { ChainConfig } from 'types/multichain';
@@ -32,10 +33,11 @@ export default function ApprovalsTableItem({
   isAddressMatch,
   hideApproval,
 }: Props) {
+  const { t } = useTranslation();
   const revoke = useRevoke();
   const [ isPending, setIsPending ] = useState(false);
 
-  const allowance = formatAllowance(approval);
+  const allowance = formatAllowance(approval, t);
 
   const handleRevoke = useCallback(async() => {
     setIsPending(true);
@@ -92,7 +94,7 @@ export default function ApprovalsTableItem({
           <NumberEntity
             value={ allowance }
             postfix={
-              [ 'Unlimited', 'N/A' ].includes(allowance) ? '' : approval.symbol
+              [ t('marketplace.common.unlimited'), 'N/A' ].includes(allowance) ? '' : approval.symbol
             }
           />
         </Skeleton>

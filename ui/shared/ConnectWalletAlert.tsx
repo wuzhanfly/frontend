@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useIsMobile from 'lib/hooks/useIsMobile';
@@ -14,23 +15,24 @@ interface Props {
 }
 
 const ConnectWalletAlert = ({ isLoading }: Props) => {
-  const web3Wallet = useWeb3Wallet({ source: 'Smart contracts' });
+  const { t } = useTranslation();
+  const web3Wallet = useWeb3Wallet({ source: t('shared.common.smart_contracts') as 'Smart contracts' });
   const isMobile = useIsMobile();
 
   const content = (() => {
     if (!web3Wallet.isConnected) {
       return (
         <>
-          <span>Disconnected</span>
+          <span>{t('common.common.disconnected')}</span>
           <Button
             ml={ 3 }
             onClick={ web3Wallet.connect }
             size="sm"
             variant="outline"
             loading={ web3Wallet.isOpen }
-            loadingText="Connect wallet"
+            loadingText={t('staking.common.connect_wallet')}
           >
-            Connect wallet
+            {t('common.common.connect_wallet')}
           </Button>
         </>
       );
@@ -39,7 +41,7 @@ const ConnectWalletAlert = ({ isLoading }: Props) => {
     return (
       <Flex columnGap={ 2 } rowGap={ 2 } alignItems={{ base: 'flex-start', lg: 'center' }} flexDir={{ base: 'column', lg: 'row' }}>
         <Flex alignItems="center">
-          <span>Connected to </span>
+          <span>{t('common.common.connected_to')}&nbsp;</span>
           <AddressEntity
             address={{ hash: web3Wallet.address || '' }}
             truncation={ isMobile ? 'constant' : 'dynamic' }
@@ -48,7 +50,7 @@ const ConnectWalletAlert = ({ isLoading }: Props) => {
             noAltHash
           />
         </Flex>
-        <Button onClick={ web3Wallet.disconnect } size="sm" variant="outline">Disconnect</Button>
+        <Button onClick={ web3Wallet.disconnect } size="sm" variant="outline">{t('common.common.disconnect')}</Button>
       </Flex>
     );
   })();

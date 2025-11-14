@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { getAddress, isAddress, isHex } from 'viem';
 
 import type { MatchInt } from './utils';
@@ -11,6 +12,7 @@ interface Params {
 }
 
 export default function useValidateField({ isOptional, argType, argTypeMatchInt }: Params) {
+  const { t } = useTranslation();
 
   const bytesMatch = React.useMemo(() => {
     return argType.match(BYTES_REGEXP);
@@ -20,12 +22,12 @@ export default function useValidateField({ isOptional, argType, argTypeMatchInt 
   // see ./useFormatFieldValue.tsx hook
   return React.useCallback((value: string | boolean | undefined) => {
     if (value === undefined || value === '') {
-      return isOptional ? true : 'Field is required';
+      return isOptional ? true : t('common.common.field_is_required');
     }
 
     if (argType === 'address') {
       if (typeof value !== 'string' || !isAddress(value)) {
-        return 'Invalid address format';
+        return t('addresses.common.invalid_address_format');
       }
 
       // all lowercase addresses are valid
@@ -35,7 +37,7 @@ export default function useValidateField({ isOptional, argType, argTypeMatchInt 
       }
 
       // check if address checksum is valid
-      return getAddress(value) === value ? true : 'Invalid address checksum';
+      return getAddress(value) === value ? true : t('addresses.common.invalid_address_checksum');
     }
 
     if (argTypeMatchInt) {
@@ -48,7 +50,7 @@ export default function useValidateField({ isOptional, argType, argTypeMatchInt 
       })();
 
       if (typeof value !== 'string' || valueBi === null) {
-        return 'Invalid integer format';
+        return t('addresses.common.invalid_integer_format');
       }
 
       if (valueBi > argTypeMatchInt.max || valueBi < argTypeMatchInt.min) {
@@ -70,7 +72,7 @@ export default function useValidateField({ isOptional, argType, argTypeMatchInt 
       const [ , length ] = bytesMatch;
 
       if (!isHex(value)) {
-        return 'Invalid bytes format';
+        return t('addresses.common.invalid_bytes_format');
       }
 
       if (length) {

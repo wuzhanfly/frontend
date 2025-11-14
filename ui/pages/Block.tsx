@@ -2,6 +2,7 @@ import { chakra, Flex } from '@chakra-ui/react';
 import { capitalize } from 'es-toolkit';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 import type { PaginationParams } from 'ui/shared/pagination/types';
@@ -47,6 +48,7 @@ const TAB_LIST_PROPS = {
 const TABS_HEIGHT = 88;
 
 const BlockPageContent = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMobile = useIsMobile();
   const heightOrHash = getQueryParamString(router.query.height_or_hash);
@@ -70,7 +72,7 @@ const BlockPageContent = () => {
   const tabs: Array<TabItemRegular> = React.useMemo(() => ([
     {
       id: 'index',
-      title: 'Details',
+      title: t('transactions.common.details'),
       component: (
         <>
           <Flex rowGap={{ base: 1, lg: 2 }} mb={{ base: 3, lg: 6 }} flexDir="column">
@@ -83,7 +85,7 @@ const BlockPageContent = () => {
     },
     {
       id: 'txs',
-      title: 'Transactions',
+      title: t('transactions.common.transactions'),
       component: (
         <>
           { blockTxsQuery.isDegradedData && <ServiceDegradationWarning isLoading={ blockTxsQuery.isPlaceholderData } mb={{ base: 3, lg: 6 }}/> }
@@ -93,7 +95,7 @@ const BlockPageContent = () => {
     },
     blockQuery.data?.internal_transactions_count ? {
       id: 'internal_txs',
-      title: 'Internal txns',
+      title: t('transactions.common.internal_txns'),
       component: (
         <>
           { blockTxsQuery.isDegradedData && <ServiceDegradationWarning isLoading={ blockTxsQuery.isPlaceholderData } mb={{ base: 3, lg: 6 }}/> }
@@ -104,7 +106,7 @@ const BlockPageContent = () => {
     config.features.dataAvailability.isEnabled && blockQuery.data?.blob_transaction_count ?
       {
         id: 'blob_txs',
-        title: 'Blob txns',
+        title: t('transactions.common.blob_txns'),
         component: (
           <TxsWithFrontendSorting query={ blockBlobTxsQuery } showBlockInfo={ false }/>
         ),
@@ -112,7 +114,7 @@ const BlockPageContent = () => {
     config.features.beaconChain.isEnabled && Boolean(blockQuery.data?.beacon_deposits_count) ?
       {
         id: 'deposits',
-        title: 'Deposits',
+        title: t('common.common.deposits'),
         component: (
           <>
             { blockDepositsQuery.isDegradedData && <ServiceDegradationWarning isLoading={ blockDepositsQuery.isPlaceholderData } mb={{ base: 3, lg: 6 }}/> }
@@ -123,7 +125,7 @@ const BlockPageContent = () => {
     config.features.beaconChain.isEnabled && Boolean(blockQuery.data?.withdrawals_count) ?
       {
         id: 'withdrawals',
-        title: 'Withdrawals',
+        title: t('common.common.withdrawals'),
         component: (
           <>
             { blockWithdrawalsQuery.isDegradedData &&

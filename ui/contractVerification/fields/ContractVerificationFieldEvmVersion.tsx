@@ -1,5 +1,6 @@
 import { createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 import type { SmartContractVerificationConfig } from 'types/client/contract';
@@ -15,6 +16,7 @@ interface Props {
 }
 
 const ContractVerificationFieldEvmVersion = ({ isVyper, config }: Props) => {
+  const { t } = useTranslation();
   const collection = React.useMemo(() => {
     const items = (isVyper ? config?.vyper_evm_versions : config?.solidity_evm_versions)?.map((option) => ({ label: option, value: option })) || [];
 
@@ -25,7 +27,7 @@ const ContractVerificationFieldEvmVersion = ({ isVyper, config }: Props) => {
     <ContractVerificationFormRow>
       <FormFieldSelect<FormFields, 'evm_version'>
         name="evm_version"
-        placeholder="EVM Version"
+        placeholder={t('common.common.evm_version')}
         collection={ collection }
         required
       />

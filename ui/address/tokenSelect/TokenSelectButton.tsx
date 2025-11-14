@@ -1,5 +1,6 @@
 import { Box, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormattedData } from './types';
 
@@ -18,6 +19,7 @@ interface Props {
 }
 
 const TokenSelectButton = ({ isOpen, isLoading, data, ...rest }: Props, ref: React.ForwardedRef<HTMLButtonElement>) => {
+  const { t } = useTranslation();
   const { usd, num, isOverflow } = getTokensTotalInfo(data);
 
   const prefix = isOverflow ? '>' : '';
@@ -38,7 +40,7 @@ const TokenSelectButton = ({ isOpen, isLoading, data, ...rest }: Props, ref: Rea
         variant="dropdown"
         onClick={ handleClick }
         gap={ 0 }
-        aria-label="Token select"
+        aria-label={ t('addresses.common.token_select') }
         { ...rest }
       >
         <IconSvg name="tokens" boxSize={ 4 } mr={ 2 }/>

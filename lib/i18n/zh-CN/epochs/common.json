@@ -21,6 +21,9 @@
   "epochs.common.validator_group": "验证者组",
   "epochs.common.associated_validator": "关联验证者",
   "epochs.common.voter": "投票者",
+  "epochs.common.epoch": "纪元",
   "epochs.common.epochs": "纪元",
-  "epochs.common.there_are_no_epochs": "暂无纪元。"
+  "epochs.common.there_are_no_epochs": "暂无纪元。",
+  "epochs.common.ranging_from": "范围从",
+  "epochs.common.to": "到"
 }

@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ApiKey } from 'types/api/account';
 
@@ -13,8 +14,9 @@ type Props = {
 };
 
 const ApiKeyModal: React.FC<Props> = ({ open, onOpenChange, data }) => {
-  const title = data ? 'Edit API key' : 'New API key';
-  const text = !data ? 'Add an application name to identify your API key. Click the button below to auto-generate the associated key.' : '';
+  const { t } = useTranslation();
+  const title = data ? t('common.common.edit_api_key') : t('common.common.new_api_key');
+  const text = !data ? t('common.common.aaant') : '';
 
   const [ isAlertVisible, setAlertVisible ] = useState(false);
 

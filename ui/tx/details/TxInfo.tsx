@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as tac from '@blockscout/tac-operation-lifecycle-types';
 import { SCROLL_L2_BLOCK_STATUSES } from 'types/api/scrollL2';
@@ -82,6 +83,7 @@ const externalTxFeature = config.features.externalTxs;
 const rollupFeature = config.features.rollup;
 
 const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
+  const { t } = useTranslation();
   const [ isExpanded, setIsExpanded ] = React.useState(false);
 
   const isMobile = useIsMobile();
@@ -122,14 +124,14 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
   ].map((tag) => <Badge key={ tag.label }>{ tag.display_name }</Badge>);
 
   const executionSuccessBadge = toAddress?.is_contract && data.result === 'success' ? (
-    <Tooltip content="Contract execution completed">
+    <Tooltip content={t('transactions.common.contract_execution_completed')}>
       <chakra.span display="inline-flex" ml={ 2 } mr={ 1 }>
         <IconSvg name="status/success" boxSize={ 4 } color={{ _light: 'blackAlpha.800', _dark: 'whiteAlpha.800' }} cursor="pointer"/>
       </chakra.span>
     </Tooltip>
   ) : null;
   const executionFailedBadge = toAddress?.is_contract && Boolean(data.status) && data.result !== 'success' ? (
-    <Tooltip content="Error occurred during contract execution">
+    <Tooltip content={t('transactions.common.error_occurred_during_contract')}>
       <chakra.span display="inline-flex" ml={ 2 } mr={ 1 }>
         <IconSvg name="status/error" boxSize={ 4 } color="text.error" cursor="pointer"/>
       </chakra.span>
@@ -165,7 +167,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
         hint="Unique character string (TxID) assigned to every verified transaction"
         isLoading={ isLoading }
       >
-        Transaction hash
+        {t('transactions.common.transaction_hash')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue multiRow={ config.features.externalTxs.isEnabled && externalTxsQuery.data && externalTxsQuery.data.length > 0 }>
         <Flex flexWrap="nowrap" alignItems="center" overflow="hidden">
@@ -196,21 +198,21 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
         {
           rollupFeature.isEnabled &&
           (rollupFeature.type === 'zkEvm' || rollupFeature.type === 'zkSync' || rollupFeature.type === 'arbitrum' || rollupFeature.type === 'scroll') ?
-            'L2 status and method' :
-            'Status and method'
+            t('transactions.common.l2_status_and_method') :
+            t('transactions.common.status_and_method')
         }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <TxStatus status={ data.status } errorText={ data.status === 'error' ? data.result : undefined } isLoading={ isLoading }/>
         { data.method && (
-          <Badge colorPalette={ data.method === 'Multicall' ? 'teal' : 'gray' } loading={ isLoading } truncated ml={ 3 }>
+          <Badge colorPalette={ data.method === t('common.common.multicall') ? 'teal' : 'gray' } loading={ isLoading } truncated ml={ 3 }>
             { data.method }
           </Badge>
         ) }
         { data.arbitrum?.contains_message && (
           <Skeleton loading={ isLoading } onClick={ showAssociatedL1Tx }>
             <Link truncate ml={ 3 }>
-              { data.arbitrum?.contains_message === 'incoming' ? 'Incoming message' : 'Outgoing message' }
+              { data.arbitrum?.contains_message === 'incoming' ? t('transactions.common.incoming_message') : t('transactions.common.outgoing_message') }
             </Link>
           </Skeleton>
         ) }
@@ -220,16 +222,16 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
       !config.UI.views.tx.hiddenFields?.L1_status && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Detailed status progress of the transaction"
+            hint={t('transactions.common.detailed_status_progress_of_th')}
           >
-            Withdrawal status
+            {t('transactions.common.withdrawal_status')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Flex flexDir="column" rowGap={ 2 }>
               { data.op_withdrawals.map((withdrawal) => (
                 <Box key={ withdrawal.nonce }>
                   <Box mb={ 2 }>
-                    <span>Nonce: </span>
+                    <span>{t('common.common.nonce')}{t('common.common.colon')} </span>
                     <chakra.span fontWeight={ 600 }>{ withdrawal.nonce }</chakra.span>
                   </Box>
                   <TxDetailsWithdrawalStatusOptimistic
@@ -246,10 +248,10 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
       { data.zkevm_status && !config.UI.views.tx.hiddenFields?.L1_status && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Status of the transaction confirmation path to L1"
+            hint={t('transactions.common.status_of_the_transaction_conf')}
             isLoading={ isLoading }
           >
-            Confirmation status
+            {t('transactions.common.confirmation_status')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <VerificationSteps currentStep={ data.zkevm_status } steps={ ZKEVM_L2_TX_STATUSES } isLoading={ isLoading }/>
@@ -260,10 +262,10 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
       { data.arbitrum?.status && !config.UI.views.tx.hiddenFields?.L1_status && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Status of the transaction confirmation path to L1"
+            hint={t('transactions.common.status_of_the_transaction_conf')}
             isLoading={ isLoading }
           >
-            L1 status
+            {t('common.common.l1_status')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <VerificationSteps
@@ -279,7 +281,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
       { data.revert_reason && (
         <>
           <DetailedInfo.ItemLabel
-            hint="The revert reason of the transaction"
+            hint={t('transactions.common.the_revert_reason_of_the_trans')}
           >
             Revert reason
           </DetailedInfo.ItemLabel>
@@ -292,10 +294,10 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
       { data.zksync && !config.UI.views.tx.hiddenFields?.L1_status && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Status is the short interpretation of the batch lifecycle"
+            hint={t('transactions.common.status_is_the_short_interpreta')}
             isLoading={ isLoading }
           >
-            L1 status
+            {t('common.common.l1_status')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <VerificationSteps steps={ ZKSYNC_L2_TX_BATCH_STATUSES } currentStep={ data.zksync.status } isLoading={ isLoading }/>
@@ -304,10 +306,10 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
       ) }
 
       <DetailedInfo.ItemLabel
-        hint="Block number containing the transaction"
+        hint={t('transactions.common.block_number_containing_the_tr')}
         isLoading={ isLoading }
       >
-        Block
+        {t('transactions.common.block')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue multiRow={ Boolean(data.scroll?.l2_block_status) }>
         { data.block_number === null ?
@@ -340,7 +342,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
             hint="Batch index for this transaction"
             isLoading={ isLoading }
           >
-            Txn batch
+            {t('transactions.common.txn_batch')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <BatchEntityL2
@@ -354,10 +356,10 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
       { data.zksync && !config.UI.views.tx.hiddenFields?.batch && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Batch number"
+            hint={t('transactions.common.batch_number')}
             isLoading={ isLoading }
           >
-            Batch
+            {t('transactions.common.batch')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             { data.zksync.batch_number ? (
@@ -373,10 +375,10 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
       { data.arbitrum && !config.UI.views.tx.hiddenFields?.batch && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Index of the batch containing this transaction"
+            hint={t('transactions.common.index_of_the_batch_containing_')}
             isLoading={ isLoading }
           >
-            Batch
+            {t('transactions.common.batch')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             { data.arbitrum.batch_number ?
@@ -392,7 +394,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
             hint="Date & time of transaction inclusion, including length of time for confirmation"
             isLoading={ isLoading }
           >
-            Timestamp
+            {t('transactions.common.timestamp')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue multiRow>
             <Flex alignItems="center" maxW="100%">
@@ -413,10 +415,10 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
       { data.execution_node && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Node that carried out the confidential computation"
+            hint={t('transactions.common.node_that_carried_out_the_conf')}
             isLoading={ isLoading }
           >
-            Kettle
+            {t('transactions.common.kettle')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <AddressEntity
@@ -441,7 +443,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
         hint="Address (external or contract) sending the transaction"
         isLoading={ isLoading }
       >
-        From
+        {t('transactions.common.from')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue columnGap={ 3 }>
         <AddressEntity
@@ -460,7 +462,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
         hint="Address (external or contract) receiving the transaction"
         isLoading={ isLoading }
       >
-        { data.to?.is_contract ? 'Interacted with contract' : 'To' }
+        { data.to?.is_contract ? t('transactions.common.interacted_with_contract') : t('transactions.common.to') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue
         flexWrap={{ base: 'wrap', lg: 'nowrap' }}
@@ -479,13 +481,13 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
               </Flex>
             ) : (
               <Flex width="100%" whiteSpace="pre" alignItems="center" flexShrink={ 0 }>
-                <span>[Contract </span>
+                <span>[{t('transactions.common.contract')} </span>
                 <AddressEntity
                   address={ toAddress }
                   isLoading={ isLoading }
                   noIcon
                 />
-                <span>created]</span>
+                <span>{t('transactions.common.created')}]</span>
                 { executionSuccessBadge }
                 { executionFailedBadge }
               </Flex>
@@ -497,7 +499,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
             ) }
           </>
         ) : (
-          <span>[ Contract creation ]</span>
+          <span>[ {t('transactions.common.contract')} {t('transactions.common.creation')} ]</span>
         ) }
       </DetailedInfo.ItemValue>
 
@@ -507,9 +509,9 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
         <>
           <DetailedInfo.ItemLabel
             isLoading={ isLoading }
-            hint="The target address where this cross-chain transaction is executed"
+            hint={t('transactions.common.the_target_address_where_this_')}
           >
-            Interop target
+            {t('transactions.common.interop_target')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <VStack gap={ 2 } w="100%" overflow="hidden" alignItems="flex-start">
@@ -541,28 +543,28 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
           { data.arbitrum?.commitment_transaction.hash && (
             <>
               <DetailedInfo.ItemLabel
-                hint="L1 transaction containing this batch commitment"
+                hint={t('transactions.common.l1_transaction_containing_this')}
                 isLoading={ isLoading }
               >
-                Commitment tx
+                {t('transactions.common.commitment_tx')}
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue>
                 <TxEntityL1 hash={ data.arbitrum?.commitment_transaction.hash } isLoading={ isLoading }/>
-                { data.arbitrum?.commitment_transaction.status === 'finalized' && <StatusTag type="ok" text="Finalized" ml={ 2 }/> }
+                { data.arbitrum?.commitment_transaction.status === 'finalized' && <StatusTag type="ok" text={t('shared.common.finalized')} ml={ 2 }/> }
               </DetailedInfo.ItemValue>
             </>
           ) }
           { data.arbitrum?.confirmation_transaction.hash && (
             <>
               <DetailedInfo.ItemLabel
-                hint="L1 transaction containing confirmation of this batch"
+                hint={t('transactions.common.l1_transaction_containing_conf')}
                 isLoading={ isLoading }
               >
-                Confirmation tx
+                {t('transactions.common.confirmation_tx')}
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue>
                 <TxEntityL1 hash={ data.arbitrum?.confirmation_transaction.hash } isLoading={ isLoading }/>
-                { data.arbitrum?.commitment_transaction.status === 'finalized' && <StatusTag type="ok" text="Finalized" ml={ 2 }/> }
+                { data.arbitrum?.commitment_transaction.status === 'finalized' && <StatusTag type="ok" text={t('shared.common.finalized')} ml={ 2 }/> }
               </DetailedInfo.ItemValue>
             </>
           ) }
@@ -575,7 +577,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
           <DetailedInfo.ItemLabel
             isLoading={ isLoading }
           >
-            Sequence tx hash
+            {t('transactions.common.sequence_tx_hash')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue flexWrap="nowrap">
             <Skeleton loading={ isLoading } overflow="hidden">
@@ -592,7 +594,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
           <DetailedInfo.ItemLabel
             isLoading={ isLoading }
           >
-            Verify tx hash
+            {t('transactions.common.verify_tx_hash')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue flexWrap="nowrap">
             <Skeleton loading={ isLoading } overflow="hidden">
@@ -611,7 +613,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
             hint="Value sent in the native token (and USD) if applicable"
             isLoading={ isLoading }
           >
-            Value
+            {t('transactions.common.value')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <CurrencyValue
@@ -630,9 +632,9 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
       { rollupFeature.isEnabled && rollupFeature.type === 'optimistic' && data.operator_fee && (
         <>
           <DetailedInfo.ItemLabel
-            hint="A fee set by the chain operator to cover extra costs of additional services"
+            hint={t('transactions.common.a_fee_set_by_the_chain_operato')}
           >
-            Operator fee
+            {t('transactions.common.operator_fee')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue multiRow>
             <CurrencyValue
@@ -651,7 +653,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
             hint="Fee paid to the poster for L1 resources"
             isLoading={ isLoading }
           >
-            Poster fee
+            {t('transactions.common.poster_fee')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <CurrencyValue
@@ -667,7 +669,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
             hint="Fee paid to the network for L2 resources"
             isLoading={ isLoading }
           >
-            Network fee
+            {t('transactions.common.network_fee')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <CurrencyValue
@@ -693,7 +695,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
             hint="L2 gas set aside for L1 data charges"
             isLoading={ isLoading }
           >
-            Gas used for L1
+            {t('transactions.common.gas_used_for_l1')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ isLoading }>{ BigNumber(data.arbitrum.gas_used_for_l1 || 0).toFormat() }</Skeleton>
@@ -706,10 +708,10 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
           </DetailedInfo.ItemValue>
 
           <DetailedInfo.ItemLabel
-            hint="L2 gas spent on L2 resources"
+            hint={t('transactions.common.l2_gas_spent_on_l2_resources')}
             isLoading={ isLoading }
           >
-            Gas used for L2
+            {t('transactions.common.gas_used_for_l2')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ isLoading }>{ BigNumber(data.arbitrum.gas_used_for_l2 || 0).toFormat() }</Skeleton>
@@ -726,10 +728,10 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
       { data.scroll?.l1_gas_used !== undefined && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Total gas used on L1"
+            hint={t('transactions.common.total_gas_used_on_l1')}
             isLoading={ isLoading }
           >
-            L1 Gas used
+            {t('transactions.common.l1_gas_used')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ isLoading }>{ BigNumber(data.scroll?.l1_gas_used || 0).toFormat() }</Skeleton>
@@ -782,10 +784,10 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
           { data.l1_gas_used && (
             <>
               <DetailedInfo.ItemLabel
-                hint="L1 gas used by transaction"
+                hint={t('transactions.common.l1_gas_used_by_transaction')}
                 isLoading={ isLoading }
               >
-                L1 gas used by txn
+                {t('transactions.common.l1_gas_used_by_txn')}
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue>
                 <Text>{ BigNumber(data.l1_gas_used).toFormat() }</Text>
@@ -796,10 +798,10 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
           { data.l1_gas_price && (
             <>
               <DetailedInfo.ItemLabel
-                hint="L1 gas price"
+                hint={t('transactions.common.l1_gas_price')}
                 isLoading={ isLoading }
               >
-                L1 gas price
+                {t('transactions.common.l1_gas_price')}
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue multiRow>
                 <Text mr={ 1 }>
@@ -817,7 +819,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
                 hint={ `L1 Data Fee which is used to cover the L1 "security" cost from the batch submission mechanism. In combination with L2 execution fee, L1 fee makes the total amount of fees that a transaction pays.` }
                 isLoading={ isLoading }
               >
-                L1 fee
+                {t('transactions.common.l1_fee')}
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue multiRow>
                 <CurrencyValue
@@ -837,7 +839,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
                 hint="A Dynamic overhead (fee scalar) premium, which serves as a buffer in case L1 prices rapidly increase."
                 isLoading={ isLoading }
               >
-                L1 fee scalar
+                {t('transactions.common.l1_fee_scalar')}
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue>
                 <Text>{ data.l1_fee_scalar }</Text>
@@ -862,7 +864,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
                 <DetailedInfo.ItemLabel
                   hint="Blob fee for this transaction"
                 >
-                  Blob fee
+                  {t('transactions.common.blob_fee')}
                 </DetailedInfo.ItemLabel>
                 <DetailedInfo.ItemValue>
                   <CurrencyValue
@@ -879,9 +881,9 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
             { data.blob_gas_used && (
               <>
                 <DetailedInfo.ItemLabel
-                  hint="Amount of gas used by the blobs in this transaction"
+                  hint={t('transactions.common.amount_of_gas_used_by_the_blob')}
                 >
-                  Blob gas usage
+                  {t('transactions.common.blob_gas_usage')}
                 </DetailedInfo.ItemLabel>
                 <DetailedInfo.ItemValue>
                   { BigNumber(data.blob_gas_used).toFormat() }
@@ -920,7 +922,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
           hint="Binary data included with the transaction. See logs tab for additional info"
           mb={{ base: 1, lg: 0 }}
         >
-          Raw input
+          {t('transactions.common.raw_input')}
         </DetailedInfo.ItemLabel>
         <DetailedInfo.ItemValue>
           <RawInputData hex={ data.raw_input } defaultDataType={ data.zilliqa?.is_scilla ? 'UTF-8' : 'Hex' }/>
@@ -929,7 +931,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
         { data.decoded_input && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Decoded input data"
+              hint={t('transactions.common.decoded_input_data')}
             >
               Decoded input data
             </DetailedInfo.ItemLabel>

@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { InternalTransaction } from 'types/api/internalTransaction';
 import type { ChainConfig } from 'types/multichain';
@@ -15,7 +16,7 @@ import TxEntity from 'ui/shared/entities/tx/TxEntity';
 import TxStatus from 'ui/shared/statusTag/TxStatus';
 import TimeWithTooltip from 'ui/shared/time/TimeWithTooltip';
 import TruncatedValue from 'ui/shared/TruncatedValue';
-import { TX_INTERNALS_ITEMS } from 'ui/tx/internals/utils';
+import { getTxInternalsItems } from 'ui/tx/internals/utils';
 
 type Props = InternalTransaction & { currentAddress?: string; isLoading?: boolean; showBlockInfo?: boolean; chainData?: ChainConfig };
 
@@ -35,7 +36,8 @@ const InternalTxsTableItem = ({
   showBlockInfo = true,
   chainData,
 }: Props) => {
-  const typeTitle = TX_INTERNALS_ITEMS.find(({ id }) => id === type)?.title;
+  const { t } = useTranslation();
+  const typeTitle = getTxInternalsItems(t).find(({ id }) => id === type)?.title;
   const toData = to ? to : createdContract;
 
   return (

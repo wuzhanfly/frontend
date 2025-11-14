@@ -10,7 +10,7 @@ export type ResultViewMode = 'preview' | 'result';
 // we manually add inputs and outputs to the fallback method because viem doesn't support it
 // but as we discussed with @k1rill-fedoseev, it's a good idea to have them for fallback method of any contract
 // also, according to @k1rill-fedoseev, fallback method can act as a read method when it has 'view' state mutability
-// but viem doesn't aware of this and thinks that fallback method state mutability can only be 'payable' or 'nonpayable'
+// but viem doesnt('addresses.common.t_aware_of_this_and_thinks_tha')payable' or 'nonpayable'
 // so we have to redefine the stateMutability as well to include "view" option
 // see "addInputsToFallback" and "isReadMethod" functions in utils.ts
 export interface AbiFallback extends Pick<AbiFallbackViem, 'type' | 'payable'> {

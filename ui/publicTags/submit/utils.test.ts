@@ -1,6 +1,8 @@
 import * as mocks from './mocks';
 import { convertFormDataToRequestsBody, convertTagApiFieldsToFormFields, groupSubmitResult } from './utils';
 
+const t = (key: string) => key;
+
 describe('function convertFormDataToRequestsBody()', () => {
   it('should convert form data to requests body', () => {
     const formData = {
@@ -19,7 +21,7 @@ describe('function convertFormDataToRequestsBody()', () => {
 });
 
 describe('function groupSubmitResult()', () => {
-  it('group success result', () => {
+  it(t('common.common.group_success_result'), () => {
     const result = groupSubmitResult(mocks.allSuccessResponses);
     expect(result).toMatchObject({
       requesterName: mocks.baseFields.requesterName,
@@ -36,7 +38,7 @@ describe('function groupSubmitResult()', () => {
     });
   });
 
-  it('group result with error', () => {
+  it(t('common.common.group_result_with_error'), () => {
     const result = groupSubmitResult(mocks.mixedResponses);
     expect(result).toMatchObject({
       requesterName: mocks.baseFields.requesterName,
@@ -55,17 +57,17 @@ describe('function groupSubmitResult()', () => {
           tags: [ mocks.tag3 ],
         },
         {
-          error: 'Some error',
+          error: t('common.common.some_error'),
           addresses: [ mocks.address1, mocks.address2 ],
           tags: [ mocks.tag2, mocks.tag3 ],
         },
         {
-          error: 'Some error',
+          error: t('common.common.some_error'),
           addresses: [ mocks.address3 ],
           tags: [ mocks.tag1 ],
         },
         {
-          error: 'Another nasty error',
+          error: t('common.common.another_nasty_error'),
           addresses: [ mocks.address3 ],
           tags: [ mocks.tag2 ],
         },

@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { MethodType } from './types';
 
@@ -7,7 +8,7 @@ import { ButtonGroupRadio, Button } from 'toolkit/chakra/button';
 import { FilterInput } from 'toolkit/components/filters/FilterInput';
 
 import type { MethodsFilters } from './useMethodsFilters';
-import { TYPE_FILTER_OPTIONS } from './utils';
+import { getDefaultTypeFilterOptions } from './utils';
 
 interface Props {
   defaultMethodType: MethodType;
@@ -17,6 +18,12 @@ interface Props {
 }
 
 const ContractMethodsFilters = ({ defaultMethodType, defaultSearchTerm, onChange, isLoading }: Props) => {
+  const { t } = useTranslation();
+  const TYPE_FILTER_OPTIONS = [
+    { value: 'all', title: t('validators.common.all') },
+    { value: 'read', title: t('addresses.common.read') },
+    { value: 'write', title: t('addresses.common.write') },
+  ];
 
   const handleTypeChange = React.useCallback((value: string) => {
     onChange({ type: 'method_type', value: value as MethodType });
@@ -43,7 +50,7 @@ const ContractMethodsFilters = ({ defaultMethodType, defaultSearchTerm, onChange
       <FilterInput
         initialValue={ defaultSearchTerm }
         onChange={ handleSearchTermChange }
-        placeholder="Search by method name"
+        placeholder={ t('common.common.search_by_method_name') }
         w={{ base: '100%', lg: '450px' }}
         size="sm"
         loading={ isLoading }

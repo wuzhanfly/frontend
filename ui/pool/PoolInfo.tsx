@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Pool } from 'types/api/pools';
 
@@ -13,11 +14,12 @@ type Props = {
 };
 
 const PoolInfo = ({ data, isPlaceholderData }: Props) => {
+  const { t } = useTranslation();
   return (
     <DetailedInfo.Container>
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="The base token in a liquidity pool pair"
+        hint={t('pools.common.the_base_token_in_a_liquidity_')}
       >
         Base token
       </DetailedInfo.ItemLabel>
@@ -37,7 +39,7 @@ const PoolInfo = ({ data, isPlaceholderData }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="The quote token in a liquidity pool pair"
+        hint={t('pools.common.the_quote_token_in_a_liquidity')}
       >
         Quote token
       </DetailedInfo.ItemLabel>
@@ -72,7 +74,7 @@ const PoolInfo = ({ data, isPlaceholderData }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Current market capitalization of the base token"
+        hint={t('pools.common.current_market_capitalization_')}
       >
         Base token market cap
       </DetailedInfo.ItemLabel>
@@ -102,7 +104,7 @@ const PoolInfo = ({ data, isPlaceholderData }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Current market capitalization of the base token"
+        hint={t('pools.common.current_market_capitalization_')}
       >
         Quote token market cap
       </DetailedInfo.ItemLabel>
@@ -117,7 +119,7 @@ const PoolInfo = ({ data, isPlaceholderData }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Current liquidity of the pool"
+        hint={t('pools.common.current_liquidity_of_the_pool')}
       >
         Liquidity
       </DetailedInfo.ItemLabel>
@@ -129,7 +131,7 @@ const PoolInfo = ({ data, isPlaceholderData }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="DEX where the pool is traded"
+        hint={t('pools.common.dex_where_the_pool_is_traded')}
       >
         DEX
       </DetailedInfo.ItemLabel>

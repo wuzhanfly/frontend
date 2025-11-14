@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Route } from 'nextjs-routes';
 
@@ -14,6 +15,7 @@ type Props = {
 };
 
 const NavLinkRewards = ({ isCollapsed, onClick }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
   const { openLoginModal, dailyRewardQuery, apiToken, isInitialized } = useRewardsContext();
 
@@ -35,7 +37,7 @@ const NavLinkRewards = ({ isCollapsed, onClick }: Props) => {
   return (
     <NavLink
       item={{
-        text: 'Merits',
+        text: t('staking.common.merits'),
         icon: dailyRewardQuery.data?.available ? 'merits_with_dot' : 'merits',
         nextRoute: nextRoute,
         isActive: router.pathname === pathname,

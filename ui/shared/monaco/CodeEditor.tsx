@@ -13,6 +13,7 @@ import isMetaKey from 'lib/isMetaKey';
 import { useColorMode } from 'toolkit/chakra/color-mode';
 import { useClientRect } from 'toolkit/hooks/useClientRect';
 import ErrorBoundary from 'ui/shared/ErrorBoundary';
+import { useTranslation } from 'react-i18next';
 
 import CodeEditorBreadcrumbs from './CodeEditorBreadcrumbs';
 import CodeEditorLoading from './CodeEditorLoading';
@@ -49,6 +50,7 @@ interface Props {
 }
 
 const CodeEditor = ({ data, remappings, libraries, language, mainFile, contractName }: Props) => {
+  const { t } = useTranslation();
   const [ instance, setInstance ] = React.useState<Monaco | undefined>();
   const [ editor, setEditor ] = React.useState<monaco.editor.IStandaloneCodeEditor | undefined>();
   const [ index, setIndex ] = React.useState(0);
@@ -118,13 +120,13 @@ const CodeEditor = ({ data, remappings, libraries, language, mainFile, contractN
         .forEach((model) => {
           contractName && mainFile === model.uri.path && addMainContractCodeDecoration(model, contractName, editor);
           addFileImportDecorations(model);
-          libraries?.length && addExternalLibraryWarningDecoration(model, libraries);
+          libraries?.length && addExternalLibraryWarningDecoration(model, libraries, t);
         });
     }
 
     editor.addAction({
       id: 'close-tab',
-      label: 'Close current tab',
+      label: t('shared.common.close_current_tab'),
       keybindings: [
         monaco.KeyMod.Alt | monaco.KeyCode.KeyW,
       ],

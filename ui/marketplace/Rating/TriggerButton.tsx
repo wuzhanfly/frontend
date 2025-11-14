@@ -1,5 +1,6 @@
 import { chakra, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useIsMobile from 'lib/hooks/useIsMobile';
 import usePreventFocusAfterModalClosing from 'lib/hooks/usePreventFocusAfterModalClosing';
@@ -27,6 +28,7 @@ const TriggerButton = (
   { rating, count, fullView, canRate, onClick, ...rest }: Props,
   ref: React.ForwardedRef<HTMLButtonElement>,
 ) => {
+  const { t } = useTranslation();
   const onFocusCapture = usePreventFocusAfterModalClosing();
   const isMobile = useIsMobile();
 
@@ -65,7 +67,7 @@ const TriggerButton = (
                 <Text color="text.secondary" ml={ 1 }>({ count })</Text>
               </chakra.span>
             ) : (
-              'Rate it!'
+              t('marketplace.common.rate_it')
             ) }
           </Button>
         </PopoverTrigger>

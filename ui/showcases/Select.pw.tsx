@@ -14,7 +14,7 @@ test('default +@dark-mode', async({ render, page }) => {
   const asyncSelect = asyncSection.getByRole('combobox');
   await asyncSelect.click();
 
-  const lastOption = page.getByRole('option', { name: 'Svelte' });
+  const lastOption = page.getByRole('option', { name: 'common.common.svelte' });
   await lastOption.hover();
 
   await expect(page).toHaveScreenshot({ clip: { x: 150, y: 150, width: 400, height: 400 } });
@@ -29,7 +29,7 @@ test('color theme overrides +@dark-mode', async({ render, mockEnvs, page }) => {
   const asyncSelect = asyncSection.getByRole('combobox');
   await asyncSelect.click();
 
-  const lastOption = page.getByRole('option', { name: 'Svelte' });
+  const lastOption = page.getByRole('option', { name: 'common.common.svelte' });
   await lastOption.hover();
 
   await expect(page).toHaveScreenshot({ clip: { x: 150, y: 150, width: 400, height: 400 } });

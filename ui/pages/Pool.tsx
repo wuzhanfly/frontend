@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useApiQuery from 'lib/api/useApiQuery';
@@ -26,6 +27,7 @@ import PageTitle from 'ui/shared/Page/PageTitle';
 import VerifyWith from 'ui/shared/VerifyWith';
 
 const Pool = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const hash = getQueryParamString(router.query.hash);
 
@@ -46,6 +48,7 @@ const Pool = () => {
   });
 
   const content = (() => {
+  const { t } = useTranslation();
     if (isError) {
       if (isCustomAppError(error)) {
         throwOnResourceLoadError({ resource: 'contractInfo:pool', error, isError: true });
@@ -108,8 +111,8 @@ const Pool = () => {
         { hasLinks && (
           <VerifyWith
             links={ externalLinksComponents }
-            label="Verify with"
-            longText="View in"
+            label={t('pools.common.verify_with')}
+            longText={t('pools.common.view_in')}
             shortText=""
           />
         ) }

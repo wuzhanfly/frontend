@@ -30,48 +30,52 @@ export type SearchResultAppItem = {
   app: MarketplaceApp;
 };
 
-export const searchCategories: Array<{ id: Category; title: string; tabTitle: string }> = [
+export const getSearchCategories = (t: (key: string) => string): Array<{ id: Category; title: string; tabTitle: string }> => [
   { id: 'app', title: 'DApps', tabTitle: 'DApps' },
-  { id: 'token', title: `Tokens (${ config.chain.tokenStandard }-20)`, tabTitle: 'Tokens' },
+  { id: 'token', title: `Tokens (${ config.chain.tokenStandard }-20)`, tabTitle: t('tokens.common.tokens') },
   { id: 'nft', title: `NFTs (${ config.chain.tokenStandard }-721 & 1155)`, tabTitle: 'NFTs' },
-  { id: 'address', title: 'Addresses', tabTitle: 'Addresses' },
-  { id: 'public_tag', title: 'Public tags', tabTitle: 'Public tags' },
-  { id: 'transaction', title: 'Transactions', tabTitle: 'Transactions' },
-  { id: 'block', title: 'Blocks', tabTitle: 'Blocks' },
-  { id: 'tac_operation', title: 'Operations', tabTitle: 'Operations' },
+  { id: 'address', title: t('shared.common.addresses'), tabTitle: t('shared.common.addresses') },
+  { id: 'public_tag', title: t('shared.common.public_tags'), tabTitle: t('shared.common.public_tags') },
+  { id: 'transaction', title: t('transactions.common.transactions'), tabTitle: t('transactions.common.transactions') },
+  { id: 'block', title: t('validators.common.blocks'), tabTitle: t('validators.common.blocks') },
+  { id: 'tac_operation', title: t('shared.common.operations'), tabTitle: t('shared.common.operations') },
   { id: 'zetaChainCCTX', title: 'CCTXs', tabTitle: 'CCTXs' },
 ];
 
-if (config.features.userOps.isEnabled) {
-  searchCategories.push({ id: 'user_operation', title: 'User operations', tabTitle: 'User ops' });
-}
+export const addUserSpecificCategories = (searchCategories: Array<{ id: Category; title: string; tabTitle: string }>, t: (key: string) => string) => {
+  if (config.features.userOps.isEnabled) {
+    searchCategories.push({ id: 'user_operation', title: t('transactions.common.user_operations'), tabTitle: t('shared.common.user_ops') });
+  }
 
-if (config.features.dataAvailability.isEnabled) {
-  searchCategories.push({ id: 'blob', title: 'Blobs', tabTitle: 'Blobs' });
-}
+  if (config.features.dataAvailability.isEnabled) {
+    searchCategories.push({ id: 'blob', title: t('transactions.common.blobs'), tabTitle: t('transactions.common.blobs') });
+  }
 
-if (nameServicesFeature.isEnabled && nameServicesFeature.ens.isEnabled) {
-  searchCategories.unshift({ id: 'domain', title: 'Names', tabTitle: 'Names' });
-}
+  if (nameServicesFeature.isEnabled && nameServicesFeature.ens.isEnabled) {
+    searchCategories.unshift({ id: 'domain', title: t('shared.common.names'), tabTitle: t('shared.common.names') });
+  }
 
-if (nameServicesFeature.isEnabled && nameServicesFeature.clusters.isEnabled) {
-  searchCategories.unshift({ id: 'cluster', title: 'Cluster Name', tabTitle: 'Cluster' });
-}
+  if (nameServicesFeature.isEnabled && nameServicesFeature.clusters.isEnabled) {
+    searchCategories.unshift({ id: 'cluster', title: t('shared.common.cluster_name'), tabTitle: t('shared.common.cluster') });
+  }
+};
 
-export const searchItemTitles: Record<Category, { itemTitle: string; itemTitleShort: string }> = {
-  app: { itemTitle: 'DApp', itemTitleShort: 'App' },
-  domain: { itemTitle: 'Name', itemTitleShort: 'Name' },
-  cluster: { itemTitle: 'Cluster', itemTitleShort: 'Cluster' },
-  token: { itemTitle: 'Token', itemTitleShort: 'Token' },
-  nft: { itemTitle: 'NFT', itemTitleShort: 'NFT' },
-  address: { itemTitle: 'Address', itemTitleShort: 'Address' },
-  public_tag: { itemTitle: 'Public tag', itemTitleShort: 'Tag' },
-  transaction: { itemTitle: 'Transaction', itemTitleShort: 'Txn' },
-  block: { itemTitle: 'Block', itemTitleShort: 'Block' },
-  user_operation: { itemTitle: 'User operation', itemTitleShort: 'User op' },
-  blob: { itemTitle: 'Blob', itemTitleShort: 'Blob' },
-  tac_operation: { itemTitle: 'Operations', itemTitleShort: 'Operations' },
-  zetaChainCCTX: { itemTitle: 'CCTX', itemTitleShort: 'CCTX' },
+export const getSearchItemTitles = (t: (key: string) => string): Record<Category, { itemTitle: string; itemTitleShort: string }> => {
+  return {
+    app: { itemTitle: 'DApp', itemTitleShort: t('shared.common.app') },
+    domain: { itemTitle: t('validators.common.name'), itemTitleShort: t('validators.common.name') },
+    cluster: { itemTitle: t('shared.common.cluster'), itemTitleShort: t('shared.common.cluster') },
+    token: { itemTitle: t('tokens.common.token'), itemTitleShort: t('tokens.common.token') },
+    nft: { itemTitle: 'NFT', itemTitleShort: 'NFT' },
+    address: { itemTitle: t('validators.common.address'), itemTitleShort: t('validators.common.address') },
+    public_tag: { itemTitle: t('shared.common.public_tag'), itemTitleShort: t('shared.common.tag') },
+    transaction: { itemTitle: t('shared.common.transaction'), itemTitleShort: t('transactions.common.txn') },
+    block: { itemTitle: 'Block', itemTitleShort: 'Block' },
+    user_operation: { itemTitle: t('shared.common.user_operation'), itemTitleShort: t('shared.common.user_op') },
+    blob: { itemTitle: t('shared.common.blob'), itemTitleShort: t('shared.common.blob') },
+    tac_operation: { itemTitle: t('shared.common.operations'), itemTitleShort: t('shared.common.operations') },
+    zetaChainCCTX: { itemTitle: 'CCTX', itemTitleShort: 'CCTX' },
+  };
 };
 
 export function getItemCategory(item: SearchResultItem | SearchResultAppItem): Category | undefined {

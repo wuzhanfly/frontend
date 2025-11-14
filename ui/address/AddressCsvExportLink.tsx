@@ -1,5 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CsvExportParams } from 'types/client/address';
 import type { ChainConfig } from 'types/multichain';
@@ -23,6 +24,7 @@ interface Props {
 }
 
 const AddressCsvExportLink = ({ className, address, params, isLoading, chainData }: Props) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const isInitialLoading = useIsInitialLoading(isLoading);
   const multichainContext = useMultichainContext();
@@ -36,7 +38,7 @@ const AddressCsvExportLink = ({ className, address, params, isLoading, chainData
   const linkContext = (chainData ? { chain: chainData } : undefined) ?? multichainContext;
 
   return (
-    <Tooltip disabled={ !isMobile } content="Download CSV">
+    <Tooltip disabled={ !isMobile } content={ t('addresses.common.download_csv') }>
       <Link
         className={ className }
         whiteSpace="nowrap"

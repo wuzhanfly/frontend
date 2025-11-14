@@ -205,7 +205,7 @@ test('scroll suggest to category', async({ render, page, mockApiResponse }) => {
   await page.getByPlaceholder(/search/i).fill('o');
   await page.waitForResponse(apiUrl);
 
-  await page.getByRole('tab', { name: 'Addresses' }).click();
+  await page.getByRole('tab', { name: 'shared.common.addresses' }).click();
 
   await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 1200, height: 500 } });
 });

@@ -1,5 +1,6 @@
 import { Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import buildUrl from 'lib/api/buildUrl';
@@ -15,6 +16,7 @@ import AppErrorIcon from '../AppErrorIcon';
 import AppErrorTitle from '../AppErrorTitle';
 
 function formatTimeLeft(timeLeft: number) {
+  const { t } = useTranslation();
   const hours = Math.floor(timeLeft / 3600);
   const minutes = Math.floor((timeLeft % 3600) / 60);
   const seconds = timeLeft % 60;
@@ -28,6 +30,7 @@ interface Props {
 }
 
 const AppErrorTooManyRequests = ({ bypassOptions, reset }: Props) => {
+  const { t } = useTranslation();
 
   const [ timeLeft, setTimeLeft ] = React.useState(reset ? Math.ceil(Number(reset) / SECOND) : undefined);
 
@@ -39,7 +42,7 @@ const AppErrorTooManyRequests = ({ bypassOptions, reset }: Props) => {
       const token = await recaptcha.executeAsync();
 
       if (!token) {
-        throw new Error('ReCaptcha is not solved');
+        throw new Error(t('shared.common.recaptcha_is_not_solved'));
       }
 
       const url = buildUrl('general:api_v2_key');
@@ -60,7 +63,7 @@ const AppErrorTooManyRequests = ({ bypassOptions, reset }: Props) => {
     } catch (error) {
       toaster.create({
         title: 'Error',
-        description: 'Unable to get client key.',
+        description: t('shared.common.unable_to_get_client_key'),
         type: 'error',
       });
     }
@@ -90,12 +93,13 @@ const AppErrorTooManyRequests = ({ bypassOptions, reset }: Props) => {
   }, [ reset ]);
 
   if (!config.services.reCaptchaV2.siteKey) {
-    throw new Error('reCAPTCHA V2 site key is not set');
+    throw new Error(t('shared.common.recaptcha_v2_site_key_is_not_s'));
   }
 
   const text = (() => {
+  const { t } = useTranslation();
     if (timeLeft === undefined && bypassOptions === 'no_bypass') {
-      return 'Rate limit exceeded.';
+      return t('shared.common.rate_limit_exceeded');
     }
 
     const timeLeftText = timeLeft !== undefined ? `wait ${ formatTimeLeft(timeLeft) } ` : '';
@@ -108,7 +112,7 @@ const AppErrorTooManyRequests = ({ bypassOptions, reset }: Props) => {
   return (
     <>
       <AppErrorIcon statusCode={ 429 }/>
-      <AppErrorTitle title="Too many requests"/>
+      <AppErrorTitle title={t('shared.common.too_many_requests')}/>
       <Text color="text.secondary" mt={ 3 }>
         { text }
       </Text>

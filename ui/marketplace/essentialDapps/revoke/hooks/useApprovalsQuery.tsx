@@ -1,6 +1,7 @@
 import ERC20Artifact from '@openzeppelin/contracts/build/contracts/ERC20.json';
 import { useQuery } from '@tanstack/react-query';
 import { useCallback, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { GetLogsParameters } from 'viem';
 import { isAddress, getAbiItem } from 'viem';
 
@@ -14,6 +15,7 @@ import useSearchErc20Allowances from './useSearchErc20Allowances';
 import useSearchNftAllowances from './useSearchNftAllowances';
 
 export default function useApprovalsQuery(chain: ChainConfig | undefined, userAddress: string) {
+  const { t } = useTranslation();
   const searchErc20Allowances = useSearchErc20Allowances();
   const searchNftAllowances = useSearchNftAllowances();
 
@@ -25,23 +27,23 @@ export default function useApprovalsQuery(chain: ChainConfig | undefined, userAd
   const searchAllowances = useCallback(async(signal?: AbortSignal) => {
     try {
       if (signal?.aborted) {
-        throw new DOMException('Aborted', 'AbortError');
+        throw new DOMException(t('shared.common.aborted'), 'AbortError');
       }
       if (!publicClient) {
-        throw new Error('Public client not found');
+        throw new Error(t('marketplace.common.public_client_not_found'));
       }
 
       const latestBlockNumber = await publicClient.getBlockNumber();
 
       const filter = {
-        event: getAbiItem({ abi: ERC20Artifact.abi, name: 'Approval' }),
+        event: getAbiItem({ abi: ERC20Artifact.abi, name: t('marketplace.common.approval') }),
         args: { owner: userAddress },
       } as unknown as GetLogsParameters;
-      const approvalEvents = await getLogs(publicClient, filter, BigInt(0), latestBlockNumber, signal);
+      const approvalEvents = await getLogs(publicClient, filter, BigInt(0), latestBlockNumber, t, signal);
 
       const [ erc20Allowances, nftAllowances ] = await Promise.all([
-        searchErc20Allowances(chain, userAddress, approvalEvents, publicClient, signal),
-        searchNftAllowances(chain, userAddress, approvalEvents, publicClient, latestBlockNumber, signal),
+        searchErc20Allowances(chain, userAddress, approvalEvents, publicClient, t, signal),
+        searchNftAllowances(chain, userAddress, approvalEvents, publicClient, latestBlockNumber, t, signal),
       ]);
 
       const allowances = [ ...erc20Allowances, ...nftAllowances ].sort((a, b) => {

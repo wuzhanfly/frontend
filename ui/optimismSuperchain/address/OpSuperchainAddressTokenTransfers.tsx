@@ -1,6 +1,7 @@
 import { HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 
@@ -37,6 +38,7 @@ const TAB_LIST_PROPS = {
 };
 
 const OpSuperchainAddressTokenTransfers = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMobile = useIsMobile();
 
@@ -134,12 +136,12 @@ const OpSuperchainAddressTokenTransfers = () => {
   const tabs: Array<TabItemRegular> = [
     {
       id: 'token_transfers_cross_chain',
-      title: 'Cross-chain',
-      component: <div>Coming soon 🔜</div>,
+      title: t('transactions.common.crosschain'),
+      component: <div>{t('account.common.coming_soon_')}</div>,
     },
     {
       id: 'token_transfers_local',
-      title: 'Local',
+      title: t('common.common.local'),
       component: (
         <MultichainProvider chainSlug={ transfersQueryLocal.query.chainValue?.[0] }>
           <SocketProvider url={ getSocketUrl(chainData?.config) }>

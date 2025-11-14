@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useIsMobile from 'lib/hooks/useIsMobile';
 import { useColorMode } from 'toolkit/chakra/color-mode';
@@ -38,48 +39,49 @@ import TextareaShowcase from 'ui/showcases/Textarea';
 import ToastShowcase from 'ui/showcases/Toast';
 import TooltipShowcase from 'ui/showcases/Tooltip';
 
-const tabs = [
-  { label: 'Accordion', value: 'accordion', component: <AccordionsShowcase/> },
-  { label: 'Alert', value: 'alert', component: <AlertShowcase/> },
-  { label: 'Badge', value: 'badge', component: <BadgeShowcase/> },
-  { label: 'Button', value: 'button', component: <ButtonShowcase/> },
-  { label: 'Checkbox', value: 'checkbox', component: <CheckboxShowcase/> },
-  { label: 'Clipboard', value: 'clipboard', component: <ClipboardShowcase/> },
-  { label: 'Close button', value: 'close-button', component: <CloseButtonShowcase/> },
-  { label: 'Collapsible', value: 'collapsible', component: <CollapsibleShowcase/> },
-  { label: 'Content loader', value: 'content-loader', component: <ContentLoaderShowcase/> },
-  { label: 'Dialog', value: 'dialog', component: <DialogShowcase/> },
-  { label: 'Icon button', value: 'icon-button', component: <IconButtonShowcase/> },
-  { label: 'Input', value: 'input', component: <InputShowcase/> },
-  { label: 'Field', value: 'field', component: <FieldShowcase/> },
-  { label: 'Link', value: 'link', component: <LinkShowcase/> },
-  { label: 'Menu', value: 'menu', component: <MenuShowcase/> },
-  { label: 'Pagination', value: 'pagination', component: <PaginationShowcase/> },
-  { label: 'Progress', value: 'progress', component: <ProgressShowcase/> },
-  { label: 'Progress Circle', value: 'progress-circle', component: <ProgressCircleShowcase/> },
-  { label: 'Radio', value: 'radio', component: <RadioShowcase/> },
-  { label: 'Rating', value: 'rating', component: <RatingShowcase/> },
-  { label: 'Pin input', value: 'pin-input', component: <PinInputShowcase/> },
-  { label: 'Popover', value: 'popover', component: <PopoverShowcase/> },
-  { label: 'Select', value: 'select', component: <SelectShowcase/> },
-  { label: 'Skeleton', value: 'skeleton', component: <SkeletonShowcase/> },
-  { label: 'Spinner', value: 'spinner', component: <SpinnerShowcase/> },
-  { label: 'Switch', value: 'switch', component: <SwitchShowcase/> },
-  { label: 'Table', value: 'table', component: <TableShowcase/> },
-  { label: 'Tabs', value: 'tabs', component: <TabsShowcase/> },
-  { label: 'Tag', value: 'tag', component: <TagShowcase/> },
-  { label: 'Textarea', value: 'textarea', component: <TextareaShowcase/> },
-  { label: 'Toast', value: 'toast', component: <ToastShowcase/> },
-  { label: 'Tooltip', value: 'tooltip', component: <TooltipShowcase/> },
-];
-
 const ChakraShowcases = () => {
+  const { t } = useTranslation();
   const colorMode = useColorMode();
   const isMobile = useIsMobile();
 
+  const tabs = [
+    { label: t('common.common.accordion'), value: 'accordion', component: <AccordionsShowcase/> },
+    { label: t('shared.common.alert'), value: 'alert', component: <AlertShowcase/> },
+    { label: t('common.common.badge'), value: 'badge', component: <BadgeShowcase/> },
+    { label: 'Button', value: 'button', component: <ButtonShowcase/> },
+    { label: t('common.common.checkbox'), value: 'checkbox', component: <CheckboxShowcase/> },
+    { label: t('common.common.clipboard'), value: 'clipboard', component: <ClipboardShowcase/> },
+    { label: t('common.common.close_button'), value: 'close-button', component: <CloseButtonShowcase/> },
+    { label: t('common.common.collapsible'), value: 'collapsible', component: <CollapsibleShowcase/> },
+    { label: t('common.common.content_loader'), value: 'content-loader', component: <ContentLoaderShowcase/> },
+    { label: t('common.common.dialog'), value: 'dialog', component: <DialogShowcase/> },
+    { label: t('common.common.icon_button'), value: 'icon-button', component: <IconButtonShowcase/> },
+    { label: t('common.common.input'), value: 'input', component: <InputShowcase/> },
+    { label: t('common.common.field'), value: 'field', component: <FieldShowcase/> },
+    { label: t('common.common.link'), value: 'link', component: <LinkShowcase/> },
+    { label: t('common.common.menu'), value: 'menu', component: <MenuShowcase/> },
+    { label: t('common.common.pagination'), value: 'pagination', component: <PaginationShowcase/> },
+    { label: t('common.common.progress'), value: 'progress', component: <ProgressShowcase/> },
+    { label: t('common.common.progress_circle'), value: 'progress-circle', component: <ProgressCircleShowcase/> },
+    { label: t('common.common.radio'), value: 'radio', component: <RadioShowcase/> },
+    { label: t('common.common.rating'), value: 'rating', component: <RatingShowcase/> },
+    { label: t('common.common.pin_input'), value: 'pin-input', component: <PinInputShowcase/> },
+    { label: t('common.common.popover'), value: 'popover', component: <PopoverShowcase/> },
+    { label: t('common.common.select'), value: 'select', component: <SelectShowcase/> },
+    { label: t('common.common.skeleton'), value: 'skeleton', component: <SkeletonShowcase/> },
+    { label: t('common.common.spinner'), value: 'spinner', component: <SpinnerShowcase/> },
+    { label: t('common.common.switch'), value: 'switch', component: <SwitchShowcase/> },
+    { label: t('common.common.table'), value: 'table', component: <TableShowcase/> },
+    { label: t('common.common.tabs'), value: 'tabs', component: <TabsShowcase/> },
+    { label: t('shared.common.tag'), value: 'tag', component: <TagShowcase/> },
+    { label: t('common.common.textarea'), value: 'textarea', component: <TextareaShowcase/> },
+    { label: t('common.common.toast'), value: 'toast', component: <ToastShowcase/> },
+    { label: t('common.common.tooltip'), value: 'tooltip', component: <TooltipShowcase/> },
+  ];
+
   return (
     <>
-      <PageTitle title="Chakra UI Showcase"/>
+      <PageTitle title={t('common.common.chakra_ui_showcase')}/>
       <Switch onCheckedChange={ colorMode.toggleColorMode } checked={ colorMode.colorMode === 'dark' } mb={ 10 }>
         Color mode: { colorMode.colorMode }
       </Switch>

@@ -17,7 +17,7 @@ test('button without styles +@dark-mode', async({ render }) => {
     <Flex w="200px">
       <AppActionButton
         data={ actionButtonMetadataMock.buttonWithoutStyles as NonNullable<AddressMetadataTagFormatted['meta']> }
-        source="Txn"
+        source='transactions.common.txn'
       />
     </Flex>,
   );
@@ -29,7 +29,7 @@ test('link without styles +@dark-mode', async({ render }) => {
     <Flex w="200px">
       <AppActionButton
         data={ actionButtonMetadataMock.linkWithoutStyles as NonNullable<AddressMetadataTagFormatted['meta']> }
-        source="Txn"
+        source='transactions.common.txn'
       />
     </Flex>,
   );
@@ -41,7 +41,7 @@ test('button with styles', async({ render }) => {
     <Flex w="200px">
       <AppActionButton
         data={ actionButtonMetadataMock.buttonWithStyles as NonNullable<AddressMetadataTagFormatted['meta']> }
-        source="Txn"
+        source='transactions.common.txn'
       />
     </Flex>,
   );
@@ -53,7 +53,7 @@ test('link with styles', async({ render }) => {
     <Flex w="200px">
       <AppActionButton
         data={ actionButtonMetadataMock.linkWithStyles as NonNullable<AddressMetadataTagFormatted['meta']> }
-        source="Txn"
+        source='transactions.common.txn'
       />
     </Flex>,
   );

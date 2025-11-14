@@ -1,5 +1,6 @@
 import { AccordionItemContent, Grid, GridItem } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import * as tac from '@blockscout/tac-operation-lifecycle-types';
 
@@ -14,6 +15,8 @@ interface Props {
 }
 
 const TacOperationLifecycleAccordionItemContent = ({ isLast, data }: Props) => {
+  const { t } = useTranslation();
+  
   return (
     <AccordionItemContent
       ml={{ base: 0, lg: '9px' }}
@@ -38,7 +41,7 @@ const TacOperationLifecycleAccordionItemContent = ({ isLast, data }: Props) => {
           Status
         </GridItem>
         <GridItem py={ 1 }>
-          <StatusTag type={ data.is_success ? 'ok' : 'error' } text={ data.is_success ? 'Success' : 'Failed' }/>
+          <StatusTag type={ data.is_success ? 'ok' : 'error' } text={ data.is_success ? 'Success' : t('shared.common.failed') }/>
         </GridItem>
 
         { data.timestamp && (

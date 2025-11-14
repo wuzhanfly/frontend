@@ -1,5 +1,6 @@
 import type { UseQueryResult } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type { Address } from 'types/api/address';
@@ -28,6 +29,7 @@ interface Params {
 const NO_RPC_FALLBACK_ERROR_CODES = [ 403 ];
 
 export default function useAddressQuery({ hash, isEnabled = true }: Params): AddressQuery {
+  const { t } = useTranslation();
   const [ isRefetchEnabled, setRefetchEnabled ] = React.useState(false);
 
   const apiQuery = useApiQuery<'general:address', { status: number }>('general:address', {
@@ -53,7 +55,7 @@ export default function useAddressQuery({ hash, isEnabled = true }: Params): Add
     queryKey: [ 'RPC', 'address', { hash } ],
     queryFn: async() => {
       if (!publicClient) {
-        throw new Error('No public RPC client');
+        throw new Error(t('transactions.common.no_public_rpc_client'));
       }
 
       const balance = publicClient.getBalance({ address: hash as `0x${ string }` }).catch(() => null);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormattedData } from './types';
 
@@ -15,6 +16,7 @@ interface Props {
 }
 
 const TokenSelectMobile = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
   const { open, onOpenChange } = useDisclosure();
   const result = useTokenSelect(data);
 
@@ -24,7 +26,7 @@ const TokenSelectMobile = ({ data, isLoading }: Props) => {
         <TokenSelectButton isOpen={ open } data={ result.data } isLoading={ isLoading }/>
       </DialogTrigger>
       <DialogContent>
-        <DialogHeader>Tokens</DialogHeader>
+        <DialogHeader>{t('tokens.common.tokens')}</DialogHeader>
         <DialogBody>
           <TokenSelectMenu { ...result }/>
         </DialogBody>

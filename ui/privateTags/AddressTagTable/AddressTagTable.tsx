@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressTags, AddressTag } from 'types/api/account';
 
@@ -15,12 +16,13 @@ interface Props {
 }
 
 const AddressTagTable = ({ data, onDeleteClick, onEditClick, isLoading, top }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRoot minWidth="600px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader width="60%">Address</TableColumnHeader>
-          <TableColumnHeader width="40%">Private tag</TableColumnHeader>
+          <TableColumnHeader width="60%">{t('addresses.common.address')}</TableColumnHeader>
+          <TableColumnHeader width="40%">{t('account.common.private_tag')}</TableColumnHeader>
           <TableColumnHeader width="116px"></TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>

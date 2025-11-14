@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Alert } from 'toolkit/chakra/alert';
 import { Button } from 'toolkit/chakra/button';
@@ -6,6 +7,7 @@ import { useDisclosure } from 'toolkit/hooks/useDisclosure';
 import AuthModal from 'ui/snippets/auth/AuthModal';
 
 const VerifiedAddressesEmailAlert = () => {
+  const { t } = useTranslation();
   const authModal = useDisclosure();
 
   return (
@@ -18,8 +20,8 @@ const VerifiedAddressesEmailAlert = () => {
           gap: 2,
         }}
       >
-        You need a valid email address to verify contracts. Please add your email to your account.
-        <Button variant="outline" size="sm" onClick={ authModal.onOpen }>Add email</Button>
+        {t('verified_addresses.common.you_need_a_valid_email_address_to_verify_contracts_please_add_your_email_to_your_account')}
+        <Button variant="outline" size="sm" onClick={ authModal.onOpen }>{t('common.common.add_email')}</Button>
       </Alert>
       { authModal.open && <AuthModal initialScreen={{ type: 'email', isAuth: true }} onClose={ authModal.onClose }/> }
     </>

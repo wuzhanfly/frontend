@@ -1,5 +1,6 @@
 import { Flex, Grid, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Address } from 'types/api/address';
 import type { SmartContract } from 'types/api/contract';
@@ -27,6 +28,7 @@ interface Props {
 }
 
 const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
 
   const contractNameWithCertifiedIcon = data ? (
@@ -76,7 +78,7 @@ const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
     <Grid templateColumns={{ base: '1fr', lg: '1fr 1fr' }} rowGap={ 4 } columnGap={ 6 } mb={ 8 }>
       { data.name && (
         <ContractDetailsInfoItem
-          label="Contract name"
+          label={ t('common.common.contract_name') }
           isLoading={ isLoading }
         >
           { contractNameWithCertifiedIcon }
@@ -84,7 +86,7 @@ const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
       ) }
       { multichainContext && multichainContext.level !== 'page' && addressData.creator_address_hash && addressData.creation_transaction_hash && (
         <ContractDetailsInfoItem
-          label="Creator"
+          label={ t('addresses.common.creator') }
           isLoading={ isLoading }
         >
           <Flex alignItems="center" flexWrap="wrap">
@@ -101,7 +103,7 @@ const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
       ) }
       { data.compiler_version && (
         <ContractDetailsInfoItem
-          label="Compiler version"
+          label={ t('addresses.common.compiler_version') }
           isLoading={ isLoading }
         >
           { data.compiler_version }
@@ -109,7 +111,7 @@ const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
       ) }
       { data.zk_compiler_version && (
         <ContractDetailsInfoItem
-          label="ZK compiler version"
+          label={ t('addresses.common.zk_compiler_version') }
           isLoading={ isLoading }
         >
           { data.zk_compiler_version }
@@ -117,7 +119,7 @@ const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
       ) }
       { data.evm_version && (
         <ContractDetailsInfoItem
-          label="EVM version"
+          label={ t('addresses.common.evm_version') }
           textTransform="capitalize"
           isLoading={ isLoading }
         >
@@ -126,7 +128,7 @@ const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
       ) }
       { licenseLink && (
         <ContractDetailsInfoItem
-          label="License"
+          label={ t('common.common.license') }
           hint="License type is entered manually during verification. The initial source code may contain a different license type than the one displayed."
           isLoading={ isLoading }
         >
@@ -135,7 +137,7 @@ const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
       ) }
       { typeof data.optimization_enabled === 'boolean' && !isStylusContract && (
         <ContractDetailsInfoItem
-          label="Optimization enabled"
+          label={ t('common.common.optimization_enabled') }
           isLoading={ isLoading }
         >
           { data.optimization_enabled ? 'true' : 'false' }
@@ -143,7 +145,7 @@ const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
       ) }
       { data.optimization_runs !== null && !isStylusContract && (
         <ContractDetailsInfoItem
-          label={ rollupFeature.isEnabled && rollupFeature.type === 'zkSync' ? 'Optimization mode' : 'Optimization runs' }
+          label={ rollupFeature.isEnabled && rollupFeature.type === 'zkSync' ? 'Optimization mode' : t('common.common.optimization_runs') }
           isLoading={ isLoading }
         >
           { String(data.optimization_runs) }
@@ -151,7 +153,7 @@ const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
       ) }
       { data.package_name && (
         <ContractDetailsInfoItem
-          label="Package name"
+          label={ t('addresses.common.package_name') }
           isLoading={ isLoading }
         >
           { data.package_name }
@@ -159,7 +161,7 @@ const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
       ) }
       { data.verified_at && (
         <ContractDetailsInfoItem
-          label="Verified at"
+          label={ t('addresses.common.verified_at') }
           wordBreak="break-word"
           isLoading={ isLoading }
         >
@@ -168,7 +170,7 @@ const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
       ) }
       { data.file_path && !isStylusContract && (
         <ContractDetailsInfoItem
-          label="Contract file path"
+          label={ t('addresses.common.contract_file_path') }
           wordBreak="break-word"
           isLoading={ isLoading }
         >
@@ -185,7 +187,7 @@ const ContractDetailsInfo = ({ data, isLoading, addressData }: Props) => {
       ) }
       { config.UI.hasContractAuditReports && (
         <ContractDetailsInfoItem
-          label="Security audit"
+          label={ t('addresses.common.security_audit') }
           isLoading={ isLoading }
         >
           <ContractSecurityAudits addressHash={ addressData.hash }/>

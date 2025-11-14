@@ -24,5 +24,6 @@
   "stats.common.1_month": "1个月",
   "stats.common.3_months": "3个月",
   "stats.common.6_months": "6个月",
-  "stats.common.1_year": "1年"
+  "stats.common.1_year": "1年",
+  "stats.common.contracts_that_have_been_verified": "已验证的合约"
 }

@@ -2,6 +2,7 @@ import { Text } from '@chakra-ui/react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { ZKEVM_L2_TX_BATCH_STATUSES } from 'types/api/zkEvmL2';
 import type { ZkEvmL2TxnBatch } from 'types/api/zkEvmL2';
@@ -27,6 +28,7 @@ interface Props {
 }
 
 const ZkEvmL2TxnBatchDetails = ({ query }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const { data, isPlaceholderData, isError, error } = query;
@@ -70,8 +72,8 @@ const ZkEvmL2TxnBatchDetails = ({ query }: Props) => {
         <PrevNext
           ml={ 6 }
           onClick={ handlePrevNextClick }
-          prevLabel="View previous txn batch"
-          nextLabel="View next txn batch"
+          prevLabel={t('common.common.view_previous_txn_batch')}
+          nextLabel={t('common.common.view_next_txn_batch')}
           isPrevDisabled={ data.number === 0 }
           isLoading={ isPlaceholderData }
         />

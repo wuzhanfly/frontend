@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import * as multichain from '@blockscout/multichain-aggregator-types';
 
@@ -10,17 +11,18 @@ interface Props extends BadgeProps {
 }
 
 const CrossChainTxStatusTag = ({ status: statusProp, ...rest }: Props) => {
-
+  const { t } = useTranslation();
+  
   const { status, text } = (() => {
     switch (statusProp) {
       case multichain.InteropMessage_Status.SUCCESS:
-        return { status: 'ok' as const, text: 'Relayed' };
+        return { status: 'ok' as const, text: t('transactions.common.relayed') };
       case multichain.InteropMessage_Status.FAILED:
-        return { status: 'error' as const, text: 'Failed' };
+        return { status: 'error' as const, text: t('shared.common.failed') };
       case multichain.InteropMessage_Status.EXPIRED:
-        return { status: 'error' as const, text: 'Expired' };
+        return { status: 'error' as const, text: t('common.common.expired') };
       case multichain.InteropMessage_Status.PENDING:
-        return { status: 'pending' as const, text: 'Sent' };
+        return { status: 'pending' as const, text: t('transactions.common.sent') };
       default:
         return { status: undefined, text: undefined };
     }

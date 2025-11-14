@@ -1,5 +1,6 @@
 import { type ButtonProps } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { useMarketplaceContext } from 'lib/contexts/marketplace';
 import useWeb3AccountWithDomain from 'lib/web3/useAccountWithDomain';
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const UserWalletDesktop = ({ buttonSize, buttonVariant = 'header' }: Props) => {
+  const { t } = useTranslation();
   const walletMenu = useDisclosure();
 
   const web3Wallet = useWeb3Wallet({ source: 'Header' });

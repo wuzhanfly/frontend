@@ -1,6 +1,7 @@
 import { Box, Grid, GridItem, Text } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CeloEpochDetails } from 'types/api/epochs';
 import type { TokenInfo } from 'types/api/token';
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const CeloEpochElectionRewardDetailsDesktop = ({ type, token }: Props) => {
+  const { t } = useTranslation();
   const rootRef = React.useRef<HTMLDivElement>(null);
 
   const router = useRouter();
@@ -33,7 +35,7 @@ const CeloEpochElectionRewardDetailsDesktop = ({ type, token }: Props) => {
     },
   });
 
-  const titles = getRewardDetailsTableTitles(type);
+  const titles = getRewardDetailsTableTitles(type, t);
 
   return (
     <Box

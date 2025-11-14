@@ -7,6 +7,17 @@ import { test as base, expect } from 'playwright/lib';
 
 import AccountActionsMenu from './AccountActionsMenu';
 
+const { t } = (() => {
+  // Mock translation function for tests
+  const mockT = (key: string) => {
+    const keyMap: Record<string, string> = {
+      'shared.common.add_private_tag': 'Add private tag',
+    };
+    return keyMap[key] || key;
+  };
+  return { t: mockT };
+})();
+
 const test = base.extend<{ context: BrowserContext }>({
   context: contextWithAuth,
 });
@@ -63,14 +74,14 @@ test.describe('with one item', () => {
   test('base view', async({ render, page }) => {
     const component = await render(<AccountActionsMenu/>, { hooksConfig });
     await component.getByRole('button').hover();
-    await expect(page.getByText('Add private tag')).toBeVisible();
+    await expect(page.getByText(t('shared.common.add_private_tag'))).toBeVisible();
     await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 200, height: 200 } });
   });
 
   test('base view with styles', async({ render, page }) => {
     const component = await render(<AccountActionsMenu m={ 2 } outline="1px solid lightpink"/>, { hooksConfig });
     await component.getByRole('button').hover();
-    await expect(page.getByText('Add private tag')).toBeVisible();
+    await expect(page.getByText(t('shared.common.add_private_tag'))).toBeVisible();
     await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 200, height: 200 } });
   });
 

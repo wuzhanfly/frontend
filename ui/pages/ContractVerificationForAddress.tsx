@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContractVerificationMethodApi } from 'types/api/contract';
 import type { SmartContractVerificationMethod } from 'types/client/contract';
@@ -15,6 +16,7 @@ import AddressEntity from 'ui/shared/entities/address/AddressEntity';
 import PageTitle from 'ui/shared/Page/PageTitle';
 
 const ContractVerificationForAddress = () => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const hash = getQueryParamString(router.query.hash);
@@ -48,6 +50,7 @@ const ContractVerificationForAddress = () => {
   }, [ hash, isVerifiedContract, router ]);
 
   const content = (() => {
+  const { t } = useTranslation();
     if (configQuery.isError || !hash || contractQuery.isError) {
       return <DataFetchAlert/>;
     }
@@ -68,7 +71,7 @@ const ContractVerificationForAddress = () => {
   return (
     <>
       <PageTitle
-        title="New smart contract verification"
+        title={t('common.common.new_smart_contract_verificatio')}
       />
       <AddressEntity
         address={{ hash, is_contract: true }}

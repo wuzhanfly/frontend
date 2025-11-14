@@ -1,5 +1,6 @@
 import { Box, Fieldset, Flex, HStack, Text, chakra, createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as bens from '@blockscout/bens-types';
 import type { EnsDomainLookupFiltersOptions } from 'types/api/ens';
@@ -17,9 +18,7 @@ import Pagination from 'ui/shared/pagination/Pagination';
 import Sort from 'ui/shared/sort/Sort';
 
 import type { Sort as TSort } from './utils';
-import { SORT_OPTIONS } from './utils';
-
-const sortCollection = createListCollection({ items: SORT_OPTIONS });
+import { getSortOptions } from './utils';
 
 interface Props {
   pagination: PaginationParams;
@@ -50,6 +49,8 @@ const NameDomainsActionBar = ({
   protocolsFilterValue,
   onProtocolsFilterChange,
 }: Props) => {
+  const { t } = useTranslation();
+  const sortCollection = createListCollection({ items: getSortOptions(t) });
   const isInitialLoading = useIsInitialLoading(isLoading);
 
   const searchInput = (
@@ -58,7 +59,7 @@ const NameDomainsActionBar = ({
       minW={{ base: 'auto', lg: '250px' }}
       size="sm"
       onChange={ onSearchChange }
-      placeholder="Search by name or address"
+      placeholder={t('common.common.search_by_name_or_address')}
       initialValue={ searchTerm }
       loading={ isInitialLoading }
     />
@@ -98,6 +99,7 @@ const NameDomainsActionBar = ({
             </Flex>
             <CheckboxGroup defaultValue={ protocolsFilterValue } onValueChange={ onProtocolsFilterChange } value={ protocolsFilterValue } name="token_type">
               { protocolsData.map((protocol) => {
+  const { t } = useTranslation();
                 const topLevelDomains = protocol.tld_list.map((domain) => `.${ domain }`).join(' ');
                 return (
                   <Checkbox key={ protocol.id } value={ protocol.id }>

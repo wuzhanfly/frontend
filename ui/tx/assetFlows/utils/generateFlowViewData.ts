@@ -17,18 +17,13 @@ export interface NovesFlowViewItem {
   accountAddress: string;
 }
 
-export function generateFlowViewData(data: NovesResponseData): Array<NovesFlowViewItem> {
-  const perspectiveAddress = data.accountAddress.toLowerCase();
-
-  const sent = data.classificationData.sent || [];
-  const received = data.classificationData.received || [];
-
-  const txItems = [ ...sent, ...received ];
+export default function generateFlowViewData(txData: NovesResponseData, perspectiveAddress: string, t: (key: string) => string): Array<NovesFlowViewItem> {
+  const txItems = [ ...txData.classificationData.sent, ...txData.classificationData.received ];
 
   const paidGasIndex = txItems.findIndex((item) => item.action === 'paidGas');
   if (paidGasIndex >= 0) {
     const element = txItems.splice(paidGasIndex, 1)[0];
-    element.to.name = 'Validators';
+    element.to.name = t('transactions.common.validators');
     txItems.splice(txItems.length, 0, element);
   }
 

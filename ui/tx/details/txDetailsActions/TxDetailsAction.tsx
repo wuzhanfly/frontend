@@ -1,6 +1,7 @@
 import { Flex, chakra } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TxAction, TxActionGeneral } from 'types/api/txAction';
 
@@ -15,15 +16,17 @@ interface Props {
 }
 
 function getActionText(actionType: TxActionGeneral['type']) {
+  const { t } = useTranslation();
   switch (actionType) {
     case 'mint': return [ 'Added', 'liquidity to' ];
-    case 'burn': return [ 'Removed', 'liquidity from' ];
-    case 'collect': return [ 'Collected', 'from' ];
-    case 'swap': return [ 'Swapped', 'on' ];
+    case 'burn': return [ t('transactions.common.removed'), 'liquidity from' ];
+    case 'collect': return [ t('transactions.common.collected'), 'from' ];
+    case 'swap': return [ t('transactions.common.swapped'), 'on' ];
   }
 }
 
 const TxDetailsAction = ({ action }: Props) => {
+  const { t } = useTranslation();
   const { protocol, type, data } = action;
 
   if (protocol !== 'uniswap_v3') {
@@ -39,16 +42,16 @@ const TxDetailsAction = ({ action }: Props) => {
       const amount1 = BigNumber(data.amount1).toFormat();
       const [ text0, text1 ] = getActionText(type);
       const token0 = {
-        address_hash: data.symbol0 === 'Ether' ? '' : data.address0,
-        name: data.symbol0 === 'Ether' ? config.chain.currency.symbol || null : data.symbol0,
+        address_hash: data.symbol0 === t('transactions.common.ether') ? '' : data.address0,
+        name: data.symbol0 === t('transactions.common.ether') ? config.chain.currency.symbol || null : data.symbol0,
         type: 'ERC-20' as const,
         symbol: null,
         icon_url: null,
         reputation: null,
       };
       const token1 = {
-        address_hash: data.symbol1 === 'Ether' ? '' : data.address1,
-        name: data.symbol1 === 'Ether' ? config.chain.currency.symbol || null : data.symbol1,
+        address_hash: data.symbol1 === t('transactions.common.ether') ? '' : data.address1,
+        name: data.symbol1 === t('transactions.common.ether') ? config.chain.currency.symbol || null : data.symbol1,
         type: 'ERC-20' as const,
         symbol: null,
         icon_url: null,
@@ -63,7 +66,7 @@ const TxDetailsAction = ({ action }: Props) => {
 
           <TokenEntity
             token={ token0 }
-            noLink={ data.symbol0 === 'Ether' }
+            noLink={ data.symbol0 === t('transactions.common.ether') }
             noCopy
             noIcon
             noSymbol
@@ -78,7 +81,7 @@ const TxDetailsAction = ({ action }: Props) => {
 
           <TokenEntity
             token={ token1 }
-            noLink={ data.symbol1 === 'Ether' }
+            noLink={ data.symbol1 === t('transactions.common.ether') }
             noIcon
             noCopy
             noSymbol

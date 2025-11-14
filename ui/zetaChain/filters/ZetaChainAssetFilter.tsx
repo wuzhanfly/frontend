@@ -1,6 +1,7 @@
 import { Flex, Text, Spinner } from '@chakra-ui/react';
 import { isEqual } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Token } from '@blockscout/zetachain-cctx-types';
 import type { TokenInfo } from 'types/api/token';
@@ -21,6 +22,7 @@ const FILTER_PARAM_SYMBOL = 'token_symbol';
 const FILTER_PARAM_COIN_TYPE = 'coin_type';
 
 const getFilterParamsFromValue = (value: Value) => {
+  const { t } = useTranslation();
   if (value?.symbol === ZETA_NATIVE_TOKEN.symbol) {
     return {
       [ FILTER_PARAM_COIN_TYPE ]: [ ZETA_CHAIN_CCTX_COIN_TYPE_FILTER ],
@@ -55,6 +57,7 @@ type Props = {
 };
 
 const ZetaChainAssetFilter = ({ value = null, handleFilterChange }: Props) => {
+  const { t } = useTranslation();
   const [ currentValue, setCurrentValue ] = React.useState<Value>(value);
   const [ searchTerm, setSearchTerm ] = React.useState<string>('');
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
@@ -122,7 +125,7 @@ const ZetaChainAssetFilter = ({ value = null, handleFilterChange }: Props) => {
 
   return (
     <TableColumnFilter
-      title="Asset"
+      title={t('common.common.asset')}
       isFilled={ Boolean(currentValue) }
       isTouched={ !isEqual(currentValue, value) }
       onFilter={ onFilter }

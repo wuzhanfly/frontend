@@ -88,6 +88,7 @@ test('sort', async({ render, page }) => {
 });
 
 test('filter', async({ render, page }) => {
+  const t = (key: string) => key;
   await render(
     <MockAddressPage>
       <Flex>
@@ -97,7 +98,7 @@ test('filter', async({ render, page }) => {
     { hooksConfig },
   );
   await page.getByRole('button', { name: /select/i }).click();
-  await page.getByPlaceholder('Search by token name').type('c');
+  await page.getByPlaceholder(t('addresses.common.search_by_token_name')).type('c');
 
   await expect(page).toHaveScreenshot({ clip: CLIPPING_AREA });
 });

@@ -1,5 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Transaction } from 'types/api/transaction';
 
@@ -9,10 +10,11 @@ import TextSeparator from 'ui/shared/TextSeparator';
 type Props = Pick<Transaction, 'nonce' | 'type' | 'position'> & { queueIndex?: number };
 
 const TxDetailsOther = ({ nonce, type, position, queueIndex }: Props) => {
+  const { t } = useTranslation();
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="Other data related to this transaction"
+        hint={t('transactions.common.other_data_related_to_this_tra')}
       >
         Other
       </DetailedInfo.ItemLabel>

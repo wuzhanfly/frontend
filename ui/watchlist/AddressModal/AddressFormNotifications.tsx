@@ -1,5 +1,6 @@
 import { Grid, GridItem } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { FormFieldCheckbox } from 'toolkit/components/forms/fields/FormFieldCheckbox';
@@ -16,6 +17,7 @@ const NOTIFICATIONS_NAMES = [
   `${ tokenStandardName }-404` ];
 
 export default function AddressFormNotifications() {
+  const { t } = useTranslation();
   return (
     <Grid templateColumns={{ base: 'repeat(2, max-content)', lg: 'repeat(3, max-content)' }} gap={{ base: '10px 24px', lg: '20px 24px' }}>
       { NOTIFICATIONS.map((notification, index: number) => {
@@ -35,13 +37,13 @@ export default function AddressFormNotifications() {
             <GridItem>
               <FormFieldCheckbox<FormFields, typeof incomingFieldName>
                 name={ incomingFieldName }
-                label="Incoming"
+                label={t('account.common.incoming')}
               />
             </GridItem>
             <GridItem>
               <FormFieldCheckbox<FormFields, typeof outgoingFieldName>
                 name={ outgoingFieldName }
-                label="Outgoing"
+                label={t('account.common.outgoing')}
               />
             </GridItem>
           </React.Fragment>

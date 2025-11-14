@@ -1,11 +1,12 @@
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Button } from 'toolkit/chakra/button';
 import { Checkbox, CheckboxGroup } from 'toolkit/chakra/checkbox';
 import { PopoverBody, PopoverContent, PopoverRoot, PopoverTrigger } from 'toolkit/chakra/popover';
 import type { ColumnsIds } from 'ui/advancedFilter/constants';
-import { TABLE_COLUMNS } from 'ui/advancedFilter/constants';
+import { getLocalizedTableColumns } from 'ui/advancedFilter/constants';
 import IconSvg from 'ui/shared/IconSvg';
 
 interface Props {
@@ -14,6 +15,8 @@ interface Props {
 }
 
 const ColumnsButton = ({ columns, onChange }: Props) => {
+  const { t } = useTranslation();
+  const TABLE_COLUMNS = getLocalizedTableColumns(t);
   const handleValueChange = React.useCallback((value: Array<string>) => {
     const newCols = value.reduce((acc, key) => {
       acc[key as ColumnsIds] = true;

@@ -1,6 +1,7 @@
 import { Box, Flex, HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 import type { EntityTag } from 'ui/shared/EntityTags/types';
@@ -71,6 +72,7 @@ const xScoreFeature = config.features.xStarScore;
 const nameServicesFeature = config.features.nameServices;
 
 const AddressPageContent = () => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const hash = getQueryParamString(router.query.hash);
@@ -175,13 +177,13 @@ const AddressPageContent = () => {
     return [
       {
         id: 'index',
-        title: 'Details',
+        title: t('transactions.common.details'),
         component: <AddressDetails addressQuery={ addressQuery } countersQuery={ countersQuery } isLoading={ isTabsLoading }/>,
       },
       addressQuery.data?.is_contract ? {
         id: 'contract',
         title: () => {
-          const tabName = addressQuery.data.proxy_type === 'eip7702' ? 'Code' : 'Contract';
+          const tabName = addressQuery.data.proxy_type === 'eip7702' ? t('staking.common.code') : t('tokens.common.contract');
 
           if (addressQuery.data.is_verified) {
             return (
@@ -211,21 +213,21 @@ const AddressPageContent = () => {
       },
       {
         id: 'txs',
-        title: 'Transactions',
+        title: t('transactions.common.transactions'),
         count: addressTabsCountersQuery.data?.transactions_count,
         component: <AddressTxs shouldRender={ !isTabsLoading } isQueryEnabled={ areQueriesEnabled }/>,
       },
       txInterpretation.isEnabled && txInterpretation.provider === 'noves' ?
         {
           id: 'account_history',
-          title: 'Account history',
+          title: t('addresses.common.account_history'),
           component: <AddressAccountHistory shouldRender={ !isTabsLoading } isQueryEnabled={ areQueriesEnabled }/>,
         } :
         undefined,
       config.features.userOps.isEnabled && Boolean(userOpsAccountQuery.data?.total_ops) ?
         {
           id: 'user_ops',
-          title: 'User operations',
+          title: t('transactions.common.user_operations'),
           count: userOpsAccountQuery.data?.total_ops,
           component: <AddressUserOps shouldRender={ !isTabsLoading } isQueryEnabled={ areQueriesEnabled }/>,
         } :
@@ -233,7 +235,7 @@ const AddressPageContent = () => {
       config.features.beaconChain.isEnabled && addressTabsCountersQuery.data?.beacon_deposits_count ?
         {
           id: 'deposits',
-          title: 'Deposits',
+          title: t('common.common.deposits'),
           count: addressTabsCountersQuery.data?.beacon_deposits_count,
           component: <AddressDeposits shouldRender={ !isTabsLoading } isQueryEnabled={ areQueriesEnabled }/>,
         } :
@@ -241,39 +243,39 @@ const AddressPageContent = () => {
       config.features.beaconChain.isEnabled && addressTabsCountersQuery.data?.withdrawals_count ?
         {
           id: 'withdrawals',
-          title: 'Withdrawals',
+          title: t('common.common.withdrawals'),
           count: addressTabsCountersQuery.data?.withdrawals_count,
           component: <AddressWithdrawals shouldRender={ !isTabsLoading } isQueryEnabled={ areQueriesEnabled }/>,
         } :
         undefined,
       {
         id: 'token_transfers',
-        title: 'Token transfers',
+        title: t('transactions.common.token_transfers'),
         count: addressTabsCountersQuery.data?.token_transfers_count,
         component: <AddressTokenTransfers shouldRender={ !isTabsLoading } isQueryEnabled={ areQueriesEnabled }/>,
       },
       {
         id: 'tokens',
-        title: 'Tokens',
+        title: t('tokens.common.tokens'),
         count: addressTabsCountersQuery.data?.token_balances_count,
         component: <AddressTokens shouldRender={ !isTabsLoading } isQueryEnabled={ areQueriesEnabled }/>,
         subTabs: TOKEN_TABS,
       },
       {
         id: 'internal_txns',
-        title: 'Internal txns',
+        title: t('transactions.common.internal_txns'),
         count: addressTabsCountersQuery.data?.internal_transactions_count,
         component: <AddressInternalTxs shouldRender={ !isTabsLoading } isQueryEnabled={ areQueriesEnabled }/>,
       },
       addressTabsCountersQuery.data?.celo_election_rewards_count ? {
         id: 'epoch_rewards',
-        title: 'Epoch rewards',
+        title: t('addresses.common.epoch_rewards'),
         count: addressTabsCountersQuery.data?.celo_election_rewards_count,
         component: <AddressEpochRewards shouldRender={ !isTabsLoading } isQueryEnabled={ areQueriesEnabled }/>,
       } : undefined,
       {
         id: 'coin_balance_history',
-        title: 'Coin balance history',
+        title: t('addresses.common.coin_balance_history'),
         component: <AddressCoinBalance shouldRender={ !isTabsLoading } isQueryEnabled={ areQueriesEnabled }/>,
       },
       addressTabsCountersQuery.data?.validations_count ?
@@ -287,14 +289,14 @@ const AddressPageContent = () => {
       addressTabsCountersQuery.data?.logs_count ?
         {
           id: 'logs',
-          title: 'Logs',
+          title: t('transactions.common.logs'),
           count: addressTabsCountersQuery.data?.logs_count,
           component: <AddressLogs shouldRender={ !isTabsLoading } isQueryEnabled={ areQueriesEnabled }/>,
         } :
         undefined,
       (address3rdPartyWidgets.isEnabled && address3rdPartyWidgets.items.length > 0) ? {
         id: 'widgets',
-        title: 'Widgets',
+        title: t('tokens.common.widgets'),
         count: address3rdPartyWidgets.items.length,
         component: (
           <Address3rdPartyWidgets
@@ -326,7 +328,7 @@ const AddressPageContent = () => {
       ...(addressQuery.data?.public_tags?.map((tag) => ({ slug: tag.label, name: tag.display_name, tagType: 'custom' as const, ordinal: -1 })) || []),
       addressQuery.data?.celo?.account ? {
         slug: 'celo-account',
-        name: 'Celo account',
+        name: t('addresses.common.celo_account'),
         tagType: 'custom' as const,
         ordinal: PREDEFINED_TAG_PRIORITY,
         meta: {
@@ -336,15 +338,15 @@ const AddressPageContent = () => {
       } : undefined,
       !addressQuery.data?.is_contract ? { slug: 'eoa', name: 'EOA', tagType: 'custom' as const, ordinal: PREDEFINED_TAG_PRIORITY } : undefined,
       config.features.validators.isEnabled && addressQuery.data?.has_validated_blocks ?
-        { slug: 'validator', name: 'Validator', tagType: 'custom' as const, ordinal: PREDEFINED_TAG_PRIORITY } :
+        { slug: 'validator', name: t('epochs.common.validator'), tagType: 'custom' as const, ordinal: PREDEFINED_TAG_PRIORITY } :
         undefined,
       addressQuery.data?.implementations?.length && addressQuery.data?.proxy_type !== 'eip7702' ?
-        { slug: 'proxy', name: 'Proxy', tagType: 'custom' as const, ordinal: PREDEFINED_TAG_PRIORITY } :
+        { slug: 'proxy', name: t('addresses.common.proxy'), tagType: 'custom' as const, ordinal: PREDEFINED_TAG_PRIORITY } :
         undefined,
       addressQuery.data?.implementations?.length && addressQuery.data?.proxy_type === 'eip7702' ?
         { slug: 'eip7702', name: 'EOA+code', tagType: 'custom' as const, ordinal: PREDEFINED_TAG_PRIORITY } :
         undefined,
-      addressQuery.data?.token ? { slug: 'token', name: 'Token', tagType: 'custom' as const, ordinal: PREDEFINED_TAG_PRIORITY } : undefined,
+      addressQuery.data?.token ? { slug: 'token', name: t('tokens.common.token'), tagType: 'custom' as const, ordinal: PREDEFINED_TAG_PRIORITY } : undefined,
       isSafeAddress ? { slug: 'safe', name: 'Multisig: Safe', tagType: 'custom' as const, ordinal: -10 } : undefined,
       addressProfileAPIFeature.isEnabled && usernameApiTag ? {
         slug: 'username_api',
@@ -359,10 +361,10 @@ const AddressPageContent = () => {
         },
       } : undefined,
       config.features.userOps.isEnabled && userOpsAccountQuery.data ?
-        { slug: 'user_ops_acc', name: 'Smart contract wallet', tagType: 'custom' as const, ordinal: PREDEFINED_TAG_PRIORITY } :
+        { slug: 'user_ops_acc', name: t('addresses.common.smart_contract_wallet'), tagType: 'custom' as const, ordinal: PREDEFINED_TAG_PRIORITY } :
         undefined,
       config.features.mudFramework.isEnabled && mudTablesCountQuery.data ?
-        { slug: 'mud', name: 'MUD World', tagType: 'custom' as const, ordinal: PREDEFINED_TAG_PRIORITY } :
+        { slug: 'mud', name: t('addresses.common.mud_world'), tagType: 'custom' as const, ordinal: PREDEFINED_TAG_PRIORITY } :
         undefined,
       ...formatUserTags(addressQuery.data),
       ...(addressMetadataQuery.data?.addresses?.[hash.toLowerCase()]?.tags.filter(tag => tag.tagType !== 'note') || []),
@@ -373,7 +375,7 @@ const AddressPageContent = () => {
           tagType: 'custom' as const,
           ordinal: 12,
           meta: {
-            tooltipTitle: 'XStar humanity levels',
+            tooltipTitle: t('addresses.common.xstar_humanity_levels'),
             tooltipDescription:
               'XStar looks for off-chain information about an address and interpret it as a XHS score. Different score means different humanity levels.',
             tooltipUrl: xScoreFeature.url,
@@ -463,7 +465,7 @@ const AddressPageContent = () => {
     <>
       <TextAd mb={ 6 }/>
       <PageTitle
-        title={ `${ addressQuery.data?.is_contract && addressQuery.data?.proxy_type !== 'eip7702' ? 'Contract' : 'Address' } details` }
+        title={ `${ addressQuery.data?.is_contract && addressQuery.data?.proxy_type !== 'eip7702' ? t('tokens.common.contract') : t('validators.common.address') } details` }
         contentAfter={ titleContentAfter }
         secondRow={ titleSecondRow }
         isLoading={ isLoading }

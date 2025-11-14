@@ -1,5 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { SCROLL_L2_TXN_BATCH } from 'stubs/scrollL2';
@@ -14,6 +15,7 @@ import ScrollL2TxnBatchesListItem from 'ui/txnBatches/scrollL2/ScrollL2TxnBatche
 import ScrollL2TxnBatchesTable from 'ui/txnBatches/scrollL2/ScrollL2TxnBatchesTable';
 
 const ScrollL2TxnBatches = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:scroll_l2_txn_batches',
     options: {
@@ -54,6 +56,7 @@ const ScrollL2TxnBatches = () => {
   ) : null;
 
   const text = (() => {
+  const { t } = useTranslation();
     if (countersQuery.isError || isError || !data?.items.length) {
       return null;
     }
@@ -72,11 +75,11 @@ const ScrollL2TxnBatches = () => {
 
   return (
     <>
-      <PageTitle title="Txn batches" withTextAd/>
+      <PageTitle title={t('common.common.txn_batches')} withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items?.length }
-        emptyText="There are no txn batches."
+        emptyText={t('common.common.there_are_no_txn_batches')}
         actionBar={ actionBar }
       >
         { content }

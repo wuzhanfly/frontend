@@ -5,6 +5,7 @@ import {
   GridItem,
 } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -37,6 +38,7 @@ type ItemProps = {
 };
 
 const LatestDepositsItem = ({ item, isLoading }: ItemProps) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
 
   const l1BlockLink = item.l1BlockNumber ? (
@@ -64,7 +66,7 @@ const LatestDepositsItem = ({ item, isLoading }: ItemProps) => {
   ) : (
     <TxEntityL1
       isLoading={ isLoading }
-      hash="To be determined"
+      hash={t('common.common.to_be_determined')}
       truncation="none"
       noLink
       noCopy
@@ -80,6 +82,7 @@ const LatestDepositsItem = ({ item, isLoading }: ItemProps) => {
   );
 
   const content = (() => {
+  const { t } = useTranslation();
     if (isMobile) {
       return (
         <>
@@ -149,6 +152,7 @@ const LatestDepositsItem = ({ item, isLoading }: ItemProps) => {
 };
 
 const LatestDeposits = ({ isLoading, items, showSocketErrorAlert, socketItemsNum }: Props) => {
+  const { t } = useTranslation();
   const depositsUrl = route({ pathname: '/deposits' });
   return (
     <>

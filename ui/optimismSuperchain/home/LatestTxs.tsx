@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useIsMobile from 'lib/hooks/useIsMobile';
 import useRoutedChainSelect from 'lib/multichain/useRoutedChainSelect';
@@ -13,6 +14,7 @@ import LatestTxsCrossChain from './LatestTxsCrossChain';
 import LatestTxsLocal from './LatestTxsLocal';
 
 const LatestTxs = () => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const router = useRouter();
   const tab = getQueryParamString(router.query.tab);
@@ -21,12 +23,12 @@ const LatestTxs = () => {
   const tabs = [
     {
       id: 'cross_chain_txs',
-      title: 'Cross-chain',
+      title: t('transactions.common.crosschain'),
       component: <LatestTxsCrossChain/>,
     },
     {
       id: 'txs_local',
-      title: 'Local',
+      title: t('common.common.local'),
       component: chainSelect.value ? <LatestTxsLocal key={ chainSelect.value[0] } chainSlug={ chainSelect.value[0] }/> : null,
     },
   ];

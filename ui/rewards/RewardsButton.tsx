@@ -1,5 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -16,6 +17,7 @@ type Props = {
 };
 
 const RewardsButton = ({ variant = 'header', size }: Props) => {
+  const { t } = useTranslation();
   const { isInitialized, apiToken, openLoginModal, dailyRewardQuery, balancesQuery } = useRewardsContext();
   const isMobile = useIsMobile();
   const isLoading = !isInitialized || dailyRewardQuery.isLoading || balancesQuery.isLoading;
@@ -54,7 +56,7 @@ const RewardsButton = ({ variant = 'header', size }: Props) => {
           display={{ base: 'none', md: 'inline' }}
           fontWeight={ apiToken ? '700' : '600' }
         >
-          { apiToken ? (balancesQuery.data?.total || 'N/A') : 'Merits' }
+          { apiToken ? (balancesQuery.data?.total || 'N/A') : t('staking.common.merits') }
         </chakra.span>
       </Button>
     </Tooltip>

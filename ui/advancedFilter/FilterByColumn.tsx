@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AdvancedFilterParams, AdvancedFiltersSearchParams } from 'types/api/advancedFilter';
 
@@ -26,6 +27,7 @@ type Props = {
 };
 
 const FilterByColumn = ({ column, filters, columnName, handleFilterChange, searchParams, isLoading }: Props) => {
+  const { t } = useTranslation();
   const commonProps = { columnName, handleFilterChange, isLoading };
   switch (column) {
     case 'type': {
@@ -44,7 +46,7 @@ const FilterByColumn = ({ column, filters, columnName, handleFilterChange, searc
       const value = filters.methods?.map(m => ({ name: searchParams?.methods[m], method_id: m }));
       return (
         <TableColumnFilterWrapper
-          columnName="Method"
+          columnName={ t('tokens.common.method') }
           isLoading={ isLoading }
           selected={ Boolean(value && value.length) }
           w="350px"
@@ -57,7 +59,7 @@ const FilterByColumn = ({ column, filters, columnName, handleFilterChange, searc
       const value = { age: filters.age || '' as const, from: filters.age_from || '', to: filters.age_to || '' };
       return (
         <TableColumnFilterWrapper
-          columnName="Age"
+          columnName={ t('staking.common.age') }
           isLoading={ isLoading }
           selected={ Boolean(value.from || value.to || value.age) }
           w="382px"
@@ -86,7 +88,7 @@ const FilterByColumn = ({ column, filters, columnName, handleFilterChange, searc
       const value = (valueInclude || []).concat(valueExclude || []);
       return (
         <TableColumnFilterWrapper
-          columnName="Address from"
+          columnName={ t('common.common.address_from') }
           isLoading={ isLoading }
           selected={ Boolean(value.length) }
           w="480px"
@@ -103,7 +105,7 @@ const FilterByColumn = ({ column, filters, columnName, handleFilterChange, searc
       const value = (valueInclude || []).concat(valueExclude || []);
       return (
         <TableColumnFilterWrapper
-          columnName="Address to"
+          columnName={ t('common.common.address_to') }
           isLoading={ isLoading }
           selected={ Boolean(value.length) }
           w="480px"
@@ -116,7 +118,7 @@ const FilterByColumn = ({ column, filters, columnName, handleFilterChange, searc
       const value = { from: filters.amount_from, to: filters.amount_to };
       return (
         <TableColumnFilterWrapper
-          columnName="Amount"
+          columnName={ t('common.common.amount') }
           isLoading={ isLoading }
           selected={ Boolean(value.from || value.to) }
           w="382px"
@@ -143,7 +145,7 @@ const FilterByColumn = ({ column, filters, columnName, handleFilterChange, searc
       }
       return (
         <TableColumnFilterWrapper
-          columnName="Asset"
+          columnName={ t('common.common.asset') }
           isLoading={ isLoading }
           selected={ Boolean(value.length) }
           w="382px"

@@ -1,6 +1,7 @@
 import { Box, HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 
@@ -31,6 +32,7 @@ const TAB_LIST_PROPS = {
 };
 
 const OpSuperchainAddressTokens = () => {
+  const { t } = useTranslation();
   const scrollRef = React.useRef<HTMLDivElement>(null);
 
   const isMobile = useIsMobile();
@@ -90,12 +92,12 @@ const OpSuperchainAddressTokens = () => {
   const tabs: Array<TabItemRegular> = [
     {
       id: 'tokens_erc20',
-      title: 'ERC-20',
-      component: <div>Coming soon 🔜</div>,
+      title: t('tokens.common.erc20'),
+      component: <div>{t('account.common.coming_soon_')}</div>,
     },
     {
       id: 'tokens_nfts',
-      title: 'NFT',
+      title: t('tokens.common.nft_item'),
       component: nftDisplayType === 'list' ? (
         <MultichainProvider chainSlug={ nftsQuery.chainValue?.[0] }>
           <AddressNFTs tokensQuery={ nftsQuery } tokenTypes={ nftTokenTypes } onTokenTypesChange={ onTokenTypesChange }/>

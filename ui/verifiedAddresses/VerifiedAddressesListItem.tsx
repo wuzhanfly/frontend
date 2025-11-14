@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenInfoApplication, VerifiedAddress } from 'types/api/account';
 
@@ -23,6 +24,7 @@ interface Props {
 }
 
 const VerifiedAddressesListItem = ({ item, application, onAdd, onEdit, isLoading }: Props) => {
+  const { t } = useTranslation();
   const handleAddClick = React.useCallback(() => {
     if (isLoading) {
       return;
@@ -38,6 +40,7 @@ const VerifiedAddressesListItem = ({ item, application, onAdd, onEdit, isLoading
   }, [ isLoading, item.contractAddress, onEdit ]);
 
   const tokenInfo = (() => {
+  const { t } = useTranslation();
     if (isLoading) {
       return <Skeleton loading height={ 6 } width="140px"/>;
     }
@@ -67,7 +70,7 @@ const VerifiedAddressesListItem = ({ item, application, onAdd, onEdit, isLoading
           noCopy
           noSymbol
         />
-        <Tooltip content="Edit" disabled={ isLoading } disableOnMobile>
+        <Tooltip content={t('shared.common.edit')} disabled={ isLoading } disableOnMobile>
           <IconButton
             aria-label="edit"
             variant="link"

@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as multichain from '@blockscout/multichain-aggregator-types';
 import type { TxsSocketType } from 'ui/txs/socket/types';
@@ -22,11 +23,12 @@ interface Props {
 }
 
 const CrossChainTxs = ({ items, isLoading, isError, socketType, tableHeaderTop, currentAddress }: Props) => {
+  const { t } = useTranslation();
   const content = items ? (
     <DataListDisplay
       itemsNum={ items?.length }
       isError={ isError }
-      emptyText="There are no cross-chain transactions."
+      emptyText={t('common.common.there_are_no_crosschain_transa')}
     >
       <Box hideFrom="lg">
         Coming soon 🔜

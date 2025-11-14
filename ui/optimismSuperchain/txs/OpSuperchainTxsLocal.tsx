@@ -2,6 +2,7 @@ import { Box, Flex } from '@chakra-ui/react';
 import { capitalize } from 'es-toolkit';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 
@@ -30,6 +31,7 @@ const TAB_LIST_PROPS = {
 const QUERY_PRESERVED_PARAMS = [ 'chain-slug' ];
 
 const OpSuperchainTxsLocal = () => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const router = useRouter();
   const tab = getQueryParamString(router.query.tab);
@@ -103,7 +105,7 @@ const OpSuperchainTxsLocal = () => {
     },
     chainConfig?.features.dataAvailability.isEnabled && {
       id: 'txs_local_blob',
-      title: 'Blob txns',
+      title: t('transactions.common.blob_txns'),
       component: (
         <TxsWithFrontendSorting
           query={ txsWithBlobsQuery }

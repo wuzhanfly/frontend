@@ -1,6 +1,7 @@
 import { Box, HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import throwOnResourceLoadError from 'lib/errors/throwOnResourceLoadError';
@@ -15,6 +16,7 @@ import BlockEntity from 'ui/shared/entities/block/BlockEntity';
 import PageTitle from 'ui/shared/Page/PageTitle';
 
 const EpochPageContent = () => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const router = useRouter();
   const number = getQueryParamString(router.query.number);
@@ -33,6 +35,7 @@ const EpochPageContent = () => {
   const isLoading = epochQuery.isPlaceholderData;
 
   const titleContentAfter = (() => {
+  const { t } = useTranslation();
     switch (epochQuery.data?.type) {
       case 'L1':
         return (
@@ -42,7 +45,7 @@ const EpochPageContent = () => {
         );
       case 'L2':
         return (
-          <Tooltip content="Epoch finalized after Celo migrated to the OP‐stack, when it became an L2 rollup">
+          <Tooltip content={t('common.common.epoch_finalized_after_celo_mig')}>
             <Tag loading={ isLoading }>{ epochQuery.data.type }</Tag>
           </Tooltip>
         );
@@ -52,6 +55,7 @@ const EpochPageContent = () => {
   })();
 
   const titleSecondRow = (() => {
+  const { t } = useTranslation();
     if (!epochQuery.data || epochQuery.data?.start_block_number === null) {
       return null;
     }
@@ -61,7 +65,7 @@ const EpochPageContent = () => {
 
     return (
       <HStack textStyle={{ base: 'heading.sm', lg: 'heading.md' }} flexWrap="wrap">
-        <Box color="text.secondary">Ranging from</Box>
+        <Box color="text.secondary">{t('epochs.common.ranging_from')}</Box>
         <BlockEntity
           number={ epochQuery.data.start_block_number }
           variant="subheading"
@@ -69,9 +73,9 @@ const EpochPageContent = () => {
         />
         { epochQuery.data.end_block_number && (
           <>
-            <Box color="text.secondary">to</Box>
-            <BlockEntity number={ epochQuery.data.end_block_number } variant="subheading" { ...truncationProps }/>
-          </>
+              <Box color="text.secondary">{t('epochs.common.to')}</Box>
+              <BlockEntity number={ epochQuery.data.end_block_number } variant="subheading" { ...truncationProps }/>
+            </>
         ) }
       </HStack>
     );

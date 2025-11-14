@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { BECH_32_SEPARATOR, toBech32Address } from 'lib/address/bech32';
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const AddressAlternativeFormat = ({ isLoading, addressHash }: Props) => {
+  const { t } = useTranslation();
   const settingsContext = useSettingsContext();
 
   if (!settingsContext || config.UI.views.address.hashFormat.availableFormats.length < 2) {
@@ -19,7 +21,7 @@ const AddressAlternativeFormat = ({ isLoading, addressHash }: Props) => {
   }
 
   const label = settingsContext.addressFormat === 'bech32' ? '0x hash' : `${ config.UI.views.address.hashFormat.bech32Prefix }${ BECH_32_SEPARATOR } hash`;
-  const hint = settingsContext.addressFormat === 'bech32' ? 'Address hash encoded in base16 format' : 'Address hash encoded in bech32 format';
+  const hint = settingsContext.addressFormat === 'bech32' ? t('addresses.common.address_hash_encoded_in_base16') : t('addresses.common.address_hash_encoded_in_bech32');
   const altHash = settingsContext.addressFormat === 'bech32' ? addressHash : toBech32Address(addressHash);
 
   return (

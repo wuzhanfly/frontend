@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 
@@ -11,11 +12,12 @@ interface Props {
 }
 
 const MyProfileFieldsEmail = ({ isReadOnly, defaultValue }: Props) => {
+  const { t } = useTranslation();
 
   return (
     <FormFieldEmail<FormFields>
       name="email"
-      placeholder="Email"
+      placeholder={t('common.common.email')}
       required
       readOnly={ isReadOnly }
       helperText="Email for watch list notifications and private tags"

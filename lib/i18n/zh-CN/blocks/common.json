@@ -31,6 +31,8 @@
   "blocks.common.there_are_no_internal_transact": "暂无内部交易。",
   "blocks.common.green_fund": "绿色基金",
   "blocks.common.actual_amount_of_gas_used_by_t": "此区块中blob实际使用的Gas量",
+  "blocks.common.bbf": "Blob 消耗费用 / 交易费用 × 100%",
+  "blocks.common.ppuogu": "Blob 部署每单位 gas 价格。独立于普通 gas，gas 价格会影响交易优先级。",
   "blocks.common.a_running_total_of_blob_gas_co": "区块前超出目标的blob Gas消耗累计总量。",
   "blocks.common.aggregate_quorum_certificate": "聚合法定人数证书",
   "blocks.common.quorum_certificate": "法定人数证书",
@@ -44,6 +46,7 @@
   "blocks.common.txn": "交易",
   "blocks.common.gas_used": "Gas使用量",
   "blocks.common.base_fee": "基础费",
+  "blocks.common.block": "区块",
   "blocks.common.timestamp": "时间戳",
   "blocks.common.all": "全部",
   "blocks.common.forked": "分叉",
@@ -54,5 +57,9 @@
   "blocks.common.internal_txns": "内部交易",
   "blocks.common.blob_txns": "Blob交易",
   "blocks.common.deposits": "存款",
-  "blocks.common.withdrawals": "取款"
+  "blocks.common.withdrawals": "取款",
+  "blocks.common.base_fee_handler": "基础费用处理程序",
+  "blocks.common.base_fee_total": "基础费用总额",
+  "blocks.common.native_token": "Native Token",
+  "blocks.common.the_contract_receiving_the_base_fee_responsible_for_handling_fee_usage_this_contract_is_controlled_by_governance_process": "接收基础费用并负责处理费用使用的合约，该合约由治理流程控制"
 }

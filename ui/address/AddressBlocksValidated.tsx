@@ -2,6 +2,7 @@ import { Box } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SocketMessage } from 'lib/socket/types';
 import type { AddressBlocksValidatedResponse } from 'types/api/address';
@@ -33,6 +34,7 @@ interface Props {
 }
 
 const AddressBlocksValidated = ({ shouldRender = true, isQueryEnabled = true }: Props) => {
+  const { t } = useTranslation();
   const [ showSocketAlert, setShowSocketAlert ] = React.useState(false);
   const [ newItemsCount, setNewItemsCount ] = React.useState(0);
 
@@ -107,13 +109,13 @@ const AddressBlocksValidated = ({ shouldRender = true, isQueryEnabled = true }: 
         <TableRoot tableLayout="auto">
           <TableHeaderSticky top={ query.pagination.isVisible ? ACTION_BAR_HEIGHT_DESKTOP : 0 }>
             <TableRow>
-              <TableColumnHeader>Block</TableColumnHeader>
+              <TableColumnHeader>{t('blocks.common.block')}</TableColumnHeader>
               <TableColumnHeader>
-                Timestamp
+                {t('common.common.timestamp')}
                 <TimeFormatToggle/>
               </TableColumnHeader>
-              <TableColumnHeader>Txn</TableColumnHeader>
-              <TableColumnHeader>Gas used</TableColumnHeader>
+              <TableColumnHeader>{t('transactions.common.txn')}</TableColumnHeader>
+              <TableColumnHeader>{t('common.common.gas_used')}</TableColumnHeader>
               { !config.UI.views.block.hiddenFields?.total_reward && !config.features.rollup.isEnabled &&
                 <TableColumnHeader isNumeric>Reward { currencyUnits.ether }</TableColumnHeader> }
             </TableRow>

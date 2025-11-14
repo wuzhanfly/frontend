@@ -1,127 +1,4 @@
 {
-  "addresses.common.there_are_no_transactions": {
-    "defaultMessage": "There are no transactions.",
-    "source": [
-      "ui/address/AddressAccountHistory.tsx:120"
-    ]
-  },
-  "addresses.common.all": {
-    "defaultMessage": "All",
-    "source": [
-      "ui/address/AddressAccountHistoryFilter.tsx:10",
-      "ui/address/AddressTxsFilter.tsx:10",
-      "ui/address/contract/methods/utils.ts:82"
-    ]
-  },
-  "addresses.common.received_from": {
-    "defaultMessage": "Received from",
-    "source": [
-      "ui/address/AddressAccountHistoryFilter.tsx:11"
-    ]
-  },
-  "addresses.common.sent_to": {
-    "defaultMessage": "Sent to",
-    "source": [
-      "ui/address/AddressAccountHistoryFilter.tsx:12"
-    ]
-  },
-  "addresses.common.txn": {
-    "defaultMessage": "Txn",
-    "source": [
-      "ui/address/AddressBlocksValidated.tsx:115",
-      "ui/address/blocksValidated/AddressBlocksValidatedListItem.tsx:42",
-      "ui/address/coinBalance/AddressCoinBalanceHistory.tsx:39"
-    ]
-  },
-  "addresses.common.gas_used": {
-    "defaultMessage": "Gas used",
-    "source": [
-      "ui/address/AddressBlocksValidated.tsx:116",
-      "ui/address/blocksValidated/AddressBlocksValidatedListItem.tsx:48"
-    ]
-  },
-  "addresses.common.download_csv": {
-    "defaultMessage": "Download CSV",
-    "source": [
-      "ui/address/AddressCsvExportLink.tsx:39"
-    ]
-  },
-  "addresses.common.short_identifier_of_an_address": {
-    "defaultMessage": "Short identifier of an address that may change with chain state updates",
-    "source": [
-      "ui/address/AddressDetails.tsx:105"
-    ]
-  },
-  "addresses.common.identifies_the_purpose_and_beh": {
-    "defaultMessage": "Identifies the purpose and behavior of the address on the Filecoin network",
-    "source": [
-      "ui/address/AddressDetails.tsx:119"
-    ]
-  },
-  "addresses.common.0xstyle_address_to_which_the_f": {
-    "defaultMessage": "0x-style address to which the Filecoin address is assigned by the Ethereum Address Manager",
-    "source": [
-      "ui/address/AddressDetails.tsx:132"
-    ]
-  },
-  "addresses.common.transaction_and_address_of_cre": {
-    "defaultMessage": "Transaction and address of creation",
-    "source": [
-      "ui/address/AddressDetails.tsx:151"
-    ]
-  },
-  "addresses.common.all_tokens_in_the_account_and_": {
-    "defaultMessage": "All tokens in the account and total value",
-    "source": [
-      "ui/address/AddressDetails.tsx:181",
-      "ui/optimismSuperchain/address/OpSuperchainAddressDetails.tsx:74"
-    ]
-  },
-  "addresses.common.number_of_transactions_related": {
-    "defaultMessage": "Number of transactions related to this address",
-    "source": [
-      "ui/address/AddressDetails.tsx:206",
-      "ui/optimismSuperchain/address/OpSuperchainAddressDetails.tsx:84"
-    ]
-  },
-  "addresses.common.gas_used_by_the_address": {
-    "defaultMessage": "Gas used by the address",
-    "source": [
-      "ui/address/AddressDetails.tsx:250"
-    ]
-  },
-  "addresses.common.block_number_in_which_the_addr": {
-    "defaultMessage": "Block number in which the address was updated",
-    "source": [
-      "ui/address/AddressDetails.tsx:302",
-      "ui/optimismSuperchain/address/OpSuperchainAddressDetails.tsx:108"
-    ]
-  },
-  "addresses.common.metrics_provided_by_third_part": {
-    "defaultMessage": "Metrics provided by third party partners",
-    "source": [
-      "ui/address/AddressDetails.tsx:321"
-    ]
-  },
-  "addresses.common.there_are_no_token_transfers": {
-    "defaultMessage": "There are no token transfers.",
-    "source": [
-      "ui/address/AddressTokenTransfers.tsx:119",
-      "ui/optimismSuperchain/address/tokenTransfers/TokenTransfersLocal.tsx:109"
-    ]
-  },
-  "addresses.common.outgoing_transactions": {
-    "defaultMessage": "Outgoing transactions",
-    "source": [
-      "ui/address/AddressTxsFilter.tsx:11"
-    ]
-  },
-  "addresses.common.incoming_transactions": {
-    "defaultMessage": "Incoming transactions",
-    "source": [
-      "ui/address/AddressTxsFilter.tsx:12"
-    ]
-  },
   "addresses.common.vulnerabilities_distribution": {
     "defaultMessage": "Vulnerabilities distribution",
     "source": [
@@ -134,35 +11,23 @@
       "ui/address/SolidityscanReport.tsx:55"
     ]
   },
-  "addresses.common.list_of_clusters_registered_to": {
-    "defaultMessage": "List of clusters registered to this address",
-    "source": [
-      "ui/address/clusters/AddressClusters.tsx:75"
-    ]
-  },
-  "addresses.common.address_clusters": {
-    "defaultMessage": "Address clusters",
-    "source": [
-      "ui/address/clusters/AddressClusters.tsx:81"
-    ]
-  },
   "addresses.common.attached_to_this_address": {
     "defaultMessage": "Attached to this address",
     "source": [
-      "ui/address/clusters/AddressClusters.tsx:97"
+      "ui/address/clusters/AddressClusters.tsx:99"
     ]
   },
   "addresses.common.more_results": {
     "defaultMessage": "More results",
     "source": [
-      "ui/address/clusters/AddressClusters.tsx:104",
-      "ui/address/ensDomains/AddressEnsDomains.tsx:132"
+      "ui/address/clusters/AddressClusters.tsx:106",
+      "ui/address/ensDomains/AddressEnsDomains.tsx:134"
     ]
   },
-  "addresses.common.balances": {
-    "defaultMessage": "Balances",
+  "addresses.common.txn": {
+    "defaultMessage": "Txn",
     "source": [
-      "ui/address/coinBalance/AddressCoinBalanceChart.tsx:42"
+      "ui/address/coinBalance/AddressCoinBalanceHistory.tsx:39"
     ]
   },
   "addresses.common.delta": {
@@ -180,158 +45,25 @@
   "addresses.common.age": {
     "defaultMessage": "Age",
     "source": [
-      "ui/address/coinBalance/AddressCoinBalanceListItem.tsx:64",
-      "ui/address/epochRewards/AddressEpochRewardsListItem.tsx:29"
-    ]
-  },
-  "addresses.common.checking_contract_verification": {
-    "defaultMessage": "Checking contract verification",
-    "source": [
-      "ui/address/contract/ContractAutoVerificationStatus.tsx:9"
-    ]
-  },
-  "addresses.common.contract_successfully_verified": {
-    "defaultMessage": "Contract successfully verified",
-    "source": [
-      "ui/address/contract/ContractAutoVerificationStatus.tsx:13"
-    ]
-  },
-  "addresses.common.contract_not_verified_automati": {
-    "defaultMessage": "Contract not verified automatically. Please verify manually.",
-    "source": [
-      "ui/address/contract/ContractAutoVerificationStatus.tsx:17"
-    ]
-  },
-  "addresses.common.open_source_code_in_ide": {
-    "defaultMessage": "Open source code in IDE",
-    "source": [
-      "ui/address/contract/ContractCodeIdes.tsx:54"
+      "ui/address/coinBalance/AddressCoinBalanceListItem.tsx:64"
     ]
   },
   "addresses.common.open_in": {
     "defaultMessage": "Open in",
     "source": [
-      "ui/address/contract/ContractCodeIdes.tsx:60"
+      "ui/address/contract/ContractCodeIdes.tsx:62"
     ]
   },
   "addresses.common.redactors": {
     "defaultMessage": "Redactors",
     "source": [
-      "ui/address/contract/ContractCodeIdes.tsx:66"
-    ]
-  },
-  "addresses.common.contract_creation_failed_and_t": {
-    "defaultMessage": "Contract creation failed and there is no runtime bytecode. Below is the raw creation bytecode.",
-    "source": [
-      "ui/address/contract/ContractDetailsByteCode.tsx:27"
-    ]
-  },
-  "addresses.common.contract_creation_code": {
-    "defaultMessage": "Contract creation code",
-    "source": [
-      "ui/address/contract/ContractDetailsByteCode.tsx:38"
-    ]
-  },
-  "addresses.common.constructor_arguments": {
-    "defaultMessage": "Constructor Arguments",
-    "source": [
-      "ui/address/contract/ContractDetailsConstructorArgs.tsx:99"
-    ]
-  },
-  "addresses.common.view_external_libraries": {
-    "defaultMessage": "View external libraries",
-    "source": [
-      "ui/address/contract/ContractExternalLibraries.tsx:61"
-    ]
-  },
-  "addresses.common.libraries": {
-    "defaultMessage": "Libraries",
-    "source": [
-      "ui/address/contract/ContractExternalLibraries.tsx:63"
-    ]
-  },
-  "addresses.common.library": {
-    "defaultMessage": "Library",
-    "source": [
-      "ui/address/contract/ContractExternalLibraries.tsx:63"
-    ]
-  },
-  "addresses.common.select_contract": {
-    "defaultMessage": "Select contract",
-    "source": [
-      "ui/address/contract/ContractSourceAddressSelector.tsx:64"
-    ]
-  },
-  "addresses.common.open_contract_details_page_in_": {
-    "defaultMessage": "Open contract details page in new tab",
-    "source": [
-      "ui/address/contract/ContractSourceAddressSelector.tsx:74"
-    ]
-  },
-  "addresses.common.visualize_contract_code_using_": {
-    "defaultMessage": "Visualize contract code using Sol2Uml JS library",
-    "source": [
-      "ui/address/contract/ContractSourceCode.tsx:72"
+      "ui/address/contract/ContractCodeIdes.tsx:68"
     ]
   },
   "addresses.common.contract_source_code": {
     "defaultMessage": "Contract source code",
     "source": [
-      "ui/address/contract/ContractSourceCode.tsx:61"
-    ]
-  },
-  "addresses.common.minimal_proxy": {
-    "defaultMessage": "Minimal proxy",
-    "source": [
-      "ui/address/contract/alerts/ContractDetailsAlertProxyPattern.tsx:21"
-    ]
-  },
-  "addresses.common.proxy_storage_slots": {
-    "defaultMessage": "Proxy storage slots",
-    "source": [
-      "ui/address/contract/alerts/ContractDetailsAlertProxyPattern.tsx:26"
-    ]
-  },
-  "addresses.common.diamond_proxy": {
-    "defaultMessage": "Diamond proxy",
-    "source": [
-      "ui/address/contract/alerts/ContractDetailsAlertProxyPattern.tsx:36"
-    ]
-  },
-  "addresses.common.eternal_storage": {
-    "defaultMessage": "Eternal storage",
-    "source": [
-      "ui/address/contract/alerts/ContractDetailsAlertProxyPattern.tsx:41"
-    ]
-  },
-  "addresses.common.minimal_upgradeable_proxies": {
-    "defaultMessage": "Minimal Upgradeable Proxies",
-    "source": [
-      "ui/address/contract/alerts/ContractDetailsAlertProxyPattern.tsx:46"
-    ]
-  },
-  "addresses.common.clones_with_immutable_argument": {
-    "defaultMessage": "Clones with immutable arguments",
-    "source": [
-      "ui/address/contract/alerts/ContractDetailsAlertProxyPattern.tsx:55"
-    ]
-  },
-  "addresses.common.safe_proxy": {
-    "defaultMessage": "Safe proxy",
-    "source": [
-      "ui/address/contract/alerts/ContractDetailsAlertProxyPattern.tsx:59"
-    ]
-  },
-  "addresses.common.compound_protocol_proxy": {
-    "defaultMessage": "Compound protocol proxy",
-    "source": [
-      "ui/address/contract/alerts/ContractDetailsAlertProxyPattern.tsx:63"
-    ]
-  },
-  "addresses.common.unknown_proxy_pattern": {
-    "defaultMessage": "Unknown proxy pattern",
-    "source": [
-      "ui/address/contract/alerts/ContractDetailsAlertProxyPattern.tsx:73"
+      "ui/address/contract/ContractSourceCode.tsx:63"
     ]
   },
   "addresses.common.view_contract_in_sourcify_repo": {
@@ -340,620 +72,114 @@
       "ui/address/contract/alerts/ContractDetailsAlertVerificationSource.tsx:31"
     ]
   },
-  "addresses.common.partial": {
-    "defaultMessage": "Partial",
-    "source": [
-      "ui/address/contract/alerts/ContractDetailsAlerts.tsx:52"
-    ]
-  },
-  "addresses.common.exact": {
-    "defaultMessage": "Exact",
-    "source": [
-      "ui/address/contract/alerts/ContractDetailsAlerts.tsx:52"
-    ]
-  },
   "addresses.common.this_is_an": {
     "defaultMessage": "This is an",
     "source": [
-      "ui/address/contract/alerts/ContractDetailsAlerts.tsx:44"
+      "ui/address/contract/alerts/ContractDetailsAlerts.tsx:46"
     ]
   },
   "addresses.common.submit_audit": {
     "defaultMessage": "Submit audit",
     "source": [
-      "ui/address/contract/audits/ContractSecurityAudits.tsx:30",
-      "ui/address/contract/audits/ContractSecurityAudits.tsx:57"
-    ]
-  },
-  "addresses.common.something_went_wrong_try_again": {
-    "defaultMessage": "Something went wrong. Try again later.",
-    "source": [
-      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:78"
-    ]
-  },
-  "addresses.common.submitter_name": {
-    "defaultMessage": "Submitter name",
-    "source": [
-      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:88"
-    ]
-  },
-  "addresses.common.submitter_email": {
-    "defaultMessage": "Submitter email",
-    "source": [
-      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:89"
-    ]
-  },
-  "addresses.common.im_the_contract_owner": {
-    "defaultMessage": "I'm the contract owner",
-    "source": [
-      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:92"
-    ]
-  },
-  "addresses.common.project_name": {
-    "defaultMessage": "Project name",
-    "source": [
-      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:94"
-    ]
-  },
-  "addresses.common.project_url": {
-    "defaultMessage": "Project URL",
-    "source": [
-      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:95"
-    ]
-  },
-  "addresses.common.audit_company_name": {
-    "defaultMessage": "Audit company name",
-    "source": [
-      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:96"
-    ]
-  },
-  "addresses.common.audit_report_url": {
-    "defaultMessage": "Audit report URL",
-    "source": [
-      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:97"
-    ]
-  },
-  "addresses.common.audit_publish_date": {
-    "defaultMessage": "Audit publish date",
-    "source": [
-      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:102"
-    ]
-  },
-  "addresses.common.comment": {
-    "defaultMessage": "Comment",
-    "source": [
-      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:106"
+      "ui/address/contract/audits/ContractSecurityAudits.tsx:59"
     ]
   },
   "addresses.common.textarea": {
     "defaultMessage": "Textarea",
     "source": [
-      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:109"
-    ]
-  },
-  "addresses.common.send_request": {
-    "defaultMessage": "Send request",
-    "source": [
-      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:116"
-    ]
-  },
-  "addresses.common.contract_name": {
-    "defaultMessage": "Contract name",
-    "source": [
-      "ui/address/contract/info/ContractDetailsInfo.tsx:79"
-    ]
-  },
-  "addresses.common.creator": {
-    "defaultMessage": "Creator",
-    "source": [
-      "ui/address/contract/info/ContractDetailsInfo.tsx:87"
-    ]
-  },
-  "addresses.common.compiler_version": {
-    "defaultMessage": "Compiler version",
-    "source": [
-      "ui/address/contract/info/ContractDetailsInfo.tsx:104"
-    ]
-  },
-  "addresses.common.zk_compiler_version": {
-    "defaultMessage": "ZK compiler version",
-    "source": [
-      "ui/address/contract/info/ContractDetailsInfo.tsx:112"
-    ]
-  },
-  "addresses.common.evm_version": {
-    "defaultMessage": "EVM version",
-    "source": [
-      "ui/address/contract/info/ContractDetailsInfo.tsx:120"
-    ]
-  },
-  "addresses.common.license": {
-    "defaultMessage": "License",
-    "source": [
-      "ui/address/contract/info/ContractDetailsInfo.tsx:129"
-    ]
-  },
-  "addresses.common.optimization_enabled": {
-    "defaultMessage": "Optimization enabled",
-    "source": [
-      "ui/address/contract/info/ContractDetailsInfo.tsx:138"
-    ]
-  },
-  "addresses.common.package_name": {
-    "defaultMessage": "Package name",
-    "source": [
-      "ui/address/contract/info/ContractDetailsInfo.tsx:154"
-    ]
-  },
-  "addresses.common.verified_at": {
-    "defaultMessage": "Verified at",
-    "source": [
-      "ui/address/contract/info/ContractDetailsInfo.tsx:162"
-    ]
-  },
-  "addresses.common.contract_file_path": {
-    "defaultMessage": "Contract file path",
-    "source": [
-      "ui/address/contract/info/ContractDetailsInfo.tsx:171"
-    ]
-  },
-  "addresses.common.security_audit": {
-    "defaultMessage": "Security audit",
-    "source": [
-      "ui/address/contract/info/ContractDetailsInfo.tsx:188"
-    ]
-  },
-  "addresses.common.collapse": {
-    "defaultMessage": "Collapse",
-    "source": [
-      "ui/address/contract/methods/ContractAbi.tsx:61"
-    ]
-  },
-  "addresses.common.expand": {
-    "defaultMessage": "Expand",
-    "source": [
-      "ui/address/contract/methods/ContractAbi.tsx:61"
+      "ui/address/contract/audits/ContractSubmitAuditForm.tsx:111"
     ]
   },
   "addresses.common.contract_information": {
     "defaultMessage": "Contract information",
     "source": [
-      "ui/address/contract/methods/ContractAbi.tsx:58"
+      "ui/address/contract/methods/ContractAbi.tsx:60"
     ]
   },
   "addresses.common.reset": {
     "defaultMessage": "Reset",
     "source": [
-      "ui/address/contract/methods/ContractAbi.tsx:64"
-    ]
-  },
-  "addresses.common.search_by_method_name": {
-    "defaultMessage": "Search by method name",
-    "source": [
-      "ui/address/contract/methods/ContractMethodsFilters.tsx:46"
-    ]
-  },
-  "addresses.common.system_address": {
-    "defaultMessage": "System address",
-    "source": [
-      "ui/address/contract/methods/ContractMethodsMudSystem.tsx:56"
-    ]
-  },
-  "addresses.common.connect_your_wallet_to_enter_y": {
-    "defaultMessage": "Connect your wallet to enter your address.",
-    "source": [
-      "ui/address/contract/methods/form/ContractMethodAddressButton.tsx:20"
-    ]
-  },
-  "addresses.common.fallback": {
-    "defaultMessage": "Fallback",
-    "source": [
-      "ui/address/contract/methods/form/ContractMethodForm.tsx:113"
-    ]
-  },
-  "addresses.common.simulate": {
-    "defaultMessage": "Simulate",
-    "source": [
-      "ui/address/contract/methods/form/ContractMethodForm.tsx:180"
-    ]
-  },
-  "addresses.common.copy_calldata": {
-    "defaultMessage": "Copy calldata",
-    "source": [
-      "ui/address/contract/methods/form/ContractMethodForm.tsx:214"
-    ]
-  },
-  "addresses.common.copied": {
-    "defaultMessage": "Copied",
-    "source": [
-      "ui/address/contract/methods/form/ContractMethodForm.tsx:221"
-    ]
-  },
-  "addresses.common.something_went_wrong": {
-    "defaultMessage": "Something went wrong",
-    "source": [
-      "ui/address/contract/methods/form/ContractMethodResultWalletClient.tsx:86",
-      "ui/shared/address/AddressAddToWallet.tsx:105"
+      "ui/address/contract/methods/ContractAbi.tsx:66"
     ]
   },
   "addresses.common.view_transaction_details": {
     "defaultMessage": "View transaction details",
     "source": [
-      "ui/address/contract/methods/form/ContractMethodResultWalletClient.tsx:49"
+      "ui/address/contract/methods/form/ContractMethodResultWalletClient.tsx:51"
     ]
   },
   "addresses.common.transaction_has_been_confirmed": {
     "defaultMessage": "Transaction has been confirmed.",
     "source": [
-      "ui/address/contract/methods/form/ContractMethodResultWalletClient.tsx:65"
-    ]
-  },
-  "addresses.common.field_is_required": {
-    "defaultMessage": "Field is required",
-    "source": [
-      "ui/address/contract/methods/form/useValidateField.tsx:23"
-    ]
-  },
-  "addresses.common.invalid_address_format": {
-    "defaultMessage": "Invalid address format",
-    "source": [
-      "ui/address/contract/methods/form/useValidateField.tsx:28"
-    ]
-  },
-  "addresses.common.invalid_address_checksum": {
-    "defaultMessage": "Invalid address checksum",
-    "source": [
-      "ui/address/contract/methods/form/useValidateField.tsx:38"
-    ]
-  },
-  "addresses.common.invalid_integer_format": {
-    "defaultMessage": "Invalid integer format",
-    "source": [
-      "ui/address/contract/methods/form/useValidateField.tsx:51"
-    ]
-  },
-  "addresses.common.invalid_bytes_format": {
-    "defaultMessage": "Invalid bytes format",
-    "source": [
-      "ui/address/contract/methods/form/useValidateField.tsx:73"
-    ]
-  },
-  "addresses.common.t_aware_of_this_and_thinks_tha": {
-    "defaultMessage": "t aware of this and thinks that fallback method state mutability can only be ",
-    "source": [
-      "ui/address/contract/methods/types.ts:13"
+      "ui/address/contract/methods/form/ContractMethodResultWalletClient.tsx:67"
     ]
   },
   "addresses.common.promise": {
     "defaultMessage": "Promise",
     "source": [
       "ui/address/contract/methods/types.ts:38",
-      "ui/address/contract/methods/useCallMethodPublicClient.ts:20",
-      "ui/address/contract/methods/useCallMethodWalletClient.ts:19"
+      "ui/address/contract/methods/useCallMethodPublicClient.ts:21",
+      "ui/address/contract/methods/useCallMethodWalletClient.ts:20"
     ]
   },
-  "addresses.common.public_client_is_not_defined": {
-    "defaultMessage": "Public Client is not defined",
+  "addresses.common.all": {
+    "defaultMessage": "All",
     "source": [
-      "ui/address/contract/methods/useCallMethodPublicClient.ts:28"
-    ]
-  },
-  "addresses.common.wallet_is_not_connected": {
-    "defaultMessage": "Wallet is not connected",
-    "source": [
-      "ui/address/contract/methods/useCallMethodWalletClient.ts:30"
-    ]
-  },
-  "addresses.common.wallet_client_is_not_defined": {
-    "defaultMessage": "Wallet Client is not defined",
-    "source": [
-      "ui/address/contract/methods/useCallMethodWalletClient.ts:34"
-    ]
-  },
-  "addresses.common.method_name_is_not_defined": {
-    "defaultMessage": "Method name is not defined",
-    "source": [
-      "ui/address/contract/methods/useCallMethodWalletClient.ts:69"
+      "ui/address/contract/methods/utils.ts:83"
     ]
   },
   "addresses.common.read": {
     "defaultMessage": "Read",
     "source": [
-      "ui/address/contract/methods/utils.ts:83"
+      "ui/address/contract/methods/utils.ts:84"
     ]
   },
   "addresses.common.write": {
     "defaultMessage": "Write",
     "source": [
-      "ui/address/contract/methods/utils.ts:84"
-    ]
-  },
-  "addresses.common.code": {
-    "defaultMessage": "Code",
-    "source": [
-      "ui/address/contract/useContractDetailsTabs.tsx:38",
-      "ui/address/contract/useContractTabs.tsx:72",
-      "ui/address/contract/useContractTabs.tsx:85"
-    ]
-  },
-  "addresses.common.compiler": {
-    "defaultMessage": "Compiler",
-    "source": [
-      "ui/address/contract/useContractDetailsTabs.tsx:55"
-    ]
-  },
-  "addresses.common.compiler_settings": {
-    "defaultMessage": "Compiler Settings",
-    "source": [
-      "ui/address/contract/useContractDetailsTabs.tsx:60"
-    ]
-  },
-  "addresses.common.custom_abi": {
-    "defaultMessage": "Custom ABI",
-    "source": [
-      "ui/address/contract/useContractTabs.tsx:107"
-    ]
-  },
-  "addresses.common.mud_system": {
-    "defaultMessage": "MUD System",
-    "source": [
-      "ui/address/contract/useContractTabs.tsx:112"
+      "ui/address/contract/methods/utils.ts:85"
     ]
   },
   "addresses.common.not_a_contract": {
     "defaultMessage": "Not a contract",
     "source": [
-      "ui/address/contract/useContractTabs.tsx:73"
-    ]
-  },
-  "addresses.common.address_hash_encoded_in_base16": {
-    "defaultMessage": "Address hash encoded in base16 format",
-    "source": [
-      "ui/address/details/AddressAlternativeFormat.tsx:22"
-    ]
-  },
-  "addresses.common.address_hash_encoded_in_bech32": {
-    "defaultMessage": "Address hash encoded in bech32 format",
-    "source": [
-      "ui/address/details/AddressAlternativeFormat.tsx:22"
-    ]
-  },
-  "addresses.common.metadata_url": {
-    "defaultMessage": "Metadata URL",
-    "source": [
-      "ui/address/details/AddressCeloAccount.tsx:42"
-    ]
-  },
-  "addresses.common.link_to_additional_information": {
-    "defaultMessage": "Link to additional information published by the account owner",
-    "source": [
-      "ui/address/details/AddressCeloAccount.tsx:43"
-    ]
-  },
-  "addresses.common.vote_signer_address": {
-    "defaultMessage": "Vote signer address",
-    "source": [
-      "ui/address/details/AddressCeloAccount.tsx:67"
-    ]
-  },
-  "addresses.common.address_authorized_to_vote_in_": {
-    "defaultMessage": "Address authorized to vote in governance and validator elections on behalf of this account",
-    "source": [
-      "ui/address/details/AddressCeloAccount.tsx:68"
-    ]
-  },
-  "addresses.common.validator_signer_address": {
-    "defaultMessage": "Validator signer address",
-    "source": [
-      "ui/address/details/AddressCeloAccount.tsx:76"
-    ]
-  },
-  "addresses.common.attestation_signer_address": {
-    "defaultMessage": "Attestation signer address",
-    "source": [
-      "ui/address/details/AddressCeloAccount.tsx:85"
-    ]
-  },
-  "addresses.common.address_whose_key_this_account": {
-    "defaultMessage": "Address whose key this account uses to sign attestations on the Attestations contract",
-    "source": [
-      "ui/address/details/AddressCeloAccount.tsx:86"
-    ]
-  },
-  "addresses.common.token_name_and_symbol": {
-    "defaultMessage": "Token name and symbol",
-    "source": [
-      "ui/address/details/AddressNameInfo.tsx:19"
-    ]
-  },
-  "addresses.common.the_name_found_in_the_source_c": {
-    "defaultMessage": "The name found in the source code of the Contract",
-    "source": [
-      "ui/address/details/AddressNameInfo.tsx:40",
-      "ui/optimismSuperchain/address/OpSuperchainAddressDetails.tsx:54"
-    ]
-  },
-  "addresses.common.the_name_of_the_validator": {
-    "defaultMessage": "The name of the validator",
-    "source": [
-      "ui/address/details/AddressNameInfo.tsx:58"
+      "ui/address/contract/useContractTabs.tsx:75"
     ]
   },
   "addresses.common.multichain": {
     "defaultMessage": "Multichain",
     "source": [
-      "ui/address/details/AddressNetWorth.tsx:54"
-    ]
-  },
-  "addresses.common.we_were_unable_to_generate_qr_": {
-    "defaultMessage": "We were unable to generate QR code.",
-    "source": [
-      "ui/address/details/AddressQrCode.tsx:43"
-    ]
-  },
-  "addresses.common.qr_code_generation_failed": {
-    "defaultMessage": "QR code generation failed",
-    "source": [
-      "ui/address/details/AddressQrCode.tsx:44"
-    ]
-  },
-  "addresses.common.click_to_view_qr_code": {
-    "defaultMessage": "Click to view QR code",
-    "source": [
-      "ui/address/details/AddressQrCode.tsx:61"
-    ]
-  },
-  "addresses.common.show_qr_code": {
-    "defaultMessage": "Show QR code",
-    "source": [
-      "ui/address/details/AddressQrCode.tsx:64"
+      "ui/address/details/AddressNetWorth.tsx:56"
     ]
   },
   "addresses.common.address_qr_code": {
     "defaultMessage": "Address QR code",
     "source": [
-      "ui/address/details/AddressQrCode.tsx:85"
-    ]
-  },
-  "addresses.common.invalid_response_schema": {
-    "defaultMessage": "Invalid response schema",
-    "source": [
-      "ui/address/details/AddressSaveOnGas.tsx:18"
-    ]
-  },
-  "addresses.common.list_of_names_resolved_or_owne": {
-    "defaultMessage": "List of names resolved or owned by this address",
-    "source": [
-      "ui/address/ensDomains/AddressEnsDomains.tsx:86"
-    ]
-  },
-  "addresses.common.address_domains": {
-    "defaultMessage": "Address domains",
-    "source": [
-      "ui/address/ensDomains/AddressEnsDomains.tsx:92"
+      "ui/address/details/AddressQrCode.tsx:87"
     ]
   },
   "addresses.common.primary": {
     "defaultMessage": "Primary*",
     "source": [
-      "ui/address/ensDomains/AddressEnsDomains.tsx:108"
+      "ui/address/ensDomains/AddressEnsDomains.tsx:110"
     ]
   },
   "addresses.common.owned_by_this_address": {
     "defaultMessage": "Owned by this address",
     "source": [
-      "ui/address/ensDomains/AddressEnsDomains.tsx:118"
+      "ui/address/ensDomains/AddressEnsDomains.tsx:120"
     ]
   },
   "addresses.common.resolved_to_this_address": {
     "defaultMessage": "Resolved to this address",
     "source": [
-      "ui/address/ensDomains/AddressEnsDomains.tsx:124"
+      "ui/address/ensDomains/AddressEnsDomains.tsx:126"
     ]
   },
-  "addresses.common.epoch_": {
-    "defaultMessage": "Epoch #",
-    "source": [
-      "ui/address/epochRewards/AddressEpochRewardsListItem.tsx:24"
-    ]
-  },
-  "addresses.common.reward_type": {
-    "defaultMessage": "Reward type",
-    "source": [
-      "ui/address/epochRewards/AddressEpochRewardsListItem.tsx:39",
-      "ui/address/epochRewards/AddressEpochRewardsTable.tsx:25"
-    ]
-  },
-  "addresses.common.associated_address": {
-    "defaultMessage": "Associated address",
-    "source": [
-      "ui/address/epochRewards/AddressEpochRewardsListItem.tsx:44",
-      "ui/address/epochRewards/AddressEpochRewardsTable.tsx:26"
-    ]
-  },
-  "addresses.common.data_cap_management": {
-    "defaultMessage": "Data Cap Management",
-    "source": [
-      "ui/address/filecoin/FilecoinActorTag.tsx:10"
-    ]
-  },
-  "addresses.common.ethereum_address_manager": {
-    "defaultMessage": "Ethereum Address Manager",
-    "source": [
-      "ui/address/filecoin/FilecoinActorTag.tsx:11"
-    ]
-  },
-  "addresses.common.ethereum_virtual_machine": {
-    "defaultMessage": "Ethereum Virtual Machine",
-    "source": [
-      "ui/address/filecoin/FilecoinActorTag.tsx:13"
-    ]
-  },
-  "addresses.common.initialization": {
-    "defaultMessage": "Initialization",
-    "source": [
-      "ui/address/filecoin/FilecoinActorTag.tsx:14"
-    ]
-  },
-  "addresses.common.storage_market": {
-    "defaultMessage": "Storage Market",
-    "source": [
-      "ui/address/filecoin/FilecoinActorTag.tsx:15"
-    ]
-  },
-  "addresses.common.storage_provider": {
-    "defaultMessage": "Storage Provider",
+  "addresses.common.scheduled_tasks": {
+    "defaultMessage": "Scheduled Tasks",
     "source": [
       "ui/address/filecoin/FilecoinActorTag.tsx:16"
-    ]
-  },
-  "addresses.common.multisignature_wallet": {
-    "defaultMessage": "Multi-Signature Wallet",
-    "source": [
-      "ui/address/filecoin/FilecoinActorTag.tsx:17"
-    ]
-  },
-  "addresses.common.payment_channel": {
-    "defaultMessage": "Payment Channel",
-    "source": [
-      "ui/address/filecoin/FilecoinActorTag.tsx:18"
-    ]
-  },
-  "addresses.common.placeholder_address": {
-    "defaultMessage": "Placeholder Address",
-    "source": [
-      "ui/address/filecoin/FilecoinActorTag.tsx:19"
-    ]
-  },
-  "addresses.common.power_management": {
-    "defaultMessage": "Power Management",
-    "source": [
-      "ui/address/filecoin/FilecoinActorTag.tsx:20"
-    ]
-  },
-  "addresses.common.incentives_and_rewards": {
-    "defaultMessage": "Incentives and Rewards",
-    "source": [
-      "ui/address/filecoin/FilecoinActorTag.tsx:21"
-    ]
-  },
-  "addresses.common.system_operations": {
-    "defaultMessage": "System Operations",
-    "source": [
-      "ui/address/filecoin/FilecoinActorTag.tsx:22"
-    ]
-  },
-  "addresses.common.verification_registry": {
-    "defaultMessage": "Verification Registry",
-    "source": [
-      "ui/address/filecoin/FilecoinActorTag.tsx:23"
-    ]
-  },
-  "addresses.common.mud_world": {
-    "defaultMessage": "MUD World",
-    "source": [
-      "ui/address/mud/AddressMudBreadcrumbs.tsx:91",
-      "ui/pages/Address.tsx:365"
     ]
   },
   "addresses.common.field": {
@@ -962,41 +188,16 @@
       "ui/address/mud/AddressMudRecordValues.tsx:24"
     ]
   },
-  "addresses.common.hide_columns": {
-    "defaultMessage": "Hide columns",
-    "source": [
-      "ui/address/mud/AddressMudRecordsTable.tsx:134"
-    ]
-  },
-  "addresses.common.show_all_columns": {
-    "defaultMessage": "Show all columns",
-    "source": [
-      "ui/address/mud/AddressMudRecordsTable.tsx:134"
-    ]
-  },
   "addresses.common.modified": {
     "defaultMessage": "Modified",
     "source": [
-      "ui/address/mud/AddressMudRecordsTable.tsx:190"
+      "ui/address/mud/AddressMudRecordsTable.tsx:192"
     ]
   },
   "addresses.common.there_are_no_records_for": {
     "defaultMessage": "There are no records for",
     "source": [
       "ui/address/mud/AddressMudTable.tsx:138"
-    ]
-  },
-  "addresses.common.search_by_name_namespace_or_ta": {
-    "defaultMessage": "Search by name, namespace or table ID...",
-    "source": [
-      "ui/address/mud/AddressMudTables.tsx:53"
-    ]
-  },
-  "addresses.common.view_schema": {
-    "defaultMessage": "View schema",
-    "source": [
-      "ui/address/mud/AddressMudTablesListItem.tsx:64",
-      "ui/address/mud/AddressMudTablesTableItem.tsx:62"
     ]
   },
   "addresses.common.full_name": {
@@ -1011,38 +212,10 @@
       "ui/address/mud/AddressMudTablesTable.tsx:24"
     ]
   },
-  "addresses.common.show_all_tokens": {
-    "defaultMessage": "Show all tokens",
-    "source": [
-      "ui/address/tokenSelect/TokenSelect.tsx:70",
-      "ui/address/tokenSelect/TokenSelect.tsx:77"
-    ]
-  },
-  "addresses.common.token_select": {
-    "defaultMessage": "Token select",
-    "source": [
-      "ui/address/tokenSelect/TokenSelectButton.tsx:41"
-    ]
-  },
-  "addresses.common.search_by_token_name": {
-    "defaultMessage": "Search by token name",
-    "source": [
-      "ui/address/tokenSelect/TokenSelectMenu.tsx:33"
-    ]
-  },
   "addresses.common.could_not_find_any_matches": {
     "defaultMessage": "Could not find any matches.",
     "source": [
-      "ui/address/tokenSelect/TokenSelectMenu.tsx:86"
-    ]
-  },
-  "addresses.common.tokens": {
-    "defaultMessage": "Tokens",
-    "source": [
-      "ui/address/tokenSelect/TokenSelectMobile.tsx:27",
-      "ui/address/tokens/TokenBalances.tsx:66",
-      "ui/optimismSuperchain/address/OpSuperchainAddress.tsx:72",
-      "ui/pages/Address.tsx:257"
+      "ui/address/tokenSelect/TokenSelectMenu.tsx:88"
     ]
   },
   "addresses.common.by_collection": {
@@ -1089,254 +262,36 @@
       "ui/address/tokens/NFTItem.tsx:50"
     ]
   },
-  "addresses.common.net_worth": {
-    "defaultMessage": "Net Worth",
-    "source": [
-      "ui/address/tokens/TokenBalances.tsx:53"
-    ]
-  },
   "addresses.common.array": {
     "defaultMessage": "Array",
     "source": [
       "ui/address/tokens/useAddressNftQuery.tsx:14"
     ]
   },
-  "addresses.common.no_public_rpc_client": {
-    "defaultMessage": "No public RPC client",
-    "source": [
-      "ui/address/utils/useAddressCountersQuery.ts:45",
-      "ui/address/utils/useAddressQuery.ts:56"
-    ]
-  },
   "addresses.common.percentage": {
     "defaultMessage": "Percentage",
     "source": [
-      "ui/addresses/AddressesListItem.tsx:56",
-      "ui/addresses/AddressesTable.tsx:29"
+      "ui/addresses/AddressesListItem.tsx:56"
     ]
   },
   "addresses.common.txn_count": {
     "defaultMessage": "Txn count",
     "source": [
-      "ui/addresses/AddressesListItem.tsx:63",
-      "ui/addresses/AddressesTable.tsx:30"
-    ]
-  },
-  "addresses.common.rank": {
-    "defaultMessage": "Rank",
-    "source": [
-      "ui/addresses/AddressesTable.tsx:26"
-    ]
-  },
-  "addresses.common.address": {
-    "defaultMessage": "Address",
-    "source": [
-      "ui/addresses/AddressesTable.tsx:27",
-      "ui/shared/entities/address/AddressEntity.tsx:94"
-    ]
-  },
-  "addresses.common.details": {
-    "defaultMessage": "Details",
-    "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddress.tsx:49",
-      "ui/pages/Address.tsx:178"
-    ]
-  },
-  "addresses.common.contract": {
-    "defaultMessage": "Contract",
-    "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddress.tsx:54"
-    ]
-  },
-  "addresses.common.transactions": {
-    "defaultMessage": "Transactions",
-    "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddress.tsx:60",
-      "ui/pages/Address.tsx:214"
-    ]
-  },
-  "addresses.common.token_transfers": {
-    "defaultMessage": "Token transfers",
-    "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddress.tsx:66",
-      "ui/pages/Address.tsx:251"
-    ]
-  },
-  "addresses.common.internal_txns": {
-    "defaultMessage": "Internal txns",
-    "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddress.tsx:78",
-      "ui/pages/Address.tsx:264"
-    ]
-  },
-  "addresses.common.coin_balance_history": {
-    "defaultMessage": "Coin balance history",
-    "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddress.tsx:83",
-      "ui/pages/Address.tsx:276"
-    ]
-  },
-  "addresses.common.logs": {
-    "defaultMessage": "Logs",
-    "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddress.tsx:88",
-      "ui/pages/Address.tsx:290"
-    ]
-  },
-  "addresses.common.address_details": {
-    "defaultMessage": "Address details",
-    "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddress.tsx:135"
-    ]
-  },
-  "addresses.common.chains": {
-    "defaultMessage": "Chains",
-    "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddressDetails.tsx:29"
+      "ui/addresses/AddressesListItem.tsx:63"
     ]
   },
   "addresses.common.view_by_chain": {
     "defaultMessage": "View by chain",
     "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddressDetails.tsx:60",
-      "ui/optimismSuperchain/address/OpSuperchainAddressDetails.tsx:92",
-      "ui/optimismSuperchain/address/OpSuperchainAddressDetails.tsx:104"
+      "ui/optimismSuperchain/address/OpSuperchainAddressDetails.tsx:62",
+      "ui/optimismSuperchain/address/OpSuperchainAddressDetails.tsx:94",
+      "ui/optimismSuperchain/address/OpSuperchainAddressDetails.tsx:106"
     ]
   },
-  "addresses.common.crosschain": {
-    "defaultMessage": "Cross-chain",
+  "addresses.common.tokenscommonerc20": {
+    "defaultMessage": "tokens.common.erc20",
     "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddressTokenTransfers.tsx:137",
-      "ui/optimismSuperchain/address/OpSuperchainAddressTxs.tsx:165"
-    ]
-  },
-  "addresses.common.local": {
-    "defaultMessage": "Local",
-    "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddressTokenTransfers.tsx:142",
-      "ui/optimismSuperchain/address/OpSuperchainAddressTxs.tsx:178"
-    ]
-  },
-  "addresses.common.coming_soon_": {
-    "defaultMessage": "Coming soon 🔜",
-    "source": [
-      "ui/optimismSuperchain/address/OpSuperchainAddressTokenTransfers.tsx:138",
-      "ui/optimismSuperchain/address/OpSuperchainAddressTokens.tsx:94"
-    ]
-  },
-  "addresses.common.account_history": {
-    "defaultMessage": "Account history",
-    "source": [
-      "ui/pages/Address.tsx:221"
-    ]
-  },
-  "addresses.common.user_operations": {
-    "defaultMessage": "User operations",
-    "source": [
-      "ui/pages/Address.tsx:228"
-    ]
-  },
-  "addresses.common.deposits": {
-    "defaultMessage": "Deposits",
-    "source": [
-      "ui/pages/Address.tsx:236"
-    ]
-  },
-  "addresses.common.withdrawals": {
-    "defaultMessage": "Withdrawals",
-    "source": [
-      "ui/pages/Address.tsx:244"
-    ]
-  },
-  "addresses.common.epoch_rewards": {
-    "defaultMessage": "Epoch rewards",
-    "source": [
-      "ui/pages/Address.tsx:270"
-    ]
-  },
-  "addresses.common.widgets": {
-    "defaultMessage": "Widgets",
-    "source": [
-      "ui/pages/Address.tsx:297"
-    ]
-  },
-  "addresses.common.celo_account": {
-    "defaultMessage": "Celo account",
-    "source": [
-      "ui/pages/Address.tsx:329"
-    ]
-  },
-  "addresses.common.validator": {
-    "defaultMessage": "Validator",
-    "source": [
-      "ui/pages/Address.tsx:339"
-    ]
-  },
-  "addresses.common.proxy": {
-    "defaultMessage": "Proxy",
-    "source": [
-      "ui/pages/Address.tsx:342"
-    ]
-  },
-  "addresses.common.token": {
-    "defaultMessage": "Token",
-    "source": [
-      "ui/pages/Address.tsx:347"
-    ]
-  },
-  "addresses.common.smart_contract_wallet": {
-    "defaultMessage": "Smart contract wallet",
-    "source": [
-      "ui/pages/Address.tsx:362"
-    ]
-  },
-  "addresses.common.xstar_humanity_levels": {
-    "defaultMessage": "XStar humanity levels",
-    "source": [
-      "ui/pages/Address.tsx:376"
-    ]
-  },
-  "addresses.common.successfully_added_token_to_yo": {
-    "defaultMessage": "Successfully added token to your wallet",
-    "source": [
-      "ui/shared/address/AddressAddToWallet.tsx:91"
-    ]
-  },
-  "addresses.common.add_token_to_wallet": {
-    "defaultMessage": "Add token to wallet",
-    "source": [
-      "ui/shared/address/AddressAddToWallet.tsx:136",
-      "ui/shared/address/AddressAddToWallet.tsx:149"
-    ]
-  },
-  "addresses.common.incoming_txn": {
-    "defaultMessage": "Incoming txn",
-    "source": [
-      "ui/shared/address/AddressFromToIcon.tsx:35"
-    ]
-  },
-  "addresses.common.outgoing_txn": {
-    "defaultMessage": "Outgoing txn",
-    "source": [
-      "ui/shared/address/AddressFromToIcon.tsx:36"
-    ]
-  },
-  "addresses.common.txn_to_the_same_address": {
-    "defaultMessage": "Txn to the same address",
-    "source": [
-      "ui/shared/address/AddressFromToIcon.tsx:37"
-    ]
-  },
-  "addresses.common.external_chain_logo": {
-    "defaultMessage": "external chain logo",
-    "source": [
-      "ui/shared/entities/address/AddressEntityInterop.tsx:65"
-    ]
-  },
-  "addresses.common.address_on_ton": {
-    "defaultMessage": "Address on TON",
-    "source": [
-      "ui/shared/entities/address/AddressEntityTacTon.tsx:57"
+      "ui/optimismSuperchain/address/OpSuperchainAddressTokens.tsx:95"
     ]
   }
 }

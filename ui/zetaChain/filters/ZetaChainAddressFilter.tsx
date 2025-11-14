@@ -1,6 +1,7 @@
 import { Flex, VStack, createListCollection } from '@chakra-ui/react';
 import { isEqual } from 'es-toolkit';
 import type { ChangeEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type { CrossChainInfo } from 'types/client/crossChainInfo';
@@ -47,6 +48,7 @@ type ChainSelectProps = {
 };
 
 const AddressFilterInput = ({ address, onChange, onClear, isLast, onAddFieldClick, placeholder }: InputProps) => {
+  const { t } = useTranslation();
   return (
     <Flex alignItems="center" w="100%">
       <InputGroup
@@ -66,9 +68,10 @@ const AddressFilterInput = ({ address, onChange, onClear, isLast, onAddFieldClic
 };
 
 const ChainSelect = ({ selectedChains, onChainChange, chains, isLoading }: ChainSelectProps) => {
+  const { t } = useTranslation();
   const collection = React.useMemo(() => {
     const options: Array<SelectOption> = [
-      { value: 'all', label: 'All chains' },
+      { value: 'all', label: t('common.common.all_chains') },
       ...chains.map(chain => ({
         value: chain.chain_id.toString(),
         label: chain.chain_name || `Chain ${ chain.chain_id }`,
@@ -102,7 +105,7 @@ const ChainSelect = ({ selectedChains, onChainChange, chains, isLoading }: Chain
   return (
     <Select
       collection={ collection }
-      placeholder="Select chains"
+      placeholder={t('common.common.select_chains')}
       value={ selectedValues }
       onValueChange={ handleValueChange }
       loading={ isLoading }
@@ -131,6 +134,7 @@ const ZetaChainAddressFilter = ({
   title,
   placeholder,
 }: Props) => {
+  const { t } = useTranslation();
   const [ currentValue, setCurrentValue ] = React.useState<Array<{ address: string }>>([ ...value.map(addr => ({ address: addr })), emptyItem ]);
   const [ currentChainValue, setCurrentChainValue ] = React.useState<Array<string>>(chainValue.map(String));
 

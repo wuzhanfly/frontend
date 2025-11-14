@@ -1,5 +1,6 @@
 import { Text, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Address } from 'types/api/address';
 
@@ -22,6 +23,7 @@ type Props = {
 };
 
 const AddressNetWorth = ({ addressData, isLoading, addressHash }: Props) => {
+  const { t } = useTranslation();
   const { data, isError, isPending } = useFetchTokens({ hash: addressData?.hash, enabled: addressData?.has_tokens });
 
   const { usdBn: nativeUsd } = getCurrencyValue({
@@ -38,7 +40,7 @@ const AddressNetWorth = ({ addressData, isLoading, addressHash }: Props) => {
   const totalUsd = nativeUsd.plus(usd);
 
   const onMultichainClick = React.useCallback(() => {
-    mixpanel.logEvent(mixpanel.EventTypes.BUTTON_CLICK, { Content: 'Multichain', Source: 'address' });
+    mixpanel.logEvent(mixpanel.EventTypes.BUTTON_CLICK, { Content: t('addresses.common.multichain'), Source: 'address' });
   }, []);
 
   let multichainItems = null;

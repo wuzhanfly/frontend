@@ -1,5 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Tooltip } from 'toolkit/chakra/tooltip';
 
@@ -13,6 +14,7 @@ interface Props {
 }
 
 const SettingsSample = ({ label, value, bg, onClick, isActive, isLanguage = false }: Props) => {
+  const { t } = useTranslation();
   const bgColor = { base: 'white', _dark: 'gray.900' };
   const activeBgColor = { base: 'blue.50', _dark: 'whiteAlpha.100' };
   const activeBorderColor = { base: 'blackAlpha.800', _dark: 'gray.50' };
@@ -20,7 +22,7 @@ const SettingsSample = ({ label, value, bg, onClick, isActive, isLanguage = fals
   if (isLanguage) {
     // For language options, display the flag as text
     const flagMap: Record<string, string> = {
-      'en': '🇺🇸',
+      'en': t('settings.common.flag_us'),
       'zh': '🇨🇳',
     };
     

@@ -1,5 +1,6 @@
 import { chakra, Flex, Grid, GridItem } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { type FieldError, type FieldErrorsImpl, type Merge } from 'react-hook-form';
 
 import type { FormFields, FormFieldTag } from '../types';
@@ -33,6 +34,7 @@ interface Props {
 }
 
 const PublicTagsSubmitFieldTag = ({ index, isDisabled, errors, onAddClick, onRemoveClick, tagTypes, field }: Props) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const bgColorDefault = { _light: 'blackAlpha.50', _dark: 'whiteAlpha.100' };
   const bgColorError = { _light: 'red.50', _dark: 'red.900' };
@@ -67,7 +69,7 @@ const PublicTagsSubmitFieldTag = ({ index, isDisabled, errors, onAddClick, onRem
           <GridItem colSpan={{ base: 1, lg: 2 }}>
             <FormFieldUrl<FormFields>
               name={ `tags.${ index }.url` }
-              placeholder="Label URL"
+              placeholder={t('common.common.label_url')}
             />
           </GridItem>
           <FormFieldColor<FormFields>
@@ -120,7 +122,7 @@ const PublicTagsSubmitFieldTag = ({ index, isDisabled, errors, onAddClick, onRem
           <Flex flexDir="column" alignItems="flex-start" mt={ 4 } rowGap={ 2 }>
             <EntityTag
               data={{
-                name: field.name || 'Tag name',
+                name: field.name || t('common.common.tag_name'),
                 tagType: field.type[0],
                 meta: {
                   tagIcon: errors?.iconUrl ? undefined : field.iconUrl,

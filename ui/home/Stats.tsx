@@ -1,6 +1,7 @@
 import { Grid } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { HomeStatsWidgetId } from 'types/homepage';
 
@@ -20,6 +21,7 @@ const isArbitrumRollup = rollupFeature.isEnabled && rollupFeature.type === 'arbi
 const isStatsFeatureEnabled = config.features.stats.isEnabled;
 
 const Stats = () => {
+  const { t } = useTranslation();
   const [ hasGasTracker, setHasGasTracker ] = React.useState(config.features.gasTracker.isEnabled);
 
   // data from stats microservice is prioritized over data from stats api
@@ -120,7 +122,7 @@ const Stats = () => {
       latestBatchQuery?.data !== undefined && {
         id: 'latest_batch' as const,
         icon: 'txn_batches_slim' as const,
-        label: 'Latest batch',
+        label: t('stats.common.latest_batch'),
         value: latestBatchQuery.data.toLocaleString(),
         href: { pathname: '/batches' as const },
         isLoading,
@@ -128,7 +130,7 @@ const Stats = () => {
       (statsData?.total_blocks?.value || apiData?.total_blocks) && {
         id: 'total_blocks' as const,
         icon: 'block_slim' as const,
-        label: statsData?.total_blocks?.title || 'Total blocks',
+        label: statsData?.total_blocks?.title || t('stats.common.total_blocks'),
         value: Number(statsData?.total_blocks?.value || apiData?.total_blocks).toLocaleString(),
         href: { pathname: '/blocks' as const },
         isLoading,
@@ -136,7 +138,7 @@ const Stats = () => {
       (statsData?.average_block_time?.value || apiData?.average_block_time) && {
         id: 'average_block_time' as const,
         icon: 'clock-light' as const,
-        label: statsData?.average_block_time?.title || 'Average block time',
+        label: statsData?.average_block_time?.title || t('stats.common.average_block_time'),
         value: `${
           statsData?.average_block_time?.value ?
             Number(statsData.average_block_time.value).toFixed(1) :
@@ -147,7 +149,7 @@ const Stats = () => {
       (statsData?.total_transactions?.value || apiData?.total_transactions) && {
         id: 'total_txs' as const,
         icon: 'transactions_slim' as const,
-        label: statsData?.total_transactions?.title || 'Total transactions',
+        label: statsData?.total_transactions?.title || t('stats.common.total_transactions'),
         value: Number(statsData?.total_transactions?.value || apiData?.total_transactions).toLocaleString(),
         href: { pathname: '/txs' as const },
         isLoading,
@@ -155,7 +157,7 @@ const Stats = () => {
       (isArbitrumRollup && statsData?.total_operational_transactions?.value) && {
         id: 'total_operational_txs' as const,
         icon: 'transactions_slim' as const,
-        label: statsData?.total_operational_transactions?.title || 'Total operational transactions',
+        label: statsData?.total_operational_transactions?.title || t('stats.common.total_operational_transactions'),
         value: Number(statsData?.total_operational_transactions?.value).toLocaleString(),
         href: { pathname: '/txs' as const },
         isLoading,
@@ -163,7 +165,7 @@ const Stats = () => {
       (isOptimisticRollup && statsData?.op_stack_total_operational_transactions?.value) && {
         id: 'total_operational_txs' as const,
         icon: 'transactions_slim' as const,
-        label: statsData?.op_stack_total_operational_transactions?.title || 'Total operational transactions',
+        label: statsData?.op_stack_total_operational_transactions?.title || t('stats.common.total_operational_transactions'),
         value: Number(statsData?.op_stack_total_operational_transactions?.value).toLocaleString(),
         href: { pathname: '/txs' as const },
         isLoading,
@@ -171,7 +173,7 @@ const Stats = () => {
       apiData?.last_output_root_size && {
         id: 'latest_l1_state_batch' as const,
         icon: 'txn_batches_slim' as const,
-        label: 'Latest L1 state batch',
+        label: t('stats.common.latest_l1_state_batch'),
         value: apiData?.last_output_root_size,
         href: { pathname: '/batches' as const },
         isLoading,
@@ -179,14 +181,14 @@ const Stats = () => {
       (statsData?.total_addresses?.value || apiData?.total_addresses) && {
         id: 'wallet_addresses' as const,
         icon: 'wallet' as const,
-        label: statsData?.total_addresses?.title || 'Wallet addresses',
+        label: statsData?.total_addresses?.title || t('stats.common.wallet_addresses'),
         value: Number(statsData?.total_addresses?.value || apiData?.total_addresses).toLocaleString(),
         isLoading,
       },
       hasGasTracker && apiData?.gas_prices && {
         id: 'gas_tracker' as const,
         icon: 'gas' as const,
-        label: 'Gas tracker',
+        label: t('stats.common.gas_tracker'),
         value: apiData.gas_prices.average ? <GasPrice data={ apiData.gas_prices.average }/> : 'N/A',
         hint: gasInfoTooltip,
         isLoading,
@@ -194,14 +196,14 @@ const Stats = () => {
       apiData?.rootstock_locked_btc && {
         id: 'btc_locked' as const,
         icon: 'coins/bitcoin' as const,
-        label: 'BTC Locked in 2WP',
+        label: t('stats.common.btc_locked_in_2wp'),
         value: `${ BigNumber(apiData.rootstock_locked_btc).div(WEI).dp(0).toFormat() } RBTC`,
         isLoading,
       },
       apiData?.celo && {
         id: 'current_epoch' as const,
         icon: 'hourglass_slim' as const,
-        label: 'Current epoch',
+        label: t('stats.common.current_epoch'),
         value: `#${ apiData.celo.epoch_number }`,
         href: { pathname: '/epochs/[number]' as const, query: { number: String(apiData.celo.epoch_number) } },
         isLoading,

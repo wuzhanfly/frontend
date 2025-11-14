@@ -1,6 +1,7 @@
 import { chakra, Box, Center } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { routeParams } from 'nextjs/routes';
 
@@ -11,6 +12,7 @@ import ChainIcon from 'ui/optimismSuperchain/components/ChainIcon';
 import IconSvg from 'ui/shared/IconSvg';
 
 const BlockCountdownIndex = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const multichainContext = useMultichainContext();
 
@@ -61,7 +63,7 @@ const BlockCountdownIndex = () => {
         mt={{ base: 3, lg: 6 }}
       >
         <FilterInput
-          placeholder="Search by block number"
+          placeholder={t('common.common.search_by_block_number')}
           size="sm"
           type="number"
           name="search_term"

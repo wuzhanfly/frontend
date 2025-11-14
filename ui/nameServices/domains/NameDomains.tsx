@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { EnsDomainLookupFiltersOptions, EnsLookupSorting } from 'types/api/ens';
 
@@ -21,9 +22,10 @@ import NameDomainsActionBar from './NameDomainsActionBar';
 import NameDomainsListItem from './NameDomainsListItem';
 import NameDomainsTable from './NameDomainsTable';
 import type { Sort, SortField } from './utils';
-import { SORT_OPTIONS, getNextSortValue } from './utils';
+import { getSortOptions, getNextSortValue } from './utils';
 
 const NameDomains = () => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const q = getQueryParamString(router.query.name) || getQueryParamString(router.query.address);
@@ -37,7 +39,7 @@ const NameDomains = () => {
     resolvedTo === 'true' ? 'resolved_to' as const : undefined,
     onlyActive === 'false' ? 'with_inactive' as const : undefined,
   ].filter(Boolean);
-  const initialSort = getSortValueFromQuery<Sort>(router.query, SORT_OPTIONS);
+  const initialSort = getSortValueFromQuery<Sort>(router.query, getSortOptions(t));
 
   const [ searchTerm, setSearchTerm ] = React.useState<string>(q || '');
   const [ filterValue, setFilterValue ] = React.useState<EnsDomainLookupFiltersOptions>(initialFilters);
@@ -232,7 +234,7 @@ const NameDomains = () => {
     <DataListDisplay
       isError={ isError }
       itemsNum={ data?.items.length }
-      emptyText="There are no name domains."
+      emptyText={t('common.common.there_are_no_name_domains')}
       filterProps={{
         emptyFilteredText: `Couldn${ apos }t find name domains that match your filter query.`,
         hasActiveFilters,

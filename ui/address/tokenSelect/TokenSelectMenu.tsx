@@ -1,6 +1,7 @@
 import { Text, Box, Flex } from '@chakra-ui/react';
 import { sumBy } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormattedData } from './types';
 import type { TokenType } from 'types/api/token';
@@ -25,12 +26,13 @@ interface Props {
 }
 
 const TokenSelectMenu = ({ erc20sort, erc1155sort, erc404sort, filteredData, onInputChange, onSortClick, searchTerm }: Props) => {
+  const { t } = useTranslation();
   const hasFilteredResult = sumBy(Object.values(filteredData), ({ items }) => items.length) > 0;
 
   return (
     <>
       <FilterInput
-        placeholder="Search by token name"
+        placeholder={ t('addresses.common.search_by_token_name') }
         size="sm"
         inputProps={{ bgColor: 'dialog.bg' }}
         mb={ 5 }

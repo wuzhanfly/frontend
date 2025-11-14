@@ -1,5 +1,6 @@
 import { useQueryClient } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSendTransaction, useSwitchChain } from 'wagmi';
 
 import type { ArbitrumL2MessageClaimResponse, ArbitrumL2TxnWithdrawalsResponse } from 'types/api/arbitrumL2';
@@ -29,6 +30,7 @@ interface Props {
 }
 
 const ArbitrumL2TxnWithdrawalsClaimButton = ({ messageId, txHash, completionTxHash, isLoading: isDataLoading }: Props) => {
+  const { t } = useTranslation();
   const [ isPending, setIsPending ] = React.useState(false);
   const [ claimTxHash, setClaimTxHash ] = React.useState<string | undefined>(completionTxHash);
   const apiFetch = useApiFetch();
@@ -63,7 +65,7 @@ const ArbitrumL2TxnWithdrawalsClaimButton = ({ messageId, txHash, completionTxHa
       }
     } catch (error) {
       const apiError = getErrorObjPayload<{ message: string }>(error);
-      const message = capitalizeFirstLetter(apiError?.message || getErrorProp(error, 'shortMessage') || getErrorMessage(error) || 'Something went wrong');
+      const message = capitalizeFirstLetter(apiError?.message || getErrorProp(error, 'shortMessage') || getErrorMessage(error) || t('common.common.something_went_wrong'));
       toaster.error({
         title: 'Error',
         description: message,
@@ -128,7 +130,7 @@ const ArbitrumL2TxnWithdrawalsClaimButton = ({ messageId, txHash, completionTxHa
         variant="outline"
         onClick={ handleClaimClick }
         loading={ isLoading }
-        loadingText="Claim"
+        loadingText={t('games.common.claim')}
       >
         Claim
       </Button>

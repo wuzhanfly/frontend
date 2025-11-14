@@ -1,33 +1,35 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FilecoinActorType } from 'types/api/addressParams';
 
 import { Badge } from 'toolkit/chakra/badge';
-
-const ACTOR_TYPES: Record<FilecoinActorType, string> = {
-  account: 'Account',
-  cron: 'Scheduled Tasks',
-  datacap: 'Data Cap Management',
-  eam: 'Ethereum Address Manager',
-  ethaccount: 'Ethereum-Compatible Account',
-  evm: 'Ethereum Virtual Machine',
-  init: 'Initialization',
-  market: 'Storage Market',
-  miner: 'Storage Provider',
-  multisig: 'Multi-Signature Wallet',
-  paych: 'Payment Channel',
-  placeholder: 'Placeholder Address',
-  power: 'Power Management',
-  reward: 'Incentives and Rewards',
-  system: 'System Operations',
-  verifreg: 'Verification Registry',
-};
 
 type Props = {
   actorType: FilecoinActorType;
 };
 
 const FilecoinActorTag = ({ actorType }: Props) => {
+  const { t } = useTranslation();
+  const ACTOR_TYPES: Record<FilecoinActorType, string> = {
+    account: t('common.common.account'),
+    cron: 'Scheduled Tasks',
+    datacap: t('addresses.common.data_cap_management'),
+    eam: t('addresses.common.ethereum_address_manager'),
+    ethaccount: 'Ethereum-Compatible Account',
+    evm: t('addresses.common.ethereum_virtual_machine'),
+    init: t('addresses.common.initialization'),
+    market: t('addresses.common.storage_market'),
+    miner: t('addresses.common.storage_provider'),
+    multisig: t('addresses.common.multisignature_wallet'),
+    paych: t('addresses.common.payment_channel'),
+    placeholder: t('addresses.common.placeholder_address'),
+    power: t('addresses.common.power_management'),
+    reward: t('addresses.common.incentives_and_rewards'),
+    system: t('addresses.common.system_operations'),
+    verifreg: t('addresses.common.verification_registry'),
+  };
+
   const text = ACTOR_TYPES[actorType];
 
   if (!text) {

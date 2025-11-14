@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 
@@ -8,13 +9,14 @@ import { FormFieldText } from 'toolkit/components/forms/fields/FormFieldText';
 import ContractVerificationFormRow from '../ContractVerificationFormRow';
 
 const ContractVerificationFieldConstructorArgs = () => {
+  const { t } = useTranslation();
   return (
     <ContractVerificationFormRow>
       <FormFieldText<FormFields>
         name="constructor_args"
         required
         rules={{ maxLength: 255 }}
-        placeholder="ABI-encoded Constructor Arguments"
+        placeholder={t('common.common.abiencoded_constructor_argumen')}
         asComponent="Textarea"
       />
       <>

@@ -1,12 +1,14 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import PageTitle from 'ui/shared/Page/PageTitle';
 
 const OpSuperchainTokens = () => {
+  const { t } = useTranslation();
   return (
     <>
-      <PageTitle title="Tokens" withTextAd/>
-      <div>Coming soon 🔜</div>
+      <PageTitle title={t('tokens.common.tokens')} withTextAd/>
+      <div>{t('account.common.coming_soon_')}</div>
     </>
   );
 };

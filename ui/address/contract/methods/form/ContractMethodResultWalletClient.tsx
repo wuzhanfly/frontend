@@ -1,5 +1,6 @@
 import { chakra, Spinner, Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type { UseWaitForTransactionReceiptReturnType } from 'wagmi';
 import { useWaitForTransactionReceipt } from 'wagmi';
 
@@ -31,6 +32,7 @@ export interface PropsDumb {
 }
 
 export const ContractMethodResultWalletClientDumb = ({ data, onSettle, txInfo }: PropsDumb) => {
+  const { t } = useTranslation();
   const txHash = data && 'hash' in data ? data.hash : undefined;
 
   React.useEffect(() => {
@@ -83,7 +85,7 @@ export const ContractMethodResultWalletClientDumb = ({ data, onSettle, txInfo }:
       case 'error': {
         return (
           <Alert status="error" textStyle="sm" descriptionProps={{ flexDir: 'column', alignItems: 'flex-start', rowGap: 1 }}>
-            Error: { txInfo.error ? txInfo.error.message : 'Something went wrong' } { txLink }
+            Error: { txInfo.error ? txInfo.error.message : t('common.common.something_went_wrong') } { txLink }
           </Alert>
         );
       }

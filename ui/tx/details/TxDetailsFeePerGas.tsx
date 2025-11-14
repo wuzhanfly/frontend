@@ -1,5 +1,6 @@
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { currencyUnits } from 'lib/units';
@@ -13,6 +14,7 @@ interface Props {
 }
 
 const TxDetailsFeePerGas = ({ txFee, gasUsed, isLoading }: Props) => {
+  const { t } = useTranslation();
   if (!config.UI.views.tx.additionalFields?.fee_per_gas || !gasUsed || txFee === null) {
     return null;
   }
@@ -20,7 +22,7 @@ const TxDetailsFeePerGas = ({ txFee, gasUsed, isLoading }: Props) => {
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="Fee per gas"
+        hint={t('transactions.common.fee_per_gas')}
         isLoading={ isLoading }
       >
         Fee per gas

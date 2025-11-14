@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { useRewardsContext } from 'lib/contexts/rewards';
@@ -22,6 +23,7 @@ import PageTitle from 'ui/shared/Page/PageTitle';
 import useRedirectForInvalidAuthToken from 'ui/snippets/auth/useRedirectForInvalidAuthToken';
 
 const RewardsDashboard = () => {
+  const { t } = useTranslation();
   const { balancesQuery, apiToken, referralsQuery, rewardsConfigQuery, dailyRewardQuery, isInitialized } = useRewardsContext();
   const { nextAchievementText, isLoading: isBadgesLoading, badgesQuery } = useStreakBadges();
   const streakModal = useDisclosure();
@@ -48,7 +50,7 @@ const RewardsDashboard = () => {
     <>
       <Flex gap={ 3 } justifyContent="space-between" mb={ 6 }>
         <PageTitle
-          title="Dashboard"
+          title={t('common.common.dashboard')}
           secondRow={ (
             <span>
               <Link external href={ `https://merits.blockscout.com/?tab=users&utm_source=${ config.chain.id }&utm_medium=text-banner` }>
@@ -62,10 +64,10 @@ const RewardsDashboard = () => {
         <AdBanner platform="mobile" w="fit-content" flexShrink={ 0 } borderRadius="md" overflow="hidden" display={{ base: 'none', lg: 'block ' }}/>
       </Flex>
       <Flex flexDirection="column" alignItems="flex-start" w="full" gap={ 6 }>
-        { isError && <Alert status="error">Failed to load some data. Please try again later.</Alert> }
+        { isError && <Alert status="error">{t('common.common.failed_to_load_some_data_please_try_again_later')}</Alert> }
         <Flex gap={ 6 } flexDirection={{ base: 'column', md: 'row' }} w="full">
           <RewardsDashboardCard
-            title="All Merits"
+            title={t('common.common.all_merits')}
             description="Claim your daily Merits and any Merits received from referrals."
             contentDirection="column-reverse"
             cardValueStyle={{ minH: { base: '64px', md: '116px' } }}
@@ -86,8 +88,8 @@ const RewardsDashboard = () => {
             />
           </RewardsDashboardCard>
           <RewardsDashboardCard
-            title="Referrals"
-            description="Total number of users who have joined the program using your code or referral link."
+            title={t('common.common.referrals')}
+            description={t('common.common.total_number_of_users_who_have')}
             contentDirection="column-reverse"
             cardValueStyle={{ minH: { base: '64px', md: '116px' } }}
           >
@@ -100,7 +102,7 @@ const RewardsDashboard = () => {
             />
           </RewardsDashboardCard>
           <RewardsDashboardCard
-            title="Streak"
+            title={t('common.common.streak')}
             description={
               `Current number of consecutive days you${ apos }ve claimed your daily Merits. The longer your streak, the more daily Merits you can earn.`
             }
@@ -134,17 +136,17 @@ const RewardsDashboard = () => {
           tabs={ [
             {
               id: 'activity',
-              title: 'Activity',
+              title: t('common.common.activity'),
               component: <ActivityTab/>,
             },
             {
               id: 'referrals',
-              title: 'Referrals',
+              title: t('common.common.referrals'),
               component: <ReferralsTab/>,
             },
             {
               id: 'resources',
-              title: 'Resources',
+              title: t('common.common.resources'),
               component: <ResourcesTab/>,
             },
           ] }

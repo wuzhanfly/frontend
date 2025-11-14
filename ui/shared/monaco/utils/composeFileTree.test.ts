@@ -27,7 +27,7 @@ const files = [
   },
 ];
 
-test('builds correct file tree', () => {
+test('shared.common.builds_correct_file_tree', () => {
   const result = composeFileTree(files);
   expect(result).toMatchInlineSnapshot(`
 [

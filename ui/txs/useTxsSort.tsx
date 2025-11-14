@@ -1,5 +1,6 @@
 import type { UseQueryResult } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TransactionsSortingValue, TxsResponse } from 'types/api/transaction';
 
@@ -9,13 +10,13 @@ import type { SelectOption } from 'toolkit/chakra/select';
 
 import sortTxs from './sortTxs';
 
-export const SORT_OPTIONS: Array<SelectOption<TransactionsSortingValue>> = [
-  { label: 'Default', value: 'default' },
-  { label: 'Value ascending', value: 'value-asc' },
-  { label: 'Value descending', value: 'value-desc' },
-  { label: 'Fee ascending', value: 'fee-asc' },
-  { label: 'Fee descending', value: 'fee-desc' },
-  { label: 'Block number ascending', value: 'block_number-asc' },
+export const getSortOptions = (t: (key: string) => string): Array<SelectOption<TransactionsSortingValue>> => [
+  { label: t('validators.common.default'), value: 'default' },
+  { label: t('common.common.value_ascending'), value: 'value-asc' },
+  { label: t('common.common.value_descending'), value: 'value-desc' },
+  { label: t('common.common.fee_ascending'), value: 'fee-asc' },
+  { label: t('common.common.fee_descending'), value: 'fee-desc' },
+  { label: t('common.common.block_number_ascending'), value: 'block_number-asc' },
 ];
 
 type SortingValue = TransactionsSortingValue;

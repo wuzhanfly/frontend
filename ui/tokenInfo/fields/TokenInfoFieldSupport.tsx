@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Fields } from '../types';
 
@@ -13,6 +14,7 @@ interface Props {
 }
 
 const TokenInfoFieldSupport = (props: Props) => {
+  const { t } = useTranslation();
   const validate = React.useCallback((newValue: string | undefined) => {
     if (typeof newValue !== 'string') {
       return true;
@@ -25,13 +27,13 @@ const TokenInfoFieldSupport = (props: Props) => {
       return true;
     }
 
-    return 'Invalid format';
+    return t('common.common.invalid_format');
   }, []);
 
   return (
     <FormFieldText<Fields, 'support'>
       name="support"
-      placeholder="Support URL or email"
+      placeholder={t('common.common.support_url_or_email')}
       rules={{ validate }}
       { ...props }
     />

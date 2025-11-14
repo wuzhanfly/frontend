@@ -1,4 +1,5 @@
 import { Box, Flex } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 import type { AllowanceType } from 'types/client/revoke';
 import type { ChainConfig } from 'types/multichain';
@@ -23,6 +24,8 @@ export default function Approvals({
   isAddressMatch,
   hideApproval,
 }: Props) {
+  const { t } = useTranslation();
+  
   const content = (
     <>
       <Flex hideFrom="lg" flexDirection="column">
@@ -54,7 +57,7 @@ export default function Approvals({
       itemsNum={ approvals.length }
       isError={ false }
       filterProps={{
-        emptyFilteredText: 'No approvals found',
+        emptyFilteredText: t('marketplace.common.no_approvals_found'),
         hasActiveFilters: true,
       }}
     >

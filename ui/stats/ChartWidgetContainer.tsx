@@ -10,6 +10,7 @@ import config from 'configs/app';
 import { ChartWidget } from 'toolkit/components/charts/ChartWidget';
 import { useChartsConfig } from 'ui/shared/chart/config';
 import useChartQuery from 'ui/shared/chart/useChartQuery';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
   id: string;
@@ -32,7 +33,8 @@ const ChartWidgetContainer = ({
   className,
   href,
 }: Props) => {
-  const { items, lineQuery } = useChartQuery(id, Resolution.DAY, interval, !isPlaceholderData);
+  const { t } = useTranslation();
+  const { items, lineQuery } = useChartQuery(id, Resolution.DAY, interval, t, !isPlaceholderData);
   const chartsConfig = useChartsConfig();
 
   useEffect(() => {

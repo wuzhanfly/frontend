@@ -1,5 +1,6 @@
 import { HStack, StackSeparator } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { SECOND } from 'toolkit/utils/consts';
 
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const BlockCountdownTimer = ({ value: initialValue, onFinish }: Props) => {
+  const { t } = useTranslation();
 
   const [ value, setValue ] = React.useState(initialValue);
 
@@ -42,10 +44,10 @@ const BlockCountdownTimer = ({ value: initialValue, onFinish }: Props) => {
       borderRadius="base"
       separator={ <StackSeparator borderColor="border.divider"/> }
     >
-      <BlockCountdownTimerItem label="Days" value={ periods.days }/>
-      <BlockCountdownTimerItem label="Hours" value={ periods.hours }/>
-      <BlockCountdownTimerItem label="Minutes" value={ periods.minutes }/>
-      <BlockCountdownTimerItem label="Seconds" value={ periods.seconds }/>
+      <BlockCountdownTimerItem label={t('common.common.days')} value={ periods.days }/>
+      <BlockCountdownTimerItem label={t('common.common.hours')} value={ periods.hours }/>
+      <BlockCountdownTimerItem label={t('common.common.minutes')} value={ periods.minutes }/>
+      <BlockCountdownTimerItem label={t('common.common.seconds')} value={ periods.seconds }/>
     </HStack>
   );
 };

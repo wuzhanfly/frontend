@@ -9,6 +9,7 @@ import useDebounce from 'lib/hooks/useDebounce';
 import { AccordionRoot } from 'toolkit/chakra/accordion';
 import { Input } from 'toolkit/chakra/input';
 import { InputGroup } from 'toolkit/chakra/input-group';
+import { useTranslation } from 'react-i18next';
 
 import CodeEditorSearchSection from './CodeEditorSearchSection';
 import CoderEditorCollapseButton from './CoderEditorCollapseButton';
@@ -25,17 +26,16 @@ interface Props {
 }
 
 const CodeEditorSearch = ({ monaco, data, onFileSelect, isInputStuck, isActive, setActionBarRenderer, defaultValue }: Props) => {
-  const [ searchTerm, changeSearchTerm ] = React.useState('');
-  const [ searchResults, setSearchResults ] = React.useState<Array<SearchResult>>([]);
-  const [ expandedSections, setExpandedSections ] = React.useState<Array<string>>([]);
+  const { t } = useTranslation();
+  const [ searchTerm, setSearchTerm ] = React.useState(defaultValue || '');
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
   const [ isMatchCase, setMatchCase ] = React.useState(false);
   const [ isMatchWholeWord, setMatchWholeWord ] = React.useState(false);
   const [ isMatchRegex, setMatchRegex ] = React.useState(false);
-  const decorations = React.useRef<Record<string, Array<string>>>({});
-
+  const [ expandedSections, setExpandedSections ] = React.useState<Array<string>>([]);
+  const [ searchResults, setSearchResults ] = React.useState<Array<SearchResult>>([]);
+  const decorations = React.useRef<Record<string, string[]>>({});
   const themeColors = useThemeColors();
-
-  const debouncedSearchTerm = useDebounce(searchTerm, 300);
 
   const handleMatchCaseChange = React.useCallback(() => {
     setMatchCase((prev) => !prev);
@@ -50,7 +50,7 @@ const CodeEditorSearch = ({ monaco, data, onFileSelect, isInputStuck, isActive, 
   }, []);
 
   React.useEffect(() => {
-    changeSearchTerm(defaultValue);
+    setSearchTerm(defaultValue);
   }, [ defaultValue ]);
 
   React.useEffect(() => {
@@ -92,7 +92,7 @@ const CodeEditorSearch = ({ monaco, data, onFileSelect, isInputStuck, isActive, 
   }, [ searchResults ]);
 
   const handleSearchTermChange = React.useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    changeSearchTerm(event.target.value);
+    setSearchTerm(event.target.value);
   }, []);
 
   const handleResultItemClick = React.useCallback((filePath: string, lineNumber: number) => {
@@ -118,7 +118,7 @@ const CodeEditorSearch = ({ monaco, data, onFileSelect, isInputStuck, isActive, 
     return (
       <CoderEditorCollapseButton
         onClick={ handleToggleCollapseClick }
-        label={ expandedSections.length === 0 ? 'Expand all' : 'Collapse all' }
+        label={ expandedSections.length === 0 ? t('shared.common.expand_all') : t('shared.common.collapse_all') }
         isDisabled={ searchResults.length === 0 }
         isCollapsed={ expandedSections.length === 0 }
       />
@@ -169,8 +169,8 @@ const CodeEditorSearch = ({ monaco, data, onFileSelect, isInputStuck, isActive, 
         onClick={ handleMatchCaseChange }
         bgColor={ isMatchCase ? themeColors['custom.inputOption.activeBackground'] : 'transparent' }
         _hover={{ bgColor: isMatchCase ? themeColors['custom.inputOption.activeBackground'] : themeColors['custom.inputOption.hoverBackground'] }}
-        title="Match Case"
-        aria-label="Match Case"
+        title={t('shared.common.match_case')}
+        aria-label={t('shared.common.match_case')}
       />
       <Box
         { ...buttonProps }
@@ -178,8 +178,8 @@ const CodeEditorSearch = ({ monaco, data, onFileSelect, isInputStuck, isActive, 
         bgColor={ isMatchWholeWord ? themeColors['custom.inputOption.activeBackground'] : 'transparent' }
         onClick={ handleMatchWholeWordChange }
         _hover={{ bgColor: isMatchWholeWord ? themeColors['custom.inputOption.activeBackground'] : themeColors['custom.inputOption.hoverBackground'] }}
-        title="Match Whole Word"
-        aria-label="Match Whole Word"
+        title={t('shared.common.match_whole_word')}
+        aria-label={t('shared.common.match_whole_word')}
       />
       <Box
         { ...buttonProps }
@@ -187,8 +187,8 @@ const CodeEditorSearch = ({ monaco, data, onFileSelect, isInputStuck, isActive, 
         bgColor={ isMatchRegex ? themeColors['custom.inputOption.activeBackground'] : 'transparent' }
         onClick={ handleMatchRegexChange }
         _hover={{ bgColor: isMatchRegex ? themeColors['custom.inputOption.activeBackground'] : themeColors['custom.inputOption.hoverBackground'] }}
-        title="Use Regular Expression"
-        aria-label="Use Regular Expression"
+        title={t('shared.common.use_regular_expression')}
+        aria-label={t('shared.common.use_regular_expression')}
       />
     </>
   );
@@ -211,7 +211,7 @@ const CodeEditorSearch = ({ monaco, data, onFileSelect, isInputStuck, isActive, 
           size="xs"
           onChange={ handleSearchTermChange }
           value={ searchTerm }
-          placeholder="Search"
+          placeholder={t('shared.common.search')}
           color={ themeColors['input.foreground'] }
           bgColor={ themeColors['input.background'] }
           borderRadius="none"

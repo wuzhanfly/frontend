@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 import type { PaginationParams } from 'ui/shared/pagination/types';
@@ -31,6 +32,7 @@ import TokenInstancePageTitle from 'ui/tokenInstance/TokenInstancePageTitle';
 export type TokenTabs = 'token_transfers' | 'holders';
 
 const TokenInstanceContent = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMobile = useIsMobile();
 
@@ -96,7 +98,7 @@ const TokenInstanceContent = () => {
   const tabs: Array<TabItemRegular> = [
     {
       id: 'token_transfers',
-      title: 'Token transfers',
+      title: t('transactions.common.token_transfers'),
       component: (
         <TokenTransfer
           transfersQuery={ transfersQuery }
@@ -111,11 +113,11 @@ const TokenInstanceContent = () => {
     shouldFetchHolders ?
       {
         id: 'holders',
-        title: 'Holders',
+        title: t('tokens.common.holders'),
         component: <TokenHolders holdersQuery={ holdersQuery } token={ tokenQuery.data } shouldRender={ !isLoading } tabsHeight={ 80 }/>,
       } :
       undefined,
-    { id: 'metadata', title: 'Metadata', component: (
+    { id: 'metadata', title: t('common.common.metadata'), component: (
       <TokenInstanceMetadata
         data={ tokenInstanceQuery.data?.metadata }
         isPlaceholderData={ isLoading }

@@ -8,6 +8,17 @@ import { test as base, expect } from 'playwright/lib';
 
 import VerifiedAddresses from './VerifiedAddresses';
 
+const { t } = (() => {
+  // Mock translation function for tests
+  const mockT = (key: string) => {
+    const keyMap: Record<string, string> = {
+      'common.common.sign_manually': 'Sign manually',
+    };
+    return keyMap[key] || key;
+  };
+  return { t: mockT };
+})();
+
 const test = base.extend<{ context: BrowserContext }>({
   context: contextWithAuth,
 });
@@ -53,7 +64,7 @@ test('address verification flow', async({ render, mockApiResponse, page }) => {
   await page.getByRole('button', { name: /continue/i }).click();
 
   // fill second step
-  await page.getByText('Sign manually').click();
+  await page.getByText(t('common.common.sign_manually')).click();
   const signatureInput = page.getByLabel(/signature hash/i);
   await signatureInput.fill(mocks.SIGNATURE);
   await page.getByRole('button', { name: /verify/i }).click();

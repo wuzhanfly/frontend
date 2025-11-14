@@ -4,13 +4,15 @@ import { test, expect } from 'playwright/lib';
 
 import StatsWidget from './StatsWidget';
 
+const t = (key: string) => key;
+
 test.use({ viewport: { width: 300, height: 100 } });
 
 test('with positive diff +@dark-mode', async({ render }) => {
   const component = await render(
     <StatsWidget
-      label="Verified contracts"
-      hint="Contracts that have been verified"
+      label='common.common.verified_contracts'
+      hint={t('stats.common.contracts_that_have_been_verified')}
       value="1 000 000"
       diff={ 4200 }
       diffFormatted="4 200"
@@ -24,8 +26,8 @@ test('with positive diff +@dark-mode', async({ render }) => {
 test('with negative diff', async({ render }) => {
   const component = await render(
     <StatsWidget
-      label="Verified contracts"
-      hint="Contracts that have been verified"
+      label='common.common.verified_contracts'
+      hint={t('stats.common.contracts_that_have_been_verified')}
       value="1,000,000"
       diff={ -4200 }
     />,
@@ -37,8 +39,8 @@ test('with negative diff', async({ render }) => {
 test('loading state', async({ render }) => {
   const component = await render(
     <StatsWidget
-      label="Verified contracts"
-      hint="Contracts that have been verified"
+      label='common.common.verified_contracts'
+      hint={t('stats.common.contracts_that_have_been_verified')}
       value="1,000,000"
       isLoading
     />,
@@ -50,8 +52,8 @@ test('loading state', async({ render }) => {
 test('with period only', async({ render }) => {
   const component = await render(
     <StatsWidget
-      label="Verified contracts"
-      hint="Contracts that have been verified"
+      label='common.common.verified_contracts'
+      hint={t('stats.common.contracts_that_have_been_verified')}
       value="1,000,000"
       period="1h"
     />,

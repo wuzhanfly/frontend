@@ -1,6 +1,7 @@
 import { Flex, chakra } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { VerifiedContract } from 'types/api/contracts';
 import type { ChainConfig } from 'types/multichain';
@@ -25,11 +26,13 @@ interface Props {
 }
 
 const VerifiedContractsTableItem = ({ data, isLoading, chainData }: Props) => {
+  const { t } = useTranslation();
   const balance = data.coin_balance && data.coin_balance !== '0' ?
     BigNumber(data.coin_balance).div(10 ** config.chain.currency.decimals).dp(6).toFormat() :
     '0';
 
   const license = (() => {
+  const { t } = useTranslation();
     const license = CONTRACT_LICENSES.find((license) => license.type === data.license_type);
     if (!license || license.type === 'none') {
       return '-';
@@ -101,14 +104,14 @@ const VerifiedContractsTableItem = ({ data, isLoading, chainData }: Props) => {
         ) }
       </TableCell>
       <TableCell>
-        <Tooltip content="Optimization" disabled={ isLoading }>
+        <Tooltip content={t('common.common.optimization')} disabled={ isLoading }>
           <chakra.span display="inline-block">
             { data.optimization_enabled ?
               <IconSvg name="check" boxSize={ 6 } color="green.500" cursor="pointer" isLoading={ isLoading }/> :
               <IconSvg name="cross" boxSize={ 6 } color="red.600" cursor="pointer" isLoading={ isLoading }/> }
           </chakra.span>
         </Tooltip>
-        <Tooltip content="Constructor args" disabled={ isLoading }>
+        <Tooltip content={t('common.common.constructor_args')} disabled={ isLoading }>
           <chakra.span display="inline-block" ml={ 2 }>
             { data.has_constructor_args ?
               <IconSvg name="check" boxSize={ 6 } color="green.500" cursor="pointer" isLoading={ isLoading }/> :

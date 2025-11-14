@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import ActionBar, { ACTION_BAR_HEIGHT_DESKTOP } from 'ui/shared/ActionBar';
 import DataFetchAlert from 'ui/shared/DataFetchAlert';
@@ -16,6 +17,7 @@ type Props = {
 };
 
 const UserOpsContent = ({ query, showTx = true, showSender = true }: Props) => {
+  const { t } = useTranslation();
 
   if (query.isError) {
     return <DataFetchAlert/>;
@@ -56,7 +58,7 @@ const UserOpsContent = ({ query, showTx = true, showSender = true }: Props) => {
     <DataListDisplay
       isError={ query.isError }
       itemsNum={ query.data?.items?.length }
-      emptyText="There are no user operations."
+      emptyText={t('common.common.there_are_no_user_operations')}
       actionBar={ actionBar }
     >
       { content }

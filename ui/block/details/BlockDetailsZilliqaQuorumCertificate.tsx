@@ -1,5 +1,6 @@
 import { Separator, Grid, GridItem } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ZilliqaNestedQuorumCertificate, ZilliqaQuorumCertificate } from 'types/api/block';
 
@@ -20,6 +21,7 @@ interface Props {
 }
 
 const BlockDetailsZilliqaQuorumCertificate = ({ data }: Props) => {
+  const { t } = useTranslation();
   const hint = (isNested?: boolean) => (
     <>
       The iteration of the consensus round in which the block was proposed:<br/><br/>
@@ -40,7 +42,7 @@ const BlockDetailsZilliqaQuorumCertificate = ({ data }: Props) => {
       <DetailedInfo.ItemLabel
         hint={ hint() }
       >
-        { data.nested_quorum_certificates ? 'Aggregate quorum certificate' : 'Quorum certificate' }
+        { data.nested_quorum_certificates ? t('blocks.common.aggregate_quorum_certificate') : t('blocks.common.quorum_certificate') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue flexWrap="wrap">
         <Grid

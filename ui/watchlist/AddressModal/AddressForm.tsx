@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import { useMutation } from '@tanstack/react-query';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm, FormProvider } from 'react-hook-form';
 
@@ -76,6 +77,7 @@ const AddressForm: React.FC<Props> = ({ data, onSuccess, setAlertVisible, isAdd,
   });
 
   const apiFetch = useApiFetch();
+  const { t } = useTranslation();
 
   function updateWatchlist(formData: Inputs) {
     const body = {
@@ -136,7 +138,7 @@ const AddressForm: React.FC<Props> = ({ data, onSuccess, setAlertVisible, isAdd,
         />
         <FormFieldText<Inputs>
           name="tag"
-          placeholder="Private tag (max 35 characters)"
+          placeholder={t('common.common.private_tag_max_characters', { count: TAG_MAX_LENGTH })}
           required
           rules={{
             maxLength: TAG_MAX_LENGTH,
@@ -155,7 +157,7 @@ const AddressForm: React.FC<Props> = ({ data, onSuccess, setAlertVisible, isAdd,
             <Text color="text.secondary" fontSize="sm" marginBottom={{ base: '10px', lg: 5 }}>Notification methods</Text>
             <FormFieldCheckbox<Inputs, 'notification'>
               name="notification"
-              label="Email notifications"
+              label={t('account.common.email_notifications')}
             />
           </>
         ) : null }
@@ -166,7 +168,7 @@ const AddressForm: React.FC<Props> = ({ data, onSuccess, setAlertVisible, isAdd,
             w="fit-content"
             mb={ 6 }
           >
-            To receive notifications you need to add an email to your profile.
+            {t('watchlist.common.to_receive_notifications_you_need_to_add_an_email_to_your_profile')}
           </Alert>
         ) : null }
         <Button
@@ -175,7 +177,7 @@ const AddressForm: React.FC<Props> = ({ data, onSuccess, setAlertVisible, isAdd,
           disabled={ !formApi.formState.isDirty }
           mt={ 8 }
         >
-          { !isAdd ? 'Save changes' : 'Add address' }
+          { !isAdd ? t('common.common.save_changes') : t('common.common.add_address') }
         </Button>
       </form>
     </FormProvider>

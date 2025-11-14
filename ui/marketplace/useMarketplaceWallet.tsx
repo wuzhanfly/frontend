@@ -1,5 +1,6 @@
 import type { TypedData } from 'abitype';
 import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import type { Account, SignTypedDataParameters } from 'viem';
 import { useAccount, useSendTransaction, useSwitchChain, useSignMessage, useSignTypedData } from 'wagmi';
 
@@ -23,6 +24,7 @@ export type SignTypedDataArgs<
 > = SignTypedDataParameters<TTypedData, TPrimaryType, Account>;
 
 export default function useMarketplaceWallet(appId: string) {
+  const { t } = useTranslation();
   const { address, chainId } = useAccount();
   const { sendTransactionAsync } = useSendTransaction();
   const { signMessageAsync } = useSignMessage();
@@ -52,7 +54,7 @@ export default function useMarketplaceWallet(appId: string) {
     }
     logEvent('Send Transaction');
     return tx;
-  }, [ sendTransactionAsync, switchNetwork, logEvent, trackTransaction, trackTransactionConfirm, address ]);
+  }, [ sendTransactionAsync, switchNetwork, logEvent, trackTransaction, trackTransactionConfirm, address, t ]);
 
   const signMessage = useCallback(async(message: string) => {
     await switchNetwork();

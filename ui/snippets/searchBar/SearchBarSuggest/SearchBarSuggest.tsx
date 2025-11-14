@@ -2,6 +2,7 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import { debounce } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ListCctxsResponse } from '@blockscout/zetachain-cctx-types';
 import type { SearchResultItem } from 'types/api/search';
@@ -18,7 +19,7 @@ import useMarketplaceApps from 'ui/marketplace/useMarketplaceApps';
 import TextAd from 'ui/shared/ad/TextAd';
 import ExternalSearchItem from 'ui/shared/search/ExternalSearchItem';
 import type { ApiCategory, Category, ItemsCategoriesMap } from 'ui/shared/search/utils';
-import { getItemCategory, searchCategories } from 'ui/shared/search/utils';
+import { addUserSpecificCategories, getItemCategory, getSearchCategories } from 'ui/shared/search/utils';
 
 import SearchBarSuggestApp from './SearchBarSuggestApp';
 import SearchBarSuggestBlockCountdown from './SearchBarSuggestBlockCountdown';
@@ -36,6 +37,7 @@ interface Props {
 }
 
 const SearchBarSuggest = ({ query, zetaChainCCTXQuery, externalSearchItem, searchTerm, onItemClick }: Props) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
 
   const scrollContainerRef = React.useRef<HTMLDivElement>(null);
@@ -124,11 +126,17 @@ const SearchBarSuggest = ({ query, zetaChainCCTXQuery, externalSearchItem, searc
     return map;
   }, [ query.data, marketplaceApps.displayedApps, searchTerm, zetaChainCCTXQuery.data?.items ]);
 
+  const searchCategories = React.useMemo(() => {
+    const categories = getSearchCategories(t);
+    addUserSpecificCategories(categories, t);
+    return categories;
+  }, [t]);
+
   React.useEffect(() => {
     categoriesRefs.current = Array(Object.keys(itemsGroups).length).fill('').map((_, i) => categoriesRefs.current[i] || React.createRef());
     const resultCategories = searchCategories.filter(cat => itemsGroups[cat.id]);
     setCurrentTab(resultCategories[0]?.id);
-  }, [ itemsGroups ]);
+  }, [ itemsGroups, searchCategories ]);
 
   const handleTabsValueChange = React.useCallback(({ value }: { value: string }) => {
     setCurrentTab(value as Category);
@@ -154,11 +162,12 @@ const SearchBarSuggest = ({ query, zetaChainCCTXQuery, externalSearchItem, searc
       title: isMobile ? cat.tabTitle : cat.title,
       component: null,
     }));
-  }, [ itemsGroups, isMobile ]);
+  }, [ itemsGroups, isMobile, searchCategories ]);
 
   const content = (() => {
+  const { t } = useTranslation();
     if (query.isPending || marketplaceApps.isPlaceholderData || (config.features.zetachain.isEnabled && zetaChainCCTXQuery.isPending)) {
-      return <ContentLoader text="We are searching, please wait... " fontSize="sm" maxW="250px"/>;
+      return <ContentLoader text={t('common.common.we_are_searching_please_wait')} fontSize="sm" maxW="250px"/>;
     }
 
     if (query.isError) {

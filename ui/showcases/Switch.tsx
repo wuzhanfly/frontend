@@ -1,15 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Switch } from 'toolkit/chakra/switch';
 
 import { Section, Container, SectionHeader, SamplesStack, Sample } from './parts';
 
 const SwitchShowcase = () => {
+  const { t } = useTranslation();
 
   return (
     <Container value="switch">
       <Section>
-        <SectionHeader>Size</SectionHeader>
+        <SectionHeader>{t('common.common.showcase.switch.size')}</SectionHeader>
         <SamplesStack>
           <Sample label="size: sm">
             <Switch size="sm">
@@ -29,7 +31,7 @@ const SwitchShowcase = () => {
         </SamplesStack>
       </Section>
       <Section>
-        <SectionHeader>Disabled</SectionHeader>
+        <SectionHeader>{t('common.common.showcase.switch.disabled')}</SectionHeader>
         <SamplesStack>
           <Sample label="disabled: true">
             <Switch disabled>
@@ -39,7 +41,7 @@ const SwitchShowcase = () => {
         </SamplesStack>
       </Section>
       <Section>
-        <SectionHeader>Direction</SectionHeader>
+        <SectionHeader>{t('common.common.showcase.switch.direction')}</SectionHeader>
         <SamplesStack>
           <Sample label="direction: rtl">
             <Switch size="sm" direction="rtl">

@@ -1,4 +1,5 @@
 import { Flex, Text } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 import type { GetAvailableBadgesResponse } from '@blockscout/points-types';
 
@@ -27,6 +28,7 @@ type Props = {
 };
 
 export default function BadgeCard({ badge, currentStreak, index }: Props) {
+  const { t } = useTranslation();
   const target = Number(badge.requirements?.streak || 0);
   const isUnlocked = badge.is_whitelisted || badge.is_minted;
   const progress = Math.min(currentStreak, target);
@@ -44,7 +46,7 @@ export default function BadgeCard({ badge, currentStreak, index }: Props) {
       >
         <Image
           src={ isUnlocked ? BADGES[index] : GHOST_BADGES[index] }
-          alt="Streak badge"
+          alt={t('dashboard.common.streak_badge')}
           h={{ base: '54px', lg: '82px' }}
         />
       </Flex>

@@ -1,5 +1,6 @@
 import { createListCollection, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import * as blobUtils from 'lib/blob';
 import removeNonSignificantZeroBytes from 'lib/blob/removeNonSignificantZeroBytes';
@@ -18,14 +19,14 @@ import RawDataSnippet from 'ui/shared/RawDataSnippet';
 
 import BlobDataImage from './BlobDataImage';
 
-const FORMATS = [
-  { label: 'Image', value: 'Image' as const },
-  { label: 'Raw', value: 'Raw' as const },
+const getFormats = (t: (key: string) => string) => [
+  { label: t('shared.common.image'), value: 'image' as const },
+  { label: t('shared.common.raw'), value: 'raw' as const },
   { label: 'UTF-8', value: 'UTF-8' as const },
   { label: 'Base64', value: 'Base64' as const },
 ];
 
-type Format = typeof FORMATS[number]['value'];
+type Format = 'image' | 'raw' | 'UTF-8' | 'Base64';
 
 interface Props {
   data: string;
@@ -34,7 +35,9 @@ interface Props {
 }
 
 const BlobData = ({ data, isLoading, hash }: Props) => {
-  const [ format, setFormat ] = React.useState<Array<Format>>([ 'Raw' ]);
+  const { t } = useTranslation();
+  const FORMATS = getFormats(t);
+  const [ format, setFormat ] = React.useState<Array<Format>>([ 'raw' ]);
 
   const guessedType = React.useMemo(() => {
     if (isLoading) {
@@ -45,7 +48,7 @@ const BlobData = ({ data, isLoading, hash }: Props) => {
 
   const isImage = guessedType?.mime?.startsWith('image/');
   const collection = React.useMemo(() => {
-    const formats = isImage ? FORMATS : FORMATS.filter((format) => format.value !== 'Image');
+    const formats = isImage ? getFormats(t) : getFormats(t).filter((format) => format.value !== 'image');
     return createListCollection<SelectOption>({
       items: formats,
     });
@@ -53,7 +56,7 @@ const BlobData = ({ data, isLoading, hash }: Props) => {
 
   React.useEffect(() => {
     if (isImage) {
-      setFormat([ 'Image' ]);
+      setFormat([ 'image' ]);
     }
   }, [ isImage ]);
 
@@ -64,7 +67,7 @@ const BlobData = ({ data, isLoading, hash }: Props) => {
   const handleDownloadButtonClick = React.useCallback(() => {
     const fileBlob = (() => {
       switch (format[0]) {
-        case 'Image': {
+        case 'image': {
           const bytes = hexToBytes(data);
           const filteredBytes = removeNonSignificantZeroBytes(bytes);
           return new Blob([ filteredBytes ], { type: guessedType?.mime });
@@ -75,21 +78,23 @@ const BlobData = ({ data, isLoading, hash }: Props) => {
         case 'Base64': {
           return new Blob([ hexToBase64(data) ], { type: 'application/octet-stream' });
         }
-        case 'Raw': {
+        case 'raw': {
           return new Blob([ data ], { type: 'application/octet-stream' });
         }
       }
     })();
     const fileName = `blob_${ hash }`;
 
-    downloadBlob(fileBlob, fileName);
+    if (fileBlob) {
+      downloadBlob(fileBlob, fileName);
+    }
   }, [ data, format, guessedType, hash ]);
 
   const content = (() => {
     switch (format[0]) {
-      case 'Image': {
+      case 'image': {
         if (!guessedType?.mime?.startsWith('image/')) {
-          return <RawDataSnippet data="Not an image" showCopy={ false } isLoading={ isLoading } w="100%"/>;
+          return <RawDataSnippet data={ t('blobs.common.not_an_image') } showCopy={ false } isLoading={ isLoading } w="100%"/>;
         }
 
         const bytes = hexToBytes(data);
@@ -104,7 +109,7 @@ const BlobData = ({ data, isLoading, hash }: Props) => {
         return <RawDataSnippet data={ hexToUtf8(data) } showCopy={ false } isLoading={ isLoading } contentProps={{ wordBreak: 'break-word' }} w="100%"/>;
       case 'Base64':
         return <RawDataSnippet data={ hexToBase64(data) } showCopy={ false } isLoading={ isLoading } w="100%"/>;
-      case 'Raw':
+      case 'raw':
         return <RawDataSnippet data={ data } showCopy={ false } isLoading={ isLoading } w="100%"/>;
       default:
         return <span/>;
@@ -114,7 +119,7 @@ const BlobData = ({ data, isLoading, hash }: Props) => {
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="Blob data"
+        hint={ t('blobs.common.blob_data') }
         isLoading={ isLoading }
       >
         Blob data

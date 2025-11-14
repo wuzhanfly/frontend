@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { encodeFunctionData, getAddress } from 'viem';
 import { usePublicClient } from 'wagmi';
 
@@ -18,6 +19,7 @@ interface Params {
 }
 
 export default function useCallMethodPublicClient(): (params: Params) => Promise<FormSubmitResult> {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
   const chainId = Number((multichainContext?.chain.config ?? config).chain.id);
   const publicClient = usePublicClient({ chainId });
@@ -25,7 +27,7 @@ export default function useCallMethodPublicClient(): (params: Params) => Promise
 
   return React.useCallback(async({ args, item, addressHash, strategy }) => {
     if (!publicClient) {
-      throw new Error('Public Client is not defined');
+      throw new Error(t('addresses.common.public_client_is_not_defined'));
     }
 
     const address = getAddress(addressHash);

@@ -1,6 +1,7 @@
 import { Grid, chakra } from '@chakra-ui/react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ClustersByAddressResponse } from 'types/api/clusters';
 
@@ -46,6 +47,7 @@ const ClustersGrid = ({ data }: ClustersGridProps) => {
 };
 
 const AddressClusters = ({ query, addressHash }: Props) => {
+  const { t } = useTranslation();
   const { data, isPending, isError } = query;
 
   if (isError) {
@@ -72,13 +74,13 @@ const AddressClusters = ({ query, addressHash }: Props) => {
 
   return (
     <PopoverRoot>
-      <Tooltip content="List of clusters registered to this address" disableOnMobile>
+      <Tooltip content={ t('addresses.common.list_of_clusters_registered_to') } disableOnMobile>
         <div>
           <PopoverTrigger>
             <Button
               size="sm"
               variant="dropdown"
-              aria-label="Address clusters"
+              aria-label={ t('addresses.common.address_clusters') }
               fontWeight={ 500 }
               flexShrink={ 0 }
               columnGap={ 1 }

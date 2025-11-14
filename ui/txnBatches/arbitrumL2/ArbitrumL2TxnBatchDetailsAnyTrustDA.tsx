@@ -1,5 +1,6 @@
 import { Grid, Text, Flex, Box, VStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ArbitrumL2TxnBatchDAAnytrust } from 'types/api/arbitrumL2';
 
@@ -16,16 +17,17 @@ type Props = {
 };
 
 const ArbitrumL2TxnBatchDetailsAnyTrustDA = ({ data }: Props) => {
+  const { t } = useTranslation();
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="Aggregated BLS signature of AnyTrust committee members"
+        hint={t('common.common.aggregated_bls_signature_of_an')}
       >
         Signature
       </DetailedInfo.ItemLabel><DetailedInfo.ItemValue wordBreak="break-all" whiteSpace="break-spaces">
         { data.bls_signature }
       </DetailedInfo.ItemValue><DetailedInfo.ItemLabel
-        hint="The hash of the data blob stored by the AnyTrust committee"
+        hint={t('common.common.the_hash_of_the_data_blob_stor')}
       >
         Data hash
       </DetailedInfo.ItemLabel>
@@ -49,7 +51,7 @@ const ArbitrumL2TxnBatchDetailsAnyTrustDA = ({ data }: Props) => {
           ) }
       </DetailedInfo.ItemValue>
       <DetailedInfo.ItemLabel
-        hint="Members of AnyTrust committee"
+        hint={t('common.common.members_of_anytrust_committee')}
       >
         Signers
       </DetailedInfo.ItemLabel>

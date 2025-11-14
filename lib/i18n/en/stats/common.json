@@ -1,5 +1,6 @@
 {
   "stats.common.latest_batch": "Latest batch",
+  "stats.common.gas_tracker": "Gas tracker",
   "stats.common.total_blocks": "Total blocks",
   "stats.common.average_block_time": "Average block time",
   "stats.common.total_transactions": "Total transactions",
@@ -24,5 +25,6 @@
   "stats.common.1_month": "1 month",
   "stats.common.3_months": "3 months",
   "stats.common.6_months": "6 months",
-  "stats.common.1_year": "1 year"
+  "stats.common.1_year": "1 year",
+  "stats.common.contracts_that_have_been_verified": "Contracts That Have Been Verified"
 }

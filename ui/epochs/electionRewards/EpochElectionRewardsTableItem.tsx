@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CeloEpochDetails, CeloEpochElectionReward } from 'types/api/epochs';
 
@@ -22,6 +23,7 @@ interface Props {
 }
 
 const EpochElectionRewardsTableItem = ({ isLoading, data, type }: Props) => {
+  const { t } = useTranslation();
   const section = useDisclosure();
 
   const { valueStr } = getCurrencyValue({
@@ -41,7 +43,7 @@ const EpochElectionRewardsTableItem = ({ isLoading, data, type }: Props) => {
           { Boolean(data.count) && (
             <Skeleton loading={ isLoading } display="flex" borderRadius="sm">
               <IconButton
-                aria-label={ section.open ? 'Collapse section' : 'Expand section' }
+                aria-label={ section.open ? t('epochs.common.collapse_section') : t('epochs.common.expand_section') }
                 variant="link"
               >
                 <IconSvg

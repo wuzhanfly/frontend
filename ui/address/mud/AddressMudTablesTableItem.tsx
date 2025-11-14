@@ -1,6 +1,7 @@
 import { Text, VStack, chakra } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressMudTableItem } from 'types/api/address';
 
@@ -18,6 +19,7 @@ type Props = {
 };
 
 const AddressMudTablesTableItem = ({ item, isLoading, hash }: Props) => {
+  const { t } = useTranslation();
   const [ isOpened, setIsOpened ] = React.useState(false);
 
   const router = useRouter();
@@ -59,7 +61,7 @@ const AddressMudTablesTableItem = ({ item, isLoading, hash }: Props) => {
                 cursor="pointer"
                 onClick={ handleIconClick }
                 transitionDuration="faster"
-                aria-label="View schema"
+                aria-label={ t('addresses.common.view_schema') }
               />
             </Link>
           </Skeleton>

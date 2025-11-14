@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { L2_WITHDRAWAL_ITEM } from 'stubs/L2';
@@ -15,6 +16,7 @@ import OptimisticL2WithdrawalsListItem from 'ui/withdrawals/optimisticL2/Optimis
 import OptimisticL2WithdrawalsTable from 'ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsTable';
 
 const OptimisticL2Withdrawals = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:optimistic_l2_withdrawals',
     options: {
@@ -55,6 +57,7 @@ const OptimisticL2Withdrawals = () => {
   ) : null;
 
   const text = (() => {
+  const { t } = useTranslation();
     if (countersQuery.isError) {
       return null;
     }
@@ -77,7 +80,7 @@ const OptimisticL2Withdrawals = () => {
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items?.length }
-        emptyText="There are no withdrawals."
+        emptyText={t('common.common.there_are_no_withdrawals')}
         actionBar={ actionBar }
       >
         { content }

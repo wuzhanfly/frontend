@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { getAddress, type Abi } from 'viem';
 import { useAccount, useWalletClient, useSwitchChain } from 'wagmi';
 
@@ -17,6 +18,7 @@ interface Params {
 }
 
 export default function useCallMethodWalletClient(): (params: Params) => Promise<FormSubmitResult> {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
   const chainConfig = (multichainContext?.chain.config ?? config).chain;
 
@@ -27,11 +29,11 @@ export default function useCallMethodWalletClient(): (params: Params) => Promise
 
   return React.useCallback(async({ args, item, addressHash }) => {
     if (!isConnected) {
-      throw new Error('Wallet is not connected');
+      throw new Error(t('addresses.common.wallet_is_not_connected'));
     }
 
     if (!walletClient) {
-      throw new Error('Wallet Client is not defined');
+      throw new Error(t('addresses.common.wallet_client_is_not_defined'));
     }
 
     if (chainId && String(chainId) !== chainConfig.id) {
@@ -66,7 +68,7 @@ export default function useCallMethodWalletClient(): (params: Params) => Promise
     const methodName = item.name;
 
     if (!methodName) {
-      throw new Error('Method name is not defined');
+      throw new Error(t('addresses.common.method_name_is_not_defined'));
     }
 
     const hash = await walletClient.writeContract({

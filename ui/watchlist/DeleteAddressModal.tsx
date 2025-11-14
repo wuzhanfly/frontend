@@ -1,5 +1,6 @@
 import { Text } from '@chakra-ui/react';
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { WatchlistAddress } from 'types/api/account';
 
@@ -15,6 +16,7 @@ type Props = {
 };
 
 const DeleteAddressModal: React.FC<Props> = ({ open, onOpenChange, onSuccess, data }) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const apiFetch = useApiFetch();
 
@@ -38,7 +40,7 @@ const DeleteAddressModal: React.FC<Props> = ({ open, onOpenChange, onSuccess, da
     <DeleteModal
       open={ open }
       onOpenChange={ onOpenChange }
-      title="Remove address from watch list"
+      title={t('watchlist.common.remove_address_from_watch_list')}
       renderContent={ renderModalContent }
       mutationFn={ mutationFn }
       onSuccess={ onSuccess }

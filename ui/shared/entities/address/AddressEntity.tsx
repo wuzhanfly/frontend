@@ -14,6 +14,7 @@ import { Tooltip } from 'toolkit/chakra/tooltip';
 import * as EntityBase from 'ui/shared/entities/base/components';
 import { getTagName } from 'ui/shared/EntityTags/utils';
 import type { IconName } from 'ui/shared/IconSvg';
+import { useTranslation } from 'react-i18next';
 
 import { distributeEntityProps, getContentProps, getIconProps } from '../base/utils';
 import AddressEntityContentProxy from './AddressEntityContentProxy';
@@ -42,6 +43,8 @@ const Link = chakra((props: LinkProps) => {
 type IconProps = Pick<EntityProps, 'address' | 'isSafeAddress'> & EntityBase.IconBaseProps;
 
 const Icon = (props: IconProps) => {
+  const { t } = useTranslation();
+
   if (props.noIcon) {
     return null;
   }
@@ -91,7 +94,7 @@ const Icon = (props: IconProps) => {
     }
 
     if (props.chain) {
-      return 'Address' + hintPostfix;
+      return t('validators.common.address') + hintPostfix;
     }
 
     return props.hint;

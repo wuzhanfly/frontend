@@ -1,6 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { range } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContractMethod } from './types';
 
@@ -23,6 +24,7 @@ interface Props {
 }
 
 const ContractAbi = ({ abi, addressHash, sourceAddress, tab, visibleItems }: Props) => {
+  const { t } = useTranslation();
   const [ expandedSections, setExpandedSections ] = React.useState<Array<string>>(abi.length === 1 ? [ '0' ] : []);
   const [ id, setId ] = React.useState(0);
 
@@ -58,7 +60,7 @@ const ContractAbi = ({ abi, addressHash, sourceAddress, tab, visibleItems }: Pro
         <Box fontWeight={ 500 } mr="auto">Contract information</Box>
         { abi.length > 1 && (
           <Link onClick={ handleExpandAll } variant="secondary">
-            { expandedSections.length === abi.length ? 'Collapse' : 'Expand' } all
+            { expandedSections.length === abi.length ? t('addresses.common.collapse') : t('addresses.common.expand') } all
           </Link>
         ) }
         <Link onClick={ handleReset } ml={ 3 } variant="secondary">Reset</Link>

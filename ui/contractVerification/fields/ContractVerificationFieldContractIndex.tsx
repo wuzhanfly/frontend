@@ -1,5 +1,6 @@
 import { createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useFormContext } from 'react-hook-form';
 
 import type { FormFields } from '../types';
@@ -13,6 +14,7 @@ import ContractVerificationFormRow from '../ContractVerificationFormRow';
 const SOURCIFY_ERROR_REGEXP = /\(([^()]*)\)/;
 
 const ContractVerificationFieldContractIndex = () => {
+  const { t } = useTranslation();
   const [ options, setOptions ] = React.useState<Array<SelectOption>>([]);
   const { formState, watch } = useFormContext<FormFields>();
 
@@ -50,7 +52,7 @@ const ContractVerificationFieldContractIndex = () => {
     <ContractVerificationFormRow>
       <FormFieldSelect<FormFields, 'contract_index'>
         name="contract_index"
-        placeholder="Contract name"
+        placeholder={t('common.common.contract_name')}
         collection={ collection }
         required
       />

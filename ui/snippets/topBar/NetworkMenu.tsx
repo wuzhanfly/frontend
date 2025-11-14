@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { IconButton } from 'toolkit/chakra/icon-button';
 import { PopoverRoot, PopoverTrigger } from 'toolkit/chakra/popover';
@@ -10,6 +11,7 @@ import NetworkMenuContent from 'ui/snippets/networkMenu/NetworkMenuContent';
 import useNetworkMenu from 'ui/snippets/networkMenu/useNetworkMenu';
 
 const NetworkMenu = () => {
+  const { t } = useTranslation();
   const menu = useNetworkMenu();
   const tooltip = useDisclosure();
 
@@ -31,13 +33,13 @@ const NetworkMenu = () => {
       open={ menu.open }
       onOpenChange={ handlePopoverOpenChange }
     >
-      <Tooltip content="Chains list" disableOnMobile open={ tooltip.open } onOpenChange={ handleTooltipOpenChange }>
+      <Tooltip content={t('common.common.chains_list')} disableOnMobile open={ tooltip.open } onOpenChange={ handleTooltipOpenChange }>
         <Flex alignItems="center">
           <PopoverTrigger>
             <IconButton
               variant="link"
               boxSize={ 5 }
-              aria-label="Network menu"
+              aria-label={t('common.common.network_menu')}
               borderRadius="sm"
               onClick={ menu.onToggle }
               p={ 0.5 }

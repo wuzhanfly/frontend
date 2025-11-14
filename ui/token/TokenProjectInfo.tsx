@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenVerifiedInfo } from 'types/api/token';
 
@@ -11,7 +12,8 @@ interface Props {
 }
 
 const TokenProjectInfo = ({ data }: Props) => {
-  if (!hasContent(data)) {
+  const { t } = useTranslation();
+  if (!hasContent(data, t)) {
     return null;
   }
 

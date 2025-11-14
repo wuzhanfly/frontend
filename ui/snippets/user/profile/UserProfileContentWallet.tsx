@@ -1,5 +1,6 @@
 import { chakra, Box, Flex, Spinner } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import delay from 'lib/delay';
 import useWeb3AccountWithDomain from 'lib/web3/useAccountWithDomain';
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const UserProfileContentWallet = ({ onClose, className }: Props) => {
+  const { t } = useTranslation();
   const web3Wallet = useWeb3Wallet({ source: 'Profile dropdown' });
 
   const web3AccountWithDomain = useWeb3AccountWithDomain(true);
@@ -37,6 +39,7 @@ const UserProfileContentWallet = ({ onClose, className }: Props) => {
   }, [ onClose ]);
 
   const content = (() => {
+  const { t } = useTranslation();
     if (web3Wallet.isConnected && web3AccountWithDomain.address) {
       return (
         <Flex
@@ -59,7 +62,7 @@ const UserProfileContentWallet = ({ onClose, className }: Props) => {
           />
           { web3Wallet.isReconnecting ? <Spinner size="sm" m="2px" flexShrink={ 0 }/> : (
             <IconButton
-              aria-label="Open wallet"
+              aria-label={t('common.common.open_wallet')}
               variant="icon_secondary"
               size="2xs"
               onClick={ handleOpenWalletClick }

@@ -1,6 +1,7 @@
 import { chakra, Grid, GridItem } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm, FormProvider } from 'react-hook-form';
 
@@ -33,6 +34,7 @@ interface Props {
 }
 
 const PublicTagsSubmitForm = ({ config, userInfo, onSubmitResult }: Props) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const router = useRouter();
   const apiFetch = useApiFetch();
@@ -60,7 +62,7 @@ const PublicTagsSubmitForm = ({ config, userInfo, onSubmitResult }: Props) => {
     const token = await recaptcha.executeAsync();
 
     if (!token) {
-      throw new Error('ReCaptcha is not solved');
+      throw new Error(t('shared.common.recaptcha_is_not_solved'));
     }
 
     const requestsBody = convertFormDataToRequestsBody(data);
@@ -107,12 +109,12 @@ const PublicTagsSubmitForm = ({ config, userInfo, onSubmitResult }: Props) => {
               Company info
             </Heading>
           </GridItem>
-          <FormFieldText<FormFields> name="requesterName" required placeholder="Your name"/>
+          <FormFieldText<FormFields> name="requesterName" required placeholder={t('common.common.your_name')}/>
           <FormFieldEmail<FormFields> name="requesterEmail" required/>
 
           { !isMobile && <div/> }
-          <FormFieldText<FormFields> name="companyName" placeholder="Company name"/>
-          <FormFieldUrl<FormFields> name="companyWebsite" placeholder="Company website"/>
+          <FormFieldText<FormFields> name="companyName" placeholder={t('common.common.company_name')}/>
+          <FormFieldUrl<FormFields> name="companyWebsite" placeholder={t('common.common.company_website')}/>
           { !isMobile && <div/> }
 
           <GridItem colSpan={{ base: 1, lg: 3 }} mt={{ base: 3, lg: 5 }}>
@@ -129,7 +131,7 @@ const PublicTagsSubmitForm = ({ config, userInfo, onSubmitResult }: Props) => {
               required
               placeholder={
                 isMobile ?
-                  'Confirm the connection between addresses and tags' :
+                  t('common.common.confirm_the_connection_between') :
                   'Provide a comment to confirm the connection between addresses and tags (max 500 characters)'
               }
               maxH="160px"
@@ -149,7 +151,7 @@ const PublicTagsSubmitForm = ({ config, userInfo, onSubmitResult }: Props) => {
             type="submit"
             mt={ 3 }
             loading={ formApi.formState.isSubmitting }
-            loadingText="Send request"
+            loadingText={t('common.common.send_request')}
             w="min-content"
             disabled={ recaptcha.isInitError }
           >

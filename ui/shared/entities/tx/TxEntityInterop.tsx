@@ -10,6 +10,7 @@ import { Skeleton } from 'toolkit/chakra/skeleton';
 import { Tooltip } from 'toolkit/chakra/tooltip';
 import { stripTrailingSlash } from 'toolkit/utils/url';
 import IconSvg from 'ui/shared/IconSvg';
+import { useTranslation } from 'react-i18next';
 
 import { distributeEntityProps } from '../base/utils';
 import * as TxEntity from './TxEntity';
@@ -44,6 +45,7 @@ const IconStub = ({ isLoading }: { isLoading?: boolean }) => {
 };
 
 const TxEntityInterop = ({ chain, hash, ...props }: Props) => {
+  const { t } = useTranslation();
   const partsProps = distributeEntityProps(props);
 
   const href = (chain?.instance_url && hash) ? stripTrailingSlash(chain.instance_url) + route({
@@ -62,7 +64,7 @@ const TxEntityInterop = ({ chain, hash, ...props }: Props) => {
             { chain.chain_logo ? (
               <Image
                 src={ chain.chain_logo }
-                alt={ chain.chain_name || 'external chain logo' }
+                alt={ chain.chain_name || t('transactions.common.external_chain_logo') }
                 width="20px"
                 height="20px"
                 mr={ 2 }

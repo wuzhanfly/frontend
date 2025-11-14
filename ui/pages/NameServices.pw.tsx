@@ -6,8 +6,18 @@ import { clustersLeaderboardMock } from 'mocks/clusters/leaderboard';
 import * as ensDomainMock from 'mocks/ens/domain';
 import { ENVS_MAP } from 'playwright/fixtures/mockEnvs';
 import { test, expect, devices } from 'playwright/lib';
-
 import NameServices from './NameServices';
+
+const { t } = (() => {
+  // Mock translation function for tests
+  const mockT = (key: string) => {
+    const keyMap: Record<string, string> = {
+      'shared.common.filter': 'Filter',
+    };
+    return keyMap[key] || key;
+  };
+  return { t: mockT };
+})();
 
 test.describe('domains', () => {
 
@@ -65,7 +75,7 @@ test.describe('domains', () => {
   test('filters', async({ render, page }) => {
     const component = await render(<NameServices/>, { hooksConfig });
 
-    await component.getByRole('button', { name: 'Filter' }).click();
+    await component.getByRole('button', { name: t('shared.common.filter') }).click();
     await expect(page).toHaveScreenshot({ clip: { x: 0, y: 0, width: 250, height: 500 } });
   });
 });

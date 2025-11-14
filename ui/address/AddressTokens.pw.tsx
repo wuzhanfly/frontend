@@ -5,7 +5,7 @@ import type { AddressTokensResponse } from 'types/api/address';
 
 import * as addressMock from 'mocks/address/address';
 import * as tokensMock from 'mocks/address/tokens';
-import * as tokenInfo from 'mocks/tokens/tokenInfo';
+import * as tokens from 'mocks/tokens/tokenInfo';
 import * as tokenInstance from 'mocks/tokens/tokenInstance';
 import * as socketServer from 'playwright/fixtures/socketServer';
 import { test, expect, devices } from 'playwright/lib';
@@ -85,25 +85,13 @@ test('collections +@dark-mode', async({ render }) => {
   await expect(component).toHaveScreenshot();
 });
 
-test('nfts +@dark-mode', async({ render, mockAssetResponse }) => {
-  await mockAssetResponse(tokenInstance.base.image_url as string, './playwright/mocks/image_s.jpg');
+test('nfts +@dark-mode', async({ render, mockApiResponse }) => {
+  const t = (key: string) => key;
+  const component = await render(<AddressTokens/>, { hooksConfig: { router: { query: { hash: ADDRESS_HASH, tab: 'tokens', token_type: 'ERC-721' } } } });
+  await mockApiResponse('general:token', tokens.tokenInfoERC721a, { pathParams: { hash: tokens.tokenInfoERC721a.address_hash } });
+  await mockApiResponse('general:token_instance', tokenInstance.base, { pathParams: { hash: tokens.tokenInfoERC721a.address_hash, id: '1' } });
 
-  const hooksConfig = {
-    router: {
-      query: { hash: ADDRESS_HASH, tab: 'tokens_nfts' },
-      isReady: true,
-    },
-  };
-
-  const component = await render(
-    <Box pt={{ base: '134px', lg: 6 }}>
-      <AddressTokens/>
-    </Box>,
-    { hooksConfig },
-  );
-
-  await component.getByText('List').click();
-
+  await component.getByText(t('addresses.common.list')).click();
   await expect(component).toHaveScreenshot();
 });
 
@@ -128,12 +116,14 @@ test.describe('mobile', () => {
     await expect(component).toHaveScreenshot();
   });
 
-  test('nfts', async({ render, mockAssetResponse, page }) => {
-    await mockAssetResponse(tokenInstance.base.image_url as string, './playwright/mocks/image_s.jpg');
+    test('nfts', async({ render, mockApiResponse, page }) => {
+    const t = (key: string) => key;
+    await mockApiResponse('general:token', tokens.tokenInfoERC721a, { pathParams: { hash: tokens.tokenInfoERC721a.address_hash } });
+    await mockApiResponse('general:token_instance', tokenInstance.base, { pathParams: { hash: tokens.tokenInfoERC721a.address_hash, id: '1' } });
 
     const hooksConfig = {
       router: {
-        query: { hash: ADDRESS_HASH, tab: 'tokens_nfts' },
+        query: { hash: ADDRESS_HASH, tab: 'tokens', token_type: 'ERC-721' },
         isReady: true,
       },
     };
@@ -145,7 +135,7 @@ test.describe('mobile', () => {
       { hooksConfig },
     );
 
-    await component.locator('button').filter({ hasText: 'List' }).click();
+    await component.locator('button').filter({ hasText: t('addresses.common.list') }).click();
     await page.mouse.move(0, 0);
     await page.mouse.click(0, 0);
 
@@ -272,11 +262,11 @@ test.describe('update balances via socket', () => {
 
 test('native token', async({ render, mockEnvs }) => {
   await mockEnvs([
-    [ 'NEXT_PUBLIC_VIEWS_ADDRESS_NATIVE_TOKEN_ADDRESS', tokenInfo.tokenInfoERC20c.address_hash ],
+    [ 'NEXT_PUBLIC_VIEWS_ADDRESS_NATIVE_TOKEN_ADDRESS', tokens.tokenInfoERC20c.address_hash ],
   ]);
   const hooksConfig = {
     router: {
-      query: { hash: ADDRESS_HASH, tab: 'tokens_erc20' },
+      query: { hash: ADDRESS_HASH, tab: 'tokens', token_type: 'ERC-20' },
       isReady: true,
     },
   };

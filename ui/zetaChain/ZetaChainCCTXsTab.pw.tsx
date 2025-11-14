@@ -8,6 +8,8 @@ import { test, expect, devices } from 'playwright/lib';
 
 import ZetaChainCCTXsTab from './ZetaChainCCTXsTab';
 
+const t = (key: string) => key;
+
 const CCTX_CONFIG_URL = 'http://localhost:3000/zeta-config.json';
 
 test.beforeEach(async({ mockEnvs, mockConfigResponse, mockAssetResponse }) => {
@@ -20,7 +22,7 @@ test.beforeEach(async({ mockEnvs, mockConfigResponse, mockAssetResponse }) => {
 test('base view +@dark-mode', async({ render, mockApiResponse }) => {
   await mockApiResponse('zetachain:transactions', zetaChainCCTXList, {
     queryParams: {
-      status_reduced: [ 'Success', 'Failed' ],
+      status_reduced: [ 'Success', t('shared.common.failed') ],
       limit: 50,
       offset: 0,
       direction: 'DESC',
@@ -47,7 +49,7 @@ test.describe('mobile', () => {
   test('base view +@dark-mode', async({ render, mockApiResponse }) => {
     await mockApiResponse('zetachain:transactions', zetaChainCCTXList, {
       queryParams: {
-        status_reduced: [ 'Success', 'Failed' ],
+        status_reduced: [ 'Success', t('shared.common.failed') ],
         limit: 50,
         offset: 0,
         direction: 'DESC',

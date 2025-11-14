@@ -1,6 +1,7 @@
 import { capitalize } from 'es-toolkit';
 import React from 'react';
 import type { UseFormReturn } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from './types';
 
@@ -13,13 +14,14 @@ interface Props {
 }
 
 const CsvExportFormField = ({ formApi, name }: Props) => {
+  const { t } = useTranslation();
   const { formState, getValues, trigger } = formApi;
 
   const validate = React.useCallback((newValue: string) => {
     if (name === 'from') {
       const toValue = getValues('to');
       if (toValue && dayjs(newValue) > dayjs(toValue)) {
-        return 'Incorrect date';
+        return t('common.common.incorrect_date');
       }
       if (formState.errors.to) {
         trigger('to');
@@ -27,7 +29,7 @@ const CsvExportFormField = ({ formApi, name }: Props) => {
     } else {
       const fromValue = getValues('from');
       if (fromValue && dayjs(fromValue) > dayjs(newValue)) {
-        return 'Incorrect date';
+        return t('common.common.incorrect_date');
       }
       if (formState.errors.from) {
         trigger('from');

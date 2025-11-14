@@ -1,35 +1,15 @@
 {
-  "settings.common.website_settings": {
-    "defaultMessage": "Website settings",
-    "source": [
-      "ui/snippets/topBar/settings/Settings.tsx:38"
-    ]
-  },
-  "settings.common.user_settings": {
-    "defaultMessage": "User settings",
-    "source": [
-      "ui/snippets/topBar/settings/Settings.tsx:45"
-    ]
-  },
   "settings.common.color_theme": {
     "defaultMessage": "Color theme",
     "source": [
       "ui/snippets/topBar/settings/SettingsColorTheme.tsx:78"
     ]
   },
-  "settings.common.english": {
-    "defaultMessage": "English",
-    "source": [
-      "ui/snippets/topBar/settings/SettingsIdentIcon.tsx:60"
-    ]
-  },
   "settings.common.": {
-    "defaultMessage": "🇺🇸",
+    "defaultMessage": "🇨🇳",
     "source": [
-      "ui/snippets/topBar/settings/SettingsIdentIcon.tsx:60",
       "ui/snippets/topBar/settings/SettingsIdentIcon.tsx:61",
-      "ui/snippets/topBar/settings/SettingsSample.tsx:23",
-      "ui/snippets/topBar/settings/SettingsSample.tsx:24"
+      "ui/snippets/topBar/settings/SettingsSample.tsx:26"
     ]
   }
 }

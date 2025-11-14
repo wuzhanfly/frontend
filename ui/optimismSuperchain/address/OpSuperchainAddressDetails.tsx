@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs/routes';
 
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const OpSuperchainAddressDetails = ({ addressHash }: Props) => {
+  const { t } = useTranslation();
   const chains = multichainConfig()?.chains;
 
   const isLoading = false;
@@ -26,10 +28,10 @@ const OpSuperchainAddressDetails = ({ addressHash }: Props) => {
       { chains && chains.length > 0 && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Chains"
+            hint={t('addresses.common.chains')}
             isLoading={ isLoading }
           >
-            Chain{ chains.length > 1 ? 's' : '' }
+            { chains && chains.length > 1 ? t('common.common.chains_list') : t('common.common.chain') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue columnGap={ 3 }>
             { chains.map((chain) => (
@@ -51,10 +53,10 @@ const OpSuperchainAddressDetails = ({ addressHash }: Props) => {
       ) }
 
       <DetailedInfo.ItemLabel
-        hint="The name found in the source code of the Contract"
+        hint={t('addresses.common.the_name_found_in_the_source_c')}
         isLoading={ isLoading }
       >
-        Contract name
+        {t('common.common.contract_name')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Link href={ route({ pathname: '/address/[hash]', query: { hash: addressHash, tab: 'contract' } }) }>View by chain</Link>
@@ -67,21 +69,21 @@ const OpSuperchainAddressDetails = ({ addressHash }: Props) => {
         { currencySymbol } balance
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
-        Coming soon 🔜
+        {t('account.common.coming_soon_')}
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="All tokens in the account and total value"
+        hint={t('addresses.common.all_tokens_in_the_account_and_')}
         isLoading={ isLoading }
       >
-        Tokens
+        {t('tokens.common.tokens')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
-        Coming soon 🔜
+        {t('account.common.coming_soon_')}
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Number of transactions related to this address"
+        hint={t('addresses.common.number_of_transactions_related')}
         isLoading={ isLoading }
       >
         Transactions
@@ -105,13 +107,13 @@ const OpSuperchainAddressDetails = ({ addressHash }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Block number in which the address was updated"
+        hint={t('addresses.common.block_number_in_which_the_addr')}
         isLoading={ isLoading }
       >
-        Last balance update
+        {t('common.common.last_update')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
-        Coming soon 🔜
+        {t('account.common.coming_soon_')}
       </DetailedInfo.ItemValue>
 
       <DetailedInfoSponsoredItem isLoading={ isLoading }/>

@@ -1,6 +1,7 @@
 import type { UseQueryResult } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ScrollL2TxnBatch } from 'types/api/scrollL2';
 
@@ -25,6 +26,7 @@ interface Props {
 }
 
 const ScrollL2TxnBatchDetails = ({ query }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const { data, isPlaceholderData, isError, error } = query;
@@ -60,7 +62,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
     >
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Batch number indicates the length of batches produced by grouping L2 blocks to be proven on L1"
+        hint={t('common.common.batch_number_indicates_the_len')}
       >
         Txn batch number
       </DetailedInfo.ItemLabel>
@@ -71,8 +73,8 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
         <PrevNext
           ml={ 6 }
           onClick={ handlePrevNextClick }
-          prevLabel="View previous txn batch"
-          nextLabel="View next txn batch"
+          prevLabel={t('common.common.view_previous_txn_batch')}
+          nextLabel={t('common.common.view_next_txn_batch')}
           isPrevDisabled={ data.number === 0 }
           isLoading={ isPlaceholderData }
         />
@@ -80,7 +82,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Data availability container"
+        hint={t('common.common.data_availability_container')}
       >
         Container
       </DetailedInfo.ItemLabel>
@@ -90,12 +92,12 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Status of this batch"
+        hint={t('common.common.status_of_this_batch')}
       >
         Status
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
-        <ScrollL2TxnBatchStatus status={ data.confirmation_transaction.hash ? 'Finalized' : 'Committed' } isLoading={ isPlaceholderData }/>
+        <ScrollL2TxnBatchStatus status={ data.confirmation_transaction.hash ? 'finalized' : 'committed' } isLoading={ isPlaceholderData }/>
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
@@ -115,7 +117,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
         <>
           <DetailedInfo.ItemLabel
             isLoading={ isPlaceholderData }
-            hint="Number of transactions in this batch"
+            hint={t('common.common.number_of_transactions_in_this')}
           >
             Transactions
           </DetailedInfo.ItemLabel>
@@ -129,7 +131,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Number of L2 blocks in this batch"
+        hint={t('common.common.number_of_l2_blocks_in_this_ba')}
       >
         Blocks
       </DetailedInfo.ItemLabel>
@@ -154,7 +156,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Hash of L1 transaction this batch was committed in"
+        hint={t('common.common.hash_of_l1_transaction_this_ba')}
       >
         Committed transaction hash
       </DetailedInfo.ItemLabel>
@@ -170,7 +172,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="L1 block that includes transaction with this batch commitment"
+        hint={t('common.common.l1_block_that_includes_transac')}
       >
         Committed block
       </DetailedInfo.ItemLabel>

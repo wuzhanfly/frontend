@@ -1,0 +1,5 @@
+{
+  "contract_verification.common.contract_verification_via_vyper_standard_json_input": "通过 Vyper 进行合约验证（标准 JSON 输入）",
+  "contract_verification.common.standard_input_json": "标准输入 JSON",
+  "contract_verification.common.verify_and_publish_contract": "验证并发布合约"
+}

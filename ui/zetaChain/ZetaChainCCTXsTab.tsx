@@ -1,6 +1,7 @@
 import { capitalize, omit } from 'es-toolkit/compat';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Direction } from '@blockscout/zetachain-cctx-types';
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
@@ -37,6 +38,7 @@ const hasNextPageFn = (nextPageParams: Record<string, unknown>) => {
 };
 
 const ZetaChainCCTXsTab = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const tab = getQueryParamString(router.query.tab);
   const isMobile = useIsMobile();
@@ -65,7 +67,7 @@ const ZetaChainCCTXsTab = () => {
       ...filters,
       limit: 50,
       offset: 0,
-      status_reduced: filters.status_reduced ?? [ 'Success', 'Failed' ],
+      status_reduced: filters.status_reduced ?? [ 'Success', t('shared.common.failed') ],
       direction: 'DESC',
     },
     options: {

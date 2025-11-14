@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TxsSocketType } from './socket/types';
 import type { AddressFromToFilter } from 'types/api/address';
@@ -57,6 +58,7 @@ const TxsContent = ({
   sort,
   stickyHeader = true,
 }: Props) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
 
   const onSortToggle = React.useCallback((field: TransactionsSortingField) => {
@@ -118,7 +120,7 @@ const TxsContent = ({
     <DataListDisplay
       isError={ isError }
       itemsNum={ itemsWithTranslation?.length }
-      emptyText="There are no transactions."
+      emptyText={t('common.common.there_are_no_transactions')}
       actionBar={ actionBar }
       filterProps={{
         hasActiveFilters: Boolean(filterValue),

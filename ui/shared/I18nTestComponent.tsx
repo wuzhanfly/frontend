@@ -10,8 +10,8 @@ const I18nTestComponent = () => {
 
   return (
     <div>
-      <h1>{t('common:welcome')}</h1>
-      <p>{t('common:loading')}</p>
+      <h1>t('common:welcome')</h1>
+      <p>t('common:loading')</p>
       <p>Current language: {i18n.language}</p>
       <button onClick={() => i18n.changeLanguage('zh')}>
         切换到中文

@@ -14,7 +14,7 @@ type TxTableColumn = {
 export const TABLE_COLUMNS: Array<TxTableColumn> = [
   {
     id: 'tx_hash',
-    name: 'Tx hash',
+    name: 'Tx Hash',
     width: '180px',
   },
   {
@@ -66,6 +66,61 @@ export const TABLE_COLUMNS: Array<TxTableColumn> = [
   },
 ] as const;
 
+export const getLocalizedTableColumns = (t: (key: string) => string): Array<TxTableColumn> => [
+  {
+    id: 'tx_hash',
+    name: t('common.common.tx_hash'),
+    width: '180px',
+  },
+  {
+    id: 'type',
+    name: 'Type',
+    width: '160px',
+  },
+  {
+    id: 'method',
+    name: t('tokens.common.method'),
+    width: '160px',
+  },
+  {
+    id: 'age',
+    name: t('staking.common.age'),
+    width: '190px',
+  },
+  {
+    id: 'from',
+    name: t('staking.common.from'),
+    width: '160px',
+  },
+  {
+    id: 'or_and',
+    name: '',
+    width: '65px',
+  },
+  {
+    id: 'to',
+    name: 'To',
+    width: '160px',
+  },
+  {
+    id: 'amount',
+    name: t('common.common.amount'),
+    isNumeric: true,
+    width: '150px',
+  },
+  {
+    id: 'asset',
+    name: t('common.common.asset'),
+    width: '120px',
+  },
+  {
+    id: 'fee',
+    name: t('common.common.fee'),
+    isNumeric: true,
+    width: '120px',
+  },
+];
+
 export const ADVANCED_FILTER_TYPES = [
   {
     id: 'coin_transfer',
@@ -93,6 +148,14 @@ export const ADVANCED_FILTER_TYPES_WITH_ALL = [
   {
     id: 'all',
     name: 'All',
+  },
+  ...ADVANCED_FILTER_TYPES,
+];
+
+export const getLocalizedAdvancedFilterTypesWithAll = (t: (key: string) => string) => [
+  {
+    id: 'all',
+    name: t('validators.common.all'),
   },
   ...ADVANCED_FILTER_TYPES,
 ];

@@ -1,5 +1,6 @@
 import { Box, chakra, VStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const ClusterChainsPopover = ({ addressHash }: Props) => {
+  const { t } = useTranslation();
 
   const chains = multichainConfig()?.chains;
 
@@ -30,7 +32,7 @@ const ClusterChainsPopover = ({ addressHash }: Props) => {
           <Button
             size="sm"
             variant="dropdown"
-            aria-label="This address is on cluster chains"
+            aria-label={t('common.common.this_address_is_on_cluster_cha')}
             px={ 2 }
             fontWeight={ 500 }
             flexShrink={ 0 }

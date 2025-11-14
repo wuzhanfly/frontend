@@ -1,6 +1,7 @@
 import { Flex, Grid, Text } from '@chakra-ui/react';
 import { BigNumber } from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { type OutboundParams, type CrossChainTx, CctxStatus } from '@blockscout/zetachain-cctx-types';
 
@@ -24,6 +25,7 @@ type Props = {
 };
 
 const ZetaChainCCTXDetailsLifecycleOut = ({ outboundParam, tx, isLoading, isLast, hasTxAfter }: Props) => {
+  const { t } = useTranslation();
   const { data: chainsConfig } = useZetaChainConfig();
   const chainToId = outboundParam.receiver_chain_id?.toString() || '';
   const chainTo = chainsConfig?.find((chain) => chain.chain_id.toString() === chainToId);
@@ -39,6 +41,7 @@ const ZetaChainCCTXDetailsLifecycleOut = ({ outboundParam, tx, isLoading, isLast
   let color: string = '';
 
   const transactionOrCCTX = (() => {
+  const { t } = useTranslation();
     if (!outboundParam.hash) {
       return null;
     }
@@ -102,10 +105,10 @@ const ZetaChainCCTXDetailsLifecycleOut = ({ outboundParam, tx, isLoading, isLast
         <>
           { transactionOrCCTX }
           <Text color="text.secondary" fontWeight="medium">Status</Text>
-          <StatusTag type="error" text="Failed"/>
+          <StatusTag type="error" text={t('shared.common.failed')}/>
         </>
       );
-      text = `Destination tx failed`;
+      text = t('common.common.destination_tx_failed');
       color = 'text.error';
     } else {
       content = (
@@ -144,10 +147,10 @@ const ZetaChainCCTXDetailsLifecycleOut = ({ outboundParam, tx, isLoading, isLast
         <>
           { transactionOrCCTX }
           <Text color="text.secondary" fontWeight="medium">Status</Text>
-          <StatusTag type="error" text="Failed"/>
+          <StatusTag type="error" text={t('shared.common.failed')}/>
         </>
       );
-      text = `Destination tx failed`;
+      text = t('common.common.destination_tx_failed');
       color = 'text.error';
     } else {
       content = (
@@ -192,7 +195,7 @@ const ZetaChainCCTXDetailsLifecycleOut = ({ outboundParam, tx, isLoading, isLast
           />
         </>
       );
-      text = `Destination tx failed`;
+      text = t('common.common.destination_tx_failed');
       color = 'text.error';
     } else {
       content = (
@@ -207,7 +210,7 @@ const ZetaChainCCTXDetailsLifecycleOut = ({ outboundParam, tx, isLoading, isLast
         </>
       );
       const isFailed = tx.cctx_status?.is_abort_refunded === false;
-      text = isFailed ? `Abort failed` : `Abort executed`;
+      text = isFailed ? t('common.common.abort_failed') : t('common.common.abort_executed');
       color = isFailed ? 'text.error' : 'text.success';
     }
   }

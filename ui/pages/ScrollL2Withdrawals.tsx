@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { SCROLL_L2_MESSAGE_ITEM } from 'stubs/scrollL2';
@@ -15,6 +16,7 @@ import ScrollL2WithdrawalsListItem from 'ui/withdrawals/scrollL2/ScrollL2Withdra
 import ScrollL2WithdrawalsTable from 'ui/withdrawals/scrollL2/ScrollL2WithdrawalsTable';
 
 const ScrollL2Withdrawals = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:scroll_l2_withdrawals',
     options: {
@@ -50,6 +52,7 @@ const ScrollL2Withdrawals = () => {
   ) : null;
 
   const text = (() => {
+  const { t } = useTranslation();
     if (countersQuery.isError) {
       return null;
     }
@@ -72,7 +75,7 @@ const ScrollL2Withdrawals = () => {
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items?.length }
-        emptyText="There are no withdrawals."
+        emptyText={t('common.common.there_are_no_withdrawals')}
         actionBar={ actionBar }
       >
         { content }

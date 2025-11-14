@@ -2,6 +2,7 @@ import { useMutation } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { FormProvider, useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressTag, AddressTagErrors } from 'types/api/account';
 
@@ -27,6 +28,7 @@ type Inputs = {
 };
 
 const AddressForm: React.FC<Props> = ({ data, onOpenChange, onSuccess, setAlertVisible }) => {
+  const { t } = useTranslation();
   const apiFetch = useApiFetch();
   const [ pending, setPending ] = useState(false);
   const formApi = useForm<Inputs>({
@@ -90,7 +92,7 @@ const AddressForm: React.FC<Props> = ({ data, onOpenChange, onSuccess, setAlertV
         />
         <FormFieldText<Inputs>
           name="tag"
-          placeholder="Private tag (max 35 characters)"
+          placeholder={t('common.common.private_tag_max_characters', { count: TAG_MAX_LENGTH })}
           required
           rules={{
             maxLength: TAG_MAX_LENGTH,
@@ -103,7 +105,7 @@ const AddressForm: React.FC<Props> = ({ data, onOpenChange, onSuccess, setAlertV
           disabled={ !formApi.formState.isDirty }
           loading={ pending }
         >
-          { data ? 'Save changes' : 'Add tag' }
+          { data ? t('common.common.save_changes') : t('common.common.add_tag') }
         </Button>
       </form>
     </FormProvider>

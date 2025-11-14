@@ -7,6 +7,7 @@ import { useMultichainContext } from 'lib/contexts/multichain';
 import getChainTooltipText from 'lib/multichain/getChainTooltipText';
 import getIconUrl from 'lib/multichain/getIconUrl';
 import * as EntityBase from 'ui/shared/entities/base/components';
+import { useTranslation } from 'react-i18next';
 
 import { distributeEntityProps } from '../base/utils';
 
@@ -29,12 +30,14 @@ const Link = chakra((props: LinkProps) => {
 });
 
 const Icon = (props: EntityBase.IconBaseProps) => {
+  const { t } = useTranslation();
+
   return (
     <EntityBase.Icon
       { ...props }
       name={ 'name' in props ? props.name : 'user_op_slim' }
       shield={ props.shield ?? (props.chain ? { src: getIconUrl(props.chain) } : undefined) }
-      hint={ props.chain ? getChainTooltipText(props.chain, 'User operation on ') : undefined }
+      hint={ props.chain ? getChainTooltipText(props.chain, t('shared.common.user_operation_on')) : undefined }
     />
   );
 };

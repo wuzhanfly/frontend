@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Badge } from 'toolkit/chakra/badge';
 import IconSvg from 'ui/shared/IconSvg';
@@ -8,6 +9,7 @@ import StatusTag from 'ui/shared/statusTag/StatusTag';
 import { Section, Container, SectionHeader, SamplesStack, Sample, SectionSubHeader } from './parts';
 
 const BadgeShowcase = () => {
+  const { t } = useTranslation();
   return (
     <Container value="badge">
       <Section>
@@ -102,13 +104,13 @@ const BadgeShowcase = () => {
         <SectionSubHeader>Status tag (StatusTag)</SectionSubHeader>
         <SamplesStack>
           <Sample label="status: ok">
-            <StatusTag type="ok" text="Text"/>
+            <StatusTag type="ok" text={t('shared.common.text')}/>
           </Sample>
           <Sample label="status: error">
-            <StatusTag type="error" text="Text"/>
+            <StatusTag type="error" text={t('shared.common.text')}/>
           </Sample>
           <Sample label="status: pending">
-            <StatusTag type="pending" text="Text"/>
+            <StatusTag type="pending" text={t('shared.common.text')}/>
           </Sample>
         </SamplesStack>
       </Section>

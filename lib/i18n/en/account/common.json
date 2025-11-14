@@ -6,6 +6,8 @@
   "account.common.email_notifications": "Email notifications",
   "account.common.save_changes": "Save changes",
   "account.common.add_address": "Add address",
+  "account.common.remove_address_from_watch_list": "Remove address from Watch list",
+  "account.common.add_address_tag": "Add address tag",
   "account.common.promise": "Promise",
   "account.common.notification_methods": "Notification methods",
   "account.common.incoming": "Incoming",

@@ -9,7 +9,7 @@ it('construct correct absolute path', () => {
   expect(result).toBe('/foo/abc/contract.sol');
 });
 
-it('construct correct absolute path if file is in the current directory', () => {
+it('shared.common.construct_correct_absolute_pat', () => {
   const result = getFullPathOfImportedFile(
     '/abc/index.sol',
     './contract.sol',
@@ -18,7 +18,7 @@ it('construct correct absolute path if file is in the current directory', () => 
   expect(result).toBe('/abc/contract.sol');
 });
 
-it('returns undefined if imported file is outside the base file folder', () => {
+it('shared.common.returns_undefined_if_imported_', () => {
   const result = getFullPathOfImportedFile(
     '/index.sol',
     '../../abc/contract.sol',
@@ -27,7 +27,7 @@ it('returns undefined if imported file is outside the base file folder', () => {
   expect(result).toBeUndefined();
 });
 
-describe('returns unmodified path if it is already absolute', () => {
+describe('shared.common.returns_unmodified_path_if_it_', () => {
   it('with prefix', () => {
     const result = getFullPathOfImportedFile(
       '/index.sol',
@@ -47,7 +47,7 @@ describe('returns unmodified path if it is already absolute', () => {
   });
 });
 
-describe('correctly manages remappings', () => {
+describe('shared.common.correctly_manages_remappings', () => {
   it('without context', () => {
     const result = getFullPathOfImportedFile(
       '/index.sol',
@@ -61,7 +61,7 @@ describe('correctly manages remappings', () => {
     expect(result).toBe('/node_modules/@openzeppelin/contracts/access/AccessControl.sol');
   });
 
-  it('with empty context', () => {
+  it('shared.common.with_empty_context', () => {
     const result = getFullPathOfImportedFile(
       './index.sol',
       '@base58-solidity/Base58.sol',

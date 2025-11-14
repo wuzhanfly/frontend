@@ -1,6 +1,7 @@
 import { Text } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Transaction } from 'types/api/transaction';
 
@@ -17,6 +18,7 @@ type Props = {
 };
 
 export const TxInfoScrollFees = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
   return (
     <>
       { data.scroll?.l1_fee !== undefined && (
@@ -42,7 +44,7 @@ export const TxInfoScrollFees = ({ data, isLoading }: Props) => {
       { data.scroll?.l2_fee !== undefined && (
         <>
           <DetailedInfo.ItemLabel
-            hint="L2 execution fee"
+            hint={t('transactions.common.l2_execution_fee')}
             isLoading={ isLoading }
           >
             Execution fee
@@ -61,7 +63,7 @@ export const TxInfoScrollFees = ({ data, isLoading }: Props) => {
       { data.scroll?.l1_fee_commit_scalar !== undefined && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Commitment scalar"
+            hint={t('transactions.common.commitment_scalar')}
             isLoading={ isLoading }
           >
             L1 commit scalar
@@ -80,7 +82,7 @@ export const TxInfoScrollFees = ({ data, isLoading }: Props) => {
       { data.scroll?.l1_fee_overhead !== undefined && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Additional gas overhead of a data commitment transaction"
+            hint={t('transactions.common.additional_gas_overhead_of_a_d')}
             isLoading={ isLoading }
           >
             L1 Fee Overhead
@@ -100,7 +102,7 @@ export const TxInfoScrollFees = ({ data, isLoading }: Props) => {
       { (data.scroll?.l1_base_fee !== undefined || data.scroll?.l1_fee_scalar !== undefined) && (
         <>
           <DetailedInfo.ItemLabel
-            hint="L1 gas fees"
+            hint={t('transactions.common.l1_gas_fees')}
             isLoading={ isLoading }
           >
             L1 gas fees
@@ -125,7 +127,7 @@ export const TxInfoScrollFees = ({ data, isLoading }: Props) => {
       { (data.scroll?.l1_blob_base_fee !== undefined || data.scroll?.l1_fee_blob_scalar !== undefined) && (
         <>
           <DetailedInfo.ItemLabel
-            hint="L1 blob fees"
+            hint={t('transactions.common.l1_blob_fees')}
             isLoading={ isLoading }
           >
             L1 blob fees

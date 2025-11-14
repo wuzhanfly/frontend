@@ -98,6 +98,7 @@ const data: SmartContractMethod = {
 };
 
 test('base view +@mobile +@dark-mode', async({ render }) => {
+  const t = (key: string) => key;
 
   const component = await render(
     <ContractMethodForm
@@ -138,7 +139,7 @@ test('base view +@mobile +@dark-mode', async({ render }) => {
   await component.getByLabel('#1 int256[2][] (int256[2][])').getByText('#1 int256[2] (int256[2])').click();
 
   // submit form
-  await component.getByRole('button', { name: 'Write' }).click();
+  await component.getByRole('button', { name: t('addresses.common.write') }).click();
 
   await expect(component).toHaveScreenshot();
 });

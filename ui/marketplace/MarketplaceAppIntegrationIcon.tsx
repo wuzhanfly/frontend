@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Tooltip } from 'toolkit/chakra/tooltip';
 import type { IconName } from 'ui/shared/IconSvg';
@@ -10,6 +11,7 @@ type Props = {
 };
 
 const MarketplaceAppIntegrationIcon = ({ external, internalWallet }: Props) => {
+  const { t } = useTranslation();
   const [ icon, iconColor, text, boxSize ] = React.useMemo(() => {
     let icon: IconName = 'integration/partial';
     let color = 'icon.secondary';
@@ -19,16 +21,16 @@ const MarketplaceAppIntegrationIcon = ({ external, internalWallet }: Props) => {
     if (external) {
       icon = 'link_external';
       color = 'icon.secondary';
-      text = 'This app opens in a separate tab';
+      text = t('marketplace.common.this_app_opens_in_a_separate_t');
       boxSize = 4;
     } else if (internalWallet) {
       icon = 'integration/full';
       color = 'green.500';
-      text = 'This app opens in Blockscout and your Blockscout wallet connects automatically';
+      text = t('marketplace.common.this_app_opens_in_blockscout_a');
     }
 
     return [ icon, color, text, boxSize ];
-  }, [ external, internalWallet ]);
+  }, [ external, internalWallet, t ]);
 
   return (
     <Tooltip

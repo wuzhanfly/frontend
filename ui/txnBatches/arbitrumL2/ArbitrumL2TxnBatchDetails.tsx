@@ -2,6 +2,7 @@ import { GridItem } from '@chakra-ui/react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ArbitrumL2TxnBatch } from 'types/api/arbitrumL2';
 
@@ -31,6 +32,7 @@ interface Props {
 }
 
 const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const { data, isPlaceholderData, isError, error } = query;
@@ -66,7 +68,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
     >
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Batch number indicates the length of batches produced by grouping L2 blocks to be proven on L1"
+        hint={t('common.common.batch_number_indicates_the_len')}
       >
         Txn batch number
       </DetailedInfo.ItemLabel>
@@ -77,8 +79,8 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
         <PrevNext
           ml={ 6 }
           onClick={ handlePrevNextClick }
-          prevLabel="View previous txn batch"
-          nextLabel="View next txn batch"
+          prevLabel={t('common.common.view_previous_txn_batch')}
+          nextLabel={t('common.common.view_next_txn_batch')}
           isPrevDisabled={ data.number === 0 }
           isLoading={ isPlaceholderData }
         />
@@ -86,7 +88,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Date and time at which batch is submitted to L1"
+        hint={t('common.common.date_and_time_at_which_batch_i')}
       >
         Timestamp
       </DetailedInfo.ItemLabel>
@@ -99,7 +101,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Number of transactions in this batch"
+        hint={t('common.common.number_of_transactions_in_this')}
       >
         Transactions
       </DetailedInfo.ItemLabel>
@@ -111,7 +113,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Number of L2 blocks in this batch"
+        hint={t('common.common.number_of_l2_blocks_in_this_ba')}
       >
         Blocks
       </DetailedInfo.ItemLabel>
@@ -123,7 +125,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Hash of L1 transaction in which transactions was committed"
+        hint={t('common.common.hash_of_l1_transaction_in_whic')}
       >
         L1 transaction hash
       </DetailedInfo.ItemLabel>
@@ -138,7 +140,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Heigh of L1 block which includes L1 transactions"
+        hint={t('common.common.heigh_of_l1_block_which_includ')}
       >
         L1 block
       </DetailedInfo.ItemLabel>
@@ -153,7 +155,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
         <>
           <DetailedInfo.ItemLabel
             isLoading={ isPlaceholderData }
-            hint="Where the batch data is stored"
+            hint={t('common.common.where_the_batch_data_is_stored')}
           >
             Batch data container
           </DetailedInfo.ItemLabel><DetailedInfo.ItemValue>
@@ -164,7 +166,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="The hash of the state before the batch"
+        hint={t('common.common.the_hash_of_the_state_before_t')}
       >
         Before acc
       </DetailedInfo.ItemLabel>
@@ -177,7 +179,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="The hash of the state after the batch"
+        hint={t('common.common.the_hash_of_the_state_after_th')}
       >
         After acc
       </DetailedInfo.ItemLabel>
@@ -193,7 +195,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
           loading={ isPlaceholderData }
           mt={ 6 }
           gridColumn={{ base: undefined, lg: '1 / 3' }}
-          text={ [ 'Show data availability info', 'Hide data availability info' ] }
+          text={ [ t('common.common.show_data_availability_info'), t('common.common.hide_data_availability_info') ] }
         >
           <GridItem colSpan={{ base: undefined, lg: 2 }} mt={{ base: 1, lg: 4 }}/>
 

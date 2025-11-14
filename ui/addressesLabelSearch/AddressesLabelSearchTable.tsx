@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressesItem } from 'types/api/addresses';
 
@@ -14,13 +15,14 @@ interface Props {
 }
 
 const AddressesLabelSearchTable = ({ items, top, isLoading }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRoot>
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader width="70%">Address</TableColumnHeader>
+          <TableColumnHeader width="70%">{t('addresses.common.address')}</TableColumnHeader>
           <TableColumnHeader width="15%" isNumeric>{ `Balance ${ currencyUnits.ether }` }</TableColumnHeader>
-          <TableColumnHeader width="15%" isNumeric>Txn count</TableColumnHeader>
+          <TableColumnHeader width="15%" isNumeric>{t('addresses.common.txn_count')}</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

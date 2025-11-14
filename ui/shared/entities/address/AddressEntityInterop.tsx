@@ -8,6 +8,7 @@ import { route } from 'nextjs-routes';
 import { Image } from 'toolkit/chakra/image';
 import { Tooltip } from 'toolkit/chakra/tooltip';
 import IconSvg from 'ui/shared/IconSvg';
+import { useTranslation } from 'react-i18next';
 
 import { distributeEntityProps } from '../base/utils';
 import * as AddressEntity from './AddressEntity';
@@ -42,6 +43,7 @@ const IconStub = () => {
 };
 
 const AddressEntityInterop = ({ chain, ...props }: Props) => {
+  const { t } = useTranslation();
   const partsProps = distributeEntityProps(props);
 
   const href = chain?.instance_url ? chain.instance_url.replace(/\/$/, '') + route({
@@ -62,7 +64,7 @@ const AddressEntityInterop = ({ chain, ...props }: Props) => {
             bottom="-3px"
             right="4px"
             src={ chain.chain_logo }
-            alt={ chain.chain_name || 'external chain logo' }
+            alt={ chain.chain_name || t('transactions.common.external_chain_logo') }
             fallback={ <IconStub/> }
             width="14px"
             height="14px"

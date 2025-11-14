@@ -57,13 +57,13 @@ const SettingsIdentIcon = () => {
 
   // 语言选项数据
   const LANGUAGES = [
-    { id: 'en', label: 'English', flag: '🇺🇸' },
-    { id: 'zh', label: '中文', flag: '🇨🇳' },
+    { id: 'en', label: t('settings.common.english'), flag: t('settings.common.flag_us') },
+    { id: 'zh', label: t('settings.common.chinese'), flag: t('settings.common.flag_china') },
   ];
 
   return (
     <div>
-      <Box fontWeight={ 600 }>{t('common.common.settings')}</Box>
+      <Box fontWeight={ 600 }>{ t('settings.common.settings') }</Box>
       <Box color="text.secondary" mt={ 1 } mb={ 2 }>{ activeIdenticon?.label }</Box>
       <Flex mb={ 3 }>
         { IDENTICONS.map((identicon) => (
@@ -79,7 +79,7 @@ const SettingsIdentIcon = () => {
       </Flex>
       
       {/* 语言切换部分 */}
-      <Box fontWeight={ 600 } mt={ 4 }>{t('common.common.language')}</Box>
+      <Box fontWeight={ 600 } mt={ 4 }>{ t('settings.common.language') }</Box>
       <Box color="text.secondary" mt={ 1 } mb={ 2 }>{LANGUAGES.find(lang => lang.id === activeLanguage)?.label}</Box>
       <Flex>
         { LANGUAGES.map((lang) => (

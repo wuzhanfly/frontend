@@ -5,13 +5,14 @@ import type { StatsIntervalIds } from 'types/client/stats';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { useAppContext } from 'lib/contexts/app';
-import { STATS_INTERVALS } from 'ui/stats/constants';
+import { getStatsIntervals } from 'ui/stats/constants';
 
 import { formatDate } from './utils';
 
-export default function useChartQuery(id: string, resolution: Resolution, interval: StatsIntervalIds, enabled = true) {
+export default function useChartQuery(id: string, resolution: Resolution, interval: StatsIntervalIds, t: (key: string) => string, enabled = true) {
   const { apiData } = useAppContext<'/stats/[id]'>();
 
+  const STATS_INTERVALS = getStatsIntervals(t);
   const selectedInterval = STATS_INTERVALS[interval];
 
   const endDate = selectedInterval.start ? formatDate(new Date()) : undefined;
@@ -31,8 +32,8 @@ export default function useChartQuery(id: string, resolution: Resolution, interv
       refetchOnMount: false,
       placeholderData: {
         info: {
-          title: 'Chart title placeholder',
-          description: 'Chart placeholder description chart placeholder description',
+          title: t('shared.common.chart_title_placeholder'),
+          description: t('shared.common.chart_placeholder_description_'),
           resolutions: [ 'DAY', 'WEEK', 'MONTH', 'YEAR' ],
           id: 'placeholder',
           units: undefined,

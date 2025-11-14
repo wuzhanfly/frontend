@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useIsMobile from 'lib/hooks/useIsMobile';
 import { FilterInput } from 'toolkit/components/filters/FilterInput';
@@ -13,6 +14,7 @@ import PageTitle from 'ui/shared/Page/PageTitle';
 import Pagination from 'ui/shared/pagination/Pagination';
 
 const InternalTxs = () => {
+  const { t } = useTranslation();
 
   const isMobile = useIsMobile();
 
@@ -24,7 +26,7 @@ const InternalTxs = () => {
       w={{ base: '100%', lg: '350px' }}
       size="sm"
       onChange={ onSearchTermChange }
-      placeholder="Search by transaction hash"
+      placeholder={t('common.common.search_by_transaction_hash')}
       initialValue={ searchTerm }
     />
   );
@@ -59,13 +61,13 @@ const InternalTxs = () => {
   return (
     <>
       <PageTitle
-        title="Internal transactions"
+        title={t('common.common.internal_transactions')}
         withTextAd
       />
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no internal transactions."
+        emptyText={t('common.common.there_are_no_internal_transact')}
         filterProps={{
           emptyFilteredText: `Couldn${ apos }t find any internal transaction that matches your query.`,
           hasActiveFilters: Boolean(debouncedSearchTerm),

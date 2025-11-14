@@ -1,5 +1,6 @@
 import { Box, HStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenType } from 'types/api/token';
 
@@ -27,6 +28,7 @@ interface Props {
 }
 
 const TokenTransfersLocal = ({ query, filters, addressHash, onTypeFilterChange, onAddressFilterChange }: Props) => {
+  const { t } = useTranslation();
   const { isError, isPlaceholderData, data, pagination } = query;
   const isMobile = useIsMobile();
 
@@ -106,7 +108,7 @@ const TokenTransfersLocal = ({ query, filters, addressHash, onTypeFilterChange, 
     <DataListDisplay
       isError={ isError }
       itemsNum={ data?.items?.length }
-      emptyText="There are no token transfers."
+      emptyText={t('transactions.common.there_are_no_token_transfers')}
       filterProps={{
         emptyFilteredText: `Couldn${ apos }t find any token transfer that matches your query.`,
         hasActiveFilters: Boolean(numActiveFilters),

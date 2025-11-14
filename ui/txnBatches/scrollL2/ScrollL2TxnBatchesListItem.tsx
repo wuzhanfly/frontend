@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ScrollL2TxnBatch } from 'types/api/scrollL2';
 
@@ -20,6 +21,7 @@ const rollupFeature = config.features.rollup;
 type Props = { item: ScrollL2TxnBatch; isLoading?: boolean };
 
 const ScrollL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
+  const { t } = useTranslation();
   if (!rollupFeature.isEnabled || rollupFeature.type !== 'scroll') {
     return null;
   }
@@ -43,7 +45,7 @@ const ScrollL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
 
       <ListItemMobileGrid.Label isLoading={ isLoading }>Status</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
-        <ScrollL2TxnBatchStatus status={ item.confirmation_transaction.hash ? 'Finalized' : 'Committed' } isLoading={ isLoading }/>
+        <ScrollL2TxnBatchStatus status={ item.confirmation_transaction.hash ? 'finalized' : 'committed' } isLoading={ isLoading }/>
       </ListItemMobileGrid.Value>
 
       <ListItemMobileGrid.Label isLoading={ isLoading }>Committed block</ListItemMobileGrid.Label>

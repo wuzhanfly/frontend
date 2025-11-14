@@ -11,6 +11,17 @@ import * as pwConfig from 'playwright/utils/config';
 
 import Token from './Token';
 
+const { t } = (() => {
+  // Mock translation function for tests
+  const mockT = (key: string) => {
+    const keyMap: Record<string, string> = {
+      'shared.common.show_info': 'Show info',
+    };
+    return keyMap[key] || key;
+  };
+  return { t: mockT };
+})();
+
 const hash = tokenInfo.address_hash;
 const chainId = config.chain.id;
 
@@ -57,7 +68,7 @@ test('with verified info', async({ render, page, createSocket, mockApiResponse, 
   socketServer.sendMessage(socket, channel, 'total_supply', { total_supply: 10 ** 20 });
   await component.getByText('100 ARIA').waitFor({ state: 'visible', timeout: 10_000 });
 
-  await page.getByLabel('Show info').click();
+  await page.getByLabel(t('shared.common.show_info')).click();
 
   await expect(component).toHaveScreenshot({
     mask: [ page.locator(pwConfig.adsBannerSelector) ],

@@ -1,6 +1,7 @@
 import { Flex, HStack, Text } from '@chakra-ui/react';
 import { castArray } from 'es-toolkit/compat';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ZetaChainCCTXFilterParams } from 'types/client/zetaChain';
 
@@ -20,6 +21,7 @@ type Props = {
 };
 
 const ZetaChainFilterTags = ({ filters, onClearFilter, onClearAll }: Props) => {
+  const { t } = useTranslation();
   const { data: chains = [] } = useZetaChainConfig();
 
   const filterTags: Array<{ key: keyof ZetaChainCCTXFilterParams; name: string; value: string }> = [];
@@ -28,14 +30,14 @@ const ZetaChainFilterTags = ({ filters, onClearFilter, onClearAll }: Props) => {
   if (filters.age) {
     filterTags.push({
       key: 'age',
-      name: 'Age',
+      name: t('staking.common.age'),
       value: filters.age,
     });
   } else {
     if (filters.start_timestamp) {
       filterTags.push({
         key: 'start_timestamp',
-        name: 'Date from',
+        name: t('common.common.date_from'),
         value: dayjs(Number(filters.start_timestamp) * SECOND).format('MMM DD, YYYY'),
       });
     }
@@ -43,7 +45,7 @@ const ZetaChainFilterTags = ({ filters, onClearFilter, onClearAll }: Props) => {
     if (filters.end_timestamp) {
       filterTags.push({
         key: 'end_timestamp',
-        name: 'Date to',
+        name: t('common.common.date_to'),
         value: dayjs(Number(filters.end_timestamp) * SECOND).format('MMM DD, YYYY'),
       });
     }
@@ -54,7 +56,7 @@ const ZetaChainFilterTags = ({ filters, onClearFilter, onClearAll }: Props) => {
   if (statusReduced.length > 0) {
     filterTags.push({
       key: 'status_reduced',
-      name: 'Status',
+      name: t('validators.common.status'),
       value: statusReduced.join(', '),
     });
   }
@@ -64,7 +66,7 @@ const ZetaChainFilterTags = ({ filters, onClearFilter, onClearAll }: Props) => {
   if (senderAddresses.length > 0) {
     filterTags.push({
       key: 'sender_address',
-      name: 'Sender',
+      name: t('transactions.common.sender'),
       value: senderAddresses.map(address => shortenString(address, 8)).join(', '),
     });
   }
@@ -78,7 +80,7 @@ const ZetaChainFilterTags = ({ filters, onClearFilter, onClearAll }: Props) => {
     });
     filterTags.push({
       key: 'source_chain_id',
-      name: 'Sender Chain',
+      name: t('common.common.sender_chain'),
       value: chainNames.join(', '),
     });
   }
@@ -88,7 +90,7 @@ const ZetaChainFilterTags = ({ filters, onClearFilter, onClearAll }: Props) => {
   if (receiverAddresses.length > 0) {
     filterTags.push({
       key: 'receiver_address',
-      name: 'Receiver',
+      name: t('common.common.receiver'),
       value: receiverAddresses.map(address => shortenString(address, 8)).join(', '),
     });
   }
@@ -102,7 +104,7 @@ const ZetaChainFilterTags = ({ filters, onClearFilter, onClearAll }: Props) => {
     });
     filterTags.push({
       key: 'target_chain_id',
-      name: 'Receiver Chain',
+      name: t('common.common.receiver_chain'),
       value: chainNames.join(', '),
     });
   }
@@ -121,7 +123,7 @@ const ZetaChainFilterTags = ({ filters, onClearFilter, onClearAll }: Props) => {
     }
     filterTags.push({
       key: 'token_symbol',
-      name: 'Asset',
+      name: t('common.common.asset'),
       value: value.join(', '),
     });
   }

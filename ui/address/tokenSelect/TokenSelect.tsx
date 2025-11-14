@@ -3,6 +3,7 @@ import { useQueryClient, useIsFetching } from '@tanstack/react-query';
 import { sumBy } from 'es-toolkit';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Address } from 'types/api/address';
 
@@ -24,6 +25,7 @@ import TokenSelectDesktop from './TokenSelectDesktop';
 import TokenSelectMobile from './TokenSelectMobile';
 
 const TokenSelect = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMobile = useIsMobile();
   const queryClient = useQueryClient();
@@ -67,14 +69,14 @@ const TokenSelect = () => {
         <TokenSelectMobile data={ data } isLoading={ tokensIsFetching === 1 }/> :
         <TokenSelectDesktop data={ data } isLoading={ tokensIsFetching === 1 }/>
       }
-      <Tooltip content="Show all tokens">
+      <Tooltip content={ t('addresses.common.show_all_tokens') }>
         <Link
           href={ route({ pathname: '/address/[hash]', query: { hash: addressHash, tab: 'tokens' } }, multichainContext) }
           asChild
           scroll={ false }
         >
           <IconButton
-            aria-label="Show all tokens"
+            aria-label={ t('addresses.common.show_all_tokens') }
             variant="icon_background"
             size="md"
             onClick={ handleIconButtonClick }

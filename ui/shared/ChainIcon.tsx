@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CrossChainInfo } from 'types/client/crossChainInfo';
 
@@ -24,9 +25,10 @@ const Placeholder = ({ boxSize }: { boxSize: number }) => {
   );
 };
 
-Placeholder.displayName = 'Placeholder';
+Placeholder.displayName = 'ChainIconPlaceholder';
 
 const ChainIcon = ({ chain, boxSize = 5, isLoading }: Props) => {
+  const { t } = useTranslation();
   if (isLoading) {
     return <Skeleton boxSize={ boxSize } borderRadius="full" loading={ isLoading }/>;
   }

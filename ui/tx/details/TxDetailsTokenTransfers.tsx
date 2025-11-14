@@ -1,5 +1,6 @@
 import { GridItem, Flex, Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenTransfer } from 'types/api/tokenTransfer';
 
@@ -15,15 +16,18 @@ interface Props {
   isOverflow: boolean;
 }
 
-const TOKEN_TRANSFERS_TYPES = [
-  { title: 'Tokens transferred', hint: 'List of tokens transferred in the transaction', type: 'token_transfer' },
-  { title: 'Tokens minted', hint: 'List of tokens minted in the transaction', type: 'token_minting' },
-  { title: 'Tokens burnt', hint: 'List of tokens burnt in the transaction', type: 'token_burning' },
-  { title: 'Tokens created', hint: 'List of tokens created in the transaction', type: 'token_spawning' },
-];
+
 
 const TxDetailsTokenTransfers = ({ data, txHash, isOverflow }: Props) => {
+  const { t } = useTranslation();
   const viewAllUrl = route({ pathname: '/tx/[hash]', query: { hash: txHash, tab: 'token_transfers' } });
+
+  const TOKEN_TRANSFERS_TYPES = [
+    { title: 'Tokens transferred', hint: 'List of tokens transferred in the transaction', type: 'token_transfer' },
+    { title: 'Tokens minted', hint: t('transactions.common.list_of_tokens_minted_in_the_t'), type: 'token_minting' },
+    { title: 'Tokens burnt', hint: t('transactions.common.list_of_tokens_burnt_in_the_tr'), type: 'token_burning' },
+    { title: 'Tokens created', hint: t('transactions.common.list_of_tokens_created_in_the_'), type: 'token_spawning' },
+  ];
 
   const transferGroups = TOKEN_TRANSFERS_TYPES.map((group) => ({
     ...group,

@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { UserOp } from 'types/api/userOps';
 
@@ -14,6 +15,7 @@ interface Props {
 }
 
 const UserOpDecodedCallData = ({ data }: Props) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const [ callData, setCallData ] = React.useState(data.decoded_execute_call_data || data.decoded_call_data);
 
@@ -34,12 +36,12 @@ const UserOpDecodedCallData = ({ data }: Props) => {
     />
   ) : null;
 
-  const labelText = data.call_data && !data.execute_call_data ? 'Decoded external call data' : 'Decoded call data';
+  const labelText = data.call_data && !data.execute_call_data ? t('common.common.decoded_external_call_data') : t('common.common.decoded_call_data');
 
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint={ labelText }
+        hint={ data.call_data && !data.execute_call_data ? t('common.common.decoded_external_call_data') : t('common.common.decoded_call_data') }
       >
         <Flex alignItems="center" justifyContent="space-between">
           { labelText }

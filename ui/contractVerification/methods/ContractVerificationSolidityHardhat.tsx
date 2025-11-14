@@ -1,5 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useFormContext } from 'react-hook-form';
 
 import type { FormFields } from '../types';
@@ -13,6 +14,7 @@ import ContractVerificationFormRow from '../ContractVerificationFormRow';
 import ContractVerificationMethod from '../ContractVerificationMethod';
 
 const ContractVerificationSolidityHardhat = ({ config: formConfig }: { config: SmartContractVerificationConfig }) => {
+  const { t } = useTranslation();
   const chainNameSlug = config.chain.name?.toLowerCase().split(' ').join('-');
   const { watch } = useFormContext<FormFields>();
   const address = watch('address');
@@ -49,7 +51,7 @@ const ContractVerificationSolidityHardhat = ({ config: formConfig }: { config: S
   [...constructorArgs]`;
 
   return (
-    <ContractVerificationMethod title="Contract verification via Solidity Hardhat plugin">
+    <ContractVerificationMethod title={t('common.common.contract_verification_via_soli')}>
       <ContractVerificationFormRow>
         <Flex flexDir="column" rowGap={ 3 }>
           <ContractVerificationFormCodeSnippet code={ firstCodeSnippet }/>

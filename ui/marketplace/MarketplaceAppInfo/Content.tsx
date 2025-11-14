@@ -1,5 +1,6 @@
 import { Flex, Text, Grid } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { MarketplaceApp } from 'types/client/marketplace';
 
@@ -11,14 +12,15 @@ interface Props {
   data: MarketplaceApp | undefined;
 }
 
-const SOCIAL_LINKS: Array<Omit<SocialLinkProps, 'href'>> = [
-  { field: 'github', icon: 'social/github_filled', title: 'Github' },
-  { field: 'twitter', icon: 'social/twitter_filled', title: 'X (ex-Twitter)' },
-  { field: 'telegram', icon: 'social/telegram_filled', title: 'Telegram' },
-  { field: 'discord', icon: 'social/discord_filled', title: 'Discord' },
-];
-
 const Content = ({ data }: Props) => {
+  const { t } = useTranslation();
+  
+  const SOCIAL_LINKS: Array<Omit<SocialLinkProps, 'href'>> = [
+    { field: 'github', icon: 'social/github_filled', title: t('tokens.common.github') },
+    { field: 'twitter', icon: 'social/twitter_filled', title: 'X (ex-Twitter)' },
+    { field: 'telegram', icon: 'social/telegram_filled', title: t('tokens.common.telegram') },
+    { field: 'discord', icon: 'social/discord_filled', title: t('tokens.common.discord') },
+  ];
   const socialLinks: Array<SocialLinkProps> = [];
   SOCIAL_LINKS.forEach((link) => {
     const href = data?.[link.field];

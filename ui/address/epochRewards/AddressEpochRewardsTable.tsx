@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressEpochRewardsItem } from 'types/api/address';
 
@@ -14,17 +15,18 @@ type Props = {
 };
 
 const AddressEpochRewardsTable = ({ items, isLoading, top }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRoot minW="1000px" style={{ tableLayout: 'auto' }}>
       <TableHeaderSticky top={ top }>
         <TableRow>
           <TableColumnHeader>
-            Epoch
+            {t('epochs.common.epoch')}
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader>Reward type</TableColumnHeader>
-          <TableColumnHeader>Associated address</TableColumnHeader>
-          <TableColumnHeader isNumeric>Value</TableColumnHeader>
+          <TableColumnHeader>{t('common.common.reward_type')}</TableColumnHeader>
+          <TableColumnHeader>{t('common.common.associated_address')}</TableColumnHeader>
+          <TableColumnHeader isNumeric>{t('common.common.value')}</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

@@ -10,6 +10,7 @@ import { Badge } from 'toolkit/chakra/badge';
 import { Checkbox, CheckboxGroup } from 'toolkit/chakra/checkbox';
 import { FilterInput } from 'toolkit/components/filters/FilterInput';
 import TableColumnFilter from 'ui/shared/filters/TableColumnFilter';
+import { useTranslation } from 'react-i18next';
 
 const RESET_VALUE = 'all';
 
@@ -22,6 +23,7 @@ type Props = {
 };
 
 const MethodFilter = ({ value = [], handleFilterChange }: Props) => {
+  const { t } = useTranslation();
   const [ currentValue, setCurrentValue ] = React.useState<Array<AdvancedFilterMethodInfo>>([ ...value ]);
   const [ searchTerm, setSearchTerm ] = React.useState<string>('');
   const debouncedSearchTerm = useDebounce(searchTerm, 300);
@@ -70,7 +72,7 @@ const MethodFilter = ({ value = [], handleFilterChange }: Props) => {
 
   return (
     <TableColumnFilter
-      title="Method"
+      title={ t('tokens.common.method') }
       isFilled={ Boolean(currentValue.length) }
       isTouched={ !isEqual(currentValue.map(i => JSON.stringify(i)).sort(), value.map(i => JSON.stringify(i)).sort()) }
       onFilter={ onFilter }
@@ -80,7 +82,7 @@ const MethodFilter = ({ value = [], handleFilterChange }: Props) => {
       <FilterInput
         size="sm"
         onChange={ onSearchChange }
-        placeholder="Find by function name/ method ID"
+        placeholder={ t('tokens.common.fbf_n_mi') }
         mb={ 3 }
       />
       { methodsQuery.isLoading && <Spinner/> }

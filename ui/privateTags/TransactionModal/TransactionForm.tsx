@@ -3,6 +3,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm, FormProvider } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import type { TransactionTag, TransactionTagErrors } from 'types/api/account';
 
@@ -29,18 +30,19 @@ type Inputs = {
 };
 
 const TransactionForm: React.FC<Props> = ({ data, onOpenChange, onSuccess, setAlertVisible }) => {
+  const { t } = useTranslation();
+  const apiFetch = useApiFetch();
+  const queryClient = useQueryClient();
+
   const [ pending, setPending ] = useState(false);
 
   const formApi = useForm<Inputs>({
-    mode: 'onTouched',
     defaultValues: {
       transaction: data?.transaction_hash || '',
       tag: data?.name || '',
     },
+    mode: 'onBlur',
   });
-
-  const queryClient = useQueryClient();
-  const apiFetch = useApiFetch();
 
   const { mutateAsync } = useMutation({
     mutationFn: (formData: Inputs) => {
@@ -100,7 +102,7 @@ const TransactionForm: React.FC<Props> = ({ data, onOpenChange, onSuccess, setAl
         />
         <FormFieldText<Inputs>
           name="tag"
-          placeholder="Private tag (max 35 characters)"
+          placeholder={t('common.common.private_tag_max_characters', { count: TAG_MAX_LENGTH })}
           required
           rules={{
             maxLength: TAG_MAX_LENGTH,
@@ -114,7 +116,7 @@ const TransactionForm: React.FC<Props> = ({ data, onOpenChange, onSuccess, setAl
             disabled={ !formApi.formState.isDirty }
             loading={ pending }
           >
-            { data ? 'Save changes' : 'Add tag' }
+            { data ? t('common.common.save_changes') : t('common.common.add_tag') }
           </Button>
         </Box>
       </form>

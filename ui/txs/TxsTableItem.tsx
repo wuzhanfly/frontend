@@ -1,5 +1,6 @@
 import { Flex, VStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Transaction } from 'types/api/transaction';
 import type { ChainConfig } from 'types/multichain';
@@ -33,6 +34,7 @@ type Props = {
 };
 
 const TxsTableItem = ({ tx, showBlockInfo, currentAddress, enableTimeIncrement, isLoading, animation, chainData }: Props) => {
+  const { t } = useTranslation();
   const dataTo = tx.to ? tx.to : tx.created_contract;
 
   return (
@@ -80,7 +82,7 @@ const TxsTableItem = ({ tx, showBlockInfo, currentAddress, enableTimeIncrement, 
       </TableCell>
       <TableCell whiteSpace="nowrap">
         { tx.method && (
-          <Badge colorPalette={ tx.method === 'Multicall' ? 'teal' : 'gray' } loading={ isLoading } truncated>
+          <Badge colorPalette={ tx.method === t('common.common.multicall') ? 'teal' : 'gray' } loading={ isLoading } truncated>
             <span>{ tx.method }</span>
           </Badge>
         ) }

@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import throwOnResourceLoadError from 'lib/errors/throwOnResourceLoadError';
@@ -41,6 +42,7 @@ interface Props {
 
 const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
   const router = useRouter();
+  const { t } = useTranslation();
 
   const addressHash = getQueryParamString(router.query.hash);
 
@@ -102,7 +104,7 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
         { data.filecoin?.id && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Short identifier of an address that may change with chain state updates"
+              hint={ t('addresses.common.short_identifier_of_an_address') }
             >
               ID
             </DetailedInfo.ItemLabel>
@@ -116,7 +118,7 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
         { data.filecoin?.actor_type && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Identifies the purpose and behavior of the address on the Filecoin network"
+              hint={ t('addresses.common.identifies_the_purpose_and_beh') }
             >
               Actor
             </DetailedInfo.ItemLabel>
@@ -129,7 +131,7 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
         { (data.filecoin?.actor_type === 'evm' || data.filecoin?.actor_type === 'ethaccount') && data?.filecoin?.robust && (
           <>
             <DetailedInfo.ItemLabel
-              hint="0x-style address to which the Filecoin address is assigned by the Ethereum Address Manager"
+              hint={ t('addresses.common.0xstyle_address_to_which_the_f') }
             >
               Ethereum Address
             </DetailedInfo.ItemLabel>
@@ -148,7 +150,7 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
         { data.is_contract && data.creation_transaction_hash && (creatorAddressHash) && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Transaction and address of creation"
+              hint={ t('addresses.common.transaction_and_address_of_cre') }
               isLoading={ isLoading }
             >
               Creator
@@ -178,7 +180,7 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
         { data.has_tokens && (
           <>
             <DetailedInfo.ItemLabel
-              hint="All tokens in the account and total value"
+              hint={ t('addresses.common.all_tokens_in_the_account_and_') }
             >
               Tokens
             </DetailedInfo.ItemLabel>
@@ -190,10 +192,10 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
         { (config.features.multichainButton.isEnabled || (data.exchange_rate && data.has_tokens)) && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Total net worth in USD of all tokens for the address"
+              hint={ t('addresses.common.total_net_worth_in_usd_of_all_tokens_for_the_address') }
               isLoading={ isLoading }
             >
-              Net worth
+              {t('common.common.address.net_worth')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue multiRow>
               <AddressNetWorth addressData={ addressQuery.data } addressHash={ addressHash } isLoading={ isLoading }/>
@@ -203,11 +205,11 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
         }
 
         <DetailedInfo.ItemLabel
-          hint="Number of transactions related to this address"
-          isLoading={ isLoading || countersQuery.isPlaceholderData }
-        >
-          Transactions
-        </DetailedInfo.ItemLabel>
+              hint={ t('addresses.common.number_of_transactions_related') }
+              isLoading={ isLoading || countersQuery.isPlaceholderData }
+            >
+              {t('common.common.address.transactions')}
+            </DetailedInfo.ItemLabel>
         <DetailedInfo.ItemValue>
           { addressQuery.data ? (
             <AddressCounterItem
@@ -224,10 +226,10 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
         { data.has_token_transfers && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Number of transfers to/from this address"
+              hint={ t('addresses.common.number_of_transfers_to_or_from_this_address') }
               isLoading={ isLoading || countersQuery.isPlaceholderData }
             >
-              Transfers
+              {t('common.common.address.transfers')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               { addressQuery.data ? (
@@ -247,10 +249,10 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
         { countersQuery.data?.gas_usage_count && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Gas used by the address"
+              hint={ t('addresses.common.gas_used_by_the_address') }
               isLoading={ isLoading || countersQuery.isPlaceholderData }
             >
-              Gas used
+              {t('common.common.address.gas_used')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue multiRow>
               { addressQuery.data ? (
@@ -299,10 +301,10 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
         { data.block_number_balance_updated_at && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Block number in which the address was updated"
+              hint={ t('addresses.common.block_number_in_which_the_addr') }
               isLoading={ isLoading }
             >
-              Last balance update
+              {t('common.common.address.last_balance_update')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               <BlockEntity
@@ -318,10 +320,10 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
         { (address3rdPartyWidgets.isEnabled && address3rdPartyWidgets.items.length > 0) && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Metrics provided by third party partners"
+              hint={ t('addresses.common.metrics_provided_by_third_part') }
               isLoading={ address3rdPartyWidgets.configQuery.isPlaceholderData || addressQuery.isPlaceholderData }
             >
-              Widgets
+              {t('common.common.address.widgets')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               <Address3rdPartyWidgets

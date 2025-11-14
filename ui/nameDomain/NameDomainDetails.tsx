@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import * as bens from '@blockscout/bens-types';
 
@@ -27,6 +28,7 @@ interface Props {
 }
 
 const NameDomainDetails = ({ query }: Props) => {
+  const { t } = useTranslation();
   const isLoading = query.isPlaceholderData;
 
   const otherAddresses = Object.entries(query.data?.other_addresses ?? {});
@@ -39,7 +41,7 @@ const NameDomainDetails = ({ query }: Props) => {
         { query.data?.registration_date && (
           <>
             <DetailedInfo.ItemLabel
-              hint="The date the name was registered"
+              hint={t('common.common.the_date_the_name_was_register')}
               isLoading={ isLoading }
             >
               Registration date
@@ -57,7 +59,7 @@ const NameDomainDetails = ({ query }: Props) => {
           <>
             <DetailedInfo.ItemLabel
             // eslint-disable-next-line max-len
-              hint="The date the name expires, upon which there is a grace period for the owner to renew. After grace period ends, the name is released to the market"
+              hint={t('name_service.common.the_date_the_name_expires_upon_which_there_is_a_grace_period_for_the_owner_to_renew_after_grace_period_ends_the_name_is_released_to_the_market')}
               isLoading={ isLoading }
             >
               Expiration date
@@ -86,7 +88,7 @@ const NameDomainDetails = ({ query }: Props) => {
         { query.data?.resolver_address && (
           <>
             <DetailedInfo.ItemLabel
-              hint="The resolver contract provides information about a domain name"
+              hint={t('common.common.the_resolver_contract_provides')}
               isLoading={ isLoading }
             >
               Resolver
@@ -104,7 +106,7 @@ const NameDomainDetails = ({ query }: Props) => {
         { query.data?.registrant && (
           <>
             <DetailedInfo.ItemLabel
-              hint="The account that owns the domain name and has the rights to edit its ownership and records"
+              hint={t('common.common.the_account_that_owns_the_doma')}
               isLoading={ isLoading }
             >
               Registrant
@@ -136,7 +138,7 @@ const NameDomainDetails = ({ query }: Props) => {
         { query.data?.owner && (
           <>
             <DetailedInfo.ItemLabel
-              hint="The account that owns the rights to edit the records of this domain name"
+              hint={t('common.common.the_account_that_owns_the_righ')}
               isLoading={ isLoading }
             >
               Owner
@@ -168,7 +170,7 @@ const NameDomainDetails = ({ query }: Props) => {
         { query.data?.wrapped_owner && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Owner of this NFT domain in NameWrapper contract"
+              hint={t('common.common.owner_of_this_nft_domain_in_na')}
               isLoading={ isLoading }
             >
               Manager
@@ -210,10 +212,10 @@ const NameDomainDetails = ({ query }: Props) => {
           return (
             <React.Fragment key={ token.type }>
               <DetailedInfo.ItemLabel
-                hint={ `The ${ token.type === bens.TokenType.WRAPPED_DOMAIN_TOKEN ? 'wrapped ' : '' }token ID of this domain name NFT` }
+                hint={t('name_service.common.the_token_id_of_this_domain_name_nft', { tokenType: token.type === bens.TokenType.WRAPPED_DOMAIN_TOKEN ? t('name_service.common.wrapped') : '' })}
                 isLoading={ isLoading }
               >
-                { token.type === bens.TokenType.WRAPPED_DOMAIN_TOKEN ? 'Wrapped token ID' : 'Token ID' }
+                { token.type === bens.TokenType.WRAPPED_DOMAIN_TOKEN ? 'Wrapped token ID' : t('transactions.common.token_id') }
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue
                 wordBreak="break-all"
@@ -228,7 +230,7 @@ const NameDomainDetails = ({ query }: Props) => {
         { otherAddresses.length > 0 && (
           <>
             <DetailedInfo.ItemLabel
-              hint="Other cryptocurrency addresses added to this domain name"
+              hint={t('common.common.other_cryptocurrency_addresses')}
               isLoading={ isLoading }
             >
               Other addresses

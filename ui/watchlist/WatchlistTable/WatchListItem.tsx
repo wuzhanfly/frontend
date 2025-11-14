@@ -1,6 +1,7 @@
 import { Box, Text, HStack, Flex } from '@chakra-ui/react';
 import { useMutation } from '@tanstack/react-query';
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { WatchlistAddress } from 'types/api/account';
 
@@ -23,6 +24,7 @@ interface Props {
 }
 
 const WatchListItem = ({ item, isLoading, onEditClick, onDeleteClick, hasEmail }: Props) => {
+  const { t } = useTranslation();
   const [ notificationEnabled, setNotificationEnabled ] = useState(item.notification_methods.email);
   const [ switchDisabled, setSwitchDisabled ] = useState(false);
   const onItemEditClick = useCallback(() => {
@@ -38,14 +40,14 @@ const WatchListItem = ({ item, isLoading, onEditClick, onDeleteClick, hasEmail }
   const showErrorToast = useCallback(() => {
     toaster.error({
       title: 'Error',
-      description: 'There has been an error processing your request',
+      description: t('account.common.there_has_been_an_error_proces'),
     });
   }, [ ]);
 
   const showNotificationToast = useCallback((isOn: boolean) => {
     toaster.success({
       title: 'Success',
-      description: isOn ? 'Email notification is ON' : 'Email notification is OFF',
+      description: isOn ? t('account.common.email_notification_is_on') : t('account.common.email_notification_is_off'),
     });
   }, [ ]);
 
@@ -90,7 +92,7 @@ const WatchListItem = ({ item, isLoading, onEditClick, onDeleteClick, hasEmail }
             <Switch
               checked={ notificationEnabled }
               onCheckedChange={ onSwitch }
-              aria-label="Email notification"
+              aria-label={t('account.common.email_notification')}
               disabled={ !hasEmail || switchDisabled }
             />
           </Skeleton>

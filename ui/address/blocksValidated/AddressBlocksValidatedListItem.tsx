@@ -1,6 +1,7 @@
 import { Text, Flex } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Block } from 'types/api/block';
 
@@ -19,6 +20,7 @@ type Props = Block & {
 };
 
 const AddressBlocksValidatedListItem = (props: Props) => {
+  const { t } = useTranslation();
   const totalReward = getBlockTotalReward(props);
 
   return (
@@ -39,13 +41,13 @@ const AddressBlocksValidatedListItem = (props: Props) => {
         />
       </Flex>
       <Flex columnGap={ 2 } w="100%">
-        <Skeleton loading={ props.isLoading } fontWeight={ 500 } flexShrink={ 0 }>Txn</Skeleton>
+        <Skeleton loading={ props.isLoading } fontWeight={ 500 } flexShrink={ 0 }>{t('transactions.common.txn')}</Skeleton>
         <Skeleton loading={ props.isLoading } display="inline-block" color="Skeleton_secondary">
           <span>{ props.transactions_count }</span>
         </Skeleton>
       </Flex>
       <Flex columnGap={ 2 } w="100%">
-        <Skeleton loading={ props.isLoading } fontWeight={ 500 } flexShrink={ 0 }>Gas used</Skeleton>
+        <Skeleton loading={ props.isLoading } fontWeight={ 500 } flexShrink={ 0 }>{t('common.common.gas_used')}</Skeleton>
         <Skeleton loading={ props.isLoading }>
           <Text color="text.secondary">{ BigNumber(props.gas_used || 0).toFormat() }</Text>
         </Skeleton>

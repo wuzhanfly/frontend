@@ -1,5 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ApiKey } from 'types/api/account';
 
@@ -58,9 +59,11 @@ const ApiKeysPage: React.FC = () => {
   const description = (
     <AccountPageDescription>
       Create API keys to use for your RPC and EthRPC API requests. For more information, see { space }
-      <Link href="https://docs.blockscout.com/using-blockscout/my-account/api-keys#api-keys" external noIcon>"How to use a Blockscout API key"</Link>.
+      <Link href="https://docs.blockscout.com/using-blockscout/my-account/api-keys#api-keys" external noIcon>t('common.common.how_to_use_a_blockscout_api_ke')</Link>.
     </AccountPageDescription>
   );
+
+  const { t } = useTranslation();
 
   const content = (() => {
     if (isError) {
@@ -127,7 +130,7 @@ const ApiKeysPage: React.FC = () => {
 
   return (
     <>
-      <PageTitle title="API keys"/>
+      <PageTitle title={t('common.common.api_keys')}/>
       { content }
     </>
   );

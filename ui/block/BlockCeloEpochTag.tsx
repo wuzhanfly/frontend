@@ -1,5 +1,6 @@
 import { HStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -14,6 +15,7 @@ interface Props {
 }
 
 const BlockCeloEpochTagRegular = ({ blockQuery }: Props) => {
+  const { t } = useTranslation();
   if (!blockQuery.data?.celo) {
     return null;
   }
@@ -21,7 +23,7 @@ const BlockCeloEpochTagRegular = ({ blockQuery }: Props) => {
   return (
     <Tooltip
       key="epoch-tag-before-finalized"
-      content="Displays the epoch this block belongs to before the epoch is finalized"
+      content={t('blocks.common.displays_the_epoch_this_block_')}
     >
       <Link href={ route({ pathname: '/epochs/[number]', query: { number: String(blockQuery.data.celo.epoch_number) } }) }>
         <Tag variant="clickable">Epoch #{ blockQuery.data.celo.epoch_number }</Tag>
@@ -31,6 +33,7 @@ const BlockCeloEpochTagRegular = ({ blockQuery }: Props) => {
 };
 
 const BlockCeloEpochTag = ({ blockQuery }: Props) => {
+  const { t } = useTranslation();
   if (!blockQuery.data?.celo) {
     return null;
   }
@@ -43,7 +46,7 @@ const BlockCeloEpochTag = ({ blockQuery }: Props) => {
     <HStack gap={ 2 }>
       <Tooltip
         key="epoch-tag"
-        content="Displays the epoch finalized by this block"
+        content={t('blocks.common.displays_the_epoch_finalized_b')}
       >
         <Link href={ route({ pathname: '/epochs/[number]', query: { number: String(blockQuery.data.celo.l1_era_finalized_epoch_number) } }) }>
           <Tag bgColor="celo" color="blackAlpha.800" variant="clickable"> Finalized epoch #{ blockQuery.data.celo.l1_era_finalized_epoch_number } </Tag>

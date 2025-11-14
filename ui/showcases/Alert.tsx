@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Alert } from 'toolkit/chakra/alert';
 import { Link } from 'toolkit/chakra/link';
@@ -10,6 +11,7 @@ import TxPendingAlert from 'ui/tx/TxPendingAlert';
 import { Section, Container, SectionHeader, SamplesStack, Sample, SectionSubHeader } from './parts';
 
 const AlertShowcase = () => {
+  const { t } = useTranslation();
   return (
     <Container value="alert">
       <Section>
@@ -123,7 +125,7 @@ const AlertShowcase = () => {
               </Box>
             </Alert>
           </Sample>
-          <Sample label="multiple lines, no title">
+          <Sample label={t('common.common.multiple_lines_no_title')}>
             <Alert status="warning" maxWidth="500px">
               <Box>
                 Participated in our recent Blockscout activities? Check your eligibility and claim your NFT Scout badges. More exciting things are coming soon!

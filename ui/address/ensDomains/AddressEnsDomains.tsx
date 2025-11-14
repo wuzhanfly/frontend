@@ -2,6 +2,7 @@ import { Box, Flex, Grid, chakra } from '@chakra-ui/react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import { clamp } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as bens from '@blockscout/bens-types';
 
@@ -37,6 +38,7 @@ const DomainsGrid = ({ data }: { data: Array<bens.Domain> }) => {
 };
 
 const AddressEnsDomains = ({ query, addressHash, mainDomainName }: Props) => {
+  const { t } = useTranslation();
   const { data, isPending, isError } = query;
 
   if (isError) {
@@ -83,13 +85,13 @@ const AddressEnsDomains = ({ query, addressHash, mainDomainName }: Props) => {
 
   return (
     <PopoverRoot>
-      <Tooltip content="List of names resolved or owned by this address" disableOnMobile>
+      <Tooltip content={ t('addresses.common.list_of_names_resolved_or_owne') } disableOnMobile>
         <div>
           <PopoverTrigger>
             <Button
               size="sm"
               variant="dropdown"
-              aria-label="Address domains"
+              aria-label={ t('addresses.common.address_domains') }
               fontWeight={ 500 }
               flexShrink={ 0 }
               columnGap={ 1 }

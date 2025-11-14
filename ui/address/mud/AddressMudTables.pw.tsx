@@ -27,6 +27,7 @@ test('base view +@mobile', async({ render, mockApiResponse }) => {
 });
 
 test('with schema opened +@mobile', async({ render, mockApiResponse }, testInfo) => {
+  const t = (key: string) => key;
   await mockApiResponse('general:mud_tables', mudTables, { pathParams: { hash: ADDRESS_HASH }, queryParams: { q: 'o' } });
 
   const component = await render(
@@ -36,7 +37,7 @@ test('with schema opened +@mobile', async({ render, mockApiResponse }, testInfo)
     { hooksConfig },
   );
 
-  await component.getByLabel('View schema').nth(testInfo.project.name === 'mobile' ? 2 : 0).click();
+  await component.getByLabel(t('addresses.common.view_schema')).nth(testInfo.project.name === 'mobile' ? 2 : 0).click();
 
   await expect(component).toHaveScreenshot();
 });

@@ -1,6 +1,7 @@
 import { Box, chakra } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import type { FormEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import { SEARCH_RESULT_TYPES } from 'types/api/search';
@@ -35,6 +36,7 @@ import useSearchQuery from 'ui/snippets/searchBar/useSearchQuery';
 const nameServicesFeature = config.features.nameServices;
 
 const SearchResultsPageContent = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const withRedirectCheck = getQueryParamString(router.query.redirect) === 'true';
   const {
@@ -162,6 +164,7 @@ const SearchResultsPageContent = () => {
   ]);
 
   const content = (() => {
+  const { t } = useTranslation();
     if (isError) {
       return <DataFetchAlert/>;
     }
@@ -211,6 +214,7 @@ const SearchResultsPageContent = () => {
   })();
 
   const bar = (() => {
+  const { t } = useTranslation();
     if (isError) {
       return null;
     }
@@ -218,6 +222,7 @@ const SearchResultsPageContent = () => {
     const resultsCount = pagination.page === 1 && !data?.next_page_params ? displayedItems.length : '50+';
 
     const text = (() => {
+  const { t } = useTranslation();
       if (isLoading && pagination.page === 1) {
         return <Skeleton loading h={ 6 } w="280px" borderRadius="full" mb={ pagination.isVisible ? 0 : 6 }/>;
       }
@@ -269,7 +274,7 @@ const SearchResultsPageContent = () => {
 
   const pageContent = !showContent ? <ContentLoader/> : (
     <>
-      <PageTitle title="Search results"/>
+      <PageTitle title={t('common.common.search_results')}/>
       { bar }
       { content }
     </>

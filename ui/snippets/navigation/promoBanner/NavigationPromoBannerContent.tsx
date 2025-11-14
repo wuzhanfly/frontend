@@ -1,4 +1,5 @@
 import { HStack, Text, Box } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { Image } from 'toolkit/chakra/image';
@@ -13,6 +14,7 @@ type Props = {
 };
 
 const NavigationPromoBannerContent = ({ isCollapsed, isHorizontalNavigation }: Props) => {
+  const { t } = useTranslation();
   const isExpanded = isCollapsed === false;
   const navLinkStyleProps = useNavLinkStyleProps({ isCollapsed, isExpanded });
 
@@ -35,7 +37,7 @@ const NavigationPromoBannerContent = ({ isCollapsed, isHorizontalNavigation }: P
     >
       <Image
         src={ promoBanner.img_url }
-        alt="Promo banner icon"
+        alt={t('common.common.promo_banner_icon')}
         boxSize={ isHorizontalNavigation ? '20px' : '30px' }
       />
       { !isHorizontalNavigation && (
@@ -56,7 +58,7 @@ const NavigationPromoBannerContent = ({ isCollapsed, isHorizontalNavigation }: P
     >
       <Image
         src={ promoBanner.img_url.small }
-        alt="Promo banner small"
+        alt={t('common.common.promo_banner_small')}
         boxSize={ isHorizontalNavigation ? '32px' : '60px' }
         borderRadius={ isHorizontalNavigation ? 'sm' : 'base' }
         position={ isHorizontalNavigation ? undefined : 'absolute' }
@@ -70,7 +72,7 @@ const NavigationPromoBannerContent = ({ isCollapsed, isHorizontalNavigation }: P
       <Image
         display={ isHorizontalNavigation ? 'none' : 'block' }
         src={ promoBanner.img_url.large }
-        alt="Promo banner large"
+        alt={t('common.common.promo_banner_large')}
         w="full"
         maxW={{ base: 'full', lg: '180px' }}
         borderRadius="base"

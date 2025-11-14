@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContractSecurityAuditSubmission } from 'types/api/contract';
 
@@ -18,6 +19,7 @@ type Props = {
 };
 
 const ContractSecurityAudits = ({ addressHash }: Props) => {
+  const { t } = useTranslation();
   const { data, isPlaceholderData } = useApiQuery('general:contract_security_audits', {
     pathParams: { hash: addressHash },
     queryOptions: {
@@ -27,7 +29,7 @@ const ContractSecurityAudits = ({ addressHash }: Props) => {
     },
   });
 
-  const formTitle = 'Submit audit';
+  const formTitle = t('addresses.common.submit_audit');
 
   const modalProps = useDisclosure();
 

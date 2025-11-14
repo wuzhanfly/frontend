@@ -1,4 +1,5 @@
 import { Flex, Text } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { useRewardsContext } from 'lib/contexts/rewards';
@@ -8,6 +9,7 @@ import { Image } from 'toolkit/chakra/image';
 import { Link } from 'toolkit/chakra/link';
 
 export default function RewardsActivityPassCard() {
+  const { t } = useTranslation();
   const { rewardsConfigQuery } = useRewardsContext();
   const backgroundImage = useColorModeValue('/static/merits/cells.svg', '/static/merits/cells_dark.svg');
 
@@ -57,7 +59,7 @@ export default function RewardsActivityPassCard() {
       >
         <Image
           src={ backgroundImage }
-          alt="Background"
+          alt={t('dashboard.common.background')}
           width="268px"
           height="184px"
           position="absolute"
@@ -66,7 +68,7 @@ export default function RewardsActivityPassCard() {
         />
         <Image
           src="/static/merits/activity_pass.svg"
-          alt="Activity pass"
+          alt={t('dashboard.common.activity_pass')}
           width="79px"
           height="86px"
           zIndex={ 1 }

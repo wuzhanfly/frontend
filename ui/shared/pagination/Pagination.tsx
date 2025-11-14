@@ -1,6 +1,7 @@
 import type { HTMLChakraProps } from '@chakra-ui/react';
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { PaginationParams } from './types';
 
@@ -12,6 +13,7 @@ import IconSvg from 'ui/shared/IconSvg';
 interface Props extends PaginationParams, Omit<HTMLChakraProps<'div'>, 'page' | 'direction'> {}
 
 const Pagination = (props: Props) => {
+  const { t } = useTranslation();
   const { page, onNextPageClick, onPrevPageClick, resetPage, hasPages, hasNextPage, canGoBackwards, isLoading, isVisible, ...rest } = props;
 
   if (!isVisible) {
@@ -37,7 +39,7 @@ const Pagination = (props: Props) => {
         </Button>
       </Skeleton>
       <IconButton
-        aria-label="Prev page"
+        aria-label={t('shared.common.prev_page')}
         variant="pagination"
         boxSize={ 8 }
         onClick={ onPrevPageClick }

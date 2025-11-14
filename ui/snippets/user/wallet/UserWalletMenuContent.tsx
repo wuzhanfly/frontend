@@ -1,5 +1,6 @@
 import { Box, Flex, Spinner, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import delay from 'lib/delay';
 import { Button } from 'toolkit/chakra/button';
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const UserWalletMenuContent = ({ isAutoConnectDisabled, address, domain, isReconnecting, onDisconnect, onOpenWallet }: Props) => {
+  const { t } = useTranslation();
 
   const handleOpenWalletClick = React.useCallback(async() => {
     await delay(100);
@@ -41,7 +43,7 @@ const UserWalletMenuContent = ({ isAutoConnectDisabled, address, domain, isRecon
         />
         { isReconnecting ? <Spinner size="sm" m="2px" flexShrink={ 0 }/> : (
           <IconButton
-            aria-label="Open wallet"
+            aria-label={t('common.common.open_wallet')}
             variant="icon_secondary"
             size="2xs"
             onClick={ handleOpenWalletClick }

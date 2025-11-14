@@ -1,5 +1,6 @@
 import { Box, chakra, Grid } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -70,6 +71,7 @@ const BreadcrumbItem = ({ text, href, isLast }: BreadcrumbItemProps) => {
 };
 
 const AddressMudBreadcrumbs = (props: TableViewProps | RecordViewProps) => {
+  const { t } = useTranslation();
   const queryParams = { tab: 'mud', hash: props.hash };
   const isMobile = useIsMobile();
 
@@ -88,7 +90,7 @@ const AddressMudBreadcrumbs = (props: TableViewProps | RecordViewProps) => {
     >
       <IconSvg name="MUD" boxSize={ 5 } color={ addressQuery.data?.is_verified ? 'green.500' : 'icon.primary' }/>
       <BreadcrumbItem
-        text="MUD World"
+        text={ t('addresses.common.mud_world') }
         href={ route({ pathname: '/address/[hash]', query: queryParams }) }
       />
       <BreadcrumbItem

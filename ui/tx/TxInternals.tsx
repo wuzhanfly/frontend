@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { InternalTransaction } from 'types/api/internalTransaction';
 
@@ -64,6 +65,7 @@ interface Props {
 }
 
 const TxInternals = ({ txQuery }: Props) => {
+  const { t } = useTranslation();
   // filters are not implemented yet in api
   // const [ filters, setFilters ] = React.useState<Array<TxInternalsType>>([]);
   // const [ searchTerm, setSearchTerm ] = React.useState<string>('');
@@ -116,7 +118,7 @@ const TxInternals = ({ txQuery }: Props) => {
 
   const actionBar = pagination.isVisible ? (
     <ActionBar mt={ -6 }>
-      { /* <FilterInput onChange={ setSearchTerm } maxW="360px" ml={ 3 } size="xs" placeholder="Search by addresses, hash, method..."/> */ }
+      { /* <FilterInput onChange={ setSearchTerm } maxW="360px" ml={ 3 } size="xs" placeholder={t('transactions.common.search_by_addresses_hash_metho')}/> */ }
       <Pagination ml="auto" { ...pagination }/>
     </ActionBar>
   ) : null;

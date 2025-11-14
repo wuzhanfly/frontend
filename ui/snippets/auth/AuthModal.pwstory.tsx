@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Button } from 'toolkit/chakra/button';
 import { useDisclosure } from 'toolkit/hooks/useDisclosure';
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const AuthModalStory = ({ flow }: Props) => {
+  const { t } = useTranslation();
   const authModal = useDisclosure();
   const isAuth = useIsAuth();
 
@@ -23,9 +25,9 @@ const AuthModalStory = ({ flow }: Props) => {
 
   return (
     <>
-      <Button onClick={ authModal.onOpen }>{ flow === 'email_login' ? 'Log in' : 'Link email' }</Button>
+      <Button onClick={ authModal.onOpen }>{ flow === 'email_login' ? t('common.common.log_in') : t('common.common.link_email') }</Button>
       { authModal.open && <AuthModal initialScreen={ initialScreen } onClose={ handleClose }/> }
-      <Box>Status: { isAuth ? 'Authenticated' : 'Not authenticated' }</Box>
+      <Box>Status: { isAuth ? t('common.common.authenticated') : t('common.common.not_authenticated') }</Box>
     </>
   );
 };

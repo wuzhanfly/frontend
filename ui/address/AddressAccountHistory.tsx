@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { NovesHistoryFilterValue } from 'types/api/noves';
 import { NovesHistoryFilterValues } from 'types/api/noves';
@@ -31,6 +32,7 @@ type Props = {
 const AddressAccountHistory = ({ shouldRender = true, isQueryEnabled = true }: Props) => {
   const router = useRouter();
   const isMounted = useIsMounted();
+  const { t } = useTranslation();
 
   const currentAddress = getQueryParamString(router.query.hash).toLowerCase();
 
@@ -68,7 +70,7 @@ const AddressAccountHistory = ({ shouldRender = true, isQueryEnabled = true }: P
     </ActionBar>
   );
 
-  const filteredData = isPlaceholderData ? data?.items : data?.items.filter(i => filterValue ? getFromToValue(i, currentAddress) === filterValue : i);
+  const filteredData = isPlaceholderData ? data?.items : data?.items.filter(i => filterValue ? getFromToValue(i, currentAddress, t) === filterValue : i);
 
   const content = (
     <Box position="relative">
@@ -117,7 +119,7 @@ const AddressAccountHistory = ({ shouldRender = true, isQueryEnabled = true }: P
     <DataListDisplay
       isError={ isError }
       itemsNum={ filteredData?.length }
-      emptyText="There are no transactions."
+      emptyText={ t('common.common.there_are_no_transactions') }
       actionBar={ actionBar }
       filterProps={{
         hasActiveFilters: Boolean(filterValue),

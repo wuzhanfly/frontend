@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { WatchlistAddress } from 'types/api/account';
 
@@ -16,13 +17,15 @@ interface Props {
 }
 
 const WatchlistTable = ({ data, isLoading, onDeleteClick, onEditClick, top, hasEmail }: Props) => {
+  const { t } = useTranslation();
+  
   return (
     <TableRoot minWidth="600px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader width="70%">Address</TableColumnHeader>
-          <TableColumnHeader width="30%">Private tag</TableColumnHeader>
-          <TableColumnHeader width="160px">Email notification</TableColumnHeader>
+          <TableColumnHeader width="70%">{t('addresses.common.address')}</TableColumnHeader>
+          <TableColumnHeader width="30%">{t('account.common.private_tag')}</TableColumnHeader>
+          <TableColumnHeader width="160px">{t('account.common.email_notification')}</TableColumnHeader>
           <TableColumnHeader width="108px"></TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>

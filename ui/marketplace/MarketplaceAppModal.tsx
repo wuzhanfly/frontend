@@ -1,5 +1,6 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { MarketplaceApp } from 'types/client/marketplace';
 
@@ -32,7 +33,7 @@ const isRatingEnabled = feature.isEnabled && 'api' in feature;
 type Props = {
   onClose: () => void;
   isFavorite: boolean;
-  onFavoriteClick: (id: string, isFavorite: boolean, source: 'App modal') => void;
+  onFavoriteClick: (id: string, isFavorite: boolean, source: 'app_modal') => void;
   data: MarketplaceApp;
   graphLinks?: Array<{ title: string; url: string }>;
 };
@@ -44,6 +45,7 @@ const MarketplaceAppModal = ({
   data,
   graphLinks,
 }: Props) => {
+  const { t } = useTranslation();
   const {
     id,
     title,
@@ -95,7 +97,7 @@ const MarketplaceAppModal = ({
   }, [ onClose ]);
 
   const handleFavoriteClick = useCallback(() => {
-    onFavoriteClick(id, isFavorite, 'App modal');
+    onFavoriteClick(id, isFavorite, 'app_modal');
   }, [ onFavoriteClick, id, isFavorite ]);
 
   const logoUrl = useColorModeValue(logo, logoDarkMode || logo);
@@ -181,8 +183,8 @@ const MarketplaceAppModal = ({
                 </Link>
 
                 <IconButton
-                  aria-label="Mark as favorite"
-                  title="Mark as favorite"
+                  aria-label={t('marketplace.common.mark_as_favorite')}
+                  title={t('marketplace.common.mark_as_favorite')}
                   variant="icon_background"
                   size="md"
                   onClick={ handleFavoriteClick }

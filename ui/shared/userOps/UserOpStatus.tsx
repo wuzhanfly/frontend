@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import StatusTag from 'ui/shared/statusTag/StatusTag';
 
@@ -8,12 +9,13 @@ type Props = {
 };
 
 const UserOpStatus = ({ status, isLoading }: Props) => {
+  const { t } = useTranslation();
   if (status === undefined) {
     return null;
   }
 
   return (
-    <StatusTag loading={ isLoading } type={ status === true ? 'ok' : 'error' } text={ status === true ? 'Success' : 'Failed' }/>
+    <StatusTag loading={ isLoading } type={ status === true ? 'ok' : 'error' } text={ status === true ? 'Success' : t('shared.common.failed') }/>
   );
 };
 

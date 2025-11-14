@@ -1,5 +1,6 @@
 import { castArray } from 'es-toolkit/compat';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AdvancedFilterAge } from 'types/api/advancedFilter';
 import type { TokenInfo } from 'types/api/token';
@@ -24,6 +25,7 @@ type Props = {
 };
 
 const ZetaChainFilterByColumn = ({ column, filters, columnName, handleFilterChange, isLoading }: Props) => {
+  const { t } = useTranslation();
   const commonProps = { columnName, handleFilterChange, isLoading };
 
   switch (column) {
@@ -31,7 +33,7 @@ const ZetaChainFilterByColumn = ({ column, filters, columnName, handleFilterChan
       const value = { age: (filters.age || '') as AdvancedFilterAge | '', from: filters.start_timestamp || '', to: filters.end_timestamp || '' };
       return (
         <TableColumnFilterWrapper
-          columnName="Age"
+          columnName={t('staking.common.age')}
           isLoading={ isLoading }
           selected={ Boolean(value.age || value.from || value.to) }
           w="382px"
@@ -44,7 +46,7 @@ const ZetaChainFilterByColumn = ({ column, filters, columnName, handleFilterChan
       const value = filters.status_reduced ? castArray(filters.status_reduced) : [];
       return (
         <TableColumnFilterWrapper
-          columnName="Status"
+          columnName={t('validators.common.status')}
           isLoading={ isLoading }
           selected={ Boolean(value && value.length) }
           w="200px"
@@ -58,7 +60,7 @@ const ZetaChainFilterByColumn = ({ column, filters, columnName, handleFilterChan
       const chainValue = filters.source_chain_id ? castArray(filters.source_chain_id) : [];
       return (
         <TableColumnFilterWrapper
-          columnName="Sender"
+          columnName={t('transactions.common.sender')}
           isLoading={ isLoading }
           selected={ Boolean(value && value.length) || Boolean(chainValue && chainValue.length) }
           w="480px"
@@ -72,7 +74,7 @@ const ZetaChainFilterByColumn = ({ column, filters, columnName, handleFilterChan
       const chainValue = filters.target_chain_id ? castArray(filters.target_chain_id) : [];
       return (
         <TableColumnFilterWrapper
-          columnName="Receiver"
+          columnName={t('common.common.receiver')}
           isLoading={ isLoading }
           selected={ Boolean(value && value.length) || Boolean(chainValue && chainValue.length) }
           w="480px"
@@ -104,7 +106,7 @@ const ZetaChainFilterByColumn = ({ column, filters, columnName, handleFilterChan
 
       return (
         <TableColumnFilterWrapper
-          columnName="Asset"
+          columnName={t('common.common.asset')}
           isLoading={ isLoading }
           selected={ Boolean(value) }
           w="350px"

@@ -1,5 +1,6 @@
 import { chakra, Box, Text, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Screen } from '../types';
 import type { UserInfo } from 'types/api/account';
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const AuthModalScreenSuccessWallet = ({ address, onAddEmail, onClose, isAuth, profile, rewardsToken }: Props) => {
+  const { t } = useTranslation();
   const handleAddEmailClick = React.useCallback(() => {
     onAddEmail({ type: 'email', isAuth: true });
   }, [ onAddEmail ]);
@@ -27,16 +29,14 @@ const AuthModalScreenSuccessWallet = ({ address, onAddEmail, onClose, isAuth, pr
     return (
       <Box>
         <Text>
-          Your account was linked to{ ' ' }
-          <chakra.span fontWeight="700">{ shortenString(address) }</chakra.span>{ ' ' }
-          wallet. Use for the next login.
+          {t('common.common.your_account_was_linked_to')}<chakra.span fontWeight="700">{ shortenString(address) }</chakra.span>{t('common.common.wallet_use_for_the_next_login')}
         </Text>
         <Button
           mt={ 6 }
           variant="outline"
           onClick={ onClose }
         >
-          Got it!
+          {t('common.common.got_it')}
         </Button>
       </Box>
     );
@@ -48,17 +48,17 @@ const AuthModalScreenSuccessWallet = ({ address, onAddEmail, onClose, isAuth, pr
         Wallet{ ' ' }
         <chakra.span fontWeight="700">{ shortenString(address) }</chakra.span>{ ' ' }
         has been successfully used to log in to your Blockscout account
-        { Boolean(rewardsToken) && ` and Merits Program` }.
+        { Boolean(rewardsToken) && t('common.common.and_merits_program') }.
       </Text>
       { !profile?.email ? (
         <>
           <Text mt={ 6 }>
-            Add your email to receive exclusive updates about Blockscout { config.features.rewards.isEnabled ? 'Merits ' : ' ' }
+            Add your email to receive exclusive updates about Blockscout { config.features.rewards.isEnabled ? t('common.common.merits') : ' ' }
             and notifications about addresses in your watch list.
           </Text>
           <Flex mt={ 6 } gap={ 6 }>
-            <Button onClick={ handleAddEmailClick }>Add email</Button>
-            <Button variant="link" onClick={ onClose }>I{ apos }ll do it later</Button>
+            <Button onClick={ handleAddEmailClick }>{t('common.common.add_email')}</Button>
+            <Button variant="link" onClick={ onClose }>{t('common.common.ill_do_it_later')}</Button>
           </Flex>
         </>
       ) : (
@@ -67,7 +67,7 @@ const AuthModalScreenSuccessWallet = ({ address, onAddEmail, onClose, isAuth, pr
           variant="outline"
           onClick={ onClose }
         >
-          Got it!
+          {t('common.common.got_it')}
         </Button>
       ) }
     </Box>

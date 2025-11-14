@@ -5,12 +5,12 @@ import type {
 
 import type { SelectOption } from 'toolkit/chakra/select';
 
-export const VALIDATORS_STABILITY_SORT_OPTIONS: Array<SelectOption<ValidatorsStabilitySortingValue>> = [
-  { label: 'Default', value: 'default' },
-  { label: 'Status descending', value: 'state-desc' },
-  { label: 'Status ascending', value: 'state-asc' },
-  { label: 'Blocks validated descending', value: 'blocks_validated-desc' },
-  { label: 'Blocks validated ascending', value: 'blocks_validated-asc' },
+export const getValidatorsStabilitySortOptions = (t: (key: string) => string): Array<SelectOption<ValidatorsStabilitySortingValue>> => [
+  { label: t('validators.common.default'), value: 'default' },
+  { label: t('validators.common.status_descending'), value: 'state-desc' },
+  { label: t('validators.common.status_ascending'), value: 'state-asc' },
+  { label: t('validators.common.blocks_validated_descending'), value: 'blocks_validated-desc' },
+  { label: t('validators.common.blocks_validated_ascending'), value: 'blocks_validated-asc' },
 ];
 
 export const VALIDATORS_STABILITY_SORT_SEQUENCE: Record<ValidatorsStabilitySortingField, Array<ValidatorsStabilitySortingValue>> = {

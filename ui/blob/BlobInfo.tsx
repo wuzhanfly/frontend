@@ -1,5 +1,6 @@
 import { GridItem } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Blob } from 'types/api/blobs';
 
@@ -18,6 +19,7 @@ interface Props {
 }
 
 const BlobInfo = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
   return (
     <DetailedInfo.Container
       templateColumns={{ base: 'minmax(0, 1fr)', lg: '216px minmax(728px, auto)' }}
@@ -50,7 +52,7 @@ const BlobInfo = ({ data, isLoading }: Props) => {
       { data.kzg_commitment && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Commitment to the data in the blob"
+            hint={ t('blobs.common.commitment_to_the_data_in_the_') }
             isLoading={ isLoading }
           >
             Commitment
@@ -67,7 +69,7 @@ const BlobInfo = ({ data, isLoading }: Props) => {
       { data.blob_data && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Blob size in bytes"
+            hint={ t('blobs.common.blob_size_in_bytes') }
             isLoading={ isLoading }
           >
             Size, bytes
@@ -83,7 +85,7 @@ const BlobInfo = ({ data, isLoading }: Props) => {
       { data.transaction_hashes[0] && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Hash of the transaction with this blob"
+            hint={ t('blobs.common.hash_of_the_transaction_with_t') }
             isLoading={ isLoading }
           >
             Transaction hash

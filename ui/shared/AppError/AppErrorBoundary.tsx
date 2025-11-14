@@ -1,5 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import getErrorCauseStatusCode from 'lib/errors/getErrorCauseStatusCode';
 import getErrorObjStatusCode from 'lib/errors/getErrorObjStatusCode';
@@ -15,6 +16,7 @@ interface Props {
 }
 
 const AppErrorBoundary = ({ className, children, Container }: Props) => {
+  const { t } = useTranslation();
 
   const rollbar = useRollbar();
 
@@ -35,7 +37,7 @@ const AppErrorBoundary = ({ className, children, Container }: Props) => {
     }
 
     // To this point, there can only be errors that lead to a page crash.
-    // Therefore, we set the error level to "critical."
+    // Therefore, we set the error level to t('shared.common.critical')
     rollbar.critical(error);
   }, [ rollbar ]);
 

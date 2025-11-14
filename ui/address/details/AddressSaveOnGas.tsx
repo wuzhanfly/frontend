@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import * as v from 'valibot';
 
 import config from 'configs/app';
@@ -15,14 +16,14 @@ const responseSchema = v.object({
   percent: v.number(),
 });
 
-const ERROR_NAME = 'Invalid response schema';
-
 interface Props {
   gasUsed: string;
   address: string;
 }
 
 const AddressSaveOnGas = ({ gasUsed, address }: Props) => {
+  const { t } = useTranslation();
+  const ERROR_NAME = t('addresses.common.invalid_response_schema');
 
   const gasUsedNumber = Number(gasUsed);
 

@@ -37,8 +37,7 @@ export const light: monaco.editor.IStandaloneThemeData = {
     'custom.inputOption.activeBackground': 'rgba(0, 144, 241, 0.2)',
     'custom.inputOption.hoverBackground': 'rgba(184, 184, 184, 0.31)',
 
-    // don't know the name of this variables in vscode
-    'custom.fileLink.hoverForeground': '#4299E1', // blue.400
+    // dont('shared.common.t_know_the_name_of_this_variab')custom.fileLink.hoverForeground': '#4299E1', // blue.400
     'custom.riskWarning.primaryBackground': '#FEEBCB', // orange.100
     'custom.riskWarning.background': '#FFFAF0', // orange.50
     'custom.mainContract.header': 'rgba(233, 216, 253, 1)', // purple.100
@@ -83,8 +82,7 @@ export const dark: monaco.editor.IStandaloneThemeData = {
     'custom.inputOption.activeBackground': 'rgba(0, 127, 212, 0.4)',
     'custom.inputOption.hoverBackground': 'rgba(90, 93, 94, 0.31)',
 
-    // don't know the name of this variables in vscode
-    'custom.fileLink.hoverForeground': '#4299E1', // blue.400
+    // dont('shared.common.t_know_the_name_of_this_variab')custom.fileLink.hoverForeground': '#4299E1', // blue.400
     'custom.riskWarning.primaryBackground': 'rgba(246, 173, 85, 0.3)', // orange.300
     'custom.riskWarning.background': 'rgba(246, 173, 85, 0.1)', // orange.300
     'custom.mainContract.header': 'rgba(183, 148, 244, 0.3)', // purple.300

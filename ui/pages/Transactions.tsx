@@ -2,6 +2,7 @@ import { Flex } from '@chakra-ui/react';
 import { capitalize } from 'es-toolkit';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 
@@ -30,6 +31,7 @@ const TAB_LIST_PROPS = {
 const TABS_HEIGHT = 88;
 
 const Transactions = () => {
+  const { t } = useTranslation();
   const verifiedTitle = capitalize(getNetworkValidationActionText());
   const router = useRouter();
   const isMobile = useIsMobile();
@@ -113,7 +115,7 @@ const Transactions = () => {
     },
     config.features.dataAvailability.isEnabled && {
       id: 'blob_txs',
-      title: 'Blob txns',
+      title: t('transactions.common.blob_txns'),
       component: (
         <TxsWithFrontendSorting
           query={ txsWithBlobsQuery }
@@ -123,7 +125,7 @@ const Transactions = () => {
     },
     isAuth ? {
       id: 'watchlist',
-      title: 'Watch list',
+      title: t('transactions.common.watch_list'),
       component: <TxsWatchlist query={ txsWatchlistQuery }/>,
     } : undefined,
   ].filter(Boolean);
@@ -159,7 +161,7 @@ const Transactions = () => {
   return (
     <>
       <PageTitle
-        title={ config.meta.seo.enhancedDataEnabled ? `${ config.chain.name } transactions` : 'Transactions' }
+        title={ config.meta.seo.enhancedDataEnabled ? `${ config.chain.name } transactions` : t('transactions.common.transactions') }
         withTextAd
       />
       <TxsStats/>

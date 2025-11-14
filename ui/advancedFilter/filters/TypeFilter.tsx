@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import { isEqual, without } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AdvancedFilterParams, AdvancedFilterType } from 'types/api/advancedFilter';
 
@@ -19,6 +20,7 @@ type Props = {
 };
 
 const TypeFilter = ({ value = [ RESET_VALUE ], handleFilterChange }: Props) => {
+  const { t } = useTranslation();
   const [ currentValue, setCurrentValue ] = React.useState<Array<AdvancedFilterType | typeof RESET_VALUE>>([ ...value ]);
 
   const handleChange = React.useCallback((value: Array<string>) => {
@@ -45,7 +47,7 @@ const TypeFilter = ({ value = [ RESET_VALUE ], handleFilterChange }: Props) => {
 
   return (
     <TableColumnFilter
-      title="Type of transfer"
+      title={t('advanced_filter.common.type_of_transfer')}
       isFilled={ !(currentValue.length === 1 && currentValue[0] === RESET_VALUE) }
       isTouched={ !isEqual(currentValue.sort(), value.sort()) }
       onFilter={ onFilter }

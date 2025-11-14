@@ -1,5 +1,6 @@
 import { chakra, Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type { SubmitHandler } from 'react-hook-form';
 import { FormProvider, useForm } from 'react-hook-form';
 
@@ -24,6 +25,7 @@ interface Props {
 }
 
 const AuthModalScreenOtpCode = ({ email, onSuccess, isAuth }: Props) => {
+  const { t } = useTranslation();
 
   const apiFetch = useApiFetch();
   const recaptcha = useReCaptcha();
@@ -49,7 +51,7 @@ const AuthModalScreenOtpCode = ({ email, onSuccess, isAuth }: Props) => {
     })
       .then((response) => {
         if (!('name' in response)) {
-          throw Error('Something went wrong');
+          throw Error(t('common.common.something_went_wrong'));
         }
         onSuccess({ type: 'success_email', email, isAuth, profile: response });
       })
@@ -63,7 +65,7 @@ const AuthModalScreenOtpCode = ({ email, onSuccess, isAuth }: Props) => {
 
         toaster.error({
           title: 'Error',
-          description: getErrorMessage(error) || 'Something went wrong',
+          description: getErrorMessage(error) || t('common.common.something_went_wrong'),
         });
       });
   }, [ apiFetch, email, onSuccess, isAuth, formApi ]);
@@ -88,14 +90,14 @@ const AuthModalScreenOtpCode = ({ email, onSuccess, isAuth }: Props) => {
 
       toaster.success({
         title: 'Success',
-        description: 'Code has been sent to your email',
+        description: t('common.common.code_has_been_sent_to_your_ema'),
       });
     } catch (error) {
       const apiError = getErrorObjPayload<{ message: string }>(error);
 
       toaster.error({
         title: 'Error',
-        description: apiError?.message || getErrorMessage(error) || 'Something went wrong',
+        description: apiError?.message || getErrorMessage(error) || t('common.common.something_went_wrong'),
       });
     } finally {
       setIsCodeSending(false);
@@ -130,7 +132,7 @@ const AuthModalScreenOtpCode = ({ email, onSuccess, isAuth }: Props) => {
           type="submit"
           loading={ formApi.formState.isSubmitting }
           disabled={ formApi.formState.isSubmitting || isCodeSending || recaptcha.isInitError }
-          loadingText="Submit"
+          loadingText={t('common.common.submit')}
           onClick={ formApi.handleSubmit(onFormSubmit) }
         >
           Submit

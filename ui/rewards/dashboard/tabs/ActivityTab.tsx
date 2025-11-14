@@ -1,5 +1,6 @@
 import { Flex, Text, chakra } from '@chakra-ui/react';
 import { useCallback, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -27,6 +28,7 @@ import RewardsTaskDetailsModal from '../RewardsTaskDetailsModal';
 const feature = config.features.rewards;
 
 function getMaxAmount(rewards: Record<string, string> | undefined) {
+  const { t } = useTranslation();
   if (!rewards) {
     return 0;
   }
@@ -41,6 +43,7 @@ function getMaxAmount(rewards: Record<string, string> | undefined) {
 }
 
 export default function ActivityTab() {
+  const { t } = useTranslation();
   const { apiToken, rewardsConfigQuery } = useRewardsContext();
   const explorersModal = useDisclosure();
   const taskDetailsModal = useDisclosure();
@@ -109,7 +112,7 @@ export default function ActivityTab() {
   const tasks = useMemo(() => (
     [
       {
-        title: 'Blockscout activity',
+        title: t('dashboard.common.blockscout_activity'),
         description: (
           <>
             Use Blockscout tools like{ ' ' }
@@ -132,10 +135,10 @@ export default function ActivityTab() {
         maxAmount: getMaxAmount(rewardsConfigQuery.data?.rewards?.sent_transactions_activity_rewards),
       },
       {
-        title: 'Contracts verification',
+        title: t('dashboard.common.contracts_verification'),
         description: (
           <>
-            Log in and{ ' ' }
+            {t('common.common.log_in')} and{ ' ' }
             <Link href={ route({ pathname: '/contract-verification' }) }>
               verify a smart contract
             </Link>{ ' ' }
@@ -149,7 +152,7 @@ export default function ActivityTab() {
         maxAmount: getMaxAmount(rewardsConfigQuery.data?.rewards?.verified_contracts_activity_rewards),
       },
       {
-        title: 'Blockscout usage',
+        title: t('dashboard.common.blockscout_usage'),
         description: (
           <>
             Use Blockscout explorers in your daily routine { mdash } check transactions, explore addresses,
@@ -166,9 +169,9 @@ export default function ActivityTab() {
   ), [ rewardsConfigQuery, activities ]);
 
   const labels = {
-    period: { text: `Period: ${ period }`, hint: 'Current Merits period. All metrics reset weekly' },
-    performanceRank: { text: 'Performance rank', hint: 'Your rank within a task group compared to other users in the same period. Higher rank = more Merits.' },
-    meritsEarned: { text: 'Merits earned', hint: 'Estimated Merits based on your current rank. Final amount may change' },
+    period: { text: `Period: ${ period }`, hint: t('dashboard.common.current_merits_period_all_metr') },
+    performanceRank: { text: t('dashboard.common.performance_rank'), hint: 'Your rank within a task group compared to other users in the same period. Higher rank = more Merits.' },
+    meritsEarned: { text: t('dashboard.common.merits_earned'), hint: t('dashboard.common.estimated_merits_based_on_your') },
   };
 
   const labelComponents = Object.fromEntries(Object.entries(labels).map(([ key, value ], index) => [ key, (
@@ -311,7 +314,7 @@ export default function ActivityTab() {
                     </Skeleton>
                     <Skeleton loading={ isActivityDataLoading }>
                       <Text textStyle={{ base: 'sm', md: 'xs' }} color="text.secondary" fontWeight="500">
-                        { item.percentileDiff } vs { isMobile ? 'prev.' : 'previous' } week
+                        { item.percentileDiff } vs { isMobile ? t('dashboard.common.prev') : 'previous' } week
                       </Text>
                     </Skeleton>
                   </Flex>
@@ -337,7 +340,7 @@ export default function ActivityTab() {
                     </Skeleton>
                     <Skeleton loading={ isActivityDataLoading }>
                       <Text textStyle={{ base: 'sm', md: 'xs' }} color="text.secondary" fontWeight="500">
-                        { item.amountDiff } vs { isMobile ? 'prev.' : 'previous' } week
+                        { item.amountDiff } vs { isMobile ? t('dashboard.common.prev') : 'previous' } week
                       </Text>
                     </Skeleton>
                   </Flex>

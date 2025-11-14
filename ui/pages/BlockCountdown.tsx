@@ -1,6 +1,7 @@
 import { Box, Center, Flex, Grid } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs/routes';
 
@@ -30,6 +31,7 @@ type Props = {
 };
 
 const BlockCountdown = ({ hideCapybaraRunner }: Props) => {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
   const router = useRouter();
   const height = getQueryParamString(router.query.height);
@@ -91,7 +93,7 @@ const BlockCountdown = ({ hideCapybaraRunner }: Props) => {
                 display="inline-flex"
                 href={ createGoogleCalendarLink({ blockHeight: height, timeFromNow: Number(data.result.EstimateTimeInSec), multichainContext }) }
               >
-                <Image src="/static/google_calendar.svg" alt="Google calendar logo" boxSize={ 5 } mr={ 2 }/>
+                <Image src="/static/google_calendar.svg" alt={t('common.common.google_calendar_logo')} boxSize={ 5 } mr={ 2 }/>
                 <span>Google</span>
               </Link>
               <Button
@@ -105,7 +107,7 @@ const BlockCountdown = ({ hideCapybaraRunner }: Props) => {
                 display="inline-flex"
                 onClick={ handleAddToAppleCalClick }
               >
-                <Image src="/static/apple_calendar.svg" alt="Apple calendar logo" boxSize={ 5 }/>
+                <Image src="/static/apple_calendar.svg" alt={t('common.common.apple_calendar_logo')} boxSize={ 5 }/>
                 <span>Apple</span>
               </Button>
             </Flex>
@@ -137,8 +139,8 @@ const BlockCountdown = ({ hideCapybaraRunner }: Props) => {
           />
         ) }
         <Grid gridTemplateColumns="repeat(2, calc(50% - 4px))" columnGap={ 2 } mt={ 2 }>
-          <StatsWidget label="Remaining blocks" value={ data.result.RemainingBlock } icon="apps_slim"/>
-          <StatsWidget label="Current block" value={ data.result.CurrentBlock } icon="block_slim"/>
+          <StatsWidget label={t('common.common.remaining_blocks')} value={ data.result.RemainingBlock } icon="apps_slim"/>
+          <StatsWidget label={t('common.common.current_block')} value={ data.result.CurrentBlock } icon="block_slim"/>
         </Grid>
         { !hideCapybaraRunner && <CapybaraRunner/> }
       </Flex>

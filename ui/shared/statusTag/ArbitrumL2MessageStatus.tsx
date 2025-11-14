@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ArbitrumL2MessagesItem } from 'types/api/arbitrumL2';
 
@@ -11,13 +12,14 @@ export interface Props {
 }
 
 const ArbitrumL2MessageStatus = ({ status, isLoading }: Props) => {
+  const { t } = useTranslation();
   let type: StatusTagType;
   let text: string;
 
   switch (status) {
     case 'relayed': {
       type = 'ok';
-      text = 'Relayed';
+      text = t('transactions.common.relayed');
       break;
     }
     case 'confirmed': {

@@ -1,6 +1,7 @@
 import { chakra } from '@chakra-ui/react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type { SubmitHandler } from 'react-hook-form';
 import { FormProvider, useForm } from 'react-hook-form';
 
@@ -34,6 +35,7 @@ interface Props {
 }
 
 const MyProfileEmail = ({ profileQuery }: Props) => {
+  const { t } = useTranslation();
   const authModal = useDisclosure();
   const apiFetch = useApiFetch();
   const recaptcha = useReCaptcha();
@@ -71,7 +73,7 @@ const MyProfileEmail = ({ profileQuery }: Props) => {
       const apiError = getErrorObjPayload<{ message: string }>(error);
       toaster.error({
         title: 'Error',
-        description: apiError?.message || getErrorMessage(error) || 'Something went wrong',
+        description: apiError?.message || getErrorMessage(error) || t('common.common.something_went_wrong'),
       });
     }
   }, [ authFetchFactory, authModal, recaptcha ]);
@@ -86,7 +88,7 @@ const MyProfileEmail = ({ profileQuery }: Props) => {
           noValidate
           onSubmit={ formApi.handleSubmit(onFormSubmit) }
         >
-          <FormFieldText<FormFields> name="name" placeholder="Name" readOnly mb={ 3 }/>
+          <FormFieldText<FormFields> name="name" placeholder={t('validators.common.name')} readOnly mb={ 3 }/>
           <MyProfileFieldsEmail
             isReadOnly={ !config.services.reCaptchaV2.siteKey || Boolean(profileQuery.data?.email) }
             defaultValue={ profileQuery.data?.email || undefined }
@@ -100,9 +102,9 @@ const MyProfileEmail = ({ profileQuery }: Props) => {
               type="submit"
               disabled={ formApi.formState.isSubmitting || !hasDirtyFields || recaptcha.isInitError }
               loading={ formApi.formState.isSubmitting }
-              loadingText="Save changes"
+              loadingText={t('common.common.save_changes')}
             >
-              Save changes
+              {t('common.common.save_changes')}
             </Button>
           ) }
         </chakra.form>

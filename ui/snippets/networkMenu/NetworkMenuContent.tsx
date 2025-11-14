@@ -1,5 +1,6 @@
 import { VStack, Flex, Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FeaturedNetwork, NetworkGroup } from 'types/networks';
 
@@ -17,6 +18,7 @@ interface Props {
 }
 
 const NetworkMenuContent = ({ items, tabs }: Props) => {
+  const { t } = useTranslation();
   const selectedNetwork = items?.find(({ isActive }) => isActive);
   const defaultTab = tabs.find((tab) => selectedNetwork?.group === tab);
 
@@ -27,6 +29,7 @@ const NetworkMenuContent = ({ items, tabs }: Props) => {
   }, []);
 
   const content = (() => {
+  const { t } = useTranslation();
     if (!items || items.length === 0) {
       return (
         <>

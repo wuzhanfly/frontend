@@ -1,6 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useIsMounted from 'lib/hooks/useIsMounted';
 import getQueryParamString from 'lib/router/getQueryParamString';
@@ -27,6 +28,7 @@ type Props = {
 
 const AddressTokenTransfers = ({ overloadCount, shouldRender = true, isQueryEnabled = true }: Props) => {
   const router = useRouter();
+  const { t } = useTranslation();
   const isMounted = useIsMounted();
 
   const currentAddress = getQueryParamString(router.query.hash);
@@ -116,7 +118,7 @@ const AddressTokenTransfers = ({ overloadCount, shouldRender = true, isQueryEnab
     <DataListDisplay
       isError={ isError }
       itemsNum={ data?.items?.length }
-      emptyText="There are no token transfers."
+      emptyText={ t('transactions.common.there_are_no_token_transfers') }
       filterProps={{
         emptyFilteredText: `Couldn${ apos }t find any token transfer that matches your query.`,
         hasActiveFilters: Boolean(numActiveFilters),

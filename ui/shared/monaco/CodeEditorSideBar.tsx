@@ -8,6 +8,7 @@ import type { File, Monaco } from './types';
 import type { TabsTriggerProps } from 'toolkit/chakra/tabs';
 import { TabsContent, TabsList, TabsRoot, TabsTrigger } from 'toolkit/chakra/tabs';
 import { shift, cmd } from 'toolkit/utils/htmlEntities';
+import { useTranslation } from 'react-i18next';
 
 import CodeEditorFileExplorer from './CodeEditorFileExplorer';
 import CodeEditorSearch from './CodeEditorSearch';
@@ -25,6 +26,7 @@ interface Props {
 export const CONTAINER_WIDTH = 250;
 
 const CodeEditorSideBar = ({ onFileSelect, data, monaco, editor, selectedFile, mainFile }: Props) => {
+  const { t } = useTranslation();
 
   const [ isStuck, setIsStuck ] = React.useState(false);
   const [ isDrawerOpen, setIsDrawerOpen ] = React.useState(false);
@@ -69,7 +71,7 @@ const CodeEditorSideBar = ({ onFileSelect, data, monaco, editor, selectedFile, m
     if (editor && monaco) {
       editor.addAction({
         id: 'file-explorer',
-        label: 'Show File Explorer',
+        label: t('shared.common.show_file_explorer'),
         keybindings: [
           monaco.KeyMod.CtrlCmd | monaco.KeyMod.Shift | monaco.KeyCode.KeyE,
         ],
@@ -82,7 +84,7 @@ const CodeEditorSideBar = ({ onFileSelect, data, monaco, editor, selectedFile, m
 
       editor.addAction({
         id: 'search-in-files',
-        label: 'Show Search in Files',
+        label: t('shared.common.show_search_in_files'),
         keybindings: [
           monaco.KeyMod.CtrlCmd | monaco.KeyMod.Shift | monaco.KeyCode.KeyF,
         ],
@@ -177,8 +179,8 @@ const CodeEditorSideBar = ({ onFileSelect, data, monaco, editor, selectedFile, m
         transitionProperty="right"
         transitionDuration="normal"
         transitionTimingFunction="ease-in-out"
-        title={ isDrawerOpen ? 'Open sidebar' : 'Close sidebar' }
-        aria-label={ isDrawerOpen ? 'Open sidebar' : 'Close sidebar' }
+        title={ isDrawerOpen ? t('shared.common.open_sidebar') : t('shared.common.close_sidebar') }
+        aria-label={ isDrawerOpen ? t('shared.common.open_sidebar') : t('shared.common.close_sidebar') }
       >
         <Box
           className="codicon codicon-tree-item-expanded"

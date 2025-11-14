@@ -1,5 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { IconButton } from 'toolkit/chakra/icon-button';
 import { PopoverBody, PopoverContent, PopoverRoot, PopoverTrigger } from 'toolkit/chakra/popover';
@@ -13,6 +14,7 @@ import SettingsIdentIcon from './SettingsIdentIcon';
 import SettingsScamTokens from './SettingsScamTokens';
 
 const Settings = () => {
+  const { t } = useTranslation();
   const popover = useDisclosure();
   const tooltip = useDisclosure();
 
@@ -35,14 +37,14 @@ const Settings = () => {
       // should be false to enable auto-switch to default color theme
       lazyMount={ false }
     >
-      <Tooltip content="Website settings" disableOnMobile open={ tooltip.open } onOpenChange={ handleTooltipOpenChange }>
+      <Tooltip content={t('settings.common.website_settings')} disableOnMobile open={ tooltip.open } onOpenChange={ handleTooltipOpenChange }>
         <Flex alignItems="center">
           <PopoverTrigger>
             <IconButton
               variant="link"
               size="2xs"
               borderRadius="sm"
-              aria-label="User settings"
+              aria-label={t('settings.common.user_settings')}
             >
               <IconSvg name="gear_slim"/>
             </IconButton>

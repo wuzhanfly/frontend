@@ -16,6 +16,7 @@ import { TruncatedTextTooltip } from 'toolkit/components/truncation/TruncatedTex
 import * as EntityBase from 'ui/shared/entities/base/components';
 import IconSvg from 'ui/shared/IconSvg';
 import TokenLogoPlaceholder from 'ui/shared/TokenLogoPlaceholder';
+import { useTranslation } from 'react-i18next';
 
 import { distributeEntityProps, getIconProps } from '../base/utils';
 
@@ -40,6 +41,8 @@ const Link = chakra((props: LinkProps) => {
 type IconProps = Pick<EntityProps, 'token' | 'className'> & EntityBase.IconBaseProps;
 
 const Icon = (props: IconProps) => {
+  const { t } = useTranslation();
+
   if (props.noIcon) {
     return null;
   }
@@ -57,7 +60,7 @@ const Icon = (props: IconProps) => {
       alt={ `${ props.token.name || 'token' } logo` }
       fallback={ <TokenLogoPlaceholder/> }
       shield={ props.shield ?? (props.chain ? { src: getIconUrl(props.chain) } : undefined) }
-      hint={ props.chain ? getChainTooltipText(props.chain, 'Token on ') : undefined }
+      hint={ props.chain ? getChainTooltipText(props.chain, t('tokens.common.token_on')) : undefined }
       { ...props }
     />
   );
@@ -66,9 +69,11 @@ const Icon = (props: IconProps) => {
 type ContentProps = Omit<EntityBase.ContentBaseProps, 'text'> & Pick<EntityProps, 'token' | 'jointSymbol' | 'onlySymbol'>;
 
 const Content = chakra((props: ContentProps) => {
+  const { t } = useTranslation();
+
   const nameString = [
-    !props.onlySymbol && (props.token.name ?? 'Unnamed token'),
-    props.onlySymbol && (props.token.symbol ?? props.token.name ?? 'Unnamed token'),
+    !props.onlySymbol && (props.token.name ?? t('tokens.common.unnamed_token')),
+    props.onlySymbol && (props.token.symbol ?? props.token.name ?? t('tokens.common.unnamed_token')),
     props.token.symbol && props.jointSymbol && !props.onlySymbol && `(${ props.token.symbol })`,
   ].filter(Boolean).join(' ');
 

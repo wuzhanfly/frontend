@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import * as addressMetadataMock from 'mocks/metadata/address';
 import { Tag } from 'toolkit/chakra/tag';
@@ -7,6 +8,7 @@ import EntityTag from 'ui/shared/EntityTags/EntityTag';
 import { Section, Container, SectionHeader, SamplesStack, Sample, SectionSubHeader } from './parts';
 
 const TagShowcase = () => {
+  const { t } = useTranslation();
   return (
     <Container value="tag">
       <Section>
@@ -91,9 +93,9 @@ const TagShowcase = () => {
         <SectionSubHeader>Filter tags</SectionSubHeader>
         <SamplesStack>
           <Sample>
-            <Tag variant="filter" label="Type">All</Tag>
-            <Tag variant="filter" label="Address" truncated maxW="150px" closable>0x1234567890123456789012345678901234567890</Tag>
-            <Tag variant="filter" label="Type" loading>All</Tag>
+            <Tag variant="filter" label="Type">{t('common.common.all')}</Tag>
+            <Tag variant="filter" label={t('validators.common.address')} truncated maxW="150px" closable>0x1234567890123456789012345678901234567890</Tag>
+            <Tag variant="filter" label="Type" loading>{t('common.common.all')}</Tag>
           </Sample>
         </SamplesStack>
       </Section>

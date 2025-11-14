@@ -5,6 +5,7 @@ import type { ExcludeUndefined } from 'types/utils';
 
 import type { BadgeProps } from 'toolkit/chakra/badge';
 import { Badge } from 'toolkit/chakra/badge';
+import { useTranslation } from 'react-i18next';
 
 export interface Props extends BadgeProps {
   container: ExcludeUndefined<OptimisticL2TxnBatchesItem['batch_data_container']>;
@@ -12,15 +13,16 @@ export interface Props extends BadgeProps {
 }
 
 const OptimisticL2TxnBatchDA = ({ container, isLoading, ...rest }: Props) => {
+  const { t } = useTranslation();
 
   const text = (() => {
     switch (container) {
       case 'in_blob4844':
-        return 'EIP-4844 blob';
+        return t('shared.common.eip4844_blob');
       case 'in_calldata':
-        return 'Calldata';
+        return t('shared.common.calldata');
       case 'in_celestia':
-        return 'Celestia blob';
+        return t('shared.common.celestia_blob');
     }
   })();
 

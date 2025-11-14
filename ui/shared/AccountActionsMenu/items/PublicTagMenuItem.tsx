@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ItemProps } from '../types';
 
@@ -9,6 +10,7 @@ import IconSvg from 'ui/shared/IconSvg';
 import ButtonItem from '../parts/ButtonItem';
 
 const PublicTagMenuItem = ({ hash, type }: ItemProps) => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const handleClick = React.useCallback(() => {
@@ -17,7 +19,7 @@ const PublicTagMenuItem = ({ hash, type }: ItemProps) => {
 
   switch (type) {
     case 'button': {
-      return <ButtonItem label="Add public tag" icon="publictags" onClick={ handleClick }/>;
+      return <ButtonItem label={t('shared.common.add_public_tag')} icon="publictags" onClick={ handleClick }/>;
     }
     case 'menu_item': {
       return (

@@ -1,5 +1,6 @@
 import { createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import essentialDappsChainsConfig from 'configs/essential-dapps-chains';
 import useIsInitialLoading from 'lib/hooks/useIsInitialLoading';
@@ -21,13 +22,14 @@ interface Props extends Omit<SelectProps, 'collection' | 'placeholder'> {
 }
 
 const ChainSelect = ({ loading, mode, ...props }: Props) => {
+  const { t } = useTranslation();
   const isInitialLoading = useIsInitialLoading(loading);
 
   return (
     <Select
       collection={ collection }
       defaultValue={ [ collection.items[0].value ] }
-      placeholder="Select chain"
+      placeholder={t('shared.common.select_chain')}
       loading={ isInitialLoading }
       w="fit-content"
       { ...props }

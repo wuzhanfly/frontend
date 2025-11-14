@@ -1,5 +1,6 @@
 import { Box, Flex, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm, FormProvider } from 'react-hook-form';
 import { encodeFunctionData, type AbiFunction } from 'viem';
@@ -37,6 +38,7 @@ interface Props {
 }
 
 const ContractMethodForm = ({ data, attempt, onSubmit, onReset, isOpen }: Props) => {
+  const { t } = useTranslation();
 
   const [ result, setResult ] = React.useState<FormSubmitResult>();
   const [ isLoading, setLoading ] = React.useState(false);
@@ -110,7 +112,7 @@ const ContractMethodForm = ({ data, attempt, onSubmit, onReset, isOpen }: Props)
       .finally(() => {
         mixpanel.logEvent(mixpanel.EventTypes.CONTRACT_INTERACTION, {
           'Method type': methodType === 'write' ? 'Write' : 'Read',
-          'Method name': 'name' in data ? data.name : 'Fallback',
+          'Method name': 'name' in data ? data.name : 'fallback',
         });
       });
   }, [ data, methodType, onSubmit ]);
@@ -148,7 +150,7 @@ const ContractMethodForm = ({ data, attempt, onSubmit, onReset, isOpen }: Props)
 
   const primaryButton = (() => {
     const isDisabled = !config.features.blockchainInteraction.isEnabled && methodType === 'write';
-    const text = methodType === 'write' ? 'Write' : 'Read';
+    const text = methodType === 'write' ? t('addresses.common.write') : t('addresses.common.read');
     const buttonCallStrategy = methodType === 'write' ? 'write' : 'read';
 
     return (
@@ -177,7 +179,7 @@ const ContractMethodForm = ({ data, attempt, onSubmit, onReset, isOpen }: Props)
       return null;
     }
 
-    const text = 'Simulate';
+    const text = t('addresses.common.simulate');
     const buttonCallStrategy = 'simulate';
 
     return (
@@ -211,14 +213,14 @@ const ContractMethodForm = ({ data, attempt, onSubmit, onReset, isOpen }: Props)
       }
     }
 
-    const text = 'Copy calldata';
+    const text = t('addresses.common.copy_calldata');
     const buttonCallStrategy = 'copy_calldata';
     const isDisabled = isLoading || !formApi.formState.isValid;
 
     return (
       <Tooltip
         disabled={ isDisabled }
-        content="Copied"
+        content={ t('common.common.copied') }
         closeDelay={ SECOND }
         open={ calldataButtonTooltip.open }
       >

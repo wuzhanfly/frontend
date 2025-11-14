@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { OptimisticL2WithdrawalStatus } from 'types/api/optimisticL2';
 
@@ -13,33 +14,37 @@ interface Props {
   l1TxHash: string | undefined;
 }
 
-const WITHDRAWAL_STATUS_STEPS: Array<OptimisticL2WithdrawalStatus> = [
-  'Waiting for state root',
-  'Ready to prove',
-  'In challenge period',
-  'Ready for relay',
-  'Relayed',
-];
 
-const WITHDRAWAL_STATUS_ORDER_PROVEN: Array<OptimisticL2WithdrawalStatus> = [
-  'Waiting for state root',
-  'Ready to prove',
-  'Proven',
-  'Relayed',
-];
-
-const WITHDRAWAL_STATUS_ORDER_GAME: Array<OptimisticL2WithdrawalStatus> = [
-  'Waiting for state root',
-  'Ready to prove',
-  'Waiting a game to resolve',
-  'In challenge period',
-  'Ready for relay',
-  'Relayed',
-];
 
 const rollupFeature = config.features.rollup;
 
 const TxDetailsWithdrawalStatusOptimistic = ({ status, l1TxHash }: Props) => {
+  const { t } = useTranslation();
+  
+  const WITHDRAWAL_STATUS_STEPS: Array<OptimisticL2WithdrawalStatus> = [
+    'Waiting for state root',
+    'Ready to prove',
+    'In challenge period',
+    'Ready for relay',
+    'Relayed',
+  ];
+
+  const WITHDRAWAL_STATUS_ORDER_PROVEN: Array<OptimisticL2WithdrawalStatus> = [
+    'Waiting for state root',
+    'Ready to prove',
+    'Proven',
+    'Relayed',
+  ];
+
+  const WITHDRAWAL_STATUS_ORDER_GAME: Array<OptimisticL2WithdrawalStatus> = [
+    'Waiting for state root',
+    'Ready to prove',
+    'Waiting a game to resolve',
+    'In challenge period',
+    'Ready for relay',
+    'Relayed',
+  ];
+
   if (!status || !rollupFeature.isEnabled || rollupFeature.type !== 'optimistic') {
     return null;
   }
@@ -58,7 +63,7 @@ const TxDetailsWithdrawalStatusOptimistic = ({ status, l1TxHash }: Props) => {
         if (l1TxHash) {
           return WITHDRAWAL_STATUS_STEPS.map((status) => {
             return status === 'Relayed' ? {
-              content: <TxEntityL1 hash={ l1TxHash } truncation="constant" text="Relayed" noIcon noCopy/>,
+              content: <TxEntityL1 hash={ l1TxHash } truncation="constant" text={t('transactions.common.relayed')} noIcon noCopy/>,
               label: status,
             } : status;
           });

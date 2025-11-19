@@ -56,23 +56,23 @@ export function getIndicators(t: (key: string) => string): Array<TChainIndicator
     },
     {
       id: 'coin_price',
-      title: t('common.common.token_price', { symbol: config.chain.currency.symbol }),
+      title: t('common.common.token_price').replace('{{symbol}}', (config.chain.currency.symbol as string)),
       value: (stats) => stats.coin_price === null ?
         '$N/A' :
         '$' + Number(stats.coin_price).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 }),
       valueDiff: (stats) => stats?.coin_price !== null ? stats?.coin_price_change_percentage : null,
       icon: <NativeTokenIcon boxSize={ 6 }/>,
-      hint: t('common.common.token_price_in_usd', { symbol: config.chain.currency.symbol }),
+      hint: t('common.common.token_price_in_usd').replace('{{symbol}}', (config.chain.currency.symbol as string)),
     },
     {
       id: 'secondary_coin_price',
-      title: t('common.common.token_price', { symbol: config.chain.secondaryCoin.symbol }),
+      title: t('common.common.token_price').replace('{{symbol}}', (config.chain.secondaryCoin.symbol as string)),
       value: (stats) => !stats.secondary_coin_price || stats.secondary_coin_price === null ?
         '$N/A' :
         '$' + Number(stats.secondary_coin_price).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 }),
       valueDiff: () => null,
       icon: <NativeTokenIcon boxSize={ 6 } type="secondary"/>,
-      hint: t('common.common.token_price_in_usd', { symbol: config.chain.secondaryCoin.symbol }),
+      hint: t('common.common.token_price_in_usd').replace('{{symbol}}', (config.chain.secondaryCoin.symbol as string)),
     },
     {
       id: 'market_cap',
@@ -81,7 +81,7 @@ export function getIndicators(t: (key: string) => string): Array<TChainIndicator
         '$N/A' :
         '$' + Number(stats.market_cap).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
       icon: <IconSvg name="globe" boxSize={ 6 } bgColor="#6A5DCC" borderRadius="base" color="white"/>,
-      // eslint-disable-next-line max-len
+
       hint: t('common.common.market_cap_description'),
     },
     {

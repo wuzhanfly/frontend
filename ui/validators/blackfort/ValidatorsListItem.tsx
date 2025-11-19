@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type { ValidatorBlackfort } from 'types/api/validators';
@@ -17,11 +18,12 @@ interface Props {
 }
 
 const ValidatorsListItem = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
 
   return (
     <ListItemMobileGrid.Container gridTemplateColumns="130px auto">
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Address</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.address')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <AddressEntity
           isLoading={ isLoading }
@@ -32,28 +34,28 @@ const ValidatorsListItem = ({ data, isLoading }: Props) => {
 
       { data.name && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Name</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.name')}</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <Flex><TruncatedValue value={ data.name } isLoading={ isLoading }/></Flex>
           </ListItemMobileGrid.Value>
         </>
       ) }
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Commission</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.commission')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <Skeleton loading={ isLoading }>
           { `${ data.commission / 100 }%` }
         </Skeleton>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Self bonded</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.self_bonded')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <Skeleton loading={ isLoading }>
           { `${ BigNumber(data.self_bonded_amount).div(BigNumber(10 ** config.chain.currency.decimals)).toFormat() } ${ currencyUnits.ether }` }
         </Skeleton>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Delegated amount</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.delegated_amount')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <Skeleton loading={ isLoading }>
           { `${ BigNumber(data.delegated_amount).div(BigNumber(10 ** config.chain.currency.decimals)).toFormat() } ${ currencyUnits.ether }` }

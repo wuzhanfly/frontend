@@ -92,9 +92,7 @@ const TxsStats = (props: Props) => {
     >
       { txCount24h && (
         <StatsWidget
-          label={ txsStatsQuery.data?.transactions_24h?.title ?
-            getStatsLabelFromTitle(txsStatsQuery.data?.transactions_24h?.title) :
-            t('transactions.common.transactions') }
+          label={ t('transactions.common.transactions') }
           value={ Number(txCount24h).toLocaleString() }
           period="24h"
           isLoading={ isLoading }
@@ -103,9 +101,7 @@ const TxsStats = (props: Props) => {
       ) }
       { operationalTxns24hArbitrum && (
         <StatsWidget
-          label={ txsStatsQuery.data?.operational_transactions_24h?.title ?
-            getStatsLabelFromTitle(txsStatsQuery.data?.operational_transactions_24h?.title) :
-            t('common.common.daily_op_txns') }
+          label={ t('common.common.daily_op_txns') }
           value={ Number(operationalTxns24hArbitrum).toLocaleString() }
           period="24h"
           isLoading={ isLoading }
@@ -113,9 +109,7 @@ const TxsStats = (props: Props) => {
       ) }
       { operationalTxns24hOptimistic && (
         <StatsWidget
-          label={ txsStatsQuery.data?.op_stack_operational_transactions_24h?.title ?
-            getStatsLabelFromTitle(txsStatsQuery.data?.op_stack_operational_transactions_24h?.title) :
-            t('common.common.daily_op_txns') }
+          label={ t('common.common.daily_op_txns') }
           value={ Number(operationalTxns24hOptimistic).toLocaleString() }
           period="24h"
           isLoading={ isLoading }
@@ -123,9 +117,7 @@ const TxsStats = (props: Props) => {
       ) }
       { pendingTxns && (
         <StatsWidget
-          label={ txsStatsQuery.data?.pending_transactions_30m?.title ?
-            getStatsLabelFromTitle(txsStatsQuery.data?.pending_transactions_30m?.title) :
-            t('common.common.pending_transactions') }
+          label={ t('common.common.pending_transactions') }
           value={ Number(pendingTxns).toLocaleString() }
           period={ isStatsFeatureEnabled ? '30min' : '1h' }
           isLoading={ isLoading }
@@ -133,9 +125,7 @@ const TxsStats = (props: Props) => {
       ) }
       { txFeeSum24h != null && (
         <StatsWidget
-          label={ txsStatsQuery.data?.transactions_fee_24h?.title ?
-            getStatsLabelFromTitle(txsStatsQuery.data?.transactions_fee_24h?.title) :
-            t('common.common.transactions_fees') }
+          label={ t('common.common.transactions_fees') }
           value={ txFeeSum24h.toLocaleString(undefined, { maximumFractionDigits: 2 }) }
           valuePostfix={ thinsp + chainConfig.chain.currency.symbol }
           period="24h"
@@ -145,9 +135,7 @@ const TxsStats = (props: Props) => {
       ) }
       { txFeeAvg && (
         <StatsWidget
-          label={ txsStatsQuery.data?.average_transactions_fee_24h?.title ?
-            getStatsLabelFromTitle(txsStatsQuery.data?.average_transactions_fee_24h?.title) :
-            t('common.common.avg_transaction_fee') }
+          label={ t('common.common.avg_transaction_fee') }
           value={ txFeeAvg.usd ? txFeeAvg.usd : txFeeAvg.valueStr }
           valuePrefix={ txFeeAvg.usd ? '$' : undefined }
           valuePostfix={ txFeeAvg.usd ? undefined : thinsp + chainConfig.chain.currency.symbol }

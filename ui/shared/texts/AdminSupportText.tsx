@@ -1,4 +1,5 @@
 import { Box, chakra } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import { Link } from 'toolkit/chakra/link';
@@ -8,11 +9,12 @@ interface Props {
 }
 
 const AdminSupportText = ({ className }: Props) => {
+  const { t } = useTranslation();
   return (
     <Box className={ className }>
-      <span>Need help? Contact admin team at </span>
+      <span>{t('common.common.need_help_contact_admin_team_at')}</span>
       <Link href="mailto:help@blockscout.com">help@blockscout.com</Link>
-      <span> for assistance!</span>
+      <span>{t('common.common.for_assistance')}</span>
     </Box>
   );
 };

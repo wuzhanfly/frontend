@@ -16,95 +16,95 @@ const ButtonShowcase = () => {
   return (
     <Container value="button">
       <Section>
-        <SectionHeader>Size</SectionHeader>
+        <SectionHeader>{t('common.common.size', 'Size')}</SectionHeader>
         <SamplesStack>
-          <Sample label="size: 2xs">
-            <Button size="2xs">Content</Button>
+          <Sample label={t('common.common.size_2xs', 'size: 2xs')}>
+            <Button size="2xs">{t('common.common.content', 'Content')}</Button>
           </Sample>
-          <Sample label="size: xs">
-            <Button size="xs">Content</Button>
+          <Sample label={t('common.common.size_xs', 'size: xs')}>
+            <Button size="xs">{t('common.common.content', 'Content')}</Button>
           </Sample>
-          <Sample label="size: sm">
-            <Button size="sm">Content</Button>
+          <Sample label={t('common.common.size_sm', 'size: sm')}>
+            <Button size="sm">{t('common.common.content', 'Content')}</Button>
           </Sample>
-          <Sample label="size: md">
-            <Button size="md">Content</Button>
+          <Sample label={t('common.common.size_md', 'size: md')}>
+            <Button size="md">{t('common.common.content', 'Content')}</Button>
           </Sample>
         </SamplesStack>
       </Section>
 
       <Section>
-        <SectionHeader>Variants</SectionHeader>
+        <SectionHeader>{t('common.common.variants', 'Variants')}</SectionHeader>
         <SamplesStack>
 
-          <Sample label="variant: solid">
-            <Button variant="solid">Default</Button>
-            <Button variant="solid" data-hover>Hovered</Button>
-            <Button variant="solid" disabled>Disabled</Button>
-            <Button variant="solid" loading>Loading</Button>
-            <Button variant="solid" loadingSkeleton>Loading Skeleton</Button>
+          <Sample label={t('common.common.variant_solid', 'variant: solid')}>
+            <Button variant="solid">{t('common.common.default', 'Default')}</Button>
+            <Button variant="solid" data-hover>{t('common.common.hovered', 'Hovered')}</Button>
+            <Button variant="solid" disabled>{t('common.common.disabled', 'Disabled')}</Button>
+            <Button variant="solid" loading>{t('common.common.loading', 'Loading')}</Button>
+            <Button variant="solid" loadingSkeleton>{t('common.common.loading_skeleton', 'Loading Skeleton')}</Button>
           </Sample>
 
-          <Sample label="variant: outline">
-            <Button variant="outline">Default</Button>
-            <Button variant="outline" data-hover>Hovered</Button>
-            <Button variant="outline" disabled>Disabled</Button>
-            <Button variant="outline" loading>Loading</Button>
-            <Button variant="outline" loadingSkeleton>Loading Skeleton</Button>
+          <Sample label={t('common.common.variant_outline', 'variant: outline')}>
+            <Button variant="outline">{t('common.common.default', 'Default')}</Button>
+            <Button variant="outline" data-hover>{t('common.common.hovered', 'Hovered')}</Button>
+            <Button variant="outline" disabled>{t('common.common.disabled', 'Disabled')}</Button>
+            <Button variant="outline" loading>{t('common.common.loading', 'Loading')}</Button>
+            <Button variant="outline" loadingSkeleton>{t('common.common.loading_skeleton', 'Loading Skeleton')}</Button>
           </Sample>
 
-          <Sample label="variant: link">
-            <Button variant="link">Default</Button>
-            <Button variant="link" data-hover>Hovered</Button>
-            <Button variant="link" disabled>Disabled</Button>
-            <Button variant="link" loadingSkeleton>Disabled</Button>
+          <Sample label={t('common.common.variant_link', 'variant: link')}>
+            <Button variant="link">{t('common.common.default', 'Default')}</Button>
+            <Button variant="link" data-hover>{t('common.common.hovered', 'Hovered')}</Button>
+            <Button variant="link" disabled>{t('common.common.disabled', 'Disabled')}</Button>
+            <Button variant="link" loadingSkeleton>{t('common.common.disabled', 'Disabled')}</Button>
           </Sample>
 
-          <Sample label="variant: dropdown">
+          <Sample label={t('common.common.variant_dropdown', 'variant: dropdown')}>
             <PopoverRoot>
               <PopoverTrigger>
-                <Button variant="dropdown">Default</Button>
+                <Button variant="dropdown">{t('common.common.default', 'Default')}</Button>
               </PopoverTrigger>
               <PopoverContent>
                 <PopoverBody>
-                  Popover content
+                  {t('common.common.popover_content', 'Popover content')}
                 </PopoverBody>
               </PopoverContent>
             </PopoverRoot>
             <PopoverRoot>
               <PopoverTrigger>
-                <Button variant="dropdown" data-hover>Hovered</Button>
+                <Button variant="dropdown" data-hover>{t('common.common.hovered', 'Hovered')}</Button>
               </PopoverTrigger>
               <PopoverContent>
                 <PopoverBody>
-                  Popover content
+                  {t('common.common.popover_content', 'Popover content')}
                 </PopoverBody>
               </PopoverContent>
             </PopoverRoot>
             <PopoverRoot>
               <PopoverTrigger>
-                <Button variant="dropdown" expanded>Expended</Button>
+                <Button variant="dropdown" expanded>{t('common.common.expended', 'Expended')}</Button>
               </PopoverTrigger>
               <PopoverContent>
                 <PopoverBody>
-                  Popover content
+                  {t('common.common.popover_content', 'Popover content')}
                 </PopoverBody>
               </PopoverContent>
             </PopoverRoot>
             <PopoverRoot>
               <PopoverTrigger>
-                <Button variant="dropdown" selected>Selected</Button>
+                <Button variant="dropdown" selected>{t('common.common.selected', 'Selected')}</Button>
               </PopoverTrigger>
               <PopoverContent>
                 <PopoverBody display="flex" flexDirection="column" gap={ 2 }>
-                  <Checkbox defaultChecked>First option</Checkbox>
-                  <Checkbox>Second option</Checkbox>
+                  <Checkbox defaultChecked>{t('common.common.first_option', 'First option')}</Checkbox>
+                  <Checkbox>{t('common.common.second_option', 'Second option')}</Checkbox>
                 </PopoverBody>
               </PopoverContent>
             </PopoverRoot>
-            <Button variant="dropdown" disabled>Disabled</Button>
-            <Button variant="dropdown" loading>Loading</Button>
-            <Button variant="dropdown" loadingSkeleton>Loading Skeleton</Button>
+            <Button variant="dropdown" disabled>{t('common.common.disabled', 'Disabled')}</Button>
+            <Button variant="dropdown" loading>{t('common.common.loading', 'Loading')}</Button>
+            <Button variant="dropdown" loadingSkeleton>{t('common.common.loading_skeleton', 'Loading Skeleton')}</Button>
 
             <PopoverRoot>
               <Tooltip content={t('common.common.tooltip_content')}>
@@ -112,141 +112,141 @@ const ButtonShowcase = () => {
                   <PopoverTrigger>
                     <Button variant="dropdown" size="md" px={ 2 }>
                       <IconSvg name="explorer" boxSize={ 5 }/>
-                      With tooltip
+                      {t('common.common.with_tooltip', 'With tooltip')}
                     </Button>
                   </PopoverTrigger>
                 </div>
               </Tooltip>
               <PopoverContent>
                 <PopoverBody>
-                  Popover content
+                  {t('common.common.popover_content', 'Popover content')}
                 </PopoverBody>
               </PopoverContent>
             </PopoverRoot>
           </Sample>
 
-          <Sample label="variant: header">
-            <Button variant="header">Default</Button>
-            <Button variant="header" data-hover>Hovered</Button>
-            <Button variant="header" loading loadingText="Loading">Loading</Button>
+          <Sample label={t('common.common.variant_header', 'variant: header')}>
+            <Button variant="header">{t('common.common.default', 'Default')}</Button>
+            <Button variant="header" data-hover>{t('common.common.hovered', 'Hovered')}</Button>
+            <Button variant="header" loading loadingText="Loading">{t('common.common.loading', 'Loading')}</Button>
             <PopoverRoot>
               <PopoverTrigger>
-                <Button variant="header" selected>Selected</Button>
+                <Button variant="header" selected>{t('common.common.selected', 'Selected')}</Button>
               </PopoverTrigger>
               <PopoverContent>
                 <PopoverBody>
-                  User profile menu content
+                  {t('common.common.user_profile_menu_content', 'User profile menu content')}
                 </PopoverBody>
               </PopoverContent>
             </PopoverRoot>
             <PopoverRoot>
               <PopoverTrigger>
-                <Button variant="header" selected expanded>Selected & expended</Button>
+                <Button variant="header" selected expanded>{t('common.common.selected_and_expended', 'Selected & expended')}</Button>
               </PopoverTrigger>
               <PopoverContent>
                 <PopoverBody>
-                  User profile menu content
+                  {t('common.common.user_profile_menu_content', 'User profile menu content')}
                 </PopoverBody>
               </PopoverContent>
             </PopoverRoot>
             <PopoverRoot>
               <PopoverTrigger>
-                <Button variant="header" selected highlighted>Selected & highlighted</Button>
+                <Button variant="header" selected highlighted>{t('common.common.selected_and_highlighted', 'Selected & highlighted')}</Button>
               </PopoverTrigger>
               <PopoverContent>
                 <PopoverBody>
-                  User profile menu content
-                </PopoverBody>
-              </PopoverContent>
-            </PopoverRoot>
-          </Sample>
-
-          <Sample label="variant: hero" p={ 6 } background={ BACKGROUND_DEFAULT }>
-            <Button variant="hero">Default</Button>
-            <Button variant="hero" data-hover>Hovered</Button>
-            <Button variant="hero" loading loadingText="Loading">Loading</Button>
-            <PopoverRoot>
-              <PopoverTrigger>
-                <Button variant="hero" selected>Selected</Button>
-              </PopoverTrigger>
-              <PopoverContent>
-                <PopoverBody>
-                  User profile menu content
-                </PopoverBody>
-              </PopoverContent>
-            </PopoverRoot>
-            <PopoverRoot>
-              <PopoverTrigger>
-                <Button variant="hero" selected expanded>Selected & expended</Button>
-              </PopoverTrigger>
-              <PopoverContent>
-                <PopoverBody>
-                  User profile menu content
+                  {t('common.common.user_profile_menu_content', 'User profile menu content')}
                 </PopoverBody>
               </PopoverContent>
             </PopoverRoot>
           </Sample>
 
-          <Sample label="variant: subtle">
-            <Button variant="subtle" size="xs">Default: Now+1h</Button>
-            <Button variant="subtle" size="xs" data-hover>Hovered: Now+1h</Button>
-            <Button variant="subtle" size="xs" disabled>Disabled: Now+1h</Button>
-            <Button variant="subtle" size="xs" loadingSkeleton>Loading Skeleton</Button>
+          <Sample label={t('common.common.variant_hero', 'variant: hero')} p={ 6 } background={ BACKGROUND_DEFAULT }>
+            <Button variant="hero">{t('common.common.default', 'Default')}</Button>
+            <Button variant="hero" data-hover>{t('common.common.hovered', 'Hovered')}</Button>
+            <Button variant="hero" loading loadingText="Loading">{t('common.common.loading', 'Loading')}</Button>
+            <PopoverRoot>
+              <PopoverTrigger>
+                <Button variant="hero" selected>{t('common.common.selected', 'Selected')}</Button>
+              </PopoverTrigger>
+              <PopoverContent>
+                <PopoverBody>
+                  {t('common.common.user_profile_menu_content', 'User profile menu content')}
+                </PopoverBody>
+              </PopoverContent>
+            </PopoverRoot>
+            <PopoverRoot>
+              <PopoverTrigger>
+                <Button variant="hero" selected expanded>{t('common.common.selected_and_expended', 'Selected & expended')}</Button>
+              </PopoverTrigger>
+              <PopoverContent>
+                <PopoverBody>
+                  {t('common.common.user_profile_menu_content', 'User profile menu content')}
+                </PopoverBody>
+              </PopoverContent>
+            </PopoverRoot>
           </Sample>
 
-          <Sample label="variant: plain">
-            <Button variant="plain">Default</Button>
-            <Button variant="plain" data-hover>Hovered</Button>
-            <Button variant="plain" disabled>Disabled</Button>
-            <Button variant="plain" loadingSkeleton>Loading Skeleton</Button>
+          <Sample label={t('common.common.variant_subtle', 'variant: subtle')}>
+            <Button variant="subtle" size="xs">{t('common.common.default_now_1h', 'Default: Now+1h')}</Button>
+            <Button variant="subtle" size="xs" data-hover>{t('common.common.hovered_now_1h', 'Hovered: Now+1h')}</Button>
+            <Button variant="subtle" size="xs" disabled>{t('common.common.disabled_now_1h', 'Disabled: Now+1h')}</Button>
+            <Button variant="subtle" size="xs" loadingSkeleton>{t('common.common.loading_skeleton', 'Loading Skeleton')}</Button>
+          </Sample>
+
+          <Sample label={t('common.common.variant_plain', 'variant: plain')}>
+            <Button variant="plain">{t('common.common.default', 'Default')}</Button>
+            <Button variant="plain" data-hover>{t('common.common.hovered', 'Hovered')}</Button>
+            <Button variant="plain" disabled>{t('common.common.disabled', 'Disabled')}</Button>
+            <Button variant="plain" loadingSkeleton>{t('common.common.loading_skeleton', 'Loading Skeleton')}</Button>
           </Sample>
         </SamplesStack>
       </Section>
 
       <Section>
-        <SectionHeader>Loading</SectionHeader>
+        <SectionHeader>{t('common.common.loading', 'Loading')}</SectionHeader>
         <SamplesStack>
-          <Sample label="loading: true, loadingText: 'Loading'">
-            <Button loading loadingText="Loading">Content</Button>
-            <Button loading loadingText="Loading" size="sm">Content</Button>
-            <Button loading loadingText="Loading" size="xs">Content</Button>
-            <Button loading loadingText="Loading" size="2xs">Content</Button>
+          <Sample label={t('common.common.loading_true_loadingtext_loading', "loading: true, loadingText: 'Loading'")}>
+            <Button loading loadingText="Loading">{t('common.common.content', 'Content')}</Button>
+            <Button loading loadingText="Loading" size="sm">{t('common.common.content', 'Content')}</Button>
+            <Button loading loadingText="Loading" size="xs">{t('common.common.content', 'Content')}</Button>
+            <Button loading loadingText="Loading" size="2xs">{t('common.common.content', 'Content')}</Button>
           </Sample>
-          <Sample label="loading: true, loadingText: undefined">
-            <Button loading>Content</Button>
+          <Sample label={t('common.common.loading_true_loadingtext_undefined', 'loading: true, loadingText: undefined')}>
+            <Button loading>{t('common.common.content', 'Content')}</Button>
           </Sample>
-          <Sample label="loadingSkeleton: true">
-            <Button loadingSkeleton>Content</Button>
-            <Button loadingSkeleton variant="outline">Content</Button>
-            <Button loadingSkeleton variant="dropdown">Content</Button>
-            <Button loadingSkeleton variant="subtle">Content</Button>
+          <Sample label={t('common.common.loadingskeleton_true', 'loadingSkeleton: true')}>
+            <Button loadingSkeleton>{t('common.common.content', 'Content')}</Button>
+            <Button loadingSkeleton variant="outline">{t('common.common.content', 'Content')}</Button>
+            <Button loadingSkeleton variant="dropdown">{t('common.common.content', 'Content')}</Button>
+            <Button loadingSkeleton variant="subtle">{t('common.common.content', 'Content')}</Button>
           </Sample>
         </SamplesStack>
       </Section>
 
       <Section>
-        <SectionHeader>Examples</SectionHeader>
-        <SectionSubHeader>As Link</SectionSubHeader>
+        <SectionHeader>{t('common.common.examples', 'Examples')}</SectionHeader>
+        <SectionSubHeader>{t('common.common.as_link', 'As Link')}</SectionSubHeader>
         <SamplesStack>
           <Sample>
             <Link href="/" asChild>
-              <Button>I am link</Button>
+              <Button>{t('common.common.i_am_link', 'I am link')}</Button>
             </Link>
           </Sample>
         </SamplesStack>
 
-        <SectionSubHeader>Button Group Radio</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.button_group_radio', 'Button Group Radio')}</SectionSubHeader>
         <SamplesStack>
           <Sample>
             <ButtonGroupRadio>
-              <Button value={t('common.common.option1')}>Option 1</Button>
-              <Button value={t('common.common.option2')}>Option 2</Button>
-              <Button value={t('common.common.option3')}>Option 3</Button>
+              <Button value={t('common.common.option1')}>{t('common.common.option_1', 'Option 1')}</Button>
+              <Button value={t('common.common.option2')}>{t('common.common.option_2', 'Option 2')}</Button>
+              <Button value={t('common.common.option3')}>{t('common.common.option_3', 'Option 3')}</Button>
             </ButtonGroupRadio>
             <ButtonGroupRadio loading>
-              <Button value={t('common.common.option1')}>Option 1</Button>
-              <Button value={t('common.common.option2')}>Option 2</Button>
-              <Button value={t('common.common.option3')}>Option 3</Button>
+              <Button value={t('common.common.option1')}>{t('common.common.option_1', 'Option 1')}</Button>
+              <Button value={t('common.common.option2')}>{t('common.common.option_2', 'Option 2')}</Button>
+              <Button value={t('common.common.option3')}>{t('common.common.option_3', 'Option 3')}</Button>
             </ButtonGroupRadio>
           </Sample>
         </SamplesStack>

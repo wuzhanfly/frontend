@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { UserOp } from 'types/api/userOps';
 
@@ -15,6 +16,8 @@ interface Props {
 }
 
 const UserOpRaw = ({ rawData, isLoading }: Props) => {
+  const { t } = useTranslation();
+  
   if (!rawData) {
     return null;
   }

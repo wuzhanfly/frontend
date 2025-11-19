@@ -30,7 +30,7 @@ const SolidityscanReportButton = ({ score, isLoading, ...rest }: Props) => {
             color={ isLoading ? colorLoading : scoreColor }
             size="sm"
             variant="dropdown"
-            aria-label="SolidityScan score"
+            aria-label={t('common.common.solidityscan_score')}
             fontWeight={ 500 }
             px="6px"
             flexShrink={ 0 }

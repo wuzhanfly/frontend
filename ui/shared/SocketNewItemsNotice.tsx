@@ -41,13 +41,13 @@ const SocketNewItemsNotice = chakra(({ children, className, url, num, showErrorA
 
     switch (type) {
       case 'token_transfer':
-        name = 'token transfer';
+        name = t('common.common.token_transfer');
         break;
       case 'deposit':
-        name = 'deposit';
+        name = t('common.common.deposit');
         break;
       case 'block':
-        name = 'block';
+        name = t('common.common.block');
         break;
       case 'flashblock': {
         if (flashblocksFeature.isEnabled) {
@@ -59,24 +59,24 @@ const SocketNewItemsNotice = chakra(({ children, className, url, num, showErrorA
         name = t('shared.common.cross_chain_transaction');
         break;
       default:
-        name = 'transaction';
+        name = t('common.common.transaction');
         break;
     }
 
     if (!num) {
-      return `scanning new ${ name }s...`;
+      return `${ t('common.common.scanning_new') } ${ name }s...`;
     }
 
     if (type === 'cross_chain_transaction') {
       return (
-        <Link href={ url } onClick={ !url ? handleLinkClick : undefined }>More { name }s available</Link>
+        <Link href={ url } onClick={ !url ? handleLinkClick : undefined }>{ t('common.common.more_available') } { name }s { t('common.common.available') }</Link>
       );
     }
 
     return (
       <>
-        <Link href={ url } onClick={ !url ? handleLinkClick : undefined }>{ num.toLocaleString() } more { name }{ num > 1 ? 's' : '' }</Link>
-        <Text whiteSpace="pre"> ha{ num > 1 ? 've' : 's' } come in</Text>
+        <Link href={ url } onClick={ !url ? handleLinkClick : undefined }>{ num.toLocaleString() } { t('common.common.more_come_in') } { name }{ num > 1 ? 's' : '' }</Link>
+        <Text whiteSpace="pre"> { num > 1 ? t('common.common.come_in_plural') : t('common.common.come_in_singular') }</Text>
       </>
     );
   })();

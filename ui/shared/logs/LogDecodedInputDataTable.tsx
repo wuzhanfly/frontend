@@ -1,4 +1,5 @@
-import { Flex, Grid } from '@chakra-ui/react';
+import { Box, Flex, Grid } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type { DecodedInput } from 'types/api/decodedInput';
@@ -15,6 +16,8 @@ interface Props {
 }
 
 const HeaderItem = ({ children, isLoading }: { children: React.ReactNode; isLoading?: boolean }) => {
+  const { t } = useTranslation();
+
   return (
     <Skeleton
       fontWeight={ 600 }
@@ -71,6 +74,7 @@ const Row = ({ name, type, indexed, value, isLoading }: ArrayElement<DecodedInpu
 };
 
 const LogDecodedInputDataTable = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
   const hasIndexed = data.some(({ indexed }) => indexed !== undefined);
 
   const gridTemplateColumnsBase = hasIndexed ?
@@ -93,10 +97,10 @@ const LogDecodedInputDataTable = ({ data, isLoading }: Props) => {
       borderBottomLeftRadius="md"
       borderBottomRightRadius="md"
     >
-      <HeaderItem isLoading={ isLoading }>Name</HeaderItem>
-      <HeaderItem isLoading={ isLoading }>Type</HeaderItem>
-      { hasIndexed && <HeaderItem isLoading={ isLoading }>Inde<wbr/>xed?</HeaderItem> }
-      <HeaderItem isLoading={ isLoading }>Data</HeaderItem>
+      <HeaderItem isLoading={ isLoading }>{t('common.common.name')}</HeaderItem>
+          <HeaderItem isLoading={ isLoading }>{t('common.common.type')}</HeaderItem>
+          { hasIndexed && <HeaderItem isLoading={ isLoading }>{t('common.common.indexed')}</HeaderItem> }
+          <HeaderItem isLoading={ isLoading }>{t('common.common.data')}</HeaderItem>
       { data.map((item) => {
 
         return <Row key={ item.name } { ...item } isLoading={ isLoading }/>;

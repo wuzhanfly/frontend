@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 import ReCaptcha from 'react-google-recaptcha';
 
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const ReCaptchaInvisible = ({ onInitError, hideWarning = false }: Props, ref: React.Ref<ReCaptcha>) => {
+  const { t } = useTranslation();
   const [ attempt, setAttempt ] = React.useState(0);
   const [ isError, setIsError ] = React.useState(false);
   const [ , setIsVisible ] = React.useState(false);
@@ -56,8 +58,8 @@ const ReCaptchaInvisible = ({ onInitError, hideWarning = false }: Props, ref: Re
       />
       { isError && !hideWarning && (
         <Alert status="warning" whiteSpace="pre-wrap" w="fit-content" mt={ 3 } descriptionProps={{ display: 'block' }}>
-          This feature is not available due to a reCAPTCHA initialization error. Please contact the project team on Discord to report this issue.
-          Click <Link onClick={ handleClick } display="inline">here</Link> to show/hide reCAPTCHA widget content.
+          {t('common.common.recaptcha_init_error')}
+          <Link onClick={ handleClick } display="inline">{t('common.common.here')}</Link> {t('common.common.to_show_hide_recaptcha')}
         </Alert>
       ) }
     </>

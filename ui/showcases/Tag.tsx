@@ -12,18 +12,18 @@ const TagShowcase = () => {
   return (
     <Container value="tag">
       <Section>
-        <SectionHeader>Variant</SectionHeader>
+        <SectionHeader>{t('common.common.variant')}</SectionHeader>
         <SamplesStack>
-          <Sample label="variant: subtle">
+          <Sample label={t('common.common.variant_subtle')}>
             <Tag>My tag</Tag>
           </Sample>
-          <Sample label="variant: clickable">
+          <Sample label={t('common.common.showcase.tag.variant_clickable')}>
             <Tag variant="clickable">My tag</Tag>
           </Sample>
-          <Sample label="variant: filter">
+          <Sample label={t('common.common.showcase.tag.variant_filter')}>
             <Tag variant="filter">My tag</Tag>
           </Sample>
-          <Sample label="variant: select">
+          <Sample label={t('common.common.showcase.tag.variant_select')}>
             <Tag variant="select">Default</Tag>
             <Tag variant="select" selected>Selected</Tag>
           </Sample>
@@ -31,43 +31,43 @@ const TagShowcase = () => {
       </Section>
 
       <Section>
-        <SectionHeader>Size</SectionHeader>
+        <SectionHeader>{t('common.common.size')}</SectionHeader>
         <SamplesStack>
-          <Sample label="size: md">
+          <Sample label={t('common.common.size_md')}>
             <Tag size="md">My tag</Tag>
           </Sample>
-          <Sample label="size: lg">
+          <Sample label={t('common.common.size_lg')}>
             <Tag size="lg">My tag</Tag>
           </Sample>
         </SamplesStack>
       </Section>
 
       <Section>
-        <SectionHeader>Truncated</SectionHeader>
+        <SectionHeader>{t('common.common.truncated')}</SectionHeader>
         <SamplesStack>
-          <Sample label="truncated: true">
+          <Sample label={t('common.common.showcase.tag.truncated_true')}>
             <Tag maxW="150px" truncated>Very very very very very looooooonggggg text</Tag>
           </Sample>
         </SamplesStack>
       </Section>
 
       <Section>
-        <SectionHeader>Closable</SectionHeader>
+        <SectionHeader>{t('common.common.closable')}</SectionHeader>
         <SamplesStack>
-          <Sample label="closable: true">
+          <Sample label={t('common.common.showcase.tag.closable_true')}>
             <Tag closable>My tag</Tag>
           </Sample>
         </SamplesStack>
       </Section>
 
       <Section>
-        <SectionHeader>Loading</SectionHeader>
+        <SectionHeader>{t('common.common.loading')}</SectionHeader>
         <SamplesStack>
-          <Sample label="loading: true">
+          <Sample label={t('common.common.showcase.tag.loading_true')}>
             <Tag loading>My tag</Tag>
             <Tag maxW="150px" truncated loading>Very very very very very looooooonggggg text</Tag>
           </Sample>
-          <Sample label="loading: false">
+          <Sample label={t('common.common.showcase.tag.loading_false')}>
             <Tag>My tag</Tag>
             <Tag maxW="150px" truncated>Very very very very very looooooonggggg text</Tag>
           </Sample>
@@ -76,7 +76,7 @@ const TagShowcase = () => {
 
       <Section>
         <SectionHeader>Examples</SectionHeader>
-        <SectionSubHeader>Public tags</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.showcase.tag.public_tags')}</SectionSubHeader>
         <SamplesStack>
           <Sample>
             <EntityTag data={ addressMetadataMock.nameTag }/>
@@ -90,7 +90,7 @@ const TagShowcase = () => {
           </Sample>
         </SamplesStack>
 
-        <SectionSubHeader>Filter tags</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.showcase.tag.filter_tags')}</SectionSubHeader>
         <SamplesStack>
           <Sample>
             <Tag variant="filter" label="Type">{t('common.common.all')}</Tag>

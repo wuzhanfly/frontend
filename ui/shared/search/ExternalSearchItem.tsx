@@ -1,4 +1,5 @@
 import { Text } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import config from 'configs/app';
@@ -19,6 +20,8 @@ interface Props {
 }
 
 const ExternalSearchItem = ({ item }: Props) => {
+  const { t } = useTranslation();
+  
   if (!zetaChainFeature.isEnabled || !item) {
     return null;
   }
@@ -28,10 +31,10 @@ const ExternalSearchItem = ({ item }: Props) => {
   return (
     <>
       <Text color="text.secondary">
-        It looks like you are searching for { getIndefiniteArticle(item.name) } { item.name }. This information is best served by the external explorer.
+        {t('common.external_search.it_looks_like_you_are_searching_for', { article: getIndefiniteArticle(item.name), name: item.name })}
       </Text>
       <Link href={ url } external mt={ 4 }>
-        Click here to be redirected
+        {t('common.external_search.click_here_to_be_redirected')}
       </Link>
     </>
   );

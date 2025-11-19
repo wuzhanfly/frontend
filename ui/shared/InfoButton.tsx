@@ -28,7 +28,7 @@ const InfoButton = ({ children, isLoading }: Props) => {
       loadingSkeleton={ isLoading }
     >
       <IconSvg name="info" boxSize={ 6 } mr={ isMobile ? 0 : 1 }/>
-      { !isMobile && <span>Info</span> }
+      { !isMobile && <span>{t('common.common.info')}</span> }
     </Button>
   );
 

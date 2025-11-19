@@ -72,7 +72,7 @@ const PrivateTagMenuItem = ({ hash, entityType = 'address', type }: Props) => {
             { ({ onClick }) => (
               <MenuItem onClick={ onClick } value="add-private-tag">
                 <IconSvg name="privattags" boxSize={ 6 }/>
-                <span>Add private tag</span>
+                <span>{t('common.common.add_private_tag')}</span>
               </MenuItem>
             ) }
           </AuthGuard>

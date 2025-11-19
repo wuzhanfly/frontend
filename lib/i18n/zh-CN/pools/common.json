@@ -2,7 +2,7 @@
   "pools.common.verify_with": "使用...验证",
   "pools.common.view_in": "在...中查看",
   "pools.common.pool": "池",
-  "pools.common.dex_tracker": "DEX追踪器",
+  "pools.common.dex_tracker": "DEX 追踪器",
   "pools.common.there_are_no_pools": "暂无池。",
   "pools.common.the_base_token_in_a_liquidity_": "流动性池对中的基础代币",
   "pools.common.the_quote_token_in_a_liquidity": "流动性池对中的报价代币",

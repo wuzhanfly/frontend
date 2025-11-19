@@ -23,7 +23,7 @@ export function getIndicators(t: (key: string) => string): Array<TChainIndicator
         'N/A' :
         Number(stats.yesterday_transactions?.value).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
       icon: <IconSvg name="transactions" boxSize={ 6 } bgColor="#56ACD1" borderRadius="base" color="white"/>,
-      hint: `Number of transactions yesterday (0:00 - 23:59 UTC). The chart displays daily transactions for the past 30 days.`,
+      hint: t('common.common.number_of_transactions_yesterday'),
       hintMicroservice: (stats) => stats.daily_new_transactions?.info?.description,
     },
     {
@@ -51,28 +51,28 @@ export function getIndicators(t: (key: string) => string): Array<TChainIndicator
         return;
       },
       icon: <IconSvg name="transactions" boxSize={ 6 } bgColor="#56ACD1" borderRadius="base" color="white"/>,
-      hint: `Number of operational transactions yesterday (0:00 - 23:59 UTC). The chart displays daily operational transactions for the past 30 days.`,
+      hint: t('common.common.number_of_operational_transactions_yesterday'),
       hintMicroservice: (stats) => stats.daily_new_operational_transactions?.info?.description,
     },
     {
       id: 'coin_price',
-      title: `${ config.chain.currency.symbol } price`,
+      title: t('common.common.token_price', { symbol: config.chain.currency.symbol }),
       value: (stats) => stats.coin_price === null ?
         '$N/A' :
         '$' + Number(stats.coin_price).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 }),
       valueDiff: (stats) => stats?.coin_price !== null ? stats?.coin_price_change_percentage : null,
       icon: <NativeTokenIcon boxSize={ 6 }/>,
-      hint: `${ config.chain.currency.symbol } token daily price in USD.`,
+      hint: t('common.common.token_price_in_usd', { symbol: config.chain.currency.symbol }),
     },
     {
       id: 'secondary_coin_price',
-      title: `${ config.chain.secondaryCoin.symbol } price`,
+      title: t('common.common.token_price', { symbol: config.chain.secondaryCoin.symbol }),
       value: (stats) => !stats.secondary_coin_price || stats.secondary_coin_price === null ?
         '$N/A' :
         '$' + Number(stats.secondary_coin_price).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 }),
       valueDiff: () => null,
       icon: <NativeTokenIcon boxSize={ 6 } type="secondary"/>,
-      hint: `${ config.chain.secondaryCoin.symbol } token daily price in USD.`,
+      hint: t('common.common.token_price_in_usd', { symbol: config.chain.secondaryCoin.symbol }),
     },
     {
       id: 'market_cap',
@@ -82,7 +82,7 @@ export function getIndicators(t: (key: string) => string): Array<TChainIndicator
         '$' + Number(stats.market_cap).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
       icon: <IconSvg name="globe" boxSize={ 6 } bgColor="#6A5DCC" borderRadius="base" color="white"/>,
       // eslint-disable-next-line max-len
-      hint: 'The total market value of a cryptocurrency\'s circulating supply. It is analogous to the free-float capitalization in the stock market. Market Cap = Current Price x Circulating Supply.',
+      hint: t('common.common.market_cap_description'),
     },
     {
       id: 'tvl',

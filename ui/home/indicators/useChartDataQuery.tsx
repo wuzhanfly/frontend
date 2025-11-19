@@ -1,9 +1,10 @@
+import { useTranslation } from 'react-i18next';
+
 import type { TimeChartData, TimeChartDataItem, TimeChartItemRaw } from 'toolkit/components/charts/types';
 import type { ChainIndicatorId } from 'types/homepage';
 
 import config from 'configs/app';
 import useApiQuery from 'lib/api/useApiQuery';
-import { useTranslation } from 'react-i18next';
 
 import prepareChartItems from './utils/prepareChartItems';
 
@@ -14,19 +15,19 @@ const isArbitrumRollup = rollupFeature.isEnabled && rollupFeature.type === 'arbi
 function createChartItems(t: (key: string) => string): Record<ChainIndicatorId, Pick<TimeChartDataItem, 'name' | 'valueFormatter'>> {
   return {
     daily_txs: {
-      name: 'Tx/day',
+      name: t('common.common.transactions_per_day'),
       valueFormatter: (x: number) => x.toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
     },
     daily_operational_txs: {
-      name: 'Tx/day',
+      name: t('common.common.transactions_per_day'),
       valueFormatter: (x: number) => x.toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
     },
     coin_price: {
-      name: `${ config.chain.currency.symbol } price`,
+      name: `${ config.chain.currency.symbol } ${ t('common.common.price') }`,
       valueFormatter: (x: number) => '$' + x.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 }),
     },
     secondary_coin_price: {
-      name: `${ config.chain.currency.symbol } price`,
+      name: `${ config.chain.secondaryCoin.symbol } ${ t('common.common.price') }`,
       valueFormatter: (x: number) => '$' + x.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 }),
     },
     market_cap: {
@@ -34,7 +35,7 @@ function createChartItems(t: (key: string) => string): Record<ChainIndicatorId, 
       valueFormatter: (x: number) => '$' + x.toLocaleString(undefined, { maximumFractionDigits: 2 }),
     },
     tvl: {
-      name: 'TVL',
+      name: t('common.common.tvl'),
       valueFormatter: (x: number) => '$' + x.toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
     },
   };
@@ -61,7 +62,7 @@ function getChartData(indicatorId: ChainIndicatorId, data: Array<TimeChartItemRa
 export default function useChartDataQuery(indicatorId: ChainIndicatorId): UseFetchChartDataResult {
   const { t } = useTranslation();
   const CHART_ITEMS = createChartItems(t);
-  
+
   const statsDailyTxsQuery = useApiQuery('stats:pages_main', {
     queryOptions: {
       refetchOnMount: false,

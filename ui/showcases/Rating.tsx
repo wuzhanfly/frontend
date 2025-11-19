@@ -10,17 +10,17 @@ const RatingShowcase = () => {
   return (
     <Container value="rating">
       <Section>
-        <SectionHeader>Size</SectionHeader>
+        <SectionHeader>{t('common.common.size', 'Size')}</SectionHeader>
         <SamplesStack>
-          <Sample label="size: md">
+          <Sample label={t('common.common.showcase.rating.size_md', 'size: md')}>
             <Rating defaultValue={ 3 } label={ [ t('marketplace.common.very_bad'), t('marketplace.common.bad'), t('marketplace.common.average'), t('marketplace.common.good'), t('marketplace.common.excellent') ] }/>
           </Sample>
         </SamplesStack>
       </Section>
       <Section>
-        <SectionHeader>Read-only</SectionHeader>
+        <SectionHeader>{t('common.common.read_only', 'Read-only')}</SectionHeader>
         <SamplesStack>
-          <Sample label="readOnly: true">
+          <Sample label={t('common.common.showcase.rating.readonly_true', 'readOnly: true')}>
             <Rating defaultValue={ 3 } label={ [ t('marketplace.common.very_bad'), t('marketplace.common.bad'), t('marketplace.common.average'), t('marketplace.common.good'), t('marketplace.common.excellent') ] } readOnly/>
           </Sample>
         </SamplesStack>

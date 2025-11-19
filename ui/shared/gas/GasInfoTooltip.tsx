@@ -45,7 +45,7 @@ const GasInfoTooltip = ({ children, data, dataUpdatedAt, placement }: Props) => 
     <Flex flexDir="column" textStyle="xs" rowGap={ 3 } className="dark">
       { data.gas_price_updated_at && (
         <Flex justifyContent="space-between" alignItems="center">
-          <Box color="text.secondary">Last update</Box>
+          <Box color="text.secondary">{t('common.common.last_update')}</Box>
           <Flex color="text.secondary" justifyContent="flex-end" alignItems="center" columnGap={ 2 } ml={ 3 }>
             { dayjs(data.gas_price_updated_at).format('MMM DD, HH:mm:ss') }
             { data.gas_prices_update_in !== 0 &&
@@ -55,11 +55,11 @@ const GasInfoTooltip = ({ children, data, dataUpdatedAt, placement }: Props) => 
       ) }
       <Grid rowGap={ 2 } columnGap="10px" gridTemplateColumns={ `repeat(${ columnNum }, minmax(min-content, auto))` }>
         <GasInfoTooltipRow name={t('shared.common.fast')} info={ data.gas_prices.fast }/>
-        <GasInfoTooltipRow name="Normal" info={ data.gas_prices.average }/>
+        <GasInfoTooltipRow name={t('common.common.normal')} info={ data.gas_prices.average }/>
         <GasInfoTooltipRow name={t('shared.common.slow')} info={ data.gas_prices.slow }/>
       </Grid>
       <Link href={ route({ pathname: '/gas-tracker' }) }>
-        Gas tracker overview
+        {t('common.common.gas_tracker_overview')}
       </Link>
     </Flex>
   );

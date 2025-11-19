@@ -1,5 +1,6 @@
 import { Text, Flex, Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ChainIndicatorId } from 'types/homepage';
 
@@ -18,13 +19,14 @@ interface Props {
 }
 
 const ChainIndicatorItem = ({ id, title, value, valueDiff, icon, isSelected, onClick, isLoading, hasData }: Props) => {
+  const { t } = useTranslation('common');
   const handleClick = React.useCallback(() => {
     onClick(id);
   }, [ id, onClick ]);
 
   const valueContent = (() => {
     if (!hasData) {
-      return <Text color="text.secondary" fontWeight={ 400 }>no data</Text>;
+      return <Text color="text.secondary" fontWeight={ 400 }>{ t('common.common.no_data', 'no data') }</Text>;
     }
 
     return (

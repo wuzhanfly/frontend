@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type { TokenInfo } from 'types/api/token';
@@ -8,11 +9,11 @@ import * as TokenEntity from 'ui/shared/entities/token/TokenEntity';
 import EntityTags from 'ui/shared/EntityTags/EntityTags';
 import IconSvg from 'ui/shared/IconSvg';
 import NetworkExplorers from 'ui/shared/NetworkExplorers';
-import { useTranslation } from 'react-i18next';
 
 import PageTitle from '../PageTitle';
 
 const DefaultView = () => {
+  const { t } = useTranslation();
   const tokenData: TokenInfo = {
     address_hash: '0x363574E6C5C71c343d7348093D84320c76d5Dd29',
     circulating_market_cap: '117629601.61913824',
@@ -26,8 +27,6 @@ const DefaultView = () => {
     icon_url: 'https://example.com/logo.png',
     reputation: 'ok',
   };
-
-  const { t } = useTranslation();
 
   const contentAfter = (
     <>
@@ -53,7 +52,7 @@ const DefaultView = () => {
 
   return (
     <PageTitle
-      title="Shavukha Token (SHVKH) token"
+      title={t('common.common.shavukha_token')}
       beforeTitle={ (
         <TokenEntity.Icon
           token={ tokenData }

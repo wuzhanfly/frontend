@@ -60,6 +60,6 @@
   "blocks.common.withdrawals": "取款",
   "blocks.common.base_fee_handler": "基础费用处理程序",
   "blocks.common.base_fee_total": "基础费用总额",
-  "blocks.common.native_token": "Native Token",
+  "blocks.common.native_token": "原生代币",
   "blocks.common.the_contract_receiving_the_base_fee_responsible_for_handling_fee_usage_this_contract_is_controlled_by_governance_process": "接收基础费用并负责处理费用使用的合约，该合约由治理流程控制"
 }

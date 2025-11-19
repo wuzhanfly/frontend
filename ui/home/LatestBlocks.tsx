@@ -2,6 +2,7 @@ import { chakra, Box, Flex, Text, VStack } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import { upperFirst } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SocketMessage } from 'lib/socket/types';
 import type { Block } from 'types/api/block';
@@ -26,6 +27,7 @@ import { nbsp } from 'toolkit/utils/htmlEntities';
 import LatestBlocksItem from './LatestBlocksItem';
 
 const LatestBlocks = () => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   // const blocksMaxCount = isMobile ? 2 : 3;
   let blocksMaxCount: number;
@@ -108,11 +110,11 @@ const LatestBlocks = () => {
 
   return (
     <Box width={{ base: '100%', lg: '280px' }} flexShrink={ 0 }>
-      <Heading level="3">Latest blocks</Heading>
+      <Heading level="3">{ t('common.common.latest_blocks') }</Heading>
       { statsQueryResult.data?.network_utilization_percentage !== undefined && (
         <Skeleton loading={ statsQueryResult.isPlaceholderData } mt={ 2 } display="inline-block" textStyle="sm">
           <Text as="span">
-            Network utilization:{ nbsp }
+            { t('gas_tracker.common.network_utilization') }:{ nbsp }
           </Text>
           <Tooltip content={ `${ upperFirst(networkUtilization.load) } load` }>
             <Text as="span" color={ networkUtilization.color } fontWeight={ 700 }>

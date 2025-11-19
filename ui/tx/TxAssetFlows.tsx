@@ -57,7 +57,7 @@ export default function TxAssetFlows(props: FlowViewProps) {
       <Box display="flex" alignItems="center" gap={ 1 }>
         <Skeleton borderRadius="sm" loading={ isPlaceholderData } >
           <Text fontWeight="400" mr={ 1 }>
-            Wallet
+            {t('common.common.wallet')}
           </Text>
         </Skeleton>
 
@@ -89,10 +89,10 @@ export default function TxAssetFlows(props: FlowViewProps) {
           <TableHeaderSticky top={ 75 }>
             <TableRow>
               <TableColumnHeader>
-                Actions
+                {t('common.common.actions')}
               </TableColumnHeader>
               <TableColumnHeader width="450px">
-                From/To
+                {t('common.common.from_to')}
               </TableColumnHeader>
             </TableRow>
           </TableHeaderSticky>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Checkbox } from 'toolkit/chakra/checkbox';
 import { IconButton } from 'toolkit/chakra/icon-button';
@@ -8,12 +9,14 @@ import IconSvg from 'ui/shared/IconSvg';
 import { Section, Container, SectionHeader, SamplesStack, Sample } from './parts';
 
 const IconButtonShowcase = () => {
+  const { t } = useTranslation();
+
   return (
     <Container value="icon-button">
       <Section>
-        <SectionHeader>Variant</SectionHeader>
+        <SectionHeader>{t('common.common.variant', 'Variant')}</SectionHeader>
         <SamplesStack>
-          <Sample label="variant: icon_secondary">
+          <Sample label={t('common.common.variant_icon_secondary', 'variant: icon_secondary')}>
             <IconButton size="md" variant="icon_secondary">
               <IconSvg name="info"/>
             </IconButton>
@@ -34,7 +37,7 @@ const IconButtonShowcase = () => {
             </IconButton>
           </Sample>
 
-          <Sample label="variant: icon_background">
+          <Sample label={t('common.common.variant_icon_background', 'variant: icon_background')}>
             <IconButton size="md" variant="icon_background">
               <IconSvg name="heart_outline"/>
             </IconButton>
@@ -55,7 +58,7 @@ const IconButtonShowcase = () => {
             </IconButton>
           </Sample>
 
-          <Sample label="variant: dropdown">
+          <Sample label={t('common.common.variant_dropdown', 'variant: dropdown')}>
             <PopoverRoot>
               <PopoverTrigger>
                 <IconButton size="md" variant="dropdown">
@@ -64,7 +67,7 @@ const IconButtonShowcase = () => {
               </PopoverTrigger>
               <PopoverContent>
                 <PopoverBody>
-                  Popover content
+                  {t('common.common.popover_content', 'Popover content')}
                 </PopoverBody>
               </PopoverContent>
             </PopoverRoot>
@@ -76,7 +79,7 @@ const IconButtonShowcase = () => {
               </PopoverTrigger>
               <PopoverContent>
                 <PopoverBody>
-                  Popover content
+                  {t('common.common.popover_content', 'Popover content')}
                 </PopoverBody>
               </PopoverContent>
             </PopoverRoot>
@@ -88,8 +91,8 @@ const IconButtonShowcase = () => {
               </PopoverTrigger>
               <PopoverContent>
                 <PopoverBody display="flex" flexDirection="column" gap={ 2 }>
-                  <Checkbox defaultChecked>First option</Checkbox>
-                  <Checkbox>Second option</Checkbox>
+                  <Checkbox defaultChecked>{t('common.common.first_option', 'First option')}</Checkbox>
+                  <Checkbox>{t('common.common.second_option', 'Second option')}</Checkbox>
                 </PopoverBody>
               </PopoverContent>
             </PopoverRoot>
@@ -107,19 +110,19 @@ const IconButtonShowcase = () => {
       </Section>
 
       <Section>
-        <SectionHeader>Size</SectionHeader>
+        <SectionHeader>{t('common.common.size', 'Size')}</SectionHeader>
         <SamplesStack>
-          <Sample label="size: 2xs">
+          <Sample label={t('common.common.size_2xs', 'size: 2xs')}>
             <IconButton size="2xs" variant="icon_secondary" outline="1px dashed lightpink">
               <IconSvg name="star_outline"/>
             </IconButton>
           </Sample>
-          <Sample label="size: 2xs_alt">
+          <Sample label={t('common.common.size_2xs_alt', 'size: 2xs_alt')}>
             <IconButton size="2xs_alt" variant="icon_secondary" outline="1px dashed lightpink">
               <IconSvg name="plus"/>
             </IconButton>
           </Sample>
-          <Sample label="size: md">
+          <Sample label={t('common.common.size_md', 'size: md')}>
             <IconButton size="md" variant="icon_secondary" outline="1px dashed lightpink">
               <IconSvg name="star_outline"/>
             </IconButton>

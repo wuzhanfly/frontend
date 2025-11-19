@@ -130,7 +130,7 @@ const Stats = () => {
       (statsData?.total_blocks?.value || apiData?.total_blocks) && {
         id: 'total_blocks' as const,
         icon: 'block_slim' as const,
-        label: statsData?.total_blocks?.title || t('stats.common.total_blocks'),
+        label: t('stats.common.total_blocks'),
         value: Number(statsData?.total_blocks?.value || apiData?.total_blocks).toLocaleString(),
         href: { pathname: '/blocks' as const },
         isLoading,
@@ -138,7 +138,7 @@ const Stats = () => {
       (statsData?.average_block_time?.value || apiData?.average_block_time) && {
         id: 'average_block_time' as const,
         icon: 'clock-light' as const,
-        label: statsData?.average_block_time?.title || t('stats.common.average_block_time'),
+        label: t('stats.common.average_block_time'),
         value: `${
           statsData?.average_block_time?.value ?
             Number(statsData.average_block_time.value).toFixed(1) :
@@ -149,7 +149,7 @@ const Stats = () => {
       (statsData?.total_transactions?.value || apiData?.total_transactions) && {
         id: 'total_txs' as const,
         icon: 'transactions_slim' as const,
-        label: statsData?.total_transactions?.title || t('stats.common.total_transactions'),
+        label: t('stats.common.total_transactions'),
         value: Number(statsData?.total_transactions?.value || apiData?.total_transactions).toLocaleString(),
         href: { pathname: '/txs' as const },
         isLoading,
@@ -157,7 +157,7 @@ const Stats = () => {
       (isArbitrumRollup && statsData?.total_operational_transactions?.value) && {
         id: 'total_operational_txs' as const,
         icon: 'transactions_slim' as const,
-        label: statsData?.total_operational_transactions?.title || t('stats.common.total_operational_transactions'),
+        label: t('stats.common.total_operational_transactions'),
         value: Number(statsData?.total_operational_transactions?.value).toLocaleString(),
         href: { pathname: '/txs' as const },
         isLoading,
@@ -165,7 +165,7 @@ const Stats = () => {
       (isOptimisticRollup && statsData?.op_stack_total_operational_transactions?.value) && {
         id: 'total_operational_txs' as const,
         icon: 'transactions_slim' as const,
-        label: statsData?.op_stack_total_operational_transactions?.title || t('stats.common.total_operational_transactions'),
+        label: t('stats.common.total_operational_transactions'),
         value: Number(statsData?.op_stack_total_operational_transactions?.value).toLocaleString(),
         href: { pathname: '/txs' as const },
         isLoading,
@@ -181,7 +181,7 @@ const Stats = () => {
       (statsData?.total_addresses?.value || apiData?.total_addresses) && {
         id: 'wallet_addresses' as const,
         icon: 'wallet' as const,
-        label: statsData?.total_addresses?.title || t('stats.common.wallet_addresses'),
+        label: t('stats.common.wallet_addresses'),
         value: Number(statsData?.total_addresses?.value || apiData?.total_addresses).toLocaleString(),
         isLoading,
       },

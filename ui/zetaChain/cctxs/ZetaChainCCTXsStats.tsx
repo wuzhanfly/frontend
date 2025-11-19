@@ -1,16 +1,17 @@
 import type { BoxProps } from '@chakra-ui/react';
 import { Box } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import config from 'configs/app';
 import useApiQuery from 'lib/api/useApiQuery';
-import getStatsLabelFromTitle from 'lib/stats/getStatsLabelFromTitle';
 import { TXS_STATS_MICROSERVICE } from 'stubs/tx';
 import StatsWidget from 'ui/shared/stats/StatsWidget';
 
 interface Props extends BoxProps {}
 
 const ZetaChainCCTXsStats = (props: Props) => {
+  const { t } = useTranslation();
   const isStatsFeatureEnabled = config.features.stats.isEnabled;
 
   const txsStatsQuery = useApiQuery('stats:pages_transactions', {
@@ -47,21 +48,21 @@ const ZetaChainCCTXsStats = (props: Props) => {
     >
       { cctxCountTotal && (
         <StatsWidget
-          label={ getStatsLabelFromTitle(cctxCountTotal.title) }
+          label={ t('transactions.common.total_zetachain_cross_chain_txns') }
           value={ Number(cctxCountTotal.value).toLocaleString() }
           isLoading={ isLoading }
         />
       ) }
       { cctxPendingCountTotal && (
         <StatsWidget
-          label={ getStatsLabelFromTitle(cctxPendingCountTotal.title) }
+          label={ t('transactions.common.pending_zetachain_cross_chain_txns') }
           value={ Number(cctxPendingCountTotal.value).toLocaleString() }
           isLoading={ isLoading }
         />
       ) }
       { cctxCount24h && (
         <StatsWidget
-          label={ getStatsLabelFromTitle(cctxCount24h.title) }
+          label={ t('transactions.common.new_zetachain_cross_chain_txns_24h') }
           value={ Number(cctxCount24h.value).toLocaleString() }
           period="24h"
           isLoading={ isLoading }

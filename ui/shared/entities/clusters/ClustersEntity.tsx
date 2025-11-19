@@ -1,5 +1,6 @@
 import { Box, chakra, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -34,6 +35,7 @@ const Link = chakra((props: LinkProps) => {
 type IconProps = EntityBase.IconBaseProps & Pick<EntityProps, 'clusterName'>;
 
 const Icon = (props: IconProps) => {
+  const { t } = useTranslation();
   if (props.noIcon) {
     return null;
   }
@@ -94,13 +96,12 @@ const Icon = (props: IconProps) => {
           <IconSvg name="clusters" boxSize={ 4 } color="white" style={{ filter: 'brightness(0) invert(1)' }}/>
         </Box>
         <div>
-          <span>Clusters</span>
-          <chakra.span color="text.secondary" whiteSpace="pre"> - Universal name service</chakra.span>
+          <span>{ t('common.common.clusters') }</span>
+          <chakra.span color="text.secondary" whiteSpace="pre">{ t('common.common.universal_name_service') }</chakra.span>
         </div>
       </Flex>
       <Text>
-        Clusters provides unified naming across multiple blockchains including EVM, Solana, Bitcoin, and more.
-        Manage all your wallet addresses under one human-readable name.
+        { t('common.common.clusters_description') }
       </Text>
       <LinkToolkit
         href="https://clusters.xyz"
@@ -109,7 +110,7 @@ const Icon = (props: IconProps) => {
         external
       >
         <IconSvg name="link" boxSize={ 5 } color="text.secondary" mr={ 2 }/>
-        <span>Learn more about Clusters</span>
+        <span>{ t('common.common.learn_more_about_clusters') }</span>
       </LinkToolkit>
     </>
   );

@@ -5,12 +5,6 @@
       "ui/home/Transactions.tsx:42"
     ]
   },
-  "transactions.common.latest_transactions": {
-    "defaultMessage": "Latest transactions",
-    "source": [
-      "ui/home/Transactions.tsx:50"
-    ]
-  },
   "transactions.common.coming_soon_": {
     "defaultMessage": "Coming soon 🔜",
     "source": [

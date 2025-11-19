@@ -19,6 +19,15 @@ class I18nUtils {
   changeLanguage = async(language: string): Promise<void> => {
     try {
       await i18n.changeLanguage(language);
+      // 保存语言设置到 localStorage
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.setItem('i18nextLng', language);
+          localStorage.setItem('language', language);
+        } catch (error) {
+          console.error('Failed to save language to localStorage:', error);
+        }
+      }
       console.log(`Language changed to ${ language }`);
     } catch (error) {
       console.error('Failed to change language:', error);

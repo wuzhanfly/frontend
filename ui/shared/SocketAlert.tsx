@@ -1,4 +1,5 @@
 import { Text, chakra } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import { Alert } from 'toolkit/chakra/alert';
@@ -9,10 +10,11 @@ interface Props {
 }
 
 const SocketAlert = ({ className }: Props) => {
+  const { t } = useTranslation();
   return (
     <Alert status="warning" className={ className }>
-      <Text whiteSpace="pre">Connection lost, click </Text>
-      <Link href={ window.document.location.href }>to load newer records</Link>
+      <Text whiteSpace="pre">{t('common.common.connection_lost_click')}</Text>
+      <Link href={ window.document.location.href }>{t('common.common.to_load_newer_records')}</Link>
     </Alert>
   );
 };

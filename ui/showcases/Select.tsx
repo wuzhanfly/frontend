@@ -58,7 +58,7 @@ const SelectShowcase = () => {
   return (
     <Container value="select">
       <Section>
-        <SectionHeader>Variant</SectionHeader>
+        <SectionHeader>{t('common.common.showcase.select.variant')}</SectionHeader>
         <SamplesStack>
           <Sample label={t('common.common.with_icon')}>
             <Select collection={ frameworks } placeholder={t('common.common.select_framework')} w="200px"/>
@@ -84,17 +84,17 @@ const SelectShowcase = () => {
           </Sample>
         </SamplesStack>
 
-        <SectionHeader>Size</SectionHeader>
+        <SectionHeader>{t('common.common.showcase.select.size')}</SectionHeader>
         <SamplesStack>
-          <Sample label="size: md">
+          <Sample label={t('common.common.size_md')}>
             <Select collection={ frameworks } placeholder={t('common.common.select_framework')} w="200px"/>
           </Sample>
-          <Sample label="size: sm">
+          <Sample label={t('common.common.size_sm')}>
             <Select collection={ frameworks } placeholder={t('common.common.select_framework')} w="200px" size="sm"/>
           </Sample>
         </SamplesStack>
 
-        <SectionHeader>Disabled</SectionHeader>
+        <SectionHeader>{t('common.common.showcase.select.disabled')}</SectionHeader>
         <SamplesStack>
           <Sample label={t('validators.common.default')}>
             <Select collection={ frameworks } placeholder={t('common.common.select_framework')} w="200px" disabled/>

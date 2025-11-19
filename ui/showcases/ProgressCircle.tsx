@@ -13,7 +13,7 @@ const ProgressCircleShowcase = () => {
       <Section>
         <SectionHeader>{t('common.common.showcase.progress_circle.variant')}</SectionHeader>
         <SamplesStack >
-          <Sample label="colorPalette: blue">
+          <Sample label={t('common.common.showcase.progress_circle.color_palette_blue', 'colorPalette: blue')}>
             <ProgressCircleRoot
               value={ 45 }
               colorPalette="blue"
@@ -28,7 +28,7 @@ const ProgressCircleShowcase = () => {
         <SectionHeader>{t('common.common.showcase.progress_circle.size')}</SectionHeader>
         <SamplesStack >
           { ([ 'sm', 'md', 'lg' ] as const).map((size) => (
-            <Sample key={ size } label={ `size: ${ size }` }>
+            <Sample key={ size } label={ t('common.common.showcase.progress_circle.size_value', 'size: {{size}}', { size }) }>
               <ProgressCircleRoot
                 value={ 45 }
                 colorPalette="blue"

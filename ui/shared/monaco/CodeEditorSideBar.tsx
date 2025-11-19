@@ -136,8 +136,8 @@ const CodeEditorSideBar = ({ onFileSelect, data, monaco, editor, selectedFile, m
             boxShadow={ isStuck ? 'md' : 'none' }
             borderTopRightRadius="md"
           >
-            <TabsTrigger value="explorer" { ...tabProps } title={ `File explorer (${ shift + cmd }E)` }>Explorer</TabsTrigger>
-            <TabsTrigger value="search" { ...tabProps } title={ `Search in files (${ shift + cmd }F)` }>Search</TabsTrigger>
+            <TabsTrigger value="explorer" { ...tabProps } title={ `File explorer (${ shift + cmd }E)` }>{t('common.common.explorer')}</TabsTrigger>
+            <TabsTrigger value="search" { ...tabProps } title={ `Search in files (${ shift + cmd }F)` }>{t('common.common.search')}</TabsTrigger>
             { actionBarRenderer?.() }
           </TabsList>
           <TabsContent value="explorer" p={ 0 }>

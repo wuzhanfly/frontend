@@ -1,5 +1,6 @@
 import type { GridItemProps, GridProps } from '@chakra-ui/react';
 import { Flex, Grid, GridItem, Text } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import { Skeleton } from 'toolkit/chakra/skeleton';
@@ -28,11 +29,14 @@ interface ItemLabelProps extends GridItemProps {
   hasScroll?: boolean;
 }
 
-const ItemLabelScrollText = () => (
-  <Text fontWeight={ 500 } color="text.secondary" textStyle="xs" className="note" textAlign="right">
-    Scroll to see more
-  </Text>
-);
+const ItemLabelScrollText = () => {
+  const { t } = useTranslation();
+  return (
+    <Text fontWeight={ 500 } color="text.secondary" textStyle="xs" className="note" textAlign="right">
+      {t('common.common.scroll_to_see_more')}
+    </Text>
+  );
+};
 
 export const ItemLabel = ({ hint, children, isLoading, id, hasScroll, ...rest }: ItemLabelProps) => {
   return (

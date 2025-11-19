@@ -1,4 +1,5 @@
 import { chakra } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type { TokenInfo } from 'types/api/token';
@@ -12,6 +13,7 @@ interface Props {
   decimals: string | null;
 }
 const FtTokenTransferSnippet = ({ token, value, decimals }: Props) => {
+  const { t } = useTranslation();
   const { valueStr, usd } = getCurrencyValue({
     value: value,
     exchangeRate: token.exchange_rate,
@@ -21,7 +23,7 @@ const FtTokenTransferSnippet = ({ token, value, decimals }: Props) => {
 
   return (
     <>
-      <chakra.span color="text.secondary">for</chakra.span>
+      <chakra.span color="text.secondary">{t('common.common.for')}</chakra.span>
       <span>{ valueStr }</span>
       <TokenEntity
         token={{ ...token, name: token.symbol || token.name }}

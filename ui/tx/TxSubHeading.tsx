@@ -1,6 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
-import React from 'react';
 import { useTranslation } from 'react-i18next';
+import React from 'react';
 
 import type { AddressParam } from 'types/api/addressParams';
 
@@ -96,7 +96,7 @@ const TxSubHeading = ({ hash, hasTag, txQuery }: Props) => {
             chainData={ multichainContext?.chain }
           />
           { hasViewAllInterpretationsLink &&
-          <Link href={ `#${ TX_ACTIONS_BLOCK_ID }` }>View all</Link> }
+          <Link href={ `#${ TX_ACTIONS_BLOCK_ID }` }>{t('common.common.view_all')}</Link> }
         </Flex>
       );
     } else if (hasInterpretationFeature && txQuery.data?.method && txQuery.data?.from && txQuery.data?.to) {

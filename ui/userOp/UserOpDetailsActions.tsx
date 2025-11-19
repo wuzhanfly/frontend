@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { TX_INTERPRETATION } from 'stubs/txInterpretation';
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const UserOpDetailsActions = ({ hash, isUserOpDataLoading }: Props) => {
+  const { t } = useTranslation();
   const interpretationQuery = useApiQuery('general:user_op_interpretation', {
     pathParams: { hash },
     queryOptions: {

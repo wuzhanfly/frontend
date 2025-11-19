@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { DappscoutIframeProvider, useDappscoutIframe } from 'dappscout-iframe';
 import { useRouter } from 'next/router';
 import React, { useCallback, useEffect, useState, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { MarketplaceApp } from 'types/client/marketplace';
 
@@ -42,6 +43,7 @@ type Props = {
 };
 
 const MarketplaceAppContent = ({ address, data, isPending, appUrl }: Props) => {
+  const { t } = useTranslation();
   const { iframeRef, isReady } = useDappscoutIframe();
 
   const [ iframeKey, setIframeKey ] = useState(0);
@@ -101,6 +103,7 @@ const MarketplaceAppContent = ({ address, data, isPending, appUrl }: Props) => {
 };
 
 export default function MarketplaceApp() {
+  const { t } = useTranslation();
   const fetch = useFetch();
   const apiFetch = useApiFetch();
   const router = useRouter();

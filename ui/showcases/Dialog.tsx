@@ -16,24 +16,24 @@ const DialogShowcase = () => {
   return (
     <Container value="dialog">
       <Section>
-        <SectionHeader>Size</SectionHeader>
+        <SectionHeader>{t('common.common.size', 'Size')}</SectionHeader>
         <SamplesStack>
-          <Sample label="size: sm">
+          <Sample label={t('common.common.size_sm', 'size: sm')}>
             <DialogRoot size="sm">
               <DialogTrigger asChild>
                 <Button size="sm">
-                  Open Dialog
+                  {t('common.common.open_dialog', 'Open Dialog')}
                 </Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Dialog Title</DialogTitle>
+                  <DialogTitle>{t('common.common.dialog_title', 'Dialog Title')}</DialogTitle>
                 </DialogHeader>
                 <DialogBody>
                   <p>{ CONTENT }</p>
                 </DialogBody>
                 <DialogFooter>
-                  <Button>Save</Button>
+                  <Button>{t('common.common.save', 'Save')}</Button>
                   <DialogActionTrigger asChild>
                     <Button variant="link">{t('common.common.ill_do_it_later')}</Button>
                   </DialogActionTrigger>
@@ -42,49 +42,49 @@ const DialogShowcase = () => {
             </DialogRoot>
           </Sample>
 
-          <Sample label="size: md">
+          <Sample label={t('common.common.size_md', 'size: md')}>
             <DialogRoot size="md">
               <DialogTrigger asChild>
                 <Button size="sm">
-                  Open Dialog
+                  {t('common.common.open_dialog', 'Open Dialog')}
                 </Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader onBackToClick={ noop }>
-                  <DialogTitle>Dialog Title</DialogTitle>
+                  <DialogTitle>{t('common.common.dialog_title', 'Dialog Title')}</DialogTitle>
                 </DialogHeader>
                 <DialogBody>
                   <p>{ CONTENT }</p>
                 </DialogBody>
                 <DialogFooter>
                   <DialogActionTrigger asChild>
-                    <Button variant="outline">Cancel</Button>
+                    <Button variant="outline">{t('common.common.cancel', 'Cancel')}</Button>
                   </DialogActionTrigger>
-                  <Button>Save</Button>
+                  <Button>{t('common.common.save', 'Save')}</Button>
                 </DialogFooter>
               </DialogContent>
             </DialogRoot>
           </Sample>
 
-          <Sample label="size: full">
+          <Sample label={t('common.common.size_full', 'size: full')}>
             <DialogRoot size="full">
               <DialogTrigger asChild>
                 <Button size="sm">
-                  Open Dialog
+                  {t('common.common.open_dialog', 'Open Dialog')}
                 </Button>
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Dialog Title</DialogTitle>
+                  <DialogTitle>{t('common.common.dialog_title', 'Dialog Title')}</DialogTitle>
                 </DialogHeader>
                 <DialogBody>
                   <p>{ CONTENT }</p>
                 </DialogBody>
                 <DialogFooter>
                   <DialogActionTrigger asChild>
-                    <Button variant="outline">Cancel</Button>
+                    <Button variant="outline">{t('common.common.cancel', 'Cancel')}</Button>
                   </DialogActionTrigger>
-                  <Button>Save</Button>
+                  <Button>{t('common.common.save', 'Save')}</Button>
                 </DialogFooter>
               </DialogContent>
             </DialogRoot>

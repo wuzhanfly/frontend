@@ -1,4 +1,5 @@
 import { chakra, Flex, Text } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type * as bens from '@blockscout/bens-types';
@@ -32,6 +33,7 @@ const Link = chakra((props: LinkProps) => {
 type IconProps = Pick<EntityProps, 'protocol'> & EntityBase.IconBaseProps;
 
 const Icon = (props: IconProps) => {
+  const { t } = useTranslation();
   const icon = <EntityBase.Icon { ...props } name={ 'name' in props ? props.name : 'ENS_slim' }/>;
 
   if (props.protocol) {
@@ -66,7 +68,7 @@ const Icon = (props: IconProps) => {
             external
           >
             <IconSvg name="docs" boxSize={ 5 } color="icon.primary" mr={ 2 }/>
-            <span>Documentation</span>
+            <span>{t('common.common.documentation')}</span>
           </LinkToolkit>
         ) }
       </>

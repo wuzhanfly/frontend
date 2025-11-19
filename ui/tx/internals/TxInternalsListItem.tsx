@@ -35,7 +35,7 @@ const TxInternalsListItem = ({ type, from, to, value, success, error, gas_limit:
         fontWeight="500"
       />
       <HStack gap={ 3 }>
-        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 }><span>Value { currencyUnits.ether }</span></Skeleton>
+        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 }><span>{t('common.common.value')} { currencyUnits.ether }</span></Skeleton>
         <Skeleton loading={ isLoading } fontSize="sm" color="text.secondary">
           <span>
             { BigNumber(value).div(BigNumber(10 ** config.chain.currency.decimals)).toFormat() }
@@ -43,7 +43,7 @@ const TxInternalsListItem = ({ type, from, to, value, success, error, gas_limit:
         </Skeleton>
       </HStack>
       <HStack gap={ 3 }>
-        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 }><span>Gas limit</span></Skeleton>
+        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 }><span>{t('common.common.gas_limit')}</span></Skeleton>
         <Skeleton loading={ isLoading } fontSize="sm" color="text.secondary"><span>{ BigNumber(gasLimit).toFormat() }</span></Skeleton>
       </HStack>
     </ListItemMobile>

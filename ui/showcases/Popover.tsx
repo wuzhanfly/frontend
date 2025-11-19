@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Button } from 'toolkit/chakra/button';
 import { PopoverRoot, PopoverTrigger, PopoverContent, PopoverBody } from 'toolkit/chakra/popover';
@@ -6,19 +7,21 @@ import { PopoverRoot, PopoverTrigger, PopoverContent, PopoverBody } from 'toolki
 import { Section, Container, SectionHeader, SamplesStack, Sample } from './parts';
 
 const PopoverShowcase = () => {
+  const { t } = useTranslation();
+
   return (
     <Container value="popover">
       <Section>
-        <SectionHeader>Size</SectionHeader>
+        <SectionHeader>{t('common.common.size', 'Size')}</SectionHeader>
         <SamplesStack>
-          <Sample label="size: sm">
+          <Sample label={t('common.common.size_sm', 'size: sm')}>
             <PopoverRoot>
               <PopoverTrigger>
-                <Button variant="dropdown">Trigger</Button>
+                <Button variant="dropdown">{t('common.common.trigger', 'Trigger')}</Button>
               </PopoverTrigger>
               <PopoverContent>
                 <PopoverBody>
-                  Popover content
+                  {t('common.common.popover_content', 'Popover content')}
                 </PopoverBody>
               </PopoverContent>
             </PopoverRoot>

@@ -1,4 +1,5 @@
 import { chakra } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type { TokenInfo, TokenInstance } from 'types/api/token';
@@ -14,6 +15,7 @@ interface Props {
 }
 
 const NftTokenTransferSnippet = ({ value, token, tokenId, instance }: Props) => {
+  const { t } = useTranslation();
   const num = value === '1' ? '' : value;
 
   const tokenIdContent = (() => {
@@ -22,7 +24,7 @@ const NftTokenTransferSnippet = ({ value, token, tokenId, instance }: Props) => 
       if (token.type === 'ERC-404') {
         return null;
       }
-      return <chakra.span color="text.secondary"> N/A </chakra.span>;
+      return <chakra.span color="text.secondary"> {t('common.common.not_available')} </chakra.span>;
     }
 
     return (
@@ -43,15 +45,15 @@ const NftTokenTransferSnippet = ({ value, token, tokenId, instance }: Props) => 
     <>
       { num ? (
         <>
-          <chakra.span color="text.secondary">for</chakra.span>
+          <chakra.span color="text.secondary">{t('common.common.for')}</chakra.span>
           <span>{ num }</span>
-          <chakra.span color="text.secondary">token ID</chakra.span>
+          <chakra.span color="text.secondary">{t('common.common.token_id')}</chakra.span>
         </>
       ) : (
-        <chakra.span color="text.secondary">for token ID</chakra.span>
+        <chakra.span color="text.secondary">{t('common.common.for_token_id')}</chakra.span>
       ) }
       { tokenIdContent }
-      <chakra.span color="text.secondary">of</chakra.span>
+      <chakra.span color="text.secondary">{t('common.common.of')}</chakra.span>
       <TokenEntity
         token={ token }
         noCopy

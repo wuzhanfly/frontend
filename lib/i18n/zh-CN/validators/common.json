@@ -19,10 +19,10 @@
   "validators.common.blocks_validated_ascending": "验证区块数升序",
   "validators.common.index_of_the_staker_in_the_com": "质押者在委员会中的索引",
   "validators.common.stakers_balance": "质押者余额",
-  "validators.common.libp2p_peer_id_corresponding_t": "libp2p对等ID，对应质押者的BLS公钥",
+  "validators.common.libp2p_peer_id_corresponding_t": "libp2p 对等 ID，对应质押者的 BLS 公钥",
   "validators.common.the_address_whose_key_the_vali": "验证者用于签署跨链事件的地址",
   "validators.common.block_number_at_which_the_stak": "质押者被添加时的区块号",
-  "validators.common.bls_public_key": "BLS公钥",
+  "validators.common.bls_public_key": "BLS 公钥",
   "validators.common.index": "索引",
   "validators.common.balance": "余额",
   "validators.common.validators_feature_is_not_enab": "验证者功能未启用。"

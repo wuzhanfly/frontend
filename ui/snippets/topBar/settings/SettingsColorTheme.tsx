@@ -1,5 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ColorThemeId } from 'types/settings';
 
@@ -15,6 +16,7 @@ interface Props {
 }
 
 const SettingsColorTheme = ({ onSelect }: Props) => {
+  const { t } = useTranslation();
   const { setColorMode } = useColorMode();
 
   const [ activeThemeId, setActiveThemeId ] = React.useState<ColorThemeId>();
@@ -73,16 +75,27 @@ const SettingsColorTheme = ({ onSelect }: Props) => {
 
   const activeTheme = COLOR_THEMES.find((theme) => theme.id === activeThemeId);
 
+  // 获取国际化标签
+  const getThemeLabel = (themeId: ColorThemeId) => {
+    switch(themeId) {
+      case 'light': return t('settings.common.color_theme_light');
+      case 'dim': return t('settings.common.color_theme_dim');
+      case 'midnight': return t('settings.common.color_theme_midnight');
+      case 'dark': return t('settings.common.color_theme_dark');
+      default: return themeId;
+    }
+  };
+
   return (
     <div>
-      <Box fontWeight={ 600 }>Color theme</Box>
-      <Box color="text.secondary" mt={ 1 } mb={ 2 }>{ activeTheme?.label }</Box>
+      <Box fontWeight={ 600 }>{ t('settings.common.color_theme_label') }</Box>
+      <Box color="text.secondary" mt={ 1 } mb={ 2 }>{ activeTheme ? getThemeLabel(activeTheme.id) : '' }</Box>
       <Flex>
         { COLOR_THEMES.map((theme) => {
           return (
             <SettingsSample
               key={ theme.label }
-              label={ theme.label }
+              label={ getThemeLabel(theme.id) }
               value={ theme.id }
               bg={ theme.sampleBg }
               isActive={ theme.id === activeThemeId }

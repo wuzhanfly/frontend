@@ -155,7 +155,7 @@
   "shared.common.operations": "操作",
   "shared.common.user_operations": "用户操作",
   "shared.common.user_ops": "用户操作",
-  "shared.common.blobs": "Blob",
+  "shared.common.blobs": "Blob 数据列表",
   "shared.common.names": "名称",
   "shared.common.cluster_name": "集群名称",
   "shared.common.cluster": "集群",
@@ -168,7 +168,7 @@
   "shared.common.high": "高",
   "shared.common.low": "低",
   "shared.common.informational": "信息性",
-  "shared.common.gas": "Gas",
+  "shared.common.gas": "Gas 费用",
   "shared.common.finalized": "已最终确定",
   "shared.common.in_progress": "处理中",
   "shared.common.the_contract_was_successfully_": "合约创建成功",
@@ -176,7 +176,7 @@
   "shared.common.the_contract_was_created_at_so": "合约曾在某时创建但此后已自毁",
   "shared.common.selfdestructed": "已自毁",
   "shared.common.failed": "失败",
-  "shared.common.helpblockscoutcom": "help@blockscout.com",
+  "shared.common.helpblockscoutcom": "Blockscout 支持邮箱",
   "shared.common.table_header": "表头",
   "shared.common.toggle_time_format": "切换时间格式",
   "shared.common.paymaster_sponsor": "支付大师赞助",
@@ -192,6 +192,6 @@
   "shared.common.unknown_status": "未知状态",
   "shared.common.medium": "Medium",
   "shared.common.unknown_error": "未知错误",
-  "shared.common.": "",
-  "shared.common.sharedcommon728x90": "Sharedcommon728x90"
+  "shared.common.": " ",
+  "shared.common.sharedcommon728x90": "共享通用728x90"
 }

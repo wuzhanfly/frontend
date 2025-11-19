@@ -1,5 +1,5 @@
 {
-  "api.common.api_fetch": "API获取",
+  "api.common.api_fetch": "API 获取",
   "api.common.resource_not_found": "资源未找到",
   "api.common.unable_to_process_invalid_api_": "无法处理无效的API模式",
   "api.common.unknown_error": "未知错误",

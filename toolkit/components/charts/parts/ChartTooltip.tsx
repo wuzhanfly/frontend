@@ -1,5 +1,6 @@
 import * as d3 from 'd3';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Resolution } from '../types';
 import type { TimeChartData } from '../types';
@@ -37,6 +38,7 @@ export const ChartTooltip = React.memo(({
   resolution,
   ...props
 }: ChartTooltipProps) => {
+  const { t } = useTranslation('common');
   const ref = React.useRef<SVGGElement>(null);
   const trackerId = React.useRef<number | undefined>(undefined);
   const isVisible = React.useRef(false);
@@ -166,22 +168,36 @@ export const ChartTooltip = React.memo(({
       <ChartTooltipContent>
         <ChartTooltipBackdrop/>
         <ChartTooltipTitle resolution={ resolution }/>
-        <ChartTooltipRow label={ getDateLabel(resolution) } lineNum={ 1 }/>
+        <ChartTooltipRow label={ getDateLabel(resolution, t) } lineNum={ 1 }/>
         { data.map(({ name }, index) => <ChartTooltipRow key={ name } label={ name } lineNum={ index + 1 }/>) }
       </ChartTooltipContent>
     </g>
   );
 });
 
-function getDateLabel(resolution?: Resolution): string {
+function getDateLabel(resolution?: Resolution, t?: (key: string) => string): string {
+  if (!t) {
+    // Fallback to English if translation function is not provided
+    switch (resolution) {
+      case Resolution.WEEK:
+        return 'Dates';
+      case Resolution.MONTH:
+        return 'Month';
+      case Resolution.YEAR:
+        return 'Year';
+      default:
+        return 'Date';
+    }
+  }
+  
   switch (resolution) {
     case Resolution.WEEK:
-      return 'Dates';
+      return t('charts.common.dates');
     case Resolution.MONTH:
-      return 'Month';
+      return t('charts.common.month');
     case Resolution.YEAR:
-      return 'Year';
+      return t('charts.common.year');
     default:
-      return 'Date';
+      return t('charts.common.date');
   }
 }

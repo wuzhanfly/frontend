@@ -1,4 +1,5 @@
 import { Flex } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type { TokenTransfer } from 'types/api/tokenTransfer';
@@ -23,6 +24,7 @@ type Props = {
 };
 
 const TokenTransfersListItem = ({ item, isLoading, chainData }: Props) => {
+  const { t } = useTranslation();
 
   const { valueStr } = item.total && 'value' in item.total && item.total.value !== null ? getCurrencyValue({
     value: item.total.value,
@@ -36,14 +38,14 @@ const TokenTransfersListItem = ({ item, isLoading, chainData }: Props) => {
     <ListItemMobileGrid.Container>
       { item.transaction_hash && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Txn hash</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.txn_hash')}</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <TxEntity hash={ item.transaction_hash } isLoading={ isLoading } truncation="constant_long" noIcon={ !chainData } chain={ chainData }/>
           </ListItemMobileGrid.Value>
         </>
       ) }
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Age</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.age')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <TimeWithTooltip
           timestamp={ item.timestamp }
@@ -54,30 +56,30 @@ const TokenTransfersListItem = ({ item, isLoading, chainData }: Props) => {
 
       { item.method && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Method</ListItemMobileGrid.Label><ListItemMobileGrid.Value>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.method')}</ListItemMobileGrid.Label><ListItemMobileGrid.Value>
             <Badge loading={ isLoading }>{ item.method }</Badge>
           </ListItemMobileGrid.Value>
         </>
       ) }
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Block</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.block')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <BlockEntity number={ item.block_number } isLoading={ isLoading } noIcon/>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>From</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.from')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <AddressEntity address={ item.from } isLoading={ isLoading } truncation="constant"/>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>To</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.to')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <AddressEntity address={ item.to } isLoading={ isLoading } truncation="constant"/>
       </ListItemMobileGrid.Value>
 
       { item.total && 'token_id' in item.total && item.token && (NFT_TOKEN_TYPE_IDS.includes(item.token.type)) && item.total.token_id !== null && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Token ID</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.token_id')}</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value overflow="hidden">
             <NftEntity
               hash={ item.token.address_hash }
@@ -92,7 +94,7 @@ const TokenTransfersListItem = ({ item, isLoading, chainData }: Props) => {
 
       { valueStr && item.token && (item.token.type === 'ERC-20' || item.token.type === 'ERC-1155') && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Amount</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.amount')}</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <Flex gap={ 2 } overflow="hidden">
               <Skeleton loading={ isLoading } wordBreak="break-all">

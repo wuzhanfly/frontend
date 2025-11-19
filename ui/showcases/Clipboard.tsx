@@ -11,24 +11,24 @@ const ClipboardShowcase = () => {
   return (
     <Container value="clipboard">
       <Section>
-        <SectionHeader>Type</SectionHeader>
+        <SectionHeader>{t('common.common.type', 'Type')}</SectionHeader>
         <SamplesStack>
-          <Sample label="type: text">
+          <Sample label={t('common.common.type_text', 'type: text')}>
             <CopyToClipboard text={t('common.common.hello_world')} type="text"/>
           </Sample>
-          <Sample label="type: link">
+          <Sample label={t('common.common.type_link', 'type: link')}>
             <CopyToClipboard text={t('common.common.hello_world')} type="link"/>
           </Sample>
-          <Sample label="type: share">
+          <Sample label={t('common.common.type_share', 'type: share')}>
             <CopyToClipboard text={t('common.common.hello_world')} type="share"/>
           </Sample>
         </SamplesStack>
       </Section>
 
       <Section>
-        <SectionHeader>Loading</SectionHeader>
+        <SectionHeader>{t('common.common.loading', 'Loading')}</SectionHeader>
         <SamplesStack>
-          <Sample label="loading: true">
+          <Sample label={t('common.common.loading_true', 'loading: true')}>
             <CopyToClipboard text={t('common.common.hello_world')} type="text" isLoading/>
           </Sample>
         </SamplesStack>

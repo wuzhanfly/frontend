@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { IconButton } from 'toolkit/chakra/icon-button';
 import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from 'toolkit/chakra/menu';
@@ -7,13 +8,14 @@ import IconSvg from 'ui/shared/IconSvg';
 import { Section, Container, SectionHeader, SamplesStack, Sample } from './parts';
 
 const MenuShowcase = () => {
+  const { t } = useTranslation();
 
   return (
     <Container value="menu">
       <Section>
-        <SectionHeader>Variant</SectionHeader>
+        <SectionHeader>{t('common.common.variant', 'Variant')}</SectionHeader>
         <SamplesStack>
-          <Sample label="variant: subtle">
+          <Sample label={t('common.common.variant_subtle', 'variant: subtle')}>
             <MenuRoot>
               <MenuTrigger asChild>
                 <IconButton variant="icon_background" size="md">
@@ -21,10 +23,10 @@ const MenuShowcase = () => {
                 </IconButton>
               </MenuTrigger>
               <MenuContent>
-                <MenuItem value="refresh-metadata">Refresh metadata</MenuItem>
-                <MenuItem value="add-token-info">Add token info</MenuItem>
-                <MenuItem value="add-private-tag">Add private tag</MenuItem>
-                <MenuItem value="add-public-tag">Add public tag</MenuItem>
+                <MenuItem value="refresh-metadata">{t('common.common.refresh_metadata', 'Refresh metadata')}</MenuItem>
+                <MenuItem value="add-token-info">{t('common.common.add_token_info', 'Add token info')}</MenuItem>
+                <MenuItem value="add-private-tag">{t('common.common.add_private_tag', 'Add private tag')}</MenuItem>
+                <MenuItem value="add-public-tag">{t('common.common.add_public_tag', 'Add public tag')}</MenuItem>
               </MenuContent>
             </MenuRoot>
 
@@ -35,10 +37,10 @@ const MenuShowcase = () => {
                 </IconButton>
               </MenuTrigger>
               <MenuContent>
-                <MenuItem value="refresh-metadata">Refresh metadata</MenuItem>
-                <MenuItem value="add-token-info">Add token info</MenuItem>
-                <MenuItem value="add-private-tag">Add private tag</MenuItem>
-                <MenuItem value="add-public-tag">Add public tag</MenuItem>
+                <MenuItem value="refresh-metadata">{t('common.common.refresh_metadata', 'Refresh metadata')}</MenuItem>
+                <MenuItem value="add-token-info">{t('common.common.add_token_info', 'Add token info')}</MenuItem>
+                <MenuItem value="add-private-tag">{t('common.common.add_private_tag', 'Add private tag')}</MenuItem>
+                <MenuItem value="add-public-tag">{t('common.common.add_public_tag', 'Add public tag')}</MenuItem>
               </MenuContent>
             </MenuRoot>
           </Sample>

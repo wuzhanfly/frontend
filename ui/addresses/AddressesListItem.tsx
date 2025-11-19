@@ -1,5 +1,6 @@
 import { Flex, HStack } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type { AddressesItem } from 'types/api/addresses';
@@ -25,6 +26,7 @@ const AddressesListItem = ({
   totalSupply,
   isLoading,
 }: Props) => {
+  const { t } = useTranslation();
 
   const addressBalance = BigNumber(item.coin_balance || 0).div(BigNumber(10 ** config.chain.currency.decimals));
 
@@ -53,14 +55,14 @@ const AddressesListItem = ({
       </HStack>
       { !totalSupply.eq(ZERO) && (
         <HStack gap={ 3 }>
-          <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 }>Percentage</Skeleton>
+          <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 }>{t('common.common.percentage')}</Skeleton>
           <Skeleton loading={ isLoading } fontSize="sm" color="text.secondary">
             <span>{ addressBalance.div(BigNumber(totalSupply)).multipliedBy(100).dp(8).toFormat() + '%' }</span>
           </Skeleton>
         </HStack>
       ) }
       <HStack gap={ 3 }>
-        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 }>Txn count</Skeleton>
+        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 }>{t('common.common.txn_count')}</Skeleton>
         <Skeleton loading={ isLoading } fontSize="sm" color="text.secondary">
           <span>{ Number(item.transactions_count).toLocaleString() }</span>
         </Skeleton>

@@ -1,3 +1,5 @@
+import { Flex } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type { TxBlob } from 'types/api/blobs';
@@ -13,16 +15,17 @@ interface Props {
 }
 
 const TxBlobListItem = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
   const size = data.blob_data ? data.blob_data.replace('0x', '').length / 2 : '-';
 
   return (
     <ListItemMobileGrid.Container>
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Blob hash</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.blob_hash')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <BlobEntity hash={ data.hash } isLoading={ isLoading }/>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Data type</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.data_type')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         { data.blob_data ? <BlobDataType isLoading={ isLoading } data={ data.blob_data }/> : '-' }
       </ListItemMobileGrid.Value>

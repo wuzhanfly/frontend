@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import { Box, Flex, List, chakra } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import { route } from 'nextjs-routes';
@@ -11,6 +12,7 @@ import IconSvg from 'ui/shared/IconSvg';
 
 import AppErrorTitle from '../AppErrorTitle';
 const AppErrorTxNotFound = () => {
+  const { t } = useTranslation();
   const snippet = {
     borderColor: { _light: 'blackAlpha.300', _dark: 'whiteAlpha.300' },
     iconBg: { _light: 'blackAlpha.800', _dark: 'whiteAlpha.800' },
@@ -44,24 +46,22 @@ const AppErrorTxNotFound = () => {
           </Flex>
         </Flex>
       </Box>
-      <AppErrorTitle title="Sorry, we are unable to locate this transaction hash"/>
+      <AppErrorTitle title={t('common.common.sorry_unable_to_locate_tx_hash')}/>
       <List.Root mt={ 3 } gap={ 3 } as="ol" pl={ 5 }>
         <List.Item>
-          If you have just submitted this transaction please wait for at least 30 seconds before refreshing this page.
+          {t('common.common.txn_wait_before_refresh')}
         </List.Item>
         <List.Item>
-          It could still be in the TX Pool of a different node, waiting to be broadcasted.
+          {t('common.common.txn_in_tx_pool')}
         </List.Item>
         <List.Item>
-          During times when the network is busy (i.e during ICOs) it can take a while for your transaction to propagate through the network and for us to index it.
+          {t('common.common.txn_network_busy')}
         </List.Item>
         <List.Item>
-          <span>If it still does not show up after 1 hour, please check with your </span>
-          <chakra.span fontWeight={ 600 }>sender/exchange/wallet/transaction provider</chakra.span>
-          <span> for additional information.</span>
+          {t('common.common.txn_check_provider')}
         </List.Item>
         <List.Item>
-          <span>If you don’t want to look for a txn and just want to have fun, <Link onClick={ showPuzzle }>solve the puzzle</Link>, and be rewarded with a secret prize.</span>
+          <span>{t('common.common.txn_solve_puzzle', { puzzle: <Link onClick={ showPuzzle }>{t('common.common.solve_puzzle')}</Link> })}</span>
         </List.Item>
       </List.Root>
       { isPuzzleOpen && <Puzzle15/> }
@@ -70,7 +70,7 @@ const AppErrorTxNotFound = () => {
           mt={ 8 }
           variant="outline"
         >
-          Back to home
+          {t('common.common.back_to_home')}
         </Button>
       </Link>
     </>

@@ -25,7 +25,7 @@ const TxDetailsFeePerGas = ({ txFee, gasUsed, isLoading }: Props) => {
         hint={t('transactions.common.fee_per_gas')}
         isLoading={ isLoading }
       >
-        Fee per gas
+        {t('common.common.fee_per_gas')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isLoading } mr={ 1 }>

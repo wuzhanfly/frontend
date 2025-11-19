@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { ARBITRUM_MESSAGES_ITEM } from 'stubs/arbitrumL2';
@@ -21,6 +22,7 @@ type Props = {
 };
 
 const ArbitrumL2Messages = ({ direction }: Props) => {
+  const { t } = useTranslation();
   const type = direction === 'from-rollup' ? 'withdrawals' : 'deposits';
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:arbitrum_l2_messages',
@@ -74,7 +76,10 @@ const ArbitrumL2Messages = ({ direction }: Props) => {
         loading={ countersQuery.isPlaceholderData }
         display="inline-block"
       >
-        A total of { countersQuery.data?.toLocaleString() } { type } found
+        {t('common.common.total_found', 'A total of {{count}} {{type}} found', { 
+          count: Number(countersQuery.data || 0), 
+          type: t(`common.common.${type}`, type) 
+        })}
       </Skeleton>
     );
   })();
@@ -85,14 +90,14 @@ const ArbitrumL2Messages = ({ direction }: Props) => {
     <>
       <PageTitle
         title={ direction === 'from-rollup' ?
-          `Withdrawals (L2${ nbsp }${ rightLineArrow }${ nbsp }L1)` :
-          `Deposits (L1${ nbsp }${ rightLineArrow }${ nbsp }L2)` }
+          t('common.common.withdrawals_l2_to_l1', `Withdrawals (L2${ nbsp }${ rightLineArrow }${ nbsp }L1)`) :
+          t('common.common.deposits_l1_to_l2', `Deposits (L1${ nbsp }${ rightLineArrow }${ nbsp }L2)`) }
         withTextAd
       />
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText={ `There are no ${ type }.` }
+        emptyText={ t('common.common.there_are_no_type', `There are no {{type}}.`, { type: t(`common.common.${type}`, type) }) }
         actionBar={ actionBar }
       >
         { content }

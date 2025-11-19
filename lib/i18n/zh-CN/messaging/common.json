@@ -1,9 +1,9 @@
 {
-  "messaging.common.l1_block": "L1区块",
+  "messaging.common.l1_block": "L1 区块",
   "messaging.common.from": "从",
   "messaging.common.message_": "消息 #",
-  "messaging.common.l2_transaction": "L2交易",
+  "messaging.common.l2_transaction": "L2 交易",
   "messaging.common.age": "时间",
   "messaging.common.status": "状态",
-  "messaging.common.l1_transaction": "L1交易"
+  "messaging.common.l1_transaction": "L1 交易"
 }

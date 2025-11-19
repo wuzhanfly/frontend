@@ -33,7 +33,7 @@ const LatestTxs = () => {
     },
   ];
 
-  const heading = <Heading level="3" mb={{ base: 3, lg: 0 }}>Latest transactions</Heading>;
+  const heading = <Heading level="3" mb={{ base: 3, lg: 0 }}>{t('common.common.latest_transactions')}</Heading>;
 
   const rightSlot = tab === 'txs_local' ? (
     <ChainSelect

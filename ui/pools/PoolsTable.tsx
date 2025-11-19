@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type { Pool } from 'types/api/pools';
@@ -15,14 +16,15 @@ type Props = {
 };
 
 const PoolsTable = ({ items, page, isLoading, top }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRoot minWidth="900px">
       <TableHeaderSticky top={ top ?? ACTION_BAR_HEIGHT_DESKTOP }>
         <TableRow>
-          <TableColumnHeader width="70%">Pool</TableColumnHeader>
-          <TableColumnHeader width="30%">DEX </TableColumnHeader>
-          <TableColumnHeader width="130px" isNumeric>Liquidity</TableColumnHeader>
-          <TableColumnHeader width="75px" isNumeric>View in</TableColumnHeader>
+          <TableColumnHeader width="70%">{t('common.common.pool')}</TableColumnHeader>
+          <TableColumnHeader width="30%">{t('common.common.dex')} </TableColumnHeader>
+          <TableColumnHeader width="130px" isNumeric>{t('common.common.liquidity')}</TableColumnHeader>
+          <TableColumnHeader width="75px" isNumeric>{t('common.common.view_in')}</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

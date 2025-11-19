@@ -20,9 +20,9 @@ const AccordionShowcase = () => {
   return (
     <Container value="accordion">
       <Section>
-        <SectionHeader>Variant</SectionHeader>
+        <SectionHeader>{t('common.common.variant', 'Variant')}</SectionHeader>
         <SamplesStack>
-          <Sample label="variant: outline">
+          <Sample label={t('common.common.variant_outline', 'variant: outline')}>
             <AccordionRoot w="400px">
               { items.map((item, index) => (
                 <AccordionItem key={ index } value={ item.value }>
@@ -32,7 +32,7 @@ const AccordionShowcase = () => {
               )) }
             </AccordionRoot>
           </Sample>
-          <Sample label="variant: faq">
+          <Sample label={t('common.common.variant_faq', 'variant: faq')}>
             <AccordionRoot w="400px" variant="faq">
               { items.map((item, index) => (
                 <AccordionItem key={ index } value={ item.value }>
@@ -44,9 +44,9 @@ const AccordionShowcase = () => {
           </Sample>
         </SamplesStack>
 
-        <SectionHeader>Size</SectionHeader>
+        <SectionHeader>{t('common.common.size', 'Size')}</SectionHeader>
         <SamplesStack>
-          <Sample label="size: md">
+          <Sample label={t('common.common.size_md', 'size: md')}>
             <AccordionRoot w="400px">
               { items.map((item, index) => (
                 <AccordionItem key={ index } value={ item.value }>
@@ -56,7 +56,7 @@ const AccordionShowcase = () => {
               )) }
             </AccordionRoot>
           </Sample>
-          <Sample label="size: sm">
+          <Sample label={t('common.common.size_sm', 'size: sm')}>
             <AccordionRoot w="400px" size="sm">
               { items.map((item, index) => (
                 <AccordionItem key={ index } value={ item.value }>

@@ -673,13 +673,13 @@
   "common.common.expired": {
     "defaultMessage": "Expired",
     "source": [
-      "ui/nameDomain/NameDomainExpiryStatus.tsx:18"
+      "ui/nameDomain/NameDomainExpiryStatus.tsx:21"
     ]
   },
   "common.common.the_domain_name_is_resolved_of": {
-    "defaultMessage": "The domain name is resolved offchain using",
+    "defaultMessage": "The domain name is resolved offchain using ",
     "source": [
-      "ui/nameDomain/details/NameDomainDetailsAlert.tsx:20"
+      "ui/nameDomain/details/NameDomainDetailsAlert.tsx:22"
     ]
   },
   "common.common.txn_hash": {
@@ -1099,12 +1099,6 @@
       "ui/showcases/Badge.tsx:16"
     ]
   },
-  "common.common.failed": {
-    "defaultMessage": "Failed",
-    "source": [
-      "ui/showcases/Badge.tsx:25"
-    ]
-  },
   "common.common.token_transfer": {
     "defaultMessage": "Token transfer",
     "source": [
@@ -1123,12 +1117,6 @@
       "ui/showcases/Badge.tsx:37"
     ]
   },
-  "common.common.multicall": {
-    "defaultMessage": "Multicall",
-    "source": [
-      "ui/showcases/Badge.tsx:40"
-    ]
-  },
   "common.common.internal_txn": {
     "defaultMessage": "Internal txn",
     "source": [
@@ -1142,6 +1130,7 @@
       "ui/showcases/Badge.tsx:65",
       "ui/showcases/Badge.tsx:68",
       "ui/showcases/Badge.tsx:76",
+      "ui/showcases/Badge.tsx:97",
       "ui/showcases/Button.tsx:22",
       "ui/showcases/Button.tsx:25",
       "ui/showcases/Button.tsx:28",
@@ -1163,31 +1152,16 @@
       "ui/showcases/Badge.tsx:81"
     ]
   },
+  "common.common.very_long_content_that_should_": {
+    "defaultMessage": "Very long content that should be truncated",
+    "source": [
+      "ui/showcases/Badge.tsx:86"
+    ]
+  },
   "common.common.icon": {
     "defaultMessage": "Icon",
     "source": [
       "ui/showcases/Badge.tsx:93"
-    ]
-  },
-  "common.common.commoncommonoption1": {
-    "defaultMessage": "common.common.option1",
-    "source": [
-      "ui/showcases/Button.tsx:242",
-      "ui/showcases/Button.tsx:247"
-    ]
-  },
-  "common.common.commoncommonoption2": {
-    "defaultMessage": "common.common.option2",
-    "source": [
-      "ui/showcases/Button.tsx:243",
-      "ui/showcases/Button.tsx:248"
-    ]
-  },
-  "common.common.commoncommonoption3": {
-    "defaultMessage": "common.common.option3",
-    "source": [
-      "ui/showcases/Button.tsx:244",
-      "ui/showcases/Button.tsx:249"
     ]
   },
   "common.common.variants": {
@@ -1195,7 +1169,7 @@
     "source": [
       "ui/showcases/Button.tsx:37",
       "ui/showcases/Link.tsx:47",
-      "ui/showcases/Skeleton.tsx:12"
+      "ui/showcases/Skeleton.tsx:14"
     ]
   },
   "common.common.default": {
@@ -1242,6 +1216,18 @@
       "ui/showcases/Button.tsx:201"
     ]
   },
+  "common.common.popover_content": {
+    "defaultMessage": "Popover content",
+    "source": [
+      "ui/showcases/Button.tsx:70",
+      "ui/showcases/Button.tsx:80",
+      "ui/showcases/Button.tsx:90",
+      "ui/showcases/Button.tsx:122",
+      "ui/showcases/IconButton.tsx:70",
+      "ui/showcases/IconButton.tsx:82",
+      "ui/showcases/Popover.tsx:24"
+    ]
+  },
   "common.common.expended": {
     "defaultMessage": "Expended",
     "source": [
@@ -1262,14 +1248,30 @@
     "defaultMessage": "First option",
     "source": [
       "ui/showcases/Button.tsx:100",
-      "ui/showcases/IconButton.tsx:91"
+      "ui/showcases/IconButton.tsx:94"
     ]
   },
   "common.common.second_option": {
     "defaultMessage": "Second option",
     "source": [
       "ui/showcases/Button.tsx:101",
-      "ui/showcases/IconButton.tsx:92"
+      "ui/showcases/IconButton.tsx:95"
+    ]
+  },
+  "common.common.with_tooltip": {
+    "defaultMessage": "With tooltip",
+    "source": [
+      "ui/showcases/Button.tsx:115"
+    ]
+  },
+  "common.common.user_profile_menu_content": {
+    "defaultMessage": "User profile menu content",
+    "source": [
+      "ui/showcases/Button.tsx:138",
+      "ui/showcases/Button.tsx:148",
+      "ui/showcases/Button.tsx:158",
+      "ui/showcases/Button.tsx:174",
+      "ui/showcases/Button.tsx:184"
     ]
   },
   "common.common.i_am_link": {
@@ -1284,25 +1286,67 @@
       "ui/showcases/Button.tsx:238"
     ]
   },
+  "common.common.commoncommonoption1": {
+    "defaultMessage": "common.common.option1",
+    "source": [
+      "ui/showcases/Button.tsx:242",
+      "ui/showcases/Button.tsx:247",
+      "ui/showcases/Checkbox.tsx:17",
+      "ui/showcases/Checkbox.tsx:27",
+      "ui/showcases/Checkbox.tsx:37",
+      "ui/showcases/Checkbox.tsx:47",
+      "ui/showcases/Checkbox.tsx:58",
+      "ui/showcases/Checkbox.tsx:64",
+      "ui/showcases/Radio.tsx:18",
+      "ui/showcases/Radio.tsx:30",
+      "ui/showcases/Radio.tsx:36",
+      "ui/showcases/Radio.tsx:42",
+      "ui/showcases/Radio.tsx:54",
+      "ui/showcases/Radio.tsx:60",
+      "ui/showcases/Radio.tsx:72",
+      "ui/showcases/Radio.tsx:84"
+    ]
+  },
   "common.common.option_1": {
     "defaultMessage": "Option 1",
     "source": [
       "ui/showcases/Button.tsx:242",
       "ui/showcases/Button.tsx:247",
-      "ui/showcases/Checkbox.tsx:15",
-      "ui/showcases/Checkbox.tsx:25",
-      "ui/showcases/Checkbox.tsx:35",
-      "ui/showcases/Checkbox.tsx:45",
-      "ui/showcases/Checkbox.tsx:56",
-      "ui/showcases/Checkbox.tsx:62",
-      "ui/showcases/Radio.tsx:16",
-      "ui/showcases/Radio.tsx:28",
-      "ui/showcases/Radio.tsx:34",
-      "ui/showcases/Radio.tsx:40",
-      "ui/showcases/Radio.tsx:52",
-      "ui/showcases/Radio.tsx:58",
-      "ui/showcases/Radio.tsx:70",
-      "ui/showcases/Radio.tsx:82"
+      "ui/showcases/Checkbox.tsx:17",
+      "ui/showcases/Checkbox.tsx:27",
+      "ui/showcases/Checkbox.tsx:37",
+      "ui/showcases/Checkbox.tsx:47",
+      "ui/showcases/Checkbox.tsx:58",
+      "ui/showcases/Checkbox.tsx:64",
+      "ui/showcases/Radio.tsx:18",
+      "ui/showcases/Radio.tsx:30",
+      "ui/showcases/Radio.tsx:36",
+      "ui/showcases/Radio.tsx:42",
+      "ui/showcases/Radio.tsx:54",
+      "ui/showcases/Radio.tsx:60",
+      "ui/showcases/Radio.tsx:72",
+      "ui/showcases/Radio.tsx:84"
+    ]
+  },
+  "common.common.commoncommonoption2": {
+    "defaultMessage": "common.common.option2",
+    "source": [
+      "ui/showcases/Button.tsx:243",
+      "ui/showcases/Button.tsx:248",
+      "ui/showcases/Checkbox.tsx:18",
+      "ui/showcases/Checkbox.tsx:28",
+      "ui/showcases/Checkbox.tsx:38",
+      "ui/showcases/Checkbox.tsx:48",
+      "ui/showcases/Checkbox.tsx:59",
+      "ui/showcases/Checkbox.tsx:65",
+      "ui/showcases/Radio.tsx:19",
+      "ui/showcases/Radio.tsx:31",
+      "ui/showcases/Radio.tsx:37",
+      "ui/showcases/Radio.tsx:43",
+      "ui/showcases/Radio.tsx:55",
+      "ui/showcases/Radio.tsx:61",
+      "ui/showcases/Radio.tsx:73",
+      "ui/showcases/Radio.tsx:85"
     ]
   },
   "common.common.option_2": {
@@ -1310,20 +1354,27 @@
     "source": [
       "ui/showcases/Button.tsx:243",
       "ui/showcases/Button.tsx:248",
-      "ui/showcases/Checkbox.tsx:16",
-      "ui/showcases/Checkbox.tsx:26",
-      "ui/showcases/Checkbox.tsx:36",
-      "ui/showcases/Checkbox.tsx:46",
-      "ui/showcases/Checkbox.tsx:57",
-      "ui/showcases/Checkbox.tsx:63",
-      "ui/showcases/Radio.tsx:17",
-      "ui/showcases/Radio.tsx:29",
-      "ui/showcases/Radio.tsx:35",
-      "ui/showcases/Radio.tsx:41",
-      "ui/showcases/Radio.tsx:53",
-      "ui/showcases/Radio.tsx:59",
-      "ui/showcases/Radio.tsx:71",
-      "ui/showcases/Radio.tsx:83"
+      "ui/showcases/Checkbox.tsx:18",
+      "ui/showcases/Checkbox.tsx:28",
+      "ui/showcases/Checkbox.tsx:38",
+      "ui/showcases/Checkbox.tsx:48",
+      "ui/showcases/Checkbox.tsx:59",
+      "ui/showcases/Checkbox.tsx:65",
+      "ui/showcases/Radio.tsx:19",
+      "ui/showcases/Radio.tsx:31",
+      "ui/showcases/Radio.tsx:37",
+      "ui/showcases/Radio.tsx:43",
+      "ui/showcases/Radio.tsx:55",
+      "ui/showcases/Radio.tsx:61",
+      "ui/showcases/Radio.tsx:73",
+      "ui/showcases/Radio.tsx:85"
+    ]
+  },
+  "common.common.commoncommonoption3": {
+    "defaultMessage": "common.common.option3",
+    "source": [
+      "ui/showcases/Button.tsx:244",
+      "ui/showcases/Button.tsx:249"
     ]
   },
   "common.common.option_3": {
@@ -1336,22 +1387,30 @@
   "common.common.readonly": {
     "defaultMessage": "Read-only",
     "source": [
-      "ui/showcases/Checkbox.tsx:42",
-      "ui/showcases/Radio.tsx:78",
+      "ui/showcases/Checkbox.tsx:44",
+      "ui/showcases/Radio.tsx:80",
       "ui/showcases/Rating.tsx:21"
     ]
   },
   "common.common.orientation": {
     "defaultMessage": "Orientation",
     "source": [
-      "ui/showcases/Checkbox.tsx:52",
-      "ui/showcases/Radio.tsx:48"
+      "ui/showcases/Checkbox.tsx:54",
+      "ui/showcases/Radio.tsx:50"
     ]
   },
   "common.common.cut_link": {
     "defaultMessage": "Cut link",
     "source": [
       "ui/showcases/Collapsible.tsx:42"
+    ]
+  },
+  "common.common.open_dialog": {
+    "defaultMessage": "Open Dialog",
+    "source": [
+      "ui/showcases/Dialog.tsx:25",
+      "ui/showcases/Dialog.tsx:49",
+      "ui/showcases/Dialog.tsx:73"
     ]
   },
   "common.common.dialog_title": {
@@ -1414,10 +1473,16 @@
     ]
   },
   "common.common.within": {
-    "defaultMessage": "Within",
+    "defaultMessage": "Within ",
     "source": [
       "ui/showcases/Link.tsx:83",
       "ui/showcases/Link.tsx:87"
+    ]
+  },
+  "common.common.link_overlay": {
+    "defaultMessage": "Link overlay",
+    "source": [
+      "ui/showcases/Link.tsx:226"
     ]
   },
   "common.common.address_link": {
@@ -1468,12 +1533,6 @@
       "ui/showcases/Link.tsx:211"
     ]
   },
-  "common.common.link_overlay": {
-    "defaultMessage": "Link overlay",
-    "source": [
-      "ui/showcases/Link.tsx:226"
-    ]
-  },
   "common.common.main_link": {
     "defaultMessage": "Main link",
     "source": [
@@ -1491,29 +1550,29 @@
   "common.common.refresh_metadata": {
     "defaultMessage": "Refresh metadata",
     "source": [
-      "ui/showcases/Menu.tsx:24",
-      "ui/showcases/Menu.tsx:38"
+      "ui/showcases/Menu.tsx:26",
+      "ui/showcases/Menu.tsx:40"
     ]
   },
   "common.common.add_token_info": {
     "defaultMessage": "Add token info",
     "source": [
-      "ui/showcases/Menu.tsx:25",
-      "ui/showcases/Menu.tsx:39"
+      "ui/showcases/Menu.tsx:27",
+      "ui/showcases/Menu.tsx:41"
     ]
   },
   "common.common.add_private_tag": {
     "defaultMessage": "Add private tag",
     "source": [
-      "ui/showcases/Menu.tsx:26",
-      "ui/showcases/Menu.tsx:40"
+      "ui/showcases/Menu.tsx:28",
+      "ui/showcases/Menu.tsx:42"
     ]
   },
   "common.common.add_public_tag": {
     "defaultMessage": "Add public tag",
     "source": [
-      "ui/showcases/Menu.tsx:27",
-      "ui/showcases/Menu.tsx:41"
+      "ui/showcases/Menu.tsx:29",
+      "ui/showcases/Menu.tsx:43"
     ]
   },
   "common.common.list_pagination": {
@@ -1525,7 +1584,7 @@
   "common.common.trigger": {
     "defaultMessage": "Trigger",
     "source": [
-      "ui/showcases/Popover.tsx:17"
+      "ui/showcases/Popover.tsx:20"
     ]
   },
   "common.common.angular_is": {
@@ -1549,19 +1608,30 @@
   "common.common.skeleton": {
     "defaultMessage": "Skeleton",
     "source": [
-      "ui/showcases/Skeleton.tsx:16"
+      "ui/showcases/Skeleton.tsx:18"
     ]
   },
   "common.common.spinner": {
     "defaultMessage": "Spinner",
     "source": [
-      "ui/showcases/Spinner.tsx:11"
+      "ui/showcases/Spinner.tsx:13"
     ]
   },
   "common.common.sizes": {
     "defaultMessage": "Sizes",
     "source": [
-      "ui/showcases/Spinner.tsx:12"
+      "ui/showcases/Spinner.tsx:14"
+    ]
+  },
+  "common.common.show_duck": {
+    "defaultMessage": "Show duck",
+    "source": [
+      "ui/showcases/Switch.tsx:18",
+      "ui/showcases/Switch.tsx:23",
+      "ui/showcases/Switch.tsx:28",
+      "ui/showcases/Switch.tsx:38",
+      "ui/showcases/Switch.tsx:48",
+      "ui/showcases/Switch.tsx:53"
     ]
   },
   "common.common.swaps_content": {

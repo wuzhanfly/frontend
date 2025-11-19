@@ -35,7 +35,7 @@ const MetadataUpdateMenuItem = ({ type }: ItemProps) => {
         return (
           <MenuItem onClick={ handleClick } disabled={ status === 'WAITING_FOR_RESPONSE' } value="refresh-metadata">
             <IconSvg name="refresh" boxSize={ 5 }/>
-            <span>Refresh metadata</span>
+            <span>{t('common.common.refresh_metadata')}</span>
           </MenuItem>
         );
       }

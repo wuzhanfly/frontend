@@ -13,95 +13,95 @@ const BadgeShowcase = () => {
   return (
     <Container value="badge">
       <Section>
-        <SectionHeader>Color palette</SectionHeader>
+        <SectionHeader>{t('common.common.color_palette', 'Color palette')}</SectionHeader>
         <SamplesStack>
-          <Sample label="colorPalette: gray">
-            <Badge colorPalette="gray">Pending</Badge>
+          <Sample label={t('common.common.colorpalette_gray', 'colorPalette: gray')}>
+            <Badge colorPalette="gray">{t('common.common.pending', 'Pending')}</Badge>
           </Sample>
-          <Sample label="colorPalette: green">
-            <Badge colorPalette="green">Success</Badge>
+          <Sample label={t('common.common.colorpalette_green', 'colorPalette: green')}>
+            <Badge colorPalette="green">{t('common.common.success', 'Success')}</Badge>
           </Sample>
-          <Sample label="colorPalette: red">
-            <Badge colorPalette="red">Failed</Badge>
+          <Sample label={t('common.common.colorpalette_red', 'colorPalette: red')}>
+            <Badge colorPalette="red">{t('common.common.failed', 'Failed')}</Badge>
           </Sample>
-          <Sample label="colorPalette: purple">
-            <Badge colorPalette="purple">Transaction</Badge>
+          <Sample label={t('common.common.colorpalette_purple', 'colorPalette: purple')}>
+            <Badge colorPalette="purple">{t('common.common.transaction', 'Transaction')}</Badge>
           </Sample>
-          <Sample label="colorPalette: orange">
-            <Badge colorPalette="orange">Token transfer</Badge>
+          <Sample label={t('common.common.colorpalette_orange', 'colorPalette: orange')}>
+            <Badge colorPalette="orange">{t('common.common.token_transfer', 'Token transfer')}</Badge>
           </Sample>
-          <Sample label="colorPalette: blue">
-            <Badge colorPalette="blue">Contract call</Badge>
+          <Sample label={t('common.common.colorpalette_blue', 'colorPalette: blue')}>
+            <Badge colorPalette="blue">{t('common.common.contract_call', 'Contract call')}</Badge>
           </Sample>
-          <Sample label="colorPalette: yellow">
-            <Badge colorPalette="yellow">Blob txn</Badge>
+          <Sample label={t('common.common.colorpalette_yellow', 'colorPalette: yellow')}>
+            <Badge colorPalette="yellow">{t('common.common.blob_txn', 'Blob txn')}</Badge>
           </Sample>
-          <Sample label="colorPalette: teal">
-            <Badge colorPalette="teal">Multicall</Badge>
+          <Sample label={t('common.common.colorpalette_teal', 'colorPalette: teal')}>
+            <Badge colorPalette="teal">{t('common.common.multicall', 'Multicall')}</Badge>
           </Sample>
-          <Sample label="colorPalette: cyan">
-            <Badge colorPalette="cyan">Internal txn</Badge>
+          <Sample label={t('common.common.colorpalette_cyan', 'colorPalette: cyan')}>
+            <Badge colorPalette="cyan">{t('common.common.internal_txn', 'Internal txn')}</Badge>
           </Sample>
-          <Sample label="colorPalette: purple_alt">
-            <Badge colorPalette="purple_alt">read</Badge>
+          <Sample label={t('common.common.colorpalette_purple_alt', 'colorPalette: purple_alt')}>
+            <Badge colorPalette="purple_alt">{t('common.common.read', 'read')}</Badge>
           </Sample>
-          <Sample label="colorPalette: blue_alt">
-            <Badge colorPalette="blue_alt">write</Badge>
+          <Sample label={t('common.common.colorpalette_blue_alt', 'colorPalette: blue_alt')}>
+            <Badge colorPalette="blue_alt">{t('common.common.write', 'write')}</Badge>
           </Sample>
         </SamplesStack>
       </Section>
       <Section>
-        <SectionHeader>Loading</SectionHeader>
+        <SectionHeader>{t('common.common.loading', 'Loading')}</SectionHeader>
         <SamplesStack>
-          <Sample label="loading: true">
-            <Badge colorPalette="purple" loading>Content</Badge>
+          <Sample label={t('common.common.loading_true', 'loading: true')}>
+            <Badge colorPalette="purple" loading>{t('common.common.content', 'Content')}</Badge>
           </Sample>
         </SamplesStack>
       </Section>
       <Section>
-        <SectionHeader>Size</SectionHeader>
+        <SectionHeader>{t('common.common.size', 'Size')}</SectionHeader>
         <SamplesStack>
-          <Sample label="size: md">
-            <Badge size="md">Content</Badge>
+          <Sample label={t('common.common.size_md', 'size: md')}>
+            <Badge size="md">{t('common.common.content', 'Content')}</Badge>
           </Sample>
-          <Sample label="size: sm">
-            <Badge size="sm">Content</Badge>
-          </Sample>
-        </SamplesStack>
-      </Section>
-      <Section>
-        <SectionHeader>Variant</SectionHeader>
-        <SamplesStack>
-          <Sample label="variant: subtle">
-            <Badge variant="subtle">Content</Badge>
+          <Sample label={t('common.common.size_sm', 'size: sm')}>
+            <Badge size="sm">{t('common.common.content', 'Content')}</Badge>
           </Sample>
         </SamplesStack>
       </Section>
       <Section>
-        <SectionHeader>Truncate</SectionHeader>
+        <SectionHeader>{t('common.common.variant', 'Variant')}</SectionHeader>
         <SamplesStack>
-          <Sample label="truncated: true">
+          <Sample label={t('common.common.variant_subtle', 'variant: subtle')}>
+            <Badge variant="subtle">{t('common.common.content', 'Content')}</Badge>
+          </Sample>
+        </SamplesStack>
+      </Section>
+      <Section>
+        <SectionHeader>{t('common.common.truncate', 'Truncate')}</SectionHeader>
+        <SamplesStack>
+          <Sample label={t('common.common.truncated_true', 'truncated: true')}>
             <Box maxW="150px">
               <Badge truncated>
-                Very long content that should be truncated
+                {t('common.common.very_long_content_that_should_be_truncated', 'Very long content that should be truncated')}
               </Badge>
             </Box>
           </Sample>
         </SamplesStack>
       </Section>
       <Section>
-        <SectionHeader>Icon</SectionHeader>
+        <SectionHeader>{t('common.common.icon', 'Icon')}</SectionHeader>
         <SamplesStack>
-          <Sample label="iconStart: status/success">
+          <Sample label={t('common.common.iconstart_status_success', 'iconStart: status/success')}>
             <Badge startElement={ <IconSvg name="status/success" boxSize={ 2.5 }/> }>
-              Content
+              {t('common.common.content', 'Content')}
             </Badge>
           </Sample>
         </SamplesStack>
       </Section>
       <Section>
         <SectionHeader>Examples</SectionHeader>
-        <SectionSubHeader>Status tag (StatusTag)</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.status_tag_statustag', 'Status tag (StatusTag)')}</SectionSubHeader>
         <SamplesStack>
           <Sample label="status: ok">
             <StatusTag type="ok" text={t('shared.common.text')}/>

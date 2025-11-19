@@ -15,9 +15,9 @@ const CollapsibleShowcase = () => {
   return (
     <Container value="collapsible">
       <Section>
-        <SectionHeader>Variant</SectionHeader>
+        <SectionHeader>{t('common.common.variant', 'Variant')}</SectionHeader>
         <SamplesStack >
-          <Sample label="variant: default" flexDirection="column" alignItems="flex-start">
+          <Sample label={t('common.common.variant_default', 'variant: default')} flexDirection="column" alignItems="flex-start">
             <CollapsibleDetails id="CutLink_1">
               <Box maxW="500px">{ TEXT }</Box>
             </CollapsibleDetails>
@@ -26,9 +26,9 @@ const CollapsibleShowcase = () => {
       </Section>
 
       <Section>
-        <SectionHeader>Loading</SectionHeader>
+        <SectionHeader>{t('common.common.loading', 'Loading')}</SectionHeader>
         <SamplesStack >
-          <Sample label="loading: true" flexDirection="column" alignItems="flex-start">
+          <Sample label={t('common.common.loading_true', 'loading: true')} flexDirection="column" alignItems="flex-start">
             <CollapsibleDetails id="CutLink_2" loading>
               <Box maxW="500px">{ TEXT }</Box>
             </CollapsibleDetails>
@@ -37,9 +37,9 @@ const CollapsibleShowcase = () => {
       </Section>
 
       <Section>
-        <SectionHeader>Examples</SectionHeader>
+        <SectionHeader>{t('common.common.examples', 'Examples')}</SectionHeader>
 
-        <SectionSubHeader>Cut link</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.cut_link', 'Cut link')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('common.common.show_details')} flexDirection="column" alignItems="flex-start">
             <CollapsibleDetails id="CutLink_3">

@@ -6,7 +6,7 @@
   "stats.common.total_operational_transactions": "操作交易总数",
   "stats.common.latest_l1_state_batch": "最新L1状态批次",
   "stats.common.wallet_addresses": "钱包地址",
-  "stats.common.gas_tracker": "Gas追踪器",
+  "stats.common.gas_tracker": "Gas 追踪器",
   "stats.common.btc_locked_in_2wp": "锁定在2WP中的BTC",
   "stats.common.current_epoch": "当前纪元",
   "stats.common.total_addresses": "地址总数",

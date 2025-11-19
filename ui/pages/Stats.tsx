@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useEtherscanRedirects from 'lib/router/useEtherscanRedirects';
@@ -11,6 +12,7 @@ import StatsFilters from '../stats/StatsFilters';
 import useStats from '../stats/useStats';
 
 const Stats = () => {
+  const { t } = useTranslation();
   const {
     isPlaceholderData,
     isError,
@@ -30,7 +32,7 @@ const Stats = () => {
   return (
     <>
       <PageTitle
-        title={ config.meta.seo.enhancedDataEnabled ? `${ config.chain.name } statistic & data` : `${ config.chain.name } stats` }
+        title={ config.meta.seo.enhancedDataEnabled ? t('common.common.statistic_and_data', '{{chainName}} statistic & data', { chainName: config.chain.name }) : t('common.common.chain_stats', '{{chainName}} stats', { chainName: config.chain.name }) }
       />
 
       <Box mb={{ base: 6, sm: 8 }}>

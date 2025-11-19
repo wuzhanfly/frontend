@@ -1,7 +1,5 @@
-import {
-  HStack,
-  Flex,
-} from '@chakra-ui/react';
+import { HStack, Flex, } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type { Transaction } from 'types/api/transaction';
@@ -36,6 +34,7 @@ type Props = {
 };
 
 const TxsListItem = ({ tx, isLoading, showBlockInfo, currentAddress, enableTimeIncrement, animation, chainData }: Props) => {
+  const { t } = useTranslation();
   const dataTo = tx.to ? tx.to : tx.created_contract;
 
   return (
@@ -91,7 +90,7 @@ const TxsListItem = ({ tx, isLoading, showBlockInfo, currentAddress, enableTimeI
       ) }
       { showBlockInfo && tx.block_number !== null && (
         <Flex mt={ 2 }>
-          <Skeleton loading={ isLoading } display="inline-block" whiteSpace="pre">Block </Skeleton>
+          <Skeleton loading={ isLoading } display="inline-block" whiteSpace="pre">{t('common.common.block')} </Skeleton>
           <BlockEntity
             isLoading={ isLoading }
             number={ tx.block_number }
@@ -109,7 +108,7 @@ const TxsListItem = ({ tx, isLoading, showBlockInfo, currentAddress, enableTimeI
       />
       { !config.UI.views.tx.hiddenFields?.value && (
         <Flex mt={ 2 } columnGap={ 2 }>
-          <Skeleton loading={ isLoading } display="inline-block" whiteSpace="pre">Value</Skeleton>
+          <Skeleton loading={ isLoading } display="inline-block" whiteSpace="pre">{t('common.common.value')}</Skeleton>
           <Skeleton loading={ isLoading } display="inline-block" color="text.secondary" whiteSpace="pre">
             <span>
               { getValueWithUnit(tx.value).toFormat() }

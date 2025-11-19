@@ -1,4 +1,5 @@
 import { Flex, Icon, Box } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import * as React from 'react';
 
 import emptySearchResultIcon from 'icons-components/EmptySearchResult';
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const EmptySearchResult = ({ text }: Props) => {
+  const { t } = useTranslation();
   return (
     <Box
       display="flex"
@@ -25,7 +27,7 @@ const EmptySearchResult = ({ text }: Props) => {
       />
 
       <Heading level="3" mb={ 2 }>
-        No results
+        {t('common.common.no_results')}
       </Heading>
 
       <Box fontSize={{ base: 'sm', sm: 'md' }} textAlign="center">

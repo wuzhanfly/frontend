@@ -48,6 +48,7 @@
   "shared.common.loading_translations": "Loading translations...",
   "shared.common.search": "Search",
   "shared.common.show_info": "Show info",
+  "shared.common.id": ":id",
   "shared.common.verify_with_other_explorers": "Verify with other explorers",
   "shared.common.sent_to": "Sent to",
   "shared.common.sent": "Sent",

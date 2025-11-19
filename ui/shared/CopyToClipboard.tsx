@@ -66,7 +66,7 @@ const CopyToClipboard = (props: Props) => {
     }
 
     if (type === 'link') {
-      return 'Copy link to clipboard';
+      return t('common.common.copy_link_to_clipboard');
     }
 
     return t('common.common.copy_to_clipboard');

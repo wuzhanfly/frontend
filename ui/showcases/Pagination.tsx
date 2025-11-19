@@ -36,7 +36,7 @@ const PaginationShowcase = () => {
       <Section>
         <SectionHeader>Examples</SectionHeader>
 
-        <SectionSubHeader>List pagination</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.list_pagination', 'List pagination')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('common.common.loaded_state')}>
             <Pagination { ...props }/>
@@ -44,7 +44,7 @@ const PaginationShowcase = () => {
           <Sample label={t('common.common.initial_loading_state')}>
             <Pagination { ...props } hasPages={ false } page={ 1 } isLoading/>
           </Sample>
-          <Sample label="Next page loading state">
+          <Sample label={t('common.common.next_page_loading_state', 'Next page loading state')}>
             <Pagination { ...props } isLoading/>
           </Sample>
         </SamplesStack>

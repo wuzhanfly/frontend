@@ -25,13 +25,13 @@ const TextareaShowcase = () => {
             <Field label={t('common.common.description')} required floating size="2xl">
               <Textarea value={ TEXT }/>
             </Field>
-            <Field label="Description (invalid)" required floating invalid size="2xl">
+            <Field label={t('common.common.description_invalid')} required floating invalid size="2xl">
               <Textarea value={ TEXT }/>
             </Field>
-            <Field label="Description (readOnly)" required floating readOnly size="2xl">
+            <Field label={t('common.common.description_readonly')} required floating readOnly size="2xl">
               <Textarea value={ TEXT }/>
             </Field>
-            <Field label="Description (disabled)" required floating disabled size="2xl">
+            <Field label={t('common.common.description_disabled')} required floating disabled size="2xl">
               <Textarea value={ TEXT }/>
             </Field>
             <Box bgColor={{ _light: 'blackAlpha.200', _dark: 'whiteAlpha.200' }} p={ 4 } borderRadius="base" w="100%">

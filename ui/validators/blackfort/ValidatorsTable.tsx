@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import type {
@@ -22,6 +23,7 @@ interface Props {
 }
 
 const ValidatorsTable = ({ data, sort, setSorting, isLoading, top }: Props) => {
+  const { t } = useTranslation();
 
   const onSortToggle = React.useCallback((field: ValidatorsBlackfortSortingField) => {
     const value = getNextSortValue<ValidatorsBlackfortSortingField, ValidatorsBlackfortSortingValue>(VALIDATORS_BLACKFORT_SORT_SEQUENCE, field)(sort);
@@ -40,8 +42,8 @@ const ValidatorsTable = ({ data, sort, setSorting, isLoading, top }: Props) => {
           >
             Validator’s address
           </TableColumnHeaderSortable>
-          <TableColumnHeader>Name</TableColumnHeader>
-          <TableColumnHeader isNumeric>Commission</TableColumnHeader>
+          <TableColumnHeader>{t('common.common.name')}</TableColumnHeader>
+            <TableColumnHeader isNumeric>{t('common.common.commission')}</TableColumnHeader>
           <TableColumnHeader isNumeric>{ `Self bonded ${ currencyUnits.ether }` }</TableColumnHeader>
           <TableColumnHeader isNumeric>{ `Delegated amount ${ currencyUnits.ether }` }</TableColumnHeader>
         </TableRow>

@@ -1,18 +1,20 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Progress } from 'toolkit/chakra/progress';
 
 import { Section, Container, SectionHeader, SamplesStack, Sample } from './parts';
 
 const ProgressShowcase = () => {
+  const { t } = useTranslation();
 
   return (
     <Container value="progress">
       <Section>
-        <SectionHeader>Size</SectionHeader>
+        <SectionHeader>{t('common.common.size', 'Size')}</SectionHeader>
         <SamplesStack >
           { ([ 'sm', 'md', 'lg', 'xl' ] as const).map((size) => (
-            <Sample key={ size } label={ `size: ${ size }` }>
+            <Sample key={ size } label={t('common.common.size', 'size: ') + size}>
               <Progress
                 w="200px"
                 min={ 0 }

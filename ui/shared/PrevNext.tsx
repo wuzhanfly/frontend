@@ -1,4 +1,5 @@
 import { Box, chakra, Flex } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import { IconButton } from 'toolkit/chakra/icon-button';
@@ -17,6 +18,7 @@ interface Props {
 }
 
 const PrevNext = ({ className, onClick, prevLabel, nextLabel, isPrevDisabled, isNextDisabled, isLoading }: Props) => {
+  const { t } = useTranslation();
   const handelPrevClick = React.useCallback(() => {
     onClick('prev');
   }, [ onClick ]);
@@ -38,7 +40,7 @@ const PrevNext = ({ className, onClick, prevLabel, nextLabel, isPrevDisabled, is
     <Box className={ className } display="flex">
       <Tooltip content={ prevLabel }>
         <IconButton
-          aria-label="prev"
+          aria-label={t('common.common.prev')}
           borderRadius="sm"
           variant="icon_background"
           boxSize={ 6 }
@@ -50,7 +52,7 @@ const PrevNext = ({ className, onClick, prevLabel, nextLabel, isPrevDisabled, is
       </Tooltip>
       <Tooltip content={ nextLabel }>
         <IconButton
-          aria-label="next"
+          aria-label={t('common.common.next')}
           borderRadius="sm"
           variant="icon_background"
           boxSize={ 6 }

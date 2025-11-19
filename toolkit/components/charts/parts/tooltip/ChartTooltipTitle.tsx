@@ -1,14 +1,17 @@
 import { useToken } from '@chakra-ui/react';
 import * as d3 from 'd3';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { Resolution, RESOLUTION_LABELS } from '../../types';
+import { Resolution, getResolutionLabels } from '../../types';
 
 import ChartTooltipRow from './ChartTooltipRow';
 
 const ChartTooltipTitle = ({ resolution = Resolution.DAY }: { resolution?: Resolution }) => {
+  const { t } = useTranslation();
   const titleColor = useToken('colors', 'yellow.300');
-  const resolutionTitle = RESOLUTION_LABELS.find(({ id }) => id === resolution)?.title || 'day';
+  const resolutionLabels = getResolutionLabels(t);
+  const resolutionTitle = resolutionLabels.find(({ id }) => id === resolution)?.title || t('charts.common.day');
 
   return (
     <ChartTooltipRow lineNum={ 0 }>
@@ -19,7 +22,7 @@ const ChartTooltipTitle = ({ resolution = Resolution.DAY }: { resolution?: Resol
         opacity={ 0 }
         dominantBaseline="hanging"
       >
-        { `Incomplete ${ resolutionTitle.toLowerCase() }` }
+        { t('charts.common.incomplete_resolution', { resolution: resolutionTitle.toLowerCase() }) }
       </text>
     </ChartTooltipRow>
   );

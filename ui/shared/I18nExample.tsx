@@ -19,10 +19,10 @@ const I18nExample: React.FC<I18nExampleProps> = ({ title }) => {
       
       <div style={{ marginBottom: '20px' }}>
         <button onClick={() => changeLanguage('en')} style={{ marginRight: '10px' }}>
-          English
+          {t('common.common.english')}
         </button>
         <button onClick={() => changeLanguage('zh')}>
-          中文
+          {t('common.common.chinese')}
         </button>
       </div>
       

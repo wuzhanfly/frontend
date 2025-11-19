@@ -1,3 +1,10 @@
 {
-  "charts.common.period": "时期"
+  "charts.common.period": "时期",
+  "charts.common.day": "天",
+  "charts.common.week": "周",
+  "charts.common.month": "月",
+  "charts.common.year": "年",
+  "charts.common.incomplete_resolution": "不完整的{{resolution}}",
+  "charts.common.dates": "日期",
+  "charts.common.date": "日期"
 }

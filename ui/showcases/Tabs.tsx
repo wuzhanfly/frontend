@@ -10,11 +10,11 @@ import { Section, Container, SectionHeader, SamplesStack, Sample, SectionSubHead
 const TabsShowcase = () => {
   const { t } = useTranslation();
   const tabs = [
-    { id: 'tab1', title: t('common.common.swaps'), component: <div>Swaps content</div>, count: 10 },
-    { id: 'tab2', title: t('common.common.bridges'), component: <div>Bridges content</div>, count: 0 },
-    { id: 'tab3', title: t('common.common.liquidity_staking'), component: <div>Liquidity staking content</div>, count: 300 },
-    { id: 'tab4', title: t('common.common.lending'), component: <div>Lending content</div>, count: 400 },
-    { id: 'tab5', title: t('common.common.yield_farming'), component: <div>Yield farming content</div> },
+    { id: 'tab1', title: t('common.common.swaps'), component: <div>{t('common.common.swaps_content', 'Swaps content')}</div>, count: 10 },
+    { id: 'tab2', title: t('common.common.bridges'), component: <div>{t('common.common.bridges_content', 'Bridges content')}</div>, count: 0 },
+    { id: 'tab3', title: t('common.common.liquidity_staking'), component: <div>{t('common.common.liquidity_staking_content', 'Liquidity staking content')}</div>, count: 300 },
+    { id: 'tab4', title: t('common.common.lending'), component: <div>{t('common.common.lending_content', 'Lending content')}</div>, count: 400 },
+    { id: 'tab5', title: t('common.common.yield_farming'), component: <div>{t('common.common.yield_farming_content', 'Yield farming content')}</div> },
   ];
 
   return (
@@ -72,7 +72,7 @@ const TabsShowcase = () => {
               outline="1px dashed lightpink"
               leftSlot={ <Box display={{ base: 'none', lg: 'block' }}>{t('common.common.showcase.tabs.left_element')}</Box> }
               leftSlotProps={{ pr: { base: 0, lg: 4 }, color: 'text.secondary' }}
-              rightSlot={ <Box display={{ base: 'none', lg: 'flex' }} justifyContent="space-between"><span>Right element</span><span>🙈</span></Box> }
+              rightSlot={ <Box display={{ base: 'none', lg: 'flex' }} justifyContent="space-between"><span>{t('common.common.right_element', 'Right element')}</span><span>🙈</span></Box> }
               rightSlotProps={{ pl: { base: 0, lg: 4 }, color: 'text.secondary', widthAllocation: 'available' }}
             />
           </Sample>

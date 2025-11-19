@@ -32,7 +32,7 @@ const TableItemActionButtons = ({ onEditClick, onDeleteClick, isLoading }: Props
           <IconSvg name="edit"/>
         </IconButton>
       </Tooltip>
-      <Tooltip content="Delete" disableOnMobile>
+      <Tooltip content={t('common.common.delete')} disableOnMobile>
         <IconButton
           aria-label="delete"
           variant="link"

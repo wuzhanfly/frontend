@@ -3,22 +3,23 @@ import type * as d3 from 'd3';
 export { Resolution } from '@blockscout/stats-types';
 import { Resolution as ResolutionEnum } from '@blockscout/stats-types';
 
-export const RESOLUTION_LABELS: Array<{ id: ResolutionEnum; title: string }> = [
+// 导出国际化函数而不是静态常量
+export const getResolutionLabels = (t: (key: string) => string) => [
   {
     id: ResolutionEnum.DAY,
-    title: 'Day',
+    title: t('charts.common.day'),
   },
   {
     id: ResolutionEnum.WEEK,
-    title: 'Week',
+    title: t('charts.common.week'),
   },
   {
     id: ResolutionEnum.MONTH,
-    title: 'Month',
+    title: t('charts.common.month'),
   },
   {
     id: ResolutionEnum.YEAR,
-    title: 'Year',
+    title: t('charts.common.year'),
   },
 ];
 

@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as bens from '@blockscout/bens-types';
 
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const NameDomainHistory = ({ domain }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
   const domainName = getQueryParamString(router.query.name);
 
@@ -69,7 +71,7 @@ const NameDomainHistory = ({ domain }: Props) => {
     <DataListDisplay
       isError={ isError }
       itemsNum={ data?.items.length }
-      emptyText="There are no events for this domain."
+      emptyText={t('common.common.there_are_no_events_for_this_domain', 'There are no events for this domain.')}
     >
       { content }
     </DataListDisplay>

@@ -1,4 +1,5 @@
-import { chakra } from '@chakra-ui/react';
+import { Box, chakra } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import React from 'react';
 
 import { route } from 'nextjs/routes';
@@ -14,9 +15,13 @@ interface Props extends LinkProps {
   adaptive?: boolean;
 }
 
-const AdvancedFilterLink = ({ query, linkContext, adaptive = true, ...rest }: Props) => {
+const AdvancedFilterLink = React.forwardRef<HTMLAnchorElement, Props>((props, ref) => {
+  const { t } = useTranslation();
+  const { query, linkContext, adaptive, ...rest } = props;
+  
   return (
     <Link
+      ref={ref}
       href={ route({ pathname: '/advanced-filter', query }, linkContext) }
       display="flex"
       alignItems="center"
@@ -25,9 +30,9 @@ const AdvancedFilterLink = ({ query, linkContext, adaptive = true, ...rest }: Pr
       { ...rest }
     >
       <IconSvg name="advanced-filter" boxSize={ 5 }/>
-      <chakra.span hideBelow={ adaptive ? 'lg' : undefined }>Advanced</chakra.span>
+      <chakra.span hideBelow={ adaptive ? 'lg' : undefined }>{t('common.common.advanced')}</chakra.span>
     </Link>
   );
-};
+});
 
 export default React.memo(AdvancedFilterLink);

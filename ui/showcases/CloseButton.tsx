@@ -13,7 +13,7 @@ const CloseButtonShowcase = () => {
       <Section>
         <SectionHeader>{t('common.common.showcase.close_button.variants')}</SectionHeader>
         <SamplesStack>
-          <Sample label="variant: default">
+          <Sample label={t('common.common.variant_default', 'variant: default')}>
             <CloseButton/>
             <CloseButton data-hover/>
             <CloseButton disabled/>
@@ -24,7 +24,7 @@ const CloseButtonShowcase = () => {
       <Section>
         <SectionHeader>{t('common.common.showcase.close_button.size')}</SectionHeader>
         <SamplesStack>
-          <Sample label="size: md">
+          <Sample label={t('common.common.size_md', 'size: md')}>
             <CloseButton size="md" outline="1px dashed lightpink"/>
           </Sample>
         </SamplesStack>

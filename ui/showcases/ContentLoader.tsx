@@ -13,7 +13,7 @@ const ContentLoaderShowcase = () => {
       <Section>
         <SectionHeader>{t('common.common.showcase.content_loader.variants')}</SectionHeader>
         <SamplesStack >
-          <Sample label="default">
+          <Sample label={t('common.common.default', 'default')}>
             <ContentLoader/>
           </Sample>
         </SamplesStack>

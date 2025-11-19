@@ -44,47 +44,47 @@ const LinkShowcase = () => {
     <Container value="link">
 
       <Section title="variants">
-        <SectionHeader>Variants</SectionHeader>
+        <SectionHeader>{t('common.common.variants', 'Variants')}</SectionHeader>
         <SamplesStack>
-          <Sample label="variant: primary">
-            <Link href="/blocks" variant="primary">Default</Link>
-            <Link href="/" variant="primary" data-hover>Hover</Link>
+          <Sample label={t('common.common.variant_primary', 'variant: primary')}>
+            <Link href="/blocks" variant="primary">{t('common.common.default', 'Default')}</Link>
+            <Link href="/" variant="primary" data-hover>{t('common.common.hover', 'Hover')}</Link>
           </Sample>
-          <Sample label="variant: secondary">
-            <Link href="/" variant="secondary">Default</Link>
-            <Link href="/" variant="secondary" data-hover>Hover</Link>
+          <Sample label={t('common.common.variant_secondary', 'variant: secondary')}>
+            <Link href="/" variant="secondary">{t('common.common.default', 'Default')}</Link>
+            <Link href="/" variant="secondary" data-hover>{t('common.common.hover', 'Hover')}</Link>
           </Sample>
-          <Sample label="variant: subtle">
-            <Link href="/" variant="subtle">Default</Link>
-            <Link href="/" variant="subtle" data-hover>Hover</Link>
+          <Sample label={t('common.common.variant_subtle', 'variant: subtle')}>
+            <Link href="/" variant="subtle">{t('common.common.default', 'Default')}</Link>
+            <Link href="/" variant="subtle" data-hover>{t('common.common.hover', 'Hover')}</Link>
           </Sample>
-          <Sample label="variant: navigation">
-            <Link href="/" variant="navigation" p={ 2 } borderRadius="base">Default</Link>
-            <Link href="/" variant="navigation" p={ 2 } borderRadius="base" data-hover>Hover</Link>
-            <Link href="/" variant="navigation" p={ 2 } borderRadius="base" data-selected>Selected</Link>
-            <Link href="/" variant="navigation" p={ 2 } borderRadius="base" data-active>Active</Link>
+          <Sample label={t('common.common.variant_navigation', 'variant: navigation')}>
+            <Link href="/" variant="navigation" p={ 2 } borderRadius="base">{t('common.common.default', 'Default')}</Link>
+            <Link href="/" variant="navigation" p={ 2 } borderRadius="base" data-hover>{t('common.common.hover', 'Hover')}</Link>
+            <Link href="/" variant="navigation" p={ 2 } borderRadius="base" data-selected>{t('common.common.selected', 'Selected')}</Link>
+            <Link href="/" variant="navigation" p={ 2 } borderRadius="base" data-active>{t('common.common.active', 'Active')}</Link>
           </Sample>
-          <Sample label="variant: underlaid">
-            <Link href="/" variant="underlaid" external>Default</Link>
-            <Link href="/" variant="underlaid" external data-hover>Hover</Link>
+          <Sample label={t('common.common.variant_underlaid', 'variant: underlaid')}>
+            <Link href="/" variant="underlaid" external>{t('common.common.default', 'Default')}</Link>
+            <Link href="/" variant="underlaid" external data-hover>{t('common.common.hover', 'Hover')}</Link>
           </Sample>
-          <Sample label="variant: menu">
-            <Link href="/" variant="menu">Default</Link>
-            <Link href="/" variant="menu" data-hover>Hover</Link>
+          <Sample label={t('common.common.variant_menu', 'variant: menu')}>
+            <Link href="/" variant="menu">{t('common.common.default', 'Default')}</Link>
+            <Link href="/" variant="menu" data-hover>{t('common.common.hover', 'Hover')}</Link>
           </Sample>
         </SamplesStack>
       </Section>
 
       <Section title="loading">
-        <SectionHeader>Loading</SectionHeader>
+        <SectionHeader>{t('common.common.loading', 'Loading')}</SectionHeader>
         <SamplesStack>
-          <Sample label="loading: true, variant: primary">
-            <Link href="/" loading>hello hello hello</Link>
-            <span>Within <Link loading>hello</Link> text</span>
+          <Sample label={t('common.common.loading_true_variant_primary', 'loading: true, variant: primary')}>
+            <Link href="/" loading>{t('common.common.hello_hello_hello', 'hello hello hello')}</Link>
+            <span>{t('common.common.within_text', 'Within ')} <Link loading>{t('common.common.hello', 'hello')}</Link> {t('common.common.text', 'text')}</span>
           </Sample>
-          <Sample label="loading: true, variant: underlaid">
-            <Link href="/" loading variant="underlaid">hello hello hello</Link>
-            <span>Within <Link loading variant="underlaid">hello hello</Link> text</span>
+          <Sample label={t('common.common.loading_true_variant_underlaid', 'loading: true, variant: underlaid')}>
+            <Link href="/" loading variant="underlaid">{t('common.common.hello_hello_hello', 'hello hello hello')}</Link>
+            <span>{t('common.common.within_text', 'Within ')} <Link loading variant="underlaid">{t('common.common.hello_hello', 'hello hello')}</Link> {t('common.common.text', 'text')}</span>
           </Sample>
         </SamplesStack>
       </Section>
@@ -223,7 +223,7 @@ const LinkShowcase = () => {
           </Sample>
         </SamplesStack>
 
-        <SectionSubHeader>Link overlay</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.link_overlay', 'Link overlay')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('common.common.internal_link')}>
             <LinkBox p={ 2 } display="flex" flexDirection="column" columnGap={ 2 } borderWidth="1px" borderColor="border.divider" borderRadius="base">

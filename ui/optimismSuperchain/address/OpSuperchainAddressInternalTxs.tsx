@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { MultichainProvider } from 'lib/contexts/multichain';
 import { apos } from 'toolkit/utils/htmlEntities';
@@ -14,6 +15,7 @@ import ChainSelect from 'ui/shared/multichain/ChainSelect';
 import Pagination from 'ui/shared/pagination/Pagination';
 
 const OpSuperchainAddressInternalTxs = () => {
+  const { t } = useTranslation();
   const { hash, query, filterValue, onFilterChange } = useAddressInternalTxsQuery({ enabled: true, isMultichain: true });
   const { data, isPlaceholderData, isError, pagination } = query;
 
@@ -56,8 +58,8 @@ const OpSuperchainAddressInternalTxs = () => {
     <DataListDisplay
       isError={ isError }
       itemsNum={ data?.items.length }
-      filterProps={{ emptyFilteredText: `Couldn${ apos }t find any transaction that matches your query.`, hasActiveFilters: Boolean(filterValue) }}
-      emptyText="There are no internal transactions for this address."
+      filterProps={{ emptyFilteredText: t('common.common.couldnt_find_any_transaction_that_matches_your_query'), hasActiveFilters: Boolean(filterValue) }}
+      emptyText={t('common.common.there_are_no_internal_transactions_for_this_address')}
       showActionBarIfEmpty
       showActionBarIfError
       actionBar={ actionBar }

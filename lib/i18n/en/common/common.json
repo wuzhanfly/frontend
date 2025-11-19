@@ -1092,5 +1092,10 @@
   "common.common.week": "Week",
   "common.common.month": "Month",
   "common.common.year": "Year",
-  "common.common.incomplete_resolution": "Incomplete {{resolution}}"
+  "common.common.incomplete_resolution": "Incomplete {{resolution}}",
+  "common.common.couldnt_find_any_internal_transaction_that_matches_your_query": "Couldn't find any internal transaction that matches your query.",
+  "common.common.couldnt_find_any_contract_that_matches_your_query": "Couldn't find any contract that matches your query.",
+  "common.common.couldnt_find_any_transaction_that_matches_your_query": "Couldn't find any transaction that matches your query.",
+  "common.common.there_are_no_internal_transactions_for_this_address": "There are no internal transactions for this address.",
+  "common.common.couldnt_find_any_token_transfer_that_matches_your_query": "Couldn't find any token transfer that matches your query."
 }

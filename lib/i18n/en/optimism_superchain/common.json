@@ -1,0 +1,5 @@
+{
+  "optimism_superchain.common.source_tx": "Source tx",
+  "optimism_superchain.common.destination_tx": "Destination tx",
+  "optimism_superchain.common.sender_target": "Sender / Target"
+}

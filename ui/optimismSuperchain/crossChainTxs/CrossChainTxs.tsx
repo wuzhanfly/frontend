@@ -31,7 +31,7 @@ const CrossChainTxs = ({ items, isLoading, isError, socketType, tableHeaderTop, 
       emptyText={t('common.common.there_are_no_crosschain_transa')}
     >
       <Box hideFrom="lg">
-        Coming soon 🔜
+        {t('transactions.common.coming_soon_')}
       </Box>
       <Box hideBelow="lg">
         <CrossChainTxsTable

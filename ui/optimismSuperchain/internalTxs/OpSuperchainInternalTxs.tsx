@@ -77,7 +77,7 @@ const OpSuperchainInternalTxs = () => {
         itemsNum={ data?.items.length }
         emptyText={t('common.common.there_are_no_internal_transact')}
         filterProps={{
-          emptyFilteredText: `Couldn${ apos }t find any internal transaction that matches your query.`,
+          emptyFilteredText: t('common.common.couldnt_find_any_internal_transaction_that_matches_your_query'),
           hasActiveFilters: Boolean(searchTerm),
         }}
         actionBar={ actionBar }

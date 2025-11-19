@@ -35,11 +35,11 @@ const Pagination = (props: Props) => {
           onClick={ resetPage }
           disabled={ page === 1 || isLoading }
         >
-          {t('common.common.first')}
+          { t('common.common.first') }
         </Button>
       </Skeleton>
       <IconButton
-        aria-label={t('shared.common.prev_page')}
+        aria-label={ t('shared.common.prev_page') }
         variant="pagination"
         boxSize={ 8 }
         onClick={ onPrevPageClick }
@@ -61,7 +61,7 @@ const Pagination = (props: Props) => {
         { page }
       </Button>
       <IconButton
-        aria-label={t('common.common.next_page')}
+        aria-label={ t('common.common.next_page') }
         variant="pagination"
         boxSize={ 8 }
         onClick={ onNextPageClick }

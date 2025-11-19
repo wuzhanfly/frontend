@@ -55,7 +55,7 @@ const TxType = ({ types, isLoading, ...rest }: Props) => {
       colorPalette = 'orange';
       break;
     case 'rootstock_remasc':
-      label = 'REMASC';
+      label = t('txs.common.remasc');
       colorPalette = 'blue';
       break;
     case 'rootstock_bridge':

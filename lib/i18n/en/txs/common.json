@@ -1,0 +1,19 @@
+{
+  "txs.common.blobs_count": "Blobs: {{count}}",
+  "txs.common.transaction_fee": "Transaction fee",
+  "txs.common.gas_limit_usage": "Gas limit & usage by transaction",
+  "txs.common.gas_fees_gwei": "Gas fees ({{unit}})",
+  "txs.common.txn_type_label": "Txn type: ",
+  "txs.common.nonce_label": "Nonce: ",
+  "txs.common.position_label": "Position: ",
+  "txs.common.more_details": "More details",
+  "txs.common.method_label": "Method ",
+  "txs.common.fee_label": "Fee",
+  "txs.common.base_fee_label": "Base: ",
+  "txs.common.max_fee_label": "Max: ",
+  "txs.common.max_priority_fee_label": "Max priority: ",
+  "txs.common.eip_1559": "EIP-1559",
+  "txs.common.view_all": "view all",
+  "txs.common.remasc": "REMASC",
+  "txs.common.empty_filtered_text": "Couldn't find any transaction that matches your query."
+}

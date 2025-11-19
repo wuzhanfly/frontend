@@ -1,5 +1,5 @@
-import { useTranslation } from 'react-i18next';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TxsSocketType } from './socket/types';
 import type { Transaction, TransactionsSortingField, TransactionsSortingValue } from 'types/api/transaction';
@@ -66,11 +66,11 @@ const TxsTable = ({
             <TableColumnHeader width="48px"></TableColumnHeader>
             { chainData && <TableColumnHeader width="32px"></TableColumnHeader> }
             <TableColumnHeader width="180px">
-              {t('transactions.common.txn_hash')}
+              { t('transactions.common.txn_hash') }
               <TimeFormatToggle/>
             </TableColumnHeader>
-            <TableColumnHeader width="160px">{t('transactions.common.type')}</TableColumnHeader>
-            <TableColumnHeader width="20%">{t('transactions.common.method')}</TableColumnHeader>
+            <TableColumnHeader width="160px">{ t('transactions.common.type') }</TableColumnHeader>
+            <TableColumnHeader width="20%">{ t('transactions.common.method') }</TableColumnHeader>
             { showBlockInfo && (
               onSortToggle ? (
                 <TableColumnHeaderSortable
@@ -79,13 +79,13 @@ const TxsTable = ({
                   sortValue={ sort }
                   onSortToggle={ onSortToggle }
                 >
-                  {t('common.common.block')}
+                  { t('common.common.block') }
                 </TableColumnHeaderSortable>
               ) : (
-                <TableColumnHeader width="18%">{t('common.common.block')}</TableColumnHeader>
+                <TableColumnHeader width="18%">{ t('common.common.block') }</TableColumnHeader>
               )
             ) }
-            <TableColumnHeader width="224px">{t('transactions.common.from_to')}</TableColumnHeader>
+            <TableColumnHeader width="224px">{ t('transactions.common.from_to') }</TableColumnHeader>
             { !config.UI.views.tx.hiddenFields?.value && (
               onSortToggle ? (
                 <TableColumnHeaderSortable
@@ -95,10 +95,10 @@ const TxsTable = ({
                   sortValue={ sort }
                   onSortToggle={ onSortToggle }
                 >
-                  { `Value ${ currencyUnits.ether }` }
+                  { t('transactions.common.value') + ' ' + currencyUnits.ether }
                 </TableColumnHeaderSortable>
               ) : (
-                <TableColumnHeader width="20%" isNumeric>{t('transactions.common.value')}</TableColumnHeader>
+                <TableColumnHeader width="20%" isNumeric>{ t('transactions.common.value') }</TableColumnHeader>
               )
             ) }
             { !config.UI.views.tx.hiddenFields?.tx_fee && (
@@ -111,10 +111,10 @@ const TxsTable = ({
                   sortValue={ sort }
                   onSortToggle={ onSortToggle }
                 >
-                  {t('transactions.common.txn_fee')}
+                  { t('transactions.common.txn_fee') }
                 </TableColumnHeaderSortable>
               ) : (
-                <TableColumnHeader width="20%" isNumeric pr={ 5 }>{t('transactions.common.txn_fee')}</TableColumnHeader>
+                <TableColumnHeader width="20%" isNumeric pr={ 5 }>{ t('transactions.common.txn_fee') }</TableColumnHeader>
               )
             ) }
           </TableRow>

@@ -93,7 +93,7 @@ const OpSuperchainTxsLocal = () => {
         /> },
     {
       id: 'txs_local_pending',
-      title: 'Pending',
+      title: t('common.common.pending_transactions'),
       component: (
         <TxsWithFrontendSorting
           query={ txsPendingQuery }

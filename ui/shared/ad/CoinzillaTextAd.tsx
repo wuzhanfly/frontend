@@ -39,14 +39,21 @@ const CoinzillaTextAd = ({ className }: { className?: string }) => {
       fetch('https://request-global.czilladx.com/serve/native.php?z=19260bf627546ab7242')
         .then(res => res.status === 200 ? res.json() : null)
         .then((_data) => {
-          const data = _data as AdData;
-          setAdData(data);
-          if (data?.ad?.impressionUrl) {
-            fetch(data.ad.impressionUrl);
+          if (_data) {
+            const data = _data as AdData;
+            setAdData(data);
+            if (data?.ad?.impressionUrl) {
+              // Also track impression with error handling
+              fetch(data.ad.impressionUrl).catch(error => {
+                console.error('Failed to track ad impression:', error);
+              });
+            }
           }
         })
+        .catch(error => {
+          console.error('Failed to fetch ad data:', error);
+        })
         .finally(() => {
-          // setAdData(MOCK);
           setIsLoading(false);
         });
     }
@@ -86,10 +93,10 @@ const CoinzillaTextAd = ({ className }: { className?: string }) => {
         mr={ 3 }
         display={{ base: 'none', lg: 'inline' }}
       >
-        Ads:
+        {t('shared.common.ads_label')}
       </Text>
       { urlObject.hostname === 'nifty.ink' ?
-        <Text as="span" mr={ 1 }>🎨</Text> : (
+        <Text as="span" mr={ 1 }>{t('shared.common.nifty_ink_emoji')}</Text> : (
           <Image
             src={ adData.ad.thumbnail }
             width="20px"

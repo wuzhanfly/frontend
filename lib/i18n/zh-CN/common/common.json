@@ -1092,5 +1092,10 @@
   "common.common.week": "周",
   "common.common.month": "月",
   "common.common.year": "年",
-  "common.common.incomplete_resolution": "不完整的 {{resolution}}"
+  "common.common.incomplete_resolution": "不完整的 {{resolution}}",
+  "common.common.couldnt_find_any_internal_transaction_that_matches_your_query": "找不到与您的查询匹配的内部交易。",
+  "common.common.couldnt_find_any_contract_that_matches_your_query": "找不到与您的查询匹配的合约。",
+  "common.common.couldnt_find_any_transaction_that_matches_your_query": "找不到与您的查询匹配的交易。",
+  "common.common.there_are_no_internal_transactions_for_this_address": "此地址没有内部交易。",
+  "common.common.couldnt_find_any_token_transfer_that_matches_your_query": "找不到与您的查询匹配的代币转账。"
 }

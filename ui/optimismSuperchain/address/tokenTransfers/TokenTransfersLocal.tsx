@@ -110,7 +110,7 @@ const TokenTransfersLocal = ({ query, filters, addressHash, onTypeFilterChange, 
       itemsNum={ data?.items?.length }
       emptyText={t('transactions.common.there_are_no_token_transfers')}
       filterProps={{
-        emptyFilteredText: `Couldn${ apos }t find any token transfer that matches your query.`,
+        emptyFilteredText: t('common.common.couldnt_find_any_token_transfer_that_matches_your_query'),
         hasActiveFilters: Boolean(numActiveFilters),
       }}
       actionBar={ actionBar }

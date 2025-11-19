@@ -107,7 +107,7 @@ const OpSuperchainVerifiedContracts = () => {
           itemsNum={ data?.items.length }
           emptyText={t('common.common.there_are_no_verified_contract')}
           filterProps={{
-            emptyFilteredText: `Couldn${ apos }t find any contract that matches your query.`,
+            emptyFilteredText: t('common.common.couldnt_find_any_contract_that_matches_your_query'),
             hasActiveFilters: Boolean(searchTerm || type),
           }}
           actionBar={ actionBar }

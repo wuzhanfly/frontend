@@ -1,0 +1,5 @@
+{
+  "optimism_superchain.common.source_tx": "源交易",
+  "optimism_superchain.common.destination_tx": "目标交易",
+  "optimism_superchain.common.sender_target": "发送方/目标"
+}

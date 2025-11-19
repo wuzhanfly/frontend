@@ -20,6 +20,8 @@ const PopoverFilterRadio = ({ name, hasActiveFilter, collection, isLoading, onCh
     onChange(value[0]);
   }, [ onChange ]);
 
+  console.log('collection.items: ',collection.items)
+
   return (
     <SelectRoot
       name={ name }

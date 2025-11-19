@@ -1,6 +1,6 @@
-import { HStack, Flex, } from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
+import { HStack, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Transaction } from 'types/api/transaction';
 import type { ChainConfig } from 'types/multichain';
@@ -76,7 +76,7 @@ const TxsListItem = ({ tx, isLoading, showBlockInfo, currentAddress, enableTimeI
       </Flex>
       { tx.method && (
         <Flex mt={ 3 }>
-          <Skeleton loading={ isLoading } display="inline-block" whiteSpace="pre">Method </Skeleton>
+          <Skeleton loading={ isLoading } display="inline-block" whiteSpace="pre">{ t('txs.common.method_label') }</Skeleton>
           <Skeleton
             loading={ isLoading }
             color="text.secondary"
@@ -90,7 +90,7 @@ const TxsListItem = ({ tx, isLoading, showBlockInfo, currentAddress, enableTimeI
       ) }
       { showBlockInfo && tx.block_number !== null && (
         <Flex mt={ 2 }>
-          <Skeleton loading={ isLoading } display="inline-block" whiteSpace="pre">{t('common.common.block')} </Skeleton>
+          <Skeleton loading={ isLoading } display="inline-block" whiteSpace="pre">{ t('common.common.block') } </Skeleton>
           <BlockEntity
             isLoading={ isLoading }
             number={ tx.block_number }
@@ -108,7 +108,7 @@ const TxsListItem = ({ tx, isLoading, showBlockInfo, currentAddress, enableTimeI
       />
       { !config.UI.views.tx.hiddenFields?.value && (
         <Flex mt={ 2 } columnGap={ 2 }>
-          <Skeleton loading={ isLoading } display="inline-block" whiteSpace="pre">{t('common.common.value')}</Skeleton>
+          <Skeleton loading={ isLoading } display="inline-block" whiteSpace="pre">{ t('common.common.value') }</Skeleton>
           <Skeleton loading={ isLoading } display="inline-block" color="text.secondary" whiteSpace="pre">
             <span>
               { getValueWithUnit(tx.value).toFormat() }
@@ -119,10 +119,10 @@ const TxsListItem = ({ tx, isLoading, showBlockInfo, currentAddress, enableTimeI
         </Flex>
       ) }
       { !config.UI.views.tx.hiddenFields?.tx_fee && (
-        <Flex mt={ 2 } mb={ 3 } columnGap={ 2 }>
+        <Flex mt={ 2 } columnGap={ 2 }>
           { (tx.stability_fee !== undefined || tx.fee.value !== null) && (
             <>
-              <Skeleton loading={ isLoading } display="inline-block" whiteSpace="pre">Fee</Skeleton>
+              <Skeleton loading={ isLoading } display="inline-block" whiteSpace="pre">{ t('txs.common.fee_label') }</Skeleton>
               <TxFee tx={ tx } isLoading={ isLoading }/>
             </>
           ) }

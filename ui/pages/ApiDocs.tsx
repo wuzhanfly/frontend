@@ -29,7 +29,7 @@ const ApiDocs = () => {
       <PageTitle
         title={ config.meta.seo.enhancedDataEnabled ? `${ config.chain.name } API documentation` : t('common.common.api_documentation') }
       />
-      { tabs.length > 0 ? <RoutedTabs tabs={ tabs }/> : <Text>No API documentation available</Text> }
+      { tabs.length > 0 ? <RoutedTabs tabs={ tabs }/> : <Text>{t('common.common.no_api_documentation_available')}</Text> }
     </>
   );
 };

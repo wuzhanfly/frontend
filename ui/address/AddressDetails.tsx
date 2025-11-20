@@ -106,7 +106,7 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
             <DetailedInfo.ItemLabel
               hint={ t('addresses.common.short_identifier_of_an_address') }
             >
-              ID
+              {t('addresses.common.id')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               <Text>{ data.filecoin.id }</Text>
@@ -120,7 +120,7 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
             <DetailedInfo.ItemLabel
               hint={ t('addresses.common.identifies_the_purpose_and_beh') }
             >
-              Actor
+              {t('addresses.common.actor')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               <FilecoinActorTag actorType={ data.filecoin.actor_type }/>
@@ -133,7 +133,7 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
             <DetailedInfo.ItemLabel
               hint={ t('addresses.common.0xstyle_address_to_which_the_f') }
             >
-              Ethereum Address
+              {t('addresses.common.ethereum_address')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue flexWrap="nowrap">
               <AddressEntity
@@ -153,7 +153,7 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
               hint={ t('addresses.common.transaction_and_address_of_cre') }
               isLoading={ isLoading }
             >
-              Creator
+              {t('addresses.common.creator')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               <AddressEntity
@@ -182,7 +182,7 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
             <DetailedInfo.ItemLabel
               hint={ t('addresses.common.all_tokens_in_the_account_and_') }
             >
-              Tokens
+              {t('addresses.common.tokens_label')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue py={ addressQuery.data ? 0 : undefined }>
               { addressQuery.data ? <TokenSelect/> : <Box>0</Box> }

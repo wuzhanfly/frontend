@@ -11,11 +11,11 @@ const TooltipShowcase = () => {
   return (
     <Container value="tooltip">
       <Section>
-        <SectionHeader>Variant</SectionHeader>
+        <SectionHeader>{t('common.common.variant', 'Variant')}</SectionHeader>
         <SamplesStack>
           <Sample label="variant: regular">
             <Tooltip content={t('common.common.tooltip_content')}>
-              <span>Default</span>
+              <span>{t('common.common.default', 'Default')}</span>
             </Tooltip>
             <Tooltip content={t('common.common.tooltip_content')} interactive>
               <Utilization value={ 0.5 }/>
@@ -23,7 +23,7 @@ const TooltipShowcase = () => {
           </Sample>
           <Sample label="variant: popover">
             <Tooltip content={t('common.common.tooltip_content')} variant="popover">
-              <span>Default</span>
+              <span>{t('common.common.default', 'Default')}</span>
             </Tooltip>
           </Sample>
         </SamplesStack>

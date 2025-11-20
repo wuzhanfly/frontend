@@ -90,9 +90,9 @@ const LinkShowcase = () => {
       </Section>
 
       <Section>
-        <SectionHeader>Examples</SectionHeader>
+        <SectionHeader>{t('common.common.examples', 'Examples')}</SectionHeader>
 
-        <SectionSubHeader>Address link</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.address_link', 'Address link')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('common.common.without_name')} vertical>
             <AddressEntity address={ addressMock.withoutName }/>
@@ -123,7 +123,7 @@ const LinkShowcase = () => {
           </Sample>
         </SamplesStack>
 
-        <SectionSubHeader>Token link</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.token_link', 'Token link')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('common.common.with_info')} vertical w="100%">
             <TokenEntity token={ TOKEN }/>
@@ -147,7 +147,7 @@ const LinkShowcase = () => {
           </Sample>
         </SamplesStack>
 
-        <SectionSubHeader>Transaction link</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.transaction_link', 'Transaction link')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('validators.common.default')} vertical w="100%">
             <TxEntity hash={ txMock.base.hash }/>
@@ -159,7 +159,7 @@ const LinkShowcase = () => {
           </Sample>
         </SamplesStack>
 
-        <SectionSubHeader>Block link</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.block_link', 'Block link')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('validators.common.default')} vertical w="100%">
             <BlockEntity number={ blockMock.base.height }/>
@@ -171,7 +171,7 @@ const LinkShowcase = () => {
           </Sample>
         </SamplesStack>
 
-        <SectionSubHeader>NFT link</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.nft_link', 'NFT link')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('validators.common.default')} vertical w="100%">
             <NftEntity id="42" hash={ TOKEN.address_hash }/>
@@ -182,7 +182,7 @@ const LinkShowcase = () => {
           </Sample>
         </SamplesStack>
 
-        <SectionSubHeader>ENS link</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.ens_link', 'ENS link')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('validators.common.default')} vertical w="100%">
             <EnsEntity domain={ ensMock.ensDomainA.name } protocol={ ensMock.ensDomainA.protocol }/>
@@ -197,7 +197,7 @@ const LinkShowcase = () => {
           </Sample>
         </SamplesStack>
 
-        <SectionSubHeader>Blob link</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.blob_link', 'Blob link')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('validators.common.default')} vertical w="100%">
             <BlobEntity hash={ blobsMock.base1.hash }/>
@@ -208,7 +208,7 @@ const LinkShowcase = () => {
           </Sample>
         </SamplesStack>
 
-        <SectionSubHeader>Pool link</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.pool_link', 'Pool link')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('validators.common.default')} vertical w="100%">
             <PoolEntity pool={{

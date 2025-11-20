@@ -57,13 +57,13 @@ const ContractAbi = ({ abi, addressHash, sourceAddress, tab, visibleItems }: Pro
   return (
     <div>
       <Flex mb={ 3 }>
-        <Box fontWeight={ 500 } mr="auto">Contract information</Box>
+        <Box fontWeight={ 500 } mr="auto">{ t('addresses.common.contract_information') }</Box>
         { abi.length > 1 && (
           <Link onClick={ handleExpandAll } variant="secondary">
             { expandedSections.length === abi.length ? t('addresses.common.collapse') : t('addresses.common.expand') } all
           </Link>
         ) }
-        <Link onClick={ handleReset } ml={ 3 } variant="secondary">Reset</Link>
+        <Link onClick={ handleReset } ml={ 3 } variant="secondary">{ t('common.common.reset') }</Link>
       </Flex>
       <AccordionRoot multiple lazyMount position="relative" onValueChange={ handleAccordionStateChange } value={ expandedSections }>
         { abi.map((item, index) => (
@@ -83,16 +83,17 @@ const ContractAbi = ({ abi, addressHash, sourceAddress, tab, visibleItems }: Pro
       </AccordionRoot>
       { !hasVisibleItems && (
         <div>
-          <div>Couldn{ apos }t find any method that matches your query.</div>
+          <div>{ t('addresses.common.couldnt_find_any_method_that_matches_your_query') }</div>
           <div>
-            You can use custom ABI for this contract without verifying the contract in the{ ' ' }
+            { t('addresses.common.you_can_use_custom_abi_for_this_contract_without_verifying_the_contract_in_the') }
+            { ' ' }
             <Link
               href={ route({ pathname: '/address/[hash]', query: { hash: addressHash, tab: 'read_write_custom_methods' } }) }
               scroll={ false }
             >
-              Custom ABI
+              { t('addresses.common.custom_abi') }
             </Link>
-            { ' ' }tab.
+            { ' ' }{ t('addresses.common.tab') }.
           </div>
         </div>
       ) }

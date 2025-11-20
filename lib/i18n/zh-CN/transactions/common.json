@@ -176,5 +176,8 @@
   "transactions.common.list_of_tokens_transferred_in_": "转账代币列表",
   "transactions.common.total_zetachain_cross_chain_txns": "ZetaChain 跨链交易总数",
   "transactions.common.pending_zetachain_cross_chain_txns": "ZetaChain 跨链交易待处理数",
-  "transactions.common.new_zetachain_cross_chain_txns_24h": "ZetaChain 跨链交易数 (24小时)"
+  "transactions.common.new_zetachain_cross_chain_txns_24h": "ZetaChain 跨链交易数 (24小时)",
+  "transactions.common.revert_reason": "回退原因",
+  "transactions.common.gas_fees_gwei": "Gas 费用 ({{currency}})",
+  "transactions.common.blob_gas_fees_gwei": "Blob Gas 费用 ({{currency}})"
 }

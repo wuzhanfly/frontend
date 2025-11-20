@@ -222,5 +222,9 @@
   "addresses.common.external_chain_logo": "external chain logo",
   "addresses.common.address_on_ton": "Address on TON",
   "addresses.common.scheduled_tasks": "Scheduled Tasks",
-  "addresses.common.tokenscommonerc20": "Tokenscommonerc20"
+  "addresses.common.tokenscommonerc20": "Tokenscommonerc20",
+  "addresses.common.id": "ID",
+  "addresses.common.actor": "Actor",
+  "addresses.common.ethereum_address": "Ethereum Address",
+  "addresses.common.tokens_label": "Tokens"
 }

@@ -1,6 +1,7 @@
 import { Box, Text, Icon } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import solidityScanIcon from 'icons-components/brands/SolidityScan';
 import useFetchReport from 'lib/solidityScan/useFetchReport';
@@ -16,6 +17,7 @@ interface Props {
 
 const SolidityscanReport = ({ hash }: Props) => {
 
+  const { t } = useTranslation();
   const { data, isPlaceholderData, isError } = useFetchReport({ hash });
 
   if (isError || !data) {
@@ -41,18 +43,18 @@ const SolidityscanReport = ({ hash }: Props) => {
       <PopoverContent w={{ base: '100vw', lg: '328px' }}>
         <PopoverBody textStyle="sm">
           <Box mb={ 5 } lineHeight="25px">
-            Contract analyzed for 240+ vulnerability patterns by
+            { t('addresses.common.contract_analyzed_for_vulnerability_patterns_by') }
             <Icon as={ solidityScanIcon } mr={ 1 } ml="6px" w="23px" h="20px" display="inline-block" verticalAlign="middle"/>
             <Text fontWeight={ 600 } display="inline-block">SolidityScan</Text>
           </Box>
           <SolidityscanReportScore score={ score } mb={ 5 }/>
           { vulnerabilities && vulnerabilitiesCount > 0 && (
             <Box mb={ 5 }>
-              <Text py="7px" color="text.secondary" textStyle="xs" fontWeight={ 500 }>Vulnerabilities distribution</Text>
+              <Text py="7px" color="text.secondary" textStyle="xs" fontWeight={ 500 }>{ t('addresses.common.vulnerabilities_distribution') }</Text>
               <SolidityscanReportDetails vulnerabilities={ vulnerabilities } vulnerabilitiesCount={ vulnerabilitiesCount }/>
             </Box>
           ) }
-          <Link href={ data.scan_report.scanner_reference_url } external>View full report</Link>
+          <Link href={ data.scan_report.scanner_reference_url } external>{ t('addresses.common.view_full_report') }</Link>
         </PopoverBody>
       </PopoverContent>
     </PopoverRoot>

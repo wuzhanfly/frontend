@@ -100,7 +100,7 @@ const BadgeShowcase = () => {
         </SamplesStack>
       </Section>
       <Section>
-        <SectionHeader>Examples</SectionHeader>
+        <SectionHeader>{t('common.common.examples', 'Examples')}</SectionHeader>
         <SectionSubHeader>{t('common.common.status_tag_statustag', 'Status tag (StatusTag)')}</SectionSubHeader>
         <SamplesStack>
           <Sample label="status: ok">

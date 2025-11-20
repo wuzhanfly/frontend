@@ -176,5 +176,8 @@
   "transactions.common.list_of_tokens_transferred_in_": "List Of Tokens Transferred In ",
   "transactions.common.total_zetachain_cross_chain_txns": "Total ZetaChain cross-chain txns",
   "transactions.common.pending_zetachain_cross_chain_txns": "Pending ZetaChain cross-chain txns",
-  "transactions.common.new_zetachain_cross_chain_txns_24h": "New ZetaChain cross-chain txns (24h)"
+  "transactions.common.new_zetachain_cross_chain_txns_24h": "New ZetaChain cross-chain txns (24h)",
+  "transactions.common.revert_reason": "Revert reason",
+  "transactions.common.gas_fees_gwei": "Gas fees ({{currency}})",
+  "transactions.common.blob_gas_fees_gwei": "Blob gas fees ({{currency}})"
 }

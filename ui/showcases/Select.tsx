@@ -112,14 +112,14 @@ const SelectShowcase = () => {
           </Sample>
         </SamplesStack>
 
-        <SectionSubHeader>Sort component</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.sort_component', 'Sort component')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('validators.common.default')} vertical>
             <Sort collection={ txSortingOptions } onChange={ noop }/>
           </Sample>
         </SamplesStack>
 
-        <SectionSubHeader>Filter components</SectionSubHeader>
+        <SectionSubHeader>{t('common.common.filter_components', 'Filter components')}</SectionSubHeader>
         <SamplesStack>
           <Sample label={t('validators.common.default')} vertical>
             <PopoverFilterRadio

@@ -62,7 +62,7 @@ const GasTrackerPriceSnippet = ({ data, type, isLoading }: Props) => {
       <Skeleton loading={ isLoading } fontSize="sm" color="text.secondary" mt={ 3 } w="fit-content">
         { data.price !== null && data.fiat_price !== null && <GasPrice data={ data } prefix={ `${ asymp } ` } unitMode="secondary"/> }
         <span> {t('gas_tracker.common.per_transaction')}</span>
-        { typeof data.time === 'number' && data.time > 0 && <span> / { (data.time / SECOND).toLocaleString(undefined, { maximumFractionDigits: 1 }) }s</span> }
+        { typeof data.time === 'number' && data.time > 0 && <span> / { (data.time / SECOND).toLocaleString(undefined, { maximumFractionDigits: 1 }) } {t('gas_tracker.common.seconds_short')}</span> }
       </Skeleton>
       <Skeleton loading={ isLoading } fontSize="sm" color="text.secondary" mt={ 2 } w="fit-content" whiteSpace="pre">
         { typeof data.base_fee === 'number' && <span>{t('gas_tracker.common.base')} { data.base_fee.toLocaleString(undefined, { maximumFractionDigits: 0 }) }</span> }

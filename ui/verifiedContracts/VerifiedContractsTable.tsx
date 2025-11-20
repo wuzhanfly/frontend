@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { VerifiedContract } from 'types/api/contracts';
 import type { VerifiedContractsSortingField, VerifiedContractsSortingValue } from 'types/api/verifiedContracts';
@@ -22,6 +23,7 @@ interface Props {
 }
 
 const VerifiedContractsTable = ({ data, sort, setSorting, isLoading }: Props) => {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
   const chainData = getChainDataForList(multichainContext);
 
@@ -35,7 +37,7 @@ const VerifiedContractsTable = ({ data, sort, setSorting, isLoading }: Props) =>
       <TableHeaderSticky top={ ACTION_BAR_HEIGHT_DESKTOP }>
         <TableRow>
           { chainData && <TableColumnHeader width="38px"/> }
-          <TableColumnHeader width="50%">Contract</TableColumnHeader>
+          <TableColumnHeader width="50%">{ t('common.common.contract') }</TableColumnHeader>
           <TableColumnHeaderSortable
             width="130px"
             isNumeric
@@ -44,7 +46,7 @@ const VerifiedContractsTable = ({ data, sort, setSorting, isLoading }: Props) =>
             onSortToggle={ onSortToggle }
             disabled={ isLoading }
           >
-            Balance { currencyUnits.ether }
+            { t('common.common.balance') } { currencyUnits.ether }
           </TableColumnHeaderSortable>
           <TableColumnHeaderSortable
             width="130px"
@@ -54,15 +56,15 @@ const VerifiedContractsTable = ({ data, sort, setSorting, isLoading }: Props) =>
             onSortToggle={ onSortToggle }
             disabled={ isLoading }
           >
-            Txs
+            { t('common.common.transactions') }
           </TableColumnHeaderSortable>
-          <TableColumnHeader width="50%">Language / Compiler version</TableColumnHeader>
-          <TableColumnHeader width="80px">Settings</TableColumnHeader>
+          <TableColumnHeader width="50%">{ t('common.common.language_compiler_version') }</TableColumnHeader>
+          <TableColumnHeader width="80px">{ t('common.common.settings') }</TableColumnHeader>
           <TableColumnHeader width="200px">
-            Verified
+            { t('common.common.verified') }
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader width="130px">License</TableColumnHeader>
+          <TableColumnHeader width="130px">{ t('common.common.license') }</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

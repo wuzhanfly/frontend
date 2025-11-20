@@ -78,7 +78,7 @@ export const ContractSourceCode = ({ data, isLoading, sourceAddress }: Props) =>
         loading={ isLoading }
       >
         <Skeleton loading={ isLoading }>
-          View UML diagram
+          { t('addresses.common.view_uml_diagram') }
         </Skeleton>
       </Link>
     </Tooltip>

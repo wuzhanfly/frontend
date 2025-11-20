@@ -117,15 +117,15 @@ const BlockDetails = ({ query }: Props) => {
     const { t } = useTranslation();
     const blockTxsNum = (
       <Link href={ route({ pathname: '/block/[height_or_hash]', query: { height_or_hash: heightOrHash, tab: 'txs' } }, multichainContext) }>
-        { data.transactions_count } txn{ data.transactions_count === 1 ? '' : 's' }
-      </Link>
+          { data.transactions_count } {t('common.common.transaction')}{ data.transactions_count === 1 ? '' : 's' }
+        </Link>
     );
 
     const blockBlobTxsNum = (config.features.dataAvailability.isEnabled && data.blob_transaction_count) ? (
       <>
         <span> including </span>
         <Link href={ route({ pathname: '/block/[height_or_hash]', query: { height_or_hash: heightOrHash, tab: 'blob_txs' } }, multichainContext) }>
-          { data.blob_transaction_count } blob txn{ data.blob_transaction_count === 1 ? '' : 's' }
+          { data.blob_transaction_count } {t('common.common.blob_transaction')}{ data.blob_transaction_count === 1 ? '' : 's' }
         </Link>
       </>
     ) : null;

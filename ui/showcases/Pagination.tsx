@@ -34,7 +34,7 @@ const PaginationShowcase = () => {
   return (
     <Container value="pagination">
       <Section>
-        <SectionHeader>Examples</SectionHeader>
+        <SectionHeader>{t('common.common.examples', 'Examples')}</SectionHeader>
 
         <SectionSubHeader>{t('common.common.list_pagination', 'List pagination')}</SectionSubHeader>
         <SamplesStack>

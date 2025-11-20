@@ -219,5 +219,9 @@
   "addresses.common.external_chain_logo": "外部链标志",
   "addresses.common.address_on_ton": "TON 上的地址",
   "addresses.common.scheduled_tasks": "定时任务",
-  "addresses.common.tokenscommonerc20": "代币ERC20"
+  "addresses.common.tokenscommonerc20": "代币ERC20",
+  "addresses.common.id": "ID",
+  "addresses.common.actor": "参与者",
+  "addresses.common.ethereum_address": "以太坊地址",
+  "addresses.common.tokens_label": "代币"
 }

@@ -65,7 +65,7 @@ const Tokens = ({ query, onSortChange, sort, actionBar, description, hasActiveFi
       itemsNum={ data?.items.length }
       emptyText={t('tokens.common.there_are_no_tokens')}
       filterProps={{
-        emptyFilteredText: `Couldn${ apos }t find token that matches your filter query.`,
+        emptyFilteredText: t('tokens.common.couldnt_find_token_that_matches_your_filter_query'),
         hasActiveFilters,
       }}
       actionBar={ query.pagination.isVisible || hasActiveFilters ? actionBar : null }

@@ -75,7 +75,7 @@ const TagShowcase = () => {
       </Section>
 
       <Section>
-        <SectionHeader>Examples</SectionHeader>
+        <SectionHeader>{t('common.common.examples', 'Examples')}</SectionHeader>
         <SectionSubHeader>{t('common.common.showcase.tag.public_tags')}</SectionSubHeader>
         <SamplesStack>
           <Sample>

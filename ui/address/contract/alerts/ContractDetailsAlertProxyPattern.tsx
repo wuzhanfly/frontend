@@ -31,7 +31,7 @@ const ContractCodeProxyPattern = ({ type, isLoading }: Props) => {
     eip1822: {
       name: 'EIP-1822',
       link: 'https://eips.ethereum.org/EIPS/eip-1822',
-      description: 'Universal upgradeable proxy standard (UUPS)',
+      description: t('addresses.common.universal_upgradeable_proxy_standard_uups'),
     },
     eip2535: {
       name: 'EIP-2535',
@@ -52,7 +52,7 @@ const ContractCodeProxyPattern = ({ type, isLoading }: Props) => {
       name: 'ResolvedDelegateProxy',
       // eslint-disable-next-line max-len
       link: 'https://github.com/ethereum-optimism/optimism/blob/9580179013a04b15e6213ae8aa8d43c3f559ed9a/packages/contracts-bedrock/src/legacy/ResolvedDelegateProxy.sol',
-      description: 'OP stack: legacy proxy contract that makes use of the AddressManager to resolve the implementation address',
+      description: t('addresses.common.op_stack_legacy_proxy_contract'),
     },
     clone_with_immutable_arguments: {
       name: t('addresses.common.clones_with_immutable_argument'),
@@ -67,10 +67,10 @@ const ContractCodeProxyPattern = ({ type, isLoading }: Props) => {
       link: 'https://github.com/compound-finance/compound-protocol',
     },
     basic_implementation: {
-      name: 'public implementation() getter',
+      name: t('addresses.common.public_implementation_getter'),
     },
     basic_get_implementation: {
-      name: 'public getImplementation() getter',
+      name: t('addresses.common.public_get_implementation_getter'),
     },
     unknown: {
       name: t('addresses.common.unknown_proxy_pattern'),
@@ -87,12 +87,12 @@ const ContractCodeProxyPattern = ({ type, isLoading }: Props) => {
     <Alert status="warning" whiteSpace="pre-wrap" loading={ isLoading }>
       { proxyInfo.link ? (
         <>
-          This proxy smart-contract is detected via <Link href={ proxyInfo.link } external>{ proxyInfo.name }</Link>
+          { t('addresses.common.this_proxy_smart_contract_is_detected_via') } <Link href={ proxyInfo.link } external>{ proxyInfo.name }</Link>
           { proxyInfo.description && ` - ${ proxyInfo.description }` }
         </>
       ) : (
         <>
-          This proxy smart-contract is detected via { proxyInfo.name }
+          { t('addresses.common.this_proxy_smart_contract_is_detected_via') } { proxyInfo.name }
           { proxyInfo.description && ` - ${ proxyInfo.description }` }
         </>
       ) }

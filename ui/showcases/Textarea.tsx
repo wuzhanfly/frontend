@@ -16,7 +16,7 @@ const TextareaShowcase = () => {
   return (
     <Container value="textarea">
       <Section>
-        <SectionHeader>Variant</SectionHeader>
+        <SectionHeader>{t('common.common.variant', 'Variant')}</SectionHeader>
         <SamplesStack >
           <Sample label="variant: outline" w="360px">
             <Field label={t('common.common.description')} required floating size="2xl">

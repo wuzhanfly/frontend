@@ -70,10 +70,11 @@ const ContractExternalLibraries = ({ className, data, isLoading }: Props) => {
 
   const content = (
     <>
-      <Heading size="sm" level="3">External libraries ({ data.length })</Heading>
+      <Heading size="sm" level="3">{ t('addresses.common.external_libraries') } ({ data.length })</Heading>
       <Alert status="warning" mt={ 4 }>
-        The linked library{ apos }s source code may not be the real one.
-        Check the source code at the library address (if any) if you want to be sure in case if there is any library linked
+        { t('addresses.common.the_linked_libraries_source_code_may_not_be_the_real_one') }
+        { ' ' }
+        { t('addresses.common.check_the_source_code_at_the_library_address') }
       </Alert>
       <VStack
         separator={ <Separator/> }

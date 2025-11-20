@@ -1,0 +1,103 @@
+# ****************************
+# *** STAGE 1: Dependencies ***
+# ****************************
+FROM node:22.11.0-alpine AS deps
+# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+RUN apk add --no-cache libc6-compat python3 make g++ bash git && \
+    corepack enable && \
+    corepack prepare yarn@4.10.3 --activate
+
+# 设置工作目录
+WORKDIR /app
+
+# 写入 .yarnrc.yml，保证 Yarn 使用国内镜像，vanilla-extract 使用官方源
+RUN echo "nodeLinker: node-modules" > .yarnrc.yml && \
+    echo "npmRegistryServer: \"https://registry.npmmirror.com\"" >> .yarnrc.yml && \
+    echo "enableTelemetry: false" >> .yarnrc.yml && \
+    echo "enableImmutableInstalls: true" >> .yarnrc.yml && \
+    echo "npmScopes:" >> .yarnrc.yml && \
+    echo "  vanilla-extract:" >> .yarnrc.yml && \
+    echo "    npmRegistryServer: \"https://registry.yarnpkg.com\"" >> .yarnrc.yml
+
+### APP
+# Install dependencies
+COPY package.json yarn.lock tsconfig.json ./
+COPY types ./types
+COPY lib ./lib
+COPY configs/app ./configs/app
+COPY toolkit/theme ./toolkit/theme
+COPY toolkit/utils ./toolkit/utils
+COPY toolkit/components/forms/validators/url.ts ./toolkit/components/forms/validators/url.ts
+RUN yarn install --network-timeout 200000 --immutable
+
+# *****************************
+# ****** STAGE 2: Build *******
+# *****************************
+FROM node:22.11.0-alpine AS builder
+RUN apk add --no-cache --upgrade libc6-compat bash jq && \
+    corepack enable && \
+    corepack prepare yarn@4.10.3 --activate
+
+# pass build args to env variables
+ARG GIT_COMMIT_SHA
+ENV NEXT_PUBLIC_GIT_COMMIT_SHA=$GIT_COMMIT_SHA
+ARG GIT_TAG
+ENV NEXT_PUBLIC_GIT_TAG=$GIT_TAG
+ARG NEXT_OPEN_TELEMETRY_ENABLED
+ENV NEXT_OPEN_TELEMETRY_ENABLED=$NEXT_OPEN_TELEMETRY_ENABLED
+
+ENV NODE_ENV=production
+
+### APP
+# Copy dependencies and source code
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+# Build SVG sprite and generate .env.registry with ENVs list and save build args into .env file
+RUN set -a && \
+    source ./deploy/scripts/build_sprite.sh && \
+    ./deploy/scripts/collect_envs.sh ./docs/ENVS.md && \
+    set +a
+
+# Build app for production
+ENV NODE_OPTIONS="--max-old-space-size=4096"
+RUN NEXT_LINT=false yarn build
+
+# *****************************
+# ******* STAGE 3: Run ********
+# *****************************
+# Production image, copy all the files and run next
+FROM gcr.io/distroless/nodejs22-debian12 AS runner
+
+WORKDIR /app
+
+# Copy only the necessary files for production
+COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/package.json ./
+
+# Note: We don't copy shell scripts as distroless doesn't have a shell
+# Environment validation should be done before running the container
+
+# Copy ENVs files
+COPY --from=builder /app/.env.registry .
+COPY --from=builder /app/.env .
+
+# Copy ENVs presets
+ARG ENVS_PRESET
+ENV ENVS_PRESET=$ENVS_PRESET
+COPY ./configs/envs ./configs/envs
+
+# Automatically leverage output traces to reduce image size
+# https://nextjs.org/docs/advanced-features/output-file-tracing
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+
+ENTRYPOINT ["node", "server.js"]
+
+EXPOSE 3000
+
+ENV PORT=3000
+
+CMD ["server.js"]

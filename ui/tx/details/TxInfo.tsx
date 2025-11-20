@@ -283,7 +283,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
           <DetailedInfo.ItemLabel
             hint={t('transactions.common.the_revert_reason_of_the_trans')}
           >
-            Revert reason
+            {t('transactions.common.revert_reason')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue flexWrap="wrap" mt={{ base: '5px', lg: '4px' }}>
             <TxRevertReason { ...data.revert_reason }/>
@@ -750,7 +750,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
           ` }
             isLoading={ isLoading }
           >
-            { `Gas fees (${ currencyUnits.gwei })` }
+            {t('transactions.common.gas_fees_gwei', { currency: currencyUnits.gwei })}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue multiRow>
             { data.base_fee_per_gas && (
@@ -896,7 +896,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
                 <DetailedInfo.ItemLabel
                   hint={ `Amount of ${ currencyUnits.ether } used for blobs in this transaction` }
                 >
-                  { `Blob gas fees (${ currencyUnits.gwei })` }
+                  {t('transactions.common.blob_gas_fees_gwei', { currency: currencyUnits.gwei })}
                 </DetailedInfo.ItemLabel>
                 <DetailedInfo.ItemValue>
                   { data.blob_gas_price && (
@@ -933,7 +933,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
             <DetailedInfo.ItemLabel
               hint={t('transactions.common.decoded_input_data')}
             >
-              Decoded input data
+              {t('transactions.common.decoded_input_data')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue flexWrap="wrap" mt={{ base: '5px', lg: '4px' }}>
               <LogDecodedInputData data={ data.decoded_input }/>

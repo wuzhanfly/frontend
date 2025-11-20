@@ -14,22 +14,22 @@ const GasTrackerFaq = () => {
   
   const FAQ_ITEMS = [
     {
-      question: 'What does gas refer to on the blockchain?',
+      question: t('gas_tracker.common.what_does_gas_refer_to_on_the_blockchain'),
       answer: t('common.common.gas_is_the_amount_of_native_to'),
     },
     {
-      question: `How can I check ${ config.chain.name } gas fees?`,
+      question: t('gas_tracker.common.how_can_i_check_chain_gas_fees', { chainName: config.chain.name }),
       // eslint-disable-next-line max-len
-      answer: `You can easily check live ${ config.chain.name } gas fees on Blockscout by visiting our gas tracker. It displays current gas fees in ${ currencyUnits.gwei } for all ${ config.chain.name } transactions.`,
+      answer: t('gas_tracker.common.you_can_easily_check_live_chain_gas_fees', { chainName: config.chain.name, currencyUnit: currencyUnits.gwei }),
     },
     {
-      question: `What is the average gas fee for ${ config.chain.name } transactions?`,
+      question: t('gas_tracker.common.what_is_the_average_gas_fee_for_chain_transactions', { chainName: config.chain.name }),
       // eslint-disable-next-line max-len
-      answer: `The average gas fee for ${ config.chain.name } transactions depends on network congestion and transaction complexity. Blockscout provides real-time gas fee estimations to help users make informed decisions.`,
+      answer: t('gas_tracker.common.the_average_gas_fee_for_chain_transactions', { chainName: config.chain.name }),
     },
     {
-      question: 'How does Blockscout calculate gas fees?',
-      answer: 'Blockscout calculates gas fees based on the average price of gas fees spent for the last 200 blocks.',
+      question: t('gas_tracker.common.how_does_blockscout_calculate_gas_fees'),
+      answer: t('gas_tracker.common.blockscout_calculates_gas_fees'),
     },
   ];
 

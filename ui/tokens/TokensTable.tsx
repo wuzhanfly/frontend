@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenInfo } from 'types/api/token';
 import type { TokensSortingField, TokensSortingValue } from 'types/api/tokens';
@@ -27,6 +28,7 @@ type Props = {
 };
 
 const TokensTable = ({ items, page, isLoading, sorting, setSorting, top }: Props) => {
+  const { t } = useTranslation();
 
   const sort = React.useCallback((field: TokensSortingField) => {
     const value = getNextSortValue(field)(sorting);
@@ -37,7 +39,7 @@ const TokensTable = ({ items, page, isLoading, sorting, setSorting, top }: Props
     <TableRoot>
       <TableHeaderSticky top={ top ?? ACTION_BAR_HEIGHT_DESKTOP }>
         <TableRow>
-          <TableColumnHeader w="50%">Token</TableColumnHeader>
+          <TableColumnHeader w="50%">{ t('common.common.token') }</TableColumnHeader>
           <TableColumnHeaderSortable
             isNumeric
             w="15%"
@@ -45,7 +47,7 @@ const TokensTable = ({ items, page, isLoading, sorting, setSorting, top }: Props
             sortValue={ sorting }
             onSortToggle={ sort }
           >
-            Price
+            { t('common.common.price') }
           </TableColumnHeaderSortable>
           <TableColumnHeaderSortable
             isNumeric
@@ -54,7 +56,7 @@ const TokensTable = ({ items, page, isLoading, sorting, setSorting, top }: Props
             sortValue={ sorting }
             onSortToggle={ sort }
           >
-            On-chain market cap
+            { t('common.common.on_chain_market_cap') }
           </TableColumnHeaderSortable>
           <TableColumnHeaderSortable
             isNumeric
@@ -63,7 +65,7 @@ const TokensTable = ({ items, page, isLoading, sorting, setSorting, top }: Props
             sortValue={ sorting }
             onSortToggle={ sort }
           >
-            Holders
+            { t('common.common.holders') }
           </TableColumnHeaderSortable>
         </TableRow>
       </TableHeaderSticky>

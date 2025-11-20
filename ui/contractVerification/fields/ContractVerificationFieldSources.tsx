@@ -61,7 +61,7 @@ const ContractVerificationFieldSources = ({ fileTypes, multiple, required, title
       <VStack gap={ 3 }>
         <Text fontWeight={ 500 }>{ title }</Text>
         <Button size="sm" variant="outline">
-          Drop file{ multiple ? 's' : '' } or click here
+          { t('common.common.drop_file') }{ multiple ? 's' : '' } { t('common.common.or_click_here') }
         </Button>
       </VStack>
     );

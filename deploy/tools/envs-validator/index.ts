@@ -88,9 +88,22 @@ async function getExternalJsonContent(envName: string): Promise<string | void> {
 
 async function checkPlaceholdersCongruity(envsMap: Record<string, string>) {
   try {
+    // Check if we should skip the runtime placeholder check
+    if (process.env.SKIP_RUNTIME_PLACEHOLDER_CHECK === 'true') {
+      !silent && console.log('⚠️  Runtime placeholder check is skipped.\n');
+      return;
+    }
+
     !silent && console.log(`🌀 Checking environment variables and their placeholders congruity...`);
 
-    const runTimeEnvs = await getEnvsPlaceholders(path.resolve(__dirname, '.env.registry'));
+    const registryPath = path.resolve(__dirname, '.env.registry');
+    // Check if .env.registry file exists
+    if (!fs.existsSync(registryPath)) {
+      !silent && console.log('⚠️  .env.registry file not found, skipping congruity check.\n');
+      return;
+    }
+
+    const runTimeEnvs = await getEnvsPlaceholders(registryPath);
     const buildTimeEnvs = await getEnvsPlaceholders(path.resolve(__dirname, '.env'));
     const envs = Object.keys(envsMap).filter((env) => !buildTimeEnvs.includes(env));
 
@@ -107,9 +120,7 @@ async function checkPlaceholdersCongruity(envsMap: Record<string, string>) {
       inconsistencies.forEach((env) => {
         console.log(`     ${ env }`);
       });
-      console.log(`   They are either deprecated or running the app with them may lead to unexpected behavior.
-   Please check the documentation for more details - https://github.com/blockscout/frontend/blob/main/docs/ENVS.md
-      `);
+      console.log(`   They are either deprecated or running the app with them may lead to unexpected behavior.\n   Please check the documentation for more details - https://github.com/blockscout/frontend/blob/main/docs/ENVS.md\n      `);
       throw new Error();
     }
 

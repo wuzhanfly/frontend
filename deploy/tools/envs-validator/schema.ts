@@ -303,9 +303,9 @@ const rollupSchema = yup
     NEXT_PUBLIC_ROLLUP_L1_BASE_URL: yup
       .string()
       .when('NEXT_PUBLIC_ROLLUP_TYPE', {
-        is: (value: string) => value,
+        is: (value: string) => value && value !== 'zkSync',
         then: (schema) => schema.test(urlTest).required(),
-        otherwise: (schema) => schema.max(-1, 'NEXT_PUBLIC_ROLLUP_L1_BASE_URL cannot not be used if NEXT_PUBLIC_ROLLUP_TYPE is not defined'),
+        otherwise: (schema) => schema.test(urlTest),
       }),
     NEXT_PUBLIC_ROLLUP_L2_WITHDRAWAL_URL: yup
       .string()
@@ -393,6 +393,7 @@ const rollupSchema = yup
         then: (schema) => schema,
         otherwise: (schema) => schema.max(-1, 'NEXT_PUBLIC_ROLLUP_DA_CELESTIA_CELENIUM_URL can only be used if NEXT_PUBLIC_ROLLUP_TYPE is set to \'arbitrum\' or \'optimistic\''),
       }),
+    NEXT_PUBLIC_OP_SUPERCHAIN_ENABLED: yup.boolean(),
   });
 
   const celoSchema = yup
@@ -1107,6 +1108,7 @@ const schema = yup
 
         return isUndefined || valueSchema.isValidSync(data);
       }),
+    NEXT_PUBLIC_MULTICHAIN_AGGREGATOR_API_HOST: yup.string().test(urlTest),
     NEXT_PUBLIC_VALIDATORS_CHAIN_TYPE: yup.string<ValidatorsChainType>().oneOf(VALIDATORS_CHAIN_TYPE),
     NEXT_PUBLIC_GAS_TRACKER_ENABLED: yup.boolean(),
     NEXT_PUBLIC_GAS_TRACKER_UNITS: yup.array().transform(replaceQuotes).json().of(yup.string<GasUnit>().oneOf(GAS_UNITS)),

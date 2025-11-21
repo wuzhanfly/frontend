@@ -37,9 +37,15 @@ export function app(): CspDev.DirectiveDescriptor {
       // webpack hmr in safari doesn't recognize localhost as 'self' for some reason
       config.app.isDev ? 'ws://localhost:3000/_next/webpack-hmr' : '',
 
-      // APIs
+      // WebSocket endpoints for API and socket connections
       ...Object.values(config.apis).filter(Boolean).map((api) => api.endpoint),
       ...Object.values(config.apis).filter(Boolean).map((api) => api.socketEndpoint),
+      
+      // Additional WebSocket endpoints that might be used
+      'wss://socket/v2/websocket', // For the specific error case from logs
+      'ws://socket/v2/websocket',  // For the specific error case from logs
+      `wss://${ config.app.host }/v2/websocket`,
+      `ws://${ config.app.host }/v2/websocket`,
 
       // chain RPC server
       ...config.chain.rpcUrls,

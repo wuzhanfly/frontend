@@ -9,6 +9,8 @@
   "blocks.common.view_next_block": "查看后一区块",
   "blocks.common.the_most_recent_l1_block_heigh": "截至此L2区块的最新L1区块高度",
   "blocks.common.batch_number": "批次号",
+  "blocks.common.size": "大小",
+  "blocks.common.size_in_bytes": "大小，字节",
   "blocks.common.size_of_the_block_in_bytes": "区块大小（字节）",
   "blocks.common.the_number_of_transactions_in_": "区块中的交易数量",
   "blocks.common.the_number_of_beacon_withdrawa": "区块中的信标取款数量",
@@ -46,6 +48,9 @@
   "blocks.common.txn": "交易",
   "blocks.common.gas_used": "Gas使用量",
   "blocks.common.base_fee": "基础费",
+  "blocks.common.reward": "奖励",
+  "blocks.common.reward_with_currency": "奖励 {{currency}}",
+  "blocks.common.burnt_fees_with_currency": "销毁费用 {{currency}}",
   "blocks.common.block": "区块",
   "blocks.common.timestamp": "时间戳",
   "blocks.common.all": "全部",
@@ -61,5 +66,6 @@
   "blocks.common.base_fee_handler": "基础费用处理程序",
   "blocks.common.base_fee_total": "基础费用总额",
   "blocks.common.native_token": "原生代币",
-  "blocks.common.the_contract_receiving_the_base_fee_responsible_for_handling_fee_usage_this_contract_is_controlled_by_governance_process": "接收基础费用并负责处理费用使用的合约，该合约由治理流程控制"
+  "blocks.common.the_contract_receiving_the_base_fee_responsible_for_handling_fee_usage_this_contract_is_controlled_by_governance_process": "接收基础费用并负责处理费用使用的合约，该合约由治理流程控制",
+  "blocks.common.last_x_blocks": "最近 {{count}} 个区块"
 }

@@ -1,4 +1,4 @@
-import { chakra, Flex } from '@chakra-ui/react';
+import { chakra, Flex, Text } from '@chakra-ui/react';
 import { capitalize } from 'es-toolkit';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -187,9 +187,7 @@ const BlockPageContent = () => {
           columnGap={ 2 }
           fontWeight={ 500 }
         >
-          <chakra.span flexShrink={ 0 }>
-            { capitalize(getNetworkValidatorTitle()) }
-          </chakra.span>
+          <Text color="text.secondary">{ capitalize(t(getNetworkValidatorTitle())) }:</Text>
           <AddressEntity address={ blockQuery.data.miner }/>
         </Skeleton>
       ) }

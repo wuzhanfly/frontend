@@ -101,7 +101,7 @@ const AmountFilter = ({ value = {}, handleFilterChange }: Props) => {
       <Flex mt={ 3 } alignItems="center">
         <Input value={ currentValue.from } onChange={ handleFromChange } placeholder={ t('staking.common.from') } type="number" size="sm"/>
         <Text mx={ 3 }>{ ndash }</Text>
-        <Input value={ currentValue.to } onChange={ handleToChange } placeholder="To" type="number" size="sm"/>
+        <Input value={ currentValue.to } onChange={ handleToChange } placeholder={ t('shared.common.to') } type="number" size="sm"/>
       </Flex>
     </TableColumnFilter>
   );

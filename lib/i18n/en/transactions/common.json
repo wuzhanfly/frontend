@@ -78,6 +78,10 @@
   "transactions.common.list_of_tokens_minted_in_the_t": "List of tokens minted in the transaction",
   "transactions.common.list_of_tokens_burnt_in_the_tr": "List of tokens burnt in the transaction",
   "transactions.common.list_of_tokens_created_in_the_": "List of tokens created in the transaction",
+  "transactions.common.there_are_no_state_changes_for_this_transaction": "There are no state changes for this transaction.",
+  "transactions.common.there_are_no_internal_transactions_for_this_transaction": "There are no internal transactions for this transaction.",
+  "transactions.common.there_are_no_authorizations_for_this_transaction": "There are no authorizations for this transaction.",
+  "transactions.common.there_are_no_blobs_for_this_transaction": "There are no blobs for this transaction.",
   "transactions.common.base_fee": "Base fee",
   "transactions.common.the_minimum_network_fee_charge": "The minimum network fee charged per transaction",
   "transactions.common.priority_fee": "Priority fee",
@@ -152,6 +156,7 @@
   "transactions.common.sequence_tx_hash": "Sequence tx hash",
   "transactions.common.verify_tx_hash": "Verify tx hash",
   "transactions.common.value": "Value",
+  "transactions.common.value_with_currency": "Value {{currency}}",
   "transactions.common.operator_fee": "Operator fee",
   "transactions.common.poster_fee": "Poster fee",
   "transactions.common.network_fee": "Network fee",
@@ -179,5 +184,6 @@
   "transactions.common.new_zetachain_cross_chain_txns_24h": "New ZetaChain cross-chain txns (24h)",
   "transactions.common.revert_reason": "Revert reason",
   "transactions.common.gas_fees_gwei": "Gas fees ({{currency}})",
-  "transactions.common.blob_gas_fees_gwei": "Blob gas fees ({{currency}})"
+  "transactions.common.blob_gas_fees_gwei": "Blob gas fees ({{currency}})",
+  "transactions.common.tx_fee_distribution_info": "for their tx & to give to the {{validator}} respectively"
 }

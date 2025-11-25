@@ -48,7 +48,7 @@ const AddressesListItem = ({
         <Tag key={ tag.label } loading={ isLoading } truncated>{ tag.display_name }</Tag>
       )) }
       <HStack gap={ 3 } maxW="100%" alignItems="flex-start">
-        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 } flexShrink={ 0 }>{ `Balance ${ currencyUnits.ether }` }</Skeleton>
+        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 } flexShrink={ 0 }>{ t('verified_contracts.common.balance_ether', { currency: currencyUnits.ether }) }</Skeleton>
         <Skeleton loading={ isLoading } fontSize="sm" color="text.secondary" minW="0" whiteSpace="pre-wrap">
           <span>{ addressBalance.dp(8).toFormat() }</span>
         </Skeleton>

@@ -1,5 +1,6 @@
 import { HStack, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FlashblockItem } from 'types/client/flashblocks';
 
@@ -15,6 +16,7 @@ interface Props {
 }
 
 const FlashblocksTableItem = ({ data }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRow>
       <TableCell>
@@ -26,7 +28,7 @@ const FlashblocksTableItem = ({ data }: Props) => {
               noIcon
             />
           ) : (
-            <Text color="text.secondary">N/A</Text>
+            <Text color="text.secondary">{ t('common.common.n_a') }</Text>
           ) }
           { data.timestamp && <Text color="text.secondary">{ dayjs(data.timestamp).format('DD MMM, HH:mm:ss.SSS') }</Text> }
         </HStack>

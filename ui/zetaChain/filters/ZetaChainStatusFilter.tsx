@@ -24,7 +24,7 @@ const ZetaChainStatusFilter = ({ value = [], handleFilterChange, onClose }: Prop
   
   const STATUS_OPTIONS = React.useMemo(() => [
     { value: 'all', label: t('validators.common.all') },
-    { value: 'Success', label: 'Success' },
+    { value: 'Success', label: t('common.common.success') },
     { value: t('shared.common.failed'), label: t('shared.common.failed') },
   ], [t]);
   // Convert API values to internal format and determine initial state

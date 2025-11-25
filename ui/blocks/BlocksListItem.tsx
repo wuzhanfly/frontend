@@ -2,6 +2,7 @@ import { Flex, Text, Box } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import { capitalize } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Block } from 'types/api/block';
 import type { ChainConfig } from 'types/multichain';
@@ -37,6 +38,7 @@ interface Props {
 const isRollup = config.features.rollup.isEnabled;
 
 const BlocksListItem = ({ data, isLoading, enableTimeIncrement, animation, chainData }: Props) => {
+  const { t } = useTranslation();
   const totalReward = getBlockTotalReward(data);
   const burntFees = BigNumber(data.burnt_fees || 0);
   const txFees = BigNumber(data.transaction_fees || 0);
@@ -71,7 +73,7 @@ const BlocksListItem = ({ data, isLoading, enableTimeIncrement, animation, chain
       </Flex>
       { data.size && (
         <Flex columnGap={ 2 }>
-          <Text fontWeight={ 500 }>Size</Text>
+          <Text fontWeight={ 500 }>{ t('blocks.common.size') }</Text>
           <Skeleton loading={ isLoading } display="inline-block" color="text.secondary">
             <span>{ data.size?.toLocaleString() } bytes</span>
           </Skeleton>
@@ -79,7 +81,7 @@ const BlocksListItem = ({ data, isLoading, enableTimeIncrement, animation, chain
       ) }
       { !config.UI.views.block.hiddenFields?.miner && (
         <Flex columnGap={ 2 } w="100%">
-          <Text fontWeight={ 500 }>{ capitalize(getNetworkValidatorTitle()) }</Text>
+          <Text fontWeight={ 500 }>{ capitalize(t(getNetworkValidatorTitle())) }</Text>
           <AddressEntity
             address={ data.miner }
             isLoading={ isLoading }
@@ -88,7 +90,7 @@ const BlocksListItem = ({ data, isLoading, enableTimeIncrement, animation, chain
         </Flex>
       ) }
       <Flex columnGap={ 2 }>
-        <Text fontWeight={ 500 }>Txn</Text>
+        <Text fontWeight={ 500 }>{ t('blocks.common.txn') }</Text>
         { data.transactions_count > 0 ? (
           <Skeleton loading={ isLoading } display="inline-block">
             <Link href={ route({ pathname: '/block/[height_or_hash]', query: { height_or_hash: String(data.height), tab: 'txs' } }) }>
@@ -100,7 +102,7 @@ const BlocksListItem = ({ data, isLoading, enableTimeIncrement, animation, chain
         }
       </Flex>
       <Box>
-        <Text fontWeight={ 500 }>Gas used</Text>
+        <Text fontWeight={ 500 }>{ t('blocks.common.gas_used') }</Text>
         <Flex mt={ 2 }>
           <Skeleton loading={ isLoading } display="inline-block" color="text.secondary" mr={ 4 }>
             <span>{ BigNumber(data.gas_used || 0).toFormat() }</span>
@@ -115,7 +117,7 @@ const BlocksListItem = ({ data, isLoading, enableTimeIncrement, animation, chain
       </Box>
       { !isRollup && !config.UI.views.block.hiddenFields?.total_reward && (
         <Flex columnGap={ 2 }>
-          <Text fontWeight={ 500 }>Reward { currencyUnits.ether }</Text>
+          <Text fontWeight={ 500 }>{ t('common.common.reward') } { currencyUnits.ether }</Text>
           <Skeleton loading={ isLoading } display="inline-block" color="text.secondary">
             <span>{ totalReward.toFixed() }</span>
           </Skeleton>
@@ -123,7 +125,7 @@ const BlocksListItem = ({ data, isLoading, enableTimeIncrement, animation, chain
       ) }
       { !isRollup && !config.UI.views.block.hiddenFields?.burnt_fees && (
         <Box>
-          <Text fontWeight={ 500 }>Burnt fees</Text>
+          <Text fontWeight={ 500 }>{ t('blocks.common.burnt_fees') }</Text>
           <Flex columnGap={ 4 } mt={ 2 }>
             <Flex>
               <IconSvg name="flame" boxSize={ 5 } color="gray.500" isLoading={ isLoading }/>
@@ -137,7 +139,7 @@ const BlocksListItem = ({ data, isLoading, enableTimeIncrement, animation, chain
       ) }
       { !isRollup && !config.UI.views.block.hiddenFields?.base_fee && baseFeeValue && (
         <Flex columnGap={ 2 }>
-          <Text fontWeight={ 500 }>Base fee</Text>
+          <Text fontWeight={ 500 }>{ t('blocks.common.base_fee') }</Text>
           <Skeleton loading={ isLoading } display="inline-block" color="text.secondary">
             <span>{ baseFeeValue }</span>
           </Skeleton>

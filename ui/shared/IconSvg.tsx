@@ -8,9 +8,6 @@ import { Skeleton } from 'toolkit/chakra/skeleton';
 
 export const href = config.app.spriteHash ? `/icons/sprite.${ config.app.spriteHash }.svg` : '/icons/sprite.svg';
 
-console.log('IconSvg href: ', href);
-console.log('config.app.spriteHash: ', config.app.spriteHash);
-
 export { IconName };
 
 export interface Props extends HTMLChakraProps<'div'> {

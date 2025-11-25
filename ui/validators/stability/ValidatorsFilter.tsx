@@ -19,9 +19,9 @@ const ValidatorsFilter = ({ onChange, defaultValue, hasActiveFilter }: Props) =>
   
   const OPTIONS = React.useMemo(() => [
     { value: 'all', label: t('validators.common.all') },
-    { value: 'active', label: 'Active' },
-    { value: 'probation', label: 'Probation' },
-    { value: 'inactive', label: 'Inactive' },
+    { value: 'active', label: t('shared.common.active') },
+    { value: 'probation', label: t('shared.common.probation') },
+    { value: 'inactive', label: t('shared.common.inactive') },
   ], [t]);
   
   const collection = React.useMemo(() => createListCollection({

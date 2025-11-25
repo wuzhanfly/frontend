@@ -9,6 +9,8 @@
   "blocks.common.view_next_block": "View next block",
   "blocks.common.the_most_recent_l1_block_heigh": "The most recent L1 block height as of this L2 block",
   "blocks.common.batch_number": "Batch number",
+  "blocks.common.size": "Size",
+  "blocks.common.size_in_bytes": "Size, bytes",
   "blocks.common.size_of_the_block_in_bytes": "Size of the block in bytes",
   "blocks.common.the_number_of_transactions_in_": "The number of transactions in the block",
   "blocks.common.the_number_of_beacon_withdrawa": "The number of beacon withdrawals in the block",
@@ -46,6 +48,9 @@
   "blocks.common.txn": "Txn",
   "blocks.common.gas_used": "Gas used",
   "blocks.common.base_fee": "Base fee",
+  "blocks.common.reward": "Reward",
+  "blocks.common.reward_with_currency": "Reward {{currency}}",
+  "blocks.common.burnt_fees_with_currency": "Burnt fees {{currency}}",
   "blocks.common.block": "Block",
   "blocks.common.timestamp": "Timestamp",
   "blocks.common.all": "All",
@@ -61,5 +66,6 @@
   "blocks.common.base_fee_handler": "Base fee handler",
   "blocks.common.base_fee_total": "Base fee total",
   "blocks.common.native_token": "Native Token",
-  "blocks.common.the_contract_receiving_the_base_fee_responsible_for_handling_fee_usage_this_contract_is_controlled_by_governance_process": "The Contract Receiving The Base Fee Responsible For Handling Fee Usage This Contract Is Controlled By Governance Process"
+  "blocks.common.the_contract_receiving_the_base_fee_responsible_for_handling_fee_usage_this_contract_is_controlled_by_governance_process": "The Contract Receiving The Base Fee Responsible For Handling Fee Usage This Contract Is Controlled By Governance Process",
+  "blocks.common.last_x_blocks": "last {{count}} blocks"
 }

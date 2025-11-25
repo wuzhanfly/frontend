@@ -100,7 +100,7 @@ const AppError = ({ error, className }: Props) => {
           <>
             <AppErrorIcon statusCode={ statusCode }/>
             <AppErrorTitle title={ title }/>
-            text={ error ? t('shared.common.an_unexpected_error_has_occurr') : t('shared.common.unknown_error') }
+            { error ? t('shared.common.an_unexpected_error_has_occurr') : t('shared.common.unknown_error') }
             <Link
               href={ route({ pathname: '/' }) }
               asChild

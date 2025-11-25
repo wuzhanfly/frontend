@@ -63,10 +63,10 @@ const ArbitrumL2TxnBatches = () => {
 
     return (
       <Skeleton loading={ countersQuery.isPlaceholderData || isPlaceholderData } display="flex" flexWrap="wrap">
-        Txn batch
-        <Text fontWeight={ 600 } whiteSpace="pre"> #{ data.items[0].number } </Text>to
+        { t('common.common.txn_batch') }
+        <Text fontWeight={ 600 } whiteSpace="pre"> #{ data.items[0].number } </Text>{ t('common.common.to') }
         <Text fontWeight={ 600 } whiteSpace="pre"> #{ data.items[data.items.length - 1].number } </Text>
-        (total of { countersQuery.data?.toLocaleString() } batches)
+        ({ t('common.common.total_of') } { countersQuery.data?.toLocaleString() } { t('common.common.batches') })
       </Skeleton>
     );
   })();

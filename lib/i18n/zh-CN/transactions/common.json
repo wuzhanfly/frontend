@@ -78,6 +78,10 @@
   "transactions.common.list_of_tokens_minted_in_the_t": "交易中铸造的代币列表",
   "transactions.common.list_of_tokens_burnt_in_the_tr": "交易中销毁的代币列表",
   "transactions.common.list_of_tokens_created_in_the_": "交易中创建的代币列表",
+  "transactions.common.there_are_no_state_changes_for_this_transaction": "此交易没有状态变更。",
+  "transactions.common.there_are_no_internal_transactions_for_this_transaction": "此交易没有内部交易。",
+  "transactions.common.there_are_no_authorizations_for_this_transaction": "此交易没有授权。",
+  "transactions.common.there_are_no_blobs_for_this_transaction": "此交易没有 blob 数据。",
   "transactions.common.base_fee": "基础费",
   "transactions.common.the_minimum_network_fee_charge": "每笔交易的最低网络费",
   "transactions.common.priority_fee": "优先费",
@@ -156,6 +160,7 @@
   "transactions.common.sequence_tx_hash": "序列交易哈希",
   "transactions.common.verify_tx_hash": "验证交易哈希",
   "transactions.common.value": "价值",
+  "transactions.common.value_with_currency": "价值 {{currency}}",
   "transactions.common.operator_fee": "操作员费用",
   "transactions.common.poster_fee": "发布者费用",
   "transactions.common.network_fee": "网络费用",
@@ -179,5 +184,6 @@
   "transactions.common.new_zetachain_cross_chain_txns_24h": "ZetaChain 跨链交易数 (24小时)",
   "transactions.common.revert_reason": "回退原因",
   "transactions.common.gas_fees_gwei": "Gas 费用 ({{currency}})",
-  "transactions.common.blob_gas_fees_gwei": "Blob Gas 费用 ({{currency}})"
+  "transactions.common.blob_gas_fees_gwei": "Blob Gas 费用 ({{currency}})",
+  "transactions.common.tx_fee_distribution_info": "用于他们的交易 & 分别给予 {{validator}}"
 }

@@ -3,22 +3,22 @@ import config from 'configs/app';
 export default function getNetworkValidatorTitle() {
   switch (config.chain.verificationType) {
     case 'validation': {
-      return 'validator';
+      return 'common.common.validator';
     }
     case 'mining': {
-      return 'miner';
+      return 'common.common.miner';
     }
     case 'posting': {
-      return 'poster';
+      return 'common.common.poster';
     }
     case 'sequencing': {
-      return 'sequencer';
+      return 'common.common.sequencer';
     }
     case 'fee reception': {
-      return 'fee recipient';
+      return 'common.common.fee_recipient';
     }
     default: {
-      return 'miner';
+      return 'common.common.miner';
     }
   }
 }

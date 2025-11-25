@@ -65,9 +65,9 @@ const ArbitrumL2TxnBatchDetailsAnyTrustDA = ({ data }: Props) => {
           borderRadius="md"
           minW="600px"
         >
-          <Text fontWeight={ 600 }>Key</Text>
-          <Text fontWeight={ 600 }>Trusted</Text>
-          <Text fontWeight={ 600 }>Proof</Text>
+          <Text fontWeight={ 600 }>{ t('common.common.key') }</Text>
+          <Text fontWeight={ 600 }>{ t('common.common.trusted') }</Text>
+          <Text fontWeight={ 600 }>{ t('common.common.proof') }</Text>
           { data.signers.map(signer => (
             <>
               <Flex justifyContent="space-between">
@@ -91,17 +91,17 @@ const ArbitrumL2TxnBatchDetailsAnyTrustDA = ({ data }: Props) => {
           { data.signers.map(signer => (
             <VStack padding={ 4 } key={ signer.key } gap={ 2 }>
               <Flex w="100%" justifyContent="space-between">
-                <Text fontWeight={ 600 }>Key</Text>
+                <Text fontWeight={ 600 }>{ t('common.common.key') }</Text>
                 <CopyToClipboard text={ signer.key }/>
               </Flex>
               <Text wordBreak="break-all" whiteSpace="break-spaces">{ signer.key }</Text>
               <Flex w="100%" alignItems="center">
                 <Flex alignItems="center" w="50%">
-                  <Text fontWeight={ 600 } mr={ 2 }>Trusted</Text>
+                  <Text fontWeight={ 600 } mr={ 2 }>{ t('common.common.trusted') }</Text>
                   { signer.trusted ? <IconSvg name="check" boxSize={ 6 }/> : <IconSvg name="cross" boxSize={ 6 }/> }
                 </Flex>
                 <Flex alignItems="center" w="50%">
-                  <Text fontWeight={ 600 } mr={ 2 }>Proof</Text>
+                  <Text fontWeight={ 600 } mr={ 2 }>{ t('common.common.proof') }</Text>
                   { signer.proof ? (
                     <Flex>
                       <HashStringShorten hash={ signer.proof }/>

@@ -25,11 +25,13 @@ const AddressesTable = ({ items, totalSupply, pageStartIndex, top, isLoading }: 
     <TableRoot>
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader width="64px">{t('common.common.rank')}</TableColumnHeader>
-          <TableColumnHeader width={ hasPercentage ? '50%' : '60%' }>{t('addresses.common.address')}</TableColumnHeader>
-          <TableColumnHeader width={ hasPercentage ? '20%' : '25%' } isNumeric>{ `Balance ${ currencyUnits.ether }` }</TableColumnHeader>
-          { hasPercentage && <TableColumnHeader width="15%" isNumeric>{t('common.common.percentage')}</TableColumnHeader> }
-          <TableColumnHeader width="15%" isNumeric>{t('addresses.common.txn_count')}</TableColumnHeader>
+          <TableColumnHeader width="64px">{ t('common.common.rank') }</TableColumnHeader>
+          <TableColumnHeader width={ hasPercentage ? '50%' : '60%' }>{ t('addresses.common.address') }</TableColumnHeader>
+          <TableColumnHeader width={ hasPercentage ? '20%' : '25%' } isNumeric>
+            { t('addresses.common.balance_with_currency', { currency: currencyUnits.ether }) }
+          </TableColumnHeader>
+          { hasPercentage && <TableColumnHeader width="15%" isNumeric>{ t('common.common.percentage') }</TableColumnHeader> }
+          <TableColumnHeader width="15%" isNumeric>{ t('addresses.common.txn_count') }</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

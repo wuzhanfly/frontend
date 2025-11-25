@@ -24,17 +24,17 @@ const ArbitrumL2MessageStatus = ({ status, isLoading }: Props) => {
     }
     case 'confirmed': {
       type = 'pending';
-      text = 'Ready for relay';
+      text = t('shared.common.ready_for_relay');
       break;
     }
     case 'sent': {
       type = 'pending';
-      text = 'Waiting';
+      text = t('shared.common.waiting');
       break;
     }
     case 'initiated': {
       type = 'pending';
-      text = 'Pending';
+      text = t('shared.common.pending');
       break;
     }
     default:

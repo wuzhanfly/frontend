@@ -746,7 +746,7 @@ const TxInfo = ({ data, tacOperations, isLoading, socketStatus }: Props) => {
             hint={ `
             Base Fee refers to the network Base Fee at the time of the block, 
             while Max Fee & Max Priority Fee refer to the max amount a user is willing to pay 
-            for their tx & to give to the ${ getNetworkValidatorTitle() } respectively
+            { t('transactions.common.tx_fee_distribution_info', { validator: t(getNetworkValidatorTitle()) }) }
           ` }
             isLoading={ isLoading }
           >

@@ -23,7 +23,7 @@ const TxStatus = ({ status, errorText, isLoading }: Props) => {
 
   switch (status) {
     case 'ok':
-      text = 'Success';
+      text = t('common.common.success');
       type = 'ok';
       break;
     case 'error':
@@ -31,7 +31,7 @@ const TxStatus = ({ status, errorText, isLoading }: Props) => {
       type = 'error';
       break;
     case null:
-      text = 'Pending';
+      text = t('shared.common.pending');
       type = 'pending';
       break;
   }

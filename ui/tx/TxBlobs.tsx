@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { TX_BLOB } from 'stubs/blobs';
 import { generateListStub } from 'stubs/utils';
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const TxBlobs = ({ txQuery }: Props) => {
+  const { t } = useTranslation();
   const { data, isPlaceholderData, isError, pagination } = useQueryWithPages({
     resourceName: 'general:tx_blobs',
     pathParams: { hash: txQuery.data?.hash },
@@ -51,11 +53,11 @@ const TxBlobs = ({ txQuery }: Props) => {
 
   return (
     <DataListDisplay
-      isError={ isError || txQuery.isError }
-      itemsNum={ data?.items.length }
-      emptyText="There are no blobs for this transaction."
-      actionBar={ actionBar }
-    >
+        isError={ isError || txQuery.isError }
+        itemsNum={ data?.items.length }
+        emptyText={ t('transactions.common.there_are_no_blobs_for_this_transaction') }
+        actionBar={ actionBar }
+      >
       { content }
     </DataListDisplay>
   );

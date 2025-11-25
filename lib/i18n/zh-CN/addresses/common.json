@@ -223,5 +223,7 @@
   "addresses.common.id": "ID",
   "addresses.common.actor": "参与者",
   "addresses.common.ethereum_address": "以太坊地址",
-  "addresses.common.tokens_label": "代币"
+  "addresses.common.tokens_label": "代币",
+  "addresses.common.balance_with_currency": "代币 {{currency}}",
+  "addresses.common.number_of_blocks_validated_by_this_validator": "此 {{validator}} {{action}} 的区块数量"
 }

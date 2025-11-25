@@ -19,7 +19,7 @@ const BlockPendingUpdateHint = ({ view = 'block', ...props }: Props) => {
 
   const tooltipContent = view === 'block' ?
     t('shared.common.block_is_being_resynced_detail') :
-    'This transaction is part of a block that is being re-synced. Details may be incomplete until the update is finished.';
+    t('shared.common.tx_is_being_resynced_detail');
 
   return (
     <Tooltip content={ tooltipContent }>

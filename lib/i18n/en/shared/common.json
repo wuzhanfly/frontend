@@ -95,6 +95,12 @@
   "shared.common.raw": "Raw",
   "shared.common.gas_used_": "Gas Used %",
   "shared.common.block_is_being_resynced_detail": "Block is being re-synced. Details may be incomplete until the update is finished.",
+  "shared.common.tx_is_being_resynced_detail": "This transaction is part of a block that is being re-synced. Details may be incomplete until the update is finished.",
+  "shared.common.ready_for_relay": "Ready for relay",
+  "shared.common.waiting": "Waiting",
+  "shared.common.active": "Active",
+  "shared.common.probation": "Probation",
+  "shared.common.inactive": "Inactive",
   "shared.common.native_token": "Native token",
   "shared.common.select_interval": "Select interval",
   "shared.common.chart_title_placeholder": "Chart title placeholder",
@@ -197,6 +203,8 @@
   "shared.common.unknown_status": "Unknown Status",
   "shared.common.medium": "Medium",
   "shared.common.unknown_error": "Unknown Error",
+  "shared.common.pending": "Pending",
+  "shared.common.to": "To",
   "shared.common.": "",
   "shared.common.sharedcommon728x90": "Sharedcommon728x90"
 }

@@ -75,7 +75,7 @@ const ZetaChainCCTXDetailsLifecycleOut = ({ outboundParam, tx, isLoading, isLast
       <>
         { transactionOrCCTX }
         <Text color="text.secondary" fontWeight="medium">Status</Text>
-        <StatusTag type="ok" text="Success"/>
+                  <StatusTag type="ok" text={ t('common.common.success') }/>
         <Text color="text.secondary" fontWeight="medium">Receiver</Text>
         <AddressEntityZetaChain
           address={{ hash: outboundParam.receiver }}
@@ -164,7 +164,7 @@ const ZetaChainCCTXDetailsLifecycleOut = ({ outboundParam, tx, isLoading, isLast
           />
           { transactionOrCCTX }
           <Text color="text.secondary" fontWeight="medium">Status</Text>
-          <StatusTag type="ok" text="Success"/>
+          <StatusTag type="ok" text={ t('common.common.success') }/>
           <Text color="text.secondary" fontWeight="medium">Transferred</Text>
           <ZetaChainCCTXValue
             coinType={ outboundParam.coin_type }

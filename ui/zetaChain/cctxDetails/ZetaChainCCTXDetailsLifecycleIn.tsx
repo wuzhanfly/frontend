@@ -75,7 +75,7 @@ const ZetaChainCCTXDetailsLifecycleIn = ({ tx, isLoading }: Props) => {
           <Text color="text.secondary" fontWeight="medium">Status</Text>
           <StatusTag
             type={ inboundParams.status === InboundStatus.INBOUND_SUCCESS ? 'ok' : 'error' }
-            text={ inboundParams.status === InboundStatus.INBOUND_SUCCESS ? 'Success' : t('shared.common.failed') }
+            text={ inboundParams.status === InboundStatus.INBOUND_SUCCESS ? t('common.common.success') : t('shared.common.failed') }
           />
           { inboundParams.sender && (
             <>

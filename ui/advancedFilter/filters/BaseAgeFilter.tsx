@@ -186,7 +186,7 @@ function BaseAgeFilter<T>({
         <DateInput
           value={ currentValue.age ? '' : currentValue.to }
           onChange={ handleToChange }
-          placeholder="To"
+          placeholder={ t('shared.common.to') }
           max={ dayjs().format('YYYY-MM-DD') }
         />
       </Flex>

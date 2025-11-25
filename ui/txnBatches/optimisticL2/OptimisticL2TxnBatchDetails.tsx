@@ -90,7 +90,7 @@ const OptimisticL2TxnBatchDetails = ({ query }: Props) => {
       <DetailedInfo.ItemValue>
         { data.l1_timestamp ?
           <DetailedInfoTimestamp timestamp={ data.l1_timestamp } isLoading={ isPlaceholderData }/> :
-          'Undefined'
+          t('common.common.undefined')
         }
       </DetailedInfo.ItemValue>
 

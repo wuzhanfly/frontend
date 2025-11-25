@@ -1,5 +1,6 @@
 import { Flex, GridItem, VStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { OptimisticL2BlobTypeCelestia } from 'types/api/optimisticL2';
 
@@ -17,12 +18,13 @@ interface Props {
 }
 
 const OptimisticL2TxnBatchBlobCelestia = ({ blobs, isLoading }: Props) => {
+  const { t } = useTranslation();
   return (
     <VStack rowGap={ 2 } w="100%">
       { blobs.map((blob) => {
         return (
           <OptimisticL2TxnBatchBlobWrapper key={ blob.commitment } isLoading={ isLoading } gridTemplateColumns="auto 1fr auto">
-            <GridItem fontWeight={ 600 }>Commitment</GridItem>
+            <GridItem fontWeight={ 600 }>{ t('common.common.commitment') }</GridItem>
             <GridItem overflow="hidden">
               <Flex minW="0" w="calc(100% - 20px)">
                 <HashStringShortenDynamic hash={ blob.commitment }/>
@@ -30,15 +32,15 @@ const OptimisticL2TxnBatchBlobCelestia = ({ blobs, isLoading }: Props) => {
               </Flex>
             </GridItem>
             <CeleniumLink commitment={ blob.commitment } namespace={ blob.namespace } height={ blob.height } fallback={ <GridItem/> }/>
-            <GridItem fontWeight={ 600 }>Height</GridItem>
+            <GridItem fontWeight={ 600 }>{ t('common.common.height') }</GridItem>
             <GridItem colSpan={ 2 }>
               { blob.height }
             </GridItem>
-            <GridItem fontWeight={ 600 }>Timestamp</GridItem>
+            <GridItem fontWeight={ 600 }>{ t('common.common.timestamp') }</GridItem>
             <GridItem whiteSpace="normal" colSpan={ 2 }>
               { dayjs(blob.l1_timestamp).fromNow() } | { dayjs(blob.l1_timestamp).format('llll') }
             </GridItem>
-            <GridItem fontWeight={ 600 }>L1 txn hash</GridItem>
+            <GridItem fontWeight={ 600 }>{ t('common.common.l1_txn_hash') }</GridItem>
             <GridItem overflow="hidden" colSpan={ 2 }>
               <TxEntityL1 hash={ blob.l1_transaction_hash } noIcon/>
             </GridItem>

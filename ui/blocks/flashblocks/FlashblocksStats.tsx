@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { upperFirst } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { SECOND } from 'toolkit/utils/consts';
@@ -16,6 +17,7 @@ interface Props {
 
 const FlashblocksStats = ({ itemsNum, txsNum, initialTs }: Props) => {
 
+  const { t } = useTranslation();
   const timeElapsed = initialTs ? Date.now() - initialTs : undefined;
 
   if (!flashblocksFeature.isEnabled) {
@@ -34,7 +36,7 @@ const FlashblocksStats = ({ itemsNum, txsNum, initialTs }: Props) => {
         value={ timeElapsed ? Number(itemsNum / (timeElapsed / SECOND)).toLocaleString(undefined, { maximumFractionDigits: 0 }) : '-' }
       />
       <StatsWidget
-        label="TPS"
+        label={ t('blocks.common.tps', { defaultValue: 'TPS' }) }
         value={ timeElapsed && txsNum > 0 ? Number(txsNum / (timeElapsed / SECOND)).toLocaleString(undefined, { maximumFractionDigits: 0 }) : '-' }
       />
       <StatsWidget

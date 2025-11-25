@@ -1,5 +1,6 @@
 import { Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ZkEvmL2TxnBatchesItem } from 'types/api/zkEvmL2';
 
@@ -22,6 +23,8 @@ const ZkEvmTxnBatchesTableItem = ({ item, isLoading }: Props) => {
     return null;
   }
 
+  const { t } = useTranslation();
+
   return (
     <TableRow>
       <TableCell verticalAlign="middle">
@@ -39,7 +42,7 @@ const ZkEvmTxnBatchesTableItem = ({ item, isLoading }: Props) => {
       <TableCell verticalAlign="middle">
         <TimeWithTooltip
           timestamp={ item.timestamp }
-          fallbackText="Undefined"
+          fallbackText={t('common.common.undefined')}
           isLoading={ isLoading }
           color="text.secondary"
         />
@@ -64,7 +67,7 @@ const ZkEvmTxnBatchesTableItem = ({ item, isLoading }: Props) => {
             noIcon
             noCopy
           />
-        ) : <Text>Pending</Text> }
+        ) : <Text>{t('common.common.pending')}</Text> }
       </TableCell>
       <TableCell pr={ 12 } verticalAlign="middle">
         { item.sequence_transaction_hash ? (
@@ -76,7 +79,7 @@ const ZkEvmTxnBatchesTableItem = ({ item, isLoading }: Props) => {
             noIcon
             noCopy
           />
-        ) : <Text>Pending</Text> }
+        ) : <Text>{t('common.common.pending')}</Text> }
       </TableCell>
     </TableRow>
   );

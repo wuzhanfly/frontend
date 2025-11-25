@@ -1,5 +1,6 @@
 import { Box, HStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { Switch } from 'toolkit/chakra/switch';
@@ -13,6 +14,7 @@ import useFlashblocksSocketData from './flashblocks/useFlashblocksSocketData';
 const flashblocksFeature = config.features.flashblocks;
 
 const Flashblocks = () => {
+  const { t } = useTranslation();
 
   const manualModeRef = React.useRef(false);
   const [ isRealTime, setIsRealTime ] = React.useState(true);
@@ -46,7 +48,10 @@ const Flashblocks = () => {
           Real-time feed
         </Switch>
         <Hint
-          label={ `Real-time ${ flashblocksFeature.name }s show the latest ${ flashblocksFeature.name }s with real-time updates in the chronological order. ` }
+          label={ t('blocks.common.real_time_flashblocks_description', { 
+            flashblocksName: flashblocksFeature.name,
+            defaultValue: `Real-time {{flashblocksName}}s show the latest {{flashblocksName}}s with real-time updates in the chronological order. `
+          }) }
         />
       </HStack>
       <Box hideBelow="lg">

@@ -39,7 +39,7 @@ const InternalTxsTable = ({ data, currentAddress, isLoading, top, showBlockInfo 
             { showBlockInfo && <TableColumnHeader width="15%">{ t('common.common.block') }</TableColumnHeader> }
             <TableColumnHeader width="50%">{ t('transactions.common.from_to') }</TableColumnHeader>
             <TableColumnHeader width="20%" isNumeric>
-              { t('common.common.value') + ' ' + currencyUnits.ether }
+              { t('internal_txs.common.value_with_currency', { currency: currencyUnits.ether }) }
             </TableColumnHeader>
           </TableRow>
         </TableHeaderSticky>

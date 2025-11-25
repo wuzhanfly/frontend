@@ -46,7 +46,7 @@ const VerifiedContractsTable = ({ data, sort, setSorting, isLoading }: Props) =>
             onSortToggle={ onSortToggle }
             disabled={ isLoading }
           >
-            { t('common.common.balance') } { currencyUnits.ether }
+            { t('verified_contracts.common.balance_ether', { currency: currencyUnits.ether }) }
           </TableColumnHeaderSortable>
           <TableColumnHeaderSortable
             width="130px"

@@ -1,5 +1,6 @@
 import { HStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ArbitrumL2TxnBatchesItem } from 'types/api/arbitrumL2';
 
@@ -25,6 +26,8 @@ const ArbitrumL2TxnBatchesTableItem = ({ item, isLoading }: Props) => {
     return null;
   }
 
+  const { t } = useTranslation();
+
   return (
     <TableRow>
       <TableCell verticalAlign="middle">
@@ -48,7 +51,7 @@ const ArbitrumL2TxnBatchesTableItem = ({ item, isLoading }: Props) => {
         />
       </TableCell>
       <TableCell verticalAlign="middle">
-        <Skeleton loading={ isLoading } display="inline-block">{ item.blocks_count ? item.blocks_count.toLocaleString() : 'N/A' }</Skeleton>
+        <Skeleton loading={ isLoading } display="inline-block">{ item.blocks_count ? item.blocks_count.toLocaleString() : t('common.common.n_a') }</Skeleton>
       </TableCell>
       <TableCell pr={ 12 } verticalAlign="middle">
         <TxEntityL1
@@ -61,7 +64,7 @@ const ArbitrumL2TxnBatchesTableItem = ({ item, isLoading }: Props) => {
       <TableCell verticalAlign="middle">
         <TimeWithTooltip
           timestamp={ item.commitment_transaction.timestamp }
-          fallbackText="Undefined"
+          fallbackText={t('common.common.undefined')}
           isLoading={ isLoading }
           color="text.secondary"
         />

@@ -32,13 +32,13 @@ const VerifiedContractsTableItem = ({ data, isLoading, chainData }: Props) => {
     '0';
 
   const license = (() => {
-  const { t } = useTranslation();
+    const { t } = useTranslation();
     const license = CONTRACT_LICENSES.find((license) => license.type === data.license_type);
     if (!license || license.type === 'none') {
-      return '-';
+      return t('common.common.licenses.none');
     }
 
-    return license.label;
+    return t(license.label);
   })();
 
   return (

@@ -64,7 +64,7 @@ const ZetaChainCCTxs = ({
       queryParams: {
         limit: 50,
         offset: 0,
-        status_reduced: type === 'pending' ? [ 'Pending' ] : [ 'Success', t('shared.common.failed') ],
+        status_reduced: type === 'pending' ? [ t('shared.common.pending') ] : [ t('common.common.success'), t('shared.common.failed') ],
         direction: 'DESC',
       },
     });

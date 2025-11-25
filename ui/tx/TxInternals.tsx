@@ -125,15 +125,11 @@ const TxInternals = ({ txQuery }: Props) => {
 
   return (
     <DataListDisplay
-      isError={ isError || txQuery.isError }
-      itemsNum={ data?.items.length }
-      emptyText="There are no internal transactions for this transaction."
-      // filterProps={{
-      // emptyFilteredText: `Couldn${ apos }t find any transaction that matches your query.`.
-      // hasActiveFilters: Boolean(filters.length || searchTerm),
-      // }}
-      actionBar={ actionBar }
-    >
+        isError={ isError || txQuery.isError }
+        itemsNum={ filteredData?.length }
+        emptyText={ t('transactions.common.there_are_no_internal_transactions_for_this_transaction') }
+        actionBar={ actionBar }
+      >
       { content }
     </DataListDisplay>
   );

@@ -33,10 +33,10 @@ const ZetaChainCCTXReducedStatus = ({ status, isLoading, type = 'reduced' }: Pro
     let text: string;
     switch (status) {
       case CctxStatusReduced.SUCCESS:
-        text = 'Success';
+        text = t('common.common.success');
         break;
       case CctxStatusReduced.PENDING:
-        text = 'Pending';
+        text = t('shared.common.pending');
         break;
       case CctxStatusReduced.FAILED:
         text = t('shared.common.failed');

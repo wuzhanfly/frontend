@@ -83,7 +83,7 @@ const ZetaChainCCTXsTab = () => {
       ...filters,
       limit: 50,
       offset: 0,
-      status_reduced: filters.status_reduced ?? [ 'Pending' ],
+      status_reduced: filters.status_reduced ?? [ t('shared.common.pending') ],
       direction: 'DESC',
     },
     options: {

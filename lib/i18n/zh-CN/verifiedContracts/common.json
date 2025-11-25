@@ -1,0 +1,18 @@
+{
+  "verified_contracts.common.balance_ether": "余额 {{currency}}",
+  "verified_contracts.common.txs_count": "交易数量",
+  "verified_contracts.common.language": "语言",
+  "verified_contracts.common.compiler_version": "编译器版本",
+  "verified_contracts.common.zk_compiler": "ZK 编译器",
+  "verified_contracts.common.optimization": "优化",
+  "verified_contracts.common.constructor_args": "构造函数参数",
+  "verified_contracts.common.verified": "已验证",
+  "verified_contracts.common.license": "许可证",
+  "verified_contracts.common.contract": "合约",
+  "verified_contracts.common.balance": "余额",
+  "verified_contracts.common.transactions": "交易",
+  "verified_contracts.common.language_compiler_version": "语言和编译器版本",
+  "verified_contracts.common.settings": "设置",
+  "verified_contracts.common.total_contracts": "总合约数",
+  "verified_contracts.common.verified_contracts": "已验证合约数"
+}

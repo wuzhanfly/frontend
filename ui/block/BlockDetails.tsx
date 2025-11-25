@@ -76,7 +76,7 @@ const BlockDetails = ({ query }: Props) => {
 
   const { totalReward, staticReward, burntFees, txFees } = getBlockReward(data);
 
-  const validatorTitle = getNetworkValidatorTitle();
+  const validatorTitle = t(getNetworkValidatorTitle());
 
   const rewardBreakDown = (() => {
     const { t } = useTranslation();
@@ -215,7 +215,7 @@ const BlockDetails = ({ query }: Props) => {
           <DetailedInfo.ItemValue columnGap={ 3 }>
             { data.optimism.number ?
               <BatchEntityL2 isLoading={ isPlaceholderData } number={ data.optimism.number }/> :
-              <Skeleton loading={ isPlaceholderData }>Pending</Skeleton> }
+              <Skeleton loading={ isPlaceholderData }>{ t('shared.common.pending') }</Skeleton> }
             { data.optimism.batch_data_container && (
               <OptimisticL2TxnBatchDA
                 container={ data.optimism.batch_data_container }

@@ -26,7 +26,7 @@ export function getStateElements(data: TxStateChange, isLoading?: boolean) {
       return (
         <Tooltip content={t('transactions.common.a_block_producer_who_successfu')}>
           <Badge textTransform="capitalize" colorPalette="yellow" loading={ isLoading }>
-            { getNetworkValidatorTitle() }
+            { t(getNetworkValidatorTitle()) }
           </Badge>
         </Tooltip>
       );

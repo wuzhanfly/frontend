@@ -107,7 +107,7 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         Timestamp
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
-        { data.timestamp ? <DetailedInfoTimestamp timestamp={ data.timestamp } isLoading={ isPlaceholderData }/> : 'Undefined' }
+        { data.timestamp ? <DetailedInfoTimestamp timestamp={ data.timestamp } isLoading={ isPlaceholderData }/> : t('common.common.undefined') }
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel

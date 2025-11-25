@@ -90,6 +90,12 @@
   "shared.common.raw": "原始",
   "shared.common.gas_used_": "Gas使用率%",
   "shared.common.block_is_being_resynced_detail": "区块正在重新同步。更新完成前详情可能不完整。",
+  "shared.common.tx_is_being_resynced_detail": "此交易属于正在重新同步的区块。更新完成前详情可能不完整。",
+  "shared.common.ready_for_relay": "准备中继",
+  "shared.common.waiting": "等待中",
+  "shared.common.active": "活跃",
+  "shared.common.probation": "试用期",
+  "shared.common.inactive": "非活跃",
   "shared.common.native_token": "原生代币",
   "shared.common.select_interval": "选择间隔",
   "shared.common.chart_title_placeholder": "图表标题占位符",
@@ -192,6 +198,8 @@
   "shared.common.unknown_status": "未知状态",
   "shared.common.medium": "Medium",
   "shared.common.unknown_error": "未知错误",
+  "shared.common.pending": "待处理",
+  "shared.common.to": "到",
   "shared.common.": " ",
   "shared.common.sharedcommon728x90": "共享通用728x90"
 }

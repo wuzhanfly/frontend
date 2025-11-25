@@ -63,7 +63,7 @@ const ZkEvmL2TxnBatchDetails = ({ query }: Props) => {
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
       >
-        Txn batch number
+        { t('common.common.txn_batch_number') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
@@ -82,7 +82,7 @@ const ZkEvmL2TxnBatchDetails = ({ query }: Props) => {
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
       >
-        Status
+        { t('validators.common.status') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <VerificationSteps steps={ ZKEVM_L2_TX_BATCH_STATUSES } currentStep={ data.status } isLoading={ isPlaceholderData }/>
@@ -91,16 +91,16 @@ const ZkEvmL2TxnBatchDetails = ({ query }: Props) => {
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
       >
-        Timestamp
+        { t('common.common.timestamp') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
-        { data.timestamp ? <DetailedInfoTimestamp timestamp={ data.timestamp } isLoading={ isPlaceholderData }/> : 'Undefined' }
+        { data.timestamp ? <DetailedInfoTimestamp timestamp={ data.timestamp } isLoading={ isPlaceholderData }/> : t('common.common.undefined') }
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
       >
-        Verify tx hash
+        { t('common.common.verify_tx_hash') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         { data.verify_transaction_hash ? (
@@ -110,13 +110,13 @@ const ZkEvmL2TxnBatchDetails = ({ query }: Props) => {
             maxW="100%"
             noCopy
           />
-        ) : <Text>Pending</Text> }
+        ) : <Text>{ t('shared.common.pending') }</Text> }
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
       >
-        Transactions
+        { t('common.common.transactions') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
@@ -131,7 +131,7 @@ const ZkEvmL2TxnBatchDetails = ({ query }: Props) => {
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
       >
-        Global exit root
+        { t('common.common.global_exit_root') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue
         flexWrap="nowrap"
@@ -159,7 +159,7 @@ const ZkEvmL2TxnBatchDetails = ({ query }: Props) => {
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
       >
-        Sequence tx hash
+        { t('common.common.sequence_tx_hash') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         { data.sequence_transaction_hash ? (
@@ -169,13 +169,13 @@ const ZkEvmL2TxnBatchDetails = ({ query }: Props) => {
             maxW="100%"
             noCopy
           />
-        ) : <Text>Pending</Text> }
+        ) : <Text>{ t('shared.common.pending') }</Text> }
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
       >
-        State root
+        { t('common.common.state_root') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue
         flexWrap="nowrap"

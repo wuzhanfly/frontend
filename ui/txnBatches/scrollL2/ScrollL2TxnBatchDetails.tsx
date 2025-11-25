@@ -109,7 +109,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
       <DetailedInfo.ItemValue>
         { data.confirmation_transaction.timestamp ?
           <DetailedInfoTimestamp timestamp={ data.confirmation_transaction.timestamp } isLoading={ isPlaceholderData }/> :
-          <Skeleton loading={ isPlaceholderData } display="inline-block">Pending</Skeleton>
+          <Skeleton loading={ isPlaceholderData } display="inline-block">{ t('shared.common.pending') }</Skeleton>
         }
       </DetailedInfo.ItemValue>
 
@@ -150,7 +150,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
       <DetailedInfo.ItemValue>
         { data.commitment_transaction.timestamp ?
           <DetailedInfoTimestamp timestamp={ data.commitment_transaction.timestamp } isLoading={ isPlaceholderData }/> :
-          <Skeleton loading={ isPlaceholderData } display="inline-block">Pending</Skeleton>
+          <Skeleton loading={ isPlaceholderData } display="inline-block">{ t('shared.common.pending') }</Skeleton>
         }
       </DetailedInfo.ItemValue>
 
@@ -197,7 +197,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
             maxW="100%"
             noCopy
           />
-        ) : <Skeleton loading={ isPlaceholderData } display="inline-block">Pending</Skeleton> }
+        ) : <Skeleton loading={ isPlaceholderData } display="inline-block">{ t('shared.common.pending') }</Skeleton> }
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
@@ -212,7 +212,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
             isLoading={ isPlaceholderData }
             number={ data.confirmation_transaction.block_number }
           />
-        ) : <Skeleton loading={ isPlaceholderData } display="inline-block">Pending</Skeleton> }
+        ) : <Skeleton loading={ isPlaceholderData } display="inline-block">{ t('shared.common.pending') }</Skeleton> }
       </DetailedInfo.ItemValue>
     </DetailedInfo.Container>
   );

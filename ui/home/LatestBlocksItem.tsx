@@ -1,6 +1,7 @@
 import { Box, Flex, Grid } from '@chakra-ui/react';
 import { capitalize } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Block } from 'types/api/block';
 
@@ -22,6 +23,7 @@ type Props = {
 };
 
 const LatestBlocksItem = ({ block, isLoading, animation }: Props) => {
+  const { t } = useTranslation();
   const totalReward = getBlockTotalReward(block);
   return (
     <Box
@@ -74,7 +76,7 @@ const LatestBlocksItem = ({ block, isLoading, animation }: Props) => {
 
         { !config.features.rollup.isEnabled && !config.UI.views.block.hiddenFields?.miner && (
           <>
-            <Skeleton loading={ isLoading }>{ capitalize(getNetworkValidatorTitle()) }</Skeleton>
+            <Skeleton loading={ isLoading }>{ capitalize(t(getNetworkValidatorTitle())) }</Skeleton>
             <AddressEntity
               address={ block.miner }
               isLoading={ isLoading }

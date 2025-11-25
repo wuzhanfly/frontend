@@ -278,7 +278,10 @@ const AddressDetails = ({ addressQuery, countersQuery, isLoading }: Props) => {
         { data.has_validated_blocks && (
           <>
             <DetailedInfo.ItemLabel
-              hint={ `Number of blocks ${ getNetworkValidationActionText() } by this ${ getNetworkValidatorTitle() }` }
+              hint={ t('address_details.common.number_of_blocks_validated_by_this_validator', { 
+            action: getNetworkValidationActionText(), 
+            validator: t(getNetworkValidatorTitle()) 
+          }) }
               isLoading={ isLoading || countersQuery.isPlaceholderData }
             >
               { `Blocks ${ getNetworkValidationActionText() }` }

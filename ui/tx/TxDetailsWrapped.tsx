@@ -53,7 +53,7 @@ const TxDetailsWrapped = ({ data }: Props) => {
           <DetailedInfo.ItemLabel
             hint="Address (external or contract) receiving the transaction"
           >
-            { data.to.is_contract ? t('transactions.common.interacted_with_contract') : 'To' }
+            { data.to.is_contract ? t('transactions.common.interacted_with_contract') : t('transactions.common.to') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Flex flexWrap="nowrap" alignItems="center" maxW="100%">

@@ -226,5 +226,7 @@
   "addresses.common.id": "ID",
   "addresses.common.actor": "Actor",
   "addresses.common.ethereum_address": "Ethereum Address",
-  "addresses.common.tokens_label": "Tokens"
+  "addresses.common.tokens_label": "Tokens",
+  "addresses.common.balance_with_currency": "Balance {{currency}}",
+  "addresses.common.number_of_blocks_validated_by_this_validator": "Number of blocks {{action}} by this {{validator}}"
 }

@@ -95,7 +95,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
       <DetailedInfo.ItemValue>
         { data.commitment_transaction.timestamp ?
           <DetailedInfoTimestamp timestamp={ data.commitment_transaction.timestamp } isLoading={ isPlaceholderData }/> :
-          'Undefined'
+          t('common.common.undefined')
         }
       </DetailedInfo.ItemValue>
 

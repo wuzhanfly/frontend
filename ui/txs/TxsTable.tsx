@@ -95,7 +95,7 @@ const TxsTable = ({
                   sortValue={ sort }
                   onSortToggle={ onSortToggle }
                 >
-                  { t('transactions.common.value') + ' ' + currencyUnits.ether }
+                  { t('transactions.common.value_with_currency', { currency: currencyUnits.ether }) }
                 </TableColumnHeaderSortable>
               ) : (
                 <TableColumnHeader width="20%" isNumeric>{ t('transactions.common.value') }</TableColumnHeader>

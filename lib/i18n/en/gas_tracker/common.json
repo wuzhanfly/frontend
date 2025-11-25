@@ -9,5 +9,7 @@
   "gas_tracker.common.base": "Base",
   "gas_tracker.common.priority": "Priority",
   "gas_tracker.common.network_utilization": "Network utilization",
-  "gas_tracker.common.load": "load"
+  "gas_tracker.common.load": "load",
+  "gas_tracker.common.last_n_blocks": "last {{count}} blocks",
+  "gas_tracker.common.network_utilization_description": "Network utilization (last 50 blocks):"
 }

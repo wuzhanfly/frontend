@@ -1,5 +1,6 @@
 import { Flex, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FlashblockItem } from 'types/client/flashblocks';
 
@@ -15,6 +16,7 @@ interface Props {
 }
 
 const FlashblocksListItem = ({ data }: Props) => {
+  const { t } = useTranslation();
   return (
     <ListItemMobile rowGap={ 3 }>
       <Flex justifyContent="space-between" w="100%">
@@ -24,16 +26,16 @@ const FlashblocksListItem = ({ data }: Props) => {
             index={ data.index }
             fontWeight={ 600 }
           />
-        ) : <Text color="text.secondary">N/A</Text> }
+        ) : <Text color="text.secondary">{ t('common.common.n_a') }</Text> }
       </Flex>
       { data.timestamp && (
         <Flex columnGap={ 2 }>
-          <Text fontWeight={ 500 }>Timestamp</Text>
+          <Text fontWeight={ 500 }>{ t('common.common.timestamp') }</Text>
           <Text color="text.secondary">{ dayjs(data.timestamp).format('DD MMM, HH:mm:ss.SSS') }</Text>
         </Flex>
       ) }
       <Flex columnGap={ 2 }>
-        <Text fontWeight={ 500 }>Txn</Text>
+        <Text fontWeight={ 500 }>{ t('transactions.common.txn') }</Text>
         { data.transactions_count > 0 ? (
           <Link href={ route({
             pathname: '/block/[height_or_hash]',
@@ -46,7 +48,7 @@ const FlashblocksListItem = ({ data }: Props) => {
         }
       </Flex>
       <Flex columnGap={ 2 }>
-        <Text fontWeight={ 500 }>Gas used</Text>
+        <Text fontWeight={ 500 }>{ t('common.common.gas_used') }</Text>
         <Text color="text.secondary">{ data.gas_used.toLocaleString() }</Text>
       </Flex>
     </ListItemMobile>

@@ -41,7 +41,7 @@ const TacOperationLifecycleAccordionItemContent = ({ isLast, data }: Props) => {
           Status
         </GridItem>
         <GridItem py={ 1 }>
-          <StatusTag type={ data.is_success ? 'ok' : 'error' } text={ data.is_success ? 'Success' : t('shared.common.failed') }/>
+          <StatusTag type={ data.is_success ? 'ok' : 'error' } text={ data.is_success ? t('common.common.success') : t('shared.common.failed') }/>
         </GridItem>
 
         { data.timestamp && (

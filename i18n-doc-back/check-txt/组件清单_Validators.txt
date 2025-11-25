@@ -1,0 +1,34 @@
+# 组件国际化状态清单 - Validators 模块
+
+## 已检测组件列表
+
+ValidatorsTable (blackfort) 组件 - 已检测
+ValidatorsListItem (blackfort) 组件 - 已检测
+ValidatorsCounters (blackfort) 组件 - 已检测
+ValidatorsTable (stability) 组件 - 已检测
+ValidatorsListItem (stability) 组件 - 已检测
+ValidatorsCounters (stability) 组件 - 已检测
+ValidatorsFilter (stability) 组件 - 已检测
+ValidatorsTable (zilliqa) 组件 - 已检测
+ValidatorsListItem (zilliqa) 组件 - 已检测
+ValidatorDetails (zilliqa) 组件 - 已检测
+
+## 需要国际化的组件
+
+ValidatorsTable (blackfort) 组件 - 发现硬编码文本：
+- "Validator's address" (验证者地址列标题文本)
+
+ValidatorsTable (stability) 组件 - 发现硬编码文本：
+- "Validator's address" (验证者地址列标题文本)
+- "Status" (状态列标题文本)
+- "Blocks" (区块数列标题文本)
+
+ValidatorDetails (zilliqa) 组件 - 发现硬编码文本：
+- "Index" (索引标签文本)
+- "Staked" (质押标签文本)
+- "Peer ID" (节点ID标签文本)
+- "Control address" (控制地址标签文本)
+- "Reward address" (奖励地址标签文本)
+- "Signing address" (签名地址标签文本)
+- "Added at block" (添加区块标签文本)
+- "Stake updated" (质押更新标签文本)

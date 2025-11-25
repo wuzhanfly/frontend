@@ -1,0 +1,35 @@
+# 组件国际化状态清单 - Address 模块
+
+## 已检测组件列表
+
+AddressContract 组件 - 已检测
+AddressDetails 组件 - 已检测
+SolidityscanReport 组件 - 已检测
+ContractExternalLibraries 组件 - 已检测
+ContractSourceCode 组件 - 已检测
+ContractDetails 组件 - 已检测
+ContractDetailsAlerts 组件 - 已检测
+ContractDetailsAlertProxyPattern 组件 - 已检测
+ContractDetailsAlertVerificationSource 组件 - 已检测
+ContractDetailsConstructorArgs 组件 - 已检测
+ContractAutoVerificationStatus 组件 - 已检测
+ContractMethodsMudSystem 组件 - 已检测
+ContractMethodsContainer 组件 - 已检测
+ContractAbiItem 组件 - 已检测
+ContractAbi 组件 - 已检测
+ContractMethodsProxy 组件 - 已检测
+ContractMethodsFilters 组件 - 已检测
+AddressMud 组件 - 已检测
+AddressNftTypeFilter 组件 - 已检测
+ERC20TokensListItem 组件 - 已检测
+TokenSelect 组件 - 已检测
+AddressNFTs 组件 - 已检测
+AddressTxs 组件 - 已检测
+
+## 需要国际化的组件
+
+ContractDetailsAlertVerificationSource 组件 - 发现硬编码文本，例如："This contract has been {data.is_partially_verified ? 'partially ' : '' }verified using" 和 "This contract has been { data.is_partially_verified ? 'partially ' : '' }verified via Sourcify."
+ContractDetails 组件 - 发现硬编码文本："Current address" 和 "Current contract"
+ContractMethodsProxy 组件 - 发现硬编码文本："Delegate address" 和 "Implementation address"
+ContractMethodForm 组件 - 发现硬编码文本："Send native ${ config.chain.currency.symbol || 'coin' }"
+AddressDetails 组件 - 发现硬编码文本：" at txn "

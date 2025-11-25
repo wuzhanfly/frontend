@@ -1,0 +1,65 @@
+# 组件国际化状态清单 - Home 模块
+
+## 已检测组件列表
+
+HeroBanner 组件 - 已检测
+Stats 组件 - 已检测
+LatestBlocks 组件 - 已检测
+LatestBlocksItem 组件 - 已检测
+LatestTxs 组件 - 已检测
+LatestTxsItem 组件 - 已检测
+LatestTxsItemMobile 组件 - 已检测
+Transactions 组件 - 已检测
+ChainIndicators 组件 - 已检测
+LatestZkEvmL2Batches 组件 - 已检测
+LatestBatchItem 组件 - 已检测
+LatestDeposits 组件 - 已检测
+LatestZetaChainCCTXs 组件 - 已检测
+
+## 需要国际化的组件
+
+HeroBanner 组件 - 发现硬编码文本：
+- "blockchain explorer"
+- "explorer"
+
+LatestBlocks 组件 - 发现硬编码文本：
+- "View all blocks"
+- "Current epoch: "
+
+LatestBlocksItem 组件 - 发现硬编码文本：
+- "Txn"
+- "Reward"
+- 基础miner文本
+
+LatestTxs 组件 - 发现硬编码文本：
+- "View all transactions"
+
+LatestTxsItem 组件 - 发现硬编码文本：
+- "Value "
+- "Fee "
+
+LatestTxsItemMobile 组件 - 发现硬编码文本：
+- "Value "
+- "Fee "
+
+Transactions 组件 - 发现硬编码文本：
+- "Transactions"
+- "Deposits (L1→L2 txn)"
+
+ChainIndicators 组件 - 发现硬编码文本：
+- 多个英文默认文本值
+
+LatestZkEvmL2Batches 组件 - 发现硬编码文本：
+- "Latest batches"
+- "View all batches"
+
+LatestBatchItem 组件 - 发现硬编码文本：
+- "Txn"
+
+LatestDeposits 组件 - 发现硬编码文本：
+- "L1 txn"
+- "L2 txn"
+- "View all deposits"
+
+LatestZetaChainCCTXs 组件 - 发现硬编码文本：
+- "View all cross chain transactions"

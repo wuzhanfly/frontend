@@ -1,0 +1,38 @@
+# 组件国际化状态清单 - AdvancedFilter 模块
+
+## 已检测组件列表
+
+ColumnsButton 组件 - 已检测
+ExportCSV 组件 - 已检测
+FilterByColumn 组件 - 已检测
+constants.ts - 已检测
+
+## 需要国际化的组件
+
+ColumnsButton 组件 - 发现硬编码文本：
+- "Columns" 文本
+- "And/Or" 文本
+
+constants.ts - 发现多处硬编码文本：
+- "Tx Hash" 
+- "Type"
+- "Method"
+- "Age"
+- "From"
+- "To"
+- "Amount"
+- "Asset"
+- "Fee"
+- "Coin Transfer"
+- "ERC-20"
+- " ERC-404" (注意开头有空格)
+- "ERC-721"
+- "ERC-1155"
+- "All"
+
+ExportCSV 组件 - 发现硬编码文本：
+- "Export to CSV"
+
+FilterByColumn 组件 - 发现硬编码文本：
+- "Type"
+- "And/Or"

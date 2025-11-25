@@ -1,0 +1,14 @@
+# 组件国际化状态清单 - Cluster 模块
+
+## 已检测组件列表
+
+ClusterDetails 组件 - 已检测
+
+## 需要国际化的组件
+
+ClusterDetails 组件 - 发现多处硬编码文本：
+- "Cluster name"
+- "Owner address"
+- "Type" (在 hint 属性中也包含硬编码文本 "The network type of the address attached to this cluster name")
+- "Backing" (在 hint 属性中也包含硬编码文本 "The amount of ... backing this cluster name")
+- "Created"

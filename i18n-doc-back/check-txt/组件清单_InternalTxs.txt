@@ -1,0 +1,13 @@
+# 组件国际化状态清单 - InternalTxs 模块
+
+## 已检测组件列表
+
+InternalTxsTable 组件 - 已检测
+InternalTxsTableItem 组件 - 已检测
+InternalTxsList 组件 - 已检测
+InternalTxsListItem 组件 - 已检测
+useInternalTxsQuery 组件 - 已检测
+
+## 需要国际化的组件
+
+InternalTxs 模块 - 组件已完成国际化

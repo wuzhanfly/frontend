@@ -1,0 +1,28 @@
+# 组件国际化状态清单 - TxnWithdrawals 模块
+
+## 已检测组件列表
+
+ArbitrumL2TxnWithdrawalsClaimButton 组件 - 已检测
+ArbitrumL2TxnWithdrawalsClaimTx 组件 - 已检测
+ArbitrumL2TxnWithdrawalsList 组件 - 已检测
+ArbitrumL2TxnWithdrawalsListItem 组件 - 已检测
+ArbitrumL2TxnWithdrawalsTable 组件 - 已检测
+ArbitrumL2TxnWithdrawalsTableItem 组件 - 已检测
+ArbitrumL2TxnWithdrawalsValue 组件 - 已检测
+
+## 需要国际化的组件
+
+ArbitrumL2TxnWithdrawalsClaimButton 组件 - 发现硬编码文本：
+- "Claim" (提取按钮文本)
+
+ArbitrumL2TxnWithdrawalsListItem 组件 - 发现硬编码文本：
+- "Message #" (消息编号标签文本)
+- "Receiver" (接收者标签文本)
+- "Value" (价值标签文本)
+- "Status" (状态标签文本)
+
+ArbitrumL2TxnWithdrawalsTable 组件 - 发现硬编码文本：
+- "Message #" (消息编号列标题文本)
+- "Receiver" (接收者列标题文本)
+- "Value" (价值列标题文本)
+- "Status" (状态列标题文本)

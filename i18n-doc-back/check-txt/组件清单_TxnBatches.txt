@@ -1,0 +1,79 @@
+# 组件国际化状态清单 - TxnBatches 模块
+
+## 已检测组件列表
+
+ArbitrumL2TxnBatchDetails 组件 - 已检测
+ArbitrumL2TxnBatchDetailsAnyTrustDA 组件 - 已检测
+ArbitrumL2TxnBatchDetailsCelestiaDA 组件 - 已检测
+ArbitrumL2TxnBatchesListItem 组件 - 已检测
+ArbitrumL2TxnBatchesTable 组件 - 已检测
+ArbitrumL2TxnBatchesTableItem 组件 - 已检测
+OptimisticL2TxnBatchDetails 组件 - 已检测
+OptimisticL2TxnBatchBlobCallData 组件 - 已检测
+OptimisticL2TxnBatchBlobCelestia 组件 - 已检测
+OptimisticL2TxnBatchBlobEip4844 组件 - 已检测
+OptimisticL2TxnBatchesListItem 组件 - 已检测
+OptimisticL2TxnBatchesTable 组件 - 已检测
+OptimisticL2TxnBatchesTableItem 组件 - 已检测
+ScrollL2TxnBatchDetails 组件 - 已检测
+ScrollL2TxnBatchesListItem 组件 - 已检测
+ScrollL2TxnBatchesTable 组件 - 已检测
+ScrollL2TxnBatchesTableItem 组件 - 已检测
+ZkEvmL2TxnBatchDetails 组件 - 已检测
+ZkEvmTxnBatchesListItem 组件 - 已检测
+ZkEvmTxnBatchesTable 组件 - 已检测
+ZkEvmTxnBatchesTableItem 组件 - 已检测
+ZkSyncL2TxnBatchDetails 组件 - 已检测
+ZkSyncL2TxnBatchHashesInfo 组件 - 已检测
+ZkSyncTxnBatchesListItem 组件 - 已检测
+ZkSyncTxnBatchesTable 组件 - 已检测
+ZkSyncTxnBatchesTableItem 组件 - 已检测
+
+## 需要国际化的组件
+
+ArbitrumL2TxnBatchDetails 组件 - 发现硬编码文本：
+- "Txn batch number" (交易批次号标签文本)
+- "Timestamp" (时间戳标签文本)
+- "Transactions" (交易标签文本)
+- "Blocks" (区块标签文本)
+- "L1 transaction hash" (L1交易哈希标签文本)
+- "L1 block" (L1区块标签文本)
+- "Batch data container" (批次数据容器标签文本)
+- "Before acc" (前置累加器标签文本)
+- "After acc" (后置累加器标签文本)
+
+OptimisticL2TxnBatchDetails 组件 - 发现硬编码文本：
+- "Batch ID" (批次ID标签文本)
+- "Timestamp" (时间戳标签文本)
+- "Transactions" (交易标签文本)
+- "Blocks" (区块标签文本)
+- "Batch data container" (批次数据容器标签文本)
+- "in this batch" (在此批次文本 - 出现两个地方)
+
+ScrollL2TxnBatchDetails 组件 - 发现硬编码文本：
+- "Txn batch number" (交易批次号标签文本)
+- "Container" (容器标签文本)
+- "Status" (状态标签文本)
+- "Date and time at which batch is finalized to L1" (最终化时间提示文本)
+- "Finalized timestamp" (最终化时间戳标签文本)
+- "Transactions" (交易标签文本)
+- "Blocks" (区块标签文本)
+- "Date and time at which batch is committed to L1" (提交时间提示文本)
+- "Committed timestamp" (提交时间戳标签文本)
+- "Hash of L1 transaction this batch was finalized in" (最终化交易哈希提示文本)
+- "Finalized transaction hash" (最终化交易哈希标签文本)
+- "L1 block that includes transaction with this batch finalization data" (最终化区块提示文本)
+- "Finalized block" (最终化区块标签文本)
+
+ZkEvmL2TxnBatchDetails 组件 - 发现硬编码文本：
+- "Acc input hash" (累加器输入哈希标签文本)
+
+ZkSyncL2TxnBatchDetails 组件 - 发现硬编码文本：
+- "Batch number indicates the length of batches produced by grouping L2 blocks to be proven on Ethereum." (批次号提示文本)
+- "Txn batch number" (交易批次号标签文本)
+- "Date and time at which batch is produced" (批次生成时间提示文本)
+- "Timestamp" (时间戳标签文本)
+- "Root hash" (根哈希标签文本)
+- "Gas price for the batch settlement transaction on L1" (L1 Gas价格提示文本)
+- "L1 gas price" (L1 Gas价格标签文本)
+- "L2 fair gas price" (L2公平Gas价格标签文本)

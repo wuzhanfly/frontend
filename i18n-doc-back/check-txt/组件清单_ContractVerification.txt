@@ -1,0 +1,43 @@
+# 组件国际化状态清单 - ContractVerification 模块
+
+## 已检测组件列表
+
+ContractVerificationForm 组件 - 已检测
+ContractVerificationFormCodeSnippet 组件 - 已检测
+ContractVerificationFieldAddress 组件 - 已检测
+ContractVerificationFieldMethod 组件 - 已检测
+ContractVerificationFieldLicenseType 组件 - 已检测
+utils.ts - 已检测
+
+## 需要国际化的组件
+
+ContractVerificationForm 组件 - 发现硬编码文本：
+- "Success" (在 toaster.success 中)
+- "Error" (在 toaster.error 中)
+- "Verify & publish" (在 Button 组件中)
+- "Verify & publish" (在 loadingText 属性中)
+
+ContractVerificationFieldAddress 组件 - 发现硬编码文本：
+- "Contract address to verify" (在 Heading 组件中)
+- "Smart contract / Address (0x...)" (在 FormFieldAddress 组件的 placeholder 中)
+
+ContractVerificationFieldMethod 组件 - 发现硬编码文本：
+- "Currently, Blockscout supports ... contract verification methods" (在 Heading 组件中)
+- "Verification method (compiler type)" (在 FormFieldSelect 组件的 placeholder 中)
+
+ContractVerificationFieldLicenseType 组件 - 发现硬编码文本：
+- "Contract license" (在 FormFieldSelect 组件的 placeholder 中)
+- "For best practices, all contract source code holders, publishers and authors are encouraged to also specify the accompanying license for their verified contract source code provided." (在 span 标签中)
+
+utils.ts - 发现硬编码文本：
+- METHOD_LABELS 对象中的多个标签：
+  - "Solidity (Single file)"
+  - "Solidity (Standard JSON input)"
+  - "Solidity (Sourcify)"
+  - "Solidity (Multi-part files)"
+  - "Vyper (Contract)"
+  - "Vyper (Multi-part files)"
+  - "Vyper (Standard JSON input)"
+  - "Solidity (Hardhat)"
+  - "Solidity (Foundry)"
+  - "Stylus (GitHub repository)"

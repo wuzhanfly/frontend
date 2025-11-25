@@ -1,0 +1,33 @@
+# 组件国际化状态清单 - Marketplace 模块
+
+## 已检测组件列表
+
+MarketplaceList 组件 - 已检测
+EmptySearchResult 组件 - 已检测
+MarketplaceAppCard 组件 - 已检测
+MarketplaceAppInfo 组件 - 已检测
+MarketplaceAppModal 组件 - 已检测
+Rating 组件 - 已检测
+TriggerButton 组件 - 已检测
+PopoverContent 组件 - 已检测
+utils 组件 - 已检测
+
+## 需要国际化的组件
+
+EmptySearchResult 组件 - 发现硬编码文本：
+- "You don't have any favorite apps."
+- "Click on the icon on the app's card to add it to Favorites."
+- "No matching apps found."
+- "Have a groundbreaking idea or app suggestion?"
+- "Share it with us"
+
+MarketplaceAppCard 组件 - 发现硬编码文本：
+- "Info"
+
+MarketplaceAppModal 组件 - 发现硬编码文本：
+- "Launch app"
+- "By "
+
+PopoverContent 组件 - 发现硬编码文本：
+- "Sending your feedback"
+- "How was your experience?"

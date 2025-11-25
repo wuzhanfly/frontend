@@ -1,0 +1,83 @@
+# 组件国际化状态清单 - Deposits 模块
+
+## 已检测组件列表
+
+BeaconChainDepositsTable 组件 - 已检测
+BeaconChainDepositsListItem 组件 - 已检测
+OptimisticDepositsTable 组件 - 已检测
+OptimisticDepositsListItem 组件 - 已检测
+ScrollL2DepositsTable 组件 - 已检测
+ScrollL2DepositsListItem 组件 - 已检测
+ShibariumDepositsTable 组件 - 已检测
+ZkEvmL2DepositsTable 组件 - 已检测
+
+## 需要国际化的组件
+
+BeaconChainDepositsTable 组件 - 发现硬编码文本：
+- "Transaction hash"
+- "Block"
+- "Timestamp"
+- "Value " + feature.currency.symbol
+- "From"
+- "PubKey"
+- "Signature"
+- "Status"
+
+BeaconChainDepositsListItem 组件 - 发现硬编码文本：
+- "Transaction hash"
+- "Block"
+- "Age"
+- "Value"
+- "From"
+- "PubKey"
+- "Signature"
+- "Status"
+
+OptimisticDepositsTable 组件 - 发现硬编码文本：
+- "L1 block No"
+- "L2 txn hash"
+- "Timestamp"
+- "L1 txn hash"
+- "L1 txn origin"
+- "Gas limit"
+
+OptimisticDepositsListItem 组件 - 发现硬编码文本：
+- "L1 block No"
+- "L2 txn hash"
+- "Age"
+- "L1 txn hash"
+- "L1 txn origin"
+- "Gas limit"
+
+ScrollL2DepositsTable 组件 - 发现硬编码文本：
+- "L1 block"
+- "Index"
+- "L1 txn hash"
+- "Timestamp"
+- "L2 txn hash"
+- "Value " + config.chain.currency.symbol
+
+ScrollL2DepositsListItem 组件 - 发现硬编码文本：
+- "L1 block"
+- "Index"
+- "L1 txn hash"
+- "Age"
+- "L2 txn hash"
+- "Pending Claim"
+- "Value"
+
+ShibariumDepositsTable 组件 - 发现硬编码文本：
+- "L1 block No"
+- "L1 txn hash"
+- "L2 txn hash"
+- "User"
+- "Timestamp"
+
+ZkEvmL2DepositsTable 组件 - 发现硬编码文本：
+- "L1 block"
+- "Index"
+- "L1 txn hash"
+- "Timestamp"
+- "L2 txn hash"
+- "Value"
+- "Token"

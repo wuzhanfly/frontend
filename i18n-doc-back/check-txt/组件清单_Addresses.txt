@@ -1,0 +1,11 @@
+# 组件国际化状态清单 - Addresses 模块
+
+## 已检测组件列表
+
+AddressesListItem 组件 - 已检测
+AddressesTable 组件 - 已检测
+AddressesTableItem 组件 - 已检测
+
+## 需要国际化的组件
+
+无 - 所有组件均已使用国际化

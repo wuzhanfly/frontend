@@ -1,0 +1,48 @@
+# 组件国际化状态清单 - ZetaChain 模块
+
+## 已检测组件列表
+
+ZetaChainCCTXsTab 组件 - 已检测
+ZetaChainEvmTransactions 组件 - 已检测
+ZetaChainCCTxsTable 组件 - 已检测
+ZetaChainCCTXListItem 组件 - 已检测
+ZetaChainCCTXDetails 组件 - 已检测
+ZetaChainFilterByColumn 组件 - 已检测
+
+## 需要国际化的组件
+
+ZetaChainCCTXsTab 组件 - 发现硬编码文本：
+- "Pending" (待处理标签文本)
+
+ZetaChainEvmTransactions 组件 - 发现硬编码文本：
+- "Pending" (待处理标签文本)
+
+ZetaChainCCTxsTable 组件 - 发现硬编码文本：
+- "CCTx hash" (跨链交易哈希列标题文本)
+- "Status" (状态列标题文本)
+- "Sender" (发送方列标题文本)
+- "Receiver" (接收方列标题文本)
+- "Value" (价值列标题文本)
+
+ZetaChainCCTXListItem 组件 - 发现硬编码文本：
+- "Sender" (发送方标签文本)
+- "Receiver" (接收方标签文本)
+- "Asset" (资产标签文本)
+
+ZetaChainCCTXDetails 组件 - 发现硬编码文本：
+- "Receiver" (接收方标签文本)
+- "Asset transferred" (转移资产标签文本)
+- "Cross-chain fee" (跨链费用标签文本)
+- "Message" (消息标签文本)
+- "CCTX hash" (跨链交易哈希标签文本)
+- "Status and state" (状态和状态标签文本)
+- "Status message" (状态消息标签文本)
+- "Created" (创建时间标签文本)
+- "Last updated" (最后更新标签文本)
+- "Lifecycle" (生命周期标签文本)
+- "Revert options" (回滚选项标签文本)
+- "Abort address" (中止地址标签文本)
+- "Call" (调用标签文本)
+- "Revert address" (回滚地址标签文本)
+- "Message" (消息标签文本)
+- "Gas limit" (Gas限制标签文本)

@@ -1,0 +1,35 @@
+# 组件国际化状态清单 - NameDomain 模块
+
+## 已检测组件列表
+
+NameDomainDetails 组件 - 已检测
+NameDomainExpiryStatus 组件 - 已检测
+NameDomainHistory 组件 - 已检测
+NameDomainHistoryTable 组件 - 已检测
+NameDomainHistoryTableItem 组件 - 已检测
+NameDomainHistoryListItem 组件 - 已检测
+utils 组件 - 已检测
+
+## 需要国际化的组件
+
+NameDomainDetails 组件 - 发现硬编码文本：
+- "Registration date"
+- "Expiration date"
+- "Resolver"
+- "Registrant"
+- "Owner"
+- "Manager"
+- "Wrapped token ID"
+- "Other addresses"
+
+NameDomainHistoryTable 组件 - 发现硬编码文本：
+- "Txn hash"
+- "Timestamp"
+- "From"
+- "Method"
+
+NameDomainHistoryListItem 组件 - 发现硬编码文本：
+- "Txn hash"
+- "Age"
+- "From"
+- "Method"

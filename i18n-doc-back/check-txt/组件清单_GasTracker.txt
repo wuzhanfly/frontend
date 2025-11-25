@@ -1,0 +1,14 @@
+# 组件国际化状态清单 - GasTracker 模块
+
+## 已检测组件列表
+
+GasTrackerChart 组件 - 已检测
+GasTrackerFaq 组件 - 已检测
+GasTrackerFaqItem 组件 - 已检测
+GasTrackerNetworkUtilization 组件 - 已检测
+GasTrackerPrices 组件 - 已检测
+GasTrackerPriceSnippet 组件 - 已检测
+
+## 需要国际化的组件
+
+GasTracker 模块 - 组件已完成国际化

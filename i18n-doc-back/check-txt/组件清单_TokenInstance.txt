@@ -1,0 +1,22 @@
+# 组件国际化状态清单 - TokenInstance 模块
+
+## 已检测组件列表
+
+TokenInstanceDetails 组件 - 已检测
+TokenInstancePageTitle 组件 - 已检测
+TokenInstanceCreatorAddress 组件 - 已检测
+TokenInstanceMetadataInfo 组件 - 已检测
+TokenInstanceTransfersCount 组件 - 已检测
+
+## 需要国际化的组件
+
+TokenInstanceDetails 组件 - 发现硬编码文本：
+- "Owner" (所有者标签文本)
+- "Token ID" (代币ID标签文本)
+- "Dapp" (应用标签文本)
+
+TokenInstancePageTitle 组件 - 发现硬编码文本：
+- "View in app" (应用内查看链接文本)
+
+TokenInstanceCreatorAddress 组件 - 发现硬编码文本：
+- "Creator" (创建者标签文本)

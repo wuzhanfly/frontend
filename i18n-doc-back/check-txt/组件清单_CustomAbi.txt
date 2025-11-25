@@ -1,0 +1,22 @@
+# 组件国际化状态清单 - CustomAbi 模块
+
+## 已检测组件列表
+
+DeleteCustomAbiModal 组件 - 已检测
+CustomAbiModal 组件 - 已检测
+CustomAbiForm 组件 - 已检测
+CustomAbiTable 组件 - 已检测
+CustomAbiTableItem 组件 - 已检测
+CustomAbiListItem 组件 - 已检测
+
+## 需要国际化的组件
+
+DeleteCustomAbiModal 组件 - 发现硬编码文本：
+- "Custom ABI for" (在 Text 组件中)
+- "will be deleted" (在 Text 组件中)
+
+CustomAbiForm 组件 - 发现硬编码文本：
+- "Custom ABI [{...}] (JSON format)" (在 FormFieldText 组件的 placeholder 属性中)
+
+CustomAbiTable 组件 - 发现硬编码文本：
+- "ABI for Smart contract address (0x...)" (在 TableColumnHeader 组件中)

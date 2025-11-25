@@ -1,0 +1,28 @@
+# 组件国际化状态清单 - UserOps 模块
+
+## 已检测组件列表
+
+UserOpsContent 组件 - 已检测
+UserOpsListItem 组件 - 已检测
+UserOpsTable 组件 - 已检测
+UserOpsTableItem 组件 - 已检测
+
+## 需要国际化的组件
+
+UserOpsTable 组件 - 发现硬编码文本：
+- "User op hash" (用户操作哈希列标题文本)
+- "Timestamp" (时间戳列标题文本)
+- "Status" (状态列标题文本)
+- "Sender" (发送者列标题文本)
+- "Tx hash" (交易哈希列标题文本)
+- "Block" (区块列标题文本)
+- "Fee" (费用列标题文本)
+
+UserOpsListItem 组件 - 发现硬编码文本：
+- "User op hash" (用户操作哈希标签文本)
+- "Age" (年龄标签文本)
+- "Status" (状态标签文本)
+- "Sender" (发送者标签文本)
+- "Tx hash" (交易哈希标签文本)
+- "Block" (区块标签文本)
+- "Fee" (费用标签文本)

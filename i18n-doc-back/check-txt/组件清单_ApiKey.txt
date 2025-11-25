@@ -1,0 +1,19 @@
+# 组件国际化状态清单 - ApiKey 模块
+
+## 已检测组件列表
+
+DeleteApiKeyModal 组件 - 已检测
+ApiKeyModal 组件 - 已检测
+ApiKeyForm 组件 - 已检测
+ApiKeyListItem 组件 - 已检测
+ApiKeyTable 组件 - 已检测
+ApiKeyTableItem 组件 - 已检测
+
+## 需要国际化的组件
+
+DeleteApiKeyModal 组件 - 发现硬编码文本：
+- "API key for" 
+- "will be deleted"
+
+ApiKeyTable 组件 - 发现硬编码文本：
+- "API key token (limit " + limit + " keys)"

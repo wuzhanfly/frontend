@@ -1,0 +1,25 @@
+# 组件国际化状态清单 - Operation 模块
+
+## 已检测组件列表
+
+TacOperationDetails 组件 - 已检测
+TacOperationLifecycleAccordion 组件 - 已检测
+TacOperationLifecycleAccordionItemTrigger 组件 - 已检测
+TacOperationLifecycleAccordionItemContent 组件 - 已检测
+
+## 需要国际化的组件
+
+TacOperationDetails 组件 - 发现硬编码文本：
+- "Sender"
+- "Status"
+- "Timestamp"
+- "Lifecycle"
+
+TacOperationLifecycleAccordionItemTrigger 组件 - 发现硬编码文本：
+- "Pending"
+
+TacOperationLifecycleAccordionItemContent 组件 - 发现硬编码文本：
+- "Status"
+- "Timestamp"
+- "Transactions"
+- "Note"

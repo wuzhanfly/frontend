@@ -1,0 +1,22 @@
+# 组件国际化状态清单 - MyProfile 模块
+
+## 已检测组件列表
+
+MyProfileEmail 组件 - 已检测
+MyProfileWallet 组件 - 已检测
+MyProfileFieldsEmail 组件 - 已检测
+
+## 需要国际化的组件
+
+MyProfileEmail 组件 - 发现硬编码文本：
+- "Notifications"
+- "Error"
+
+MyProfileWallet 组件 - 发现硬编码文本：
+- "My linked wallet"
+- "This wallet address is used for login"
+- "and participation in the Merits Program."
+- "Link wallet"
+
+MyProfileFieldsEmail 组件 - 发现硬编码文本：
+- "Email for watch list notifications and private tags"

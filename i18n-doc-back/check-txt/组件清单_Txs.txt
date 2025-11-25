@@ -1,0 +1,26 @@
+# 组件国际化状态清单 - Txs 模块
+
+## 已检测组件列表
+
+TxsList 组件 - 已检测
+TxsTable 组件 - 已检测
+TxsListItem 组件 - 已检测
+TxsTableItem 组件 - 已检测
+TxsSocketNotice 组件 - 已检测
+TxsSocketNoticeTypeAddress 组件 - 已检测
+TxsSocketNoticeTypeAll 组件 - 已检测
+TxAdditionalInfo 组件 - 已检测
+TxAdditionalInfoContainer 组件 - 已检测
+TxAdditionalInfoContent 组件 - 已检测
+TxsContent 组件 - 已检测
+TxsHeaderMobile 组件 - 已检测
+TxsStats 组件 - 已检测
+TxsWatchlist 组件 - 已检测
+TxsWithAPISorting 组件 - 已检测
+TxsWithFrontendSorting 组件 - 已检测
+TxTranslationType 组件 - 已检测
+TxType 组件 - 已检测
+
+## 需要国际化的组件
+
+无 - 所有文本元素均已通过i18n进行国际化处理

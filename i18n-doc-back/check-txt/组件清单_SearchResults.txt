@@ -1,0 +1,20 @@
+# 组件国际化状态清单 - SearchResults 模块
+
+## 已检测组件列表
+
+SearchResultEntityTag 组件 - 已检测
+SearchResultListItem 组件 - 已检测
+SearchResultsInput 组件 - 已检测
+SearchResultTableItem 组件 - 已检测
+
+## 需要国际化的组件
+
+SearchResultTableItem 组件 - 发现硬编码文本：
+- "Items" (显示非ERC-20代币总供应量时使用的文本)
+- "Learn estimated time for this block to be created." (未来区块的说明文本)
+- "Reorg" (重组区块标签文本)
+- "Uncle" (叔叔区块标签文本)
+
+SearchResultListItem 组件 - 发现硬编码文本：
+- "Reorg" (重组区块标签文本)
+- "Uncle" (叔叔区块标签文本)

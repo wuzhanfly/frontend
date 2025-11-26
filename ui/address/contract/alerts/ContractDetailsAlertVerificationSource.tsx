@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContract } from 'types/api/contract';
 
@@ -10,10 +11,16 @@ interface Props {
 }
 
 const ContractDetailsAlertVerificationSource = ({ data }: Props) => {
+  const { t } = useTranslation(['address']);
+
   if (data?.is_verified && data?.is_verified_via_eth_bytecode_db) {
     return (
       <Alert status="warning" whiteSpace="pre-wrap">
-        <span>This contract has been { data.is_partially_verified ? 'partially ' : '' }verified using </span>
+        <span>
+          {t('address.contract.verification_source.verified_using', { 
+            partiallyText: data.is_partially_verified ? 'partially ' : '' 
+          })}{' '}
+        </span>
         <Link
           href="https://docs.blockscout.com/devs/verification/ethereum-bytecode-database-microservice"
           external
@@ -27,8 +34,12 @@ const ContractDetailsAlertVerificationSource = ({ data }: Props) => {
   if (data?.is_verified && data?.is_verified_via_sourcify) {
     return (
       <Alert status="warning" whiteSpace="pre-wrap">
-        <span>This contract has been { data.is_partially_verified ? 'partially ' : '' }verified via Sourcify. </span>
-        { data.sourcify_repo_url && <Link href={ data.sourcify_repo_url } textStyle="md" external>View contract in Sourcify repository</Link> }
+        <span>
+          {t('address.contract.verification_source.verified_via_sourcify', { 
+            partiallyText: data.is_partially_verified ? 'partially ' : '' 
+          })}{' '}
+        </span>
+        { data.sourcify_repo_url && <Link href={ data.sourcify_repo_url } textStyle="md" external>{t('address.common.view_contract_in_sourcify_repository')}</Link> }
       </Alert>
     );
   }

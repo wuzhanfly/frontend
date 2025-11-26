@@ -1,0 +1,1028 @@
+validation_time: '2025-11-26T08:33:56.373Z'
+summary:
+  total_namespaces:
+    en: 64
+    zh: 64
+    common: 64
+  overall_completeness: 1
+namespace_validations:
+  account:
+    namespace: account
+    file_comparisons:
+      - namespace: account.common
+        key_counts:
+          en: 23
+          zh: 23
+          common: 23
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  address:
+    namespace: address
+    file_comparisons:
+      - namespace: address.common
+        key_counts:
+          en: 14
+          zh: 14
+          common: 14
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  address_verification:
+    namespace: address_verification
+    file_comparisons:
+      - namespace: address_verification.common
+        key_counts:
+          en: 11
+          zh: 11
+          common: 11
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  addresses:
+    namespace: addresses
+    file_comparisons:
+      - namespace: addresses.common
+        key_counts:
+          en: 227
+          zh: 227
+          common: 227
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  addresses_label_search:
+    namespace: addresses_label_search
+    file_comparisons:
+      - namespace: addresses_label_search.common
+        key_counts:
+          en: 3
+          zh: 3
+          common: 3
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  advanced_filter:
+    namespace: advanced_filter
+    file_comparisons:
+      - namespace: advanced_filter.common
+        key_counts:
+          en: 2
+          zh: 2
+          common: 2
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  api:
+    namespace: api
+    file_comparisons:
+      - namespace: api.common
+        key_counts:
+          en: 5
+          zh: 5
+          common: 5
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  api_docs:
+    namespace: api_docs
+    file_comparisons:
+      - namespace: api_docs.common
+        key_counts:
+          en: 4
+          zh: 4
+          common: 4
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  api_key:
+    namespace: api_key
+    file_comparisons:
+      - namespace: api_key.common
+        key_counts:
+          en: 3
+          zh: 3
+          common: 3
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  blobs:
+    namespace: blobs
+    file_comparisons:
+      - namespace: blobs.common
+        key_counts:
+          en: 10
+          zh: 10
+          common: 10
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  blocks:
+    namespace: blocks
+    file_comparisons:
+      - namespace: blocks.common
+        key_counts:
+          en: 74
+          zh: 74
+          common: 74
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  bridge:
+    namespace: bridge
+    file_comparisons:
+      - namespace: bridge.common
+        key_counts:
+          en: 4
+          zh: 4
+          common: 4
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  bridged_chains:
+    namespace: bridged_chains
+    file_comparisons: []
+    total_files: 0
+    files_with_issues: 0
+    overall_completeness: 1
+  charts:
+    namespace: charts
+    file_comparisons:
+      - namespace: charts.common
+        key_counts:
+          en: 8
+          zh: 8
+          common: 8
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  clusters:
+    namespace: clusters
+    file_comparisons:
+      - namespace: clusters.common
+        key_counts:
+          en: 6
+          zh: 6
+          common: 6
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  common:
+    namespace: common
+    file_comparisons:
+      - namespace: common.common
+        key_counts:
+          en: 1141
+          zh: 1141
+          common: 1141
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  contract_verification:
+    namespace: contract_verification
+    file_comparisons:
+      - namespace: contract_verification.common
+        key_counts:
+          en: 3
+          zh: 3
+          common: 3
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  custom_abi:
+    namespace: custom_abi
+    file_comparisons:
+      - namespace: custom_abi.common
+        key_counts:
+          en: 4
+          zh: 4
+          common: 4
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  dashboard:
+    namespace: dashboard
+    file_comparisons:
+      - namespace: dashboard.common
+        key_counts:
+          en: 27
+          zh: 27
+          common: 27
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  epochs:
+    namespace: epochs
+    file_comparisons:
+      - namespace: epochs.common
+        key_counts:
+          en: 27
+          zh: 27
+          common: 27
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  filter-report:
+    namespace: filter-report
+    file_comparisons:
+      - namespace: filter-report.common
+        key_counts:
+          en: 0
+          zh: 0
+          common: 0
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: .nan
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: .nan
+  games:
+    namespace: games
+    file_comparisons:
+      - namespace: games.common
+        key_counts:
+          en: 8
+          zh: 8
+          common: 8
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  gas_tracker:
+    namespace: gas_tracker
+    file_comparisons:
+      - namespace: gas_tracker.common
+        key_counts:
+          en: 13
+          zh: 13
+          common: 13
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  internalTxs:
+    namespace: internalTxs
+    file_comparisons:
+      - namespace: internalTxs.common
+        key_counts:
+          en: 15
+          zh: 15
+          common: 15
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  interop_messages:
+    namespace: interop_messages
+    file_comparisons:
+      - namespace: interop_messages.common
+        key_counts:
+          en: 13
+          zh: 13
+          common: 13
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  marketplace:
+    namespace: marketplace
+    file_comparisons:
+      - namespace: marketplace.common
+        key_counts:
+          en: 10
+          zh: 10
+          common: 10
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  mega_eth:
+    namespace: mega_eth
+    file_comparisons:
+      - namespace: mega_eth.common
+        key_counts:
+          en: 7
+          zh: 7
+          common: 7
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  messages:
+    namespace: messages
+    file_comparisons:
+      - namespace: messages.common
+        key_counts:
+          en: 12
+          zh: 12
+          common: 12
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  messaging:
+    namespace: messaging
+    file_comparisons:
+      - namespace: messaging.common
+        key_counts:
+          en: 7
+          zh: 7
+          common: 7
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  mud_worlds:
+    namespace: mud_worlds
+    file_comparisons:
+      - namespace: mud_worlds.common
+        key_counts:
+          en: 3
+          zh: 3
+          common: 3
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  my_profile:
+    namespace: my_profile
+    file_comparisons:
+      - namespace: my_profile.common
+        key_counts:
+          en: 7
+          zh: 7
+          common: 7
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  name_domain:
+    namespace: name_domain
+    file_comparisons:
+      - namespace: name_domain.common
+        key_counts:
+          en: 12
+          zh: 12
+          common: 12
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  name_service:
+    namespace: name_service
+    file_comparisons:
+      - namespace: name_service.common
+        key_counts:
+          en: 2
+          zh: 2
+          common: 2
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  name_services:
+    namespace: name_services
+    file_comparisons:
+      - namespace: name_services.common
+        key_counts:
+          en: 26
+          zh: 26
+          common: 26
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  operation:
+    namespace: operation
+    file_comparisons:
+      - namespace: operation.common
+        key_counts:
+          en: 9
+          zh: 9
+          common: 9
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  operations:
+    namespace: operations
+    file_comparisons:
+      - namespace: operations.common
+        key_counts:
+          en: 8
+          zh: 8
+          common: 8
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  optimism_superchain:
+    namespace: optimism_superchain
+    file_comparisons:
+      - namespace: optimism_superchain.common
+        key_counts:
+          en: 11
+          zh: 11
+          common: 11
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  output_roots:
+    namespace: output_roots
+    file_comparisons:
+      - namespace: output_roots.common
+        key_counts:
+          en: 10
+          zh: 10
+          common: 10
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  pages:
+    namespace: pages
+    file_comparisons:
+      - namespace: pages.common
+        key_counts:
+          en: 3
+          zh: 3
+          common: 3
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  pools:
+    namespace: pools
+    file_comparisons:
+      - namespace: pools.common
+        key_counts:
+          en: 1
+          zh: 1
+          common: 1
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  private_tags:
+    namespace: private_tags
+    file_comparisons:
+      - namespace: private_tags.common
+        key_counts:
+          en: 6
+          zh: 6
+          common: 6
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  public_tags:
+    namespace: public_tags
+    file_comparisons:
+      - namespace: public_tags.common
+        key_counts:
+          en: 21
+          zh: 21
+          common: 21
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  rewards:
+    namespace: rewards
+    file_comparisons:
+      - namespace: rewards.common
+        key_counts:
+          en: 25
+          zh: 25
+          common: 25
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  search_results:
+    namespace: search_results
+    file_comparisons:
+      - namespace: search_results.common
+        key_counts:
+          en: 10
+          zh: 10
+          common: 10
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  settings:
+    namespace: settings
+    file_comparisons:
+      - namespace: settings.common
+        key_counts:
+          en: 14
+          zh: 14
+          common: 14
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  shared:
+    namespace: shared
+    file_comparisons:
+      - namespace: shared.ad
+        key_counts:
+          en: 4
+          zh: 4
+          common: 4
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+      - namespace: shared.common
+        key_counts:
+          en: 4
+          zh: 4
+          common: 4
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 2
+    files_with_issues: 0
+    overall_completeness: 1
+  showcases:
+    namespace: showcases
+    file_comparisons:
+      - namespace: showcases.common
+        key_counts:
+          en: 6
+          zh: 6
+          common: 6
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  snippets:
+    namespace: snippets
+    file_comparisons:
+      - namespace: snippets.common
+        key_counts:
+          en: 23
+          zh: 23
+          common: 23
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  staking:
+    namespace: staking
+    file_comparisons:
+      - namespace: staking.common
+        key_counts:
+          en: 41
+          zh: 41
+          common: 41
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  stats:
+    namespace: stats
+    file_comparisons:
+      - namespace: stats.common
+        key_counts:
+          en: 30
+          zh: 30
+          common: 30
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  tokenTransfers:
+    namespace: tokenTransfers
+    file_comparisons:
+      - namespace: tokenTransfers.common
+        key_counts:
+          en: 1
+          zh: 1
+          common: 1
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  tokens:
+    namespace: tokens
+    file_comparisons:
+      - namespace: tokens.common
+        key_counts:
+          en: 90
+          zh: 90
+          common: 90
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  transactions:
+    namespace: transactions
+    file_comparisons:
+      - namespace: transactions.common
+        key_counts:
+          en: 191
+          zh: 191
+          common: 191
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  tx:
+    namespace: tx
+    file_comparisons: []
+    total_files: 0
+    files_with_issues: 0
+    overall_completeness: 1
+  txnBatches:
+    namespace: txnBatches
+    file_comparisons:
+      - namespace: txnBatches.common
+        key_counts:
+          en: 58
+          zh: 58
+          common: 58
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  txs:
+    namespace: txs
+    file_comparisons:
+      - namespace: txs.common
+        key_counts:
+          en: 17
+          zh: 17
+          common: 17
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  user_ops:
+    namespace: user_ops
+    file_comparisons:
+      - namespace: user_ops.common
+        key_counts:
+          en: 44
+          zh: 44
+          common: 44
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  validators:
+    namespace: validators
+    file_comparisons:
+      - namespace: validators.common
+        key_counts:
+          en: 39
+          zh: 39
+          common: 39
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  verifiedContracts:
+    namespace: verifiedContracts
+    file_comparisons:
+      - namespace: verifiedContracts.common
+        key_counts:
+          en: 16
+          zh: 16
+          common: 16
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  verified_addresses:
+    namespace: verified_addresses
+    file_comparisons:
+      - namespace: verified_addresses.common
+        key_counts:
+          en: 8
+          zh: 8
+          common: 8
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  visualize:
+    namespace: visualize
+    file_comparisons:
+      - namespace: visualize.common
+        key_counts:
+          en: 3
+          zh: 3
+          common: 3
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  watchlist:
+    namespace: watchlist
+    file_comparisons:
+      - namespace: watchlist.common
+        key_counts:
+          en: 15
+          zh: 15
+          common: 15
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  withdrawals:
+    namespace: withdrawals
+    file_comparisons:
+      - namespace: withdrawals.common
+        key_counts:
+          en: 38
+          zh: 38
+          common: 38
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+  zetaChain:
+    namespace: zetaChain
+    file_comparisons:
+      - namespace: zetaChain.common
+        key_counts:
+          en: 3
+          zh: 3
+          common: 3
+        missing_keys:
+          in_zh: []
+          in_en: []
+        completeness_ratio: 1
+        has_issues: false
+    total_files: 1
+    files_with_issues: 0
+    overall_completeness: 1
+issues_summary:
+  total_files_with_issues: 0
+  total_missing_keys:
+    in_zh: 0
+    in_en: 0
+  namespaces_with_problems: []

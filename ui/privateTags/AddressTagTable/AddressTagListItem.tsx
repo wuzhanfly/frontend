@@ -1,5 +1,6 @@
 import { Flex, HStack, Text } from '@chakra-ui/react';
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressTag } from 'types/api/account';
 
@@ -21,6 +22,7 @@ const AddressTagListItem = ({ item, onEditClick, onDeleteClick, isLoading }: Pro
     return onEditClick(item);
   }, [ item, onEditClick ]);
 
+  const { t } = useTranslation();
   const onItemDeleteClick = useCallback(() => {
     return onDeleteClick(item);
   }, [ item, onDeleteClick ]);
@@ -35,7 +37,7 @@ const AddressTagListItem = ({ item, onEditClick, onDeleteClick, isLoading }: Pro
           w="100%"
         />
         <HStack gap={ 3 } mt={ 4 }>
-          <Text textStyle="sm" fontWeight="medium">Private tag</Text>
+          <Text textStyle="sm" fontWeight="medium">{t('private_tags.address_list_item.private_tag')}</Text>
           <Skeleton loading={ isLoading } display="inline-block" borderRadius="sm">
             <Tag>
               { item.name }

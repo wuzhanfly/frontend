@@ -18,7 +18,7 @@ const WatchlistEmailAlert = () => {
         w="fit-content"
         mb={ 6 }
       >
-        To receive notifications you need to add an email to your profile.
+        { t('watchlist.watchlist_email_alert.receive_notifications_text') }
         <Button variant="outline" size="sm" onClick={ authModal.onOpen }>{t('common.common.add_email')}</Button>
       </Alert>
       { authModal.open && <AuthModal initialScreen={{ type: 'email', isAuth: true }} onClose={ authModal.onClose }/> }

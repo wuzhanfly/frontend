@@ -162,13 +162,13 @@ const BlockPageContent = () => {
   const title = (() => {
     switch (blockQuery.data?.type) {
       case 'reorg':
-        return `Reorged block #${ blockQuery.data?.height }`;
+        return `${t('pages.block.reorged_block')}${ blockQuery.data?.height }`;
 
       case 'uncle':
-        return `Uncle block #${ blockQuery.data?.height }`;
+        return `${t('pages.block.uncle_block')}${ blockQuery.data?.height }`;
 
       default:
-        return `Block #${ blockQuery.data?.height }`;
+        return `${t('pages.block.block_number')}${ blockQuery.data?.height }`;
     }
   })();
 

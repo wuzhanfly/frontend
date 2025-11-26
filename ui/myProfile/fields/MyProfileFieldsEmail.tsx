@@ -20,7 +20,7 @@ const MyProfileFieldsEmail = ({ isReadOnly, defaultValue }: Props) => {
       placeholder={t('common.common.email')}
       required
       readOnly={ isReadOnly }
-      helperText="Email for watch list notifications and private tags"
+      helperText={t('my_profile.fields.email_notifications_tags')}
       group={{
         endElement: ({ field }) => {
           const isVerified = defaultValue && field.value === defaultValue;

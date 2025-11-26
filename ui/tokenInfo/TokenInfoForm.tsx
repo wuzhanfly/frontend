@@ -131,7 +131,7 @@ const TokenInfoForm = ({ address, tokenName, application, onSubmit }: Props) => 
           <FormFieldText<Fields> name="requester_name" required placeholder={t('common.common.requester_name')} { ...fieldProps }/>
           <FormFieldEmail<Fields> name="requester_email" required placeholder={t('common.common.requester_email')} { ...fieldProps }/>
 
-          <TokenInfoFormSectionHeader>Project info</TokenInfoFormSectionHeader>
+          <TokenInfoFormSectionHeader>{ t('tokens.info.project_info') }</TokenInfoFormSectionHeader>
           <FormFieldText<Fields> name="project_name" placeholder={t('common.common.project_name')} { ...fieldProps } rules={ nonWhitespaceFieldRules }/>
           <TokenInfoFieldProjectSector { ...fieldProps } config={ configQuery.data.projectSectors }/>
           <FormFieldEmail<Fields> name="project_email" required placeholder={t('common.common.official_project_email_address')} { ...fieldProps }/>
@@ -152,12 +152,11 @@ const TokenInfoForm = ({ address, tokenName, application, onSubmit }: Props) => 
               { ...fieldProps }
             />
             <Text color="text.secondary" fontSize="sm" mt={ 1 }>
-              Introduce or summarize the project’s operation/goals in a maximum of 300 characters.
-              The description should be written in a neutral point of view and must exclude unsubstantiated claims unless proven otherwise.
-            </Text>
+            { t('tokens.info.project_description_hint') }
+          </Text>
           </GridItem>
 
-          <TokenInfoFormSectionHeader>Links</TokenInfoFormSectionHeader>
+          <TokenInfoFormSectionHeader>{ t('tokens.info.links') }</TokenInfoFormSectionHeader>
           <TokenInfoFieldSocialLink { ...fieldProps } name="github"/>
           <TokenInfoFieldSocialLink { ...fieldProps } name="twitter"/>
           <TokenInfoFieldSocialLink { ...fieldProps } name="telegram"/>
@@ -169,11 +168,11 @@ const TokenInfoForm = ({ address, tokenName, application, onSubmit }: Props) => 
           <TokenInfoFieldSocialLink { ...fieldProps } name="slack"/>
           <TokenInfoFieldSocialLink { ...fieldProps } name="reddit"/>
 
-          <TokenInfoFormSectionHeader>Price data</TokenInfoFormSectionHeader>
-          <FormFieldUrl<Fields> name="ticker_coin_market_cap" placeholder="CoinMarketCap URL" { ...fieldProps }/>
-          <FormFieldUrl<Fields> name="ticker_coin_gecko" placeholder="CoinGecko URL" { ...fieldProps }/>
+          <TokenInfoFormSectionHeader>{ t('tokens.info.price_data') }</TokenInfoFormSectionHeader>
+          <FormFieldUrl<Fields> name="ticker_coin_market_cap" placeholder={ t('tokens.info.coinmarketcap_url') } { ...fieldProps }/>
+          <FormFieldUrl<Fields> name="ticker_coin_gecko" placeholder={ t('tokens.info.coingecko_url') } { ...fieldProps }/>
           <GridItem colSpan={{ base: 1, lg: 2 }}>
-            <FormFieldUrl<Fields> name="ticker_defi_llama" placeholder="DefiLlama URL" { ...fieldProps }/>
+            <FormFieldUrl<Fields> name="ticker_defi_llama" placeholder={ t('tokens.info.defillama_url') } { ...fieldProps }/>
           </GridItem>
 
           <GridItem colSpan={{ base: 1, lg: 2 }}>
@@ -194,7 +193,7 @@ const TokenInfoForm = ({ address, tokenName, application, onSubmit }: Props) => 
           loadingText={t('common.common.send_request')}
           disabled={ application?.status === 'IN_PROCESS' }
         >
-          Send request
+          { t('tokens.info.send_request') }
         </Button>
       </form>
     </FormProvider>

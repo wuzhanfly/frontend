@@ -111,9 +111,9 @@ const AuthModalScreenOtpCode = ({ email, onSuccess, isAuth }: Props) => {
         onSubmit={ formApi.handleSubmit(onFormSubmit) }
       >
         <Text mb={ 6 }>
-          Please check{ ' ' }
+          {t('common.common.please_check')}
           <chakra.span fontWeight="700">{ email }</chakra.span>{ ' ' }
-          and enter your code below.
+          {t('common.common.and_enter_your_code_below')}
         </Text>
         <AuthModalFieldOtpCode isDisabled={ isCodeSending }/>
         <Button
@@ -124,7 +124,7 @@ const AuthModalScreenOtpCode = ({ email, onSuccess, isAuth }: Props) => {
           onClick={ handleResendCodeClick }
         >
           <IconSvg name="repeat" boxSize={ 5 }/>
-          <Box fontSize="sm">Resend code</Box>
+          <Box fontSize="sm">{t('snippets.auth_modal.screen_otp_code.resend_code')}</Box>
         </Button>
         <ReCaptcha { ...recaptcha }/>
         <Button

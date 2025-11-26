@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { OptimisticL2OutputRootsItem } from 'types/api/optimisticL2';
 
@@ -14,18 +15,19 @@ type Props = {
 };
 
 const OptimisticL2OutputRootsTable = ({ items, top, isLoading }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRoot minW="900px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader width="160px">L2 output index</TableColumnHeader>
+          <TableColumnHeader width="160px">{t('output_roots.table.l2_output_index')}</TableColumnHeader>
           <TableColumnHeader width="20%">
-            Timestamp
+            {t('output_roots.table.timestamp')}
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader width="20%">L2 block #</TableColumnHeader>
-          <TableColumnHeader width="30%">L1 txn hash</TableColumnHeader>
-          <TableColumnHeader width="30%">Output root</TableColumnHeader>
+          <TableColumnHeader width="20%">{t('output_roots.table.l2_block')}</TableColumnHeader>
+          <TableColumnHeader width="30%">{t('output_roots.table.l1_txn_hash')}</TableColumnHeader>
+          <TableColumnHeader width="30%">{t('output_roots.table.output_root')}</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

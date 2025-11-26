@@ -57,7 +57,7 @@ const BlocksListItem = ({ data, isLoading, enableTimeIncrement, animation, chain
             isPendingUpdate={ data.is_pending_update }
           />
           { data.celo?.l1_era_finalized_epoch_number && (
-            <Tooltip content={ `Finalized epoch #${ data.celo.l1_era_finalized_epoch_number }` } disabled={ isLoading }>
+            <Tooltip content={ t('blocks.list_item.finalized_epoch') + ` #${ data.celo.l1_era_finalized_epoch_number }` } disabled={ isLoading }>
               <IconSvg name="checkered_flag" boxSize={ 5 } p="1px" isLoading={ isLoading } flexShrink={ 0 }/>
             </Tooltip>
           ) }

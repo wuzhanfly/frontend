@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ShibariumWithdrawalsItem } from 'types/api/shibarium';
 
@@ -14,16 +15,18 @@ type Props = {
 };
 
 const WithdrawalsTable = ({ items, top, isLoading }: Props) => {
+  const { t } = useTranslation();
+  
   return (
     <TableRoot tableLayout="auto" minW="950px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader>L2 block No</TableColumnHeader>
-          <TableColumnHeader>L2 txn hash</TableColumnHeader>
-          <TableColumnHeader>L1 txn hash</TableColumnHeader>
-          <TableColumnHeader>User</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.shibarium.l2_block_no') }</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.shibarium.l2_txn_hash') }</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.shibarium.l1_txn_hash') }</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.shibarium.user') }</TableColumnHeader>
           <TableColumnHeader>
-            Timestamp
+            { t('withdrawals.shibarium.timestamp') }
             <TimeFormatToggle/>
           </TableColumnHeader>
         </TableRow>

@@ -33,7 +33,7 @@ const ClusterDetails = ({ clusterData, clusterName, isLoading }: Props) => {
         hint={t('clusters.common.the_unique_cluster_name')}
         isLoading={ isLoading }
       >
-        Cluster name
+        {t('clusters.common.cluster_name')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <ClustersEntity
@@ -48,7 +48,7 @@ const ClusterDetails = ({ clusterData, clusterName, isLoading }: Props) => {
         hint={t('clusters.common.the_address_attached_to_this_c')}
         isLoading={ isLoading }
       >
-        Owner address
+        {t('clusters.common.owner_address')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <AddressEntity
@@ -60,11 +60,11 @@ const ClusterDetails = ({ clusterData, clusterName, isLoading }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="The network type of the address attached to this cluster name"
-        isLoading={ isLoading }
-      >
-        Type
-      </DetailedInfo.ItemLabel>
+          hint={t('clusters.common.the_network_type_of_the_addr')}
+          isLoading={ isLoading }
+        >
+          {t('common.common.type')}
+        </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isLoading }>
           { addressType }
@@ -72,11 +72,11 @@ const ClusterDetails = ({ clusterData, clusterName, isLoading }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint={ `The amount of ${ currencyUnits.ether } backing this cluster name` }
-        isLoading={ isLoading }
-      >
-        Backing
-      </DetailedInfo.ItemLabel>
+          hint={t('clusters.common.the_amount_of_currency_backing_this_cluster_name', { currency: currencyUnits.ether })}
+          isLoading={ isLoading }
+        >
+          {t('clusters.common.backing')}
+        </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <CurrencyValue
           value={ clusterData?.backingWei || '0' }
@@ -89,7 +89,7 @@ const ClusterDetails = ({ clusterData, clusterName, isLoading }: Props) => {
         hint={t('clusters.common.when_this_cluster_name_was_cre')}
         isLoading={ isLoading }
       >
-        Created
+        {t('common.common.created')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         { clusterData?.createdAt ? (

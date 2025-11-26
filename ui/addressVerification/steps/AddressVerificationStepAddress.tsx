@@ -1,8 +1,8 @@
 import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import type { SubmitHandler } from 'react-hook-form';
 import { FormProvider, useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import type {
   AddressVerificationResponseError,
@@ -12,14 +12,12 @@ import type {
   RootFields,
 } from '../types';
 
-import { route } from 'nextjs-routes';
 
 import config from 'configs/app';
 import type { ResourceError } from 'lib/api/resources';
 import useApiFetch from 'lib/api/useApiFetch';
 import { Alert } from 'toolkit/chakra/alert';
 import { Button } from 'toolkit/chakra/button';
-import { Link } from 'toolkit/chakra/link';
 import { FormFieldAddress } from 'toolkit/components/forms/fields/FormFieldAddress';
 import AdminSupportText from 'ui/shared/texts/AdminSupportText';
 
@@ -72,44 +70,20 @@ const AddressVerificationStepAddress = ({ defaultAddress, onContinue }: Props) =
       setError('root', { type: 'manual', message: error.payload?.message || t('shared.common.oops_something_went_wrong') });
     }
 
-  }, [ apiFetch, onContinue, setError ]);
+  }, [ apiFetch, onContinue, setError, t ]);
 
   const onSubmit = handleSubmit(onFormSubmit);
 
   const rootError = (() => {
-    switch (formState.errors.root?.type) {
-      case 'INVALID_ADDRESS_ERROR': {
-        return <span>Specified address either does not exist or is EOA.</span>;
-      }
-      case 'IS_OWNER_ERROR': {
-        return <span>Ownership of this contract address is already verified by this account.</span>;
-      }
-      case 'OWNERSHIP_VERIFIED_ERROR': {
-        return <span>Ownership of this contract address is already verified by another account.</span>;
-      }
-      case 'SOURCE_CODE_NOT_VERIFIED_ERROR': {
-        const href = route({ pathname: '/address/[hash]/contract-verification', query: { hash: address } });
-        return (
-          <Box>
-            <span>The contract source code you entered is not yet verified. Please follow these steps to </span>
-            <Link href={ href }>verify the contract</Link>
-            <span>.</span>
-          </Box>
-        );
-      }
-      case undefined: {
-        return null;
-      }
-      default: {
-        return formState.errors.root?.message;
-      }
+    if (formApi.formState.errors.root) {
+      return <span>{ formApi.formState.errors.root.message }</span>;
     }
   })();
 
   return (
     <FormProvider { ...formApi }>
       <form noValidate onSubmit={ onSubmit }>
-        <Box>Enter the contract address you are verifying ownership for.</Box>
+        <Box>{ t('address_verification.common.enter_contract_address_description') }</Box>
         { rootError && <Alert status="warning" mt={ 3 }>{ rootError }</Alert> }
         <FormFieldAddress<Fields>
           name="address"

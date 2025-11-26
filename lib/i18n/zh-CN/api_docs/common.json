@@ -1,0 +1,6 @@
+{
+  "api_docs.eth_rpc.description": "除了此处记录的自定义RPC端点外，Blockscout ETH RPC API还支持3种方法，其格式与以太坊节点完全相同，有关更多详细信息，请参见以太坊JSON-RPC规范。",
+  "api_docs.eth_rpc.view_examples": "查看示例",
+  "api_docs.rpc.description": "此API提供给从Etherscan迁移到BlockScout的开发人员以及需要一般API和数据支持的应用程序。它支持GET和POST请求。",
+  "api_docs.rpc.view_modules": "查看模块"
+}

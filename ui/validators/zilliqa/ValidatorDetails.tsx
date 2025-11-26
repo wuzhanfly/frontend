@@ -28,7 +28,7 @@ const ValidatorDetails = ({ data, isLoading }: Props) => {
         hint={t('validators.common.index_of_the_staker_in_the_com')}
         isLoading={ isLoading }
       >
-        Index
+        { t('validators.zilliqa.index') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isLoading } display="inline">
@@ -40,7 +40,7 @@ const ValidatorDetails = ({ data, isLoading }: Props) => {
         hint={t('validators.common.stakers_balance')}
         isLoading={ isLoading }
       >
-        Staked
+        { t('validators.zilliqa.staked') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <NativeTokenIcon isLoading={ isLoading } boxSize={ 5 } mr={ 2 }/>
@@ -53,7 +53,7 @@ const ValidatorDetails = ({ data, isLoading }: Props) => {
         hint={t('validators.common.libp2p_peer_id_corresponding_t')}
         isLoading={ isLoading }
       >
-        Peer ID
+        { t('validators.zilliqa.peer_id') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Flex alignItems="center" w="100%" minWidth={ 0 }>
@@ -65,20 +65,20 @@ const ValidatorDetails = ({ data, isLoading }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="The address used for authenticating requests from this staker to the deposit contract"
+        hint={t('validators.zilliqa.control_address_hint')}
         isLoading={ isLoading }
       >
-        Control address
+        { t('validators.zilliqa.control_address') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <AddressEntity address={ data.control_address } isLoading={ isLoading }/>
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="The address which rewards for this staker will be sent to"
+        hint={t('validators.zilliqa.reward_address_hint')}
         isLoading={ isLoading }
       >
-        Reward address
+        { t('validators.zilliqa.reward_address') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <AddressEntity address={ data.reward_address } isLoading={ isLoading }/>
@@ -88,7 +88,7 @@ const ValidatorDetails = ({ data, isLoading }: Props) => {
         hint={t('validators.common.the_address_whose_key_the_vali')}
         isLoading={ isLoading }
       >
-        Signing address
+        { t('validators.zilliqa.signing_address') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <AddressEntity address={ data.signing_address } isLoading={ isLoading }/>
@@ -98,17 +98,17 @@ const ValidatorDetails = ({ data, isLoading }: Props) => {
         hint={t('validators.common.block_number_at_which_the_stak')}
         isLoading={ isLoading }
       >
-        Added at block
+        { t('validators.zilliqa.added_at_block') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <BlockEntity number={ data.added_at_block_number } isLoading={ isLoading }/>
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Block number at which the staker's stake was last updated"
+        hint={t('validators.zilliqa.stake_updated_hint')}
         isLoading={ isLoading }
       >
-        Stake updated
+        { t('validators.zilliqa.stake_updated') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <BlockEntity number={ data.stake_updated_at_block_number } isLoading={ isLoading }/>

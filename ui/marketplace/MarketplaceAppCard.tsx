@@ -159,7 +159,7 @@ const MarketplaceAppCard = ({
               href="#"
               onClick={ handleInfoClick }
             >
-              Info
+              {t('marketplace.app_card.info')}
             </Link>
             <Flex alignItems="center" gap={ 3 }>
               <Rating

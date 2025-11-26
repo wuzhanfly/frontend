@@ -1,8 +1,0 @@
-{
-  "stats.common.click_once_again": {
-    "defaultMessage": "click once again.",
-    "source": [
-      "ui/stats/ChartsLoadingErrorAlert.tsx:13"
-    ]
-  }
-}

@@ -1,6 +1,7 @@
 import { Box, Flex, Grid, GridItem } from '@chakra-ui/react';
 import { pickBy } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormSubmitResultGrouped } from '../types';
 
@@ -11,11 +12,13 @@ import { Button } from 'toolkit/chakra/button';
 import { Link } from 'toolkit/chakra/link';
 import AddressEntity from 'ui/shared/entities/address/AddressEntity';
 import EntityTag from 'ui/shared/EntityTags/EntityTag';
+
 interface Props {
   data: FormSubmitResultGrouped;
 }
 
 const PublicTagsSubmitResultWithErrors = ({ data }: Props) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const bgColorSuccess = { _light: 'green.50', _dark: 'green.800' };
   const bgColorError = { _light: 'red.50', _dark: 'red.800' };
@@ -42,7 +45,7 @@ const PublicTagsSubmitResultWithErrors = ({ data }: Props) => {
                 rowGap={ 3 }
               >
                 <GridItem px={{ base: 4, lg: 6 }} pt={{ base: 2, lg: 4 }} pb={{ base: 0, lg: 4 }} overflow="hidden">
-                  <Box fontSize="sm" color="text.secondary" fontWeight={ 500 }>Smart contract / Address (0x...)</Box>
+                  <Box fontSize="sm" color="text.secondary" fontWeight={ 500 }>{t('public_tags.result_with_errors.address_label')}</Box>
                   <Flex flexDir="column" rowGap={ 2 } mt={ 2 }>
                     { item.addresses.map((hash) => (
                       <AddressEntity
@@ -54,7 +57,7 @@ const PublicTagsSubmitResultWithErrors = ({ data }: Props) => {
                   </Flex>
                 </GridItem>
                 <GridItem px={{ base: 4, lg: 6 }} pb={{ base: 2, lg: 4 }} pt={{ base: 0, lg: 4 }}>
-                  <Box fontSize="sm" color="text.secondary" fontWeight={ 500 }>Tag</Box>
+                  <Box fontSize="sm" color="text.secondary" fontWeight={ 500 }>{t('common.common.tag')}</Box>
                   <Flex rowGap={ 2 } columnGap={ 2 } mt={ 2 } justifyContent="flex-start" flexWrap="wrap">
                     { item.tags.map((tag) => (
                       <EntityTag
@@ -82,7 +85,7 @@ const PublicTagsSubmitResultWithErrors = ({ data }: Props) => {
                   ml={{ base: 0, lg: 6 }}
                   w="min-content"
                 >
-                  Start  over
+                  {t('public_tags.result_with_errors.start_over_button')}
                 </Button>
               </Link>
             ) }

@@ -1,0 +1,14 @@
+{
+  "table": {
+    "status": "状态",
+    "operation": "操作",
+    "timestamp": "时间戳",
+    "sender": "发送方"
+  },
+  "list": {
+    "operation": "操作",
+    "age": "时间",
+    "status": "状态",
+    "sender": "发送方"
+  }
+}

@@ -39,7 +39,7 @@ const CapybaraRunner = () => {
 
   return (
     <>
-      <Heading level="2" mt={ 12 } mb={ 2 }>Score 1000 to win a special prize!</Heading>
+      <Heading level="2" mt={ 12 } mb={ 2 }>{t('games.capybara_runner.score_to_win_prize')}</Heading>
       <Box mb={ 4 }>{ isMobile ? t('games.common.tap_below_to_start') : t('games.common.press_space_to_start') }</Box>
       <Script strategy="lazyOnload" src="/static/capibara/index.js"/>
       <Box width={{ base: '100%', lg: '600px' }} height="300px" p="50px 0">
@@ -53,13 +53,13 @@ const CapybaraRunner = () => {
       </Box>
       { easterEggBadgeFeature.isEnabled && hasReachedHighScore && (
         <Flex flexDirection="column" alignItems="center" justifyContent="center" gap={ 4 } mt={ 10 }>
-          <Text fontSize="2xl" fontWeight="bold">You unlocked a hidden badge!</Text>
-          <Text fontSize="lg" textAlign="center">Congratulations! You’re eligible to claim an epic hidden badge!</Text>
+          <Text fontSize="2xl" fontWeight="bold">{t('games.capybara_runner.unlocked_hidden_badge')}</Text>
+          <Text fontSize="lg" textAlign="center">{t('games.capybara_runner.eligible_to_claim_badge')}</Text>
           <Link
             href={ easterEggBadgeFeature.badgeClaimLink }
             external noIcon
           >
-            <Button>Claim</Button>
+            <Button>{t('games.common.claim')}</Button>
           </Link>
         </Flex>
       ) }

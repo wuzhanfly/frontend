@@ -86,10 +86,9 @@ const CsvExportForm = ({ hash, resource, filterType, filterValue, fileNameTempla
         // eslint-disable-next-line max-len
         `${ chainText }${ fileNameTemplate }_${ hash }_${ data.from }_${ data.to }${ filterType && filterValue ? '_with_filter_type_' + filterType + '_value_' + filterValue : '' }.csv`;
       downloadBlob(blob, fileName);
-
     } catch (error) {
       toaster.error({
-        title: 'Error',
+        title: t('common.common.error'),
         description: (error as Error)?.message || t('marketplace.common.something_went_wrong_try_again'),
       });
     }
@@ -99,8 +98,7 @@ const CsvExportForm = ({ hash, resource, filterType, filterValue, fileNameTempla
   if (!chainConfig.services.reCaptchaV2.siteKey) {
     return (
       <Alert status="error">
-        CSV export is not available at the moment since reCaptcha is not configured for this application.
-        Please contact the service maintainer to make necessary changes in the service configuration.
+        {t('csv_export.common.csv_export_not_available_since_recaptcha_not_configured')}
       </Alert>
     );
   }
@@ -121,10 +119,10 @@ const CsvExportForm = ({ hash, resource, filterType, filterValue, fileNameTempla
           type="submit"
           mt={ 8 }
           loading={ formState.isSubmitting }
-          loadingText="Download"
+          loadingText={t('common.common.download')}
           disabled={ Boolean(formState.errors.from || formState.errors.to || recaptcha.isInitError) }
         >
-          Download
+          {t('common.common.download')}
         </Button>
       </chakra.form>
     </FormProvider>

@@ -39,7 +39,7 @@ const TokensTable = ({ items, page, isLoading, sorting, setSorting, top }: Props
     <TableRoot>
       <TableHeaderSticky top={ top ?? ACTION_BAR_HEIGHT_DESKTOP }>
         <TableRow>
-          <TableColumnHeader w="50%">{ t('common.common.token') }</TableColumnHeader>
+          <TableColumnHeader w="50%">{ t('tokens.table.token') }</TableColumnHeader>
           <TableColumnHeaderSortable
             isNumeric
             w="15%"
@@ -47,7 +47,7 @@ const TokensTable = ({ items, page, isLoading, sorting, setSorting, top }: Props
             sortValue={ sorting }
             onSortToggle={ sort }
           >
-            { t('common.common.price') }
+            { t('tokens.table.price') }
           </TableColumnHeaderSortable>
           <TableColumnHeaderSortable
             isNumeric
@@ -56,7 +56,7 @@ const TokensTable = ({ items, page, isLoading, sorting, setSorting, top }: Props
             sortValue={ sorting }
             onSortToggle={ sort }
           >
-            { t('common.common.on_chain_market_cap') }
+            { t('tokens.table.on_chain_market_cap') }
           </TableColumnHeaderSortable>
           <TableColumnHeaderSortable
             isNumeric
@@ -65,7 +65,7 @@ const TokensTable = ({ items, page, isLoading, sorting, setSorting, top }: Props
             sortValue={ sorting }
             onSortToggle={ sort }
           >
-            { t('common.common.holders') }
+            { t('tokens.table.holders') }
           </TableColumnHeaderSortable>
         </TableRow>
       </TableHeaderSticky>

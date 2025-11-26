@@ -70,7 +70,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.batch_number_indicates_the_len')}
       >
-        Txn batch number
+        { t('batches.arbitrum_l2.txn_batch_number') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
@@ -90,7 +90,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.date_and_time_at_which_batch_i')}
       >
-        Timestamp
+        { t('batches.common.timestamp') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         { data.commitment_transaction.timestamp ?
@@ -103,7 +103,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.number_of_transactions_in_this')}
       >
-        Transactions
+        { t('batches.common.transactions') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Link loading={ isPlaceholderData } href={ route({ pathname: '/batches/[number]', query: { number: data.number.toString(), tab: 'txs' } }) }>
@@ -115,7 +115,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.number_of_l2_blocks_in_this_ba')}
       >
-        Blocks
+        { t('batches.common.blocks') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Link loading={ isPlaceholderData } href={ route({ pathname: '/batches/[number]', query: { number: data.number.toString(), tab: 'blocks' } }) }>
@@ -127,7 +127,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.hash_of_l1_transaction_in_whic')}
       >
-        L1 transaction hash
+        { t('batches.common.l1_transaction_hash') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <TxEntityL1
@@ -142,7 +142,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.heigh_of_l1_block_which_includ')}
       >
-        L1 block
+        { t('batches.common.l1_block') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <BlockEntityL1
@@ -157,7 +157,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
             isLoading={ isPlaceholderData }
             hint={t('common.common.where_the_batch_data_is_stored')}
           >
-            Batch data container
+            { t('batches.common.batch_data_container') }
           </DetailedInfo.ItemLabel><DetailedInfo.ItemValue>
             <ArbitrumL2TxnBatchDA dataContainer={ data.data_availability.batch_data_container } isLoading={ isPlaceholderData }/>
           </DetailedInfo.ItemValue>
@@ -168,7 +168,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.the_hash_of_the_state_before_t')}
       >
-        Before acc
+        { t('batches.common.before_acc') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue flexWrap="nowrap" >
         <Skeleton loading={ isPlaceholderData } overflow="hidden">
@@ -181,7 +181,7 @@ const ArbitrumL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.the_hash_of_the_state_after_th')}
       >
-        After acc
+        { t('batches.common.after_acc') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue flexWrap="nowrap">
         <Skeleton loading={ isPlaceholderData } overflow="hidden">

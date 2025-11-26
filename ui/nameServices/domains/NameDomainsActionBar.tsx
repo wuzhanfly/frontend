@@ -87,14 +87,14 @@ const NameDomainsActionBar = ({
         { protocolsData && protocolsData.length > 1 && (
           <>
             <Flex justifyContent="space-between" textStyle="sm" mb={ 3 }>
-              <Text fontWeight={ 600 } color="text.secondary">Protocol</Text>
+              <Text fontWeight={ 600 } color="text.secondary">{t('name_services.action_bar.protocol')}</Text>
               <Button
                 variant="link"
                 onClick={ handleProtocolReset }
                 disabled={ protocolsFilterValue.length === 0 }
                 textStyle="sm"
               >
-                Reset
+                {t('name_services.action_bar.reset')}
               </Button>
             </Flex>
             <CheckboxGroup defaultValue={ protocolsFilterValue } onValueChange={ onProtocolsFilterChange } value={ protocolsFilterValue } name="token_type">
@@ -125,21 +125,21 @@ const NameDomainsActionBar = ({
         <Fieldset.Root>
           <CheckboxGroup defaultValue={ filterValue } onValueChange={ handleFilterValueChange } value={ filterValue } name="token_type">
             <Fieldset.Content gap={ 0 }>
-              <Text color="text.secondary" fontWeight={ 600 } mb={ 3 } textStyle="sm">Address</Text>
+              <Text color="text.secondary" fontWeight={ 600 } mb={ 3 } textStyle="sm">{t('name_services.action_bar.address')}</Text>
               <Checkbox value="owned_by" disabled={ !isAddressSearch }>
-                Owned by
+                {t('name_services.action_bar.owned_by')}
               </Checkbox>
               <Checkbox
                 value="resolved_to"
                 mt={ 3 }
                 disabled={ !isAddressSearch }
               >
-                Resolved to address
+                {t('name_services.action_bar.resolved_to_address')}
               </Checkbox>
               { filterGroupDivider }
-              <Text color="text.secondary" fontWeight={ 600 } mb={ 3 } textStyle="sm">Status</Text>
+              <Text color="text.secondary" fontWeight={ 600 } mb={ 3 } textStyle="sm">{t('name_services.action_bar.status')}</Text>
               <Checkbox value="with_inactive">
-                Include expired
+                {t('name_services.action_bar.include_expired')}
               </Checkbox>
             </Fieldset.Content>
           </CheckboxGroup>

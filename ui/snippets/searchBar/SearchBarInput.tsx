@@ -82,9 +82,8 @@ const SearchBarInput = (
   }, [ handleKeyPress ]);
 
   const getPlaceholder = () => {
-  const { t } = useTranslation();
     const clusterText = nameServicesFeature.isEnabled && nameServicesFeature.clusters.isEnabled ? ' / cluster ' : '';
-    return `Search by address / txn hash / block / token${ clusterText }/... `;
+    return t('common.common.search_by_address_txn_hash_block_token', { clusterText });
   };
 
   const startElement = (

@@ -15,15 +15,15 @@ interface Item {
   color: string;
 }
 const getSettings = (t: (key: string) => string): Record<keyof SocialLinkFields, Item> => ({
-  github: { label: 'GitHub', icon: 'social/github_filled', color: 'text.primary' },
+  github: { label: t('tokens.common.github'), icon: 'social/github_filled', color: 'text.primary' },
   telegram: { label: t('tokens.common.telegram'), icon: 'social/telegram_filled', color: 'telegram' },
-  linkedin: { label: 'LinkedIn', icon: 'social/linkedin_filled', color: 'linkedin' },
+  linkedin: { label: t('tokens.common.linkedin'), icon: 'social/linkedin_filled', color: 'linkedin' },
   discord: { label: t('tokens.common.discord'), icon: 'social/discord_filled', color: 'discord' },
   slack: { label: t('tokens.common.slack'), icon: 'social/slack_filled', color: 'slack' },
-  twitter: { label: 'X (ex-Twitter)', icon: 'social/twitter_filled', color: 'text.primary' },
-  opensea: { label: 'OpenSea', icon: 'social/opensea_filled', color: 'opensea' },
+  twitter: { label: t('tokens.common.twitter'), icon: 'social/twitter_filled', color: 'text.primary' },
+  opensea: { label: t('tokens.common.opensea'), icon: 'social/opensea_filled', color: 'opensea' },
   facebook: { label: t('tokens.common.facebook'), icon: 'social/facebook_filled', color: 'facebook' },
-  medium: { label: 'Medium', icon: 'social/medium_filled', color: 'text.primary' },
+  medium: { label: t('tokens.common.medium'), icon: 'social/medium_filled', color: 'text.primary' },
   reddit: { label: t('tokens.common.reddit'), icon: 'social/reddit_filled', color: 'reddit' },
 });
 

@@ -1,0 +1,15 @@
+{
+  "interop_messages.table.message": "消息",
+  "interop_messages.table.timestamp": "时间戳",
+  "interop_messages.table.status": "状态",
+  "interop_messages.table.source_tx": "源交易",
+  "interop_messages.table.destination_tx": "目标交易",
+  "interop_messages.table.sender": "发送方",
+  "interop_messages.table.in_out": "入/出",
+  "interop_messages.table.target": "目标",
+  "interop_messages.list_item.source_tx": "源交易",
+  "interop_messages.list_item.destination_tx": "目标交易",
+  "interop_messages.additional_info.message_payload": "消息负载",
+  "interop_messages.source_tx.na": "N/A",
+  "interop_messages.destination_tx.na": "N/A"
+}

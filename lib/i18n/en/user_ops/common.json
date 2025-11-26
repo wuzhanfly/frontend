@@ -35,5 +35,12 @@
   "user_ops.common.gas_limit_for_the_user_operation": "Gas Limit For The User Operation",
   "user_ops.common.gas_limit_for_verification_phase": "Gas Limit For Verification Phase",
   "user_ops.common.smart_contract_that_deploys_new_smart_contract_wallets_for_users": "Smart Contract That Deploys New Smart Contract Wallets For Users",
-  "user_ops.common.type_of_the_gas_fees_sponsor": "Type Of The Gas Fees Sponsor"
+  "user_ops.common.type_of_the_gas_fees_sponsor": "Type Of The Gas Fees Sponsor",
+  "user_ops.table.user_op_hash": "User op hash",
+  "user_ops.table.timestamp": "Timestamp",
+  "user_ops.table.status": "Status",
+  "user_ops.table.sender": "Sender",
+  "user_ops.table.tx_hash": "Tx hash",
+  "user_ops.table.block": "Block",
+  "user_ops.table.fee": "Fee"
 }

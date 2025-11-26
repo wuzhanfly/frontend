@@ -87,7 +87,7 @@ const TxDetailsWithdrawalStatusOptimistic = ({ status, l1TxHash }: Props) => {
         variant="outline"
         size="sm"
       >
-        Claim funds
+        {t('transactions.common.claim_funds')}
       </Button>
     </Link>
   ) : null;

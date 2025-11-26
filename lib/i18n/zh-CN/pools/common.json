@@ -1,15 +1,5 @@
 {
-  "pools.common.verify_with": "使用...验证",
-  "pools.common.view_in": "在...中查看",
-  "pools.common.pool": "池",
-  "pools.common.dex_tracker": "DEX 追踪器",
-  "pools.common.there_are_no_pools": "暂无池。",
-  "pools.common.the_base_token_in_a_liquidity_": "流动性池对中的基础代币",
-  "pools.common.the_quote_token_in_a_liquidity": "流动性池对中的报价代币",
-  "pools.common.current_market_capitalization_": "基础代币的当前市值",
-  "pools.common.current_liquidity_of_the_pool": "池的当前流动性",
-  "pools.common.dex_where_the_pool_is_traded": "池交易的DEX",
-  "pools.common.contract": "合约",
-  "pools.common.pool_id": "池ID",
-  "pools.common.liquidity": "流动性"
+  "table_item": {
+    "dex_name": "去中心化交易所名称"
+  }
 }

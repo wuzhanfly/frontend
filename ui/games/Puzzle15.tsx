@@ -1,5 +1,6 @@
 import { Grid, Box, Flex, Text } from '@chakra-ui/react';
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { Button } from 'toolkit/chakra/button';
@@ -63,6 +64,7 @@ const shuffleBoard = (initialBoard: Array<number>): Array<number> => {
 };
 
 const Puzzle15 = () => {
+  const { t } = useTranslation();
   const [ tiles, setTiles ] = useState<Array<number>>(Array.from({ length: 16 }, (_, i) => i));
   const [ isWon, setIsWon ] = useState(false);
   const [ image, setImage ] = useState<HTMLImageElement | null>(null);
@@ -192,19 +194,19 @@ const Puzzle15 = () => {
       </Grid>
       { !isWon && (
         <>
-          <Text mt={ 10 }>Put the pieces together and win a prize</Text>
-          <Text mb={ 1 }>Click on a square to move it</Text>
+          <Text mt={ 10 }>{t('games.puzzle15.put_pieces_together')}</Text>
+          <Text mb={ 1 }>{t('games.puzzle15.click_square_to_move')}</Text>
         </>
       ) }
       { isWon && easterEggPuzzleBadgeFeature.isEnabled && (
         <Flex flexDirection="column" alignItems="center" justifyContent="center" gap={ 4 } mt={ 10 }>
-          <Text fontSize="2xl" fontWeight="bold">You unlocked a hidden badge!</Text>
-          <Text fontSize="lg" textAlign="center">Congratulations! You're eligible to claim an epic hidden badge!</Text>
+          <Text fontSize="2xl" fontWeight="bold">{t('games.puzzle15.unlocked_hidden_badge')}</Text>
+          <Text fontSize="lg" textAlign="center">{t('games.puzzle15.eligible_to_claim_badge')}</Text>
           <Link
             href={ easterEggPuzzleBadgeFeature.badgeClaimLink }
             external noIcon
           >
-            <Button>Claim</Button>
+            <Button>{t('games.common.claim')}</Button>
           </Link>
         </Flex>
       ) }

@@ -35,9 +35,9 @@ const DeleteApiKeyModal: React.FC<Props> = ({ open, onOpenChange, data }) => {
 
   const renderText = useCallback(() => {
     return (
-      <Text> API key for <Text fontWeight="700" as="span">{ ` "${ data.name || 'name' }" ` }</Text> will be deleted </Text>
+      <Text> {t('api_key.delete_modal.api_key_for')} <Text fontWeight="700" as="span">{ ` "${ data.name || 'name' }" ` }</Text> {t('api_key.delete_modal.will_be_deleted')} </Text>
     );
-  }, [ data.name ]);
+  }, [ data.name, t ]);
 
   return (
     <DeleteModal

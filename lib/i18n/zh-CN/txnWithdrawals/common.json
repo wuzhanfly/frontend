@@ -1,0 +1,4 @@
+{
+  "txn_withdrawals.common.l2_to_l1_message_relayer": "L2 到 L1 消息中继器：搜索您的 L2 交易以执行手动提取。",
+  "txn_withdrawals.common.couldnt_find_withdrawals": "找不到您交易的任何提取。"
+}

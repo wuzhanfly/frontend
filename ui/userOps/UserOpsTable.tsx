@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { UserOpsItem } from 'types/api/userOps';
 
@@ -22,23 +23,24 @@ const UserOpsTable = ({ items, isLoading, top, showTx, showSender }: Props) => {
   const multichainContext = useMultichainContext();
   const chainData = getChainDataForList(multichainContext);
   const chainConfig = (multichainContext?.chain.config || config);
+  const { t } = useTranslation();
 
   return (
     <TableRoot minW="1000px">
       <TableHeaderSticky top={ top }>
         <TableRow>
           { chainData && <TableColumnHeader width="38px"></TableColumnHeader> }
-          <TableColumnHeader w="60%">User op hash</TableColumnHeader>
+          <TableColumnHeader w="60%">{ t('user_ops.table.user_op_hash') }</TableColumnHeader>
           <TableColumnHeader w="180px">
-            Timestamp
+            { t('user_ops.table.timestamp') }
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader w="140px">Status</TableColumnHeader>
-          { showSender && <TableColumnHeader w="160px">Sender</TableColumnHeader> }
-          { showTx && <TableColumnHeader w="160px">Tx hash</TableColumnHeader> }
-          <TableColumnHeader w="40%">Block</TableColumnHeader>
+          <TableColumnHeader w="140px">{ t('user_ops.table.status') }</TableColumnHeader>
+          { showSender && <TableColumnHeader w="160px">{ t('user_ops.table.sender') }</TableColumnHeader> }
+          { showTx && <TableColumnHeader w="160px">{ t('user_ops.table.tx_hash') }</TableColumnHeader> }
+          <TableColumnHeader w="40%">{ t('user_ops.table.block') }</TableColumnHeader>
           { !chainConfig.UI.views.tx.hiddenFields?.tx_fee &&
-          <TableColumnHeader w="120px" isNumeric>{ `Fee ${ chainConfig.chain.currency.symbol }` }</TableColumnHeader> }
+          <TableColumnHeader w="120px" isNumeric>{ `${ t('user_ops.table.fee') } ${ chainConfig.chain.currency.symbol }` }</TableColumnHeader> }
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

@@ -1,0 +1,16 @@
+{
+  "table": {
+    "l2_output_index": "L2 output index",
+    "timestamp": "Timestamp",
+    "l2_block": "L2 block #",
+    "l1_txn_hash": "L1 txn hash",
+    "output_root": "Output root"
+  },
+  "list": {
+    "l2_output_index": "L2 output index",
+    "age": "Age",
+    "l2_block": "L2 block #",
+    "l1_txn_hash": "L1 txn hash",
+    "output_root": "Output root"
+  }
+}

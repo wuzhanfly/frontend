@@ -57,7 +57,7 @@ const TokenInstanceDetails = ({ data, token, scrollRef, isLoading }: Props) => {
                 hint={t('common.common.current_owner_of_this_token_in')}
                 isLoading={ isLoading }
               >
-                Owner
+                { t('tokens.instance.owner') }
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue>
                 <AddressEntity
@@ -74,7 +74,7 @@ const TokenInstanceDetails = ({ data, token, scrollRef, isLoading }: Props) => {
             hint={t('common.common.this_token_instance_unique_tok')}
             isLoading={ isLoading }
           >
-            Token ID
+            { t('tokens.instance.token_id') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Flex alignItems="center" overflow="hidden">
@@ -100,7 +100,7 @@ const TokenInstanceDetails = ({ data, token, scrollRef, isLoading }: Props) => {
               <DetailedInfo.ItemLabel
                 hint={t('tokens.common.link_to_the_dapp')}
               >
-                Dapp
+                { t('tokens.instance.dapp') }
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue py="1px">
                 <AppActionButton data={ appActionData } height="30px" source={t('tokens.common.nft_item')}/>

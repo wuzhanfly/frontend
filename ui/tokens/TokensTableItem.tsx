@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenInfo } from 'types/api/token';
 
@@ -31,6 +32,7 @@ const TokensTableItem = ({
   index,
   isLoading,
 }: Props) => {
+  const { t } = useTranslation();
 
   const {
     address_hash: addressHash,
@@ -44,6 +46,10 @@ const TokensTableItem = ({
 
   const bridgedChainTag = bridgedTokensFeature.isEnabled ?
     bridgedTokensFeature.chains.find(({ id }) => id === originalChainId)?.short_title :
+    undefined;
+    
+  const bridgedChainTagText = bridgedTokensFeature.isEnabled && originalChainId ?
+    t(`common.chains.${originalChainId}_short`) || bridgedTokensFeature.chains.find(({ id }) => id === originalChainId)?.short_title :
     undefined;
 
   const tokenAddress: AddressEntityProps['address'] = {
@@ -99,7 +105,7 @@ const TokensTableItem = ({
             </Flex>
             <Flex columnGap={ 1 }>
               <Tag loading={ isLoading }>{ getTokenTypeName(type) }</Tag>
-              { bridgedChainTag && <Tag loading={ isLoading }>{ bridgedChainTag }</Tag> }
+              { bridgedChainTagText && <Tag loading={ isLoading }>{ bridgedChainTagText }</Tag> }
             </Flex>
           </Flex>
         </Flex>

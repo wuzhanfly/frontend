@@ -30,9 +30,9 @@ const UserWalletMenuContent = ({ isAutoConnectDisabled, address, domain, isRecon
   return (
     <Box>
       { isAutoConnectDisabled && <UserWalletAutoConnectAlert/> }
-      <Text fontSize="sm" fontWeight={ 600 } mb={ 1 }>My wallet</Text>
+      <Text fontSize="sm" fontWeight={ 600 } mb={ 1 }>{t('snippets.user_wallet_menu_content.my_wallet')}</Text>
       <Text fontSize="sm" mb={ 5 } fontWeight={ 400 } color="text.secondary">
-        Your wallet is used to interact with apps and contracts in the explorer.
+        {t('snippets.user_wallet_menu_content.wallet_description')}
       </Text>
       <Flex alignItems="center" columnGap={ 2 } justifyContent="space-between">
         <AddressEntity
@@ -53,7 +53,7 @@ const UserWalletMenuContent = ({ isAutoConnectDisabled, address, domain, isRecon
         ) }
       </Flex>
       <Button size="sm" width="full" variant="outline" onClick={ onDisconnect } mt={ 6 }>
-        Disconnect
+        {t('snippets.user_wallet_menu_content.disconnect')}
       </Button>
     </Box>
   );

@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import React, { useCallback, useEffect, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { useRewardsContext } from 'lib/contexts/rewards';
 import { Button } from 'toolkit/chakra/button';
@@ -8,6 +9,7 @@ import { SECOND } from 'toolkit/utils/consts';
 import splitSecondsInPeriods from 'ui/blockCountdown/splitSecondsInPeriods';
 
 const DailyRewardClaimButton = () => {
+  const { t } = useTranslation();
   const queryClient = useQueryClient();
   const { balancesQuery, dailyRewardQuery, claim } = useRewardsContext();
   const [ isClaiming, setIsClaiming ] = React.useState(false);
@@ -80,11 +82,11 @@ const DailyRewardClaimButton = () => {
       fontWeight="600"
       cursor="default"
     >
-      Next claim in { timeLeft || 'N/A' }
+      {t('rewards.daily_reward_claim_button.next_claim_in')} { timeLeft || 'N/A' }
     </Flex>
   ) : (
     <Button onClick={ handleClaim } loading={ isLoading }>
-      Claim { dailyRewardValue } Merits
+      {t('rewards.daily_reward_claim_button.claim')} { dailyRewardValue } {t('rewards.daily_reward_claim_button.merits')}
     </Button>
   );
 };

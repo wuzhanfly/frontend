@@ -1,0 +1,5 @@
+{
+  "addresses_label_search.table.balance_ether": "Balance {{currencyUnit}}",
+  "addresses_label_search.list_item.balance_ether": "Balance {{currencyUnit}}",
+  "addresses_label_search.list_item.txn_count": "Txn count"
+}

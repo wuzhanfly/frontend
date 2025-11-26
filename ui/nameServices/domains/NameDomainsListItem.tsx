@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as bens from '@blockscout/bens-types';
 
@@ -21,16 +22,17 @@ const NameDomainsListItem = ({
   expiry_date: expiryDate,
   protocol,
 }: Props) => {
+  const { t } = useTranslation();
   return (
     <ListItemMobileGrid.Container>
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Domain</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('name_services.domains.domain')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <EnsEntity domain={ name } protocol={ protocol } isLoading={ isLoading } fontWeight={ 500 }/>
       </ListItemMobileGrid.Value>
 
       { resolvedAddress && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Address</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('name_services.domains.address')}</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <AddressEntity address={ resolvedAddress } isLoading={ isLoading } fontWeight={ 500 }/>
           </ListItemMobileGrid.Value>
@@ -39,7 +41,7 @@ const NameDomainsListItem = ({
 
       { registrationDate && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Registered on</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('name_services.domains.registered_on')}</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <Skeleton loading={ isLoading }>
               <div>{ dayjs(registrationDate).format('lll') }</div>
@@ -51,7 +53,7 @@ const NameDomainsListItem = ({
 
       { expiryDate && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Expiration date</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('name_services.domains.expiration_date')}</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <Skeleton loading={ isLoading } whiteSpace="pre-wrap">
               <div>{ dayjs(expiryDate).format('lll') } </div>

@@ -71,10 +71,10 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
       templateColumns={{ base: 'minmax(0, 1fr)', lg: 'minmax(min-content, 200px) minmax(0, 1fr)' }}
     >
       <DetailedInfo.ItemLabel
-        hint="Batch number indicates the length of batches produced by grouping L2 blocks to be proven on Ethereum."
+        hint={t('batches.zksync_l2.batch_number_indicates_the_length_of_batches')}
         isLoading={ isPlaceholderData }
       >
-        Txn batch number
+        { t('batches.zksync_l2.txn_batch_number') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
@@ -94,17 +94,17 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         hint={t('transactions.common.status_is_the_short_interpreta')}
         isLoading={ isPlaceholderData }
       >
-        Status
+        { t('batches.zksync_l2.status') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <VerificationSteps steps={ ZKSYNC_L2_TX_BATCH_STATUSES.slice(1) } currentStep={ data.status } isLoading={ isPlaceholderData }/>
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Date and time at which batch is produced"
+        hint={t('batches.zksync_l2.date_and_time_at_which_batch_is_produced')}
         isLoading={ isPlaceholderData }
       >
-        Timestamp
+        { t('batches.zksync_l2.timestamp') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         { data.timestamp ? <DetailedInfoTimestamp timestamp={ data.timestamp } isLoading={ isPlaceholderData }/> : t('common.common.undefined') }
@@ -114,7 +114,7 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         hint={t('common.common.number_of_transactions_inside_')}
         isLoading={ isPlaceholderData }
       >
-        Transactions
+        { t('batches.common.transactions') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
@@ -134,7 +134,7 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         <DetailedInfo.ItemLabel
           hint={t('common.common.l1_batch_root_is_a_hash_that_s')}
         >
-          Root hash
+          { t('batches.zksync_l2.root_hash') }
         </DetailedInfo.ItemLabel>
         <DetailedInfo.ItemValue
           flexWrap="nowrap"
@@ -145,9 +145,9 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         </DetailedInfo.ItemValue>
 
         <DetailedInfo.ItemLabel
-          hint="Gas price for the batch settlement transaction on L1"
+          hint={t('batches.zksync_l2.gas_price_for_the_batch_settlement_transaction_on_l1')}
         >
-          L1 gas price
+          { t('batches.zksync_l2.l1_gas_price') }
         </DetailedInfo.ItemLabel>
         <DetailedInfo.ItemValue multiRow>
           <Text mr={ 1 }>{ BigNumber(data.l1_gas_price).dividedBy(WEI).toFixed() } { parentChainCurrency || currencyUnits.ether }</Text>
@@ -157,7 +157,7 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         <DetailedInfo.ItemLabel
           hint={t('common.common.the_gas_price_below_which_the_')}
         >
-          L2 fair gas price
+          { t('batches.zksync_l2.l2_fair_gas_price') }
         </DetailedInfo.ItemLabel>
         <DetailedInfo.ItemValue multiRow>
           <Text mr={ 1 }>{ BigNumber(data.l2_fair_gas_price).dividedBy(WEI).toFixed() } { currencyUnits.ether }</Text>

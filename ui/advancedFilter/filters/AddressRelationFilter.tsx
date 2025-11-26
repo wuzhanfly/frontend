@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { type AdvancedFilterParams } from 'types/api/advancedFilter';
 
@@ -20,6 +21,7 @@ type Props = {
 };
 
 const AddressRelationFilter = ({ value = DEFAULT_VALUE, handleFilterChange, onClose }: Props) => {
+  const { t } = useTranslation();
   const onFilter = React.useCallback(({ value }: { value: string | null }) => {
     if (!value) {
       return;
@@ -32,8 +34,8 @@ const AddressRelationFilter = ({ value = DEFAULT_VALUE, handleFilterChange, onCl
   return (
     <Box w="120px">
       <RadioGroup onValueChange={ onFilter } value={ value } orientation="vertical">
-        <Radio value="or">OR</Radio>
-        <Radio value="and">AND</Radio>
+        <Radio value="or">{t('common.common.or')}</Radio>
+        <Radio value="and">{t('common.common.and')}</Radio>
       </RadioGroup>
     </Box>
   );

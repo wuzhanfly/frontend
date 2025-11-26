@@ -31,7 +31,7 @@ const TacOperationDetails = ({ isLoading, data }: Props) => {
             hint={t('common.common.the_address_on_the_source_chai')}
             isLoading={ isLoading }
           >
-            Sender
+            {t('operation.details.sender')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <AddressEntityTacTon
@@ -47,7 +47,7 @@ const TacOperationDetails = ({ isLoading, data }: Props) => {
         hint={t('common.common.the_status_of_the_operation')}
         isLoading={ isLoading }
       >
-        Status
+        {t('operation.details.status')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <TacOperationStatus status={ data.type } isLoading={ isLoading }/>
@@ -59,7 +59,7 @@ const TacOperationDetails = ({ isLoading, data }: Props) => {
             hint={t('common.common.block_time_on_the_source_chain')}
             isLoading={ isLoading }
           >
-            Timestamp
+            {t('operation.details.timestamp')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <DetailedInfoTimestamp timestamp={ data.timestamp } isLoading={ isLoading }/>
@@ -73,7 +73,7 @@ const TacOperationDetails = ({ isLoading, data }: Props) => {
             hint={t('common.common.stages_of_a_crosschain_operati')}
             isLoading={ isLoading }
           >
-            Lifecycle
+            {t('operation.details.lifecycle')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue mt={ 1 }>
             <TacOperationLifecycleAccordion data={ statusHistory } isLoading={ isLoading } type={ data.type }/>

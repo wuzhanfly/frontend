@@ -138,7 +138,7 @@ const AddressVerificationStepSignature = ({ address, signingMessage, contractCre
           loading={ formState.isSubmitting }
           loadingText={ t('common.common.verifying') }
         >
-          Verify
+          {t('common.common.verify')}
         </Button>
       );
     }
@@ -159,10 +159,10 @@ const AddressVerificationStepSignature = ({ address, signingMessage, contractCre
   const rootError = (() => {
     switch (formState.errors.root?.type) {
       case 'INVALID_SIGNATURE_ERROR': {
-        return <span>The signature could not be processed.</span>;
+        return <span>{t('address_verification.common.signature_could_not_be_processed')}</span>;
       }
       case 'VALIDITY_EXPIRED_ERROR': {
-        return <span>This verification message has expired. Add the contract address to restart the process.</span>;
+        return <span>{t('address_verification.common.verification_message_expired')}</span>;
       }
       case 'SIGNING_FAIL': {
         return <span>{ formState.errors.root.message }</span>;
@@ -172,20 +172,20 @@ const AddressVerificationStepSignature = ({ address, signingMessage, contractCre
         const expectedSigners = [ contractCreator, contractOwner ].filter(Boolean).map(s => shortenString(s)).join(', ');
         return (
           <Box>
-            <span>This address </span>
-            <span>{ signer }</span>
-            <span> is not a creator/owner of the requested contract and cannot claim ownership. Only </span>
-            <span>{ expectedSigners }</span>
-            <span> can verify ownership of this contract.</span>
-          </Box>
+          <span>{t('address_verification.common.not_creator_owner_of_contract')} </span>
+          <span>{ signer }</span>
+          <span> {t('address_verification.common.only_expected_signers_can_verify')} </span>
+          <span>{ expectedSigners }</span>
+          <span> {t('address_verification.common.can_verify_ownership')}</span>
+        </Box>
         );
       }
       case 'UNKNOWN_STATUS': {
         return (
           <Box>
-            <span>We are not able to process the verify account ownership for this contract address. Kindly </span>
+            <span>{t('address_verification.common.unable_to_process_verification')} </span>
             { contactUsLink }
-            <span> for further assistance.</span>
+            <span> {t('address_verification.common.for_further_assistance')}</span>
           </Box>
         );
       }
@@ -200,13 +200,13 @@ const AddressVerificationStepSignature = ({ address, signingMessage, contractCre
       <form noValidate onSubmit={ onSubmit }>
         { rootError && <Alert status="warning" mb={ 6 }>{ rootError }</Alert> }
         <Box mb={ 8 }>
-          <span>Please select the address to sign and copy the message and sign it using the Blockscout message provider of your choice. </span>
+          <span>{t('address_verification.common.please_select_address_and_copy_message')} </span>
           <Link href="https://docs.blockscout.com/using-blockscout/my-account/verified-addresses/copy-and-sign-message" external noIcon>
-            Additional instructions
+            {t('address_verification.common.additional_instructions')}
           </Link>
-          <span>. If you do not see your address here but are sure that you are the owner of the contract, kindly </span>
+          <span>. {t('address_verification.common.if_you_do_not_see_your_address')} </span>
           { contactUsLink }
-          <span> for further assistance.</span>
+          <span> {t('address_verification.common.for_further_assistance')}</span>
         </Box>
         { (contractOwner || contractCreator) && (
           <Flex flexDir="column" rowGap={ 4 } mb={ 4 }>
@@ -247,8 +247,8 @@ const AddressVerificationStepSignature = ({ address, signingMessage, contractCre
               flexDir="column"
               rowGap={ 4 }
             >
-              <Radio value="wallet">Sign via Web3 wallet</Radio>
-              <Radio value="manual">Sign manually</Radio>
+              <Radio value="wallet">{t('address_verification.common.sign_via_web3_wallet')}</Radio>
+              <Radio value="manual">{t('address_verification.common.sign_manually')}</Radio>
             </RadioGroup>
           ) }
           { signMethod === 'manual' && (

@@ -50,8 +50,8 @@ const TokensBridgedChainsFilter = ({ onChange, defaultValue }: Props) => {
       <CheckboxGroup defaultValue={ defaultValue } onValueChange={ handleChange } value={ value } name="bridged_token_chain">
         { feature.chains.map(({ title, id, short_title: shortTitle }) => (
           <Checkbox key={ id } value={ id } whiteSpace="pre-wrap">
-            <span>{ title }</span>
-            <chakra.span color="text.secondary"> ({ shortTitle })</chakra.span>
+            <span>{ t(`common.chains.${id}`) || title }</span>
+            <chakra.span color="text.secondary"> ({ t(`common.chains.${id}_short`) || shortTitle })</chakra.span>
           </Checkbox>
         )) }
       </CheckboxGroup>

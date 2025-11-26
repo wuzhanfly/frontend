@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ClustersLeaderboardObject } from 'types/api/clusters';
 
@@ -13,15 +14,16 @@ interface Props {
 }
 
 const ClustersLeaderboardTable = ({ data, isLoading, top }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRoot>
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader width="5%">Rank</TableColumnHeader>
-          <TableColumnHeader width="40%">Cluster name</TableColumnHeader>
-          <TableColumnHeader width="10%">Names</TableColumnHeader>
-          <TableColumnHeader width="10%">Total backing</TableColumnHeader>
-          <TableColumnHeader width="10%">Active chains</TableColumnHeader>
+          <TableColumnHeader width="5%">{t('name_services.leaderboard.rank')}</TableColumnHeader>
+          <TableColumnHeader width="40%">{t('name_services.leaderboard.cluster_name')}</TableColumnHeader>
+          <TableColumnHeader width="10%">{t('name_services.leaderboard.names')}</TableColumnHeader>
+          <TableColumnHeader width="10%">{t('name_services.leaderboard.total_backing')}</TableColumnHeader>
+          <TableColumnHeader width="10%">{t('name_services.leaderboard.active_chains')}</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

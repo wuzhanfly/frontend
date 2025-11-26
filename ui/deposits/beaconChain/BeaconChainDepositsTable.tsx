@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { DepositsItem } from 'types/api/deposits';
 
@@ -19,6 +20,7 @@ type Props = {
 };
 
 const BeaconChainDepositsTable = ({ items, isLoading, top, view }: Props) => {
+  const { t } = useTranslation();
   const { cutRef, renderedItemsNum } = useLazyRenderedList(items, !isLoading);
 
   if (!feature.isEnabled) {
@@ -29,14 +31,14 @@ const BeaconChainDepositsTable = ({ items, isLoading, top, view }: Props) => {
     <TableRoot style={{ tableLayout: 'auto' }} minW="950px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader>Transaction hash</TableColumnHeader>
-          { view !== 'block' && <TableColumnHeader>Block</TableColumnHeader> }
-          { view !== 'block' && <TableColumnHeader>Timestamp<TimeFormatToggle/></TableColumnHeader> }
-          <TableColumnHeader>{ `Value ${ feature.currency.symbol }` }</TableColumnHeader>
-          { view !== 'address' && <TableColumnHeader>From</TableColumnHeader> }
-          <TableColumnHeader>PubKey</TableColumnHeader>
-          <TableColumnHeader>Signature</TableColumnHeader>
-          <TableColumnHeader>Status</TableColumnHeader>
+          <TableColumnHeader>{t('deposits.common.transaction_hash')}</TableColumnHeader>
+          { view !== 'block' && <TableColumnHeader>{t('deposits.common.block')}</TableColumnHeader> }
+          { view !== 'block' && <TableColumnHeader>{t('common.common.timestamp')}<TimeFormatToggle/></TableColumnHeader> }
+          <TableColumnHeader>{t('deposits.common.value_with_currency', { currency: feature.currency.symbol })}</TableColumnHeader>
+          { view !== 'address' && <TableColumnHeader>{t('deposits.common.from')}</TableColumnHeader> }
+          <TableColumnHeader>{t('deposits.common.pubkey')}</TableColumnHeader>
+          <TableColumnHeader>{t('deposits.common.signature')}</TableColumnHeader>
+          <TableColumnHeader>{t('common.common.status')}</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

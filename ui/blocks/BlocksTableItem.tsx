@@ -53,12 +53,12 @@ const BlocksTableItem = ({ data, isLoading, enableTimeIncrement, animation, chai
       <TableCell >
         <Flex columnGap={ 2 } alignItems="center" mb={ 2 }>
           { data.celo?.l1_era_finalized_epoch_number && (
-            <Tooltip content={ `Finalized epoch #${ data.celo.l1_era_finalized_epoch_number }` }>
+            <Tooltip content={ t('blocks.table_item.finalized_epoch') + ` #${ data.celo.l1_era_finalized_epoch_number }` }>
               <IconSvg name="checkered_flag" boxSize={ 5 } p="1px" isLoading={ isLoading } flexShrink={ 0 }/>
             </Tooltip>
           ) }
           { data.is_pending_update && <BlockPendingUpdateHint/> }
-          <Tooltip disabled={ data.type !== 'reorg' } content="Chain reorganizations">
+          <Tooltip disabled={ data.type !== 'reorg' } content={t('blocks.table_item.chain_reorganizations')}>
             <span>
               <BlockEntity
                 isLoading={ isLoading }
@@ -132,7 +132,7 @@ const BlocksTableItem = ({ data, isLoading, enableTimeIncrement, animation, chai
               { burntFees.dividedBy(WEI).toFixed(8) }
             </Skeleton>
           </Flex>
-          <Tooltip content="Burnt fees / Txn fees * 100%" disabled={ isLoading }>
+          <Tooltip content={t('blocks.table_item.burnt_fees_percentage')} disabled={ isLoading }>
             <Utilization mt={ 2 } w="min-content" value={ burntFees.div(txFees).toNumber() } isLoading={ isLoading }/>
           </Tooltip>
         </TableCell>

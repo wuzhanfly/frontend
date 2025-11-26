@@ -34,13 +34,13 @@ const TxDetailsBurntFees = ({ data, isLoading }: Props) => {
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint={ t('transactions.hint.burnt_fees', { 
-          currency: currencyUnits.ether, 
-          hasBlob: data.blob_gas_price && data.blob_gas_used ? ' + Blob Gas Price * Blob Gas Used' : '' 
+        hint={ t('transactions.common.hint.burnt_fees', {
+          currency: currencyUnits.ether,
+          hasBlob: data.blob_gas_price && data.blob_gas_used ? ' + Blob Gas Price * Blob Gas Used' : '',
         }) }
         isLoading={ isLoading }
       >
-        {t('common.common.burnt_fees')}
+        { t('common.common.burnt_fees') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue multiRow>
         <CurrencyValue

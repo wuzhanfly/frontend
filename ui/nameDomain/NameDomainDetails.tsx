@@ -44,7 +44,7 @@ const NameDomainDetails = ({ query }: Props) => {
               hint={t('common.common.the_date_the_name_was_register')}
               isLoading={ isLoading }
             >
-              Registration date
+              {t('name_domain.details.registration_date')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               <IconSvg name="clock" boxSize={ 5 } color="icon.primary" verticalAlign="middle" isLoading={ isLoading } mr={ 2 }/>
@@ -62,7 +62,7 @@ const NameDomainDetails = ({ query }: Props) => {
               hint={t('name_service.common.the_date_the_name_expires_upon_which_there_is_a_grace_period_for_the_owner_to_renew_after_grace_period_ends_the_name_is_released_to_the_market')}
               isLoading={ isLoading }
             >
-              Expiration date
+              {t('name_domain.details.expiration_date')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               <IconSvg name="clock" boxSize={ 5 } color="icon.primary" verticalAlign="middle" isLoading={ isLoading } mr={ 2 } mt="-2px"/>
@@ -91,7 +91,7 @@ const NameDomainDetails = ({ query }: Props) => {
               hint={t('common.common.the_resolver_contract_provides')}
               isLoading={ isLoading }
             >
-              Resolver
+              {t('name_domain.details.resolver')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue
             >
@@ -109,7 +109,7 @@ const NameDomainDetails = ({ query }: Props) => {
               hint={t('common.common.the_account_that_owns_the_doma')}
               isLoading={ isLoading }
             >
-              Registrant
+              {t('name_domain.details.registrant')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue
               columnGap={ 2 }
@@ -141,7 +141,7 @@ const NameDomainDetails = ({ query }: Props) => {
               hint={t('common.common.the_account_that_owns_the_righ')}
               isLoading={ isLoading }
             >
-              Owner
+              {t('name_domain.details.owner')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue
               columnGap={ 2 }
@@ -173,7 +173,7 @@ const NameDomainDetails = ({ query }: Props) => {
               hint={t('common.common.owner_of_this_nft_domain_in_na')}
               isLoading={ isLoading }
             >
-              Manager
+              {t('name_domain.details.manager')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue
               columnGap={ 2 }
@@ -215,7 +215,7 @@ const NameDomainDetails = ({ query }: Props) => {
                 hint={t('name_service.common.the_token_id_of_this_domain_name_nft', { tokenType: token.type === bens.TokenType.WRAPPED_DOMAIN_TOKEN ? t('name_service.common.wrapped') : '' })}
                 isLoading={ isLoading }
               >
-                { token.type === bens.TokenType.WRAPPED_DOMAIN_TOKEN ? 'Wrapped token ID' : t('transactions.common.token_id') }
+                { token.type === bens.TokenType.WRAPPED_DOMAIN_TOKEN ? t('name_domain.details.wrapped_token_id') : t('transactions.common.token_id') }
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue
                 wordBreak="break-all"
@@ -233,7 +233,7 @@ const NameDomainDetails = ({ query }: Props) => {
               hint={t('common.common.other_cryptocurrency_addresses')}
               isLoading={ isLoading }
             >
-              Other addresses
+              {t('name_domain.details.other_addresses')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue
               flexDir="column"

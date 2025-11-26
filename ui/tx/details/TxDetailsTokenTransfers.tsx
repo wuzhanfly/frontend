@@ -23,10 +23,10 @@ const TxDetailsTokenTransfers = ({ data, txHash, isOverflow }: Props) => {
   const viewAllUrl = route({ pathname: '/tx/[hash]', query: { hash: txHash, tab: 'token_transfers' } });
 
   const TOKEN_TRANSFERS_TYPES = [
-    { title: 'Tokens transferred', hint: 'List of tokens transferred in the transaction', type: 'token_transfer' },
-    { title: 'Tokens minted', hint: t('transactions.common.list_of_tokens_minted_in_the_t'), type: 'token_minting' },
-    { title: 'Tokens burnt', hint: t('transactions.common.list_of_tokens_burnt_in_the_tr'), type: 'token_burning' },
-    { title: 'Tokens created', hint: t('transactions.common.list_of_tokens_created_in_the_'), type: 'token_spawning' },
+    { title: t('transactions.common.tokens_transferred'), hint: t('transactions.common.list_of_tokens_transferred_in_'), type: 'token_transfer' },
+    { title: t('transactions.common.tokens_minted'), hint: t('transactions.common.list_of_tokens_minted_in_the_t'), type: 'token_minting' },
+    { title: t('transactions.common.tokens_burnt'), hint: t('transactions.common.list_of_tokens_burnt_in_the_tr'), type: 'token_burning' },
+    { title: t('transactions.common.tokens_created'), hint: t('transactions.common.list_of_tokens_created_in_the_'), type: 'token_spawning' },
   ];
 
   const transferGroups = TOKEN_TRANSFERS_TYPES.map((group) => ({
@@ -68,7 +68,7 @@ const TxDetailsTokenTransfers = ({ data, txHash, isOverflow }: Props) => {
           <GridItem fontSize="sm" alignItems="center" display="inline-flex" pl={{ base: '28px', lg: 0 }}>
             <IconSvg name="token" boxSize={ 6 }/>
             <Link href={ viewAllUrl }>
-              View all
+              { t('common.common.view_all') }
             </Link>
           </GridItem>
         </>

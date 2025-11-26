@@ -60,8 +60,7 @@ const TxState = ({ txQuery }: Props) => {
     <>
       { !isError && !txQuery.isError && (
         <Text mb={ 6 }>
-          A set of information that represents the current state is updated when a transaction takes place on the network.
-          The below is a summary of those changes.
+          { t('transactions.common.state_changes_description') }
         </Text>
       ) }
       <DataListDisplay

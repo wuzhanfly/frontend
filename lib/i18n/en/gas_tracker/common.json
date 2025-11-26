@@ -11,5 +11,13 @@
   "gas_tracker.common.network_utilization": "Network utilization",
   "gas_tracker.common.load": "load",
   "gas_tracker.common.last_n_blocks": "last {{count}} blocks",
-  "gas_tracker.common.network_utilization_description": "Network utilization (last 50 blocks):"
+  "gas_tracker.common.network_utilization_description": "Network utilization (last 50 blocks):",
+  "gas_tracker.common.what_does_gas_refer_to_on_the_blockchain": "What does gas refer to on the blockchain?",
+  "gas_tracker.common.how_can_i_check_chain_gas_fees": "How can I check {{chainName}} gas fees?",
+  "gas_tracker.common.you_can_easily_check_live_chain_gas_fees": "You can easily check live {{chainName}} gas fees on this page. The gas tracker shows current gas prices in {{currencyUnit}} and estimated transaction times for different priority levels (fast, normal, slow).",
+  "gas_tracker.common.what_is_the_average_gas_fee_for_chain_transactions": "What is the average gas fee for {{chainName}} transactions?",
+  "gas_tracker.common.the_average_gas_fee_for_chain_transactions": "The average gas fee for {{chainName}} transactions varies based on network congestion. Check the current gas prices above to see real-time rates and plan your transactions accordingly.",
+  "gas_tracker.common.how_does_blockscout_calculate_gas_fees": "How does Blockscout calculate gas fees?",
+  "gas_tracker.common.blockscout_calculates_gas_fees": "Blockscout calculates gas fees based on recent transaction data from the blockchain. We analyze the gas prices of recently mined blocks to provide accurate estimates for different transaction priority levels.",
+  "gas_tracker.common.seconds_short": "sec"
 }

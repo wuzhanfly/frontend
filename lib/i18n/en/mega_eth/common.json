@@ -1,0 +1,9 @@
+{
+  "mega_eth.charts.real_time_statistics": "Real-time statistics",
+  "mega_eth.charts.tps": "TPS",
+  "mega_eth.charts.megas_per_second": "MGas/s",
+  "mega_eth.charts.block_time": "Block time (ms)",
+  "mega_eth.status.initializing": "Initializing",
+  "mega_eth.status.refresh": "Refresh",
+  "mega_eth.stats.megas_per_second": "MGas/s"
+}

@@ -1,12 +1,10 @@
 {
-  "games.common.space": "Space",
-  "games.common.tap_below_to_start": "Tap below to start",
-  "games.common.press_space_to_start": "Press space to start",
-  "games.common.score_1000_to_win_a_special_pr": "Score 1000 to win a special prize!",
-  "games.common.you_unlocked_a_hidden_badge": "You unlocked a hidden badge!",
-  "games.common.congratulations_youre_eligible": "Congratulations! You’re eligible to claim an epic hidden badge!",
+  "games.capybara_runner.score_to_win_prize": "Score 1000 to win a special prize!",
+  "games.capybara_runner.unlocked_hidden_badge": "You unlocked a hidden badge!",
+  "games.capybara_runner.eligible_to_claim_badge": "Congratulations! You're eligible to claim an epic hidden badge!",
   "games.common.claim": "Claim",
-  "games.common.all_03s_ease": "all 0.3s ease",
-  "games.common.put_the_pieces_together_and_wi": "Put the pieces together and win a prize",
-  "games.common.click_on_a_square_to_move_it": "Click on a square to move it"
+  "games.puzzle15.put_pieces_together": "Put the pieces together and win a prize",
+  "games.puzzle15.click_square_to_move": "Click on a square to move it",
+  "games.puzzle15.unlocked_hidden_badge": "You unlocked a hidden badge!",
+  "games.puzzle15.eligible_to_claim_badge": "Congratulations! You're eligible to claim an epic hidden badge!"
 }

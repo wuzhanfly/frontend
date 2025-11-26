@@ -32,7 +32,7 @@ const DeleteAddressModal: React.FC<Props> = ({ open, onOpenChange, onSuccess, da
   const renderModalContent = useCallback(() => {
     const addressString = isMobile ? [ address.slice(0, 4), address.slice(-4) ].join('...') : address;
     return (
-      <Text>Address <Text fontWeight="700" as="span"> { addressString || 'address' }</Text> will be deleted</Text>
+      <Text>{ t('watchlist.delete_address_modal.address_will_be_deleted', { address: addressString || 'address' }) }</Text>
     );
   }, [ address, isMobile ]);
 

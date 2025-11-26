@@ -58,7 +58,7 @@ const PublicTagsSubmitFieldTag = ({ index, isDisabled, errors, onAddClick, onRem
           <GridItem colSpan={{ base: 1, lg: 2 }}>
             <FormFieldText<FormFields>
               name={ `tags.${ index }.name` }
-              placeholder="Tag (max 35 characters)"
+              placeholder={t('public_tags.field.tag_placeholder')}
               required
               rules={{ maxLength: 35 }}
             />
@@ -74,12 +74,12 @@ const PublicTagsSubmitFieldTag = ({ index, isDisabled, errors, onAddClick, onRem
           </GridItem>
           <FormFieldColor<FormFields>
             name={ `tags.${ index }.bgColor` }
-            placeholder="Background (Hex)"
+            placeholder={t('public_tags.field.background_placeholder')}
             sampleDefaultBgColor={ CIRCLE_BG_COLOR_DEFAULT.bgColor }
           />
           <FormFieldColor<FormFields>
             name={ `tags.${ index }.textColor` }
-            placeholder="Text (Hex)"
+            placeholder={t('public_tags.field.text_placeholder')}
             sampleDefaultBgColor={ CIRCLE_BG_COLOR_DEFAULT.textColor }
           />
           <GridItem colSpan={{ base: 1, lg: 4 }}>
@@ -88,7 +88,7 @@ const PublicTagsSubmitFieldTag = ({ index, isDisabled, errors, onAddClick, onRem
           <GridItem colSpan={{ base: 1, lg: 4 }}>
             <FormFieldText<FormFields>
               name={ `tags.${ index }.tooltipDescription` }
-              placeholder="Label description (max 80 characters)"
+              placeholder={t('public_tags.field.description_placeholder')}
               maxH="160px"
               rules={{ maxLength: 80 }}
               asComponent="Textarea"

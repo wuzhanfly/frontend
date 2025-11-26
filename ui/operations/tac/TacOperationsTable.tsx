@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as tac from '@blockscout/tac-operation-lifecycle-types';
 
@@ -14,18 +15,19 @@ type Props = {
 };
 
 const TacOperationsTable = ({ items, isLoading }: Props) => {
+  const { t } = useTranslation();
   return (
     <AddressHighlightProvider>
       <TableRoot minW="950px">
         <TableHeaderSticky top={ 68 }>
           <TableRow>
-            <TableColumnHeader w="200px">Status</TableColumnHeader>
-            <TableColumnHeader w="100%">Operation</TableColumnHeader>
+            <TableColumnHeader w="200px">{t('operations.table.status')}</TableColumnHeader>
+            <TableColumnHeader w="100%">{t('operations.table.operation')}</TableColumnHeader>
             <TableColumnHeader w="200px">
-              Timestamp
+              {t('operations.table.timestamp')}
               <TimeFormatToggle/>
             </TableColumnHeader>
-            <TableColumnHeader w="250px">Sender</TableColumnHeader>
+            <TableColumnHeader w="250px">{t('operations.table.sender')}</TableColumnHeader>
           </TableRow>
         </TableHeaderSticky>
         <TableBody>

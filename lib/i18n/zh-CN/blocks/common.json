@@ -67,5 +67,10 @@
   "blocks.common.base_fee_total": "基础费用总额",
   "blocks.common.native_token": "原生代币",
   "blocks.common.the_contract_receiving_the_base_fee_responsible_for_handling_fee_usage_this_contract_is_controlled_by_governance_process": "接收基础费用并负责处理费用使用的合约，该合约由治理流程控制",
-  "blocks.common.last_x_blocks": "最近 {{count}} 个区块"
+  "blocks.common.last_x_blocks": "最近 {{count}} 个区块",
+  "blocks.common.finalized_epoch": "最终确定的纪元",
+  "blocks.list_item.finalized_epoch": "最终确定的纪元 #",
+  "blocks.table_item.finalized_epoch": "最终确定的纪元 #",
+  "blocks.table_item.chain_reorganizations": "链重组",
+  "blocks.table_item.burnt_fees_percentage": "销毁费用 / 交易费用 * 100%"
 }

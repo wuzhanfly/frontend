@@ -122,13 +122,13 @@ const BlobData = ({ data, isLoading, hash }: Props) => {
         hint={ t('blobs.common.blob_data') }
         isLoading={ isLoading }
       >
-        Blob data
+        {t('blobs.common.blob_data_label')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue flexWrap="wrap">
         <Flex alignItems="center" w="100%" mb={{ base: 1, lg: 3 }} mt={{ base: 1, lg: 0 }}>
           <Select
             collection={ collection }
-            placeholder="Select type"
+            placeholder={t('common.common.select_type')}
             value={ format }
             onValueChange={ handleFormatChange }
             w="100px"
@@ -136,12 +136,12 @@ const BlobData = ({ data, isLoading, hash }: Props) => {
           />
           <Skeleton ml="auto" mr={ 2 } loading={ isLoading }>
             <Button
-              variant="outline"
-              size="sm"
-              onClick={ handleDownloadButtonClick }
-            >
-              Download
-            </Button>
+                variant="outline"
+                size="sm"
+                onClick={ handleDownloadButtonClick }
+              >
+                {t('common.common.download')}
+              </Button>
           </Skeleton>
           <CopyToClipboard text={ data } isLoading={ isLoading }/>
         </Flex>

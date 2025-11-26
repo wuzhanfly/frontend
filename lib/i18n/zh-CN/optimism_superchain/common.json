@@ -1,5 +1,21 @@
 {
-  "optimism_superchain.common.source_tx": "源交易",
-  "optimism_superchain.common.destination_tx": "目标交易",
-  "optimism_superchain.common.sender_target": "发送方/目标"
+  "cluster_chains_popover": {
+    "chain": "链",
+    "s": "条",
+    "this_address_is_on_cluster_chains": "此地址在集群链上"
+  },
+  "list_counter_text": {
+    "total_of": "总共 ",
+    "found": " 条",
+    "transaction": "交易",
+    "transaction_s": "s",
+    "transfer": "转账",
+    "transfer_s": "s"
+  },
+  "cross_chain_txs_table_item": {
+    "na": "N/A"
+  },
+  "latest_txs_cross_chain": {
+    "view_all_transactions": "查看所有交易"
+  }
 }

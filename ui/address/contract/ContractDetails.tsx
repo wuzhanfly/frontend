@@ -2,6 +2,7 @@ import type { UseQueryResult } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import type { Channel } from 'phoenix';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Address } from 'types/api/address';
 import type { AddressImplementation } from 'types/api/addressParams';
@@ -31,9 +32,10 @@ type Props = {
 const ContractDetails = ({ addressData, channel, mainContractQuery }: Props) => {
   const router = useRouter();
   const sourceAddress = getQueryParamString(router.query.source_address);
+  const { t } = useTranslation(['address']);
 
   const sourceItems: Array<AddressImplementation> = React.useMemo(() => {
-    const currentAddressDefaultName = addressData?.proxy_type === 'eip7702' ? 'Current address' : 'Current contract';
+    const currentAddressDefaultName = addressData?.proxy_type === 'eip7702' ? t('address.contract_details.current_address') : t('address.contract_details.current_contract');
     const currentAddressItem = { address_hash: addressData.hash, name: addressData?.name || currentAddressDefaultName };
     if (!addressData || !addressData.implementations || addressData.implementations.length === 0) {
       return [ currentAddressItem ];
@@ -43,7 +45,7 @@ const ContractDetails = ({ addressData, channel, mainContractQuery }: Props) => 
       currentAddressItem,
       ...(addressData?.implementations.filter((item) => item.address_hash !== addressData.hash && item.name) || []),
     ];
-  }, [ addressData ]);
+  }, [ addressData, t ]);
 
   const [ selectedItem, setSelectedItem ] = React.useState<AddressImplementation | undefined>(undefined);
 

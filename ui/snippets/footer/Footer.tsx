@@ -55,7 +55,7 @@ const Footer = () => {
     {
       icon: 'social/twitter' as const,
       iconSize: '18px',
-      text: 'X (ex-Twitter)',
+      text: t('snippets.footer.x_twitter'),
       url: 'https://x.com/blockscout',
     },
     {
@@ -125,7 +125,7 @@ const Footer = () => {
     return (
       <Box gridArea={ gridArea }>
         <Flex columnGap={ 2 } textStyle="xs" alignItems="center">
-          <span>Made with</span>
+          <span>{t('snippets.footer.made_with')}</span>
           <Link href="https://www.blockscout.com" external noIcon display="inline-flex" color={ logoColor } _hover={{ color: logoColor }}>
             <IconSvg
               name="networks/logo-placeholder"
@@ -135,7 +135,7 @@ const Footer = () => {
           </Link>
         </Flex>
         <Text mt={ 3 } fontSize="xs">
-          Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.
+          {t('snippets.footer.blockscout_description')}
         </Text>
         <Box mt={ 6 } alignItems="start" textStyle="xs">
           { apiVersionUrl && (
@@ -179,11 +179,11 @@ const Footer = () => {
 
     return (
       <Box gridArea={ gridArea } textStyle="xs" mt={ 6 }>
-        <span>This site is protected by reCAPTCHA and the Google </span>
-        <Link href="https://policies.google.com/privacy" external noIcon>Privacy Policy</Link>
-        <span> and </span>
-        <Link href="https://policies.google.com/terms" external noIcon>Terms of Service</Link>
-        <span> apply.</span>
+        <span>{t('snippets.footer.recaptcha_protection')}</span>
+        <Link href="https://policies.google.com/privacy" external noIcon>{t('snippets.footer.privacy_policy')}</Link>
+        <span>{t('snippets.footer.and')}</span>
+        <Link href="https://policies.google.com/terms" external noIcon>{t('snippets.footer.terms_of_service')}</Link>
+        <span>{t('snippets.footer.apply')}</span>
       </Box>
     );
   };

@@ -1,0 +1,6 @@
+{
+  "custom_abi.delete_modal.custom_abi_for": "Custom ABI for ",
+  "custom_abi.delete_modal.will_be_deleted": " will be deleted",
+  "custom_abi.form.custom_abi_placeholder": "Custom ABI [{...}] (JSON format)",
+  "custom_abi.table.abi_for_smart_contract": "ABI for Smart contract address (0x...)"
+}

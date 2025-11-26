@@ -25,5 +25,17 @@
   "validators.common.bls_public_key": "BLS 公钥",
   "validators.common.index": "索引",
   "validators.common.balance": "余额",
-  "validators.common.validators_feature_is_not_enab": "验证者功能未启用。"
+  "validators.common.validators_feature_is_not_enab": "验证者功能未启用。",
+  "validators.common.validator_address": "验证者地址",
+  "validators.zilliqa.index": "索引",
+  "validators.zilliqa.staked": "质押",
+  "validators.zilliqa.peer_id": "对等ID",
+  "validators.zilliqa.control_address_hint": "验证者用于签署跨链事件的地址",
+  "validators.zilliqa.control_address": "控制地址",
+  "validators.zilliqa.reward_address_hint": "奖励分发到的地址",
+  "validators.zilliqa.reward_address": "奖励地址",
+  "validators.zilliqa.signing_address": "签名地址",
+  "validators.zilliqa.added_at_block": "添加于区块",
+  "validators.zilliqa.stake_updated_hint": "质押金额最后更新时间",
+  "validators.zilliqa.stake_updated": "质押更新"
 }

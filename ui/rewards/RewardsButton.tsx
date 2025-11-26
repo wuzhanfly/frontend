@@ -28,7 +28,7 @@ const RewardsButton = ({ variant = 'header', size }: Props) => {
 
   return (
     <Tooltip
-      content="Earn Merits for using Blockscout"
+      content={t('rewards.button.earn_merits_for_using_blockscout')}
       openDelay={ 500 }
       disabled={ isMobile || isLoading || Boolean(apiToken) }
     >

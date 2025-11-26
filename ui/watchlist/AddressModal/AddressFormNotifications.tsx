@@ -10,14 +10,17 @@ import type { Inputs as FormFields } from './AddressForm';
 const tokenStandardName = config.chain.tokenStandard;
 
 const NOTIFICATIONS = [ 'native', 'ERC-20', 'ERC-721', 'ERC-404' ] as const;
-const NOTIFICATIONS_NAMES = [
-  config.chain.currency.symbol,
-  `${ tokenStandardName }-20`,
-  `${ tokenStandardName }-721, ${ tokenStandardName }-1155 (NFT)`,
-  `${ tokenStandardName }-404` ];
 
 export default function AddressFormNotifications() {
   const { t } = useTranslation();
+  
+  const NOTIFICATIONS_NAMES = [
+    config.chain.currency.symbol,
+    t('watchlist.address_form_notifications.erc_20', { tokenStandardName }),
+    t('watchlist.address_form_notifications.erc_721_1155_nft', { tokenStandardName }),
+    t('watchlist.address_form_notifications.erc_404', { tokenStandardName })
+  ];
+
   return (
     <Grid templateColumns={{ base: 'repeat(2, max-content)', lg: 'repeat(3, max-content)' }} gap={{ base: '10px 24px', lg: '20px 24px' }}>
       { NOTIFICATIONS.map((notification, index: number) => {

@@ -1,0 +1,14 @@
+validation_time: '2025-11-26T08:33:56.373Z'
+overall_summary:
+  total_namespaces:
+    en: 64
+    zh: 64
+    common: 64
+  overall_completeness: 100.00%
+  namespaces_with_issues: 0
+  total_files_with_issues: 0
+  total_missing_keys:
+    in_zh: 0
+    in_en: 0
+problem_namespaces: []
+detailed_issues: {}

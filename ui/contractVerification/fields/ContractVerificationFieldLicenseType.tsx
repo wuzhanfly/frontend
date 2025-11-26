@@ -1,5 +1,6 @@
 import { createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 
@@ -14,17 +15,17 @@ const collection = createListCollection<SelectOption>({
 });
 
 const ContractVerificationFieldLicenseType = () => {
+  const { t } = useTranslation();
 
   return (
     <ContractVerificationFormRow>
       <FormFieldSelect<FormFields, 'license_type'>
         name="license_type"
-        placeholder="Contract license"
+        placeholder={ t('contract_verification.common.license_type_placeholder') }
         collection={ collection }
       />
       <span>
-        For best practices, all contract source code holders, publishers and authors are encouraged to also
-        specify the accompanying license for their verified contract source code provided.
+        { t('contract_verification.common.license_type_description') }
       </span>
     </ContractVerificationFormRow>
   );

@@ -21,7 +21,7 @@ const AddressesLabelSearchTable = ({ items, top, isLoading }: Props) => {
       <TableHeaderSticky top={ top }>
         <TableRow>
           <TableColumnHeader width="70%">{t('addresses.common.address')}</TableColumnHeader>
-          <TableColumnHeader width="15%" isNumeric>{ `Balance ${ currencyUnits.ether }` }</TableColumnHeader>
+          <TableColumnHeader width="15%" isNumeric>{t('addresses_label_search.table.balance_ether', { currencyUnit: currencyUnits.ether })}</TableColumnHeader>
           <TableColumnHeader width="15%" isNumeric>{t('addresses.common.txn_count')}</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>

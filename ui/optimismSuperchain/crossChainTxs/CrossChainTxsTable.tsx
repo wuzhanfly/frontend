@@ -33,15 +33,15 @@ const CrossChainTxsTable = ({ items, isLoading, socketType, stickyHeader = true,
         <TableHeaderComponent top={ stickyHeader ? top : undefined }>
           <TableRow>
             <TableColumnHeader minW="180px">
-              {t('transactions.common.transaction')}
+              { t('transactions.common.transaction') }
               <TimeFormatToggle/>
             </TableColumnHeader>
-            <TableColumnHeader>{t('transactions.common.type')}</TableColumnHeader>
-            <TableColumnHeader>{t('transactions.common.method')}</TableColumnHeader>
-            <TableColumnHeader>{t('optimism_superchain.common.source_tx')}</TableColumnHeader>
-            <TableColumnHeader whiteSpace="nowrap">{t('optimism_superchain.common.destination_tx')}</TableColumnHeader>
-            <TableColumnHeader>{t('optimism_superchain.common.sender_target')}</TableColumnHeader>
-            <TableColumnHeader isNumeric>{t('transactions.common.value')}</TableColumnHeader>
+            <TableColumnHeader>{ t('transactions.common.type') }</TableColumnHeader>
+            <TableColumnHeader>{ t('transactions.common.method') }</TableColumnHeader>
+            <TableColumnHeader>{ t('optimism_superchain.common.source_tx') }</TableColumnHeader>
+            <TableColumnHeader whiteSpace="nowrap">{ t('optimism_superchain.common.destination_tx') }</TableColumnHeader>
+            <TableColumnHeader>{ t('optimism_superchain.common.sender_target') }</TableColumnHeader>
+            <TableColumnHeader isNumeric>{ t('transactions.common.value') }</TableColumnHeader>
           </TableRow>
         </TableHeaderComponent>
         <TableBody>

@@ -37,11 +37,11 @@ const AppError = ({ error, className }: Props) => {
     },
     '404': {
       title: t('shared.common.page_not_found'),
-      text: 'This page is no longer explorable! If you are lost, use the search bar to find what you are looking for.',
+      text: t('shared.common.this_page_is_no_longer_explorable'),
     },
     '422': {
       title: t('shared.common.request_cannot_be_processed'),
-      text: 'Your request contained an error, perhaps a mistyped tx/block/address hash. Try again, and check the developer tools console for more info.',
+      text: t('shared.common.request_contained_error_info'),
     },
     '500': {
       title: t('shared.common.oops_something_went_wrong'),
@@ -109,7 +109,7 @@ const AppError = ({ error, className }: Props) => {
                 mt={ 8 }
                 variant="outline"
               >
-                Back to home
+                {t('shared.common.back_to_home_button')}
               </Button>
             </Link>
             { statusCode === 404 && adBannerProvider && <AdBannerContent mt={ 12 } provider={ adBannerProvider }/> }

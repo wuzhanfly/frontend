@@ -1,8 +1,0 @@
-{
-  "blobs.common.this_blob_is_not_yet_indexed": {
-    "defaultMessage": "This blob is not yet indexed",
-    "source": [
-      "ui/blob/BlobInfo.tsx:30"
-    ]
-  }
-}

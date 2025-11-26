@@ -11,7 +11,7 @@ const TxSocketAlert = ({ status }: Props) => {
   const { t } = useTranslation();
   const text = status === 'close' ?
     t('transactions.common.connection_is_lost_please_clic') :
-    'An error has occurred while fetching transaction info. Please click here to update.';
+    t('transactions.socket_alert.error_fetching_transaction_info');
 
   return (
     <Link href={ window.document.location.href } asChild>

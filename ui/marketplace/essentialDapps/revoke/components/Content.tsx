@@ -151,7 +151,7 @@ const Content = ({
               fontWeight="500"
               noIcon
             >
-              View details
+              {t('marketplace.common.view_details')}
             </Link>
           </Flex>
         </Flex>
@@ -169,7 +169,7 @@ const Content = ({
             gap={ 2 }
           >
             <Text textStyle="sm" fontWeight="500" color="text.secondary">
-              Total approvals
+              {t('marketplace.common.total_approvals')}
             </Text>
             <Skeleton
               loading={ approvalsQuery.isPlaceholderData }
@@ -194,7 +194,7 @@ const Content = ({
             gap={ 2 }
           >
             <Text textStyle="sm" fontWeight="500" color="text.secondary">
-              Total value at risk
+              {t('marketplace.common.total_value_at_risk')}
             </Text>
             <Skeleton
               loading={ approvalsQuery.isPlaceholderData }

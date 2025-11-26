@@ -1,16 +1,17 @@
 import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Link } from 'toolkit/chakra/link';
 
 const RpcApi = () => {
+  const { t } = useTranslation(['api_docs']);
   return (
     <Box>
       <Text>
-        This API is provided for developers transitioning applications from Etherscan to BlockScout and applications requiring general API and data support.
-        It supports GET and POST requests.
+        {t('api_docs.rpc.description')}
       </Text>
-      <Link href="https://docs.blockscout.com/devs/apis/rpc" external mt={ 6 }>View modules</Link>
+      <Link href="https://docs.blockscout.com/devs/apis/rpc" external mt={ 6 }>{t('api_docs.rpc.view_modules')}</Link>
     </Box>
   );
 };

@@ -147,7 +147,7 @@ const BlockDetails = ({ query }: Props) => {
       case 'uncle':
         return t('common.common.uncle');
       default:
-        return 'Block';
+        return t('blocks.common.block');
     }
   })();
 
@@ -163,7 +163,7 @@ const BlockDetails = ({ query }: Props) => {
         <Skeleton loading={ isPlaceholderData }>
           { data.height }
         </Skeleton>
-        { data.height === 0 && <Text whiteSpace="pre"> - Genesis Block</Text> }
+        { data.height === 0 && <Text whiteSpace="pre">{` - ${t('blocks.common.genesis_block')}`}</Text> }
         <PrevNext
           ml={ 6 }
           onClick={ handlePrevNextClick }
@@ -180,7 +180,7 @@ const BlockDetails = ({ query }: Props) => {
             hint={ t('blocks.common.the_most_recent_l1_block_heigh') }
             isLoading={ isPlaceholderData }
           >
-            L1 block height
+            {t('blocks.common.l1_block_height')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <BlockEntityL1 isLoading={ isPlaceholderData } number={ data.arbitrum.l1_block_number }/>
@@ -194,12 +194,12 @@ const BlockDetails = ({ query }: Props) => {
             hint={ t('transactions.common.batch_number') }
             isLoading={ isPlaceholderData }
           >
-            Batch
+            {t('transactions.common.batch_number')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             { data.arbitrum.batch_number ?
               <BatchEntityL2 isLoading={ isPlaceholderData } number={ data.arbitrum.batch_number }/> :
-              <Skeleton loading={ isPlaceholderData }>Pending</Skeleton> }
+              <Skeleton loading={ isPlaceholderData }>{t('shared.common.pending')}</Skeleton> }
           </DetailedInfo.ItemValue>
         </>
       ) }
@@ -210,7 +210,7 @@ const BlockDetails = ({ query }: Props) => {
             hint={ t('transactions.common.batch_number') }
             isLoading={ isPlaceholderData }
           >
-            Batch
+            {t('transactions.common.batch_number')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue columnGap={ 3 }>
             { data.optimism.number ?
@@ -232,7 +232,7 @@ const BlockDetails = ({ query }: Props) => {
             hint={ t('blocks.common.size_of_the_block_in_bytes') }
             isLoading={ isPlaceholderData }
           >
-            Size
+            {t('common.common.size')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ isPlaceholderData }>
@@ -253,10 +253,10 @@ const BlockDetails = ({ query }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint={ t('blocks.common.the_number_of_transactions_in_') }
+        hint={ t('common.common.number_of_transactions_in_the_block') }
         isLoading={ isPlaceholderData }
       >
-        Transactions
+        {t('common.common.transactions')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
@@ -270,7 +270,7 @@ const BlockDetails = ({ query }: Props) => {
             hint={ t('blocks.common.the_number_of_beacon_withdrawa') }
             isLoading={ isPlaceholderData }
           >
-            Withdrawals
+            {t('common.common.withdrawals')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ isPlaceholderData }>
@@ -288,12 +288,12 @@ const BlockDetails = ({ query }: Props) => {
             hint={ t('transactions.common.batch_number') }
             isLoading={ isPlaceholderData }
           >
-            Batch
+            {t('transactions.common.batch_number')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             { data.zksync.batch_number ?
               <BatchEntityL2 isLoading={ isPlaceholderData } number={ data.zksync.batch_number }/> :
-              <Skeleton loading={ isPlaceholderData }>Pending</Skeleton> }
+              <Skeleton loading={ isPlaceholderData }>{t('shared.common.pending')}</Skeleton> }
           </DetailedInfo.ItemValue>
         </>
       ) }
@@ -305,7 +305,7 @@ const BlockDetails = ({ query }: Props) => {
             hint={ t('transactions.common.status_is_the_short_interpreta') }
             isLoading={ isPlaceholderData }
           >
-            Status
+            {t('common.common.status')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             { rollupFeature.type === 'zkSync' && data.zksync &&
@@ -350,7 +350,7 @@ const BlockDetails = ({ query }: Props) => {
                 hint={ t('transactions.common.l1_transaction_containing_this') }
                 isLoading={ isPlaceholderData }
               >
-                Commitment tx
+                {t('blocks.common.commitment_transaction')}
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue>
                 <TxEntityL1 hash={ data.arbitrum?.commitment_transaction.hash } isLoading={ isPlaceholderData }/>
@@ -364,7 +364,7 @@ const BlockDetails = ({ query }: Props) => {
                 hint={ t('transactions.common.l1_transaction_containing_conf') }
                 isLoading={ isPlaceholderData }
               >
-                Confirmation tx
+                {t('blocks.common.confirmation_transaction')}
               </DetailedInfo.ItemLabel>
               <DetailedInfo.ItemValue>
                 <TxEntityL1 hash={ data.arbitrum?.confirmation_transaction.hash } isLoading={ isPlaceholderData }/>
@@ -381,7 +381,7 @@ const BlockDetails = ({ query }: Props) => {
             hint={t('blocks.common.for_each_block_the_validator_is_rewarded_with_a_finite_amount_of_currency_on_top_of_the_fees_paid_for_all_transactions_in_the_block', { validatorTitle, currency: config.chain.currency.symbol || t('blocks.common.native_token') })}
             isLoading={ isPlaceholderData }
           >
-            Block reward
+            {t('blocks.common.block_reward')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue columnGap={ 1 } multiRow>
             <Skeleton loading={ isPlaceholderData }>
@@ -414,7 +414,7 @@ const BlockDetails = ({ query }: Props) => {
             hint={ t('blocks.common.the_iteration_of_the_consensus') }
             isLoading={ isPlaceholderData }
           >
-            View
+            {t('blocks.common.view_label')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ isPlaceholderData }>
@@ -432,7 +432,7 @@ const BlockDetails = ({ query }: Props) => {
         hint={ t('blocks.common.the_total_gas_amount_used_in_t') }
         isLoading={ isPlaceholderData }
       >
-        Gas used
+        {t('blocks.common.gas_used_label')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
@@ -451,7 +451,7 @@ const BlockDetails = ({ query }: Props) => {
         hint={ t('blocks.common.total_gas_limit_provided_by_al') }
         isLoading={ isPlaceholderData }
       >
-        Gas limit
+        {t('blocks.common.gas_limit_label')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
@@ -465,7 +465,7 @@ const BlockDetails = ({ query }: Props) => {
             hint={ t('blocks.common.the_minimum_gas_price_a_transa') }
             isLoading={ isPlaceholderData }
           >
-            Minimum gas price
+            {t('blocks.common.minimum_gas_price_label')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ isPlaceholderData }>
@@ -481,7 +481,7 @@ const BlockDetails = ({ query }: Props) => {
             hint={ t('blocks.common.minimum_fee_required_per_unit_') }
             isLoading={ isPlaceholderData }
           >
-            Base fee per gas
+            {t('blocks.common.base_fee_per_gas_label')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             { isPlaceholderData ? (
@@ -502,12 +502,11 @@ const BlockDetails = ({ query }: Props) => {
         <>
           <DetailedInfo.ItemLabel
             hint={
-              `Amount of ${ config.chain.currency.symbol || 'native token' } burned from transactions included in the block. 
-              Equals Block Base Fee per Gas * Gas Used`
+              t('blocks.common.amount_of_native_token_burned_from_transactions_included_in_the_block_equals_block_base_fee_per_gas_gas_used', { currency: config.chain.currency.symbol || t('blocks.common.native_token') })
             }
             isLoading={ isPlaceholderData }
           >
-            Burnt fees
+            {t('blocks.common.burnt_fees_label')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <IconSvg name="flame" boxSize={ 5 } color="icon.primary" isLoading={ isPlaceholderData }/>
@@ -533,7 +532,7 @@ const BlockDetails = ({ query }: Props) => {
             hint={ t('common.common.udtst') }
             isLoading={ isPlaceholderData }
           >
-            Priority fee / Tip
+            {t('blocks.common.priority_fee_tip_label')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ isPlaceholderData }>
@@ -557,7 +556,7 @@ const BlockDetails = ({ query }: Props) => {
             <DetailedInfo.ItemLabel
               hint={ t('common.common.mmfbh') }
             >
-              Bitcoin merged mining header
+              {t('blocks.common.bitcoin_merged_mining_header_label')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue
               flexWrap="nowrap"
@@ -576,7 +575,7 @@ const BlockDetails = ({ query }: Props) => {
             <DetailedInfo.ItemLabel
               hint={ t('common.common.mmfct') }
             >
-              Bitcoin merged mining coinbase transaction
+              {t('blocks.common.bitcoin_merged_mining_coinbase_transaction_label')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               <RawDataSnippet
@@ -594,7 +593,7 @@ const BlockDetails = ({ query }: Props) => {
             <DetailedInfo.ItemLabel
               hint={ t('common.common.mmfmp') }
             >
-              Bitcoin merged mining Merkle proof
+              {t('blocks.common.bitcoin_merged_mining_merkle_proof_label')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               <RawDataSnippet
@@ -612,7 +611,7 @@ const BlockDetails = ({ query }: Props) => {
             <DetailedInfo.ItemLabel
               hint={ t('common.common.mmfrbhh') }
             >
-              Hash for merged mining
+              {t('blocks.common.hash_for_merged_mining_label')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue
               flexWrap="nowrap"
@@ -631,7 +630,7 @@ const BlockDetails = ({ query }: Props) => {
             <DetailedInfo.ItemLabel
               hint={ `Block difficulty for ${ validatorTitle }, used to calibrate block generation time` }
             >
-              Difficulty
+              {t('blocks.common.difficulty_label')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               <Box overflow="hidden">
@@ -645,7 +644,7 @@ const BlockDetails = ({ query }: Props) => {
             <DetailedInfo.ItemLabel
               hint={ t('blocks.common.total_difficulty_of_the_chain_') }
             >
-              Total difficulty
+              {t('blocks.common.total_difficulty_label')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               <Box overflow="hidden">
@@ -660,7 +659,7 @@ const BlockDetails = ({ query }: Props) => {
         <DetailedInfo.ItemLabel
           hint={ t('blocks.common.the_sha256_hash_of_the_block') }
         >
-          Hash
+          {t('blocks.common.hash_label')}
         </DetailedInfo.ItemLabel>
         <DetailedInfo.ItemValue flexWrap="nowrap">
           <Box overflow="hidden" >
@@ -674,7 +673,7 @@ const BlockDetails = ({ query }: Props) => {
             <DetailedInfo.ItemLabel
               hint={ t('common.common.thotb') }
             >
-              Parent hash
+              {t('blocks.common.parent_hash_label')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue flexWrap="nowrap">
               <Link
@@ -697,7 +696,7 @@ const BlockDetails = ({ query }: Props) => {
               hint={ t('blocks.common.the_cumulative_number_of_l2_to') }
               isLoading={ isPlaceholderData }
             >
-              Send count
+              {t('blocks.common.send_count_label')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               { data.arbitrum.send_count.toLocaleString() }
@@ -707,7 +706,7 @@ const BlockDetails = ({ query }: Props) => {
               hint={ t('blocks.common.the_root_of_the_merkle_accumul') }
               isLoading={ isPlaceholderData }
             >
-              Send root
+              {t('blocks.common.send_root_label')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               { data.arbitrum.send_root }
@@ -717,7 +716,7 @@ const BlockDetails = ({ query }: Props) => {
               hint={ t('blocks.common.the_number_of_delayed_l1_to_l2') }
               isLoading={ isPlaceholderData }
             >
-              Delayed messages
+              {t('blocks.common.delayed_messages_label')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               { data.arbitrum.delayed_messages.toLocaleString() }
@@ -730,7 +729,7 @@ const BlockDetails = ({ query }: Props) => {
             <DetailedInfo.ItemLabel
               hint={ t('common.common.bniav') }
             >
-              Nonce
+              {t('blocks.common.nonce_label')}
             </DetailedInfo.ItemLabel>
             <DetailedInfo.ItemValue>
               { data.nonce }

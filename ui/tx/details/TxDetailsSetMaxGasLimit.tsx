@@ -1,5 +1,6 @@
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Transaction } from 'types/api/transaction';
 
@@ -15,6 +16,8 @@ interface Props {
 }
 
 const TxDetailsSetMaxGasLimit = ({ data }: Props) => {
+  const { t } = useTranslation();
+  
   if (!config.UI.views.tx.additionalFields?.set_max_gas_limit) {
     return null;
   }
@@ -24,7 +27,7 @@ const TxDetailsSetMaxGasLimit = ({ data }: Props) => {
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="The maximum network fee the sender is willing to pay for this transaction"
+        hint="{t('transactions.common.max_network_fee_sender_willing_to_pay')}"
       >
         User’s set max gas limit
       </DetailedInfo.ItemLabel>

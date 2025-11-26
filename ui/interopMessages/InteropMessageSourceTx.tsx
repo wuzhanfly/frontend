@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ChainInfo } from 'types/api/interop';
 
@@ -13,6 +14,7 @@ type Props = {
   truncation?: EntityProps['truncation'];
 };
 const InteropMessageSourceTx = (props: Props) => {
+  const { t } = useTranslation();
   if (props.init_chain !== undefined) {
     return (
       <TxEntityInterop
@@ -26,7 +28,7 @@ const InteropMessageSourceTx = (props: Props) => {
   }
 
   if (!props.init_transaction_hash) {
-    return 'N/A';
+    return t('interop_messages.source_tx.na');
   }
 
   return (

@@ -53,7 +53,7 @@ const TokenNftMarketplaces = ({ hash, id, isLoading, appActionData, source }: Pr
         hint={t('tokens.common.marketplaces_trading_this_nft')}
         isLoading={ isLoading }
       >
-        Marketplaces
+        { t('tokens.marketplaces.marketplaces') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue
         py={ appActionData ? '1px' : '6px' }
@@ -62,11 +62,11 @@ const TokenNftMarketplaces = ({ hash, id, isLoading, appActionData, source }: Pr
           <HStack gap={ 3 }>
             { items.map((item) => {
               return (
-                <Tooltip content={ `View on ${ item.name }` } key={ item.name }>
+                <Tooltip content={ t('tokens.marketplaces.view_on_marketplace', { marketplaceName: item.name }) } key={ item.name }>
                   <Link href={ item.href } external noIcon>
                     <Image
                       src={ item.logo_url }
-                      alt={ `${ item.name } marketplace logo` }
+                      alt={ t('tokens.marketplaces.marketplace_logo_alt', { marketplaceName: item.name }) }
                       boxSize={ 5 }
                       borderRadius="full"
                     />

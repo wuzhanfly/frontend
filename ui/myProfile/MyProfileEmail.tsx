@@ -72,7 +72,7 @@ const MyProfileEmail = ({ profileQuery }: Props) => {
     } catch (error) {
       const apiError = getErrorObjPayload<{ message: string }>(error);
       toaster.error({
-        title: 'Error',
+        title: t('my_profile.email.error'),
         description: apiError?.message || getErrorMessage(error) || t('common.common.something_went_wrong'),
       });
     }
@@ -82,7 +82,7 @@ const MyProfileEmail = ({ profileQuery }: Props) => {
 
   return (
     <section>
-      <Heading level="2" mb={ 3 }>Notifications</Heading>
+      <Heading level="2" mb={ 3 }>{t('my_profile.email.notifications')}</Heading>
       <FormProvider { ...formApi }>
         <chakra.form
           noValidate

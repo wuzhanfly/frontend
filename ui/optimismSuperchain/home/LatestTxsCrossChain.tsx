@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -10,6 +11,7 @@ import { Link } from 'toolkit/chakra/link';
 import CrossChainTxs from '../crossChainTxs/CrossChainTxs';
 
 const LatestTxsCrossChain = () => {
+  const { t } = useTranslation();
 
   const { data, isError, isPlaceholderData } = useApiQuery('multichain:interop_messages', {
     queryOptions: {
@@ -33,7 +35,7 @@ const LatestTxsCrossChain = () => {
         textStyle="sm"
         mt={ 3 }
       >
-        View all transactions
+        {t('optimism_superchain.latest_txs_cross_chain.view_all_transactions')}
       </Link>
     </>
   );

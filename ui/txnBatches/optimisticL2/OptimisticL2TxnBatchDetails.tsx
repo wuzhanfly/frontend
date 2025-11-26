@@ -65,7 +65,7 @@ const OptimisticL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.batch_id_indicates_the_length_')}
       >
-        Batch ID
+        { t('batches.optimistic_l2.batch_id') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
@@ -98,14 +98,15 @@ const OptimisticL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.number_of_transactions_in_this')}
       >
-        Transactions
+        { t('batches.common.transactions') }
       </DetailedInfo.ItemLabel>
+
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
           <Link href={ route({ pathname: '/batches/[number]', query: { number: data.number.toString(), tab: 'txs' } }) }>
-            { data.transactions_count.toLocaleString() } transaction{ data.transactions_count === 1 ? '' : 's' }
+            { data.transactions_count.toLocaleString() } { t('batches.common.transaction', { count: data.transactions_count }) }
           </Link>
-          { ' ' }in this batch
+          { ' ' }{ t('batches.common.in_this_batch') }
         </Skeleton>
       </DetailedInfo.ItemValue>
 
@@ -113,14 +114,14 @@ const OptimisticL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.number_of_l2_blocks_in_this_ba')}
       >
-        Blocks
+        { t('batches.common.blocks') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
           <Link href={ route({ pathname: '/batches/[number]', query: { number: data.number.toString(), tab: 'blocks' } }) }>
-            { blocksCount.toLocaleString() } block{ blocksCount === 1 ? '' : 's' }
+            { blocksCount.toLocaleString() } { t('batches.common.block', { count: blocksCount }) }
           </Link>
-          { ' ' }in this batch
+          { ' ' }{ t('batches.common.in_this_batch') }
         </Skeleton>
       </DetailedInfo.ItemValue>
 
@@ -128,7 +129,7 @@ const OptimisticL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.where_the_batch_data_is_stored')}
       >
-        Batch data container
+        { t('batches.common.batch_data_container') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue flexDir="column" alignItems="flex-start" rowGap={ 2 }>
         <OptimisticL2TxnBatchDA container={ data.batch_data_container } isLoading={ isPlaceholderData } mt={{ base: 0, lg: 1 }}/>

@@ -47,7 +47,7 @@ const AuthModalScreenSuccessWallet = ({ address, onAddEmail, onClose, isAuth, pr
       <Text>
         Wallet{ ' ' }
         <chakra.span fontWeight="700">{ shortenString(address) }</chakra.span>{ ' ' }
-        has been successfully used to log in to your Blockscout account
+        {t('snippets.auth_modal.screen_success_wallet.success_text')}
         { Boolean(rewardsToken) && t('common.common.and_merits_program') }.
       </Text>
       { !profile?.email ? (

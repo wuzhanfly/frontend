@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { OptimisticL2DisputeGamesItem } from 'types/api/optimisticL2';
 
@@ -14,21 +15,22 @@ type Props = {
 };
 
 const OptimisticL2DisputeGamesTable = ({ items, top, isLoading }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRoot tableLayout="auto" minW="950px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader>Index</TableColumnHeader>
-          <TableColumnHeader>Game type</TableColumnHeader>
-          <TableColumnHeader>Address</TableColumnHeader>
-          <TableColumnHeader>L2 block #</TableColumnHeader>
+          <TableColumnHeader>{t('dispute_games.common.index')}</TableColumnHeader>
+          <TableColumnHeader>{t('dispute_games.common.game_type')}</TableColumnHeader>
+          <TableColumnHeader>{t('dispute_games.common.address')}</TableColumnHeader>
+          <TableColumnHeader>{t('dispute_games.common.l2_block_number')}</TableColumnHeader>
           <TableColumnHeader>
-            Timestamp
+            {t('common.common.timestamp')}
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader>Status</TableColumnHeader>
+          <TableColumnHeader>{t('common.common.status')}</TableColumnHeader>
           <TableColumnHeader>
-            Resolved
+            {t('dispute_games.common.resolved')}
             <TimeFormatToggle/>
           </TableColumnHeader>
         </TableRow>

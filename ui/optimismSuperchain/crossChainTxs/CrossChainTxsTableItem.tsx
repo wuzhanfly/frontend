@@ -1,5 +1,6 @@
 import { Spinner, VStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as multichain from '@blockscout/multichain-aggregator-types';
 import type { TransactionType } from 'types/api/transaction';
@@ -28,6 +29,7 @@ interface Props {
 }
 
 const CrossChainTxsTableItem = ({ item, isLoading, animation, currencySymbol, currentAddress }: Props) => {
+  const { t } = useTranslation();
 
   const sourceChain = React.useMemo(() => {
     const config = multichainConfig();
@@ -97,8 +99,8 @@ const CrossChainTxsTableItem = ({ item, isLoading, animation, currencySymbol, cu
       </TableCell>
       <TableCell>
         <AddressFromTo
-          from={{ hash: item.sender?.hash ?? 'N/A' }}
-          to={{ hash: item.target?.hash ?? 'N/A' }}
+          from={{ hash: item.sender?.hash ?? t('optimism_superchain.cross_chain_txs_table_item.na') }}
+          to={{ hash: item.target?.hash ?? t('optimism_superchain.cross_chain_txs_table_item.na') }}
           current={ currentAddress }
           isLoading={ isLoading }
           truncation="constant"

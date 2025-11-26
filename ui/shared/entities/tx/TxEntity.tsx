@@ -55,7 +55,7 @@ const Icon = (props: IconProps) => {
     }
 
     return isPendingUpdate ?
-      'This transaction is part of a block that is being re-synced. Details may be incomplete until the update is finished.' :
+      t('shared.tx_entity.pending_update_warning') :
       undefined;
   })();
 

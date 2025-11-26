@@ -38,7 +38,7 @@ const TacOperationLifecycleAccordionItemContent = ({ isLast, data }: Props) => {
         borderBottomRightRadius="base"
       >
         <GridItem color="text.secondary" py="6px">
-          Status
+          {t('operation.lifecycle.content.status')}
         </GridItem>
         <GridItem py={ 1 }>
           <StatusTag type={ data.is_success ? 'ok' : 'error' } text={ data.is_success ? t('common.common.success') : t('shared.common.failed') }/>
@@ -47,7 +47,7 @@ const TacOperationLifecycleAccordionItemContent = ({ isLast, data }: Props) => {
         { data.timestamp && (
           <>
             <GridItem color="text.secondary" py="6px">
-              Timestamp
+              {t('operation.lifecycle.content.timestamp')}
             </GridItem>
             <GridItem
               display="inline-flex"
@@ -60,7 +60,7 @@ const TacOperationLifecycleAccordionItemContent = ({ isLast, data }: Props) => {
         ) }
 
         <GridItem color="text.secondary" py="6px">
-          Transactions
+          {t('operation.lifecycle.content.transactions')}
         </GridItem>
         <GridItem
           display="flex"
@@ -84,7 +84,7 @@ const TacOperationLifecycleAccordionItemContent = ({ isLast, data }: Props) => {
         { data.note && (
           <>
             <GridItem color="text.secondary" py="6px">
-              Note
+              {t('operation.lifecycle.content.note')}
             </GridItem>
             <GridItem
               display="inline-flex"

@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { detectInputType } from 'lib/clusters/detectInputType';
 import {
@@ -29,6 +30,7 @@ import ClustersLeaderboardListItem from './ClustersLeaderboardListItem';
 import ClustersLeaderboardTable from './ClustersLeaderboardTable';
 
 const Clusters = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const { updateQuery } = useQueryParams();
 
@@ -140,13 +142,13 @@ const Clusters = () => {
     <>
       <Text mb={ 6 } textStyle={{ base: 'sm', lg: 'md' }}>
         <Link href="https://clusters.xyz/?utm_source=blockscout" external noIcon>Clusters</Link>{ ' ' }
-        is a cross-chain name service for managing addresses on multiple blockchains using a universal naming directory.
+        {t('name_services.clusters.description')}
       </Text>
       <DataListDisplay
         isError={ isError }
         itemsNum={ currentDataLength }
         filterProps={{
-          emptyFilteredText: `Couldn${ apos }t find clusters that match your query.`,
+          emptyFilteredText: t('name_services.clusters.no_results'),
           hasActiveFilters,
         }}
         actionBar={ actionBar }

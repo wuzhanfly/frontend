@@ -1,5 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ArbitrumL2MessagesItem } from 'types/api/arbitrumL2';
 
@@ -23,6 +24,7 @@ const rollupFeature = config.features.rollup;
 type Props = { item: ArbitrumL2MessagesItem; isLoading?: boolean; direction: MessagesDirection };
 
 const ArbitrumL2MessagesTableItem = ({ item, direction, isLoading }: Props) => {
+  const { t } = useTranslation();
   if (!rollupFeature.isEnabled || rollupFeature.type !== 'arbitrum') {
     return null;
   }
@@ -41,7 +43,7 @@ const ArbitrumL2MessagesTableItem = ({ item, direction, isLoading }: Props) => {
               fontWeight={ 600 }
               noIcon
             />
-          ) : <chakra.span color="text.secondary">N/A</chakra.span> }
+          ) : <chakra.span color="text.secondary">{t('messages.table_item.na')}</chakra.span> }
         </TableCell>
       ) }
       { direction === 'from-rollup' && (
@@ -69,7 +71,7 @@ const ArbitrumL2MessagesTableItem = ({ item, direction, isLoading }: Props) => {
           />
         ) : (
           <chakra.span color="text.secondary">
-            N/A
+            {t('messages.table_item.na')}
           </chakra.span>
         ) }
       </TableCell>
@@ -82,7 +84,7 @@ const ArbitrumL2MessagesTableItem = ({ item, direction, isLoading }: Props) => {
       </TableCell>
       <TableCell verticalAlign="middle">
         { item.status === 'confirmed' && direction === 'from-rollup' ?
-          <Link href={ route({ pathname: '/txn-withdrawals', query: { q: item.origination_transaction_hash } }) }>Ready for relay</Link> :
+          <Link href={ route({ pathname: '/txn-withdrawals', query: { q: item.origination_transaction_hash } }) }>{t('messages.table_item.ready_for_relay')}</Link> :
           <ArbitrumL2MessageStatus status={ item.status } isLoading={ isLoading }/> }
       </TableCell>
       <TableCell verticalAlign="middle">
@@ -96,7 +98,7 @@ const ArbitrumL2MessagesTableItem = ({ item, direction, isLoading }: Props) => {
           />
         ) : (
           <chakra.span color="text.secondary">
-            N/A
+            {t('messages.table_item.na')}
           </chakra.span>
         ) }
       </TableCell>

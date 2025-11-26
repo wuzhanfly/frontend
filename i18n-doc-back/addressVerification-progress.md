@@ -2,8 +2,8 @@
 
 ## Module: AddressVerification
 - Module Path: ui/addressVerification/**
-- Status: completed
-- Progress: 10/10
+- Status: finalized
+- Progress: 11/11
 
 ## Hardcoded Texts Found:
 1. Key: address_verification.common.specified_address_does_not_exist_or_is_eoa

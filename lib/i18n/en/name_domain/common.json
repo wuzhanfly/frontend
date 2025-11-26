@@ -1,0 +1,18 @@
+{
+  "details": {
+    "registration_date": "Registration date",
+    "expiration_date": "Expiration date",
+    "resolver": "Resolver",
+    "registrant": "Registrant",
+    "owner": "Owner",
+    "manager": "Manager",
+    "wrapped_token_id": "Wrapped token ID",
+    "other_addresses": "Other addresses"
+  },
+  "history": {
+    "txn_hash": "Txn hash",
+    "timestamp": "Timestamp",
+    "from": "From",
+    "method": "Method"
+  }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ApiKeys, ApiKey } from 'types/api/account';
 
@@ -15,11 +16,12 @@ interface Props {
 }
 
 const ApiKeyTable = ({ data, isLoading, onDeleteClick, onEditClick, limit }: Props) => {
+  const { t } = useTranslation(['api_key']);
   return (
     <TableRoot minWidth="600px">
       <TableHeader>
         <TableRow>
-          <TableColumnHeader>{ `API key token (limit ${ limit } keys)` }</TableColumnHeader>
+          <TableColumnHeader>{t('api_key.table.api_key_token_limit', { limit })}</TableColumnHeader>
           <TableColumnHeader width="108px"></TableColumnHeader>
         </TableRow>
       </TableHeader>

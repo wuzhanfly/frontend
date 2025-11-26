@@ -8,8 +8,6 @@ import { DialogActionTrigger, DialogBody, DialogContent, DialogFooter, DialogHea
 
 import { Section, Container, SectionHeader, SamplesStack, Sample } from './parts';
 
-const CONTENT = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-
 const DialogShowcase = () => {
   const { t } = useTranslation();
 
@@ -30,7 +28,7 @@ const DialogShowcase = () => {
                   <DialogTitle>{t('common.common.dialog_title', 'Dialog Title')}</DialogTitle>
                 </DialogHeader>
                 <DialogBody>
-                  <p>{ CONTENT }</p>
+                  <p>{t('showcases.dialog.content')}</p>
                 </DialogBody>
                 <DialogFooter>
                   <Button>{t('common.common.save', 'Save')}</Button>
@@ -54,7 +52,7 @@ const DialogShowcase = () => {
                   <DialogTitle>{t('common.common.dialog_title', 'Dialog Title')}</DialogTitle>
                 </DialogHeader>
                 <DialogBody>
-                  <p>{ CONTENT }</p>
+                  <p>{t('showcases.dialog.content')}</p>
                 </DialogBody>
                 <DialogFooter>
                   <DialogActionTrigger asChild>
@@ -78,7 +76,7 @@ const DialogShowcase = () => {
                   <DialogTitle>{t('common.common.dialog_title', 'Dialog Title')}</DialogTitle>
                 </DialogHeader>
                 <DialogBody>
-                  <p>{ CONTENT }</p>
+                  <p>{t('showcases.dialog.content')}</p>
                 </DialogBody>
                 <DialogFooter>
                   <DialogActionTrigger asChild>

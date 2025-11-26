@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { OptimisticL2DepositsItem } from 'types/api/optimisticL2';
 
@@ -14,19 +15,20 @@ type Props = {
 };
 
 const OptimisticDepositsTable = ({ items, top, isLoading }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRoot tableLayout="auto" minW="950px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader>L1 block No</TableColumnHeader>
-          <TableColumnHeader>L2 txn hash</TableColumnHeader>
+          <TableColumnHeader>{t('deposits.common.l1_block_no')}</TableColumnHeader>
+          <TableColumnHeader>{t('deposits.common.l2_txn_hash')}</TableColumnHeader>
           <TableColumnHeader>
-            Timestamp
+            {t('common.common.timestamp')}
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader>L1 txn hash</TableColumnHeader>
-          <TableColumnHeader>L1 txn origin</TableColumnHeader>
-          <TableColumnHeader isNumeric>Gas limit</TableColumnHeader>
+          <TableColumnHeader>{t('deposits.common.l1_txn_hash')}</TableColumnHeader>
+          <TableColumnHeader>{t('deposits.common.l1_txn_origin')}</TableColumnHeader>
+          <TableColumnHeader isNumeric>{t('deposits.common.gas_limit')}</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

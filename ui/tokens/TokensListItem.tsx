@@ -45,6 +45,10 @@ const TokensListItem = ({
   const bridgedChainTag = bridgedTokensFeature.isEnabled ?
     bridgedTokensFeature.chains.find(({ id }) => id === originalChainId)?.short_title :
     undefined;
+    
+  const bridgedChainTagText = bridgedTokensFeature.isEnabled && originalChainId ?
+    t(`common.chains.${originalChainId}_short`) || bridgedTokensFeature.chains.find(({ id }) => id === originalChainId)?.short_title :
+    undefined;
 
   return (
     <ListItemMobile rowGap={ 3 }>
@@ -64,7 +68,7 @@ const TokensListItem = ({
           />
           <Flex ml={ 3 } flexShrink={ 0 } columnGap={ 1 }>
             <Tag loading={ isLoading }>{ getTokenTypeName(type) }</Tag>
-            { bridgedChainTag && <Tag loading={ isLoading }>{ bridgedChainTag }</Tag> }
+            { bridgedChainTagText && <Tag loading={ isLoading }>{ bridgedChainTagText }</Tag> }
           </Flex>
           <Skeleton loading={ isLoading } textStyle="sm" ml="auto" color="text.secondary" minW="24px" textAlign="right">
             <span>{ getItemIndex(index, page) }</span>

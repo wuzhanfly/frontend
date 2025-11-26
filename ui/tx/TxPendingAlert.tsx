@@ -1,12 +1,14 @@
 import { Spinner } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Alert } from 'toolkit/chakra/alert';
 
 const TxPendingAlert = () => {
+  const { t } = useTranslation();
   return (
     <Alert startElement={ <Spinner size="sm" my={ 1 }/> }>
-      This transaction is pending confirmation.
+      { t('transactions.pending_alert.transaction_pending_confirmation') }
     </Alert>
   );
 };

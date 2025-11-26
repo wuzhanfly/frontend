@@ -1,0 +1,18 @@
+{
+  "transaction": {
+    "add_transaction_tag": "添加交易标签"
+  },
+  "address": {
+    "edit_address_tag": "编辑地址标签"
+  },
+  "transaction_table": {
+    "transaction": "交易",
+    "private_tag": "私有标签"
+  },
+  "transaction_list_item": {
+    "private_tag": "私有标签"
+  },
+  "address_list_item": {
+    "private_tag": "私有标签"
+  }
+}

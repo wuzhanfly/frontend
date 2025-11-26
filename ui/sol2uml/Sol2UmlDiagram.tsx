@@ -74,14 +74,14 @@ const Sol2UmlDiagram = ({ addressHash }: Props) => {
   }
 
   if (!umlQuery.data?.svg || !contractQuery.data) {
-    return <span>No data for visualization</span>;
+    return <span>{t('visualize.solidity_contract.no_data_for_visualization')}</span>;
   }
 
   return (
     <Tooltip content={t('visualize.common.click_on_image_to_zoom')} positioning={{ placement: 'top' }}>
       <chakra.img
         src={ imgUrl }
-        alt={ `Contract ${ contractQuery.data.name } UML diagram` }
+        alt={ t('sol2uml.common.contract_uml_diagram', { contractName: contractQuery.data.name }) }
         onClick={ handleClick }
         cursor="pointer"
         filter={{ _light: 'invert(0)', _dark: 'invert(1)' }}

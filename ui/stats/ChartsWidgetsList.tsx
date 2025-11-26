@@ -1,5 +1,6 @@
 import { Box, Grid } from '@chakra-ui/react';
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as stats from '@blockscout/stats-types';
 import type { StatsIntervalIds } from 'types/client/stats';
@@ -26,6 +27,7 @@ type Props = {
 
 const ChartsWidgetsList = ({ filterQuery, isError, isPlaceholderData, charts, interval, initialFilterQuery }: Props) => {
   const [ isSomeChartLoadingError, setIsSomeChartLoadingError ] = useState(false);
+  const { t } = useTranslation();
   const isAnyChartDisplayed = charts?.some((section) => section.charts.length > 0);
   const isEmptyChartList = Boolean(filterQuery) && !isAnyChartDisplayed;
   const sectionRef = React.useRef<HTMLUListElement | null>(null);
@@ -53,7 +55,7 @@ const ChartsWidgetsList = ({ filterQuery, isError, isPlaceholderData, charts, in
   }
 
   if (isEmptyChartList) {
-    return <EmptySearchResult text={ `Couldn${ apos }t find a chart that matches your filter query.` }/>;
+    return <EmptySearchResult text={ t('stats.charts_widgets_list.couldnt_find_chart') }/>;
   }
 
   return (

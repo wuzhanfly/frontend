@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { UserInfo } from 'types/api/account';
 
@@ -16,17 +17,18 @@ interface Props {
 }
 
 const MyProfileWallet = ({ profileQuery, onAddWallet }: Props) => {
+  const { t } = useTranslation();
 
   return (
     <section>
-      <Heading level="2" mb={ 3 }>My linked wallet</Heading>
+      <Heading level="2" mb={ 3 }>{t('my_profile.wallet.my_linked_wallet')}</Heading>
       <Text mb={ 3 } >
-        This wallet address is used for login{ ' ' }
+        {t('my_profile.wallet.address_used_for_login')}{ ' ' }
         { config.features.rewards.isEnabled && (
           <>
-            and participation in the Merits Program.
+            {t('my_profile.wallet.participation_merits_program')}
             <Link external href="https://docs.blockscout.com/using-blockscout/merits" ml={ 1 }>
-              Learn more
+              {t('common.common.learn_more')}
             </Link>
           </>
         ) }
@@ -39,7 +41,7 @@ const MyProfileWallet = ({ profileQuery, onAddWallet }: Props) => {
             noAltHash
           />
         </Box>
-      ) : <Button size="sm" onClick={ onAddWallet }>Link wallet</Button> }
+      ) : <Button size="sm" onClick={ onAddWallet }>{t('my_profile.wallet.link_wallet')}</Button> }
     </section>
   );
 };

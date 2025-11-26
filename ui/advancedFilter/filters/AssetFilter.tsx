@@ -142,7 +142,7 @@ const AssetFilter = ({ value = [], handleFilterChange }: Props) => {
           </Flex>
         </>
       ) }
-      { searchTerm && tokensQuery.data && !tokensQuery.data?.items.length && <Text>No tokens found</Text> }
+      { searchTerm && tokensQuery.data && !tokensQuery.data?.items.length && <Text>{t('advanced_filter.common.no_tokens_found')}</Text> }
       { searchTerm && tokensQuery.data && Boolean(tokensQuery.data?.items.length) && (
         <Flex display="flex" flexDir="column" rowGap={ 3 } maxH="250px" overflowY="scroll" mt={ 3 } ml="-4px">
           <CheckboxGroup value={ currentValue.map(i => i.token.address_hash) } orientation="vertical">

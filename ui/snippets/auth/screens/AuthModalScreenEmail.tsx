@@ -82,7 +82,7 @@ const AuthModalScreenEmail = ({ onSubmit, isAuth, mixpanelConfig }: Props) => {
         noValidate
         onSubmit={ formApi.handleSubmit(onFormSubmit) }
       >
-        <Text>Account email, used for transaction notifications from your watchlist.</Text>
+        <Text>{t('common.common.account_email_used_for_transaction_notifications_from_your_watchlist')}</Text>
         <FormFieldEmail<EmailFormFields>
           name="email"
           required
@@ -96,9 +96,9 @@ const AuthModalScreenEmail = ({ onSubmit, isAuth, mixpanelConfig }: Props) => {
           type="submit"
           disabled={ formApi.formState.isSubmitting || recaptcha.isInitError }
           loading={ formApi.formState.isSubmitting }
-          loadingText={t('common.common.send_a_code')}
+          loadingText={t('snippets.auth_modal.screen_email.send_code')}
         >
-          Send a code
+          {t('snippets.auth_modal.screen_email.send_code')}
         </Button>
       </chakra.form>
     </FormProvider>

@@ -1,5 +1,6 @@
 import { HStack, Text, Flex } from '@chakra-ui/react';
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TransactionTag } from 'types/api/account';
 
@@ -20,6 +21,7 @@ const TransactionTagListItem = ({ item, isLoading, onEditClick, onDeleteClick }:
     return onEditClick(item);
   }, [ item, onEditClick ]);
 
+  const { t } = useTranslation();
   const onItemDeleteClick = useCallback(() => {
     return onDeleteClick(item);
   }, [ item, onDeleteClick ]);
@@ -34,7 +36,7 @@ const TransactionTagListItem = ({ item, isLoading, onEditClick, onDeleteClick }:
           maxW="100%"
         />
         <HStack gap={ 3 } mt={ 4 }>
-          <Text textStyle="sm" fontWeight={ 500 }>Private tag</Text>
+          <Text textStyle="sm" fontWeight={ 500 }>{t('private_tags.transaction_list_item.private_tag')}</Text>
           <Tag loading={ isLoading } truncated>{ item.name }</Tag>
         </HStack>
       </Flex>

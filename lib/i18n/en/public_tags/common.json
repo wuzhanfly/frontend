@@ -1,3 +1,31 @@
 {
-  "public_tags.common.request_a_public_tag_label": "Request A Public Tag Label"
+  "form": {
+    "company_info": "Company info",
+    "public_tags_labels": "Public tags/labels",
+    "provide_comment": "Provide a comment to confirm the connection between addresses and tags (max 500 characters)",
+    "send_request": "Send request"
+  },
+  "result": {
+    "success_message": "Success! All tags went into moderation pipeline and soon will appear in the explorer.",
+    "company_info": "Company info",
+    "your_name": "Your name",
+    "email": "Email",
+    "company_name": "Company name",
+    "company_website": "Company website",
+    "public_tags_labels": "Public tags/labels",
+    "start_over": "Start over",
+    "add_new_tag": "Add new tag"
+  },
+  "field": {
+    "addresses_placeholder": "Smart contract / Address (0x...)",
+    "tag_placeholder": "Tag (max 35 characters)",
+    "background_placeholder": "Background (Hex)",
+    "text_placeholder": "Text (Hex)",
+    "description_placeholder": "Label description (max 80 characters)",
+    "type_placeholder": "Tag type"
+  },
+  "result_with_errors": {
+    "address_label": "Smart contract / Address (0x...)",
+    "start_over_button": "Start over"
+  }
 }

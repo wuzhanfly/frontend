@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenInfo } from 'types/api/token';
 
@@ -71,11 +72,13 @@ const TokenHolders = ({ holdersQuery, token, shouldRender = true, tabsHeight = T
     </>
   ) : null;
 
+  const { t } = useTranslation();
+  
   return (
     <DataListDisplay
       isError={ holdersQuery.isError }
       itemsNum={ holdersQuery.data?.items.length }
-      emptyText="There are no holders for this token."
+      emptyText={ t('tokens.holders.no_holders_for_token') }
       actionBar={ actionBar }
     >
       { content }

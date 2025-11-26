@@ -1,5 +1,5 @@
-import { useTranslation } from 'react-i18next';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TxStateChange } from 'types/api/txStateChanges';
 
@@ -21,7 +21,7 @@ const TxStateListItem = ({ data, isLoading }: Props) => {
   return (
     <ListItemMobileGrid.Container>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.address')}</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.address') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value py="3px" display="flex" flexWrap="nowrap" columnGap={ 3 }>
         <AddressEntity
           address={ data.address }
@@ -33,28 +33,28 @@ const TxStateListItem = ({ data, isLoading }: Props) => {
 
       { before && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.before')}</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.before') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>{ before }</ListItemMobileGrid.Value>
         </>
       ) }
 
       { after && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.after')}</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.after') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>{ after }</ListItemMobileGrid.Value>
         </>
       ) }
 
       { change && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.change')}</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.change') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>{ change }</ListItemMobileGrid.Value>
         </>
       ) }
 
       { tokenId && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('common.common.token_id')}</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.token_id') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value py="0">{ tokenId }</ListItemMobileGrid.Value>
         </>
       ) }

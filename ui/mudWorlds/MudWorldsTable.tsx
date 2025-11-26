@@ -21,7 +21,7 @@ const MudWorldsTable = ({ items, top, isLoading }: Props) => {
       <TableHeaderSticky top={ top }>
         <TableRow>
           <TableColumnHeader>{t('addresses.common.address')}</TableColumnHeader>
-          <TableColumnHeader isNumeric>{ `Balance ${ currencyUnits.ether }` }</TableColumnHeader>
+          <TableColumnHeader isNumeric>{t('mud_worlds.table.balance_ether', { currency: currencyUnits.ether })}</TableColumnHeader>
           <TableColumnHeader isNumeric>{t('common.common.txn_count')}</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>

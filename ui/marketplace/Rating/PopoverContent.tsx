@@ -64,7 +64,7 @@ const PopoverContent = ({ appId, userRating, source }: Props) => {
     return (
       <Flex alignItems="center">
         <Spinner size="md"/>
-        <Text fontSize="md" ml={ 3 }>Sending your feedback</Text>
+        <Text fontSize="md" ml={ 3 }>{t('marketplace.rating.sending_feedback')}</Text>
       </Flex>
     );
   }
@@ -76,7 +76,7 @@ const PopoverContent = ({ appId, userRating, source }: Props) => {
           <IconSvg name="verified" color="green.400" boxSize="30px" mr={ 1 } ml="-5px"/>
         ) }
         <Text fontWeight="500" textStyle="xs" color="text.secondary">
-          { ratingValue ? t('marketplace.common.app_is_already_rated_by_you') : 'How was your experience?' }
+          { ratingValue ? t('marketplace.common.app_is_already_rated_by_you') : t('marketplace.rating.how_was_experience') }
         </Text>
       </Flex>
       <Rating

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ZkEvmL2WithdrawalsItem } from 'types/api/zkEvmL2';
 
@@ -14,20 +15,22 @@ type Props = {
 };
 
 const ZkEvmL2WithdrawalsTable = ({ items, top, isLoading }: Props) => {
+  const { t } = useTranslation();
+  
   return (
     <TableRoot tableLayout="auto" minW="950px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader>Block</TableColumnHeader>
-          <TableColumnHeader>Index</TableColumnHeader>
-          <TableColumnHeader>L2 txn hash</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.zk_evm_l2.block') }</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.zk_evm_l2.index') }</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.zk_evm_l2.l2_txn_hash') }</TableColumnHeader>
           <TableColumnHeader>
-            Timestamp
+            { t('withdrawals.zk_evm_l2.timestamp') }
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader>L1 txn hash</TableColumnHeader>
-          <TableColumnHeader isNumeric>Value</TableColumnHeader>
-          <TableColumnHeader>Token</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.zk_evm_l2.l1_txn_hash') }</TableColumnHeader>
+          <TableColumnHeader isNumeric>{ t('withdrawals.zk_evm_l2.value') }</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.zk_evm_l2.token') }</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

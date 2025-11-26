@@ -24,7 +24,6 @@ const TxDetailsTxFee = ({ isLoading, data }: Props) => {
   }
 
   const content = (() => {
-  const { t } = useTranslation();
     if (!config.UI.views.tx.groupedFees) {
       return (
         <TxFee
@@ -92,7 +91,7 @@ const TxDetailsTxFee = ({ isLoading, data }: Props) => {
         hint={ data.blob_gas_used ? t('transactions.common.transaction_fee_without_blob_f') : t('transactions.common.total_transaction_fee') }
         isLoading={ isLoading }
       >
-        Transaction fee
+        {t('transactions.common.transaction_fee')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue multiRow>
         { content }

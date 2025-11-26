@@ -1,6 +1,7 @@
 import { HStack, VStack, Flex, Text } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { WatchlistAddress } from 'types/api/account';
 
@@ -15,6 +16,7 @@ import * as TokenEntity from 'ui/shared/entities/token/TokenEntity';
 import IconSvg from 'ui/shared/IconSvg';
 
 const WatchListAddressItem = ({ item, isLoading }: { item: WatchlistAddress; isLoading?: boolean }) => {
+  const { t } = useTranslation();
   const nativeTokenData = React.useMemo(() => ({
     name: config.chain.currency.name || '',
     icon_url: '',
@@ -40,7 +42,7 @@ const WatchListAddressItem = ({ item, isLoading }: { item: WatchlistAddress; isL
           isLoading={ isLoading }
         />
         <Skeleton loading={ isLoading } whiteSpace="pre" display="inline-flex">
-          <span>{ currencyUnits.ether } balance: </span>
+          <span>{ currencyUnits.ether } <span data-translation-key="watchlist.watch_list_address_item.balance">{ t('watchlist.watch_list_address_item.balance') }</span>: </span>
           <CurrencyValue
             value={ item.address_balance }
             exchangeRate={ item.exchange_rate }
@@ -54,8 +56,8 @@ const WatchListAddressItem = ({ item, isLoading }: { item: WatchlistAddress; isL
         <HStack gap={ 2 } fontSize="sm" pl={ 7 }>
           <IconSvg name="tokens" boxSize={ 5 } isLoading={ isLoading } borderRadius="sm"/>
           <Skeleton loading={ isLoading } display="inline-flex">
-            <span>{ `Tokens:${ nbsp }` + item.tokens_count + (item.tokens_overflow ? '+' : '') }</span>
-            <Text color="text.secondary">{ `${ nbsp }($${ BigNumber(item.tokens_fiat_value).toFormat(2) })` }</Text>
+            <span>{ t('watchlist.watch_list_address_item.tokens') + `${ nbsp }` + item.tokens_count + (item.tokens_overflow ? '+' : '') }</span>
+            <Text color="text.secondary">{ `${ nbsp }(${ BigNumber(item.tokens_fiat_value).toFormat(2) })` }</Text>
           </Skeleton>
         </HStack>
       ) }
@@ -63,10 +65,10 @@ const WatchListAddressItem = ({ item, isLoading }: { item: WatchlistAddress; isL
         <HStack gap={ 2 } fontSize="sm" pl={ 7 }>
           <IconSvg boxSize={ 5 } name="wallet" isLoading={ isLoading }/>
           <Skeleton loading={ isLoading } display="inline-flex">
-            <Text>{ `Net worth:${ nbsp }` }
+            <Text>{ t('watchlist.watch_list_address_item.net_worth') + `${ nbsp }` }
               {
                 `${ item.tokens_overflow ? '>' : '' }
-                $${ BigNumber(item.tokens_fiat_value).plus((BigNumber(item.address_balance ? usdNative : '0'))).toFormat(2) }`
+                ${ BigNumber(item.tokens_fiat_value).plus((BigNumber(item.address_balance ? usdNative : '0'))).toFormat(2) }`
               }
             </Text>
           </Skeleton>

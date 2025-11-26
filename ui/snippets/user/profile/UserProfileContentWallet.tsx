@@ -80,10 +80,10 @@ const UserProfileContentWallet = ({ onClose, className }: Props) => {
         size="sm"
         onClick={ handleConnectWalletClick }
         loading={ web3Wallet.isOpen }
-        loadingText="Connect Wallet"
+        loadingText={t('common.common.connect_wallet')}
         w="100%"
       >
-        Connect
+        {t('snippets.user_profile_content_wallet.connect')}
       </Button>
     );
   })();
@@ -91,12 +91,12 @@ const UserProfileContentWallet = ({ onClose, className }: Props) => {
   return (
     <Box className={ className }>
       <Flex px={ 1 } mb="1" textStyle="xs" alignItems="center" fontWeight="500">
-        <span>Connected wallet</span>
+        <span>{t('snippets.user_profile_content_wallet.connected_wallet')}</span>
         <Hint
           label={
             web3Wallet.isConnected ?
-              'This wallet is currently connected to Blockscout and used for interacting with apps and smart contracts' :
-              'This wallet is used for interacting with apps and smart contracts'
+              t('snippets.user_profile_content_wallet.wallet_description_connected') :
+              t('snippets.user_profile_content_wallet.wallet_description_disconnected')
           }
           boxSize={ 4 }
           ml={ 1 }

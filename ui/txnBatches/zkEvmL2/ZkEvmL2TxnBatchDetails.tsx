@@ -145,7 +145,7 @@ const ZkEvmL2TxnBatchDetails = ({ query }: Props) => {
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
       >
-        Acc input hash
+        { t('batches.zkevm_l2.acc_input_hash') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue
         flexWrap="nowrap"

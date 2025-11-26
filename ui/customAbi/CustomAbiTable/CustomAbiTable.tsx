@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CustomAbis, CustomAbi } from 'types/api/account';
 
@@ -14,11 +15,12 @@ interface Props {
 }
 
 const CustomAbiTable = ({ data, isLoading, onDeleteClick, onEditClick }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRoot minWidth="600px">
       <TableHeader>
         <TableRow>
-          <TableColumnHeader>ABI for Smart contract address (0x...)</TableColumnHeader>
+          <TableColumnHeader>{t('custom_abi.table.abi_for_smart_contract')}</TableColumnHeader>
           <TableColumnHeader width="108px"></TableColumnHeader>
         </TableRow>
       </TableHeader>

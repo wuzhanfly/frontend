@@ -1,0 +1,17 @@
+{
+  "details": {
+    "sender": "Sender",
+    "status": "Status",
+    "timestamp": "Timestamp",
+    "lifecycle": "Lifecycle"
+  },
+  "lifecycle": {
+    "pending": "Pending",
+    "content": {
+      "status": "Status",
+      "timestamp": "Timestamp",
+      "transactions": "Transactions",
+      "note": "Note"
+    }
+  }
+}

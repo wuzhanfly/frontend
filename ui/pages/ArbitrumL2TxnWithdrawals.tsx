@@ -78,7 +78,7 @@ const ArbitrumL2TxnWithdrawals = () => {
   return (
     <>
       <PageTitle title={t('common.common.transaction_withdrawals')} withTextAd/>
-      <Text>L2 to L1 message relayer: search for your L2 transaction to execute a manual withdrawal.</Text>
+      <Text>{t('txn_withdrawals.common.l2_to_l1_message_relayer')}</Text>
       <chakra.form onSubmit={ handleSubmit } noValidate>
         <FilterInput
           name="tx_hash"
@@ -98,7 +98,7 @@ const ArbitrumL2TxnWithdrawals = () => {
         isError={ isError }
         itemsNum={ searchTerm ? data?.items.length : undefined }
         filterProps={{
-          emptyFilteredText: `Couldn${ apos }t find any withdrawals for your transaction.`,
+          emptyFilteredText: t('txn_withdrawals.common.couldnt_find_withdrawals'),
           hasActiveFilters: Boolean(searchTerm),
         }}
       >

@@ -1,8 +1,0 @@
-{
-  "visualize.common.for_contract": {
-    "defaultMessage": "For contract",
-    "source": [
-      "ui/pages/Sol2Uml.tsx:20"
-    ]
-  }
-}

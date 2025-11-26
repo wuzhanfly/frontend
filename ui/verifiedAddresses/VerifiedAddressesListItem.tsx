@@ -46,11 +46,11 @@ const VerifiedAddressesListItem = ({ item, application, onAdd, onEdit, isLoading
     }
 
     if (!item.metadata.tokenName) {
-      return <span>Not a token</span>;
+      return <span>{ t('verified_addresses.list_item.not_a_token') }</span>;
     }
 
     if (!application) {
-      return <Link onClick={ handleAddClick }>Add details</Link>;
+      return <Link onClick={ handleAddClick }>{ t('verified_addresses.list_item.add_details') }</Link>;
     }
 
     const token = {
@@ -87,7 +87,7 @@ const VerifiedAddressesListItem = ({ item, application, onAdd, onEdit, isLoading
 
   return (
     <ListItemMobileGrid.Container>
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Address</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('addresses.common.address') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <AddressEntity
           address={{ hash: item.contractAddress, is_contract: true }}
@@ -98,7 +98,7 @@ const VerifiedAddressesListItem = ({ item, application, onAdd, onEdit, isLoading
 
       { item.metadata.tokenName && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Token Info</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('verified_addresses.list_item.token_info') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value display="flex" alignItems="center">
             { tokenInfo }
           </ListItemMobileGrid.Value>
@@ -107,7 +107,7 @@ const VerifiedAddressesListItem = ({ item, application, onAdd, onEdit, isLoading
 
       { item.metadata.tokenName && application && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Status</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('verified_addresses.list_item.status') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <Skeleton loading={ isLoading } display="inline-block">
               <VerifiedAddressesStatus status={ application.status }/>
@@ -118,7 +118,7 @@ const VerifiedAddressesListItem = ({ item, application, onAdd, onEdit, isLoading
 
       { item.metadata.tokenName && application && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Date</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('verified_addresses.list_item.date') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <Skeleton loading={ isLoading } display="inline-block">
               { dayjs(application.updatedAt).format('MMM DD, YYYY') }

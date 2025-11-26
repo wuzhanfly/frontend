@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenInfoApplication } from 'types/api/account';
 
@@ -16,10 +17,11 @@ const TokenInfoFormStatusText = ({ application }: Props) => {
 
   switch (application.status) {
     case 'IN_PROCESS': {
+      const { t } = useTranslation();
       return (
         <div>
-          <div>Requests are sent to a moderator for review and approval. This process can take several days.</div>
-          <Alert status="warning" mt={ 6 }>Request in progress. Once an admin approves your request you can edit token info.</Alert>
+          <div>{ t('tokens.info.request_process_info') }</div>
+          <Alert status="warning" mt={ 6 }>{ t('tokens.info.request_in_progress') }</Alert>
         </div>
       );
     }

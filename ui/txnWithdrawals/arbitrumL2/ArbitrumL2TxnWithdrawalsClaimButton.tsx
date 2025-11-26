@@ -132,7 +132,7 @@ const ArbitrumL2TxnWithdrawalsClaimButton = ({ messageId, txHash, completionTxHa
         loading={ isLoading }
         loadingText={t('games.common.claim')}
       >
-        Claim
+        { t('withdrawals.arbitrum_l2.claim') }
       </Button>
     </Skeleton>
   );

@@ -64,7 +64,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.batch_number_indicates_the_len')}
       >
-        Txn batch number
+        { t('batches.scroll_l2.txn_batch_number') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
@@ -84,7 +84,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.data_availability_container')}
       >
-        Container
+        { t('batches.scroll_l2.container') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <ScrollL2TxnBatchDA container={ data.data_availability.batch_data_container } isLoading={ isPlaceholderData }/>
@@ -94,7 +94,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.status_of_this_batch')}
       >
-        Status
+        { t('batches.scroll_l2.status') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <ScrollL2TxnBatchStatus status={ data.confirmation_transaction.hash ? 'finalized' : 'committed' } isLoading={ isPlaceholderData }/>
@@ -102,9 +102,9 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Date and time at which batch is finalized to L1"
+        hint={t('batches.scroll_l2.date_and_time_at_which_batch_is_finalized_to_l1')}
       >
-        Finalized timestamp
+        { t('batches.scroll_l2.finalized_timestamp') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         { data.confirmation_transaction.timestamp ?
@@ -119,7 +119,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
             isLoading={ isPlaceholderData }
             hint={t('common.common.number_of_transactions_in_this')}
           >
-            Transactions
+            { t('batches.common.transactions') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Link loading={ isPlaceholderData } href={ route({ pathname: '/batches/[number]', query: { number: data.number.toString(), tab: 'txs' } }) }>
@@ -133,7 +133,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.number_of_l2_blocks_in_this_ba')}
       >
-        Blocks
+        { t('batches.common.blocks') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Link loading={ isPlaceholderData } href={ route({ pathname: '/batches/[number]', query: { number: data.number.toString(), tab: 'blocks' } }) }>
@@ -143,9 +143,9 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Date and time at which batch is committed to L1"
+        hint={t('batches.scroll_l2.date_and_time_at_which_batch_is_committed_to_l1')}
       >
-        Committed timestamp
+        { t('batches.scroll_l2.committed_timestamp') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         { data.commitment_transaction.timestamp ?
@@ -158,7 +158,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.hash_of_l1_transaction_this_ba')}
       >
-        Committed transaction hash
+        { t('batches.scroll_l2.committed_transaction_hash') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue alignSelf="flex-start">
         <TxEntityL1
@@ -174,7 +174,7 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('common.common.l1_block_that_includes_transac')}
       >
-        Committed block
+        { t('batches.scroll_l2.committed_block') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <BlockEntityL1
@@ -185,9 +185,9 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Hash of L1 transaction this batch was finalized in"
+        hint={t('batches.scroll_l2.hash_of_l1_transaction_this_batch_was_finalized_in')}
       >
-        Finalized transaction hash
+        { t('batches.scroll_l2.finalized_transaction_hash') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue alignSelf="flex-start">
         { data.confirmation_transaction.hash ? (
@@ -202,9 +202,9 @@ const ScrollL2TxnBatchDetails = ({ query }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="L1 block that includes transaction with this batch finalization data"
+        hint={t('batches.scroll_l2.l1_block_that_includes_transaction_with_this_batch_finalization_data')}
       >
-        Finalized block
+        { t('batches.scroll_l2.finalized_block') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         { data.confirmation_transaction.block_number ? (

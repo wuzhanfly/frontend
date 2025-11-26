@@ -1,5 +1,21 @@
 {
   "contract_verification.common.contract_verification_via_vyper_standard_json_input": "Contract verification via Vyper (standard JSON input)",
   "contract_verification.common.standard_input_json": "Standard Input JSON",
-  "contract_verification.common.verify_and_publish_contract": "Verify And Publish Contract"
+  "contract_verification.common.verify_and_publish_contract": "Verify And Publish Contract",
+  "contract_verification.common.license_type_placeholder": "Contract license",
+  "contract_verification.common.license_type_description": "For best practices, all contract source code holders, publishers and authors are encouraged to also specify the accompanying license for their verified contract source code provided.",
+  "contract_verification.common.contract_address_to_verify": "Contract address to verify",
+  "contract_verification.common.smart_contract_address_placeholder": "Smart contract / Address (0x...)",
+  "contract_verification.common.currently_supports_methods": "Currently, Blockscout supports {{count}} contract verification methods",
+  "contract_verification.common.verification_method_placeholder": "Verification method (compiler type)",
+  "contract_verification.common.flattened_code_description": "Verification through a single file",
+  "contract_verification.common.multi_part_description": "Verification of multi-part Solidity files",
+  "contract_verification.common.sourcify_description": "Verification through Sourcify",
+  "contract_verification.common.standard_input_description": "Verification using Standard input JSON file",
+  "contract_verification.common.vyper_code_description": "Verification of Vyper contract",
+  "contract_verification.common.vyper_multi_part_description": "Verification of multi-part Vyper files",
+  "contract_verification.common.vyper_standard_input_description": "Verification of Vyper contract using Standard input JSON file",
+  "contract_verification.common.solidity_hardhat_description": "Verification through Hardhat plugin",
+  "contract_verification.common.solidity_foundry_description": "Verification through Foundry",
+  "contract_verification.common.stylus_github_repository_description": "Verification of Stylus contract via GitHub repository"
 }

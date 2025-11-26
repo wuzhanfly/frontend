@@ -29,16 +29,16 @@ export default function RewardsActivityPassCard() {
     >
       <Flex flex={ 1 } flexDirection="column" p={ 3 } gap={ 2 }>
         <Heading level="3">
-          Activity pass
+          {t('rewards.activity_pass_card.activity_pass')}
         </Heading>
         <Text textStyle="sm">
-          Grab your{ ' ' }
+          {t('rewards.activity_pass_card.grab_your')}{ ' ' }
           <Link external href={ activityPassUrl } loading={ rewardsConfigQuery.isLoading }>
-            Activity pass
+            {t('rewards.activity_pass_card.activity_pass')}
           </Link>{ ' ' }
-          then engage with various Blockscout products and features to earn Merits every day!{ ' ' }
+          {t('rewards.activity_pass_card.then_engage')}{ ' ' }
           <Link external href="https://docs.blockscout.com/using-blockscout/merits/activity-pass">
-            Learn more
+            {t('rewards.activity_pass_card.learn_more')}
           </Link>
         </Text>
       </Flex>
@@ -85,7 +85,7 @@ export default function RewardsActivityPassCard() {
           flexShrink={ 0 }
           zIndex={ 1 }
         >
-          Grab Activity pass
+          {t('rewards.activity_tab.grab_activity_pass')}
         </Link>
       </Flex>
     </Flex>

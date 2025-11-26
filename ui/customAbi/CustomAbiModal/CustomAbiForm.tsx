@@ -128,7 +128,7 @@ const CustomAbiForm: React.FC<Props> = ({ data, onOpenChange, onSuccess, setAler
         />
         <FormFieldText<Inputs>
           name="abi"
-          placeholder="Custom ABI [{...}] (JSON format)"
+          placeholder={t('custom_abi.form.custom_abi_placeholder')}
           required
           asComponent="Textarea"
           bgColor="dialog.bg"

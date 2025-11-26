@@ -3,6 +3,7 @@ import { debounce } from 'es-toolkit';
 import { useRouter } from 'next/router';
 import type { FormEvent } from 'react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Route } from 'nextjs-routes';
 import { route } from 'nextjs-routes';
@@ -25,6 +26,7 @@ type Props = {
 };
 
 const SearchBarDesktop = ({ isHeroBanner }: Props) => {
+  const { t } = useTranslation();
   const inputRef = React.useRef<HTMLFormElement>(null);
   const menuWidth = React.useRef<number>(0);
 
@@ -190,7 +192,7 @@ const SearchBarDesktop = ({ isHeroBanner }: Props) => {
                 href={ route({ pathname: '/search-results', query: { q: searchTerm } }) }
                 textStyle="sm"
               >
-                View all results
+                {t('snippets.search_bar.view_all_results')}
               </Link>
             </PopoverFooter>
           ) }

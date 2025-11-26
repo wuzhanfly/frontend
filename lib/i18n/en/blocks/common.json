@@ -67,5 +67,10 @@
   "blocks.common.base_fee_total": "Base fee total",
   "blocks.common.native_token": "Native Token",
   "blocks.common.the_contract_receiving_the_base_fee_responsible_for_handling_fee_usage_this_contract_is_controlled_by_governance_process": "The Contract Receiving The Base Fee Responsible For Handling Fee Usage This Contract Is Controlled By Governance Process",
-  "blocks.common.last_x_blocks": "last {{count}} blocks"
+  "blocks.common.last_x_blocks": "last {{count}} blocks",
+  "blocks.common.finalized_epoch": "Finalized epoch",
+  "blocks.list_item.finalized_epoch": "Finalized epoch #",
+  "blocks.table_item.finalized_epoch": "Finalized epoch #",
+  "blocks.table_item.chain_reorganizations": "Chain reorganizations",
+  "blocks.table_item.burnt_fees_percentage": "Burnt fees / Txn fees * 100%"
 }

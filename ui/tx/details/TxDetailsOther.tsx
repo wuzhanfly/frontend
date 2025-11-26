@@ -16,14 +16,14 @@ const TxDetailsOther = ({ nonce, type, position, queueIndex }: Props) => {
       <DetailedInfo.ItemLabel
         hint={t('transactions.common.other_data_related_to_this_tra')}
       >
-        Other
+        {t('common.common.other')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue multiRow>
         {
           [
             typeof type === 'number' && (
               <Box key="type">
-                <span>Txn type: </span>
+                <span>{t('transactions.common.txn_type')}: </span>
                 <span>{ type }</span>
                 { type === 2 && <Text as="span" ml={ 1 } color="text.secondary">(EIP-1559)</Text> }
                 { type === 3 && <Text as="span" ml={ 1 } color="text.secondary">(EIP-4844)</Text> }
@@ -32,18 +32,18 @@ const TxDetailsOther = ({ nonce, type, position, queueIndex }: Props) => {
             ),
             queueIndex !== undefined ? (
               <Box key="queueIndex">
-                <span>Queue index: </span>
+                <span>{t('transactions.common.queue_index')}: </span>
                 <span>{ queueIndex }</span>
               </Box>
             ) : (
               <Box key="nonce">
-                <span>Nonce: </span>
+                <span>{t('transactions.common.nonce')}: </span>
                 <span>{ nonce }</span>
               </Box>
             ),
             position !== null && position !== undefined && (
               <Box key="position">
-                <span>Position: </span>
+                <span>{t('transactions.common.position')}: </span>
                 <span>{ position }</span>
               </Box>
             ),

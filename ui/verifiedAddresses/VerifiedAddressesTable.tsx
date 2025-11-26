@@ -22,10 +22,10 @@ const VerifiedAddressesTable = ({ data, applications, onItemEdit, onItemAdd, isL
       <TableHeader>
         <TableRow>
           <TableColumnHeader>{t('addresses.common.address')}</TableColumnHeader>
-          <TableColumnHeader w="168px" pr={ 1 }>Token info</TableColumnHeader>
+          <TableColumnHeader w="168px" pr={ 1 }>{ t('verified_addresses.table.token_info') }</TableColumnHeader>
           <TableColumnHeader w="36px" pl="0"></TableColumnHeader>
-          <TableColumnHeader w="160px">Request status</TableColumnHeader>
-          <TableColumnHeader w="150px">Date</TableColumnHeader>
+          <TableColumnHeader w="160px">{ t('verified_addresses.table.request_status') }</TableColumnHeader>
+          <TableColumnHeader w="150px">{ t('verified_addresses.table.date') }</TableColumnHeader>
         </TableRow>
       </TableHeader>
       <TableBody>

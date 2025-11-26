@@ -1,0 +1,5 @@
+{
+  "api_key.delete_modal.api_key_for": "API密钥用于",
+  "api_key.delete_modal.will_be_deleted": "将被删除",
+  "api_key.table.api_key_token_limit": "API密钥令牌（限制{{limit}}个密钥）"
+}

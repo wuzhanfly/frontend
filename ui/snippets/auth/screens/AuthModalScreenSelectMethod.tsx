@@ -32,8 +32,8 @@ const AuthModalScreenSelectMethod = ({ onSelectMethod }: Props) => {
 
   return (
     <VStack gap={ 3 } mt={ 4 } align="stretch">
-      <Button variant="outline" onClick={ handleConnectWalletClick }>Continue with Web3 wallet</Button>
-      <Button variant="outline" onClick={ handleEmailClick }>Continue with email</Button>
+      <Button variant="outline" onClick={ handleConnectWalletClick }>{t('snippets.auth_modal.screen_select_method.continue_with_web3_wallet')}</Button>
+      <Button variant="outline" onClick={ handleEmailClick }>{t('snippets.auth_modal.screen_select_method.continue_with_email')}</Button>
     </VStack>
   );
 };

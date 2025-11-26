@@ -86,8 +86,8 @@ const MethodFilter = ({ value = [], handleFilterChange }: Props) => {
         mb={ 3 }
       />
       { methodsQuery.isLoading && <Spinner/> }
-      { methodsQuery.isError && <span>Something went wrong. Please try again.</span> }
-      { Boolean(searchTerm) && methodsQuery.data?.length === 0 && <span>No results found.</span> }
+      { methodsQuery.isError && <span>{t('common.common.something_went_wrong_try_again')}</span> }
+      { Boolean(searchTerm) && methodsQuery.data?.length === 0 && <span>{t('common.common.no_results_found')}</span> }
       { methodsQuery.data && (
         // added negative margin because of checkbox focus styles & overflow hidden
         <Flex display="flex" flexDir="column" rowGap={ 3 } maxH="250px" overflowY="scroll">

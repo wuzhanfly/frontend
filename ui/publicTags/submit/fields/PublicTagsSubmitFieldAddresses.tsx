@@ -1,6 +1,7 @@
 import { GridItem } from '@chakra-ui/react';
 import React from 'react';
 import { useFieldArray, useFormContext } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 
@@ -11,6 +12,7 @@ import { FormFieldAddress } from 'toolkit/components/forms/fields/FormFieldAddre
 const LIMIT = 20;
 
 const PublicTagsSubmitFieldAddresses = () => {
+  const { t } = useTranslation();
   const { control, formState } = useFormContext<FormFields>();
   const { fields, insert, remove } = useFieldArray<FormFields, 'addresses'>({
     name: 'addresses',
@@ -42,7 +44,7 @@ const PublicTagsSubmitFieldAddresses = () => {
               <FormFieldAddress<FormFields>
                 name={ `addresses.${ index }.hash` }
                 required
-                placeholder="Smart contract / Address (0x...)"
+                placeholder={t('public_tags.field.addresses_placeholder')}
               />
             </GridItem>
             <GridItem display="flex" alignItems="center" columnGap={ 3 } justifyContent={{ base: 'flex-end', lg: 'flex-start' }}>

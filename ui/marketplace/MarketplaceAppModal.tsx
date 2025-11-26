@@ -148,7 +148,7 @@ const MarketplaceAppModal = ({
             textStyle={{ base: 'sm', md: 'md' }}
             fontWeight="normal"
           >
-            By{ nbsp }{ author }
+            {t('marketplace.app_modal.by_author')}{ nbsp }{ author }
           </Text>
 
           { isRatingEnabled && (
@@ -178,7 +178,7 @@ const MarketplaceAppModal = ({
               <Flex width={{ base: '100%', md: 'auto' }} gap={ 2 }>
                 <Link href={ external ? url : route({ pathname: '/apps/[id]', query: { id: data.id } }) } external={ external } noIcon>
                   <Button size="sm">
-                    Launch app
+                    {t('marketplace.app_modal.launch_app')}
                   </Button>
                 </Link>
 

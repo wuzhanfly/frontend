@@ -1,3 +1,31 @@
 {
-  "public_tags.common.request_a_public_tag_label": "申请公共标签"
+  "form": {
+    "company_info": "公司信息",
+    "public_tags_labels": "公共标签/标签",
+    "provide_comment": "提供评论以确认地址和标签之间的关联（最多500个字符）",
+    "send_request": "发送请求"
+  },
+  "result": {
+    "success_message": "成功！所有标签都已进入审核流程，很快就会出现在浏览器中。",
+    "company_info": "公司信息",
+    "your_name": "您的姓名",
+    "email": "邮箱",
+    "company_name": "公司名称",
+    "company_website": "公司网站",
+    "public_tags_labels": "公共标签/标签",
+    "start_over": "重新开始",
+    "add_new_tag": "添加新标签"
+  },
+  "field": {
+    "addresses_placeholder": "智能合约/地址 (0x...)",
+    "tag_placeholder": "标签（最多35个字符）",
+    "background_placeholder": "背景（十六进制）",
+    "text_placeholder": "文本（十六进制）",
+    "description_placeholder": "标签描述（最多80个字符）",
+    "type_placeholder": "标签类型"
+  },
+  "result_with_errors": {
+    "address_label": "智能合约/地址 (0x...)",
+    "start_over_button": "重新开始"
+  }
 }

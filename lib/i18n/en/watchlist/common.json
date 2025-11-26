@@ -1,4 +1,17 @@
 {
   "watchlist.common.remove_address_from_watch_list": "Remove Address From Watch List",
-  "watchlist.common.to_receive_notifications_you_need_to_add_an_email_to_your_profile": "To receive notifications you need to add an email to your profile."
+  "watchlist.common.to_receive_notifications_you_need_to_add_an_email_to_your_profile": "To receive notifications you need to add an email to your profile.",
+  "watchlist.address_modal.email_notification_text": "Email notifications will be sent to the email address associated with your account",
+  "watchlist.address_form.select_notification_types": "Select notification types",
+  "watchlist.address_form.notification_methods": "Notification methods",
+  "watchlist.address_form_notifications.erc_20": "${tokenStandardName}-20",
+  "watchlist.address_form_notifications.erc_721_1155_nft": "${tokenStandardName}-721, ${tokenStandardName}-1155 (NFT)",
+  "watchlist.address_form_notifications.erc_404": "${tokenStandardName}-404",
+  "watchlist.watch_list_item.private_tag": "Private tag",
+  "watchlist.watch_list_item.email_notification": "Email notification",
+  "watchlist.watch_list_address_item.balance": "Balance",
+  "watchlist.watch_list_address_item.tokens": "Tokens:",
+  "watchlist.watch_list_address_item.net_worth": "Net worth",
+  "watchlist.delete_address_modal.address_will_be_deleted": "Address will be deleted",
+  "watchlist.watchlist_email_alert.receive_notifications_text": "You will receive notifications for this address"
 }

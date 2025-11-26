@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ScrollL2MessageItem } from 'types/api/scrollL2';
 
@@ -15,19 +16,21 @@ type Props = {
 };
 
 const ScrollL2WithdrawalsTable = ({ items, top, isLoading }: Props) => {
+  const { t } = useTranslation();
+  
   return (
     <TableRoot tableLayout="auto" minW="950px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader>L2 block</TableColumnHeader>
-          <TableColumnHeader>Index</TableColumnHeader>
-          <TableColumnHeader>L2 txn hash</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.scroll_l2.l2_block') }</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.scroll_l2.index') }</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.scroll_l2.l2_txn_hash') }</TableColumnHeader>
           <TableColumnHeader>
-            Timestamp
+            { t('withdrawals.scroll_l2.timestamp') }
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader>L1 txn hash</TableColumnHeader>
-          <TableColumnHeader isNumeric>{ `Value ${ config.chain.currency.symbol }` }</TableColumnHeader>
+          <TableColumnHeader>{ t('withdrawals.scroll_l2.l1_txn_hash') }</TableColumnHeader>
+          <TableColumnHeader isNumeric>{ `${ t('withdrawals.scroll_l2.value') } ${ config.chain.currency.symbol }` }</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

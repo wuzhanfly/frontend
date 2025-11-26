@@ -1,0 +1,39 @@
+{
+  "button": {
+    "earn_merits_for_using_blockscout": "使用 Blockscout 赚取积分"
+  },
+  "daily_reward_claim_button": {
+    "next_claim_in": "下次领取时间",
+    "claim": "领取",
+    "merits": "积分"
+  },
+  "activity_pass_card": {
+    "activity_pass": "活动通行证",
+    "grab_your": "获取您的",
+    "then_engage": "然后参与各种Blockscout产品和功能，每天赚取积分！",
+    "learn_more": "了解更多"
+  },
+  "instances_modal": {
+    "choose_explorer": "选择浏览器",
+    "choose_blockscout_explorer": "选择您想要交互并赚取积分的Blockscout浏览器"
+  },
+  "task_details_modal": {
+    "note_merits_only_earned": "注意：积分只能在程序活跃的支持网络上获得。"
+  },
+  "activity_tab": {
+    "period": "期间：",
+    "performance_rank_hint": "您在任务组中的排名与同期其他用户相比。排名越高 = 越多积分。",
+    "your_activity": "您的活动",
+    "use_blockscout_daily": "每天使用Blockscout和相关产品来赚取积分。查看每个任务的详细信息和如何开始。",
+    "earn": "赚取",
+    "your_current_merit_count": "您当前的积分计数不是最终结果！",
+    "merits_calculated_based": "积分根据所有用户的活动计算，可能会在每周结束时增加或减少。",
+    "period_mobile": "期间",
+    "task_details": "任务详情",
+    "vs_previous_week": "与上周相比",
+    "vs_previous_week_mobile": "与上周相比",
+    "metrics_not_updated": "指标不会实时更新。请允许最多一小时的时间，让您的绩效排名和赚取的积分反映最近的活动。如果您遇到任何问题，请随时联系我们",
+    "discord": "Discord",
+    "grab_activity_pass": "获取活动通行证"
+  }
+}

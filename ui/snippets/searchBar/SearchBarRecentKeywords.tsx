@@ -1,5 +1,6 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useIsMobile from 'lib/hooks/useIsMobile';
 import { clearRecentSearchKeywords, getRecentSearchKeywords, removeRecentSearchKeyword } from 'lib/recentSearchKeywords';
@@ -14,6 +15,7 @@ type Props = {
 };
 
 const SearchBarRecentKeywords = ({ onClick, onClear }: Props) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
 
   const [ keywords, setKeywords ] = React.useState<Array<string>>(getRecentSearchKeywords());
@@ -50,8 +52,8 @@ const SearchBarRecentKeywords = ({ onClick, onClear }: Props) => {
         </Box>
       ) }
       <Flex mb={ 3 } justifyContent="space-between" fontSize="sm">
-        <Text fontWeight={ 600 } color="text.secondary">Recent</Text>
-        <Link onClick={ clearKeywords } variant="secondary">Clear all</Link>
+        <Text fontWeight={ 600 } color="text.secondary">{t('snippets.search_bar_recent.recent')}</Text>
+        <Link onClick={ clearKeywords } variant="secondary">{t('snippets.search_bar_recent.clear_all')}</Link>
       </Flex>
       <Flex flexDirection="column" overflowY="auto">
         { keywords.map(kw => (

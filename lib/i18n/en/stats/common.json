@@ -26,5 +26,8 @@
   "stats.common.3_months": "3 months",
   "stats.common.6_months": "6 months",
   "stats.common.1_year": "1 year",
-  "stats.common.contracts_that_have_been_verified": "Contracts That Have Been Verified"
+  "stats.common.contracts_that_have_been_verified": "Contracts That Have Been Verified",
+  "stats.charts_loading_error.some_charts_did_not_load": "Some charts did not load properly.",
+  "stats.charts_loading_error.click_once_again": "click once again.",
+  "stats.charts_widgets_list.couldnt_find_chart": "Couldn't find a chart matching your search."
 }

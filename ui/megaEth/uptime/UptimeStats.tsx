@@ -27,7 +27,7 @@ const UptimeStats = ({ realtimeData }: Props) => {
         value={ realtimeData ? Number(realtimeData.instant_tps).toLocaleString() : '-' }
       />
       <StatsWidget
-        label="MGas/s"
+        label={t('mega_eth.stats.megas_per_second')}
         hint={t('common.common.number_of_computational_gas_co')}
         value={ realtimeData ? Number(realtimeData.instant_mgas_per_second).toLocaleString(undefined, { maximumFractionDigits: 2 }) : '-' }
       />

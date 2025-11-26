@@ -122,7 +122,7 @@ const ContractVerificationForm = ({ method: methodFromQuery, config, hash }: Pro
     }
 
     toaster.success({
-      title: 'Success',
+      title: t('common.common.success'),
       description: t('common.common.contract_is_successfully_verif'),
     });
 
@@ -143,7 +143,7 @@ const ContractVerificationForm = ({ method: methodFromQuery, config, hash }: Pro
     submitPromiseResolver.current?.(null);
 
     toaster.error({
-      title: 'Error',
+      title: t('common.common.error'),
       description: t('common.common.there_was_an_error_with_socket'),
     });
   // callback should not change when form is submitted
@@ -213,9 +213,9 @@ const ContractVerificationForm = ({ method: methodFromQuery, config, hash }: Pro
             type="submit"
             mt={ 12 }
             loading={ formState.isSubmitting }
-            loadingText="Verify & publish"
+            loadingText={ t('contract_verification.common.verify_and_publish') }
           >
-            Verify & publish
+            { t('contract_verification.common.verify_and_publish') }
           </Button>
         ) }
       </chakra.form>

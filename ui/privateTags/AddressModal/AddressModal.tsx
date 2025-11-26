@@ -18,7 +18,7 @@ type Props = {
 
 const AddressModal: React.FC<Props> = ({ open, onOpenChange, onSuccess, data, pageType }) => {
   const { t } = useTranslation();
-  const title = data?.id ? 'Edit address tag' : t('common.common.new_address_tag');
+  const title = data?.id ? t('private_tags.address.edit_address_tag') : t('common.common.new_address_tag');
   const text = !data?.id ? 'Label any address with a private address tag (up to 35 chars) to customize your explorer experience.' : '';
 
   const [ isAlertVisible, setAlertVisible ] = useState(false);

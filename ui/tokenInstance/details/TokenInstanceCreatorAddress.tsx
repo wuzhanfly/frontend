@@ -43,7 +43,7 @@ const TokenInstanceCreatorAddress = ({ hash }: Props) => {
         hint={t('common.common.address_that_deployed_this_tok')}
         isLoading={ addressQuery.isPlaceholderData }
       >
-        Creator
+        { t('tokens.instance.creator') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <AddressEntity

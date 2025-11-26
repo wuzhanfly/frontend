@@ -1,5 +1,6 @@
 import { Text, Flex, Grid } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ItemsProps } from './types';
 import type { SearchResultBlock } from 'types/client/search';
@@ -11,6 +12,7 @@ import * as BlockEntity from 'ui/shared/entities/block/BlockEntity';
 import HashStringShortenDynamic from 'ui/shared/HashStringShortenDynamic';
 
 const SearchBarSuggestBlock = ({ data, isMobile, searchTerm }: ItemsProps<SearchResultBlock>) => {
+  const { t } = useTranslation();
   const icon = <BlockEntity.Icon/>;
   const shouldHighlightHash = data.block_hash.toLowerCase() === searchTerm.toLowerCase();
   const isFutureBlock = data.timestamp === undefined;
@@ -45,8 +47,8 @@ const SearchBarSuggestBlock = ({ data, isMobile, searchTerm }: ItemsProps<Search
         <Flex alignItems="center">
           { icon }
           { blockNumber }
-          { data.block_type === 'reorg' && <Tag ml="auto">Reorg</Tag> }
-          { data.block_type === 'uncle' && <Tag ml="auto">Uncle</Tag> }
+          { data.block_type === 'reorg' && <Tag ml="auto">{t('snippets.search_bar_block.reorg')}</Tag> }
+          { data.block_type === 'uncle' && <Tag ml="auto">{t('snippets.search_bar_block.uncle')}</Tag> }
         </Flex>
         { hash }
         { isFutureBlock ? futureBlockText : <Text color="text.secondary">{ date }</Text> }
@@ -61,8 +63,8 @@ const SearchBarSuggestBlock = ({ data, isMobile, searchTerm }: ItemsProps<Search
         { blockNumber }
       </Flex>
       <Flex columnGap={ 3 } minW={ 0 } alignItems="center">
-        { data.block_type === 'reorg' && <Tag flexShrink={ 0 }>Reorg</Tag> }
-        { data.block_type === 'uncle' && <Tag flexShrink={ 0 }>Uncle</Tag> }
+        { data.block_type === 'reorg' && <Tag flexShrink={ 0 }>{t('snippets.search_bar_block.reorg')}</Tag> }
+        { data.block_type === 'uncle' && <Tag flexShrink={ 0 }>{t('snippets.search_bar_block.uncle')}</Tag> }
         { isFutureBlock ? futureBlockText : hash }
       </Flex>
       { date && <Text color="text.secondary" textAlign="end">{ date }</Text> }

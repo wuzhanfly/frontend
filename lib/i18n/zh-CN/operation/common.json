@@ -1,0 +1,17 @@
+{
+  "details": {
+    "sender": "发送方",
+    "status": "状态",
+    "timestamp": "时间戳",
+    "lifecycle": "生命周期"
+  },
+  "lifecycle": {
+    "pending": "待处理",
+    "content": {
+      "status": "状态",
+      "timestamp": "时间戳",
+      "transactions": "交易",
+      "note": "备注"
+    }
+  }
+}

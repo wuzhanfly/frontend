@@ -1,5 +1,6 @@
 import { Box, HStack, Spinner } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as tac from '@blockscout/tac-operation-lifecycle-types';
 
@@ -17,6 +18,7 @@ interface Props {
 }
 
 const TacOperationLifecycleAccordionItemTrigger = ({ status, isFirst, isLast, isSuccess, isLoading }: Props) => {
+  const { t } = useTranslation();
 
   const content = (() => {
     switch (status) {
@@ -25,7 +27,7 @@ const TacOperationLifecycleAccordionItemTrigger = ({ status, isFirst, isLast, is
           <HStack gap={ 2 }>
             <Spinner size="md"/>
             <Box color="text.secondary">
-              Pending
+              {t('operation.lifecycle.pending')}
             </Box>
           </HStack>
         );

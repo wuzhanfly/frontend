@@ -27,7 +27,7 @@ const ZkSyncL2TxnBatchHashesInfo = ({ isLoading, data }: Props) => {
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint={t('common.common.hash_of_l1_tx_on_which_the_bat')}
+        hint={ t('common.common.hash_of_l1_tx_on_which_the_bat') }
         isLoading={ isLoading }
       >
         { t('common.common.commit_tx_hash') }
@@ -50,7 +50,7 @@ const ZkSyncL2TxnBatchHashesInfo = ({ isLoading, data }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint={t('common.common.hash_of_l1_tx_on_which_the_batch_was_proven')}
+        hint={ t('common.common.hash_of_l1_tx_on_which_the_batch_was_proven') }
         isLoading={ isLoading }
       >
         { t('common.common.prove_tx_hash') }
@@ -73,7 +73,7 @@ const ZkSyncL2TxnBatchHashesInfo = ({ isLoading, data }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint={t('common.common.hash_of_l1_tx_on_which_the_batch_was_executed_and_finalized')}
+        hint={ t('common.common.hash_of_l1_tx_on_which_the_batch_was_executed_and_finalized') }
         isLoading={ isLoading }
       >
         { t('common.common.execute_tx_hash') }

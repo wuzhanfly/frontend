@@ -1,5 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ArbitrumL2MessagesItem } from 'types/api/arbitrumL2';
 
@@ -23,6 +24,7 @@ const rollupFeature = config.features.rollup;
 type Props = { item: ArbitrumL2MessagesItem; isLoading?: boolean; direction: MessagesDirection };
 
 const ArbitrumL2MessagesListItem = ({ item, isLoading, direction }: Props) => {
+  const { t } = useTranslation();
   if (!rollupFeature.isEnabled || rollupFeature.type !== 'arbitrum') {
     return null;
   }
@@ -35,7 +37,7 @@ const ArbitrumL2MessagesListItem = ({ item, isLoading, direction }: Props) => {
 
       { direction === 'to-rollup' && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>L1 block</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('messages.table.l1_block')}</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             { item.origination_transaction_block_number ? (
               <BlockEntityL1
@@ -43,14 +45,14 @@ const ArbitrumL2MessagesListItem = ({ item, isLoading, direction }: Props) => {
                 isLoading={ isLoading }
                 fontWeight={ 600 }
               />
-            ) : <chakra.span>N/A</chakra.span> }
+            ) : <chakra.span>{t('messages.list_item.na')}</chakra.span> }
           </ListItemMobileGrid.Value>
         </>
       ) }
 
       { direction === 'from-rollup' && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>From</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('messages.table.from')}</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <AddressEntity
               address={{ hash: item.origination_address_hash }}
@@ -62,14 +64,14 @@ const ArbitrumL2MessagesListItem = ({ item, isLoading, direction }: Props) => {
         </>
       ) }
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Message #</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('messages.table.message_number')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <Skeleton loading={ isLoading } display="inline-block">
           { item.id }
         </Skeleton>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>L2 transaction</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('messages.table.l2_transaction')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         { l2TxHash ? (
           <TxEntity
@@ -79,14 +81,14 @@ const ArbitrumL2MessagesListItem = ({ item, isLoading, direction }: Props) => {
           />
         ) : (
           <chakra.span>
-            N/A
+            {t('messages.list_item.na')}
           </chakra.span>
         ) }
       </ListItemMobileGrid.Value>
 
       { item.origination_timestamp && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Age</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{t('messages.list_item.age')}</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <TimeWithTooltip
               timestamp={ item.origination_timestamp }
@@ -97,14 +99,14 @@ const ArbitrumL2MessagesListItem = ({ item, isLoading, direction }: Props) => {
         </>
       ) }
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Status</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('messages.table.status')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         { item.status === 'confirmed' && direction === 'from-rollup' ?
-          <Link href={ route({ pathname: '/txn-withdrawals', query: { q: item.origination_transaction_hash } }) }>Ready for relay</Link> :
+          <Link href={ route({ pathname: '/txn-withdrawals', query: { q: item.origination_transaction_hash } }) }>{t('messages.list_item.ready_for_relay')}</Link> :
           <ArbitrumL2MessageStatus status={ item.status } isLoading={ isLoading }/> }
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>L1 transaction</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{t('messages.table.l1_transaction')}</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         { l1TxHash ? (
           <TxEntityL1
@@ -115,7 +117,7 @@ const ArbitrumL2MessagesListItem = ({ item, isLoading, direction }: Props) => {
           />
         ) : (
           <chakra.span>
-            N/A
+            {t('messages.list_item.na')}
           </chakra.span>
         ) }
       </ListItemMobileGrid.Value>

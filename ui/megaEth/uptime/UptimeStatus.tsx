@@ -25,7 +25,7 @@ const UptimeStatus = ({ status, onReconnect }: Props) => {
       case 'error':
         return <StatusTag type="error" text={t('shared.common.disconnected')}/>;
       case 'initial':
-        return <StatusTag type="pending" text="Initializing"/>;
+        return <StatusTag type="pending" text={t('mega_eth.status.initializing')}/>;
     }
 
     return null;
@@ -36,7 +36,7 @@ const UptimeStatus = ({ status, onReconnect }: Props) => {
       { statusTag }
       <Button variant="link" gap={ 1 } onClick={ onReconnect } disabled={ status === 'connected' }>
         <IconSvg name="refresh" boxSize={ 5 }/>
-        <chakra.span hideBelow="lg" fontSize="sm">Refresh</chakra.span>
+        <chakra.span hideBelow="lg" fontSize="sm">{t('mega_eth.status.refresh')}</chakra.span>
       </Button>
     </HStack>
   );

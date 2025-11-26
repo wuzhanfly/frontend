@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ArbitrumL2MessagesItem } from 'types/api/arbitrumL2';
 
@@ -16,20 +17,21 @@ type Props = {
 };
 
 const ArbitrumL2MessagesTable = ({ items, direction, top, isLoading }: Props) => {
+  const { t } = useTranslation();
   return (
     <TableRoot tableLayout="auto" minW="950px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          { direction === 'to-rollup' && <TableColumnHeader>L1 block</TableColumnHeader> }
-          { direction === 'from-rollup' && <TableColumnHeader>From</TableColumnHeader> }
-          <TableColumnHeader>Message #</TableColumnHeader>
-          <TableColumnHeader>L2 transaction</TableColumnHeader>
+          { direction === 'to-rollup' && <TableColumnHeader>{t('messages.table.l1_block')}</TableColumnHeader> }
+          { direction === 'from-rollup' && <TableColumnHeader>{t('messages.table.from')}</TableColumnHeader> }
+          <TableColumnHeader>{t('messages.table.message_number')}</TableColumnHeader>
+          <TableColumnHeader>{t('messages.table.l2_transaction')}</TableColumnHeader>
           <TableColumnHeader>
-            Timestamp
+            {t('messages.table.timestamp')}
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader>Status</TableColumnHeader>
-          <TableColumnHeader>L1 transaction</TableColumnHeader>
+          <TableColumnHeader>{t('messages.table.status')}</TableColumnHeader>
+          <TableColumnHeader>{t('messages.table.l1_transaction')}</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

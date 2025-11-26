@@ -1,0 +1,4 @@
+{
+  "txn_withdrawals.common.l2_to_l1_message_relayer": "L2 to L1 message relayer: search for your L2 transaction to execute a manual withdrawal.",
+  "txn_withdrawals.common.couldnt_find_withdrawals": "Couldn't find any withdrawals for your transaction."
+}

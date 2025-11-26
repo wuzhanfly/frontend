@@ -1,0 +1,5 @@
+{
+  "addresses_label_search.table.balance_ether": "余额 {{currencyUnit}}",
+  "addresses_label_search.list_item.balance_ether": "余额 {{currencyUnit}}",
+  "addresses_label_search.list_item.txn_count": "交易数量"
+}

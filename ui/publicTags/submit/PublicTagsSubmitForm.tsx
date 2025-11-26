@@ -106,7 +106,7 @@ const PublicTagsSubmitForm = ({ config, userInfo, onSubmitResult }: Props) => {
         >
           <GridItem colSpan={{ base: 1, lg: 3 }}>
             <Heading level="2">
-              Company info
+              {t('public_tags.form.company_info')}
             </Heading>
           </GridItem>
           <FormFieldText<FormFields> name="requesterName" required placeholder={t('common.common.your_name')}/>
@@ -119,7 +119,7 @@ const PublicTagsSubmitForm = ({ config, userInfo, onSubmitResult }: Props) => {
 
           <GridItem colSpan={{ base: 1, lg: 3 }} mt={{ base: 3, lg: 5 }}>
             <Heading level="2" display="flex" alignItems="center" columnGap={ 1 }>
-              Public tags/labels
+              {t('public_tags.form.public_tags_labels')}
               <Hint label="Submit a public tag proposal for our moderation team to review"/>
             </Heading>
           </GridItem>
@@ -132,7 +132,7 @@ const PublicTagsSubmitForm = ({ config, userInfo, onSubmitResult }: Props) => {
               placeholder={
                 isMobile ?
                   t('common.common.confirm_the_connection_between') :
-                  'Provide a comment to confirm the connection between addresses and tags (max 500 characters)'
+                  t('public_tags.form.provide_comment')
               }
               maxH="160px"
               rules={{ maxLength: 500 }}
@@ -151,11 +151,11 @@ const PublicTagsSubmitForm = ({ config, userInfo, onSubmitResult }: Props) => {
             type="submit"
             mt={ 3 }
             loading={ formApi.formState.isSubmitting }
-            loadingText={t('common.common.send_request')}
+            loadingText={t('public_tags.form.send_request')}
             w="min-content"
             disabled={ recaptcha.isInitError }
           >
-            Send request
+            {t('public_tags.form.send_request')}
           </Button>
         </Grid>
       </chakra.form>

@@ -111,7 +111,7 @@ const SearchBarMobile = ({ isHeroBanner }: Props) => {
       </DrawerTrigger>
       <DrawerContent h="75vh" overflowY="hidden">
         <DrawerHeader>
-          <DrawerTitle>Search</DrawerTitle>
+          <DrawerTitle>{t('snippets.search_bar_mobile.search')}</DrawerTitle>
           <DrawerCloseTrigger/>
         </DrawerHeader>
         <DrawerBody overflow="hidden" display="flex" flexDirection="column">

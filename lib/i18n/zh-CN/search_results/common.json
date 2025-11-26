@@ -1,0 +1,16 @@
+{
+  "table_item": {
+    "items": "项目",
+    "learn_estimated_time": "了解此区块创建的预估时间。",
+    "reorg": "重组",
+    "uncle": "叔块",
+    "erc1155_total_supply": "项目",
+    "future_block_tooltip": "了解此区块创建的预估时间。"
+  },
+  "list_item": {
+    "reorg": "重组",
+    "uncle": "叔块",
+    "learn_estimated_time": "了解此区块创建的预估时间。",
+    "erc1155_total_supply": "项目"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "block": {
+    "reorged_block": "Reorged block #",
+    "uncle_block": "Uncle block #",
+    "block_number": "Block #"
+  }
+}

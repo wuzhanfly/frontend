@@ -1,9 +1,0 @@
-{
-  "source": "en",
-  "targetLanguages": ["zh-CN"],
-  "api": {
-    "provider": "mock",
-    "rateLimitPerSec": 10
-  },
-  "preservePatterns": ["{\\w+}", "%s", "{{\\w+}}"]
-}

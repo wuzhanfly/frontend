@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TransactionTag } from 'types/api/account';
 
@@ -19,6 +20,7 @@ import TransactionTagListItem from './TransactionTagTable/TransactionTagListItem
 import TransactionTagTable from './TransactionTagTable/TransactionTagTable';
 
 const PrivateTransactionTags = () => {
+  const { t } = useTranslation();
   const { data: transactionTagsData, isPlaceholderData, isError, pagination } = useQueryWithPages({
     resourceName: 'general:private_tags_tx',
     options: {
@@ -100,7 +102,7 @@ const PrivateTransactionTags = () => {
         <Button
           onClick={ transactionModalProps.onOpen }
         >
-          Add transaction tag
+          {t('private_tags.transaction.add_transaction_tag')}
         </Button>
       </Skeleton>
       <TransactionModal

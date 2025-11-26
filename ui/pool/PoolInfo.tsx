@@ -21,7 +21,7 @@ const PoolInfo = ({ data, isPlaceholderData }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('pools.common.the_base_token_in_a_liquidity_')}
       >
-        Base token
+        {t('pool.info.base_token')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <TokenEntity
@@ -41,7 +41,7 @@ const PoolInfo = ({ data, isPlaceholderData }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('pools.common.the_quote_token_in_a_liquidity')}
       >
-        Quote token
+        {t('pool.info.quote_token')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <TokenEntity
@@ -59,15 +59,15 @@ const PoolInfo = ({ data, isPlaceholderData }: Props) => {
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Fully Diluted Valuation: theoretical market cap if all tokens were in circulation"
+        hint={t('pool.info.fully_diluted_valuation_description')}
       >
-        Base token FDV
+        {t('pool.info.base_token_fdv')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
           { data.base_token_fully_diluted_valuation_usd ?
-            `$${ Number(data.base_token_fully_diluted_valuation_usd).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }) }` :
-            'N/A'
+            `${ Number(data.base_token_fully_diluted_valuation_usd).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }) }` :
+            t('pool.info.na')
           }
         </Skeleton>
       </DetailedInfo.ItemValue>
@@ -76,28 +76,28 @@ const PoolInfo = ({ data, isPlaceholderData }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('pools.common.current_market_capitalization_')}
       >
-        Base token market cap
+        {t('pool.info.base_token_market_cap')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
           { data.base_token_market_cap_usd ?
-            `$${ Number(data.base_token_market_cap_usd).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }) }` :
-            'N/A'
+            `${ Number(data.base_token_market_cap_usd).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }) }` :
+            t('pool.info.na')
           }
         </Skeleton>
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
         isLoading={ isPlaceholderData }
-        hint="Fully Diluted Valuation: theoretical market cap if all tokens were in circulation"
+        hint={t('pool.info.fully_diluted_valuation_description')}
       >
-        Quote token FDV
+        {t('pool.info.quote_token_fdv')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
           { data.quote_token_fully_diluted_valuation_usd ?
-            `$${ Number(data.quote_token_fully_diluted_valuation_usd).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }) }` :
-            'N/A'
+            `${ Number(data.quote_token_fully_diluted_valuation_usd).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }) }` :
+            t('pool.info.na_quote')
           }
         </Skeleton>
       </DetailedInfo.ItemValue>
@@ -106,13 +106,13 @@ const PoolInfo = ({ data, isPlaceholderData }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('pools.common.current_market_capitalization_')}
       >
-        Quote token market cap
+        {t('pool.info.quote_token_market_cap')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
           { data.quote_token_market_cap_usd ?
-            `$${ Number(data.quote_token_market_cap_usd).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }) }` :
-            'N/A'
+            `${ Number(data.quote_token_market_cap_usd).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }) }` :
+            t('pool.info.na_quote')
           }
         </Skeleton>
       </DetailedInfo.ItemValue>
@@ -121,7 +121,7 @@ const PoolInfo = ({ data, isPlaceholderData }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('pools.common.current_liquidity_of_the_pool')}
       >
-        Liquidity
+        {t('pool.info.liquidity')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
@@ -133,7 +133,7 @@ const PoolInfo = ({ data, isPlaceholderData }: Props) => {
         isLoading={ isPlaceholderData }
         hint={t('pools.common.dex_where_the_pool_is_traded')}
       >
-        DEX
+        {t('pool.info.dex')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>

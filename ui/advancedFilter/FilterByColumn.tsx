@@ -34,7 +34,7 @@ const FilterByColumn = ({ column, filters, columnName, handleFilterChange, searc
       const value = filters.transaction_types;
       return (
         <TableColumnFilterWrapper
-          columnName="Type"
+          columnName={t('common.common.type')}
           isLoading={ isLoading }
           selected={ Boolean(value && value.length) }
         >
@@ -71,11 +71,11 @@ const FilterByColumn = ({ column, filters, columnName, handleFilterChange, searc
     case 'or_and': {
       return (
         <TableColumnFilterWrapper
-          columnName="And/Or"
+          columnName={t('common.common.and_or')}
           isLoading={ isLoading }
           selected
           w="106px"
-          value={ filters.address_relation === 'and' ? 'AND' : 'OR' }
+          value={ filters.address_relation === 'and' ? t('common.common.and') : t('common.common.or') }
         >
           <AddressRelationFilter { ...commonProps } value={ filters.address_relation }/>
         </TableColumnFilterWrapper>

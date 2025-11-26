@@ -27,7 +27,7 @@ const DetailedInfoSponsoredItem = ({ isLoading }: Props) => {
         hint={t('shared.common.sponsored_banner_advertisement')}
         isLoading={ isLoading }
       >
-        Sponsored
+        {t('shared.common.detailed_info_sponsored_item.sponsored')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue mt={{ base: 0, lg: 1 }}>
         <AdBanner isLoading={ isLoading }/>

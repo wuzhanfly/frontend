@@ -60,7 +60,7 @@ const UserOpDetails = ({ query }: Props) => {
         hint={t('common.common.unique_character_string_assign')}
         isLoading={ isPlaceholderData }
       >
-        User operation hash
+        { t('user_ops.common.user_operation_hash') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData } overflow="hidden">

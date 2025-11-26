@@ -191,8 +191,8 @@ modules:
     path: iflow/watchlist-progress.md
     status: detected
   - name: withdrawals
-    path: iflow/withdrawals-finalized.md
+    path: iflow/withdrawals-progress.md
     status: detected
   - name: zetaChain
-    path: iflow/zetaChain-finalized.md
+    path: iflow/zetaChain-progress.md
     status: detected

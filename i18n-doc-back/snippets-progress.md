@@ -1,9 +1,7 @@
 # Snippets Module Internationalization Progress
 
-## Module: Snippets
-- Module Path: ui/snippets/**
-- Status: processing
-- Progress: 0/20
+- Status: completed
+- Progress: 23/23
 
 ## Hardcoded Texts Found:
 1. Key: snippets.auth_modal.screen_email.send_code
@@ -116,6 +114,11 @@
     Status: detected
     Line: ui/snippets/user/profile/UserProfileContentWallet.tsx:45
 
+23. Key: snippets.top_bar_stats.gas
+    Text: "Gas"
+    Status: detected
+    Line: ui/snippets/topBar/TopBarStats.tsx:91
+
 ## Dependencies:
 
 ## Created Keys:
@@ -141,6 +144,7 @@
 - snippets.user_profile_content_wallet.wallet_description_connected
 - snippets.user_profile_content_wallet.wallet_description_disconnected
 - snippets.user_profile_content_wallet.connect
+- snippets.top_bar_stats.gas
 
 ## Status Code:
 - detected: 1

@@ -1,5 +1,6 @@
 import { HStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as tac from '@blockscout/tac-operation-lifecycle-types';
 
@@ -16,17 +17,22 @@ interface Props {
 }
 
 const TxDetailsTacOperation = ({ tacOperations, isLoading, txHash }: Props) => {
+  const { t } = useTranslation();
   const hasManyItems = tacOperations.length > 1;
   const [ hasScroll, setHasScroll ] = React.useState(false);
 
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint={ `Hash${ hasManyItems ? 'es' : '' } of the cross‑chain operation${ hasManyItems ? 's' : '' } that this transaction is part of` }
+        hint={ t('transactions.common.source_operation_hint', { 
+          hasManyItems: hasManyItems 
+        }) }
         isLoading={ isLoading }
         hasScroll={ hasScroll }
       >
-        Source operation{ hasManyItems ? 's' : '' }
+        { t('transactions.common.source_operation', { 
+          hasManyItems: hasManyItems 
+        }) }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValueWithScroll
         gradientHeight={ 48 }

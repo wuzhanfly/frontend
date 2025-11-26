@@ -96,7 +96,7 @@ const TokenPageTitle = ({ tokenQuery, addressQuery, hash }: Props) => {
     <>
       { tokenQuery.data && <TokenEntity.Reputation value={ tokenQuery.data.reputation } ml={ 0 }/> }
       { verifiedInfoQuery.data?.tokenAddress && (
-        <Tooltip content={ `Information on this token has been verified by ${ config.chain.name }` }>
+        <Tooltip content={ t('tokens.token_page_title.information_verified_by', { chainName: config.chain.name }) }>
           <IconSvg name="certified" color="green.500" boxSize={ 6 } cursor="pointer"/>
         </Tooltip>
       ) }

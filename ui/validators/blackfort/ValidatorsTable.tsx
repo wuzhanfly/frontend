@@ -40,7 +40,7 @@ const ValidatorsTable = ({ data, sort, setSorting, isLoading, top }: Props) => {
             onSortToggle={ onSortToggle }
             indicatorPosition="right"
           >
-            Validator’s address
+            { t('validators.common.validator_address') }
           </TableColumnHeaderSortable>
           <TableColumnHeader>{t('common.common.name')}</TableColumnHeader>
             <TableColumnHeader isNumeric>{t('common.common.commission')}</TableColumnHeader>

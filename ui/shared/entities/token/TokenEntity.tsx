@@ -139,9 +139,11 @@ interface ReputationProps extends BoxProps {
 }
 
 const Reputation = ({ value, ...rest }: ReputationProps) => {
+  const { t } = useTranslation();
+  
   if (config.UI.views.token.hideScamTokensEnabled && value === 'scam') {
     return (
-      <Tooltip content="This token has been flagged as a potential scam. You enabled the display of flagged tokens in the explorer — proceed with caution.">
+      <Tooltip content={t('shared.token_entity.scam_warning')}>
         <IconSvg name="scam" boxSize={ 5 } ml={ 2 } { ...rest }/>
       </Tooltip>
     );

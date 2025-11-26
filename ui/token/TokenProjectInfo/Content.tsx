@@ -15,25 +15,26 @@ interface Props {
 
 const getSocialLinks = (t: (key: string) => string): Array<Omit<ServiceLinkProps, 'href'>> => [
   { field: 'github', icon: 'social/github_filled', title: t('tokens.common.github') },
-  { field: 'twitter', icon: 'social/twitter_filled', title: 'X (ex-Twitter)' },
+  { field: 'twitter', icon: 'social/twitter_filled', title: t('tokens.common.twitter') },
   { field: 'telegram', icon: 'social/telegram_filled', title: t('tokens.common.telegram') },
-  { field: 'openSea', icon: 'social/opensea_filled', title: 'OpenSea' },
-  { field: 'linkedin', icon: 'social/linkedin_filled', title: 'LinkedIn' },
+  { field: 'openSea', icon: 'social/opensea_filled', title: t('tokens.common.opensea') },
+  { field: 'linkedin', icon: 'social/linkedin_filled', title: t('tokens.common.linkedin') },
   { field: 'facebook', icon: 'social/facebook_filled', title: t('tokens.common.facebook') },
   { field: 'discord', icon: 'social/discord_filled', title: t('tokens.common.discord') },
-  { field: 'medium', icon: 'social/medium_filled', title: 'Medium' },
+  { field: 'medium', icon: 'social/medium_filled', title: t('tokens.common.medium') },
   { field: 'slack', icon: 'social/slack_filled', title: t('tokens.common.slack') },
   { field: 'reddit', icon: 'social/reddit_filled', title: t('tokens.common.reddit') },
 ];
 
-const PRICE_TICKERS: Array<Omit<ServiceLinkProps, 'href'>> = [
-  { field: 'coinGeckoTicker', icon: 'social/coingecko', title: 'CoinGecko' },
-  { field: 'coinMarketCapTicker', icon: 'social/coinmarketcap', title: 'CoinMarketCap' },
-  { field: 'defiLlamaTicker', icon: 'social/defi_llama', title: 'DefiLlama' },
+const getPriceTickers = (t: (key: string) => string): Array<Omit<ServiceLinkProps, 'href'>> => [
+  { field: 'coinGeckoTicker', icon: 'social/coingecko', title: t('tokens.common.coingecko') },
+  { field: 'coinMarketCapTicker', icon: 'social/coinmarketcap', title: t('tokens.common.coinmarketcap') },
+  { field: 'defiLlamaTicker', icon: 'social/defi_llama', title: t('tokens.common.defillama') },
 ];
 
 export function hasContent(data: TokenVerifiedInfo, t: (key: string) => string): boolean {
   const SOCIAL_LINKS = getSocialLinks(t);
+  const PRICE_TICKERS = getPriceTickers(t);
   const fields: Array<keyof TokenVerifiedInfo> = [
     'projectDescription',
     'docs',
@@ -47,6 +48,7 @@ export function hasContent(data: TokenVerifiedInfo, t: (key: string) => string):
 const Content = ({ data }: Props) => {
   const { t } = useTranslation();
   const SOCIAL_LINKS = getSocialLinks(t);
+  const PRICE_TICKERS = getPriceTickers(t);
   const docs = data.docs ? <DocsLink href={ data.docs }/> : null;
   const support = data.support ? <SupportLink url={ data.support }/> : null;
   const description = data.projectDescription ? <Text fontSize="sm" mt={ 3 }>{ data.projectDescription }</Text> : null;
@@ -63,7 +65,7 @@ const Content = ({ data }: Props) => {
     <Flex fontSize="sm" flexDir="column" rowGap={ 5 }>
       { (description || docs || support) && (
         <div>
-          <Text color="text.secondary" fontSize="xs">Description and support info</Text>
+          <Text color="text.secondary" fontSize="xs">{ t('tokens.project_info.description_and_support_info') }</Text>
           { description }
           { (docs || support) && (
             <Flex alignItems="center" flexWrap="wrap" columnGap={ 6 } mt={ 3 }>
@@ -75,7 +77,7 @@ const Content = ({ data }: Props) => {
       ) }
       { socialLinks.length > 0 && (
         <div>
-          <Text color="text.secondary" fontSize="xs">Links</Text>
+          <Text color="text.secondary" fontSize="xs">{ t('tokens.project_info.links') }</Text>
           <Grid templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} columnGap={ 4 } rowGap={ 3 } mt={ 3 }>
             { socialLinks.map((link) => <ServiceLink key={ link.field } { ...link }/>) }
           </Grid>
@@ -83,7 +85,7 @@ const Content = ({ data }: Props) => {
       ) }
       { priceTickersLinks.length > 0 && (
         <div>
-          <Text color="text.secondary" fontSize="xs">Crypto markets</Text>
+          <Text color="text.secondary" fontSize="xs">{ t('tokens.project_info.crypto_markets') }</Text>
           <Grid templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} columnGap={ 4 } rowGap={ 3 } mt={ 3 }>
             { priceTickersLinks.map((link) => <ServiceLink key={ link.field } { ...link }/>) }
           </Grid>

@@ -1,6 +1,7 @@
 import { HStack } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { MudWorldItem } from 'types/api/mudWorlds';
 
@@ -19,7 +20,7 @@ const MudWorldsListItem = ({
   item,
   isLoading,
 }: Props) => {
-
+  const { t } = useTranslation();
   const addressBalance = BigNumber(item.coin_balance).div(BigNumber(10 ** config.chain.currency.decimals));
 
   return (
@@ -32,13 +33,13 @@ const MudWorldsListItem = ({
         truncation="constant_long"
       />
       <HStack gap={ 3 } maxW="100%" alignItems="flex-start">
-        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 } flexShrink={ 0 }>{ `Balance ${ currencyUnits.ether }` }</Skeleton>
+        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 } flexShrink={ 0 }>{t('mud_worlds.list_item.balance_ether', { currency: currencyUnits.ether })}</Skeleton>
         <Skeleton loading={ isLoading } fontSize="sm" color="text.secondary" minW="0" whiteSpace="pre-wrap">
           <span>{ addressBalance.dp(8).toFormat() }</span>
         </Skeleton>
       </HStack>
       <HStack gap={ 3 }>
-        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 }>Txn count</Skeleton>
+        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 }>{t('mud_worlds.list_item.txn_count')}</Skeleton>
         <Skeleton loading={ isLoading } fontSize="sm" color="text.secondary">
           <span>{ Number(item.transactions_count).toLocaleString() }</span>
         </Skeleton>

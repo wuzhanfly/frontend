@@ -194,8 +194,8 @@ const SearchResultListItem = ({ data, searchTerm, isLoading, addressFormat }: Pr
                 isLoading={ isLoading }
               />
             </BlockEntity.Link>
-            { data.block_type === 'reorg' && !isLoading && <Tag ml={ 2 }>Reorg</Tag> }
-            { data.block_type === 'uncle' && !isLoading && <Tag ml={ 2 }>Uncle</Tag> }
+            { data.block_type === 'reorg' && !isLoading && <Tag ml={ 2 }>{t('search_results.list_item.reorg')}</Tag> }
+            { data.block_type === 'uncle' && !isLoading && <Tag ml={ 2 }>{t('search_results.list_item.uncle')}</Tag> }
           </BlockEntity.Container>
         );
       }
@@ -344,8 +344,8 @@ const SearchResultListItem = ({ data, searchTerm, isLoading, addressFormat }: Pr
               { data.is_smart_contract_verified && <IconSvg name="status/success" boxSize="14px" color="green.500" ml={ 1 } flexShrink={ 0 }/> }
             </Skeleton>
             <Skeleton loading={ isLoading } overflow="hidden" whiteSpace="nowrap" textOverflow="ellipsis" fontWeight={ 700 }>
-              { data.token_type === 'ERC-20' && data.exchange_rate && `$${ Number(data.exchange_rate).toLocaleString() }` }
-              { data.token_type !== 'ERC-20' && data.total_supply && `Items ${ Number(data.total_supply).toLocaleString() }` }
+              { data.token_type === 'ERC-20' && data.exchange_rate && `${ Number(data.exchange_rate).toLocaleString() }` }
+              { data.token_type !== 'ERC-20' && data.total_supply && `${t('search_results.list_item.erc1155_total_supply')} ${ Number(data.total_supply).toLocaleString() }` }
             </Skeleton>
           </Grid>
         );
@@ -355,7 +355,7 @@ const SearchResultListItem = ({ data, searchTerm, isLoading, addressFormat }: Pr
         const isFutureBlock = data.timestamp === undefined;
 
         if (isFutureBlock) {
-          return <Skeleton loading={ isLoading }>Learn estimated time for this block to be created.</Skeleton>;
+          return <Skeleton loading={ isLoading }>{t('search_results.list_item.learn_estimated_time')}</Skeleton>;
         }
 
         return (

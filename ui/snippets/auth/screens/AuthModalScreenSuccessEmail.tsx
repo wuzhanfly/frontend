@@ -43,7 +43,7 @@ const AuthModalScreenSuccessEmail = ({ email, onConnectWallet, onClose, isAuth, 
     <Box>
       <Text>
         <chakra.span fontWeight="700">{ email }</chakra.span>{ ' ' }
-        email has been successfully used to log in to your Blockscout account.
+        {t('snippets.auth_modal.screen_success_email.success_text')}
       </Text>
       { !profile?.address_hash && config.features.blockchainInteraction.isEnabled ? (
         <>

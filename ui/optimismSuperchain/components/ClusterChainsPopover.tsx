@@ -39,13 +39,13 @@ const ClusterChainsPopover = ({ addressHash }: Props) => {
             columnGap={ 1 }
           >
             <IconSvg name="pie_chart" boxSize={ 5 }/>
-            { chains.length } Chain{ chains.length > 1 ? 's' : '' }
+            { chains.length } {t('optimism_superchain.cluster_chains_popover.chain')}{ chains.length > 1 ? t('optimism_superchain.cluster_chains_popover.s') : '' }
           </Button>
         </PopoverTrigger>
       </Box>
       <PopoverContent w="auto">
         <PopoverBody >
-          <chakra.span color="text.secondary" textStyle="xs">This address is on cluster chains</chakra.span>
+          <chakra.span color="text.secondary" textStyle="xs">{t('optimism_superchain.cluster_chains_popover.this_address_is_on_cluster_chains')}</chakra.span>
           <VStack gap={ 2 } mt={ 1 } alignItems="flex-start">
             { chains.map((chain) => (
               <Link

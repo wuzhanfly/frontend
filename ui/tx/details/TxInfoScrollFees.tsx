@@ -25,10 +25,10 @@ export const TxInfoScrollFees = ({ data, isLoading }: Props) => {
         <>
           <DetailedInfo.ItemLabel
 
-            hint="L1 fee that pays for rollup costs"
+            hint="{t('transactions.common.l1_fee_rollup_costs_hint')}"
             isLoading={ isLoading }
           >
-            L1 data fee
+            {t('transactions.common.l1_data_fee')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <CurrencyValue
@@ -47,7 +47,7 @@ export const TxInfoScrollFees = ({ data, isLoading }: Props) => {
             hint={t('transactions.common.l2_execution_fee')}
             isLoading={ isLoading }
           >
-            Execution fee
+            {t('transactions.common.execution_fee')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <CurrencyValue
@@ -66,7 +66,7 @@ export const TxInfoScrollFees = ({ data, isLoading }: Props) => {
             hint={t('transactions.common.commitment_scalar')}
             isLoading={ isLoading }
           >
-            L1 commit scalar
+            {t('transactions.common.l1_commit_scalar')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <CurrencyValue
@@ -85,7 +85,7 @@ export const TxInfoScrollFees = ({ data, isLoading }: Props) => {
             hint={t('transactions.common.additional_gas_overhead_of_a_d')}
             isLoading={ isLoading }
           >
-            L1 Fee Overhead
+            {t('transactions.common.l1_fee_overhead')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ isLoading }>
@@ -105,19 +105,19 @@ export const TxInfoScrollFees = ({ data, isLoading }: Props) => {
             hint={t('transactions.common.l1_gas_fees')}
             isLoading={ isLoading }
           >
-            L1 gas fees
+            {t('transactions.common.l1_gas_fees')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             { data.scroll?.l1_base_fee !== undefined && (
               <Skeleton loading={ isLoading }>
-                <Text as="span" fontWeight="500">Base: </Text>
+                <Text as="span" fontWeight="500">{t('transactions.common.base')} </Text>
                 <Text fontWeight="600" as="span">{ BigNumber(data.scroll?.l1_base_fee || 0).dividedBy(WEI_IN_GWEI).toFixed() }</Text>
               </Skeleton>
             ) }
             { data.scroll?.l1_fee_scalar !== undefined && (
               <Skeleton loading={ isLoading }>
                 <TextSeparator/>
-                <Text as="span" fontWeight="500">Scalar: </Text>
+                <Text as="span" fontWeight="500">{t('transactions.common.scalar')} </Text>
                 <Text fontWeight="600" as="span">{ BigNumber(data.scroll?.l1_fee_scalar || 0).dividedBy(WEI_IN_GWEI).toFixed() }</Text>
               </Skeleton>
             ) }
@@ -130,19 +130,19 @@ export const TxInfoScrollFees = ({ data, isLoading }: Props) => {
             hint={t('transactions.common.l1_blob_fees')}
             isLoading={ isLoading }
           >
-            L1 blob fees
+            {t('transactions.common.l1_blob_fees')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             { data.scroll?.l1_blob_base_fee !== undefined && (
               <Skeleton loading={ isLoading }>
-                <Text as="span" fontWeight="500">Base: </Text>
+                <Text as="span" fontWeight="500">{t('transactions.common.base')} </Text>
                 <Text fontWeight="600" as="span">{ BigNumber(data.scroll?.l1_blob_base_fee || 0).dividedBy(WEI_IN_GWEI).toFixed() }</Text>
               </Skeleton>
             ) }
             { data.scroll?.l1_fee_blob_scalar !== undefined && (
               <Skeleton loading={ isLoading }>
                 <TextSeparator/>
-                <Text as="span" fontWeight="500">Scalar: </Text>
+                <Text as="span" fontWeight="500">{t('transactions.common.scalar')} </Text>
                 <Text fontWeight="600" as="span">{ BigNumber(data.scroll?.l1_fee_blob_scalar || 0).dividedBy(WEI_IN_GWEI).toFixed() }</Text>
               </Skeleton>
             ) }

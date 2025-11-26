@@ -149,12 +149,12 @@ const AddressForm: React.FC<Props> = ({ data, onSuccess, setAlertVisible, isAdd,
         { hasEmail ? (
           <>
             <Text color="text.secondary" fontSize="sm" marginBottom={ 5 }>
-              Please select what types of notifications you will receive
+              { t('watchlist.address_form.select_notification_types') }
             </Text>
             <Box marginBottom={ 8 }>
               <AddressFormNotifications/>
             </Box>
-            <Text color="text.secondary" fontSize="sm" marginBottom={{ base: '10px', lg: 5 }}>Notification methods</Text>
+            <Text color="text.secondary" fontSize="sm" marginBottom={{ base: '10px', lg: 5 }}>{ t('watchlist.address_form.notification_methods') }</Text>
             <FormFieldCheckbox<Inputs, 'notification'>
               name="notification"
               label={t('account.common.email_notifications')}

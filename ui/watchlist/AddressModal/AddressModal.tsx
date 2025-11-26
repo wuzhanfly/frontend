@@ -20,7 +20,7 @@ type Props = {
 const AddressModal: React.FC<Props> = ({ open, onOpenChange, onSuccess, data, isAdd, hasEmail, showEmailAlert }) => {
   const { t } = useTranslation();
   const title = !isAdd ? t('account.common.edit_watch_list_address') : t('account.common.new_address_to_watch_list');
-  const text = isAdd ? 'An email notification can be sent to you when an address on your watch list sends or receives any transactions.' : '';
+  const text = isAdd ? t('watchlist.address_modal.email_notification_text') : '';
 
   const [ isAlertVisible, setAlertVisible ] = useState(false);
 

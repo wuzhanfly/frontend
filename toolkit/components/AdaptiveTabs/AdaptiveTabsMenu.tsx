@@ -3,7 +3,7 @@ import React from 'react';
 
 import type { TabItem } from './types';
 
-import DotsIcon from 'icons-components/Dots';
+import DotsIcon from '@icons/dots.svg';
 
 import { IconButton } from '../../chakra/icon-button';
 import type { IconButtonProps } from '../../chakra/icon-button';

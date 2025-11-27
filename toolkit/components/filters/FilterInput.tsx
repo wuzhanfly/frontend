@@ -2,7 +2,7 @@ import { Icon } from '@chakra-ui/react';
 import type { ChangeEvent } from 'react';
 import React, { useCallback, useState } from 'react';
 
-import SearchIcon from 'icons-components/Search';
+import SearchIcon from '@icons/search.svg';
 
 import type { InputProps } from '../../chakra/input';
 import { Input } from '../../chakra/input';

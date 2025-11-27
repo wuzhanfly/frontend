@@ -2,7 +2,7 @@ import type { IconProps } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react';
 import * as React from 'react';
 
-import LogoIcon from 'icons-components/networks/LogoPlaceholder';
+import LogoIcon from '@icons/networks/logo-placeholder.svg';
 
 export const ChartWatermark = React.memo((props: IconProps) => {
   return (

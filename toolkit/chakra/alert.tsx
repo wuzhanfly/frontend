@@ -2,7 +2,7 @@ import type { AlertDescriptionProps } from '@chakra-ui/react';
 import { Alert as ChakraAlert, Icon } from '@chakra-ui/react';
 import * as React from 'react';
 
-import IndicatorIcon from '@icons/info_filled.svg';
+import IndicatorIcon from 'icons/info_filled.svg';
 
 import { CloseButton } from './close-button';
 import { Skeleton } from './skeleton';

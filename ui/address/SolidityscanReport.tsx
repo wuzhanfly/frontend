@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import solidityScanIcon from '@icons/brands/solidity_scan.svg';
+import solidityScanIcon from 'icons/brands/solidity_scan.svg';
 import useFetchReport from 'lib/solidityScan/useFetchReport';
 import { Link } from 'toolkit/chakra/link';
 import { PopoverBody, PopoverContent, PopoverRoot } from 'toolkit/chakra/popover';

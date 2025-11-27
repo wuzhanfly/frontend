@@ -2,7 +2,7 @@ import { Flex, Icon, Box } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import * as React from 'react';
 
-import emptySearchResultIcon from '@icons/empty_search_result.svg';
+import emptySearchResultIcon from 'icons/empty_search_result.svg';
 import { Heading } from 'toolkit/chakra/heading';
 
 interface Props {

@@ -4,7 +4,7 @@ import React from 'react';
 // This icon doesn't work properly when it is in the sprite
 // Probably because of the gradient
 // eslint-disable-next-line no-restricted-imports
-import MeritsIconColored from '@icons/merits_colored.svg';
+import MeritsIconColored from 'icons/merits_colored.svg';
 
 type Props = {
   className?: string;

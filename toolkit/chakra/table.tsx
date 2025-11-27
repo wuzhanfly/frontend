@@ -2,7 +2,7 @@ import { Table as ChakraTable, Icon } from '@chakra-ui/react';
 import { throttle } from 'es-toolkit';
 import * as React from 'react';
 
-import ArrowIcon from '@icons/arrows/east.svg';
+import ArrowIcon from 'icons/arrows/east.svg';
 
 import { Link } from './link';
 

@@ -4,12 +4,12 @@ import { useCopyToClipboard } from '@uidotdev/usehooks';
 import domToImage from 'dom-to-image';
 import dayjs from 'dayjs';
 
-import CopyIcon from '@icons/copy.svg';
-import DotsIcon from '@icons/dots.svg';
-import CsvIcon from '@icons/files/csv.svg';
-import ImageIcon from '@icons/files/image.svg';
-import ScopeIcon from '@icons/scope.svg';
-import ShareIcon from '@icons/share.svg';
+import CopyIcon from 'icons/copy.svg';
+import DotsIcon from 'icons/dots.svg';
+import CsvIcon from 'icons/files/csv.svg';
+import ImageIcon from 'icons/files/image.svg';
+import ScopeIcon from 'icons/scope.svg';
+import ShareIcon from 'icons/share.svg';
 
 import { useColorModeValue } from '../../../chakra/color-mode';
 import { IconButton } from '../../../chakra/icon-button';

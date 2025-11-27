@@ -210,5 +210,5 @@
     "@lifi/widget": "3.25.0",
     "@lifi/wallet-management": "3.6.1"
   },
-  "packageManager": "yarn@4.10.3"
+  "packageManager": "yarn@1.22.22"
 }

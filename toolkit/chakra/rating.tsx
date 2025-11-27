@@ -1,8 +1,8 @@
 import { Icon, RatingGroup, useRatingGroup } from '@chakra-ui/react';
 import * as React from 'react';
 
-import StarFilledIcon from '@icons/star_filled.svg';
-import StarOutlineIcon from '@icons/star_outline.svg';
+import StarFilledIcon from 'icons/star_filled.svg';
+import StarOutlineIcon from 'icons/star_outline.svg';
 
 export interface RatingProps extends Omit<RatingGroup.RootProviderProps, 'value'> {
   count?: number;

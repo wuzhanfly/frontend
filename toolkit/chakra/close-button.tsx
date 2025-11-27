@@ -2,7 +2,7 @@ import type { ButtonProps } from '@chakra-ui/react';
 import { Icon, useRecipe } from '@chakra-ui/react';
 import * as React from 'react';
 
-import CloseIcon from '@icons/close.svg';
+import CloseIcon from 'icons/close.svg';
 
 import { recipe as closeButtonRecipe } from '../theme/recipes/close-button.recipe';
 import { IconButton } from './icon-button';

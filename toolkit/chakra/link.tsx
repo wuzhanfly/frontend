@@ -4,7 +4,7 @@ import NextLink from 'next/link';
 import type { LinkProps as NextLinkProps } from 'next/link';
 import * as React from 'react';
 
-import ArrowIcon from '@icons/link_external.svg';
+import ArrowIcon from 'icons/link_external.svg';
 
 import { Skeleton } from './skeleton';
 

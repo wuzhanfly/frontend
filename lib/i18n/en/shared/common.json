@@ -14,5 +14,9 @@
   "shared.common.prev_page": "Previous page",
   "shared.common.toggle_time_format": "Toggle time format",
   "shared.common.method_id": "Method ID",
-  "shared.common.call": "Call"
+  "shared.common.call": "Call",
+  "shared.common.the_contract_was_successfully_verified": "The contract was successfully verified",
+  "shared.common.log_index": "Log index",
+  "shared.common.invalid_utf8_with_hex": "[Invalid UTF-8] {{hex}}",
+  "shared.common.decode_error_with_hex": "[Decode error] {{hex}}"
 }

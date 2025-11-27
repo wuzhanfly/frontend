@@ -27,7 +27,7 @@ const AddressCoinBalanceChart = ({ addressHash }: Props) => {
     return [
       {
         id: 'balance',
-        name: 'Value',
+        name: t('addresses.common.value'),
         items: data.items.map(({ date, value }) => ({
           date: new Date(date),
           value: BigNumber(value).div(10 ** config.chain.currency.decimals).toNumber(),
@@ -36,7 +36,7 @@ const AddressCoinBalanceChart = ({ addressHash }: Props) => {
         units: currencyUnits.ether,
       },
     ];
-  }, [ chartsConfig, data ]);
+  }, [chartsConfig, data, t]);
 
   return (
     <ChartWidget
@@ -45,7 +45,7 @@ const AddressCoinBalanceChart = ({ addressHash }: Props) => {
       charts={ charts }
       isLoading={ isPending }
       h="300px"
-      emptyText={ data?.days ? `Insufficient data for the past ${ data.days } days` : undefined }
+      emptyText={ data?.days ? t('addresses.common.insufficient_data_for_the_past_days', { days: data.days }) : undefined }
     />
   );
 };

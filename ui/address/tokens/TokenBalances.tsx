@@ -46,7 +46,7 @@ const TokenBalances = () => {
   const prefix = tokensInfo.isOverflow ? '>' : '';
   const totalUsd = nativeUsd.plus(tokensInfo.usd);
   const tokensNumText = tokensInfo.num > 0 ?
-    `${ prefix }${ tokensInfo.num } ${ tokensInfo.num > 1 ? 'tokens' : 'token' }` :
+    `${ prefix }${ tokensInfo.num } ${ t(tokensInfo.num > 1 ? 'addresses.common.tokens' : 'addresses.common.token') }` :
     '0';
 
   return (
@@ -58,7 +58,7 @@ const TokenBalances = () => {
         icon={ <IconSvg name="wallet" boxSize="20px" flexShrink={ 0 } color="icon.primary"/> }
       />
       <TokenBalancesItem
-        name={ `${ currencyUnits.ether } Balance` }
+        name={ t('addresses.common.ether_balance', { currency: currencyUnits.ether }) }
         value={ `${ nativeValue } ${ currencyUnits.ether }` }
         valueSecondary={ !nativeUsd.eq(ZERO) ? `$${ nativeUsd.toFormat(2) }` : '' }
         isLoading={ addressQuery.isPending || tokenQuery.isPending }

@@ -18,7 +18,7 @@ const ContractCreationStatus = ({ status, ...rest }: Props) => {
   switch (status) {
     case 'success':
       return (
-        <Tooltip content={t('shared.common.the_contract_was_successfully_')}>
+        <Tooltip content={t('shared.common.the_contract_was_successfully_verified')}>
           <StatusTag type="ok" text={ t('common.common.success') } { ...rest }/>
         </Tooltip>
       );

@@ -28,6 +28,7 @@ type Props = {
 const TokenHolders = ({ holdersQuery, token, shouldRender = true, tabsHeight = TABS_HEIGHT }: Props) => {
   const isMobile = useIsMobile();
   const isMounted = useIsMounted();
+  const { t } = useTranslation();
 
   if (!isMounted || !shouldRender) {
     return null;
@@ -72,8 +73,6 @@ const TokenHolders = ({ holdersQuery, token, shouldRender = true, tabsHeight = T
     </>
   ) : null;
 
-  const { t } = useTranslation();
-  
   return (
     <DataListDisplay
       isError={ holdersQuery.isError }

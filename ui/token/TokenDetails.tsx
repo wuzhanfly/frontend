@@ -109,7 +109,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
             hint={t('tokens.common.price_per_token_on_the_exchang')}
             isLoading={ tokenQuery.isPlaceholderData }
           >
-            Price
+            {t('tokens.common.price')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ tokenQuery.isPlaceholderData } display="inline-block">
@@ -125,7 +125,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
             hint={t('tokens.common.circulating_supply_price')}
             isLoading={ tokenQuery.isPlaceholderData }
           >
-            Market cap
+            {t('tokens.common.market_cap')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ tokenQuery.isPlaceholderData } display="inline-block">
@@ -139,7 +139,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
         hint={t('tokens.common.the_total_amount_of_tokens_iss')}
         isLoading={ tokenQuery.isPlaceholderData }
       >
-        Max total supply
+        {t('tokens.common.max_total_supply')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue
         alignSelf="center"
@@ -162,7 +162,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
         hint={t('tokens.common.number_of_accounts_holding_the')}
         isLoading={ tokenQuery.isPlaceholderData }
       >
-        Holders
+        {t('tokens.common.holders')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ tokenCountersQuery.isPlaceholderData }>
@@ -171,10 +171,10 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Number of transfer for the token"
+        hint={t('tokens.common.number_of_transfer_for_the_token')}
         isLoading={ tokenQuery.isPlaceholderData }
       >
-        Transfers
+        {t('tokens.common.transfers')}
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ tokenCountersQuery.isPlaceholderData }>
@@ -188,7 +188,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
             hint={t('tokens.common.number_of_digits_that_come_aft')}
             isLoading={ tokenQuery.isPlaceholderData }
           >
-            Decimals
+            {t('tokens.common.decimals')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ tokenQuery.isPlaceholderData } minW={ 6 }>
@@ -212,7 +212,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
           <DetailedInfo.ItemLabel
             hint={t('tokens.common.link_to_the_dapp')}
           >
-            Dapp
+            {t('tokens.common.dapp')}
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue
             py="1px"

@@ -1,4 +1,4 @@
-import { createListCollection, Flex } from '@chakra-ui/react';
+import { Box, createListCollection, Flex } from '@chakra-ui/react';
 import { capitalize } from 'es-toolkit';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -21,7 +21,7 @@ interface Props {
 
 type DataType = 'hex' | 'text' | 'address' | 'number';
 
-const VALUE_CONVERTERS: Record<DataType, (hex: string) => string> = {
+const VALUE_CONVERTERS: Record<DataType, (hex: string, t?: (key: string, params?: Record<string, any>) => string) => string> = {
   hex: (hex) => hex,
   text: hexToUtf8,
   address: hexToAddress,
@@ -44,18 +44,52 @@ const LogTopic = ({ hex, index, isLoading }: Props) => {
     setSelectedDataType(details.value[0] as DataType);
   }, []);
 
-  const value = VALUE_CONVERTERS[selectedDataType.toLowerCase() as Lowercase<DataType>](hex);
+  const value = selectedDataType === 'text' ? 
+    VALUE_CONVERTERS[selectedDataType.toLowerCase() as Lowercase<DataType>](hex, t) :
+    VALUE_CONVERTERS[selectedDataType.toLowerCase() as Lowercase<DataType>](hex);
 
   const content = (() => {
-  const { t } = useTranslation();
     switch (selectedDataType) {
       case 'hex':
-      case 'number':
-      case 'text': {
+      case 'number': {
         return (
           <>
             <Skeleton loading={ isLoading } overflow="hidden" whiteSpace="nowrap">
               <HashStringShortenDynamic hash={ value }/>
+            </Skeleton>
+            <CopyToClipboard text={ value } isLoading={ isLoading }/>
+          </>
+        );
+      }
+      case 'text': {
+        const isLongText = value.length > 50;
+        const hasError = value.startsWith('[') && value.includes(']');
+
+        return (
+          <>
+            <Skeleton loading={ isLoading } overflow="hidden">
+              { isLongText ? (
+                <Box
+                  title={ value }
+                  wordBreak="break-all"
+                  color={ hasError ? 'orange.500' : 'inherit' }
+                  style={{
+                    display: '-webkit-box',
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                  }}
+                >
+                  { value }
+                </Box>
+              ) : (
+                <Box
+                  wordBreak="break-all"
+                  color={ hasError ? 'orange.500' : 'inherit' }
+                >
+                  { value }
+                </Box>
+              ) }
             </Skeleton>
             <CopyToClipboard text={ value } isLoading={ isLoading }/>
           </>
@@ -95,7 +129,7 @@ const LogTopic = ({ hex, index, isLoading }: Props) => {
           width="fit-content"
         >
           <SelectControl w="105px" loading={ isLoading }>
-            <SelectValueText placeholder={t('transactions.common.data_type')}/>
+            <SelectValueText placeholder={ t('transactions.common.data_type') }/>
           </SelectControl>
           <SelectContent>
             { collection.items.map((item) => (

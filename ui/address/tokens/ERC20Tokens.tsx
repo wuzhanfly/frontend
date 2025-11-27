@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useIsMobile from 'lib/hooks/useIsMobile';
 import ActionBar from 'ui/shared/ActionBar';
@@ -15,6 +16,7 @@ type Props = {
 };
 
 const ERC20Tokens = ({ tokensQuery }: Props) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
 
   const { isError, isPlaceholderData, data, pagination } = tokensQuery;
@@ -43,7 +45,7 @@ const ERC20Tokens = ({ tokensQuery }: Props) => {
     <DataListDisplay
       isError={ isError }
       itemsNum={ data?.items.length }
-      emptyText="There are no tokens of selected type."
+      emptyText={ t('addresses.common.there_are_no_tokens_of_selected_type') }
       actionBar={ actionBar }
     >
       { content }

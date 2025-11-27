@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -13,6 +14,7 @@ interface Props extends LinkProps {
 }
 
 const ContractDetailsVerificationButton = ({ isLoading, addressHash, ...rest }: Props) => {
+  const { t } = useTranslation();
 
   const href = config.features.opSuperchain.isEnabled ?
   // TODO @tom2drum adjust URL to Vera
@@ -31,7 +33,7 @@ const ContractDetailsVerificationButton = ({ isLoading, addressHash, ...rest }: 
         size="sm"
         loadingSkeleton={ isLoading }
       >
-        Verify & publish
+        { t('addresses.common.verify_and_publish') }
       </Button>
     </Link>
   );

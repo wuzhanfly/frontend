@@ -50,7 +50,7 @@ const AddressCsvExportLink = ({ className, address, params, isLoading, chainData
         textStyle="sm"
       >
         <IconSvg name="files/csv" boxSize={ 5 }/>
-        <chakra.span ml={ 1 } hideBelow="lg">Download</chakra.span>
+        <chakra.span ml={ 1 } hideBelow="lg">{ t('addresses.common.download') }</chakra.span>
       </Link>
     </Tooltip>
   );

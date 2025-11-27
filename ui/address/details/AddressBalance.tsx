@@ -1,5 +1,6 @@
 import { useQueryClient } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SocketMessage } from 'lib/socket/types';
 import type { Address } from 'types/api/address';
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const AddressBalance = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
   const [ lastBlockNumber, setLastBlockNumber ] = React.useState<number>(data.block_number_balance_updated_at || 0);
   const queryClient = useQueryClient();
 
@@ -68,10 +70,10 @@ const AddressBalance = ({ data, isLoading }: Props) => {
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint={ `${ currencyUnits.ether } balance` }
+        hint={ t('addresses.common.ether_balance_hint', { currency: currencyUnits.ether }) }
         isLoading={ isLoading }
       >
-        Balance
+        { t('addresses.common.balance') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue multiRow>
         <CurrencyValue

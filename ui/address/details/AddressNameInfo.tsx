@@ -21,7 +21,7 @@ const AddressNameInfo = ({ data, isLoading }: Props) => {
           hint={ t('addresses.common.token_name_and_symbol') }
           isLoading={ isLoading }
         >
-          Token name
+          { t('addresses.common.token_name') }
         </DetailedInfo.ItemLabel>
         <DetailedInfo.ItemValue>
           <TokenEntity
@@ -42,7 +42,7 @@ const AddressNameInfo = ({ data, isLoading }: Props) => {
           hint={ t('addresses.common.the_name_found_in_the_source_c') }
           isLoading={ isLoading }
         >
-          Contract name
+          { t('addresses.common.contract_name') }
         </DetailedInfo.ItemLabel>
         <DetailedInfo.ItemValue>
           <Skeleton loading={ isLoading }>
@@ -60,7 +60,7 @@ const AddressNameInfo = ({ data, isLoading }: Props) => {
           hint={ t('addresses.common.the_name_of_the_validator') }
           isLoading={ isLoading }
         >
-          Validator name
+          { t('addresses.common.validator_name') }
         </DetailedInfo.ItemLabel>
         <DetailedInfo.ItemValue>
           <Skeleton loading={ isLoading }>

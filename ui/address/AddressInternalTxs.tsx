@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useIsMounted from 'lib/hooks/useIsMounted';
 import { apos } from 'toolkit/utils/htmlEntities';
@@ -19,6 +20,7 @@ type Props = {
 };
 const AddressInternalTxs = ({ shouldRender = true, isQueryEnabled = true }: Props) => {
   const isMounted = useIsMounted();
+  const { t } = useTranslation();
 
   const { hash, query, filterValue, onFilterChange } = useAddressInternalTxsQuery({ enabled: isQueryEnabled });
   const { data, isPlaceholderData, isError, pagination } = query;
@@ -60,8 +62,8 @@ const AddressInternalTxs = ({ shouldRender = true, isQueryEnabled = true }: Prop
     <DataListDisplay
       isError={ isError }
       itemsNum={ data?.items.length }
-      filterProps={{ emptyFilteredText: `Couldn${ apos }t find any transaction that matches your query.`, hasActiveFilters: Boolean(filterValue) }}
-      emptyText="There are no internal transactions for this address."
+      filterProps={{ emptyFilteredText: t('addresses.common.couldnt_find_any_transaction_that_matches_your_query'), hasActiveFilters: Boolean(filterValue) }}
+      emptyText={ t('addresses.common.there_are_no_internal_transactions_for_this_address') }
       actionBar={ actionBar }
     >
       { content }

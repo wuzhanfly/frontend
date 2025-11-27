@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import type { UseQueryResult } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressCoinBalanceHistoryResponse } from 'types/api/address';
 import type { PaginationParams } from 'ui/shared/pagination/types';
@@ -25,6 +26,7 @@ interface Props {
 }
 
 const AddressCoinBalanceHistory = ({ query }: Props) => {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
   const chainData = getChainDataForList(multichainContext);
 
@@ -35,14 +37,14 @@ const AddressCoinBalanceHistory = ({ query }: Props) => {
           <TableHeaderSticky top={ query.pagination.isVisible ? ACTION_BAR_HEIGHT_DESKTOP : 0 }>
             <TableRow>
               { chainData && <TableColumnHeader width="38px"/> }
-              <TableColumnHeader width="20%">Block</TableColumnHeader>
-              <TableColumnHeader width="20%">Txn</TableColumnHeader>
+              <TableColumnHeader width="20%">{ t('addresses.common.block') }</TableColumnHeader>
+              <TableColumnHeader width="20%">{ t('addresses.common.txn') }</TableColumnHeader>
               <TableColumnHeader width="20%">
-                Timestamp
+                { t('addresses.common.timestamp') }
                 <TimeFormatToggle/>
               </TableColumnHeader>
-              <TableColumnHeader width="20%" isNumeric pr={ 1 }>Balance { currencyUnits.ether }</TableColumnHeader>
-              <TableColumnHeader width="20%" isNumeric>Delta</TableColumnHeader>
+              <TableColumnHeader width="20%" isNumeric pr={ 1 }>{ t('addresses.common.balance') } { currencyUnits.ether }</TableColumnHeader>
+              <TableColumnHeader width="20%" isNumeric>{ t('addresses.common.delta') }</TableColumnHeader>
             </TableRow>
           </TableHeaderSticky>
           <TableBody>
@@ -83,7 +85,7 @@ const AddressCoinBalanceHistory = ({ query }: Props) => {
       mt={ 8 }
       isError={ query.isError }
       itemsNum={ query.data?.items.length }
-      emptyText="There is no coin balance history for this address."
+      emptyText={ t('addresses.common.there_is_no_coin_balance_history_for_this_address') }
       actionBar={ actionBar }
     >
       { content }

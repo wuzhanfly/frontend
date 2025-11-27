@@ -1,7 +1,3 @@
-#!/bin/bash
-
-# remove previous assets
-rm -rf ./public/assets/configs
 rm -rf ./public/assets/multichain
 rm -rf ./public/assets/envs.js
 

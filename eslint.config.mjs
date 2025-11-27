@@ -67,7 +67,6 @@ export default tseslint.config(
     'deploy/tools/',
     'public/',
     '.git/',
-    'next.config.js',
   ] },
 
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
@@ -466,6 +465,7 @@ export default tseslint.config(
     rules: {
       // for configs allow to consume env variables from process.env directly
       'no-restricted-properties': 'off',
+      'import-helpers/order-imports': 'off',
     },
   },
   {

@@ -78,7 +78,7 @@ ENV NEXT_PUBLIC_GIT_TAG=$GIT_TAG
 ARG NEXT_OPEN_TELEMETRY_ENABLED
 ENV NEXT_OPEN_TELEMETRY_ENABLED=$NEXT_OPEN_TELEMETRY_ENABLED
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 ### APP
 # Copy dependencies and source code
@@ -99,7 +99,7 @@ RUN set -a && \
 
 # Build app for production
 ENV NODE_OPTIONS="--max-old-space-size=4096"
-RUN yarn build
+RUN yarn build:next
 
 
 ### FEATURE REPORTER
@@ -166,7 +166,7 @@ COPY --from=builder /app/package.json ./package.json
 
 # Copy tools
 COPY --from=builder /app/deploy/tools/envs-validator/index.js ./envs-validator.js
-COPY --from=builder /app/deploy/tools/feature-reporter/index.js ./feature-reporter.js
+COPY --from=builder /app/deploy/tools/feature-reporter/dist/entry.js ./feature-reporter.js
 COPY --from=builder /app/deploy/tools/multichain-config-generator/dist ./deploy/tools/multichain-config-generator/dist
 COPY --from=builder /app/deploy/tools/llms-txt-generator/dist ./deploy/tools/llms-txt-generator/dist
 COPY --from=builder /app/deploy/tools/essential-dapps-chains-config-generator/dist ./deploy/tools/essential-dapps-chains-config-generator/dist
@@ -210,6 +210,6 @@ USER nextjs
 
 EXPOSE 3000
 
-ENV PORT 3000
+ENV PORT=3000
 
 CMD ["node", "server.js"]

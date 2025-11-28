@@ -6,6 +6,8 @@ import type { NavItemInternal, NavItem, NavGroupItem } from 'types/client/naviga
 import config from 'configs/app';
 import { rightLineArrow } from 'toolkit/utils/htmlEntities';
 
+const marketplaceFeature = config.features.marketplace;
+
 interface ReturnType {
   mainNavItems: Array<NavItem | NavGroupItem>;
   accountNavItems: Array<NavItem>;
@@ -38,7 +40,7 @@ export default function useNavItems(): ReturnType {
       text: 'Blocks',
       nextRoute: { pathname: '/blocks' as const },
       icon: 'block',
-      isActive: pathname === '/blocks' || pathname === '/block/[height_or_hash]' || pathname === '/chain/[chain-slug]/block/[height_or_hash]',
+      isActive: pathname === '/blocks' || pathname === '/block/[height_or_hash]' || pathname === '/chain/[chain_slug]/block/[height_or_hash]',
     };
     const txs: NavItem | null = {
       text: 'Transactions',
@@ -48,7 +50,7 @@ export default function useNavItems(): ReturnType {
         // sorry, but this is how it was designed
         (pathname === '/txs' && (!config.features.zetachain.isEnabled || !tab || !tab.includes('cctx'))) ||
         pathname === '/tx/[hash]' ||
-        pathname === '/chain/[chain-slug]/tx/[hash]',
+        pathname === '/chain/[chain_slug]/tx/[hash]',
     };
     const cctxs: NavItem | null = config.features.zetachain.isEnabled ? {
       text: 'Cross-chain transactions',
@@ -72,7 +74,7 @@ export default function useNavItems(): ReturnType {
       text: 'User operations',
       nextRoute: { pathname: '/ops' as const },
       icon: 'user_op',
-      isActive: pathname === '/ops' || pathname === '/op/[hash]' || pathname === '/chain/[chain-slug]/op/[hash]',
+      isActive: pathname === '/ops' || pathname === '/op/[hash]' || pathname === '/chain/[chain_slug]/op/[hash]',
     } : null;
 
     const verifiedContracts: NavItem | null =
@@ -308,7 +310,6 @@ export default function useNavItems(): ReturnType {
     const otherNavItems: Array<NavItem> | Array<Array<NavItem>> = [
       config.features.opSuperchain.isEnabled ? {
         text: 'Verify contract',
-        // TODO @tom2drum adjust URL to Vera
         url: 'https://vera.blockscout.com',
       } : {
         text: 'Verify contract',
@@ -346,8 +347,8 @@ export default function useNavItems(): ReturnType {
         isActive: tokensNavItems.flat().some(item => isInternalItem(item) && item.isActive),
         subItems: tokensNavItems,
       },
-      config.features.marketplace.isEnabled ? {
-        text: 'DApps',
+      marketplaceFeature.isEnabled ? {
+        text: marketplaceFeature.titles.menu_item,
         nextRoute: { pathname: '/apps' as const },
         icon: 'apps',
         isActive: pathname.startsWith('/app') || pathname.startsWith('/essential-dapps'),

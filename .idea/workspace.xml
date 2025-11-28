@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d7a1813-fb03-4c68-997d-fa385c873196" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/envs/.env.zkbnb" beforeDir="false" afterPath="$PROJECT_DIR$/configs/envs/.env.zkbnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/ui/pages/Home.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="8d7a1813-fb03-4c68-997d-fa385c873196" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1761882465078</updated>
       <workItem from="1761882466714" duration="7126000" />
-      <workItem from="1764317106398" duration="2214000" />
+      <workItem from="1764317106398" duration="2609000" />
     </task>
     <servers />
   </component>

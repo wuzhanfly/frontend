@@ -7,10 +7,11 @@ import * as viemChains from 'viem/chains';
 import { pick } from 'es-toolkit';
 
 import { EssentialDappsConfig } from 'types/client/marketplace';
-import { ChainConfig } from 'types/multichain';
 import { getEnvValue, parseEnvJson } from 'configs/app/utils';
-import {uniq } from 'es-toolkit';
+import { uniq } from 'es-toolkit';
 import currentChainConfig from 'configs/app';
+import appConfig from 'configs/app';
+import { EssentialDappsChainConfig } from 'types/client/marketplace';
 
 const currentFilePath = fileURLToPath(import.meta.url);
 const currentDir = dirname(currentFilePath);
@@ -36,21 +37,10 @@ async function getChainscoutInfo(externalChainIds: Array<string>, currentChainId
   }
 }
 
-function getSlug(chainName: string) {
-  return chainName.toLowerCase().replace(/ /g, '-').replace(/[^a-z0-9-]/g, '');
-}
-
-function trimChainConfig(config: ChainConfig['config'], logoUrl: string | undefined) {
+function trimChainConfig(config: typeof appConfig, logoUrl: string | undefined) {
   return {
     ...pick(config, [ 'app', 'chain' ]),
     apis: pick(config.apis || {}, [ 'general' ]),
-    UI: {
-      navigation: {
-        icon: {
-          'default': logoUrl,
-        }
-      },
-    }
   };
 }
 
@@ -102,31 +92,36 @@ async function run() {
     }
 
     const chainscoutInfo = await getChainscoutInfo(enabledChains, currentChainConfig.chain.id);
-    const chainsWithoutUrl = Object.entries(chainscoutInfo.externals).filter(([_, explorerUrl]) => !explorerUrl);
+    const chainsWithoutUrl = chainscoutInfo.externals.filter(({ explorerUrl }) => !explorerUrl);
 
     if (chainsWithoutUrl.length > 0) {
-      console.log(`⚠️  For the following chains explorer url was not found: ${ chainsWithoutUrl.map(([chainId]) => chainId).join(', ') }. Therefore, they will not be enabled.`);
+      console.log(`⚠️  For the following chains explorer url was not found: ${ chainsWithoutUrl.map(({ id }) => id).join(', ') }. Therefore, they will not be enabled.`);
     }
-    const explorerUrls = Object.values(chainscoutInfo.externals).map(({ explorerUrl }) => explorerUrl);
+    const explorerUrls = chainscoutInfo.externals.map(({ explorerUrl }) => explorerUrl).filter(Boolean);
     console.log(`ℹ️  For ${ explorerUrls.length } chains explorer url was found in static config. Fetching parameters for each chain...`);
 
-    const chainConfigs = await Promise.all(explorerUrls.map(computeChainConfig)) as Array<ChainConfig['config']>;
+    const chainConfigs = await Promise.all(explorerUrls.map(computeChainConfig)) as Array<typeof appConfig>;
 
     const result = {
-      chains: [ currentChainConfig, ...chainConfigs ].map((config, index) => {
+      chains: [ currentChainConfig, ...chainConfigs ].map((config) => {
+        const chainId = config.chain.id;
+        const chainInfo = [...chainscoutInfo.externals, chainscoutInfo.current].find((chain) => chain?.id === chainId);
         const logoUrl = [...chainscoutInfo.externals, chainscoutInfo.current].find((chain) => chain?.id === config.chain.id)?.logoUrl;
-        const chainName = (config as { chain: { name: string } })?.chain?.name ?? `Chain ${ index + 1 }`;
+        const chainName = (config as { chain: { name: string } })?.chain?.name ?? `Chain ${ chainId }`;
         return {
-          slug: getSlug(chainName),
-          config: trimChainConfig(config, logoUrl),
+          id: chainId || '',
+          name: chainName,
+          logo: chainInfo?.logoUrl,
+          explorer_url: chainInfo?.explorerUrl || '',
+          app_config: trimChainConfig(config, logoUrl),
           contracts: Object.values(viemChains).find(({ id }) => id === Number(config.chain.id))?.contracts
-        };
+        } satisfies EssentialDappsChainConfig;
       }),
     };
-    
+
     const outputDir = resolvePath(currentDir, '../../../../public/assets/essential-dapps');
     mkdirSync(outputDir, { recursive: true });
-    
+
     const outputPathJson = resolvePath(outputDir, 'chains.json');
     writeFileSync(outputPathJson, JSON.stringify(result, null, 2));
 

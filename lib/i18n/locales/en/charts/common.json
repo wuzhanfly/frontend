@@ -1,0 +1,10 @@
+{
+  "charts.common.period": "Period",
+  "charts.common.day": "Day",
+  "charts.common.week": "Week", 
+  "charts.common.month": "Month",
+  "charts.common.year": "Year",
+  "charts.common.incomplete_resolution": "Incomplete {{resolution}}",
+  "charts.common.dates": "Dates",
+  "charts.common.date": "Date"
+}

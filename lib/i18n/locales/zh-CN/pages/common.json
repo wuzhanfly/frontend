@@ -1,0 +1,7 @@
+{
+  "block": {
+    "reorged_block": "重组区块 #",
+    "uncle_block": "叔块 #",
+    "block_number": "区块 #"
+  }
+}

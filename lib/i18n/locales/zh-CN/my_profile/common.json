@@ -1,0 +1,15 @@
+{
+  "email": {
+    "notifications": "通知",
+    "error": "错误"
+  },
+  "wallet": {
+    "my_linked_wallet": "我的关联钱包",
+    "address_used_for_login": "此钱包地址用于登录",
+    "participation_merits_program": "以及参与权益计划。",
+    "link_wallet": "关联钱包"
+  },
+  "fields": {
+    "email_notifications_tags": "用于监视列表通知和私有标签的邮箱"
+  }
+}

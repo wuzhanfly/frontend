@@ -1,0 +1,10 @@
+{
+  "verified_addresses.common.before_starting_make_sure_that": "开始之前，请确保：",
+  "verified_addresses.common.the_source_code_for_the_smart_contract_is_deployed_on_chain": "智能合约的源代码已部署在\"{chain}\"上。",
+  "verified_addresses.common.the_source_code_is_verified_if_not_yet_verified_you_can_use": "源代码已验证（如果尚未验证，您可以使用",
+  "verified_addresses.common.once_these_steps_are_complete_click_the_add_address_button_below_to_get_started": "完成这些步骤后，点击下面的添加地址按钮开始。",
+  "verified_addresses.common.you_need_a_valid_email_address_to_verify_contracts_please_add_your_email_to_your_account": "您需要有效的电子邮件地址来验证合约。请将您的电子邮件添加到您的账户中。",
+  "verified_addresses.table.token_info": "代币信息",
+  "verified_addresses.list_item.not_a_token": "非代币",
+  "verified_addresses.list_item.token_info": "代币信息"
+}

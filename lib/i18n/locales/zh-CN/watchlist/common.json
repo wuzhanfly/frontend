@@ -1,0 +1,17 @@
+{
+  "watchlist.common.remove_address_from_watch_list": "从监控列表中移除地址",
+  "watchlist.common.to_receive_notifications_you_need_to_add_an_email_to_your_profile": "要接收通知，您需要在个人资料中添加电子邮件。",
+  "watchlist.address_modal.email_notification_text": "邮件通知将发送到您账户关联的邮箱地址",
+  "watchlist.address_form.select_notification_types": "选择通知类型",
+  "watchlist.address_form.notification_methods": "通知方式",
+  "watchlist.address_form_notifications.erc_20": "${tokenStandardName}-20",
+  "watchlist.address_form_notifications.erc_721_1155_nft": "${tokenStandardName}-721, ${tokenStandardName}-1155 (NFT)",
+  "watchlist.address_form_notifications.erc_404": "${tokenStandardName}-404",
+  "watchlist.watch_list_item.private_tag": "私有标签",
+  "watchlist.watch_list_item.email_notification": "邮件通知",
+  "watchlist.watch_list_address_item.balance": "余额",
+  "watchlist.watch_list_address_item.tokens": "代币：",
+  "watchlist.watch_list_address_item.net_worth": "净资产",
+  "watchlist.delete_address_modal.address_will_be_deleted": "地址将被删除",
+  "watchlist.watchlist_email_alert.receive_notifications_text": "您将收到此地址的通知"
+}

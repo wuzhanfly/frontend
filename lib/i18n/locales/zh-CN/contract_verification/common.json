@@ -1,0 +1,21 @@
+{
+  "contract_verification.common.contract_verification_via_vyper_standard_json_input": "通过 Vyper 进行合约验证（标准 JSON 输入）",
+  "contract_verification.common.standard_input_json": "标准输入 JSON",
+  "contract_verification.common.verify_and_publish_contract": "验证并发布合约",
+  "contract_verification.common.license_type_placeholder": "合约许可证",
+  "contract_verification.common.license_type_description": "为遵循最佳实践，建议所有合约源代码持有者、发布者和作者为其提供的已验证合约源代码指定相应的许可证。",
+  "contract_verification.common.contract_address_to_verify": "要验证的合约地址",
+  "contract_verification.common.smart_contract_address_placeholder": "智能合约 / 地址 (0x...)",
+  "contract_verification.common.currently_supports_methods": "目前 Blockscout 支持 {{count}} 种合约验证方法",
+  "contract_verification.common.verification_method_placeholder": "验证方法（编译器类型）",
+  "contract_verification.common.flattened_code_description": "通过单个文件验证",
+  "contract_verification.common.multi_part_description": "验证多部分 Solidity 文件",
+  "contract_verification.common.sourcify_description": "通过 Sourcify 验证",
+  "contract_verification.common.standard_input_description": "使用标准输入 JSON 文件验证",
+  "contract_verification.common.vyper_code_description": "验证 Vyper 合约",
+  "contract_verification.common.vyper_multi_part_description": "验证多部分 Vyper 文件",
+  "contract_verification.common.vyper_standard_input_description": "使用标准输入 JSON 文件验证 Vyper 合约",
+  "contract_verification.common.solidity_hardhat_description": "通过 Hardhat 插件验证",
+  "contract_verification.common.solidity_foundry_description": "通过 Foundry 验证",
+  "contract_verification.common.stylus_github_repository_description": "通过 GitHub 仓库验证 Stylus 合约"
+}

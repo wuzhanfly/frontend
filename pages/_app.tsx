@@ -16,6 +16,7 @@ import { RewardsContextProvider } from 'lib/contexts/rewards';
 import { SettingsContextProvider } from 'lib/contexts/settings';
 import { initGrowthBook } from 'lib/growthbook/init';
 import useLoadFeatures from 'lib/growthbook/useLoadFeatures';
+import GlobalI18nProvider from 'lib/i18n/GlobalI18nProvider';
 import { clientConfig as rollbarConfig, Provider as RollbarProvider } from 'lib/rollbar';
 import { SocketProvider } from 'lib/socket/context';
 import { Provider as ChakraProvider } from 'toolkit/chakra/provider';
@@ -81,25 +82,27 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
           { ...ERROR_SCREEN_STYLES }
           Container={ AppErrorGlobalContainer }
         >
-          <Web3ModalProvider>
-            <AppContextProvider pageProps={ pageProps }>
-              <QueryClientProvider client={ queryClient }>
-                <GrowthBookProvider growthbook={ growthBook }>
-                  <SocketProvider url={ socketUrl }>
-                    <RewardsContextProvider>
-                      <MarketplaceContextProvider>
-                        <SettingsContextProvider>
-                          { content }
-                        </SettingsContextProvider>
-                      </MarketplaceContextProvider>
-                    </RewardsContextProvider>
-                  </SocketProvider>
-                </GrowthBookProvider>
-                <ReactQueryDevtools buttonPosition="bottom-left" position="left"/>
-                <GoogleAnalytics/>
-              </QueryClientProvider>
-            </AppContextProvider>
-          </Web3ModalProvider>
+          <GlobalI18nProvider>
+            <Web3ModalProvider>
+              <AppContextProvider pageProps={ pageProps }>
+                <QueryClientProvider client={ queryClient }>
+                  <GrowthBookProvider growthbook={ growthBook }>
+                    <SocketProvider url={ socketUrl }>
+                      <RewardsContextProvider>
+                        <MarketplaceContextProvider>
+                          <SettingsContextProvider>
+                            { content }
+                          </SettingsContextProvider>
+                        </MarketplaceContextProvider>
+                      </RewardsContextProvider>
+                    </SocketProvider>
+                  </GrowthBookProvider>
+                  <ReactQueryDevtools buttonPosition="bottom-left" position="left"/>
+                  <GoogleAnalytics/>
+                </QueryClientProvider>
+              </AppContextProvider>
+            </Web3ModalProvider>
+          </GlobalI18nProvider>
         </AppErrorBoundary>
       </RollbarProvider>
     </ChakraProvider>

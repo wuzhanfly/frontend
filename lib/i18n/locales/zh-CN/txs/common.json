@@ -1,0 +1,19 @@
+{
+  "txs.common.blobs_count": "Blobs: {{count}}",
+  "txs.common.transaction_fee": "交易费用",
+  "txs.common.gas_limit_usage": "交易的Gas限制和使用量",
+  "txs.common.gas_fees_gwei": "Gas费用 ({{unit}})",
+  "txs.common.txn_type_label": "交易类型: ",
+  "txs.common.nonce_label": "随机数: ",
+  "txs.common.position_label": "位置: ",
+  "txs.common.more_details": "更多详情",
+  "txs.common.method_label": "方法 ",
+  "txs.common.fee_label": "费用",
+  "txs.common.base_fee_label": "基础费用: ",
+  "txs.common.max_fee_label": "最高费用: ",
+  "txs.common.max_priority_fee_label": "最高优先费用: ",
+  "txs.common.eip_1559": "EIP-1559",
+  "txs.common.view_all": "查看全部",
+  "txs.common.remasc": "REMASC",
+  "txs.common.empty_filtered_text": "找不到与您的查询匹配的任何交易。"
+}

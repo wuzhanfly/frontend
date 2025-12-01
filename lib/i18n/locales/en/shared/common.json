@@ -1,0 +1,22 @@
+{
+  "shared.common.delete_modal.delete": "Delete",
+  "shared.common.sponsored_banner_advertisement": "Sponsored banner advertisement",
+  "shared.common.detailed_info_sponsored_item.sponsored": "Sponsored",
+  "shared.common.token_entity.scam_warning": "This token has been flagged as a potential scam. You enabled the display of flagged tokens in the explorer — proceed with caution.",
+  "shared.common.tx_entity.pending_update_warning": "This transaction is part of a block that is being re-synced. Details may be incomplete until the update is finished.",
+  "shared.common.token_transfer": "Token transfer",
+  "shared.common.transaction": "Transaction",
+  "shared.common.fast": "Fast",
+  "shared.common.slow": "Slow",
+  "shared.common.search": "Search",
+  "shared.common.728x90": "728x90",
+  "shared.common.transaction_info": "Transaction info",
+  "shared.common.prev_page": "Previous page",
+  "shared.common.toggle_time_format": "Toggle time format",
+  "shared.common.method_id": "Method ID",
+  "shared.common.call": "Call",
+  "shared.common.the_contract_was_successfully_verified": "The contract was successfully verified",
+  "shared.common.log_index": "Log index",
+  "shared.common.invalid_utf8_with_hex": "[Invalid UTF-8] {{hex}}",
+  "shared.common.decode_error_with_hex": "[Decode error] {{hex}}"
+}

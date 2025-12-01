@@ -1,0 +1,13 @@
+{
+  "address_verification.common.specified_address_does_not_exist_or_is_eoa": "Specified address either does not exist or is EOA.",
+  "address_verification.common.ownership_already_verified_by_this_account": "Ownership of this contract address is already verified by this account.",
+  "address_verification.common.ownership_already_verified_by_another_account": "Ownership of this contract address is already verified by another account.",
+  "address_verification.common.please_follow_these_steps_to_verify": "The contract source code you entered is not yet verified. Please follow these steps to ",
+  "address_verification.common.enter_contract_address_description": "Enter the contract address you are verifying ownership for.",
+  "address_verification.common.signature_could_not_be_processed": "The signature could not be processed.",
+  "address_verification.common.verification_message_expired": "This verification message has expired. Add the contract address to restart the process.",
+  "address_verification.common.not_creator_owner_of_contract": "This address is not a creator/owner of the requested contract and cannot claim ownership. Only can verify ownership of this contract.",
+  "address_verification.common.unable_to_process_verification": "We are not able to process the verify account ownership for this contract address. Kindly for further assistance.",
+  "address_verification.common.sign_via_web3_wallet": "Sign via Web3 wallet",
+  "address_verification.common.sign_manually": "Sign manually"
+}

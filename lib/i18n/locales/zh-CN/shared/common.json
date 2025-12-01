@@ -1,0 +1,22 @@
+{
+  "shared.common.delete_modal.delete": "删除",
+  "shared.common.sponsored_banner_advertisement": "赞助横幅广告",
+  "shared.common.detailed_info_sponsored_item.sponsored": "赞助",
+  "shared.common.token_entity.scam_warning": "此代币已被标记为潜在诈骗。您已启用在浏览器中显示标记的代币 - 请谨慎操作。",
+  "shared.common.tx_entity.pending_update_warning": "此交易是正在重新同步的区块的一部分。更新完成之前，详细信息可能不完整。",
+  "shared.common.token_transfer": "代币转账",
+  "shared.common.transaction": "交易",
+  "shared.common.fast": "快速",
+  "shared.common.slow": "慢速",
+  "shared.common.search": "搜索",
+  "shared.common.728x90": "728x90",
+  "shared.common.transaction_info": "交易信息",
+  "shared.common.prev_page": "上一页",
+  "shared.common.toggle_time_format": "切换时间格式",
+  "shared.common.method_id": "方法ID",
+  "shared.common.call": "调用",
+  "shared.common.the_contract_was_successfully_verified": "合约已成功验证",
+  "shared.common.log_index": "日志索引",
+  "shared.common.invalid_utf8_with_hex": "[无效的 UTF-8] {{hex}}",
+  "shared.common.decode_error_with_hex": "[解码错误] {{hex}}"
+}

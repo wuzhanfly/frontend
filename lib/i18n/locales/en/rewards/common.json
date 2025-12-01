@@ -1,0 +1,39 @@
+{
+  "button": {
+    "earn_merits_for_using_blockscout": "Earn Merits for using Blockscout"
+  },
+  "daily_reward_claim_button": {
+    "next_claim_in": "Next claim in",
+    "claim": "Claim",
+    "merits": "Merits"
+  },
+  "activity_pass_card": {
+    "activity_pass": "Activity pass",
+    "grab_your": "Grab your",
+    "then_engage": "then engage with various Blockscout products and features to earn Merits every day!",
+    "learn_more": "Learn more"
+  },
+  "instances_modal": {
+    "choose_explorer": "Choose explorer",
+    "choose_blockscout_explorer": "Choose Blockscout explorer that you want to interact with and earn Merits"
+  },
+  "task_details_modal": {
+    "note_merits_only_earned": "Note: Merits are only earned on supported networks where the program is active."
+  },
+  "activity_tab": {
+    "period": "Period:",
+    "performance_rank_hint": "Your rank within a task group compared to other users in the same period. Higher rank = more Merits.",
+    "your_activity": "Your activity",
+    "use_blockscout_daily": "Use Blockscout and related products daily to earn Merits. Check each task for details and how to get started.",
+    "earn": "Earn",
+    "your_current_merit_count": "Your current Merit count is not final!",
+    "merits_calculated_based": "Merits are calculated based on the activity of all users and may increase or decrease by the end of the weekly period.",
+    "period_mobile": "Period",
+    "task_details": "Task details",
+    "vs_previous_week": "vs previous week",
+    "vs_previous_week_mobile": "vs previous week",
+    "metrics_not_updated": "Metrics are not updated in real time. Please allow up to one hour for your Performance Rank and earned Merits to reflect recent activity. If you experience any issues, feel free to reach out on",
+    "discord": "Discord",
+    "grab_activity_pass": "Grab Activity pass"
+  }
+}

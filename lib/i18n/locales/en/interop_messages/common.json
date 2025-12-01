@@ -1,0 +1,15 @@
+{
+  "interop_messages.table.message": "Message",
+  "interop_messages.table.timestamp": "Timestamp",
+  "interop_messages.table.status": "Status",
+  "interop_messages.table.source_tx": "Source tx",
+  "interop_messages.table.destination_tx": "Destination tx",
+  "interop_messages.table.sender": "Sender",
+  "interop_messages.table.in_out": "In/Out",
+  "interop_messages.table.target": "Target",
+  "interop_messages.list_item.source_tx": "Source tx",
+  "interop_messages.list_item.destination_tx": "Destination tx",
+  "interop_messages.additional_info.message_payload": "Message payload",
+  "interop_messages.source_tx.na": "N/A",
+  "interop_messages.destination_tx.na": "N/A"
+}

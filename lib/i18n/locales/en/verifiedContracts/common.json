@@ -1,0 +1,18 @@
+{
+  "verified_contracts.common.balance_ether": "Balance {{currency}}",
+  "verified_contracts.common.txs_count": "Txs count",
+  "verified_contracts.common.language": "Language",
+  "verified_contracts.common.compiler_version": "Compiler version",
+  "verified_contracts.common.zk_compiler": "ZK compiler",
+  "verified_contracts.common.optimization": "Optimization",
+  "verified_contracts.common.constructor_args": "Constructor args",
+  "verified_contracts.common.verified": "Verified",
+  "verified_contracts.common.license": "License",
+  "verified_contracts.common.contract": "Contract",
+  "verified_contracts.common.balance": "Balance",
+  "verified_contracts.common.transactions": "Transactions",
+  "verified_contracts.common.language_compiler_version": "Language & compiler version",
+  "verified_contracts.common.settings": "Settings",
+  "verified_contracts.common.total_contracts": "Total contracts",
+  "verified_contracts.common.verified_contracts": "Verified contracts"
+}

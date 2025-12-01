@@ -1,0 +1,6 @@
+{
+  "api_docs.eth_rpc.description": "In addition to the custom RPC endpoints documented here, the Blockscout ETH RPC API supports 3 methods in the exact format specified for Ethereum nodes, see the Ethereum JSON-RPC Specification for more details.",
+  "api_docs.eth_rpc.view_examples": "View examples",
+  "api_docs.rpc.description": "This API is provided for developers transitioning applications from Etherscan to BlockScout and applications requiring general API and data support. It supports GET and POST requests.",
+  "api_docs.rpc.view_modules": "View modules"
+}

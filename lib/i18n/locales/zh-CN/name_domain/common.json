@@ -1,0 +1,18 @@
+{
+  "details": {
+    "registration_date": "注册日期",
+    "expiration_date": "过期日期",
+    "resolver": "解析器",
+    "registrant": "注册人",
+    "owner": "所有者",
+    "manager": "管理者",
+    "wrapped_token_id": "包装代币ID",
+    "other_addresses": "其他地址"
+  },
+  "history": {
+    "txn_hash": "交易哈希",
+    "timestamp": "时间戳",
+    "from": "来自",
+    "method": "方法"
+  }
+}

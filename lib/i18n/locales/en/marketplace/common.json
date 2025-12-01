@@ -1,0 +1,18 @@
+{
+  "marketplace.empty_search_result.no_favorite_apps": "You don't have any favorite apps.",
+  "marketplace.empty_search_result.add_to_favorites": "Click on the icon on the app's card to add it to Favorites.",
+  "marketplace.empty_search_result.no_matching_apps": "No matching apps found.",
+  "marketplace.empty_search_result.groundbreaking_idea": "Have a groundbreaking idea or app suggestion?",
+  "marketplace.empty_search_result.share_with_us": "Share it with us",
+  "marketplace.app_card.info": "Info",
+  "marketplace.app_modal.launch_app": "Launch app",
+  "marketplace.app_modal.by_author": "By ",
+  "marketplace.rating.sending_feedback": "Sending your feedback",
+  "marketplace.rating.how_was_experience": "How was your experience?",
+  "marketplace.common.connect_a_wallet_to_revoke_app": "Connect a wallet to revoke app",
+  "marketplace.common.connected": "Connected",
+  "marketplace.common.not_connected": "Not connected",
+  "marketplace.common.total_approvals": "Total approvals",
+  "marketplace.common.total_value_at_risk": "Total value at risk",
+  "marketplace.common.view_details": "View details"
+}

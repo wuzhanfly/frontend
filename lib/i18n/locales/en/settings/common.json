@@ -1,0 +1,16 @@
+{
+  "settings.common.website_settings": "Website settings",
+  "settings.common.user_settings": "User settings",
+  "settings.common.color_theme": "Color theme",
+  "settings.common.english": "English",
+  "settings.common.chinese": "中文",
+  "settings.common.flag_us": "🇺🇸",
+  "settings.common.flag_china": "🇨🇳",
+  "settings.common.settings": "Settings",
+  "settings.common.language": "Language",
+  "settings.common.color_theme_label": "Color theme",
+  "settings.common.color_theme_light": "Light",
+  "settings.common.color_theme_dim": "Dim",
+  "settings.common.color_theme_midnight": "Midnight",
+  "settings.common.color_theme_dark": "Dark"
+}

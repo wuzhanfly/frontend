@@ -1,0 +1,14 @@
+{
+  "messages.table.l1_block": "L1 block",
+  "messages.table.from": "From",
+  "messages.table.message_number": "Message #",
+  "messages.table.l2_transaction": "L2 transaction",
+  "messages.table.timestamp": "Timestamp",
+  "messages.table.status": "Status",
+  "messages.table.l1_transaction": "L1 transaction",
+  "messages.table_item.na": "N/A",
+  "messages.table_item.ready_for_relay": "Ready for relay",
+  "messages.list_item.age": "Age",
+  "messages.list_item.na": "N/A",
+  "messages.list_item.ready_for_relay": "Ready for relay"
+}

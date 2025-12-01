@@ -1,0 +1,18 @@
+{
+  "transaction": {
+    "add_transaction_tag": "Add transaction tag"
+  },
+  "address": {
+    "edit_address_tag": "Edit address tag"
+  },
+  "transaction_table": {
+    "transaction": "Transaction",
+    "private_tag": "Private tag"
+  },
+  "transaction_list_item": {
+    "private_tag": "Private tag"
+  },
+  "address_list_item": {
+    "private_tag": "Private tag"
+  }
+}

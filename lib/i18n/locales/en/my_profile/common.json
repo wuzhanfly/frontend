@@ -1,0 +1,15 @@
+{
+  "email": {
+    "notifications": "Notifications",
+    "error": "Error"
+  },
+  "wallet": {
+    "my_linked_wallet": "My linked wallet",
+    "address_used_for_login": "This wallet address is used for login",
+    "participation_merits_program": "and participation in the Merits Program.",
+    "link_wallet": "Link wallet"
+  },
+  "fields": {
+    "email_notifications_tags": "Email for watch list notifications and private tags"
+  }
+}

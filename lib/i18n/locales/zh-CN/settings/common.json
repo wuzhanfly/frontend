@@ -1,0 +1,16 @@
+{
+  "settings.common.website_settings": "网站设置",
+  "settings.common.user_settings": "用户设置",
+  "settings.common.color_theme": "颜色主题",
+  "settings.common.english": "英语",
+  "settings.common.chinese": "中文",
+  "settings.common.flag_us": "🇺🇸",
+  "settings.common.flag_china": "🇨🇳",
+  "settings.common.settings": "设置",
+  "settings.common.language": "语言",
+  "settings.common.color_theme_label": "颜色主题",
+  "settings.common.color_theme_light": "明亮",
+  "settings.common.color_theme_dim": "昏暗",
+  "settings.common.color_theme_midnight": "午夜",
+  "settings.common.color_theme_dark": "暗黑"
+}

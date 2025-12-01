@@ -1,0 +1,16 @@
+{
+  "address.common.current_address": "Current address",
+  "address.common.current_contract": "Current contract",
+  "address.common.this_contract_has_been_partially_verified_using": "This contract has been partially verified using",
+  "address.common.this_contract_has_been_verified_using": "This contract has been verified using",
+  "address.common.this_contract_has_been_partially_verified_via_sourcify": "This contract has been partially verified via Sourcify.",
+  "address.common.this_contract_has_been_verified_via_sourcify": "This contract has been verified via Sourcify.",
+  "address.common.view_contract_in_sourcify_repository": "View contract in Sourcify repository",
+  "address.contract.verification_source.verified_using": "This contract has been {{partiallyText}}verified using",
+  "address.contract.verification_source.verified_via_sourcify": "This contract has been {{partiallyText}}verified via Sourcify.",
+  "address.contract_details.current_address": "Current address",
+  "address.contract_details.current_contract": "Current contract",
+  "address.contract_methods.delegate_address": "Delegate address",
+  "address.contract_methods.implementation_address": "Implementation address",
+  "address.details.at_txn": " at txn "
+}

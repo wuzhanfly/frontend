@@ -1,0 +1,23 @@
+{
+  "gas_tracker.common.last_updated": "最后更新",
+  "gas_tracker.common.no_recent_data_available": "暂无最新数据",
+  "gas_tracker.common.gas_price_history": "Gas 价格历史",
+  "gas_tracker.common.charts_and_stats": "图表与统计",
+  "gas_tracker.common.faq": "常见问题",
+  "gas_tracker.common.normal": "正常",
+  "gas_tracker.common.per_transaction": "每笔交易",
+  "gas_tracker.common.base": "基础",
+  "gas_tracker.common.priority": "优先",
+  "gas_tracker.common.network_utilization": "网络利用率",
+  "gas_tracker.common.load": "负载",
+  "gas_tracker.common.last_n_blocks": "最近 {{count}} 个区块",
+  "gas_tracker.common.network_utilization_description": "网络利用率（最近 50 个区块）：",
+  "gas_tracker.common.what_does_gas_refer_to_on_the_blockchain": "在区块链上，Gas 是什么意思？",
+  "gas_tracker.common.how_can_i_check_chain_gas_fees": "如何查看 {{chainName}} 的 gas 费用？",
+  "gas_tracker.common.you_can_easily_check_live_chain_gas_fees": "您可以在此页面轻松查看 {{chainName}} 的实时 gas 费用。Gas 追踪器以 {{currencyUnit}} 为单位显示当前 gas 价格，以及不同优先级别（快速、正常、慢速）的预估交易时间。",
+  "gas_tracker.common.what_is_the_average_gas_fee_for_chain_transactions": "{{chainName}} 交易的平均 gas 费用是多少？",
+  "gas_tracker.common.the_average_gas_fee_for_chain_transactions": "{{chainName}} 交易的平均 gas 费用根据网络拥堵情况而变化。查看上方当前的 gas 价格，了解实时费率并相应地规划您的交易。",
+  "gas_tracker.common.how_does_blockscout_calculate_gas_fees": "Blockscout 如何计算 gas 费用？",
+  "gas_tracker.common.blockscout_calculates_gas_fees": "Blockscout 基于区块链的最近交易数据计算 gas 费用。我们分析最近挖出区块的 gas 价格，为不同交易优先级别提供准确的估算。",
+  "gas_tracker.common.seconds_short": "秒"
+}

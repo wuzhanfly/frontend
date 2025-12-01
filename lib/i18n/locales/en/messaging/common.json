@@ -1,0 +1,9 @@
+{
+  "messaging.common.l1_block": "L1 block",
+  "messaging.common.from": "From",
+  "messaging.common.message_": "Message #",
+  "messaging.common.l2_transaction": "L2 transaction",
+  "messaging.common.age": "Age",
+  "messaging.common.status": "Status",
+  "messaging.common.l1_transaction": "L1 transaction"
+}

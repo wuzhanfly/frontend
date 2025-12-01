@@ -1,0 +1,10 @@
+{
+  "games.capybara_runner.score_to_win_prize": "得分达到1000即可赢得特别奖品！",
+  "games.capybara_runner.unlocked_hidden_badge": "您解锁了一个隐藏徽章！",
+  "games.capybara_runner.eligible_to_claim_badge": "恭喜！您有资格领取一个史诗级隐藏徽章！",
+  "games.common.claim": "领取",
+  "games.puzzle15.put_pieces_together": "将碎片拼在一起并赢取奖品",
+  "games.puzzle15.click_square_to_move": "点击方块进行移动",
+  "games.puzzle15.unlocked_hidden_badge": "您解锁了一个隐藏徽章！",
+  "games.puzzle15.eligible_to_claim_badge": "恭喜！您有资格领取一个史诗级隐藏徽章！"
+}

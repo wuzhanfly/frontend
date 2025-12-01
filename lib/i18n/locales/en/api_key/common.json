@@ -1,0 +1,5 @@
+{
+  "api_key.delete_modal.api_key_for": "API key for",
+  "api_key.delete_modal.will_be_deleted": "will be deleted",
+  "api_key.table.api_key_token_limit": "API key token (limit {{limit}} keys)"
+}

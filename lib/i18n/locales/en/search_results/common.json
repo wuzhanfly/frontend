@@ -1,0 +1,16 @@
+{
+  "table_item": {
+    "items": "Items",
+    "learn_estimated_time": "Learn estimated time for this block to be created.",
+    "reorg": "Reorg",
+    "uncle": "Uncle",
+    "erc1155_total_supply": "Items",
+    "future_block_tooltip": "Learn estimated time for this block to be created."
+  },
+  "list_item": {
+    "reorg": "Reorg",
+    "uncle": "Uncle",
+    "learn_estimated_time": "Learn estimated time for this block to be created.",
+    "erc1155_total_supply": "Items"
+  }
+}

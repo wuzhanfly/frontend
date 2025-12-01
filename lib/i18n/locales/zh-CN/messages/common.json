@@ -1,0 +1,14 @@
+{
+  "messages.table.l1_block": "L1 区块",
+  "messages.table.from": "来自",
+  "messages.table.message_number": "消息 #",
+  "messages.table.l2_transaction": "L2 交易",
+  "messages.table.timestamp": "时间戳",
+  "messages.table.status": "状态",
+  "messages.table.l1_transaction": "L1 交易",
+  "messages.table_item.na": "N/A",
+  "messages.table_item.ready_for_relay": "准备中继",
+  "messages.list_item.age": "时间",
+  "messages.list_item.na": "N/A",
+  "messages.list_item.ready_for_relay": "准备中继"
+}

@@ -1,0 +1,17 @@
+{
+  "internal_txs.common.parent_txn_hash": "父交易哈希",
+  "internal_txs.common.type": "类型",
+  "internal_txs.common.block": "区块",
+  "internal_txs.common.from_to": "发送方/接收方",
+  "internal_txs.common.value": "价值",
+  "internal_txs.common.value_with_currency": "价值 {{currency}}",
+  "internal_txs.common.status": "状态",
+  "internal_txs.common.timestamp": "时间戳",
+  "internal_txs.common.call": "调用",
+  "internal_txs.common.delegate_call": "委托调用",
+  "internal_txs.common.static_call": "静态调用",
+  "internal_txs.common.create": "创建",
+  "internal_txs.common.create2": "创建2",
+  "internal_txs.common.selfdestruct": "自毁",
+  "internal_txs.common.reward": "奖励"
+}

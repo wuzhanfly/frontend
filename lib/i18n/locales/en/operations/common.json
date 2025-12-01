@@ -1,0 +1,14 @@
+{
+  "table": {
+    "status": "Status",
+    "operation": "Operation",
+    "timestamp": "Timestamp",
+    "sender": "Sender"
+  },
+  "list": {
+    "operation": "Operation",
+    "age": "Age",
+    "status": "Status",
+    "sender": "Sender"
+  }
+}

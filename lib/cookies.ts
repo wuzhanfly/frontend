@@ -21,6 +21,7 @@ export enum NAMES {
   HIDE_ADD_TO_WALLET_BUTTON = 'hide_add_to_wallet_button',
   UUID = 'uuid',
   SHOW_SCAM_TOKENS = 'show_scam_tokens',
+  LANGUAGE = 'language',
 }
 
 export function get(name?: NAMES | undefined | null, serverCookie?: string) {

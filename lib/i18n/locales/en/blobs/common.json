@@ -1,0 +1,12 @@
+{
+  "blobs.common.image": "Image",
+  "blobs.common.raw": "Raw",
+  "blobs.common.not_an_image": "Not an image",
+  "blobs.common.blob_data": "Blob data",
+  "blobs.common.blob_image_representation": "Blob image representation",
+  "blobs.common.commitment_to_the_data_in_the_": "Commitment to the data in the blob",
+  "blobs.common.blob_size_in_bytes": "Blob size in bytes",
+  "blobs.common.hash_of_the_transaction_with_t": "Hash of the transaction with this blob",
+  "blobs.common.this_blob_is_not_yet_indexed": "This blob is not yet indexed",
+  "blobs.common.blob_details": "Blob details"
+}

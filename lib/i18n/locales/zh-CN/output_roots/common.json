@@ -1,0 +1,16 @@
+{
+  "table": {
+    "l2_output_index": "L2 输出索引",
+    "timestamp": "时间戳",
+    "l2_block": "L2 区块 #",
+    "l1_txn_hash": "L1 交易哈希",
+    "output_root": "输出根"
+  },
+  "list": {
+    "l2_output_index": "L2 输出索引",
+    "age": "时间",
+    "l2_block": "L2 区块 #",
+    "l1_txn_hash": "L1 交易哈希",
+    "output_root": "输出根"
+  }
+}

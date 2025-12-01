@@ -1,0 +1,17 @@
+{
+  "internal_txs.common.parent_txn_hash": "Parent txn hash",
+  "internal_txs.common.type": "Type",
+  "internal_txs.common.block": "Block",
+  "internal_txs.common.from_to": "From/To",
+  "internal_txs.common.value": "Value",
+  "internal_txs.common.value_with_currency": "Value {{currency}}",
+  "internal_txs.common.status": "Status",
+  "internal_txs.common.timestamp": "Timestamp",
+  "internal_txs.common.call": "Call",
+  "internal_txs.common.delegate_call": "Delegate call",
+  "internal_txs.common.static_call": "Static call",
+  "internal_txs.common.create": "Create",
+  "internal_txs.common.create2": "Create2",
+  "internal_txs.common.selfdestruct": "Self-destruct",
+  "internal_txs.common.reward": "Reward"
+}

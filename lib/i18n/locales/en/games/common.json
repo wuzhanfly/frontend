@@ -1,0 +1,10 @@
+{
+  "games.capybara_runner.score_to_win_prize": "Score 1000 to win a special prize!",
+  "games.capybara_runner.unlocked_hidden_badge": "You unlocked a hidden badge!",
+  "games.capybara_runner.eligible_to_claim_badge": "Congratulations! You're eligible to claim an epic hidden badge!",
+  "games.common.claim": "Claim",
+  "games.puzzle15.put_pieces_together": "Put the pieces together and win a prize",
+  "games.puzzle15.click_square_to_move": "Click on a square to move it",
+  "games.puzzle15.unlocked_hidden_badge": "You unlocked a hidden badge!",
+  "games.puzzle15.eligible_to_claim_badge": "Congratulations! You're eligible to claim an epic hidden badge!"
+}

@@ -1,0 +1,9 @@
+{
+  "mega_eth.charts.real_time_statistics": "实时统计",
+  "mega_eth.charts.tps": "TPS",
+  "mega_eth.charts.megas_per_second": "MGas/s",
+  "mega_eth.charts.block_time": "区块时间 (ms)",
+  "mega_eth.status.initializing": "初始化中",
+  "mega_eth.status.refresh": "刷新",
+  "mega_eth.stats.megas_per_second": "MGas/s"
+}

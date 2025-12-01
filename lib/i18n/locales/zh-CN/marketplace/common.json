@@ -1,0 +1,18 @@
+{
+  "marketplace.empty_search_result.no_favorite_apps": "您没有任何收藏的应用。",
+  "marketplace.empty_search_result.add_to_favorites": "点击应用卡片上的图标将其添加到收藏夹。",
+  "marketplace.empty_search_result.no_matching_apps": "未找到匹配的应用。",
+  "marketplace.empty_search_result.groundbreaking_idea": "有一个突破性的想法或应用建议？",
+  "marketplace.empty_search_result.share_with_us": "与我们分享",
+  "marketplace.app_card.info": "信息",
+  "marketplace.app_modal.launch_app": "启动应用",
+  "marketplace.app_modal.by_author": "作者 ",
+  "marketplace.rating.sending_feedback": "正在发送您的反馈",
+  "marketplace.rating.how_was_experience": "您的体验如何？",
+  "marketplace.common.connect_a_wallet_to_revoke_app": "连接钱包以撤销应用",
+  "marketplace.common.connected": "已连接",
+  "marketplace.common.not_connected": "未连接",
+  "marketplace.common.total_approvals": "总授权数",
+  "marketplace.common.total_value_at_risk": "总风险价值",
+  "marketplace.common.view_details": "查看详情"
+}

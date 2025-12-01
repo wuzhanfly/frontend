@@ -1,0 +1,5 @@
+{
+  "mud_worlds.table.balance_ether": "余额 {{currency}}",
+  "mud_worlds.list_item.balance_ether": "余额 {{currency}}",
+  "mud_worlds.list_item.txn_count": "交易数量"
+}

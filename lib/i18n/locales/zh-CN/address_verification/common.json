@@ -1,0 +1,13 @@
+{
+  "address_verification.common.specified_address_does_not_exist_or_is_eoa": "指定地址不存在或是 EOA 账户。",
+  "address_verification.common.ownership_already_verified_by_this_account": "此合约地址的所有权已由此账户验证。",
+  "address_verification.common.ownership_already_verified_by_another_account": "此合约地址的所有权已由其他账户验证。",
+  "address_verification.common.please_follow_these_steps_to_verify": "您输入的合约源代码尚未验证。请按照以下步骤",
+  "address_verification.common.enter_contract_address_description": "输入您要验证所有权的合约地址。",
+  "address_verification.common.signature_could_not_be_processed": "无法处理签名。",
+  "address_verification.common.verification_message_expired": "此验证消息已过期。请添加合约地址以重新开始流程。",
+  "address_verification.common.not_creator_owner_of_contract": "此地址不是所请求合约的创建者/所有者，无法声明所有权。只能验证此合约的所有权。",
+  "address_verification.common.unable_to_process_verification": "我们无法处理此合约地址的账户所有权验证。请寻求进一步协助。",
+  "address_verification.common.sign_via_web3_wallet": "通过 Web3 钱包签名",
+  "address_verification.common.sign_manually": "手动签名"
+}

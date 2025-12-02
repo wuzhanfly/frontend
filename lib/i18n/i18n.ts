@@ -1,13 +1,16 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
+import * as cookies from 'lib/cookies';
+
 // 从 localStorage 获取保存的语言设置
 const getStoredLanguage = (): string | null => {
   if (typeof window === 'undefined') {
     return null;
   }
   try {
-    return localStorage.getItem('i18nextLng') || localStorage.getItem('language');
+    // return localStorage.getItem('i18nextLng') || localStorage.getItem('language');
+    return cookies.get(cookies.NAMES.LANGUAGE) || 'en';
   } catch (error) {
     console.error('Failed to read language from localStorage:', error);
     return null;
@@ -23,7 +26,7 @@ const resources = {
   en: {
     common: combinedEn,
   },
-  zh: {
+  'zh-CN': {
     common: combinedZh,
   },
 };

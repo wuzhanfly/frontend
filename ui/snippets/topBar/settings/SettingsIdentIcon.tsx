@@ -1,5 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import * as cookies from 'lib/cookies';
@@ -8,6 +9,7 @@ import { IDENTICONS } from 'lib/settings/identIcon';
 import SettingsSample from './SettingsSample';
 
 const SettingsIdentIcon = () => {
+  const { t } = useTranslation();
   const [ activeId, setActiveId ] = React.useState<string>();
 
   React.useEffect(() => {
@@ -32,7 +34,7 @@ const SettingsIdentIcon = () => {
 
   return (
     <div>
-      <Box fontWeight={ 600 }>Address settings</Box>
+      <Box fontWeight={ 600 }>{ t('settings.common.settings') }</Box>
       <Box color="text.secondary" mt={ 1 } mb={ 2 }>{ activeIdenticon?.label }</Box>
       <Flex>
         { IDENTICONS.map((identicon) => (

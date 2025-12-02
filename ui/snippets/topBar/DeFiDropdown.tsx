@@ -1,6 +1,7 @@
 import { Box, Flex, chakra } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -18,6 +19,7 @@ import DeFiDropdownItem from './DeFiDropdownItem';
 const feature = config.features.deFiDropdown;
 
 const DeFiDropdown = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const source = getPageType(router.pathname);
 
@@ -39,9 +41,9 @@ const DeFiDropdown = () => {
       <PopoverTrigger>
         <Button size="2xs" gap={ 0 }>
           <chakra.span display={{ base: 'none', lg: 'inline' }} whiteSpace="pre-wrap">
-            Blockscout{ space }
+            { t('common.common.defi_dropdown.space', { spaceName: space }) }
           </chakra.span>
-          DeFi
+          { t('common.common.defi_dropdown.defi') }
           <IconSvg name="arrows/east-mini" boxSize={ 4 } ml={ 1 } transform="rotate(-90deg)"/>
         </Button>
       </PopoverTrigger>

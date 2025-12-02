@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import type { ImageProps } from 'toolkit/chakra/image';
@@ -12,6 +13,7 @@ interface Props extends ImageProps {
 }
 
 const RollupStageBadge = ({ chainConfig = config, variant = 'outline', ...props }: Props) => {
+  const { t } = useTranslation();
 
   const feature = chainConfig.features.rollup;
 
@@ -24,7 +26,7 @@ const RollupStageBadge = ({ chainConfig = config, variant = 'outline', ...props 
     case '2': {
       const tooltipContent = (
         <>
-          The decentralization and maturity of the chain. Learn more at{ ' ' }
+          { t('common.common.rollup_stage_badge.tooltip_content') }{ ' ' }
           <Link href="https://l2beat.com?utm_source=blockscout&utm_medium=explorer" external>
             l2beat.com
           </Link>

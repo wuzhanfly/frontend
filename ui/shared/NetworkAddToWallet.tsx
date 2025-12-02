@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useAddChainClick from 'lib/web3/useAddChainClick';
@@ -13,6 +14,7 @@ interface Props {
 }
 
 const NetworkAddToWallet = ({ source, onAddSuccess }: Props) => {
+  const { t } = useTranslation();
   const { data: { wallet } = {} } = useProvider();
 
   const handleClick = useAddChainClick({ source, onSuccess: onAddSuccess });
@@ -38,7 +40,7 @@ const NetworkAddToWallet = ({ source, onAddSuccess }: Props) => {
       }}
     >
       <IconSvg name={ walletInfo.icon } boxSize={ 3 }/>
-      Add { config.chain.name }
+      { t('common.common.network.network_add_to_wallet.add_chain', { chainName: config.chain.name }) }
     </Button>
   );
 };

@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { useAppContext } from 'lib/contexts/app';
@@ -7,6 +8,7 @@ import * as cookies from 'lib/cookies';
 import { Switch } from 'toolkit/chakra/switch';
 
 const SettingsScamTokens = () => {
+  const { t } = useTranslation();
   const { cookies: appCookies } = useAppContext();
 
   const initialValue = cookies.get(cookies.NAMES.SHOW_SCAM_TOKENS, appCookies);
@@ -37,7 +39,7 @@ const SettingsScamTokens = () => {
         justifyContent="space-between"
         w="100%"
       >
-        Hide scam tokens
+        { t('settings.common.scam_tokens') }
       </Switch>
     </>
   );

@@ -12,5 +12,7 @@
   "settings.common.color_theme_light": "明亮",
   "settings.common.color_theme_dim": "昏暗",
   "settings.common.color_theme_midnight": "午夜",
-  "settings.common.color_theme_dark": "暗黑"
+  "settings.common.color_theme_dark": "暗黑",
+  "settings.common.address_format": "显示 {config1} {config2} 格式",
+  "settings.common.scam_tokens": "隐藏诈骗代币"
 }

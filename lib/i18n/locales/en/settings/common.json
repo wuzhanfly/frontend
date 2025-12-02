@@ -12,5 +12,7 @@
   "settings.common.color_theme_light": "Light",
   "settings.common.color_theme_dim": "Dim",
   "settings.common.color_theme_midnight": "Midnight",
-  "settings.common.color_theme_dark": "Dark"
+  "settings.common.color_theme_dark": "Dark",
+  "settings.common.address_format": "Show {config1} {config2} format",
+  "settings.common.scam_tokens": "Hide scam tokens"
 }

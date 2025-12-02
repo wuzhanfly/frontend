@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Button } from 'toolkit/chakra/button';
 import { PopoverRoot, PopoverTrigger } from 'toolkit/chakra/popover';
@@ -7,6 +8,7 @@ import NetworkMenuContent from 'ui/snippets/networkMenu/NetworkMenuContent';
 import useNetworkMenu from 'ui/snippets/networkMenu/useNetworkMenu';
 
 const NetworkMenu = () => {
+  const { t } = useTranslation();
   const menu = useNetworkMenu();
 
   const handlePopoverOpenChange = React.useCallback(({ open }: { open: boolean }) => {
@@ -29,7 +31,7 @@ const NetworkMenu = () => {
           fontWeight={ 500 }
         >
           <IconSvg name="networks" boxSize="14px"/>
-          <span>Chains</span>
+          <span>{ t('common.common.network.chains') }</span>
           <IconSvg name="arrows/east-mini" boxSize={ 4 } transform="rotate(-90deg)"/>
         </Button>
       </PopoverTrigger>

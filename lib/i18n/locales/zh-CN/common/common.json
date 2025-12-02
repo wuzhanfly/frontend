@@ -1083,7 +1083,6 @@
   "common.common.of_token_id": "的代币ID",
   "common.common.this": "这个",
   "common.common.any": "任何",
-  "common.common.view_all": "查看全部",
   "common.common.verified_contracts": "已验证合约",
   "common.common.name_services_lookup": "名称服务查询",
   "common.common.deposits": "存款",
@@ -1151,9 +1150,15 @@
   "common.common.transaction_count": "交易数量",
   "common.common.batch_number": "批次号",
   "common.common.txn_batch": "交易批次",
-  "common.common.to": "到",
   "common.common.total_of": "总计",
   "common.common.batches": "批次",
   "common.common.commit_transaction": "提交交易",
-  "common.common.prove_transaction": "证明交易"
+  "common.common.prove_transaction": "证明交易",
+  "common.common.network.chains": "链",
+  "common.common.network.network_add_to_wallet.add_chain": "添加 {{chainName}}",
+  "common.common.defi_dropdown.space": "Blockscout {{spaceName}}",
+  "common.common.defi_dropdown.defi": "DeFi",
+  "common.common.chain_network_logo": "{chainName} 网络图标",
+  "common.common.chain_network_icon": "{chainName} 网络标志",
+  "common.common.rollup_stage_badge.tooltip_content": "区块链的去中心化和成熟度。更多信息请访问"
 }

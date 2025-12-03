@@ -1,10 +1,11 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { MultichainProvider } from 'lib/contexts/multichain';
 import useIsMobile from 'lib/hooks/useIsMobile';
 import { FilterInput } from 'toolkit/components/filters/FilterInput';
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 import InternalTxsList from 'ui/internalTxs/InternalTxsList';
 import InternalTxsTable from 'ui/internalTxs/InternalTxsTable';
 import useInternalTxsQuery from 'ui/internalTxs/useInternalTxsQuery';
@@ -15,6 +16,7 @@ import PageTitle from 'ui/shared/Page/PageTitle';
 import Pagination from 'ui/shared/pagination/Pagination';
 
 const OpSuperchainInternalTxs = () => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
 
   const { query, searchTerm, onSearchTermChange } = useInternalTxsQuery({ isMultichain: true });
@@ -25,7 +27,7 @@ const OpSuperchainInternalTxs = () => {
       w={{ base: '100%', lg: '350px' }}
       size="sm"
       onChange={ onSearchTermChange }
-      placeholder="Search by transaction hash"
+      placeholder={ t('common.common.search_by_transaction_hash') }
       initialValue={ searchTerm }
       ml={{ base: 0, lg: 2 }}
     />
@@ -67,15 +69,15 @@ const OpSuperchainInternalTxs = () => {
   return (
     <>
       <PageTitle
-        title="Internal transactions"
+        title={ t('common.common.internal_transactions') }
         withTextAd
       />
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no internal transactions."
+        emptyText={ t('common.common.there_are_no_internal_transact') }
         filterProps={{
-          emptyFilteredText: `Couldn${ apos }t find any internal transaction that matches your query.`,
+          emptyFilteredText: t('common.common.couldnt_find_any_internal_transaction_that_matches_your_query'),
           hasActiveFilters: Boolean(searchTerm),
         }}
         actionBar={ actionBar }

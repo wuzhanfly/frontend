@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { InternalTransaction } from 'types/api/internalTransaction';
 
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const InternalTxsTable = ({ data, currentAddress, isLoading, top, showBlockInfo = true }: Props) => {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
   const chainData = multichainContext?.chain;
 
@@ -29,14 +31,14 @@ const InternalTxsTable = ({ data, currentAddress, isLoading, top, showBlockInfo 
           <TableRow>
             { chainData && <TableColumnHeader width="38px"></TableColumnHeader> }
             <TableColumnHeader width="280px">
-              Parent txn hash
+              { t('internal_txs.common.parent_txn_hash') }
               <TimeFormatToggle/>
             </TableColumnHeader>
-            <TableColumnHeader width="15%">Type</TableColumnHeader>
-            { showBlockInfo && <TableColumnHeader width="15%">Block</TableColumnHeader> }
-            <TableColumnHeader width="50%">From/To</TableColumnHeader>
+            <TableColumnHeader width="15%">{ t('common.common.type') }</TableColumnHeader>
+            { showBlockInfo && <TableColumnHeader width="15%">{ t('common.common.block') }</TableColumnHeader> }
+            <TableColumnHeader width="50%">{ t('transactions.common.from_to') }</TableColumnHeader>
             <TableColumnHeader width="20%" isNumeric>
-              Value { currencyUnits.ether }
+              { t('internal_txs.common.value_with_currency', { currency: currencyUnits.ether }) }
             </TableColumnHeader>
           </TableRow>
         </TableHeaderSticky>

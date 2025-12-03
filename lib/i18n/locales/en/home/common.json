@@ -1,3 +1,22 @@
 {
-  "home.common.explorer": "Explorer"
+  "home.common.explorer": "Explorer",
+  "home.common.chainId": "Chain ID",
+  "home.common.gasPrice": "Gas Price",
+  "home.common.daily_txs.title": "Daily Transactions",
+  "home.common.daily_txs.value": "N/A",
+  "home.common.daily_txs.hint": "Number of transactions yesterday (0:00 - 23:59 UTC). The chart displays daily transactions for the past 30 days.",
+  "home.common.daily_operational_txs.title": "Daily op txns",
+  "home.common.daily_operational_txs.value": "N/A",
+  "home.common.daily_operational_txs.hint": "Number of operational transactions yesterday (0:00 - 23:59 UTC). The chart displays daily operational transactions for the past 30 days.",
+  "home.common.coin_price.title": "{{symbol}} price",
+  "home.common.coin_price.value": "$N/A",
+  "home.common.coin_price.hint": "{{symbol}} token daily price in USD.",
+  "home.common.market_cap.title": "Market cap",
+  "home.common.market_cap.value": "$N/A",
+  "home.common.market_cap.hint": "The total market value of a cryptocurrency's circulating supply. It is analogous to the free-float capitalization in the stock market. Market Cap = Current Price x Circulating Supply.",
+  "home.common.tvl.title": "Total value locked",
+  "home.common.tvl.value": "$N/A",
+  "home.common.tvl.hint": "Total value of digital assets locked or staked in a chain",
+  "home.common.transactions": "Transactions",
+  "home.common.latest_transactions": "Latest transactions"
 }

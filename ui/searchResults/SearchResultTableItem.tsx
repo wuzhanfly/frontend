@@ -1,5 +1,6 @@
 import { chakra, Text, Flex, Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import xss from 'xss';
 
 import type { SearchResultItem } from 'types/client/search';
@@ -45,15 +46,15 @@ interface Props {
 }
 
 const SearchResultTableItem = ({ data, searchTerm, isLoading, addressFormat }: Props) => {
-
+  const { t } = useTranslation();
   const handleLinkClick = React.useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
     saveToRecentKeywords(searchTerm);
     mixpanel.logEvent(mixpanel.EventTypes.SEARCH_QUERY, {
       'Search query': searchTerm,
-      'Source page type': 'Search results',
+      'Source page type': t('common.common.search_results'),
       'Result URL': e.currentTarget.href,
     });
-  }, [ searchTerm ]);
+  }, [ searchTerm, t ]);
 
   const { colorMode } = useColorMode();
 
@@ -101,7 +102,8 @@ const SearchResultTableItem = ({ data, searchTerm, isLoading, addressFormat }: P
               <Skeleton loading={ isLoading } whiteSpace="nowrap" overflow="hidden">
                 <Text overflow="hidden" whiteSpace="nowrap" textOverflow="ellipsis" fontWeight={ 700 }>
                   { data.token_type === 'ERC-20' && data.exchange_rate && `$${ Number(data.exchange_rate).toLocaleString() }` }
-                  { data.token_type !== 'ERC-20' && data.total_supply && `Items ${ Number(data.total_supply).toLocaleString() }` }
+                  { data.token_type !== 'ERC-20' && data.total_supply &&
+                  `${ t('search_results.table_item.items') } ${ Number(data.total_supply).toLocaleString() }` }
                 </Text>
               </Skeleton>
             </TableCell>
@@ -279,11 +281,11 @@ const SearchResultTableItem = ({ data, searchTerm, isLoading, addressFormat }: P
             </TableCell>
             <TableCell fontSize="sm" verticalAlign="middle" colSpan={ isFutureBlock ? 2 : 1 }>
               { isFutureBlock ? (
-                <Skeleton loading={ isLoading }>Learn estimated time for this block to be created.</Skeleton>
+                <Skeleton loading={ isLoading }>{ t('search_results.table_item.learn_estimated_time') }</Skeleton>
               ) : (
                 <Flex columnGap={ 2 } alignItems="center">
-                  { data.block_type === 'reorg' && !isLoading && <Tag flexShrink={ 0 }>Reorg</Tag> }
-                  { data.block_type === 'uncle' && !isLoading && <Tag flexShrink={ 0 }>Uncle</Tag> }
+                  { data.block_type === 'reorg' && !isLoading && <Tag flexShrink={ 0 }>{ t('search_results.table_item.reorg') }</Tag> }
+                  { data.block_type === 'uncle' && !isLoading && <Tag flexShrink={ 0 }>{ t('search_results.table_item.uncle') }</Tag> }
                   <Skeleton loading={ isLoading } overflow="hidden" whiteSpace="nowrap" display="block">
                     <HashStringShortenDynamic hash={ data.block_hash } as={ shouldHighlightHash ? 'mark' : 'span' }/>
                   </Skeleton>

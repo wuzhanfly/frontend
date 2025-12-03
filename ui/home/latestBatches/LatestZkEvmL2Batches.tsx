@@ -1,6 +1,7 @@
 import { Box, Flex, Text, VStack } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SocketMessage } from 'lib/socket/types';
 import type { ZkEvmL2TxnBatchesItem } from 'types/api/zkEvmL2';
@@ -20,6 +21,7 @@ import ZkEvmL2TxnBatchStatus from 'ui/shared/statusTag/ZkEvmL2TxnBatchStatus';
 import LatestBatchItem from './LatestBatchItem';
 
 const LatestZkEvmL2Batches = () => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const batchesMaxCount = isMobile ? 2 : 6;
   const queryClient = useQueryClient();
@@ -61,7 +63,7 @@ const LatestZkEvmL2Batches = () => {
   let content;
 
   if (isError) {
-    content = <Text>No data. Please reload the page.</Text>;
+    content = <Text>{ t('transactions.common.latest_batches_no_data') }</Text>;
   }
 
   if (data) {
@@ -86,7 +88,7 @@ const LatestZkEvmL2Batches = () => {
           })) }
         </VStack>
         <Flex justifyContent="center">
-          <Link textStyle="sm" href={ route({ pathname: '/batches' }) }>View all batches</Link>
+          <Link textStyle="sm" href={ route({ pathname: '/batches' }) }>{ t('transactions.common.view_all_batches') }</Link>
         </Flex>
       </>
     );
@@ -94,7 +96,7 @@ const LatestZkEvmL2Batches = () => {
 
   return (
     <Box width={{ base: '100%', lg: '280px' }} flexShrink={ 0 }>
-      <Heading level="3" mb={ 3 }>Latest batches</Heading>
+      <Heading level="3" mb={ 3 }>{ t('transactions.common.latest_batches') }</Heading>
       { content }
     </Box>
   );

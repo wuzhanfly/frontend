@@ -1,5 +1,6 @@
 import { Box, HStack, VStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ClusterChainConfig } from 'types/multichain';
 
@@ -23,6 +24,7 @@ interface Props {
 }
 
 const ChainWidget = ({ data }: Props) => {
+  const { t } = useTranslation();
   const statsQuery = useApiQuery('general:stats', {
     chain: data,
     queryOptions: {
@@ -81,14 +83,14 @@ const ChainWidget = ({ data }: Props) => {
       <RollupStageBadge chainConfig={ data.app_config } variant="filled" mb={ 2.5 }/>
       <VStack gap={ 2 } alignItems="flex-start" fontWeight={ 500 }>
         <HStack gap={ 2 }>
-          <Box color="text.secondary">Chain ID</Box>
+          <Box color="text.secondary">{ t('home.common.chainId') }</Box>
           <Box>{ data.id }</Box>
           <CopyToClipboard text={ String(data.id) } ml={ 0 }/>
         </HStack>
         <ChainLatestBlockInfo chainData={ data }/>
         { statsQuery.data && statsQuery.data.gas_prices && data.app_config.features.gasTracker.isEnabled && (
           <HStack gap={ 2 }>
-            <Box color="text.secondary">Gas price</Box>
+            <Box color="text.secondary">{ t('home.common.gasPrice') }</Box>
             <Skeleton loading={ statsQuery.isPlaceholderData }>
               <GasPrice data={ statsQuery.data.gas_prices.average }/>
             </Skeleton>

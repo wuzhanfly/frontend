@@ -5,9 +5,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
-import useIsMobile from 'lib/hooks/useIsMobile';
+// import useIsMobile from 'lib/hooks/useIsMobile';
 import RewardsButton from 'ui/rewards/RewardsButton';
-import AdBanner from 'ui/shared/ad/AdBanner';
+// import AdBanner from 'ui/shared/ad/AdBanner';
 import SearchBar from 'ui/snippets/searchBar/SearchBarDesktop';
 import SearchBarMobile from 'ui/snippets/searchBar/SearchBarMobile';
 import UserProfileDesktop from 'ui/snippets/user/profile/UserProfileDesktop';
@@ -21,7 +21,7 @@ const BORDER_DEFAULT = 'none';
 const HeroBanner = () => {
   const { t } = useTranslation();
 
-  const isMobile = useIsMobile();
+  // const isMobile = useIsMobile();
 
   const background = {
     _light:
@@ -94,7 +94,7 @@ const HeroBanner = () => {
           <SearchBar isHeroBanner/>
         </Box>
       </Box>
-      { !isMobile && <AdBanner format="mobile" w="fit-content" flexShrink={ 0 } borderRadius="md" overflow="hidden"/> }
+      { /* { !isMobile && <AdBanner format="mobile" w="fit-content" flexShrink={ 0 } borderRadius="md" overflow="hidden"/> } */ }
     </Flex>
   );
 };

@@ -1,5 +1,6 @@
 import { useQueryClient } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SocketMessage } from 'lib/socket/types';
 import type { IndexingStatus } from 'types/api/indexingStatus';
@@ -15,6 +16,7 @@ import { Skeleton } from 'toolkit/chakra/skeleton';
 import { nbsp, ndash } from 'toolkit/utils/htmlEntities';
 
 const IndexingBlocksAlert = () => {
+  const { t } = useTranslation();
   const appProps = useAppContext();
   const cookiesString = appProps.cookies;
   const [ hasAlertCookie ] = React.useState(cookies.get(cookies.NAMES.INDEXING_ALERT, cookiesString) === 'true');
@@ -73,8 +75,10 @@ const IndexingBlocksAlert = () => {
 
   return (
     <Alert status="info" py={ 3 } borderRadius="md" showIcon>
-      { `${ data.indexed_blocks_ratio && `${ Math.floor(Number(data.indexed_blocks_ratio) * 100) }% Blocks Indexed${ nbsp }${ ndash } ` }
-          We're indexing this chain right now. Some of the counts may be inaccurate.` }
+      { /* { `${ data.indexed_blocks_ratio && `${ Math.floor(Number(data.indexed_blocks_ratio) * 100) }% Blocks Indexed${ nbsp }${ ndash } ` }
+          We're indexing this chain right now. Some of the counts may be inaccurate.` } */ }
+      { data.indexed_blocks_ratio &&
+      `${ t('common.common.indexing_blocks_alert', { number: Math.floor(Number(data.indexed_blocks_ratio) * 100), nbsp, ndash }) }` }
     </Alert>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TransactionType } from 'types/api/transaction';
 
@@ -22,6 +23,7 @@ const TYPES_ORDER: Array<TransactionType> = [
 ];
 
 const TxType = ({ types, isLoading, ...rest }: Props) => {
+  const { t } = useTranslation();
   const typeToShow = types.sort((t1, t2) => TYPES_ORDER.indexOf(t1) - TYPES_ORDER.indexOf(t2))[0];
 
   let label;
@@ -29,39 +31,39 @@ const TxType = ({ types, isLoading, ...rest }: Props) => {
 
   switch (typeToShow) {
     case 'contract_call':
-      label = 'Contract call';
+      label = t('common.common.contract_call');
       colorPalette = 'blue';
       break;
     case 'blob_transaction':
-      label = 'Blob txn';
+      label = t('common.common.blob_txn');
       colorPalette = 'yellow';
       break;
     case 'contract_creation':
-      label = 'Contract creation';
+      label = t('common.common.contract_creation');
       colorPalette = 'blue';
       break;
     case 'token_transfer':
-      label = 'Token transfer';
+      label = t('shared.common.token_transfer');
       colorPalette = 'orange';
       break;
     case 'token_creation':
-      label = 'Token creation';
+      label = t('common.common.token_creation');
       colorPalette = 'orange';
       break;
     case 'coin_transfer':
-      label = 'Coin transfer';
+      label = t('common.common.coin_transfer');
       colorPalette = 'orange';
       break;
     case 'rootstock_remasc':
-      label = 'REMASC';
+      label = t('txs.common.remasc');
       colorPalette = 'blue';
       break;
     case 'rootstock_bridge':
-      label = 'Bridge';
+      label = t('common.common.bridge');
       colorPalette = 'blue';
       break;
     default:
-      label = 'Transaction';
+      label = t('common.common.transaction');
       colorPalette = 'purple';
   }
 

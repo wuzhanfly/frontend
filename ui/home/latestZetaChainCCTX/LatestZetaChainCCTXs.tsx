@@ -1,6 +1,7 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Direction } from '@blockscout/zetachain-cctx-types';
 import type { ListCctxsResponse } from '@blockscout/zetachain-cctx-types';
@@ -23,6 +24,7 @@ import ZetaChainCCTXListItem from 'ui/zetaChain/cctxs/ZetaChainCCTXListItem';
 import LatestZetaChainCCTXItem from './LatestZetaChainCCTXItem';
 
 const LatestZetaChainCCTXs = () => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const txsCount = isMobile ? 3 : 8;
   const { data, isPlaceholderData, isError } = useApiQuery('zetachain:transactions', {
@@ -110,7 +112,7 @@ const LatestZetaChainCCTXs = () => {
   });
 
   if (isError) {
-    return <Text mt={ 4 }>No data. Please reload the page.</Text>;
+    return <Text mt={ 4 }>{ t('transactions.common.latest_batches_no_data') }</Text>;
   }
 
   if (data) {
@@ -146,7 +148,7 @@ const LatestZetaChainCCTXs = () => {
           </Box>
         </AddressHighlightProvider>
         <Flex justifyContent="center">
-          <Link textStyle="sm" href={ cctxsUrl }>View all cross chain transactions</Link>
+          <Link textStyle="sm" href={ cctxsUrl }>{ t('transactions.common.view_all_cross_chain_transactions') }</Link>
         </Flex>
       </>
     );

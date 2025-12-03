@@ -13,7 +13,6 @@ const Page: NextPageWithLayout = () => {
   return (
     <PageNextJs pathname="/">
       { config.features.opSuperchain.isEnabled ? <OpSuperchainHome/> : <Home/> }
-
     </PageNextJs>
   );
 };

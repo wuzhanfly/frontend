@@ -1160,5 +1160,8 @@
   "common.common.defi_dropdown.defi": "DeFi",
   "common.common.chain_network_logo": "{chainName} 网络图标",
   "common.common.chain_network_icon": "{chainName} 网络标志",
-  "common.common.rollup_stage_badge.tooltip_content": "区块链的去中心化和成熟度。更多信息请访问"
+  "common.common.rollup_stage_badge.tooltip_content": "区块链的去中心化和成熟度。更多信息请访问",
+  "common.common.indexing_blocks_alert": "{{number}}% 块已索引{{nbsp}}{{ndash}} 我们正在为这条链建立索引。部分计数可能不准确。",
+  "common.common.block_not_created_yet": "此区块尚未创建",
+  "common.common.view_existing_blocks": "查看现有区块"
 }

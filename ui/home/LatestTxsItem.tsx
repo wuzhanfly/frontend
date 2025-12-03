@@ -6,6 +6,7 @@ import {
   Grid,
 } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Transaction } from 'types/api/transaction';
 
@@ -28,6 +29,7 @@ type Props = {
 };
 
 const LatestTxsItem = ({ tx, isLoading }: Props) => {
+  const { t } = useTranslation();
   const dataTo = tx.to ? tx.to : tx.created_contract;
   const columnNum = config.UI.views.tx.hiddenFields?.value && config.UI.views.tx.hiddenFields?.tx_fee ? 2 : 3;
 
@@ -84,13 +86,13 @@ const LatestTxsItem = ({ tx, isLoading }: Props) => {
       <Flex flexDir="column" rowGap={ 3 }>
         { !config.UI.views.tx.hiddenFields?.value && (
           <Skeleton loading={ isLoading }>
-            <Text as="span" whiteSpace="pre">Value </Text>
+            <Text as="span" whiteSpace="pre">{ t('transactions.common.value') } </Text>
             <Text as="span" color="text.secondary">{ getValueWithUnit(tx.value).dp(5).toFormat() } { currencyUnits.ether }</Text>
           </Skeleton>
         ) }
         { !config.UI.views.tx.hiddenFields?.tx_fee && (
           <Skeleton loading={ isLoading } display="flex" whiteSpace="pre">
-            <Text as="span">Fee </Text>
+            <Text as="span">{ t('transactions.common.fee') } </Text>
             <TxFee tx={ tx } accuracy={ 5 } color="text.secondary"/>
           </Skeleton>
         ) }

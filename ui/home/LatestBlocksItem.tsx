@@ -1,6 +1,7 @@
 import { Box, Flex, Grid } from '@chakra-ui/react';
 import { capitalize } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Block } from 'types/api/block';
 
@@ -22,6 +23,7 @@ type Props = {
 };
 
 const LatestBlocksItem = ({ block, isLoading, animation }: Props) => {
+  const { t } = useTranslation();
   const totalReward = getBlockTotalReward(block);
   return (
     <Box
@@ -58,12 +60,12 @@ const LatestBlocksItem = ({ block, isLoading, animation }: Props) => {
         />
       </Flex>
       <Grid gridGap={ 2 } templateColumns="auto minmax(0, 1fr)" textStyle="sm">
-        <Skeleton loading={ isLoading }>Txn</Skeleton>
+        <Skeleton loading={ isLoading }>{ t('transactions.common.txn') }</Skeleton>
         <Skeleton loading={ isLoading } color="text.secondary"><span>{ block.transactions_count }</span></Skeleton>
 
         { !config.features.rollup.isEnabled && !config.UI.views.block.hiddenFields?.total_reward && (
           <>
-            <Skeleton loading={ isLoading }>Reward</Skeleton>
+            <Skeleton loading={ isLoading }>{ t('transactions.common.reward') }</Skeleton>
             <Skeleton loading={ isLoading } color="text.secondary">
               <span>
                 { totalReward.dp(10).toFixed() } { currencyUnits.ether }

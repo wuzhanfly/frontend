@@ -2,6 +2,7 @@ import { Box, Flex, Text, VStack } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 // import { AnimatePresence } from 'framer-motion';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SocketMessage } from 'lib/socket/types';
 import type { ArbitrumL2TxnBatchesItem } from 'types/api/arbitrumL2';
@@ -20,6 +21,7 @@ import { Link } from 'toolkit/chakra/link';
 import LatestBatchItem from './LatestBatchItem';
 
 const LatestArbitrumL2Batches = () => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const batchesMaxCount = isMobile ? 2 : 6;
   const queryClient = useQueryClient();
@@ -61,7 +63,7 @@ const LatestArbitrumL2Batches = () => {
   let content;
 
   if (isError) {
-    content = <Text>No data. Please reload the page.</Text>;
+    content = <Text>{ t('transactions.common.latest_batches_no_data') }</Text>;
   }
 
   if (data) {
@@ -82,7 +84,7 @@ const LatestArbitrumL2Batches = () => {
           ))) }
         </VStack>
         <Flex justifyContent="center">
-          <Link textStyle="sm" href={ route({ pathname: '/batches' }) }>View all batches</Link>
+          <Link textStyle="sm" href={ route({ pathname: '/batches' }) }>{ t('transactions.common.view_all_batches') }</Link>
         </Flex>
       </>
     );
@@ -90,7 +92,7 @@ const LatestArbitrumL2Batches = () => {
 
   return (
     <Box width={{ base: '100%', lg: '280px' }} flexShrink={ 0 }>
-      <Heading level="3" mb={ 3 }>Latest batches</Heading>
+      <Heading level="3" mb={ 3 }>{ t('transactions.common.latest_batches') }</Heading>
       { content }
     </Box>
   );

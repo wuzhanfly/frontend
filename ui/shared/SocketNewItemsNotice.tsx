@@ -1,5 +1,6 @@
 import { Text, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { Alert } from 'toolkit/chakra/alert';
@@ -25,26 +26,27 @@ interface Props {
 }
 
 const SocketNewItemsNotice = chakra(({ children, className, url, num, showErrorAlert, type = 'transaction', isLoading, onLinkClick }: Props) => {
+  const { t } = useTranslation();
   const handleLinkClick = React.useCallback(() => {
     onLinkClick ? onLinkClick() : window.location.reload();
   }, [ onLinkClick ]);
 
   const alertContent = (() => {
     if (showErrorAlert) {
-      return 'Live updates temporarily delayed';
+      return t('transactions.common.live_updates_delayed');
     }
 
     let name;
 
     switch (type) {
       case 'token_transfer':
-        name = 'token transfer';
+        name = t('transactions.common.alert_token_transfer');
         break;
       case 'deposit':
-        name = 'deposit';
+        name = t('transactions.common.alert_deposit');
         break;
       case 'block':
-        name = 'block';
+        name = t('transactions.common.alert_block');
         break;
       case 'flashblock': {
         if (flashblocksFeature.isEnabled) {
@@ -53,27 +55,31 @@ const SocketNewItemsNotice = chakra(({ children, className, url, num, showErrorA
         break;
       }
       case 'cross_chain_transaction':
-        name = 'cross chain transaction';
+        name = t('transactions.common.alert_cross_chain_transaction');
         break;
       default:
-        name = 'transaction';
+        name = t('transactions.common.alert_transaction');
         break;
     }
 
     if (!num) {
-      return `scanning new ${ name }s...`;
+      return t('transactions.common.scanning_new_items', { name });
     }
 
     if (type === 'cross_chain_transaction') {
       return (
-        <Link href={ url } onClick={ !url ? handleLinkClick : undefined }>More { name }s available</Link>
+        <Link href={ url } onClick={ !url ? handleLinkClick : undefined }>{ t('transactions.common.more_items_available', { name }) }</Link>
       );
     }
 
     return (
       <>
-        <Link href={ url } onClick={ !url ? handleLinkClick : undefined }>{ num.toLocaleString() } more { name }{ num > 1 ? 's' : '' }</Link>
-        <Text whiteSpace="pre"> ha{ num > 1 ? 've' : 's' } come in</Text>
+        <Link href={ url } onClick={ !url ? handleLinkClick : undefined }>
+          { t('transactions.common.num_more_names', { num: num.toLocaleString(), name, unit: num > 1 ? 's' : '' }) }
+        </Link>
+        <Text whiteSpace="pre">
+          { t('transactions.common.have_come_in', { unit: num > 1 ? 've' : 's' }) }
+        </Text>
       </>
     );
   })();

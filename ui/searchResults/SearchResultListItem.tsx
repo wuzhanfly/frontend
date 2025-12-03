@@ -1,5 +1,6 @@
 import { chakra, Flex, Grid, Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import xss from 'xss';
 
 import type { SearchResultItem } from 'types/client/search';
@@ -45,15 +46,16 @@ interface Props {
 }
 
 const SearchResultListItem = ({ data, searchTerm, isLoading, addressFormat }: Props) => {
+  const { t } = useTranslation();
 
   const handleLinkClick = React.useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
     saveToRecentKeywords(searchTerm);
     mixpanel.logEvent(mixpanel.EventTypes.SEARCH_QUERY, {
       'Search query': searchTerm,
-      'Source page type': 'Search results',
+      'Source page type': t('common.common.search_results'),
       'Result URL': e.currentTarget.href,
     });
-  }, [ searchTerm ]);
+  }, [ searchTerm, t ]);
 
   const { colorMode } = useColorMode();
 
@@ -353,7 +355,7 @@ const SearchResultListItem = ({ data, searchTerm, isLoading, addressFormat }: Pr
         const isFutureBlock = data.timestamp === undefined;
 
         if (isFutureBlock) {
-          return <Skeleton loading={ isLoading }>Learn estimated time for this block to be created.</Skeleton>;
+          return <Skeleton loading={ isLoading }>{ t('common.common.learn_estimated_time_for_this_block_to_be_created') }</Skeleton>;
         }
 
         return (

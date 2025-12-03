@@ -1,3 +1,22 @@
 {
-  "home.common.explorer": "浏览器"
+  "home.common.explorer": "浏览器",
+  "home.common.chainId": "链 ID",
+  "home.common.gasPrice": "燃气价格",
+  "home.common.daily_txs.title": "每日交易量",
+  "home.common.daily_txs.value": "N/A",
+  "home.common.daily_txs.hint": "昨日交易量（0:00 - 23:59 UTC）。图表展示过去30天的每日交易量。",
+  "home.common.daily_operational_txs.title": "每日操作交易量",
+  "home.common.daily_operational_txs.value": "N/A",
+  "home.common.daily_operational_txs.hint": "昨日操作交易量（0:00 - 23:59 UTC）。图表展示过去30天的每日操作交易量。",
+  "home.common.coin_price.title": "{{symbol}} 价格",
+  "home.common.coin_price.value": "$N/A",
+  "home.common.coin_price.hint": "{{symbol}} 代币的每日美元价格。",
+  "home.common.market_cap.title": "市值",
+  "home.common.market_cap.value": "$N/A",
+  "home.common.market_cap.hint": "加密货币流通供应的总市场价值。它类似于股票市场中的自由流通市值。市值 = 当前价格 x 流通供应量。",
+  "home.common.tvl.title": "锁定总价值",
+  "home.common.tvl.value": "$N/A",
+  "home.common.tvl.hint": "链中锁定或质押的数字资产总价值",
+  "home.common.transactions": "交易",
+  "home.common.latest_transactions": "最新交易"
 }

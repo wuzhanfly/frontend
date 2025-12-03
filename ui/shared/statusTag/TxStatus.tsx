@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Transaction } from 'types/api/transaction';
 
@@ -12,6 +13,7 @@ export interface Props {
 }
 
 const TxStatus = ({ status, errorText, isLoading }: Props) => {
+  const { t } = useTranslation();
   if (status === undefined) {
     return null;
   }
@@ -21,15 +23,15 @@ const TxStatus = ({ status, errorText, isLoading }: Props) => {
 
   switch (status) {
     case 'ok':
-      text = 'Success';
+      text = t('common.common.success');
       type = 'ok';
       break;
     case 'error':
-      text = 'Failed';
+      text = t('common.common.failed');
       type = 'error';
       break;
     case null:
-      text = 'Pending';
+      text = t('shared.common.pending');
       type = 'pending';
       break;
   }

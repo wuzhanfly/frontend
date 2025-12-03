@@ -2,6 +2,7 @@ import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import type { FormEvent } from 'react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Route } from 'nextjs-routes';
 import { route } from 'nextjs-routes';
@@ -34,6 +35,7 @@ type Props = {
 };
 
 const SearchBarMobile = ({ isHeroBanner, onGoToSearchResults }: Props) => {
+  const { t } = useTranslation();
   const inputRef = React.useRef<HTMLFormElement>(null);
   const router = useRouter();
 
@@ -99,7 +101,7 @@ const SearchBarMobile = ({ isHeroBanner, onGoToSearchResults }: Props) => {
         />
         <Box
           onClick={ handleOverlayClick }
-          aria-label="Search"
+          aria-label={ t('shared.common.search') }
           cursor="pointer"
           zIndex={ 1 }
           position="absolute"
@@ -133,7 +135,7 @@ const SearchBarMobile = ({ isHeroBanner, onGoToSearchResults }: Props) => {
       </DrawerTrigger>
       <DrawerContent h="75vh" overflowY="hidden">
         <DrawerHeader>
-          <DrawerTitle>Search</DrawerTitle>
+          <DrawerTitle>{ t('snippets.search_bar_mobile.search') }</DrawerTitle>
           <DrawerCloseTrigger/>
         </DrawerHeader>
         <DrawerBody overflow="hidden" display="flex" flexDirection="column">
@@ -171,7 +173,7 @@ const SearchBarMobile = ({ isHeroBanner, onGoToSearchResults }: Props) => {
               onClick={ navigateToResults }
               textStyle="sm"
             >
-              View all results
+              { t('snippets.search_bar_mobile.view_all_results') }
             </Link>
           </DrawerFooter>
         ) }

@@ -1160,5 +1160,8 @@
   "common.common.defi_dropdown.defi": "DeFi",
   "common.common.chain_network_logo": "{chainName} network logo",
   "common.common.chain_network_icon": "{chainName} network icon",
-  "common.common.rollup_stage_badge.tooltip_content": "The decentralization and maturity of the chain. Learn more at"
+  "common.common.rollup_stage_badge.tooltip_content": "The decentralization and maturity of the chain. Learn more at",
+  "common.common.indexing_blocks_alert": "{{number}}% Blocks Indexed{{nbsp}}{{ndash}}We're indexing this chain right now. Some of the counts may be inaccurate.",
+  "common.common.block_not_created_yet": "This block hasn’t been created yet",
+  "common.common.view_existing_blocks": "View existing blocks"
 }

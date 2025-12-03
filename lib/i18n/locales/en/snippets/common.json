@@ -3,5 +3,6 @@
   "snippets.footer.x_twitter": "X (Twitter)",
   "snippets.footer.made_with": "Made with",
   "snippets.footer.blockscout_description": "Blockscout is a tool for inspecting and analyzing EVM compatible blockchains. Blockchain explorer for Ethereum Networks.",
-  "snippets.search_bar_mobile.search": "Search"
+  "snippets.search_bar_mobile.search": "Search",
+  "snippets.search_bar_mobile.view_all_results": "View all results"
 }

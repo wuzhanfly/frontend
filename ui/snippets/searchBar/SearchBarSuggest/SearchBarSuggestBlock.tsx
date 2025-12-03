@@ -1,5 +1,6 @@
 import { Text, Flex, Grid, Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ItemsProps } from './types';
 import type * as multichain from 'types/client/multichain-aggregator';
@@ -12,6 +13,7 @@ import * as BlockEntity from 'ui/shared/entities/block/BlockEntity';
 import HashStringShortenDynamic from 'ui/shared/HashStringShortenDynamic';
 
 const SearchBarSuggestBlock = ({ data, isMobile, searchTerm, chainInfo }: ItemsProps<SearchResultBlock | multichain.QuickSearchResultBlock>) => {
+  const { t } = useTranslation();
   const icon = <BlockEntity.Icon chain={ chainInfo }/>;
   const shouldHighlightHash = data.block_hash?.toLowerCase() === searchTerm.toLowerCase();
   const isFutureBlock = 'timestamp' in data && data.timestamp === undefined;
@@ -58,7 +60,7 @@ const SearchBarSuggestBlock = ({ data, isMobile, searchTerm, chainInfo }: ItemsP
     </Text>
   ) : null;
   const date = 'timestamp' in data && data.timestamp && !isFutureBlock ? dayjs(data.timestamp).format('llll') : undefined;
-  const futureBlockText = <Text color="text.secondary">Learn estimated time for this block to be created.</Text>;
+  const futureBlockText = <Text color="text.secondary">{ t('common.common.learn_estimated_time_for_this_block_to_be_created') }</Text>;
   const blockType = 'block_type' in data ? data.block_type : undefined;
 
   if (isMobile) {
@@ -67,8 +69,8 @@ const SearchBarSuggestBlock = ({ data, isMobile, searchTerm, chainInfo }: ItemsP
         <Flex alignItems="center">
           { icon }
           { blockNumber }
-          { blockType === 'reorg' && <Tag ml="auto">Reorg</Tag> }
-          { blockType === 'uncle' && <Tag ml="auto">Uncle</Tag> }
+          { blockType === 'reorg' && <Tag ml="auto">{ t('snippets.search_bar_block.reorg') }</Tag> }
+          { blockType === 'uncle' && <Tag ml="auto">{ t('snippets.search_bar_block.uncle') }</Tag> }
         </Flex>
         { hash }
         { isFutureBlock ? futureBlockText : <Text color="text.secondary">{ date }</Text> }
@@ -83,8 +85,8 @@ const SearchBarSuggestBlock = ({ data, isMobile, searchTerm, chainInfo }: ItemsP
         { blockNumber }
       </Flex>
       <Flex columnGap={ 3 } minW={ 0 } alignItems="center">
-        { blockType === 'reorg' && <Tag flexShrink={ 0 }>Reorg</Tag> }
-        { blockType === 'uncle' && <Tag flexShrink={ 0 }>Uncle</Tag> }
+        { blockType === 'reorg' && <Tag flexShrink={ 0 }>{ t('snippets.search_bar_block.reorg') }</Tag> }
+        { blockType === 'uncle' && <Tag flexShrink={ 0 }>{ t('snippets.search_bar_block.uncle') }</Tag> }
         { isFutureBlock ? futureBlockText : hash }
       </Flex>
       { date && <Text color="text.secondary" textAlign="end">{ date }</Text> }

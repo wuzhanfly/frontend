@@ -72,5 +72,13 @@
   "blocks.list_item.finalized_epoch": "最终确定的纪元 #",
   "blocks.table_item.finalized_epoch": "最终确定的纪元 #",
   "blocks.table_item.chain_reorganizations": "链重组",
-  "blocks.table_item.burnt_fees_percentage": "销毁费用 / 交易费用 * 100%"
+  "blocks.table_item.burnt_fees_percentage": "销毁费用 / 交易费用 * 100%",
+  "blocks.common.real_time_feed": "实时推送",
+  "blocks.common.seconds": "{{name}}s (秒)",
+  "blocks.common.time": "{{name}} 时间",
+  "blocks.common.validator": "验证者",
+  "blocks.common.miner": "矿工",
+  "blocks.common.poster": "发布者",
+  "blocks.common.sequencer": "排序者",
+  "blocks.common.fee_recipient": "费用接收方"
 }

@@ -1,6 +1,7 @@
 import { Flex, Box, Text } from '@chakra-ui/react';
 import { upperFirst } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { PaginationParams } from 'ui/shared/pagination/types';
 
@@ -21,6 +22,7 @@ interface Props {
 }
 
 const BlocksTabSlot = ({ pagination }: Props) => {
+  const { t } = useTranslation();
   const statsQuery = useApiQuery('general:stats', {
     queryOptions: {
       placeholderData: HOMEPAGE_STATS,
@@ -34,7 +36,7 @@ const BlocksTabSlot = ({ pagination }: Props) => {
       { statsQuery.data?.network_utilization_percentage !== undefined && (
         <Box>
           <Text as="span" fontSize="sm">
-            Network utilization (last 50 blocks):{ nbsp }
+            { t('gas_tracker.common.network_utilization_description') }{ nbsp }
           </Text>
           <Tooltip content={ `${ upperFirst(networkUtilization.load) } load` }>
             <Skeleton display="inline-block" fontSize="sm" color={ networkUtilization.color } fontWeight={ 600 } loading={ statsQuery.isPlaceholderData }>
@@ -45,7 +47,7 @@ const BlocksTabSlot = ({ pagination }: Props) => {
       ) }
       <Link href={ route({ pathname: '/block/countdown' }) }>
         <IconSvg name="hourglass_slim" boxSize={ 5 } mr={ 2 }/>
-        <span>Block countdown</span>
+        <span>{ t('blocks.common.block_countdown') }</span>
       </Link>
       { pagination && <Pagination my={ 1 } { ...pagination }/> }
     </Flex>

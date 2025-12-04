@@ -1,5 +1,6 @@
 import { createListCollection, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import * as blobUtils from 'lib/blob';
 import removeNonSignificantZeroBytes from 'lib/blob/removeNonSignificantZeroBytes';
@@ -34,6 +35,7 @@ interface Props {
 }
 
 const BlobData = ({ data, isLoading, hash }: Props) => {
+  const { t } = useTranslation();
   const [ format, setFormat ] = React.useState<Array<Format>>([ 'Raw' ]);
 
   const guessedType = React.useMemo(() => {
@@ -89,7 +91,7 @@ const BlobData = ({ data, isLoading, hash }: Props) => {
     switch (format[0]) {
       case 'Image': {
         if (!guessedType?.mime?.startsWith('image/')) {
-          return <RawDataSnippet data="Not an image" showCopy={ false } isLoading={ isLoading } w="100%"/>;
+          return <RawDataSnippet data={ t('blobs.common.not_an_image') } showCopy={ false } isLoading={ isLoading } w="100%"/>;
         }
 
         const bytes = hexToBytes(data);
@@ -114,16 +116,16 @@ const BlobData = ({ data, isLoading, hash }: Props) => {
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="Blob data"
+        hint={ t('blobs.common.blob_data') }
         isLoading={ isLoading }
       >
-        Blob data
+        { t('blobs.common.blob_data_label') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue flexWrap="wrap">
         <Flex alignItems="center" w="100%" mb={{ base: 1, lg: 3 }} mt={{ base: 1, lg: 0 }}>
           <Select
             collection={ collection }
-            placeholder="Select type"
+            placeholder={ t('common.common.select_type') }
             value={ format }
             onValueChange={ handleFormatChange }
             w="100px"
@@ -135,7 +137,7 @@ const BlobData = ({ data, isLoading, hash }: Props) => {
               size="sm"
               onClick={ handleDownloadButtonClick }
             >
-              Download
+              { t('common.common.download') }
             </Button>
           </Skeleton>
           <CopyToClipboard text={ data } isLoading={ isLoading }/>

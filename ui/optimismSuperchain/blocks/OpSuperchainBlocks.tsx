@@ -1,6 +1,7 @@
 import { HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 
@@ -33,6 +34,7 @@ const TAB_LIST_PROPS = {
 };
 
 const OpSuperchainBlocks = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const tab = getQueryParamString(router.query.tab);
   const isMobile = useIsMobile();
@@ -77,9 +79,21 @@ const OpSuperchainBlocks = () => {
   });
 
   const tabs: Array<TabItemRegular> = [
-    { id: 'blocks', title: 'All', component: <OpSuperchainBlocksContent type="block" query={ blocksQuery } chainId={ blocksQuery.chainValue?.[0] }/> },
-    { id: 'reorgs', title: 'Forked', component: <OpSuperchainBlocksContent type="reorg" query={ reorgsQuery } chainId={ reorgsQuery.chainValue?.[0] }/> },
-    { id: 'uncles', title: 'Uncles', component: <OpSuperchainBlocksContent type="uncle" query={ unclesQuery } chainId={ unclesQuery.chainValue?.[0] }/> },
+    {
+      id: 'blocks',
+      title: t('validators.common.all'),
+      component: <OpSuperchainBlocksContent type="block" query={ blocksQuery } chainId={ blocksQuery.chainValue?.[0] }/>,
+    },
+    {
+      id: 'reorgs',
+      title: t('blocks.common.forked'),
+      component: <OpSuperchainBlocksContent type="reorg" query={ reorgsQuery } chainId={ reorgsQuery.chainValue?.[0] }/>,
+    },
+    {
+      id: 'uncles',
+      title: t('blocks.common.uncles'),
+      component: <OpSuperchainBlocksContent type="uncle" query={ unclesQuery } chainId={ unclesQuery.chainValue?.[0] }/>,
+    },
   ];
 
   const currentQuery = (() => {
@@ -103,7 +117,7 @@ const OpSuperchainBlocks = () => {
     <HStack gap={ 8 } hideBelow="lg">
       <Link href={ route({ pathname: '/block/countdown' }, { chain: currentChainInfo }) }>
         <IconSvg name="hourglass_slim" boxSize={ 5 } mr={ 2 }/>
-        <span>Block countdown</span>
+        <span>{ t('blocks.common.block_countdown') }</span>
       </Link>
       <Pagination { ...currentQuery.pagination }/>
     </HStack>
@@ -113,7 +127,7 @@ const OpSuperchainBlocks = () => {
     <>
       <PageTitle
         withTextAd
-        title="Blocks"
+        title={ t('validators.common.blocks') }
       />
       <RoutedTabs
         tabs={ tabs }

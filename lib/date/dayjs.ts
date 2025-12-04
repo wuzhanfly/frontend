@@ -6,7 +6,12 @@ import minMax from 'dayjs/plugin/minMax';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import updateLocale from 'dayjs/plugin/updateLocale';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
+import i18n from 'i18next';
+import 'dayjs/locale/en';
+import 'dayjs/locale/zh';
+import 'dayjs/locale/zh-cn';
 
+import * as cookies from 'lib/cookies';
 import { nbsp } from 'toolkit/utils/htmlEntities';
 
 const relativeTimeConfig = {
@@ -60,6 +65,44 @@ dayjs.updateLocale('en', {
   },
 });
 
-dayjs.locale('en');
+// 中文配置
+dayjs.updateLocale('zh', {
+  formats: {
+    llll: `YYYY年 M月 D日 HH:mm:ss A (Z${ nbsp }UTC)`,
+    lll: 'YYYY年M月D日 h:mm A',
+  },
+  relativeTime: {
+    s: '1秒',
+    ss: '%d秒',
+    future: '在 %s 后',
+    past: '%s 前',
+    m: '1分钟',
+    mm: '%d分钟',
+    h: '1小时',
+    hh: '%d小时',
+    d: '1天',
+    dd: '%d天',
+    w: '1周',
+    ww: '%d周',
+    M: '1个月',
+    MM: '%d个月',
+    y: '1年',
+    yy: '%d年',
+  },
+});
+
+// dayjs.locale('en');
+
+// 根据 i18n 当前语言设置 dayjs locale
+function setDayjsLocale() {
+  const currentLang = cookies.get(cookies.NAMES.LANGUAGE) || 'en';
+  dayjs.locale(currentLang.split('-')[0]); // 处理 en-US 格式
+}
+
+// 初始化
+setDayjsLocale();
+
+// 监听语言变化
+i18n.on('languageChanged', setDayjsLocale);
 
 export default dayjs;

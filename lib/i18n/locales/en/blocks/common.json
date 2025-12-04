@@ -72,5 +72,13 @@
   "blocks.list_item.finalized_epoch": "Finalized epoch #",
   "blocks.table_item.finalized_epoch": "Finalized epoch #",
   "blocks.table_item.chain_reorganizations": "Chain reorganizations",
-  "blocks.table_item.burnt_fees_percentage": "Burnt fees / Txn fees * 100%"
+  "blocks.table_item.burnt_fees_percentage": "Burnt fees / Txn fees * 100%",
+  "blocks.common.real_time_feed": "Real-time feed",
+  "blocks.common.seconds": "{{name}}s (sec)",
+  "blocks.common.time": "{{name}} time",
+  "blocks.common.validator": "validator",
+  "blocks.common.miner": "miner",
+  "blocks.common.poster": "poster",
+  "blocks.common.sequencer": "sequencer",
+  "blocks.common.fee_recipient": "fee recipient"
 }

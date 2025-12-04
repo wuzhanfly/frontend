@@ -1,6 +1,7 @@
 import { upperFirst } from 'es-toolkit';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 
@@ -26,6 +27,7 @@ const TAB_LIST_PROPS = {
 };
 
 const BlocksPageContent = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMobile = useIsMobile();
   const tab = getQueryParamString(router.query.tab);
@@ -81,15 +83,15 @@ const BlocksPageContent = () => {
   })();
 
   const tabs: Array<TabItemRegular> = [
-    { id: 'blocks', title: 'All', component: <BlocksContent type="block" query={ blocksQuery }/> },
+    { id: 'blocks', title: t('validators.common.all'), component: <BlocksContent type="block" query={ blocksQuery }/> },
     flashblocksFeature.isEnabled && flashblocksTabId && { id: flashblocksTabId, title: upperFirst(flashblocksFeature.name) + 's', component: <Flashblocks/> },
-    { id: 'reorgs', title: 'Forked', component: <BlocksContent type="reorg" query={ reorgsQuery }/> },
-    { id: 'uncles', title: 'Uncles', component: <BlocksContent type="uncle" query={ unclesQuery }/> },
+    { id: 'reorgs', title: t('blocks.common.forked'), component: <BlocksContent type="reorg" query={ reorgsQuery }/> },
+    { id: 'uncles', title: t('blocks.common.uncles'), component: <BlocksContent type="uncle" query={ unclesQuery }/> },
   ].filter(Boolean);
 
   return (
     <>
-      <PageTitle title="Blocks" withTextAd/>
+      <PageTitle title={ t('validators.common.blocks') } withTextAd/>
       <RoutedTabs
         tabs={ tabs }
         listProps={ isMobile ? undefined : TAB_LIST_PROPS }

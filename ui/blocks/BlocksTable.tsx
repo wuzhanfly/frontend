@@ -1,5 +1,6 @@
 import { capitalize } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Block } from 'types/api/block';
 import type { ClusterChainConfig } from 'types/multichain';
@@ -33,6 +34,7 @@ const FEES_COL_WEIGHT = 22;
 const isRollup = config.features.rollup.isEnabled;
 
 const BlocksTable = ({ data, isLoading, top, page, showSocketInfo, socketInfoNum, showSocketErrorAlert, chainData }: Props) => {
+  const { t } = useTranslation();
   const initialList = useInitialList({
     data: data ?? [],
     idFn: (item) => item.height,
@@ -52,23 +54,33 @@ const BlocksTable = ({ data, isLoading, top, page, showSocketInfo, socketInfoNum
           <TableRow>
             { chainData && <TableColumnHeader width="38px"/> }
             <TableColumnHeader width="180px">
-              Block
+              { t('blocks.common.block') }
               <TimeFormatToggle/>
             </TableColumnHeader>
-            <TableColumnHeader width="120px">Size, bytes</TableColumnHeader>
+            <TableColumnHeader width="120px">{ t('blocks.common.size_in_bytes') }</TableColumnHeader>
             { !config.UI.views.block.hiddenFields?.miner && (
               <TableColumnHeader width={ `${ VALIDATOR_COL_WEIGHT / widthBase * 100 }%` } minW="160px">
                 { capitalize(getNetworkValidatorTitle()) }
               </TableColumnHeader>
             ) }
-            <TableColumnHeader width="64px" isNumeric>Txn</TableColumnHeader>
-            <TableColumnHeader width={ `${ GAS_COL_WEIGHT / widthBase * 100 }%` }>Gas used</TableColumnHeader>
+            <TableColumnHeader width="64px" isNumeric>{ t('blocks.common.txn') }</TableColumnHeader>
+            <TableColumnHeader width={ `${ GAS_COL_WEIGHT / widthBase * 100 }%` }>{ t('blocks.common.gas_used') }</TableColumnHeader>
             { !isRollup && !config.UI.views.block.hiddenFields?.total_reward &&
-              <TableColumnHeader width={ `${ REWARD_COL_WEIGHT / widthBase * 100 }%` }>Reward { currencyUnits.ether }</TableColumnHeader> }
+              (
+                <TableColumnHeader width={ `${ REWARD_COL_WEIGHT / widthBase * 100 }%` }>
+                  { t('blocks.common.reward') } { currencyUnits.ether }
+                </TableColumnHeader>
+              )
+            }
             { !isRollup && !config.UI.views.block.hiddenFields?.burnt_fees &&
-              <TableColumnHeader width={ `${ FEES_COL_WEIGHT / widthBase * 100 }%` }>Burnt fees { currencyUnits.ether }</TableColumnHeader> }
+              (
+                <TableColumnHeader width={ `${ FEES_COL_WEIGHT / widthBase * 100 }%` }>
+                  { t('blocks.common.burnt_fees_with_currency', { currency: currencyUnits.ether }) }
+                </TableColumnHeader>
+              )
+            }
             { !isRollup && !config.UI.views.block.hiddenFields?.base_fee &&
-              <TableColumnHeader width="150px" isNumeric>Base fee</TableColumnHeader> }
+              <TableColumnHeader width="150px" isNumeric>{ t('blocks.common.base_fee') }</TableColumnHeader> }
           </TableRow>
         </TableHeaderSticky>
         <TableBody>

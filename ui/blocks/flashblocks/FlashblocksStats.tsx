@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { upperFirst } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { SECOND } from 'toolkit/utils/consts';
@@ -15,6 +16,7 @@ interface Props {
 }
 
 const FlashblocksStats = ({ itemsNum, txsNum, initialTs }: Props) => {
+  const { t } = useTranslation();
 
   const timeElapsed = initialTs ? Date.now() - initialTs : undefined;
 
@@ -30,15 +32,17 @@ const FlashblocksStats = ({ itemsNum, txsNum, initialTs }: Props) => {
       mb={ 6 }
     >
       <StatsWidget
-        label={ `${ upperFirst(flashblocksFeature.name) }s (sec)` }
+        // label={ `${ upperFirst(flashblocksFeature.name) }s (sec)` }
+        label={ t('blocks.common.seconds', { name: upperFirst(flashblocksFeature.name) }) }
         value={ timeElapsed ? Number(itemsNum / (timeElapsed / SECOND)).toLocaleString(undefined, { maximumFractionDigits: 0 }) : '-' }
       />
       <StatsWidget
-        label="TPS"
+        label={ t('blocks.common.tps', { defaultValue: 'TPS' }) }
         value={ timeElapsed && txsNum > 0 ? Number(txsNum / (timeElapsed / SECOND)).toLocaleString(undefined, { maximumFractionDigits: 0 }) : '-' }
       />
       <StatsWidget
-        label={ `${ upperFirst(flashblocksFeature.name) } time` }
+        // label={ `${ upperFirst(flashblocksFeature.name) } time` }
+        label={ t('blocks.common.time', { name: upperFirst(flashblocksFeature.name) }) }
         value={
           timeElapsed && itemsNum > 0 ?
             Number(timeElapsed / itemsNum).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' ms' :

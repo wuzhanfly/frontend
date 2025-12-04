@@ -1,5 +1,6 @@
 import { GridItem } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Blob } from 'types/api/blobs';
 
@@ -18,6 +19,8 @@ interface Props {
 }
 
 const BlobInfo = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <DetailedInfo.Container
       templateColumns={{ base: 'minmax(0, 1fr)', lg: '216px minmax(728px, auto)' }}
@@ -25,7 +28,7 @@ const BlobInfo = ({ data, isLoading }: Props) => {
       { !data.blob_data && (
         <GridItem colSpan={{ base: undefined, lg: 2 }} mb={ 3 }>
           <Skeleton loading={ isLoading }>
-            <Alert status="warning">This blob is not yet indexed</Alert>
+            <Alert status="warning">{ t('blobs.common.this_blob_is_not_yet_indexed') }</Alert>
           </Skeleton>
         </GridItem>
       ) }
@@ -36,7 +39,7 @@ const BlobInfo = ({ data, isLoading }: Props) => {
             hint="Zero knowledge proof. Allows for quick verification of commitment"
             isLoading={ isLoading }
           >
-            Proof
+            { t('blobs.common.proof') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ isLoading } overflow="hidden" whiteSpace="pre-wrap" wordBreak="break-all">
@@ -50,10 +53,10 @@ const BlobInfo = ({ data, isLoading }: Props) => {
       { data.kzg_commitment && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Commitment to the data in the blob"
+            hint={ t('blobs.common.commitment_to_the_data_in_the_blob') }
             isLoading={ isLoading }
           >
-            Commitment
+            { t('blobs.common.commitment') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ isLoading } overflow="hidden" whiteSpace="pre-wrap" wordBreak="break-all">
@@ -67,10 +70,10 @@ const BlobInfo = ({ data, isLoading }: Props) => {
       { data.blob_data && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Blob size in bytes"
+            hint={ t('blobs.common.blob_size_in_bytes') }
             isLoading={ isLoading }
           >
-            Size, bytes
+            { t('blobs.common.size_in_bytes') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ isLoading } overflow="hidden" whiteSpace="pre-wrap" wordBreak="break-all">
@@ -86,7 +89,7 @@ const BlobInfo = ({ data, isLoading }: Props) => {
             hint="Hash of the transaction with this blob"
             isLoading={ isLoading }
           >
-            Transaction hash
+            { t('blobs.common.transaction_hash') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <TxEntity hash={ data.transaction_hashes[0].transaction_hash } isLoading={ isLoading } noIcon/>

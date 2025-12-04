@@ -1,5 +1,6 @@
 import type { BoxProps } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { Tooltip } from 'toolkit/chakra/tooltip';
@@ -10,13 +11,15 @@ interface Props extends BoxProps {
 }
 
 const BlockPendingUpdateHint = ({ view = 'block', ...props }: Props) => {
+  const { t } = useTranslation();
+
   if (!config.UI.views.block.pendingUpdateAlertEnabled) {
     return null;
   }
 
   const tooltipContent = view === 'block' ?
-    'Block is being re-synced. Details may be incomplete until the update is finished.' :
-    'This transaction is part of a block that is being re-synced. Details may be incomplete until the update is finished.';
+    t('shared.common.block_is_being_resynced_detail') :
+    t('shared.common.tx_is_being_resynced_detail');
 
   return (
     <Tooltip content={ tooltipContent }>

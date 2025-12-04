@@ -1,5 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs/routes';
 
@@ -32,6 +33,7 @@ const Link = chakra((props: LinkProps) => {
 type IconProps = EntityBase.IconBaseProps & Pick<EntityProps, 'isPendingUpdate'>;
 
 const Icon = (props: IconProps) => {
+  const { t } = useTranslation();
 
   const isPendingUpdate = props.isPendingUpdate && config.UI.views.block.pendingUpdateAlertEnabled;
 
@@ -49,10 +51,10 @@ const Icon = (props: IconProps) => {
     }
 
     if (props.chain && props.shield !== false) {
-      return getChainTooltipText(props.chain, 'Block on ');
+      return getChainTooltipText(props.chain, t('shared.common.block_on'));
     }
 
-    return isPendingUpdate ? 'Block is being re-synced. Details may be incomplete until the update is finished.' : undefined;
+    return isPendingUpdate ? t('shared.common.block_is_being_resynced_detail') : undefined;
   })();
 
   return (

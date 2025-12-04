@@ -37,5 +37,7 @@
   "validators.zilliqa.signing_address": "签名地址",
   "validators.zilliqa.added_at_block": "添加于区块",
   "validators.zilliqa.stake_updated_hint": "质押金额最后更新时间",
-  "validators.zilliqa.stake_updated": "质押更新"
+  "validators.zilliqa.stake_updated": "质押更新",
+  "validators.common.eoa_verified_code": "EOA + 校验码",
+  "validators.common.eoa_code": "EOA + 代码"
 }

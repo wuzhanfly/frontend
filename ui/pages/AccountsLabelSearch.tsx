@@ -1,6 +1,7 @@
 import { Box, chakra, Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { EntityTag as TEntityTag, EntityTagType } from 'ui/shared/EntityTags/types';
 
@@ -18,6 +19,7 @@ import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 import StickyPaginationWithText from 'ui/shared/StickyPaginationWithText';
 
 const AccountsLabelSearch = () => {
+  const { t } = useTranslation();
 
   const router = useRouter();
   const slug = getQueryParamString(router.query.slug);
@@ -81,11 +83,11 @@ const AccountsLabelSearch = () => {
     return (
       <Flex alignItems="center" columnGap={ 2 } flexWrap="wrap" rowGap={ 1 }>
         <Skeleton loading={ isPlaceholderData } display="inline-block">
-          Found{ ' ' }
+          { t('common.common.found') }{ ' ' }
           <chakra.span fontWeight={ 700 }>
             { num }{ data?.next_page_params || pagination.page > 1 ? '+' : '' }
           </chakra.span>{ ' ' }
-          matching result{ num > 1 ? 's' : '' } for
+          { t('common.common.matching_result', { unit: num > 1 ? 's' : '' }) }
         </Skeleton>
         <EntityTag data={ tagData } isLoading={ isPlaceholderData } noLink/>
       </Flex>
@@ -96,7 +98,7 @@ const AccountsLabelSearch = () => {
 
   return (
     <>
-      <PageTitle title="Search result" withTextAd/>
+      <PageTitle title={ t('common.common.search_result') } withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }

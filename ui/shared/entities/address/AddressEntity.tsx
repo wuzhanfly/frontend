@@ -1,5 +1,6 @@
 import { Box, Flex, chakra, VStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressParam } from 'types/api/addressParams';
 
@@ -45,6 +46,8 @@ const Link = chakra((props: LinkProps) => {
 type IconProps = Pick<EntityProps, 'address' | 'isSafeAddress'> & EntityBase.IconBaseProps;
 
 const Icon = (props: IconProps) => {
+  const { t } = useTranslation();
+
   if (props.noIcon) {
     return null;
   }
@@ -90,11 +93,11 @@ const Icon = (props: IconProps) => {
 
   const label = (() => {
     if (isDelegatedAddress) {
-      return (props.address.is_verified ? 'EOA + verified code' : 'EOA + code') + hintPostfix;
+      return (props.address.is_verified ? t('validators.common.eoa_verified_code') : t('validators.common.eoa_code')) + hintPostfix;
     }
 
     if (props.chain) {
-      return 'Address' + hintPostfix;
+      return t('validators.common.address') + hintPostfix;
     }
 
     return props.hint;

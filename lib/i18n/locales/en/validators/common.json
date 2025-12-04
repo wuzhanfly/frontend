@@ -37,5 +37,7 @@
   "validators.zilliqa.signing_address": "Signing address",
   "validators.zilliqa.added_at_block": "Added at block",
   "validators.zilliqa.stake_updated_hint": "When the stake was last updated",
-  "validators.zilliqa.stake_updated": "Stake updated"
+  "validators.zilliqa.stake_updated": "Stake updated",
+  "validators.common.eoa_verified_code": "EOA + verified code",
+  "validators.common.eoa_code": "EOA + code"
 }

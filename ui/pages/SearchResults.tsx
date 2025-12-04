@@ -2,6 +2,7 @@ import { Box, chakra } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import type { FormEvent } from 'react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { SEARCH_RESULT_TYPES } from 'types/api/search';
 import type { SearchResultItem } from 'types/client/search';
@@ -35,6 +36,8 @@ import useSearchQuery from 'ui/snippets/searchBar/useSearchQuery';
 const nameServicesFeature = config.features.nameServices;
 
 const SearchResultsPageContent = () => {
+  const { t } = useTranslation();
+
   const router = useRouter();
   const withRedirectCheck = getQueryParamString(router.query.redirect) === 'true';
   const {
@@ -191,10 +194,10 @@ const SearchResultsPageContent = () => {
           <TableRoot fontWeight={ 500 }>
             <TableHeaderSticky top={ pagination.isVisible ? ACTION_BAR_HEIGHT_DESKTOP : 0 }>
               <TableRow>
-                <TableColumnHeader width="30%">Search result</TableColumnHeader>
+                <TableColumnHeader width="30%">{ t('common.common.search_result') }</TableColumnHeader>
                 <TableColumnHeader width="35%"/>
                 <TableColumnHeader width="35%" pr={ 10 }/>
-                <TableColumnHeader width="150px">Category</TableColumnHeader>
+                <TableColumnHeader width="150px">{ t('common.common.category') }</TableColumnHeader>
               </TableRow>
             </TableHeaderSticky>
             <TableBody>
@@ -233,11 +236,14 @@ const SearchResultsPageContent = () => {
       return (
         <>
           <Box mb={ pagination.isVisible ? 0 : 6 } lineHeight="32px">
-            <span>Found </span>
+            <span>{ t('common.common.found') } </span>
             <chakra.span fontWeight={ 700 }>
               { resultsCount }
             </chakra.span>
-            <span> matching result{ (((displayedItems.length || 0) + marketplaceApps.displayedApps.length) > 1) || pagination.page > 1 ? 's' : '' } for </span>
+            <span>
+              { t('common.common.matching_result',
+                { unit: (((displayedItems.length || 0) + marketplaceApps.displayedApps.length) > 1) || pagination.page > 1 ? 's' : '' }) }
+            </span>
             “<chakra.span fontWeight={ 700 }>{ debouncedSearchTerm }</chakra.span>”
           </Box>
           { resultsCount === 0 && regexp.BLOCK_HEIGHT.test(debouncedSearchTerm) &&
@@ -273,7 +279,7 @@ const SearchResultsPageContent = () => {
 
   const pageContent = !showContent ? <ContentLoader/> : (
     <>
-      <PageTitle title="Search results"/>
+      <PageTitle title={ t('common.common.search_results') }/>
       { bar }
       { content }
     </>

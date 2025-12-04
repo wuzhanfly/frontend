@@ -1164,5 +1164,6 @@
   "common.common.indexing_blocks_alert": "{{number}}% 块已索引{{nbsp}}{{ndash}} 我们正在为这条链建立索引。部分计数可能不准确。",
   "common.common.block_not_created_yet": "此区块尚未创建",
   "common.common.view_existing_blocks": "查看现有区块",
-  "common.common.unknown_chain": "未知链"
+  "common.common.unknown_chain": "未知链",
+  "common.common.matching_result": "匹配结果 为"
 }

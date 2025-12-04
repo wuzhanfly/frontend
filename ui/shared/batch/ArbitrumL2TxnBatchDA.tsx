@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ArbitrumL2TxnBatchesItem } from 'types/api/arbitrumL2';
 
@@ -10,6 +11,8 @@ export interface Props {
 }
 
 const ArbitrumL2TxnBatchDA = ({ dataContainer, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   let text: string;
 
   if (dataContainer === null) {
@@ -18,16 +21,16 @@ const ArbitrumL2TxnBatchDA = ({ dataContainer, isLoading }: Props) => {
 
   switch (dataContainer) {
     case 'in_blob4844':
-      text = 'Blob';
+      text = t('txnBatches.common.blob');
       break;
     case 'in_anytrust':
-      text = 'AnyTrust';
+      text = t('txnBatches.common.in_anytrust');
       break;
     case 'in_calldata':
-      text = 'Calldata';
+      text = t('txnBatches.common.in_calldata');
       break;
     case 'in_celestia':
-      text = 'Celestia';
+      text = t('txnBatches.common.in_celestia');
       break;
     default:
       text = '';

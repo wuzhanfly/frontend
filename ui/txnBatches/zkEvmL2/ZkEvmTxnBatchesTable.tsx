@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ZkEvmL2TxnBatchesItem } from 'types/api/zkEvmL2';
 
@@ -14,19 +15,21 @@ type Props = {
 };
 
 const ZkEvmTxnBatchesTable = ({ items, top, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <TableRoot minW="1100px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader width="40%">Batch #</TableColumnHeader>
-          <TableColumnHeader width="60%">Status</TableColumnHeader>
+          <TableColumnHeader width="40%">{ t('common.common.batch_number') }</TableColumnHeader>
+          <TableColumnHeader width="60%">{ t('common.common.status') }</TableColumnHeader>
           <TableColumnHeader width="180px">
-            Timestamp
+            { t('common.common.timestamp') }
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader width="100px">Txn count</TableColumnHeader>
-          <TableColumnHeader width="230px">Verify tx hash</TableColumnHeader>
-          <TableColumnHeader width="230px">Sequence hash</TableColumnHeader>
+          <TableColumnHeader width="100px">{ t('common.common.transaction_count') }</TableColumnHeader>
+          <TableColumnHeader width="230px">{ t('common.common.verify_transaction_hash') }</TableColumnHeader>
+          <TableColumnHeader width="230px">{ t('common.common.sequence_hash') }</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

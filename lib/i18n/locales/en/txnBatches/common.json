@@ -56,5 +56,9 @@
   "batches.zksync_l2.root_hash": "Root hash",
   "batches.zksync_l2.gas_price_for_the_batch_settlement_transaction_on_l1": "Gas price for the batch settlement transaction on L1",
   "batches.zksync_l2.l1_gas_price": "L1 gas price",
-  "batches.zksync_l2.l2_fair_gas_price": "L2 fair gas price"
+  "batches.zksync_l2.l2_fair_gas_price": "L2 fair gas price",
+  "batches.common.blob": "Blob",
+  "batches.common.in_anytrust": "AnyTrust",
+  "batches.common.in_calldata": "Calldata",
+  "batches.common.in_celestia": "Celestia"
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ArbitrumL2TxnBatchesItem } from 'types/api/arbitrumL2';
 
@@ -14,20 +15,22 @@ type Props = {
 };
 
 const ArbitrumL2TxnBatchesTable = ({ items, top, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <TableRoot tableLayout="auto" minW="1000px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader>Batch #</TableColumnHeader>
-          <TableColumnHeader>L1 status</TableColumnHeader>
-          <TableColumnHeader>L1 block</TableColumnHeader>
-          <TableColumnHeader>Block count</TableColumnHeader>
-          <TableColumnHeader>L1 transaction</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.batch_number') }</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.l1_status') }</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.l1_block') }</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.block_count') }</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.l1_transaction') }</TableColumnHeader>
           <TableColumnHeader>
-            Timestamp
+            { t('common.common.timestamp') }
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader>Txn count</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.txn_count') }</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ScrollL2TxnBatch } from 'types/api/scrollL2';
 
@@ -20,6 +21,8 @@ const rollupFeature = config.features.rollup;
 type Props = { item: ScrollL2TxnBatch; isLoading?: boolean };
 
 const ScrollL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   if (!rollupFeature.isEnabled || rollupFeature.type !== 'scroll') {
     return null;
   }
@@ -27,7 +30,7 @@ const ScrollL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
   return (
     <ListItemMobileGrid.Container gridTemplateColumns="110px auto">
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Batch #</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.batch_number') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <BatchEntityL2
           isLoading={ isLoading }
@@ -36,17 +39,17 @@ const ScrollL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
         />
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Data availability</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.data_availability') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <ScrollL2TxnBatchDA container={ item.data_availability.batch_data_container } isLoading={ isLoading }/>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Status</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.status') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <ScrollL2TxnBatchStatus status={ item.confirmation_transaction.hash ? 'Finalized' : 'Committed' } isLoading={ isLoading }/>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Committed block</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.committed_block') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <BlockEntityL1
           number={ item.commitment_transaction.block_number }
@@ -54,7 +57,7 @@ const ScrollL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
         />
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Committed txn hash</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.committed_txn_hash') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <TxEntityL1
           hash={ item.commitment_transaction.hash }
@@ -63,7 +66,7 @@ const ScrollL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
         />
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Age</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.age') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <TimeWithTooltip
           timestamp={ item.commitment_transaction.timestamp }
@@ -73,17 +76,17 @@ const ScrollL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
         />
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Finalized block</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.finalized_block') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         { item.confirmation_transaction.block_number ? (
           <BlockEntityL1
             number={ item.confirmation_transaction.block_number }
             isLoading={ isLoading }
           />
-        ) : <Skeleton loading={ isLoading } display="inline-block">Pending</Skeleton> }
+        ) : <Skeleton loading={ isLoading } display="inline-block">{ t('txnBatches.common.pending') }</Skeleton> }
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Finalized txn hash</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.finalized_txn_hash') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         { item.confirmation_transaction.hash ? (
           <TxEntityL1
@@ -91,10 +94,10 @@ const ScrollL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
             isLoading={ isLoading }
             noCopy
           />
-        ) : <Skeleton loading={ isLoading } display="inline-block">Pending</Skeleton> }
+        ) : <Skeleton loading={ isLoading } display="inline-block">{ t('txnBatches.common.pending') }</Skeleton> }
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Blocks count</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.blocks_count') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <Link
           href={ route({ pathname: '/batches/[number]', query: { number: item.number.toString(), tab: 'blocks' } }) }
@@ -108,7 +111,7 @@ const ScrollL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
 
       { typeof item.transactions_count === 'number' ? (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Txn count</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.txn_count') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <Link
               href={ route({ pathname: '/batches/[number]', query: { number: item.number.toString(), tab: 'txs' } }) }

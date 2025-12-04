@@ -1,6 +1,7 @@
 import type { BoxProps } from '@chakra-ui/react';
 import { Box, Icon } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 // This icon doesn't work properly when it is in the sprite
 // Probably because of radial gradient
@@ -14,6 +15,8 @@ interface Props extends BoxProps {
 }
 
 const EmptySearchResult = ({ text, title, ...rest }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <Box
       display="flex"
@@ -31,7 +34,7 @@ const EmptySearchResult = ({ text, title, ...rest }: Props) => {
       />
 
       <Heading level="3" mb={ 2 }>
-        { title || 'No results' }
+        { title || t('common.common.no_results') }
       </Heading>
 
       <Box fontSize={{ base: 'sm', sm: 'md' }} textAlign="center">

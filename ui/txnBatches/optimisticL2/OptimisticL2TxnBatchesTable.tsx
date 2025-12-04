@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { OptimisticL2TxnBatchesItem } from 'types/api/optimisticL2';
 
@@ -14,19 +15,21 @@ type Props = {
 };
 
 const OptimisticL2TxnBatchesTable = ({ items, top, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <TableRoot tableLayout="auto" minW="850px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader>Batch ID</TableColumnHeader>
-          <TableColumnHeader>Storage</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.batch_id') }</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.storage') }</TableColumnHeader>
           <TableColumnHeader>
-            Timestamp
+            { t('common.common.timestamp') }
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader isNumeric>L1 txn count</TableColumnHeader>
-          <TableColumnHeader isNumeric>L2 blocks</TableColumnHeader>
-          <TableColumnHeader isNumeric>Txn</TableColumnHeader>
+          <TableColumnHeader isNumeric>{ t('common.common.l1_txn_count') }</TableColumnHeader>
+          <TableColumnHeader isNumeric>{ t('common.common.l2_blocks') }</TableColumnHeader>
+          <TableColumnHeader isNumeric>{ t('transactions.common.txn') }</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

@@ -1,5 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { generateListStub } from 'stubs/utils';
@@ -14,6 +15,7 @@ import ZkSyncTxnBatchesListItem from 'ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesLis
 import ZkSyncTxnBatchesTable from 'ui/txnBatches/zkSyncL2/ZkSyncTxnBatchesTable';
 
 const ZkSyncL2TxnBatches = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:zksync_l2_txn_batches',
     options: {
@@ -60,10 +62,10 @@ const ZkSyncL2TxnBatches = () => {
 
     return (
       <Skeleton loading={ countersQuery.isPlaceholderData || isPlaceholderData } display="flex" flexWrap="wrap">
-        Txn batch
-        <Text fontWeight={ 600 } whiteSpace="pre"> #{ data.items[0].number } </Text>to
+        { t('transactions.common.txn_batch') }
+        <Text fontWeight={ 600 } whiteSpace="pre"> #{ data.items[0].number } </Text>{ t('transactions.common.to') }
         <Text fontWeight={ 600 } whiteSpace="pre"> #{ data.items[data.items.length - 1].number } </Text>
-        (total of { countersQuery.data?.toLocaleString() } batches)
+        ({ t('common.common.total_of') } { countersQuery.data?.toLocaleString() } { t('common.common.batches') })
       </Skeleton>
     );
   })();
@@ -72,11 +74,11 @@ const ZkSyncL2TxnBatches = () => {
 
   return (
     <>
-      <PageTitle title="Txn batches" withTextAd/>
+      <PageTitle title={ t('common.common.txn_batches') } withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no txn batches."
+        emptyText={ t('common.common.there_are_no_txn_batches') }
         actionBar={ actionBar }
       >
         { content }

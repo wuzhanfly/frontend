@@ -56,5 +56,9 @@
   "batches.zksync_l2.root_hash": "根哈希",
   "batches.zksync_l2.gas_price_for_the_batch_settlement_transaction_on_l1": "L1 上批次结算交易的 Gas 价格",
   "batches.zksync_l2.l1_gas_price": "L1 Gas 价格",
-  "batches.zksync_l2.l2_fair_gas_price": "L2 公平 Gas 价格"
+  "batches.zksync_l2.l2_fair_gas_price": "L2 公平 Gas 价格",
+  "batches.common.blob": "二进制大对象",
+  "batches.common.in_anytrust": "任何信任",
+  "batches.common.in_calldata": "调用数据",
+  "batches.common.in_celestia": "Celestia"
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ScrollL2TxnBatch } from 'types/api/scrollL2';
 
@@ -14,23 +15,25 @@ type Props = {
 };
 
 const ScrollL2TxnBatchesTable = ({ items, top, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <TableRoot tableLayout="auto" minW="1000px">
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader>Batch #</TableColumnHeader>
-          <TableColumnHeader>Container</TableColumnHeader>
-          <TableColumnHeader>Status</TableColumnHeader>
-          <TableColumnHeader>Committed block</TableColumnHeader>
-          <TableColumnHeader>Committed txn hash</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.batch_number') }</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.container') }</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.status') }</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.committed_block') }</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.committed_transaction_hash') }</TableColumnHeader>
           <TableColumnHeader>
-            Timestamp
+            { t('common.common.timestamp') }
             <TimeFormatToggle/>
           </TableColumnHeader>
-          <TableColumnHeader>Finalized block</TableColumnHeader>
-          <TableColumnHeader>Finalized txn hash</TableColumnHeader>
-          <TableColumnHeader isNumeric>Blocks</TableColumnHeader>
-          <TableColumnHeader isNumeric>Txn</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.finalized_block') }</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.finalized_transaction_hash') }</TableColumnHeader>
+          <TableColumnHeader isNumeric>{ t('common.common.blocks') }</TableColumnHeader>
+          <TableColumnHeader isNumeric>{ t('common.common.transaction') }</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

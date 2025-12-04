@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ArbitrumL2TxnBatchesItem } from 'types/api/arbitrumL2';
 
@@ -20,6 +21,8 @@ const rollupFeature = config.features.rollup;
 type Props = { item: ArbitrumL2TxnBatchesItem; isLoading?: boolean };
 
 const ArbitrumL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   if (!rollupFeature.isEnabled || rollupFeature.type !== 'arbitrum') {
     return null;
   }
@@ -27,7 +30,7 @@ const ArbitrumL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
   return (
     <ListItemMobileGrid.Container gridTemplateColumns="110px auto">
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Batch #</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.batch_number') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <BatchEntityL2
           isLoading={ isLoading }
@@ -36,12 +39,12 @@ const ArbitrumL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
         />
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>L1 status</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.l1_status') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <ArbitrumL2TxnBatchStatus status={ item.commitment_transaction.status } isLoading={ isLoading }/>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>L1 block</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.l1_block') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <BlockEntityL1
           number={ item.commitment_transaction.block_number }
@@ -51,14 +54,14 @@ const ArbitrumL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
 
       { item.blocks_count && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Block count</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.block_count') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <Skeleton loading={ isLoading } display="inline-block">{ item.blocks_count.toLocaleString() }</Skeleton>
           </ListItemMobileGrid.Value>
         </>
       ) }
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>L1 transaction</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.l1_transaction') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <TxEntityL1
           hash={ item.commitment_transaction.hash }
@@ -68,7 +71,7 @@ const ArbitrumL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
         />
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Age</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.age') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <TimeWithTooltip
           timestamp={ item.commitment_transaction.timestamp }
@@ -78,7 +81,7 @@ const ArbitrumL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
         />
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Txn count</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.txn_count') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <Link
           href={ route({ pathname: '/batches/[number]', query: { number: item.number.toString(), tab: 'txs' } }) }
@@ -90,7 +93,7 @@ const ArbitrumL2TxnBatchesListItem = ({ item, isLoading }: Props) => {
         </Link>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Data container</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('txnBatches.common.data_container') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <ArbitrumL2TxnBatchDA dataContainer={ item.batch_data_container } isLoading={ isLoading }/>
       </ListItemMobileGrid.Value>

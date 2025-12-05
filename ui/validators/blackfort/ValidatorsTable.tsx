@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type {
   ValidatorBlackfort,
@@ -22,6 +23,7 @@ interface Props {
 }
 
 const ValidatorsTable = ({ data, sort, setSorting, isLoading, top }: Props) => {
+  const { t } = useTranslation();
 
   const onSortToggle = React.useCallback((field: ValidatorsBlackfortSortingField) => {
     const value = getNextSortValue<ValidatorsBlackfortSortingField, ValidatorsBlackfortSortingValue>(VALIDATORS_BLACKFORT_SORT_SEQUENCE, field)(sort);
@@ -38,12 +40,12 @@ const ValidatorsTable = ({ data, sort, setSorting, isLoading, top }: Props) => {
             onSortToggle={ onSortToggle }
             indicatorPosition="right"
           >
-            Validator’s address
+            { t('validators.common.validator_address') }
           </TableColumnHeaderSortable>
-          <TableColumnHeader>Name</TableColumnHeader>
-          <TableColumnHeader isNumeric>Commission</TableColumnHeader>
-          <TableColumnHeader isNumeric>{ `Self bonded ${ currencyUnits.ether }` }</TableColumnHeader>
-          <TableColumnHeader isNumeric>{ `Delegated amount ${ currencyUnits.ether }` }</TableColumnHeader>
+          <TableColumnHeader>{ t('common.common.name') }</TableColumnHeader>
+          <TableColumnHeader isNumeric>{ t('common.common.commission') }</TableColumnHeader>
+          <TableColumnHeader isNumeric>{ t('common.common.self_bonded', { ether: currencyUnits.ether }) }</TableColumnHeader>
+          <TableColumnHeader isNumeric>{ t('common.common.delegated_amount', { ether: currencyUnits.ether }) }</TableColumnHeader>
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

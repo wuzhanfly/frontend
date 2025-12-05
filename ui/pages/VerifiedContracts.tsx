@@ -1,10 +1,11 @@
 import { Box, createListCollection, HStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useIsMobile from 'lib/hooks/useIsMobile';
 import { FilterInput } from 'toolkit/components/filters/FilterInput';
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 import ActionBar from 'ui/shared/ActionBar';
 import DataListDisplay from 'ui/shared/DataListDisplay';
 import PageTitle from 'ui/shared/Page/PageTitle';
@@ -22,6 +23,7 @@ const sortCollection = createListCollection({
 });
 
 const VerifiedContracts = () => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
 
   const { query, type, searchTerm, debouncedSearchTerm, sort, onSearchTermChange, onTypeChange, onSortChange } = useVerifiedContractsQuery();
@@ -40,7 +42,7 @@ const VerifiedContracts = () => {
       w={{ base: '100%', lg: '350px' }}
       size="sm"
       onChange={ onSearchTermChange }
-      placeholder="Search by contract name or address"
+      placeholder={ t('common.common.search_by_contract_name_or_add') }
       initialValue={ searchTerm }
     />
   );
@@ -88,16 +90,20 @@ const VerifiedContracts = () => {
   return (
     <Box>
       <PageTitle
-        title={ config.meta.seo.enhancedDataEnabled ? `Verified ${ config.chain.name } contracts` : 'Verified contracts' }
+        title={
+          config.meta.seo.enhancedDataEnabled ?
+            t('common.common.verified_name_contracts', { name: config.chain.name }) :
+            t('common.common.verified_contracts')
+        }
         withTextAd
       />
       <VerifiedContractsCounters/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no verified contracts."
+        emptyText={ t('common.common.there_are_no_verified_contract') }
         filterProps={{
-          emptyFilteredText: `Couldn${ apos }t find any contract that matches your query.`,
+          emptyFilteredText: t('common.common.couldnt_find_any_contract_that_matches_your_query'),
           hasActiveFilters: Boolean(debouncedSearchTerm || type),
         }}
         actionBar={ actionBar }

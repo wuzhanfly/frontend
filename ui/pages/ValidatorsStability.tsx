@@ -1,6 +1,7 @@
 import { Box, createListCollection, HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type {
   ValidatorsStabilityFilters,
@@ -15,7 +16,7 @@ import useIsMobile from 'lib/hooks/useIsMobile';
 import getQueryParamString from 'lib/router/getQueryParamString';
 import { generateListStub } from 'stubs/utils';
 import { VALIDATOR_STABILITY } from 'stubs/validators';
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 import ActionBar from 'ui/shared/ActionBar';
 import DataListDisplay from 'ui/shared/DataListDisplay';
 // import { FilterInput } from 'toolkit/components/filters/FilterInput';
@@ -36,6 +37,8 @@ const sortCollection = createListCollection({
 });
 
 const ValidatorsStability = () => {
+  const { t } = useTranslation();
+
   const router = useRouter();
   // const [ searchTerm, setSearchTerm ] = React.useState(getQueryParamString(router.query.address_hash) || undefined);
   const [ statusFilter, setStatusFilter ] =
@@ -147,14 +150,14 @@ const ValidatorsStability = () => {
 
   return (
     <Box>
-      <PageTitle title="Validators" withTextAd/>
+      <PageTitle title={ t('transactions.common.validators') } withTextAd/>
       <ValidatorsCounters/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no validators."
+        emptyText={ t('common.common.there_are_no_validators') }
         filterProps={{
-          emptyFilteredText: `Couldn${ apos }t find any validator that matches your query.`,
+          emptyFilteredText: t('transactions.common.there_are_no_validators'),
           hasActiveFilters: Boolean(
             // searchTerm ||
             statusFilter,

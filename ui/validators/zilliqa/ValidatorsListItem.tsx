@@ -1,5 +1,6 @@
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ValidatorsZilliqaItem } from 'types/api/validators';
 
@@ -14,11 +15,12 @@ interface Props {
 }
 
 const ValidatorsListItem = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
 
   return (
     <ListItemMobileGrid.Container>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>BLS public key</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.bls_public_key') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <ValidatorEntity
           isLoading={ isLoading }
@@ -26,14 +28,14 @@ const ValidatorsListItem = ({ data, isLoading }: Props) => {
         />
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Index</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.index') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <Skeleton loading={ isLoading } display="inline-block">
           { data.index }
         </Skeleton>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Balance</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.balance') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <Skeleton loading={ isLoading } display="inline-block">
           { BigNumber(data.balance).div(BigNumber(10 ** config.chain.currency.decimals)).toFormat() } { config.chain.currency.symbol }

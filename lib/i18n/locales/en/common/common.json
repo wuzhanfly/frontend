@@ -1062,6 +1062,7 @@
   "common.common.internal_transactions": "Internal transactions",
   "common.common.user_operations": "User operations",
   "common.common.verified_contracts": "Verified contracts",
+  "common.common.verified_name_contracts": "Verified {{name}} contracts",
   "common.common.name_services_lookup": "Name services lookup",
   "common.common.validators": "Validators",
   "common.common.deposits": "Deposits",
@@ -1165,5 +1166,7 @@
   "common.common.block_not_created_yet": "This block hasn’t been created yet",
   "common.common.view_existing_blocks": "View existing blocks",
   "common.common.unknown_chain": "Unknown chain",
-  "common.common.matching_result": "matching result{{unit}} for"
+  "common.common.matching_result": "matching result{{unit}} for",
+  "common.common.self_bonded": "Self bonded {{ether}}",
+  "common.common.delegated_amount": "Delegated amount {{ether}}"
 }

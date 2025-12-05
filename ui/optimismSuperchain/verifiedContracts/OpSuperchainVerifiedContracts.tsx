@@ -1,11 +1,12 @@
 import { Box, createListCollection, HStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import multichainConfig from 'configs/multichain';
 import { MultichainProvider } from 'lib/contexts/multichain';
 import useIsMobile from 'lib/hooks/useIsMobile';
 import { FilterInput } from 'toolkit/components/filters/FilterInput';
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 import ChainSelect from 'ui/optimismSuperchain/components/ChainSelect';
 import ActionBar from 'ui/shared/ActionBar';
 import DataListDisplay from 'ui/shared/DataListDisplay';
@@ -24,6 +25,8 @@ const sortCollection = createListCollection({
 });
 
 const OpSuperchainVerifiedContracts = () => {
+  const { t } = useTranslation();
+
   const isMobile = useIsMobile();
 
   const { query, type, searchTerm, sort, onSearchTermChange, onTypeChange, onSortChange } = useVerifiedContractsQuery({ isMultichain: true });
@@ -47,7 +50,7 @@ const OpSuperchainVerifiedContracts = () => {
       w={{ base: '100%', lg: '350px' }}
       size="sm"
       onChange={ onSearchTermChange }
-      placeholder="Search by contract name or address"
+      placeholder={ t('common.common.search_by_contract_name_or_add') }
       initialValue={ searchTerm }
     />
   );
@@ -95,7 +98,7 @@ const OpSuperchainVerifiedContracts = () => {
   return (
     <Box>
       <PageTitle
-        title="Verified contracts"
+        title={ t('common.common.verified_contracts') }
         withTextAd
       />
       <ChainSelect
@@ -109,9 +112,9 @@ const OpSuperchainVerifiedContracts = () => {
         <DataListDisplay
           isError={ isError }
           itemsNum={ data?.items.length }
-          emptyText="There are no verified contracts."
+          emptyText={ t('common.common.there_are_no_verified_contract') }
           filterProps={{
-            emptyFilteredText: `Couldn${ apos }t find any contract that matches your query.`,
+            emptyFilteredText: t('common.common.couldnt_find_any_contract_that_matches_your_query'),
             hasActiveFilters: Boolean(searchTerm || type),
           }}
           actionBar={ actionBar }

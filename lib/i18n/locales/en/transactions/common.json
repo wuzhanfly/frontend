@@ -270,5 +270,7 @@
   "transactions.common.scanning_new_items": "scanning new {{name}}s...",
   "transactions.common.more_items_available": "More {{name}}s available",
   "transactions.common.num_more_names": "{{num}} more {{name}}{{unit}}",
-  "transactions.common.have_come_in": "ha{{unit}} come in"
+  "transactions.common.have_come_in": "ha{{unit}} come in",
+  "transactions.common.there_are_no_validators": "Couldn't find any validator that matches your query.",
+  "transactions.common.sort_by": "Sort by"
 }

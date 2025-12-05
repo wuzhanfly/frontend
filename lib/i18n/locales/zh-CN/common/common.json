@@ -1084,6 +1084,7 @@
   "common.common.this": "这个",
   "common.common.any": "任何",
   "common.common.verified_contracts": "已验证合约",
+  "common.common.verified_name_contracts": "已验证{{name}}合约",
   "common.common.name_services_lookup": "名称服务查询",
   "common.common.deposits": "存款",
   "common.common.withdrawals": "取款",
@@ -1165,5 +1166,7 @@
   "common.common.block_not_created_yet": "此区块尚未创建",
   "common.common.view_existing_blocks": "查看现有区块",
   "common.common.unknown_chain": "未知链",
-  "common.common.matching_result": "匹配结果 为"
+  "common.common.matching_result": "匹配结果 为",
+  "common.common.self_bonded": "自我绑定 {{ether}}",
+  "common.common.delegated_amount": "委托金额 {{ether}}"
 }

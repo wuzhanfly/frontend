@@ -270,5 +270,7 @@
   "transactions.common.scanning_new_items": "正在扫描新的{{name}}...",
   "transactions.common.more_items_available": "更多{{name}}可用",
   "transactions.common.num_more_names": "{num} 更多 {name}{unit}",
-  "transactions.common.have_come_in": "已经到来"
+  "transactions.common.have_come_in": "已经到来",
+  "transactions.common.there_are_no_validators": "找不到符合您查询的验证者。",
+  "transactions.common.sort_by": "排序方式"
 }

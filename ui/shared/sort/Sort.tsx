@@ -1,5 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useIsMobile from 'lib/hooks/useIsMobile';
 import { IconButton } from 'toolkit/chakra/icon-button';
@@ -12,6 +13,8 @@ export interface Props extends SelectRootProps {
 }
 
 const Sort = (props: Props) => {
+  const { t } = useTranslation();
+
   const { collection, isLoading, ...rest } = props;
   const isMobile = useIsMobile(false);
 
@@ -44,7 +47,7 @@ const Sort = (props: Props) => {
           _groupHover={{ color: 'inherit' }}
           _groupExpanded={{ color: 'inherit' }}
         >
-          Sort by
+          { t('transactions.common.sort_by') }
         </chakra.span>
         <SelectValueText
           color={{ _light: 'blackAlpha.800', _dark: 'whiteAlpha.800' }}

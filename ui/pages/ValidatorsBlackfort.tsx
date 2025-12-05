@@ -1,6 +1,7 @@
 import { Box, createListCollection, HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type {
   ValidatorsBlackfortSorting,
@@ -29,6 +30,7 @@ const sortCollection = createListCollection({
 });
 
 const ValidatorsBlackfort = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const [ sort, setSort ] =
     React.useState<ValidatorsBlackfortSortingValue>(
@@ -95,12 +97,12 @@ const ValidatorsBlackfort = () => {
 
   return (
     <Box>
-      <PageTitle title="Validators" withTextAd/>
+      <PageTitle title={ t('transactions.common.validators') } withTextAd/>
       <ValidatorsCounters/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no validators."
+        emptyText={ t('common.common.there_are_no_validators') }
         actionBar={ actionBar }
       >
         { content }

@@ -18,5 +18,7 @@
   "shared.common.the_contract_was_successfully_verified": "合约已成功验证",
   "shared.common.log_index": "日志索引",
   "shared.common.invalid_utf8_with_hex": "[无效的 UTF-8] {{hex}}",
-  "shared.common.decode_error_with_hex": "[解码错误] {{hex}}"
+  "shared.common.decode_error_with_hex": "[解码错误] {{hex}}",
+  "shared.common.select_chain": "选择链",
+  "shared.common.all_chains": "所有链"
 }

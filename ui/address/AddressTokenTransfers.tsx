@@ -1,10 +1,11 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useIsMounted from 'lib/hooks/useIsMounted';
 import getQueryParamString from 'lib/router/getQueryParamString';
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 import ActionBar, { ACTION_BAR_HEIGHT_DESKTOP } from 'ui/shared/ActionBar';
 import DataListDisplay from 'ui/shared/DataListDisplay';
 import Pagination from 'ui/shared/pagination/Pagination';
@@ -26,6 +27,7 @@ type Props = {
 };
 
 const AddressTokenTransfers = ({ overloadCount, shouldRender = true, isQueryEnabled = true }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMounted = useIsMounted();
 
@@ -116,9 +118,9 @@ const AddressTokenTransfers = ({ overloadCount, shouldRender = true, isQueryEnab
     <DataListDisplay
       isError={ isError }
       itemsNum={ data?.items?.length }
-      emptyText="There are no token transfers."
+      emptyText={ t('tokens.common.there_are_no_token_transfers') }
       filterProps={{
-        emptyFilteredText: `Couldn${ apos }t find any token transfer that matches your query.`,
+        emptyFilteredText: t('common.common.couldnt_find_any_token_transfer_that_matches_your_query'),
         hasActiveFilters: Boolean(numActiveFilters),
       }}
       actionBar={ actionBar }

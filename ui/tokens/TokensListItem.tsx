@@ -1,6 +1,7 @@
 import { Flex, HStack, Grid, GridItem } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenInfo } from 'types/api/token';
 import type { AggregatedTokenInfo } from 'types/client/multichain-aggregator';
@@ -31,6 +32,7 @@ const TokensListItem = ({
   index,
   isLoading,
 }: Props) => {
+  const { t } = useTranslation();
 
   const {
     address_hash: addressHash,
@@ -97,7 +99,7 @@ const TokensListItem = ({
       </Flex>
       { exchangeRate && (
         <HStack gap={ 3 }>
-          <Skeleton loading={ isLoading } textStyle="sm" fontWeight={ 500 }>Price</Skeleton>
+          <Skeleton loading={ isLoading } textStyle="sm" fontWeight={ 500 }>{ t('common.common.price') }</Skeleton>
           <Skeleton loading={ isLoading } textStyle="sm" color="text.secondary">
             <span>${ Number(exchangeRate).toLocaleString(undefined, { minimumSignificantDigits: 4 }) }</span>
           </Skeleton>
@@ -105,12 +107,12 @@ const TokensListItem = ({
       ) }
       { marketCap && (
         <HStack gap={ 3 }>
-          <Skeleton loading={ isLoading } textStyle="sm" fontWeight={ 500 }>On-chain market cap</Skeleton>
+          <Skeleton loading={ isLoading } textStyle="sm" fontWeight={ 500 }>{ t('common.common.on_chain_market_cap') }</Skeleton>
           <Skeleton loading={ isLoading } textStyle="sm" color="text.secondary"><span>{ BigNumber(marketCap).toFormat() }</span></Skeleton>
         </HStack>
       ) }
       <HStack gap={ 3 }>
-        <Skeleton loading={ isLoading } textStyle="sm" fontWeight={ 500 }>Holders</Skeleton>
+        <Skeleton loading={ isLoading } textStyle="sm" fontWeight={ 500 }>{ t('common.common.holders') }</Skeleton>
         <Skeleton loading={ isLoading } textStyle="sm" color="text.secondary"><span>{ Number(holdersCount).toLocaleString() }</span></Skeleton>
       </HStack>
     </ListItemMobile>

@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TxsSocketType } from './socket/types';
 import type { AddressFromToFilter } from 'types/api/address';
@@ -7,7 +8,7 @@ import type { Transaction, TransactionsSortingField, TransactionsSortingValue } 
 import type { PaginationParams } from 'ui/shared/pagination/types';
 
 import useIsMobile from 'lib/hooks/useIsMobile';
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 import AddressCsvExportLink from 'ui/address/AddressCsvExportLink';
 import { ACTION_BAR_HEIGHT_DESKTOP } from 'ui/shared/ActionBar';
 import DataListDisplay from 'ui/shared/DataListDisplay';
@@ -57,6 +58,7 @@ const TxsContent = ({
   sort,
   stickyHeader = true,
 }: Props) => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
 
   const onSortToggle = React.useCallback((field: TransactionsSortingField) => {
@@ -120,11 +122,11 @@ const TxsContent = ({
     <DataListDisplay
       isError={ isError }
       itemsNum={ items?.length }
-      emptyText="There are no transactions."
+      emptyText={ t('common.common.there_are_no_transactions') }
       actionBar={ actionBar }
       filterProps={{
         hasActiveFilters: Boolean(filterValue),
-        emptyFilteredText: `Couldn${ apos }t find any transaction that matches your query.`,
+        emptyFilteredText: t('txs.common.empty_filtered_text'),
       }}
     >
       { content }

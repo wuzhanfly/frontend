@@ -7,7 +7,6 @@
   "stats.common.total_operational_transactions": "Total operational transactions",
   "stats.common.latest_l1_state_batch": "Latest L1 state batch",
   "stats.common.wallet_addresses": "Wallet addresses",
-  "stats.common.gas_tracker": "Gas tracker",
   "stats.common.btc_locked_in_2wp": "BTC Locked in 2WP",
   "stats.common.current_epoch": "Current epoch",
   "stats.common.total_addresses": "Total addresses",
@@ -29,5 +28,6 @@
   "stats.common.contracts_that_have_been_verified": "Contracts That Have Been Verified",
   "stats.charts_loading_error.some_charts_did_not_load": "Some charts did not load properly.",
   "stats.charts_loading_error.click_once_again": "click once again.",
-  "stats.charts_widgets_list.couldnt_find_chart": "Couldn't find a chart matching your search."
+  "stats.charts_widgets_list.couldnt_find_chart": "Couldn't find a chart matching your search.",
+  "stats.charts_widgets_list.reset_zoom": "Reset zoom"
 }

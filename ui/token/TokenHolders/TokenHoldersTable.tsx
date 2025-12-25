@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenHolder, TokenInfo } from 'types/api/token';
 
@@ -13,14 +14,16 @@ interface Props {
 }
 
 const TokenHoldersTable = ({ data, token, top, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <TableRoot>
       <TableHeaderSticky top={ top }>
         <TableRow>
-          <TableColumnHeader w="70%">Holder</TableColumnHeader>
-          { (token.type === 'ERC-1155' || token.type === 'ERC-404') && <TableColumnHeader w="30%">ID#</TableColumnHeader> }
+          <TableColumnHeader w="70%">{ t('tokens.table.holder') }</TableColumnHeader>
+          { (token.type === 'ERC-1155' || token.type === 'ERC-404') && <TableColumnHeader w="30%">{ t('tokens.table.id') }</TableColumnHeader> }
           <TableColumnHeader isNumeric width="220px">Quantity</TableColumnHeader>
-          { token.total_supply && token.type !== 'ERC-404' && <TableColumnHeader isNumeric width="175px">Percentage</TableColumnHeader> }
+          { token.total_supply && token.type !== 'ERC-404' && <TableColumnHeader isNumeric width="175px">{ t('tokens.table.percentage') }</TableColumnHeader> }
         </TableRow>
       </TableHeaderSticky>
       <TableBody>

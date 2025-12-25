@@ -1,6 +1,10 @@
+import i18n from 'i18next';
+
 import type { TokenInfo } from 'types/api/token';
 
 import config from 'configs/app';
+
+const t = i18n.t.bind(i18n);
 
 export type ColumnsIds = 'tx_hash' | 'type' | 'method' | 'age' | 'from' | 'or_and' | 'to' | 'amount' | 'asset' | 'fee';
 
@@ -14,27 +18,27 @@ type TxTableColumn = {
 export const TABLE_COLUMNS: Array<TxTableColumn> = [
   {
     id: 'tx_hash',
-    name: 'Tx hash',
+    name: t('advanced_filter.common.tx_hash'),
     width: '180px',
   },
   {
     id: 'type',
-    name: 'Type',
+    name: t('advanced_filter.common.type'),
     width: '160px',
   },
   {
     id: 'method',
-    name: 'Method',
+    name: t('advanced_filter.common.method'),
     width: '160px',
   },
   {
     id: 'age',
-    name: 'Age',
+    name: t('advanced_filter.common.age'),
     width: '190px',
   },
   {
     id: 'from',
-    name: 'From',
+    name: t('advanced_filter.common.from'),
     width: '160px',
   },
   {
@@ -44,23 +48,23 @@ export const TABLE_COLUMNS: Array<TxTableColumn> = [
   },
   {
     id: 'to',
-    name: 'To',
+    name: t('advanced_filter.common.to'),
     width: '160px',
   },
   {
     id: 'amount',
-    name: 'Amount',
+    name: t('advanced_filter.common.amount'),
     isNumeric: true,
     width: '150px',
   },
   {
     id: 'asset',
-    name: 'Asset',
+    name: t('advanced_filter.common.asset'),
     width: '120px',
   },
   {
     id: 'fee',
-    name: 'Fee',
+    name: t('advanced_filter.common.fee'),
     isNumeric: true,
     width: '120px',
   },
@@ -69,38 +73,38 @@ export const TABLE_COLUMNS: Array<TxTableColumn> = [
 export const ADVANCED_FILTER_TYPES = [
   {
     id: 'coin_transfer',
-    name: 'Coin Transfer',
+    name: t('advanced_filter.common.coin_transfer'),
   },
   {
     id: 'ERC-20',
-    name: 'ERC-20 Transfer',
+    name: t('advanced_filter.common.erc_20_transfer'),
   },
   {
     id: 'ERC-404',
-    name: 'ERC-404 Transfer',
+    name: t('advanced_filter.common.erc_404_transfer'),
   },
   {
     id: 'ERC-721',
-    name: 'ERC-721 Transfer',
+    name: t('advanced_filter.common.erc_721_transfer'),
   },
   {
     id: 'ERC-1155',
-    name: 'ERC-1155 Transfer',
+    name: t('advanced_filter.common.erc_1155_transfer'),
   },
   {
     id: 'contract_creation',
-    name: 'Contract Creation',
+    name: t('advanced_filter.common.contract_creation'),
   },
   {
     id: 'contract_interaction',
-    name: 'Contract Interaction',
+    name: t('advanced_filter.common.contract_interaction'),
   },
 ] as const;
 
 export const ADVANCED_FILTER_TYPES_WITH_ALL = [
   {
     id: 'all',
-    name: 'All',
+    name: t('advanced_filter.common.all'),
   },
   ...ADVANCED_FILTER_TYPES,
 ];

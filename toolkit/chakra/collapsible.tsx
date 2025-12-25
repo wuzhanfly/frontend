@@ -1,5 +1,6 @@
 import { Flex, type FlexProps } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { scroller, Element } from 'react-scroll';
 
 import { useUpdateEffect } from '../hooks/useUpdateEffect';
@@ -22,6 +23,7 @@ const SCROLL_CONFIG = {
 const CUT_ID = 'CollapsibleDetails';
 
 export const CollapsibleDetails = (props: CollapsibleDetailsProps) => {
+  const { t } = useTranslation();
 
   const { children, id = CUT_ID, onClick, isExpanded: isExpandedProp = false, text: textProp, loading, noScroll, ...rest } = props;
 
@@ -40,7 +42,7 @@ export const CollapsibleDetails = (props: CollapsibleDetailsProps) => {
     isExpandedProp && !noScroll && scroller.scrollTo(id, SCROLL_CONFIG);
   }, [ isExpandedProp, id, noScroll ]);
 
-  const text = isExpanded ? (textProp?.[1] ?? 'Hide details') : (textProp?.[0] ?? 'View details');
+  const text = isExpanded ? (textProp?.[1] ?? t('common.common.hide_details')) : (textProp?.[0] ?? t('common.common.view_details'));
 
   return (
     <>
@@ -69,6 +71,8 @@ interface CollapsibleListProps<T> extends FlexProps {
 }
 
 export const CollapsibleList = <T,>(props: CollapsibleListProps<T>) => {
+  const { t } = useTranslation();
+
   const CUT_LENGTH = 3;
 
   const { items, renderItem, triggerProps, cutLength = CUT_LENGTH, text: textProp, ...rest } = props;
@@ -79,7 +83,7 @@ export const CollapsibleList = <T,>(props: CollapsibleListProps<T>) => {
     setIsExpanded((flag) => !flag);
   }, []);
 
-  const text = isExpanded ? (textProp?.[1] ?? 'Hide') : (textProp?.[0] ?? 'Show all');
+  const text = isExpanded ? (textProp?.[1] ?? t('common.common.hide')) : (textProp?.[0] ?? t('common.common.show_all'));
 
   return (
     <Flex flexDir="column" w="100%" { ...rest }>

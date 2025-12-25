@@ -1,5 +1,6 @@
 import { Box, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type { WatchAssetParams } from 'viem';
 
 import type { TokenInfo } from 'types/api/token';
@@ -60,6 +61,7 @@ interface Props {
 }
 
 const AddressAddToWallet = ({ className, token, tokenId, isLoading, variant = 'icon', iconSize = 6 }: Props) => {
+  const { t } = useTranslation();
   const { data: { wallet, provider } = {} } = useProvider();
   const switchOrAddChain = useSwitchOrAddChain();
   const isMobile = useIsMobile();
@@ -88,7 +90,7 @@ const AddressAddToWallet = ({ className, token, tokenId, isLoading, variant = 'i
       if (wasAdded) {
         toaster.success({
           title: 'Success',
-          description: 'Successfully added token to your wallet',
+          description: t('addresses.common.successfully_added_token_to_yo'),
         });
 
         await trackUsage('add_token');
@@ -102,10 +104,10 @@ const AddressAddToWallet = ({ className, token, tokenId, isLoading, variant = 'i
     } catch (error) {
       toaster.error({
         title: 'Error',
-        description: (error as Error)?.message || 'Something went wrong',
+        description: (error as Error)?.message || t('common.common.something_went_wrong'),
       });
     }
-  }, [ wallet, token, tokenId, switchOrAddChain, provider, trackUsage ]);
+  }, [ wallet, token, tokenId, switchOrAddChain, provider, trackUsage, t ]);
 
   if (!provider || !wallet) {
     return null;
@@ -133,7 +135,7 @@ const AddressAddToWallet = ({ className, token, tokenId, isLoading, variant = 'i
       <Tooltip content={ `Add token to ${ WALLETS_INFO[wallet].name }` }>
         <IconButton
           className={ className }
-          aria-label="Add token to wallet"
+          aria-label={ t('addresses.common.add_token_to_wallet') }
           variant="icon_background"
           size="md"
           onClick={ handleClick }
@@ -145,8 +147,15 @@ const AddressAddToWallet = ({ className, token, tokenId, isLoading, variant = 'i
   }
 
   return (
-    <Tooltip content={ `Add token to ${ WALLETS_INFO[wallet].name }` }>
-      <Box className={ className } display="inline-flex" cursor="pointer" onClick={ handleClick } flexShrink={ 0 } aria-label="Add token to wallet">
+    <Tooltip content={ `${ t('addresses.common.add_token_to_wallet') } ${ WALLETS_INFO[wallet].name }` }>
+      <Box
+        className={ className }
+        display="inline-flex"
+        cursor="pointer"
+        onClick={ handleClick }
+        flexShrink={ 0 }
+        aria-label={ t('addresses.common.add_token_to_wallet') }
+      >
         <IconSvg name={ WALLETS_INFO[wallet].icon } boxSize={ iconSize }/>
       </Box>
     </Tooltip>

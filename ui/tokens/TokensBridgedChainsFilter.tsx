@@ -1,5 +1,6 @@
 import { Text, Flex, useCheckboxGroup, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import { Button } from 'toolkit/chakra/button';
@@ -13,6 +14,8 @@ interface Props {
 }
 
 const TokensBridgedChainsFilter = ({ onChange, defaultValue }: Props) => {
+  const { t } = useTranslation();
+
   const { value, setValue } = useCheckboxGroup({ defaultValue });
 
   const handleReset = React.useCallback(() => {
@@ -35,14 +38,14 @@ const TokensBridgedChainsFilter = ({ onChange, defaultValue }: Props) => {
   return (
     <>
       <Flex justifyContent="space-between" textStyle="sm">
-        <Text fontWeight={ 600 } color="text.secondary">Show bridged tokens from</Text>
+        <Text fontWeight={ 600 } color="text.secondary">{ t('tokens.common.show_bridged_tokens_from') }</Text>
         <Button
           variant="link"
           onClick={ handleReset }
           disabled={ value.length === 0 }
           textStyle="sm"
         >
-          Reset
+          { t('common.common.reset') }
         </Button>
       </Flex>
       <CheckboxGroup defaultValue={ defaultValue } onValueChange={ handleChange } value={ value } name="bridged_token_chain">

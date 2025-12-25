@@ -1,5 +1,6 @@
 import { Flex, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressMetadataTagFormatted } from 'types/client/addressMetadata';
 
@@ -13,6 +14,8 @@ interface Props {
 }
 
 const AddressAlerts = ({ tags, isScamToken, className }: Props) => {
+  const { t } = useTranslation();
+
   const noteTags = tags?.filter(({ tagType }) => tagType === 'note').filter(({ meta }) => meta?.data);
 
   if (!noteTags?.length && !isScamToken) {
@@ -23,7 +26,7 @@ const AddressAlerts = ({ tags, isScamToken, className }: Props) => {
     <Flex flexDir="column" rowGap={{ base: 1, lg: 2 }} mb={ 3 } className={ className }>
       { isScamToken && (
         <Alert status="error">
-          This token has been flagged as a potential scam.
+          { t('tokens.common.flagged_as_scam') }
         </Alert>
       ) }
       { noteTags?.map((noteTag) => (

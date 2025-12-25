@@ -1,5 +1,6 @@
 import { Text, Flex, useCheckboxGroup, Fieldset } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { NFTTokenType, TokenType } from 'types/api/token';
 
@@ -13,6 +14,8 @@ type Props<T extends TokenType | NFTTokenType> = {
   nftOnly: T extends NFTTokenType ? true : false;
 };
 const TokenTypeFilter = <T extends TokenType | NFTTokenType>({ nftOnly, onChange, defaultValue }: Props<T>) => {
+  const { t } = useTranslation();
+
   const { value, setValue } = useCheckboxGroup({ defaultValue });
 
   const handleReset = React.useCallback(() => {
@@ -31,14 +34,14 @@ const TokenTypeFilter = <T extends TokenType | NFTTokenType>({ nftOnly, onChange
   return (
     <>
       <Flex justifyContent="space-between" textStyle="sm">
-        <Text fontWeight={ 600 } color="text.secondary">Type</Text>
+        <Text fontWeight={ 600 } color="text.secondary">{ t('common.common.type') }</Text>
         <Button
           variant="link"
           onClick={ handleReset }
           disabled={ value.length === 0 }
           textStyle="sm"
         >
-          Reset
+          { t('common.common.reset') }
         </Button>
       </Flex>
       <Fieldset.Root>

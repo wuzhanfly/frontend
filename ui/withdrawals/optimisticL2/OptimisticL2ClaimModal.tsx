@@ -2,6 +2,7 @@ import { chakra } from '@chakra-ui/react';
 import React from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { FormProvider, useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import type { Abi } from 'viem';
 import { useSwitchChain, useWaitForTransactionReceipt, useWalletClient } from 'wagmi';
 
@@ -56,7 +57,7 @@ interface Props {
 }
 
 const OptimisticL2ClaimModal = ({ data, onOpenChange, proofSubmitterAddress, onSuccess }: Props) => {
-
+  const { t } = useTranslation();
   const [ txHash, setTxHash ] = React.useState<`0x${ string }` | undefined>(undefined);
 
   const { connect: connectWeb3Wallet, isConnected: isWeb3WalletConnected, isOpen: isWeb3WalletOpen } = useWeb3Wallet({ source: 'Smart contracts' });
@@ -88,13 +89,13 @@ const OptimisticL2ClaimModal = ({ data, onOpenChange, proofSubmitterAddress, onS
   const onFormSubmit: SubmitHandler<FormFields> = React.useCallback(async(formData) => {
     try {
       if (!rollupFeature.isEnabled || !parentChain) {
-        throw new Error('Feature is not enabled');
+        throw new Error(t('withdrawals.common.feature_is_not_enabled'));
       }
 
       await switchChainAsync({ chainId: Number(parentChain.id) });
 
       if (!walletClient) {
-        throw new Error('Wallet Client is not defined');
+        throw new Error(t('withdrawals.common.wallet_client_is_not_defined'));
       }
 
       if (
@@ -106,7 +107,7 @@ const OptimisticL2ClaimModal = ({ data, onOpenChange, proofSubmitterAddress, onS
         data.msg_nonce_raw === null ||
         data.msg_value === null
       ) {
-        throw new Error('Data is not valid');
+        throw new Error(t('withdrawals.common.data_is_not_valid'));
       }
 
       const args = [
@@ -133,7 +134,7 @@ const OptimisticL2ClaimModal = ({ data, onOpenChange, proofSubmitterAddress, onS
     } catch (error) {
       showErrorToast(error);
     }
-  }, [ walletClient, switchChainAsync, data, showErrorToast ]);
+  }, [ walletClient, switchChainAsync, data, showErrorToast, t ]);
 
   React.useEffect(() => {
     if (!txHash) {
@@ -165,7 +166,7 @@ const OptimisticL2ClaimModal = ({ data, onOpenChange, proofSubmitterAddress, onS
     >
       <DialogContent>
         <DialogHeader>
-          Claim your withdrawal
+          { t('withdrawals.common.claim_your_withdrawal') }
         </DialogHeader>
         <DialogBody>
           <FormProvider { ...formApi }>
@@ -173,11 +174,11 @@ const OptimisticL2ClaimModal = ({ data, onOpenChange, proofSubmitterAddress, onS
               noValidate
               onSubmit={ formApi.handleSubmit(onFormSubmit) }
             >
-              <p>Confirm the proof submitter address is correct to claim</p>
+              <p>{ t('withdrawals.common.confirm_the_proof_submitter') }</p>
               <FormFieldAddress<FormFields>
                 name="address"
                 required
-                placeholder="Address (0x...)"
+                placeholder={ t('withdrawals.common.address_placeholder') }
                 bgColor="dialog.bg"
                 mt={ 6 }
               />
@@ -187,9 +188,9 @@ const OptimisticL2ClaimModal = ({ data, onOpenChange, proofSubmitterAddress, onS
                   type="submit"
                   disabled={ formApi.formState.isSubmitting || isTxPending }
                   loading={ formApi.formState.isSubmitting || isTxPending }
-                  loadingText="Claim"
+                  loadingText={ t('withdrawals.arbitrum_l2.claim') }
                 >
-                  Claim
+                  { t('withdrawals.arbitrum_l2.claim') }
                 </Button>
               ) : (
                 <Button
@@ -197,9 +198,9 @@ const OptimisticL2ClaimModal = ({ data, onOpenChange, proofSubmitterAddress, onS
                   onClick={ connectWeb3Wallet }
                   disabled={ isWeb3WalletOpen }
                   loading={ isWeb3WalletOpen }
-                  loadingText="Connect wallet"
+                  loadingText={ t('withdrawals.common.connect_wallet') }
                 >
-                  Connect wallet
+                  { t('withdrawals.common.connect_wallet') }
                 </Button>
               ) }
             </chakra.form>

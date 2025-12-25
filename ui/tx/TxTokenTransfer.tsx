@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenType } from 'types/api/token';
 import type { TokenTransfer } from 'types/api/tokenTransfer';
@@ -8,7 +9,7 @@ import type { TokenTransfer } from 'types/api/tokenTransfer';
 import getFilterValuesFromQuery from 'lib/getFilterValuesFromQuery';
 import { TOKEN_TYPE_IDS } from 'lib/token/tokenTypes';
 import { getTokenTransfersStub } from 'stubs/token';
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 import ActionBar, { ACTION_BAR_HEIGHT_DESKTOP } from 'ui/shared/ActionBar';
 import DataFetchAlert from 'ui/shared/DataFetchAlert';
 import DataListDisplay from 'ui/shared/DataListDisplay';
@@ -30,6 +31,7 @@ interface Props {
 }
 
 const TxTokenTransfer = ({ txQuery, tokenTransferFilter }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const [ typeFilter, setTypeFilter ] = React.useState<Array<TokenType>>(getTokenFilterValue(router.query.type) || []);
@@ -97,9 +99,9 @@ const TxTokenTransfer = ({ txQuery, tokenTransferFilter }: Props) => {
     <DataListDisplay
       isError={ txQuery.isError || tokenTransferQuery.isError }
       itemsNum={ items.length }
-      emptyText="There are no token transfers."
+      emptyText={ t('tokens.common.there_are_no_token_transfers') }
       filterProps={{
-        emptyFilteredText: `Couldn${ apos }t find any token transfer that matches your query.`,
+        emptyFilteredText: t('common.common.couldnt_find_any_token_transfer_that_matches_your_query'),
         hasActiveFilters: Boolean(numActiveFilters),
       }}
       actionBar={ actionBar }

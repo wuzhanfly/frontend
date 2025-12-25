@@ -1,6 +1,7 @@
 import { HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenType } from 'types/api/token';
 
@@ -25,6 +26,8 @@ const getChainIdFilterValue = (chainIds: Array<string>) => {
 };
 
 const OpSuperchainTokens = () => {
+  const { t } = useTranslation();
+
   const router = useRouter();
   const isMobile = useIsMobile();
 
@@ -97,7 +100,7 @@ const OpSuperchainTokens = () => {
       w={{ base: '100%', lg: '360px' }}
       size="sm"
       onChange={ handleSearchTermChange }
-      placeholder="Token name or symbol"
+      placeholder={ t('tokens.common.token_name_or_symbol') }
       initialValue={ searchTerm }
     />
   );
@@ -139,7 +142,7 @@ const OpSuperchainTokens = () => {
 
   return (
     <>
-      <PageTitle title="Tokens" withTextAd/>
+      <PageTitle title={ t('tokens.common.tokens') } withTextAd/>
       <Tokens
         query={ tokensQuery }
         actionBar={ actionBar }

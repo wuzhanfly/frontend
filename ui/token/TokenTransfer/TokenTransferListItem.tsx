@@ -1,5 +1,6 @@
 import { Flex, Grid } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenInstance } from 'types/api/token';
 import type { TokenTransfer } from 'types/api/tokenTransfer';
@@ -31,6 +32,8 @@ const TokenTransferListItem = ({
   instance,
   chainData,
 }: Props) => {
+  const { t } = useTranslation();
+
   const { usd, valueStr } = total && 'value' in total && total.value !== null ? getCurrencyValue({
     value: total.value,
     exchangeRate: token?.exchange_rate,
@@ -74,7 +77,7 @@ const TokenTransferListItem = ({
       { valueStr && token && (token.type === 'ERC-20' || token.type === 'ERC-1155') && (
         <Grid gap={ 2 } templateColumns={ `1fr auto auto${ usd ? ' auto' : '' }` }>
           <Skeleton loading={ isLoading } flexShrink={ 0 } fontWeight={ 500 }>
-            Value
+            { t('common.common.value') }:
           </Skeleton>
           <Skeleton
             loading={ isLoading }

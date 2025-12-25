@@ -1,5 +1,6 @@
 import { createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { StatsInterval, StatsIntervalIds } from 'types/client/stats';
 
@@ -29,7 +30,7 @@ type Props = {
 };
 
 const ChartIntervalSelect = ({ interval, onIntervalChange, isLoading, selectTagSize }: Props) => {
-
+  const { t } = useTranslation();
   const handleItemSelect = React.useCallback(({ value }: { value: Array<string> }) => {
     onIntervalChange(value[0] as StatsIntervalIds);
   }, [ onIntervalChange ]);
@@ -41,7 +42,7 @@ const ChartIntervalSelect = ({ interval, onIntervalChange, isLoading, selectTagS
       </Skeleton>
       <Select
         collection={ intervalCollection }
-        placeholder="Select interval"
+        placeholder={ t('shared.common.select_interval') }
         defaultValue={ [ interval ] }
         onValueChange={ handleItemSelect }
         hideFrom="lg"

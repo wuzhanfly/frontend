@@ -1,9 +1,10 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenType } from 'types/api/token';
 
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 import ActionBar, { ACTION_BAR_HEIGHT_DESKTOP } from 'ui/shared/ActionBar';
 import DataListDisplay from 'ui/shared/DataListDisplay';
 import PopoverFilter from 'ui/shared/filters/PopoverFilter';
@@ -15,6 +16,7 @@ import TokenTransfersTable from 'ui/tokenTransfers/TokenTransfersTable';
 import useTokenTransfersQuery from 'ui/tokenTransfers/useTokenTransfersQuery';
 
 const TokenTransfers = () => {
+  const { t } = useTranslation();
   const { query, typeFilter, onTokenTypesChange } = useTokenTransfersQuery({ enabled: true });
 
   const content = (
@@ -54,17 +56,17 @@ const TokenTransfers = () => {
   return (
     <>
       <PageTitle
-        title="Token transfers"
+        title={ t('transactions.common.token_transfers') }
         withTextAd
       />
       <DataListDisplay
         isError={ query.isError }
         itemsNum={ query.data?.items.length }
-        emptyText="There are no token transfers."
+        emptyText={ t('transactions.common.there_are_no_token_transfers') }
         actionBar={ actionBar }
         filterProps={{
           hasActiveFilters: Boolean(typeFilter.length),
-          emptyFilteredText: `Couldn${ apos }t find any token transfer that matches your query.`,
+          emptyFilteredText: t('common.common.couldnt_find_any_token_transfer_that_matches_your_query'),
         }}
       >
         { content }

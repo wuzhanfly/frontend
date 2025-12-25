@@ -1,5 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressParam } from 'types/api/addressParams';
 
@@ -27,6 +28,7 @@ type Props = {
 };
 
 const TxSubHeading = ({ hash, hasTag, txQuery }: Props) => {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
   const feature = multichainContext?.chain?.app_config.features.txInterpretation || config.features.txInterpretation;
 
@@ -93,7 +95,7 @@ const TxSubHeading = ({ hash, hasTag, txQuery }: Props) => {
             chainData={ multichainContext?.chain }
           />
           { hasViewAllInterpretationsLink &&
-          <Link href={ `#${ TX_ACTIONS_BLOCK_ID }` }>View all</Link> }
+          <Link href={ `#${ TX_ACTIONS_BLOCK_ID }` }>{ t('common.common.view_all') }</Link> }
         </Flex>
       );
     } else if (hasInterpretationFeature && txQuery.data?.method && txQuery.data?.from && txQuery.data?.to) {
@@ -144,7 +146,7 @@ const TxSubHeading = ({ hash, hasTag, txQuery }: Props) => {
       >
         { !hasTag && <AccountActionsMenu isLoading={ isLoading }/> }
         { appActionData && (
-          <AppActionButton data={ appActionData } txHash={ hash } source="Txn"/>
+          <AppActionButton data={ appActionData } txHash={ hash } source={ t('transactions.common.txn') }/>
         ) }
         <NetworkExplorers type="tx" pathParam={ hash } ml="auto"/>
       </Flex>

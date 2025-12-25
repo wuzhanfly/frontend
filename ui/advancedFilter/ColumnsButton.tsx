@@ -1,5 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Button } from 'toolkit/chakra/button';
 import { Checkbox, CheckboxGroup } from 'toolkit/chakra/checkbox';
@@ -14,6 +15,7 @@ interface Props {
 }
 
 const ColumnsButton = ({ columns, onChange }: Props) => {
+  const { t } = useTranslation();
   const handleValueChange = React.useCallback((value: Array<string>) => {
     const newCols = value.reduce((acc, key) => {
       acc[key as ColumnsIds] = true;
@@ -31,7 +33,7 @@ const ColumnsButton = ({ columns, onChange }: Props) => {
           px={{ base: 1, lg: 3 }}
         >
           <IconSvg name="columns" boxSize={ 5 } color="inherit"/>
-          <chakra.span hideBelow="lg">Columns</chakra.span>
+          <chakra.span hideBelow="lg">{ t('advanced_filter.common.columns') }</chakra.span>
         </Button>
       </PopoverTrigger>
       <PopoverContent>
@@ -49,7 +51,7 @@ const ColumnsButton = ({ columns, onChange }: Props) => {
                 value={ col.id }
                 size="md"
               >
-                { col.id === 'or_and' ? 'And/Or' : col.name }
+                { col.id === 'or_and' ? t('advanced_filter.common.and_or') : col.name }
               </Checkbox>
             )) }
           </CheckboxGroup>

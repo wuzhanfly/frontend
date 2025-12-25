@@ -2,6 +2,7 @@ import { createListCollection, Flex, VStack } from '@chakra-ui/react';
 import { isEqual } from 'es-toolkit';
 import type { ChangeEvent } from 'react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AdvancedFilterParams } from 'types/api/advancedFilter';
 
@@ -18,13 +19,6 @@ const FILTER_PARAM_TO_EXCLUDE = 'to_address_hashes_to_exclude';
 const FILTER_PARAM_FROM_EXCLUDE = 'from_address_hashes_to_exclude';
 
 export type AddressFilterMode = 'include' | 'exclude';
-
-const collection = createListCollection({
-  items: [
-    { label: 'Include', value: 'include' },
-    { label: 'Exclude', value: 'exclude' },
-  ],
-});
 
 type Value = Array<{ address: string; mode: AddressFilterMode }>;
 
@@ -56,11 +50,20 @@ function addressFilterToKey(filter: AddressFilter) {
 }
 
 const AddressFilterInput = ({ address, mode, onModeChange, onChange, onClear, isLast, onAddFieldClick }: InputProps) => {
+  const { t } = useTranslation();
+
+  const collection = createListCollection({
+    items: [
+      { label: t('common.common.include'), value: 'include' },
+      { label: t('common.common.exclude'), value: 'exclude' },
+    ],
+  });
+
   return (
     <Flex alignItems="center" w="100%">
       <Select
         collection={ collection }
-        placeholder="Select mode"
+        placeholder={ t('common.common.select_mode') }
         defaultValue={ [ mode || 'include' ] }
         onValueChange={ onModeChange }
         portalled={ false }
@@ -72,7 +75,7 @@ const AddressFilterInput = ({ address, mode, onModeChange, onChange, onClear, is
         flexGrow={ 1 }
         endElement={ <ClearButton onClick={ onClear } mx={ 2 } disabled={ !address }/> }
       >
-        <Input value={ address } onChange={ onChange } placeholder="Smart contract / Address (0x...)*" size="sm" autoComplete="off"/>
+        <Input value={ address } onChange={ onChange } placeholder={ t('common.common.s_c_a') } size="sm" autoComplete="off"/>
       </InputGroup>
       { isLast && (
         <AddButton
@@ -87,6 +90,8 @@ const AddressFilterInput = ({ address, mode, onModeChange, onChange, onClear, is
 const emptyItem = { address: '', mode: 'include' as AddressFilterMode };
 
 const AddressFilter = ({ type, value = [], handleFilterChange }: Props) => {
+  const { t } = useTranslation();
+
   const [ currentValue, setCurrentValue ] =
     React.useState<Array<AddressFilter>>([ ...value, emptyItem ]);
 
@@ -133,7 +138,7 @@ const AddressFilter = ({ type, value = [], handleFilterChange }: Props) => {
 
   return (
     <TableColumnFilter
-      title={ type === 'from' ? 'From address' : 'To address' }
+      title={ type === 'from' ? t('common.common.from_address') : t('common.common.to_address') }
       isFilled={ Boolean(currentValue[0].address) }
       isTouched={ !isEqual(currentValue.filter(i => i.address).map(addressFilterToKey).sort(), value.map(addressFilterToKey).sort()) }
       onFilter={ onFilter }

@@ -1,24 +1,28 @@
+import i18n from 'i18next';
+
 import config from 'configs/app';
 
 export default function getNetworkValidationActionText(chainConfig = config) {
+  const t = i18n.t.bind(i18n);
+
   switch (chainConfig.chain.verificationType) {
     case 'validation': {
-      return 'validated';
+      return t('txs.common.validated');
     }
     case 'mining': {
-      return 'mined';
+      return t('txs.common.mined');
     }
     case 'posting': {
-      return 'posted';
+      return t('txs.common.posted');
     }
     case 'sequencing': {
-      return 'sequenced';
+      return t('txs.common.sequenced');
     }
     case 'fee reception': {
-      return 'validated';
+      return t('txs.common.validated');
     }
     default: {
-      return 'mined';
+      return t('txs.common.mined');
     }
   }
 }

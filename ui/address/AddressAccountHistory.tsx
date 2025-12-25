@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { NovesHistoryFilterValue } from 'types/api/noves';
 import { NovesHistoryFilterValues } from 'types/api/noves';
@@ -29,6 +30,7 @@ type Props = {
 };
 
 const AddressAccountHistory = ({ shouldRender = true, isQueryEnabled = true }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMounted = useIsMounted();
 
@@ -88,13 +90,13 @@ const AddressAccountHistory = ({ shouldRender = true, isQueryEnabled = true }: P
           <TableHeaderSticky top={ 75 }>
             <TableRow>
               <TableColumnHeader width="120px">
-                Age
+                { t('addresses.common.age') }
               </TableColumnHeader>
               <TableColumnHeader>
-                Action
+                { t('addresses.common.action') }
               </TableColumnHeader>
               <TableColumnHeader width="320px">
-                From/To
+                { t('addresses.common.from_to') }
               </TableColumnHeader>
             </TableRow>
           </TableHeaderSticky>
@@ -117,11 +119,11 @@ const AddressAccountHistory = ({ shouldRender = true, isQueryEnabled = true }: P
     <DataListDisplay
       isError={ isError }
       itemsNum={ filteredData?.length }
-      emptyText="There are no transactions."
+      emptyText={ t('addresses.common.there_are_no_transactions') }
       actionBar={ actionBar }
       filterProps={{
         hasActiveFilters: Boolean(filterValue),
-        emptyFilteredText: 'No match found for current filter',
+        emptyFilteredText: t('advanced_filter.common.no_match_found'),
       }}
     >
       { content }

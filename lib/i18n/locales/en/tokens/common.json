@@ -38,7 +38,6 @@
   "tokens.common.description_and_support_info": "Description and support info",
   "tokens.common.links": "Links",
   "tokens.common.crypto_markets": "Crypto markets",
-  "tokens.common.discord": "Discord",
   "tokens.common.documentation": "Documentation",
   "tokens.common.there_are_no_token_transfers": "There are no token transfers.",
   "tokens.common.method": "Method",
@@ -100,5 +99,9 @@
   "tokens.instance.token_id": "Token ID",
   "tokens.instance.dapp": "Dapp",
   "tokens.instance.view_in_app": "View in app",
-  "tokens.instance.creator": "Creator"
+  "tokens.instance.creator": "Creator",
+  "tokens.common.bridged_tokens": "Bridged tokens",
+  "tokens.common.tokens_on_chain": "Tokens on {{chainName}}",
+  "tokens.common.list_of_tokens_bridged_through": "List of the tokens bridged through {{bridge}} extensions",
+  "tokens.common.flagged_as_scam": "This token has been flagged as a potential scam."
 }

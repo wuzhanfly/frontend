@@ -1,5 +1,6 @@
 import { useQueryClient } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressParam } from 'types/api/addressParams';
 import type { OptimisticL2WithdrawalStatus } from 'types/api/optimisticL2';
@@ -44,6 +45,8 @@ const WITHDRAWAL_STATUS_ORDER_GAME: Array<OptimisticL2WithdrawalStatus> = [
 const rollupFeature = config.features.rollup;
 
 const TxDetailsWithdrawalStatusOptimistic = ({ data, from, txHash }: Props) => {
+  const { t } = useTranslation();
+
   const queryClient = useQueryClient();
 
   const handleClaimSuccess = React.useCallback((l1TxHash: string) => {
@@ -95,7 +98,7 @@ const TxDetailsWithdrawalStatusOptimistic = ({ data, from, txHash }: Props) => {
         if (data.l1_transaction_hash) {
           return WITHDRAWAL_STATUS_STEPS.map((status) => {
             return status === 'Relayed' ? {
-              content: <TxEntityL1 hash={ data.l1_transaction_hash } truncation="constant" text="Relayed" noIcon noCopy/>,
+              content: <TxEntityL1 hash={ data.l1_transaction_hash } truncation="constant" text={ t('transactions.common.relayed') } noIcon noCopy/>,
               label: status,
             } : status;
           });

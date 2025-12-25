@@ -1,5 +1,6 @@
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenHolder, TokenInfo } from 'types/api/token';
 
@@ -16,11 +17,13 @@ interface Props {
 }
 
 const TokenHoldersListItem = ({ holder, token, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   const quantity = BigNumber(holder.value).div(BigNumber(10 ** Number(token.decimals))).dp(6).toFormat();
 
   return (
     <ListItemMobileGrid.Container>
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Address</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('tokens.common.address') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <AddressEntity
           address={ holder.address }
@@ -32,14 +35,14 @@ const TokenHoldersListItem = ({ holder, token, isLoading }: Props) => {
 
       { (token.type === 'ERC-1155' || token.type === 'ERC-404') && 'token_id' in holder && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>ID#</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('tokens.table.id') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <TruncatedValue value={ holder.token_id } isLoading={ isLoading } w="100%"/>
           </ListItemMobileGrid.Value>
         </>
       ) }
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Quantity</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('tokens.table.quantity') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <Skeleton loading={ isLoading } display="inline-block">
           { quantity }
@@ -48,7 +51,7 @@ const TokenHoldersListItem = ({ holder, token, isLoading }: Props) => {
 
       { token.total_supply && token.type !== 'ERC-404' && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Percentage</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('tokens.table.percentage') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <Utilization
               value={ BigNumber(holder.value).div(BigNumber(token.total_supply)).dp(4).toNumber() }

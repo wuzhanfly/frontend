@@ -3,6 +3,7 @@ import type { UseQueryResult } from '@tanstack/react-query';
 import BigNumber from 'bignumber.js';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { ZKSYNC_L2_TX_BATCH_STATUSES, type ZkSyncBatch } from 'types/api/zkSyncL2';
 
@@ -34,6 +35,8 @@ interface Props {
 }
 
 const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
+  const { t } = useTranslation();
+
   const router = useRouter();
 
   const { data, isPlaceholderData, isError, error } = query;
@@ -69,10 +72,10 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
       templateColumns={{ base: 'minmax(0, 1fr)', lg: 'minmax(min-content, 200px) minmax(0, 1fr)' }}
     >
       <DetailedInfo.ItemLabel
-        hint="Batch number indicates the length of batches produced by grouping L2 blocks to be proven on Ethereum."
+        hint={ t('batches.zksync_l2.batch_number_indicates_the_length_of_batches') }
         isLoading={ isPlaceholderData }
       >
-        Txn batch number
+        { t('batches.zksync_l2.txn_batch_number') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
@@ -81,43 +84,43 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         <PrevNext
           ml={ 6 }
           onClick={ handlePrevNextClick }
-          prevLabel="View previous txn batch"
-          nextLabel="View next txn batch"
+          prevLabel={ t('common.common.view_previous_txn_batch') }
+          nextLabel={ t('common.common.view_next_txn_batch') }
           isPrevDisabled={ data.number === 0 }
           isLoading={ isPlaceholderData }
         />
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Status is the short interpretation of the batch lifecycle"
+        hint={ t('transactions.common.status_is_the_short_interpreta') }
         isLoading={ isPlaceholderData }
       >
-        Status
+        { t('batches.zksync_l2.status') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <VerificationSteps steps={ ZKSYNC_L2_TX_BATCH_STATUSES.slice(1) } currentStep={ data.status } isLoading={ isPlaceholderData }/>
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Date and time at which batch is produced"
+        hint={ t('batches.zksync_l2.date_and_time_at_which_batch_is_produced') }
         isLoading={ isPlaceholderData }
       >
-        Timestamp
+        { t('batches.zksync_l2.timestamp') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         { data.timestamp ? <DetailedInfoTimestamp timestamp={ data.timestamp } isLoading={ isPlaceholderData }/> : 'Undefined' }
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Number of transactions inside the batch."
+        hint={ t('common.common.number_of_transactions_inside_') }
         isLoading={ isPlaceholderData }
       >
-        Transactions
+        { t('batches.common.transactions') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ isPlaceholderData }>
           <Link href={ route({ pathname: '/batches/[number]', query: { number: data.number.toString(), tab: 'txs' } }) }>
-            { txNum } transaction{ txNum === 1 ? '' : 's' }
+            { txNum } { t('common.common.transaction') }{ txNum === 1 ? '' : 's' }
           </Link>
         </Skeleton>
       </DetailedInfo.ItemValue>
@@ -130,9 +133,9 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         <GridItem colSpan={{ base: undefined, lg: 2 }} mt={{ base: 1, lg: 4 }}/>
 
         <DetailedInfo.ItemLabel
-          hint="L1 batch root is a hash that summarizes batch data and submitted to the L1"
+          hint={ t('batches.common.l1_batch_root') }
         >
-          Root hash
+          { t('batches.zksync_l2.root_hash') }
         </DetailedInfo.ItemLabel>
         <DetailedInfo.ItemValue
           flexWrap="nowrap"
@@ -143,9 +146,9 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         </DetailedInfo.ItemValue>
 
         <DetailedInfo.ItemLabel
-          hint="Gas price for the batch settlement transaction on L1"
+          hint={ t('batches.zksync_l2.gas_price_for_the_batch_settlement_transaction_on_l1') }
         >
-          L1 gas price
+          { t('batches.zksync_l2.l1_gas_price') }
         </DetailedInfo.ItemLabel>
         <DetailedInfo.ItemValue multiRow>
           <Text mr={ 1 }>{ BigNumber(data.l1_gas_price).dividedBy(WEI).toFixed() } { parentChainCurrency || currencyUnits.ether }</Text>
@@ -153,9 +156,9 @@ const ZkSyncL2TxnBatchDetails = ({ query }: Props) => {
         </DetailedInfo.ItemValue>
 
         <DetailedInfo.ItemLabel
-          hint='The gas price below which the "baseFee" of the batch should not fall'
+          hint={ t('batches.common.gas_price_below_batch_fail') }
         >
-          L2 fair gas price
+          { t('batches.zksync_l2.l2_fair_gas_price') }
         </DetailedInfo.ItemLabel>
         <DetailedInfo.ItemValue multiRow>
           <Text mr={ 1 }>{ BigNumber(data.l2_fair_gas_price).dividedBy(WEI).toFixed() } { currencyUnits.ether }</Text>

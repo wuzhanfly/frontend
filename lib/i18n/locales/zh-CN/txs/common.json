@@ -15,5 +15,9 @@
   "txs.common.eip_1559": "EIP-1559",
   "txs.common.view_all": "查看全部",
   "txs.common.remasc": "REMASC",
-  "txs.common.empty_filtered_text": "找不到与您的查询匹配的任何交易。"
+  "txs.common.empty_filtered_text": "找不到与您的查询匹配的任何交易。",
+  "txs.common.validated": "已验证",
+  "txs.common.mined": "矿工",
+  "txs.common.posted": "发布者",
+  "txs.common.sequenced": "排序"
 }

@@ -1,4 +1,27 @@
 {
   "advanced_filter.common.advanced_filter": "高级筛选",
-  "advanced_filter.common.type_of_transfer": "转账类型"
+  "advanced_filter.common.type_of_transfer": "转账类型",
+  "advanced_filter.common.no_match_found": "当前筛选条件未找到匹配项",
+  "advanced_filter.common.all": "全部",
+  "advanced_filter.common.seven_days": "一周",
+  "advanced_filter.common.type": "类型",
+  "advanced_filter.common.age": "周期",
+  "advanced_filter.common.and_or": "与/或",
+  "advanced_filter.common.columns": "列",
+  "advanced_filter.common.tx_hash": "交易哈希",
+  "advanced_filter.common.method": "方法",
+  "advanced_filter.common.from": "来源",
+  "advanced_filter.common.to": "目标",
+  "advanced_filter.common.amount": "数量",
+  "advanced_filter.common.asset": "资产",
+  "advanced_filter.common.fee": "费用",
+  "advanced_filter.common.or": "或",
+  "advanced_filter.common.and": "与",
+  "advanced_filter.common.coin_transfer": "代币转账",
+  "advanced_filter.common.erc_20_transfer": "ERC-20 转账",
+  "advanced_filter.common.erc_404_transfer": "ERC-404 转账",
+  "advanced_filter.common.erc_721_transfer": "ERC-721 转账",
+  "advanced_filter.common.erc_1155_transfer": "ERC-1155 转账",
+  "advanced_filter.common.contract_creation": "合约创建",
+  "advanced_filter.common.contract_interaction": "合约交互"
 }

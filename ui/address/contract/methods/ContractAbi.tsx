@@ -1,6 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 import { range } from 'es-toolkit';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContractMethod } from './types';
 
@@ -8,7 +9,7 @@ import { route } from 'nextjs-routes';
 
 import { AccordionRoot } from 'toolkit/chakra/accordion';
 import { Link } from 'toolkit/chakra/link';
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 
 import ContractAbiItem from './ContractAbiItem';
 import useFormSubmit from './useFormSubmit';
@@ -23,6 +24,8 @@ interface Props {
 }
 
 const ContractAbi = ({ abi, addressHash, sourceAddress, tab, visibleItems }: Props) => {
+  const { t } = useTranslation();
+
   const [ expandedSections, setExpandedSections ] = React.useState<Array<string>>(abi.length === 1 ? [ '0' ] : []);
   const [ id, setId ] = React.useState(0);
 
@@ -55,7 +58,7 @@ const ContractAbi = ({ abi, addressHash, sourceAddress, tab, visibleItems }: Pro
   return (
     <div>
       <Flex mb={ 3 }>
-        <Box fontWeight={ 500 } mr="auto">Contract information</Box>
+        <Box fontWeight={ 500 } mr="auto">{ t('addresses.common.contract_information') }</Box>
         { abi.length > 1 && (
           <Link onClick={ handleExpandAll } variant="secondary">
             { expandedSections.length === abi.length ? 'Collapse' : 'Expand' } all
@@ -81,16 +84,16 @@ const ContractAbi = ({ abi, addressHash, sourceAddress, tab, visibleItems }: Pro
       </AccordionRoot>
       { !hasVisibleItems && (
         <div>
-          <div>Couldn{ apos }t find any method that matches your query.</div>
+          <div>{ t('addresses.common.could_not_find_method_matches_query') }</div>
           <div>
-            You can use custom ABI for this contract without verifying the contract in the{ ' ' }
+            { t('addresses.common.can_use_abi_without_verifying') }{ ' ' }
             <Link
               href={ route({ pathname: '/address/[hash]', query: { hash: addressHash, tab: 'read_write_custom_methods' } }) }
               scroll={ false }
             >
-              Custom ABI
+              { t('addresses.common.custom_abi') }
             </Link>
-            { ' ' }tab.
+            { ' ' }{ t('addresses.common.tab_dot') }
           </div>
         </div>
       ) }

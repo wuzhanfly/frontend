@@ -1,5 +1,6 @@
 import { Grid, GridItem } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Log } from 'types/api/log';
 import type { ClusterChainConfig } from 'types/multichain';
@@ -34,6 +35,7 @@ const RowHeader = ({ children, isLoading }: { children: React.ReactNode; isLoadi
 );
 
 const LogItem = ({ address, index, topics, data, decoded, type, transaction_hash: txHash, isLoading, defaultDataType, chainData }: Props) => {
+  const { t } = useTranslation();
 
   const hasTxInfo = type === 'address' && txHash;
 
@@ -53,12 +55,24 @@ const LogItem = ({ address, index, topics, data, decoded, type, transaction_hash
       { !decoded && !address.is_verified && type === 'transaction' && (
         <GridItem colSpan={{ base: 1, lg: 2 }}>
           <Alert status="warning" display="inline-table" whiteSpace="normal">
-            To see accurate decoded input data, the contract must be verified.{ space }
-            <Link href={ route({ pathname: '/address/[hash]/contract-verification', query: { hash: address.hash } }) }>Verify the contract here</Link>
+            { t('transactions.common.to_see_accurate_decoded_input_data') }{ space }
+            <Link href={ route({ pathname: '/address/[hash]/contract-verification', query: { hash: address.hash } }) }>
+              { t('common.common.verify_the_contract_here') }</Link>
           </Alert>
         </GridItem>
       ) }
-      { hasTxInfo ? <RowHeader isLoading={ isLoading }>Transaction</RowHeader> : <RowHeader isLoading={ isLoading }>Address</RowHeader> }
+      { hasTxInfo ?
+        (
+          <RowHeader isLoading={ isLoading }>
+            { t('transactions.common.transaction') }
+          </RowHeader>
+        ) :
+        (
+          <RowHeader isLoading={ isLoading }>
+            { t('addresses.common.address') }
+          </RowHeader>
+        )
+      }
       <GridItem display="flex" alignItems="center">
         { type === 'address' && txHash ? (
           <TxEntity
@@ -95,13 +109,13 @@ const LogItem = ({ address, index, topics, data, decoded, type, transaction_hash
       </GridItem>
       { decoded && (
         <>
-          <RowHeader isLoading={ isLoading }>Decode input data</RowHeader>
+          <RowHeader isLoading={ isLoading }>{ t('common.common.decode_input_data') }</RowHeader>
           <GridItem>
             <LogDecodedInputData data={ decoded } isLoading={ isLoading }/>
           </GridItem>
         </>
       ) }
-      <RowHeader isLoading={ isLoading }>Topics</RowHeader>
+      <RowHeader isLoading={ isLoading }>{ t('common.common.topics') }</RowHeader>
       <GridItem>
         { topics.filter(Boolean).map((item, index) => (
           <LogTopic
@@ -112,7 +126,7 @@ const LogItem = ({ address, index, topics, data, decoded, type, transaction_hash
           />
         )) }
       </GridItem>
-      <RowHeader isLoading={ isLoading }>Data</RowHeader>
+      <RowHeader isLoading={ isLoading }>{ t('common.common.data') }</RowHeader>
       { defaultDataType ? (
         <RawInputData hex={ data } isLoading={ isLoading } defaultDataType={ defaultDataType } minHeight="53px"/>
       ) : (

@@ -1,6 +1,7 @@
 import { HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as multichain from '@blockscout/multichain-aggregator-types';
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
@@ -45,6 +46,7 @@ interface Props {
 }
 
 const OpSuperchainAddressTokenTransfers = ({ addressData, isLoading }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMobile = useIsMobile();
 
@@ -165,7 +167,7 @@ const OpSuperchainAddressTokenTransfers = ({ addressData, isLoading }: Props) =>
             />
           </SocketProvider>
         </MultichainProvider>
-      ) : <p>There are no token transfers.</p>,
+      ) : <p>{ t('tokens.common.there_are_no_token_transfers') }</p>,
     },
   ];
 

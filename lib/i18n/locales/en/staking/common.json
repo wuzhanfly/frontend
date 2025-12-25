@@ -39,5 +39,14 @@
   "staking.common.l2_block": "L2 block",
   "staking.common.l2_block_no": "L2 block No",
   "staking.common.deposits_feature_is_not_enable": "Deposits feature is not enabled.",
-  "staking.common.withdrawals_feature_is_not_ena": "Withdrawals feature is not enabled."
+  "staking.common.withdrawals_feature_is_not_ena": "Withdrawals feature is not enabled.",
+  "staking.common.cctx_hash": "CCTx hash",
+  "staking.common.receiver": "Receiver",
+  "staking.common.value": "Value",
+  "staking.common.filter_by": "filter by {{columnName}}",
+  "staking.common.search_by_token_name_or_symbol": "Search by token name or symbol",
+  "staking.common.popular": "Popular",
+  "staking.common.no_tokens_found": "No tokens found",
+  "staking.common.filtered_by": "Filtered by:",
+  "staking.common.reset_filters": "Reset filters"
 }

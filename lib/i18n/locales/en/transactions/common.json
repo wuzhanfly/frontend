@@ -272,5 +272,10 @@
   "transactions.common.num_more_names": "{{num}} more {{name}}{{unit}}",
   "transactions.common.have_come_in": "ha{{unit}} come in",
   "transactions.common.there_are_no_validators": "Couldn't find any validator that matches your query.",
-  "transactions.common.sort_by": "Sort by"
+  "transactions.common.sort_by": "Sort by",
+  "transactions.common.chain_transactions": "{{chain}} transactions",
+  "transactions.common.user_is_gas_limit": "User’s set max gas limit",
+  "transactions.common.allowed_peekers": "Allowed peekers",
+  "transactions.common.there_are_no_logs": "There are no logs for this transaction.",
+  "transactions.common.by": "by"
 }

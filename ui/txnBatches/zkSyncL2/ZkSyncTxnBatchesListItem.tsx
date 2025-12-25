@@ -1,5 +1,6 @@
 import { Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ZkSyncBatchesItem } from 'types/api/zkSyncL2';
 
@@ -18,6 +19,8 @@ const rollupFeature = config.features.rollup;
 type Props = { item: ZkSyncBatchesItem; isLoading?: boolean };
 
 const ZkSyncTxnBatchesListItem = ({ item, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   if (!rollupFeature.isEnabled || rollupFeature.type !== 'zkSync') {
     return null;
   }
@@ -25,7 +28,7 @@ const ZkSyncTxnBatchesListItem = ({ item, isLoading }: Props) => {
   return (
     <ListItemMobileGrid.Container gridTemplateColumns="110px auto">
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Batch #</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.batch_hash') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <BatchEntityL2
           isLoading={ isLoading }
@@ -35,12 +38,12 @@ const ZkSyncTxnBatchesListItem = ({ item, isLoading }: Props) => {
         />
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Status</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('validators.common.status') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <ZkSyncL2TxnBatchStatus status={ item.status } isLoading={ isLoading }/>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Age</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.age') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <TimeWithTooltip
           timestamp={ item.timestamp }
@@ -50,7 +53,7 @@ const ZkSyncTxnBatchesListItem = ({ item, isLoading }: Props) => {
         />
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Txn count</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.txn_count') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <Link
           href={ route({ pathname: '/batches/[number]', query: { number: item.number.toString(), tab: 'txs' } }) }
@@ -62,7 +65,7 @@ const ZkSyncTxnBatchesListItem = ({ item, isLoading }: Props) => {
         </Link>
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Commit tx</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.commit_tx') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         { item.commit_transaction_hash ? (
           <TxEntityL1
@@ -72,10 +75,10 @@ const ZkSyncTxnBatchesListItem = ({ item, isLoading }: Props) => {
             truncation="constant_long"
             noCopy
           />
-        ) : <Text>Pending</Text> }
+        ) : <Text>{ t('shared.common.pending') }</Text> }
       </ListItemMobileGrid.Value>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Prove tx</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('common.common.prove_tx') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         { item.prove_transaction_hash ? (
           <TxEntityL1
@@ -85,7 +88,7 @@ const ZkSyncTxnBatchesListItem = ({ item, isLoading }: Props) => {
             truncation="constant_long"
             noCopy
           />
-        ) : <Text>Pending</Text> }
+        ) : <Text>{ t('shared.common.pending') }</Text> }
       </ListItemMobileGrid.Value>
 
     </ListItemMobileGrid.Container>

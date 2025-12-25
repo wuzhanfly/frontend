@@ -1,5 +1,6 @@
 import { Flex, createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Address } from 'types/api/address';
 
@@ -32,6 +33,8 @@ interface Props {
 }
 
 const ContractDetailsDeployedByteCode = ({ bytecode, isLoading: isLoadingProp, addressData, showVerificationButton }: Props) => {
+  const { t } = useTranslation();
+
   const [ isLoading, setIsLoading ] = React.useState(isLoadingProp);
   const [ showSelect, setShowSelect ] = React.useState(false);
   const [ selectedDataType, setSelectedDataType ] = React.useState<Array<DataType>>([ 'Hex' ]);
@@ -64,7 +67,7 @@ const ContractDetailsDeployedByteCode = ({ bytecode, isLoading: isLoadingProp, a
 
   const beforeSlot = (
     <Flex alignItems="center" flexWrap="wrap" mb={ 3 } columnGap={ 3 } rowGap={ 1 }>
-      <Skeleton fontWeight={ 500 } loading={ isLoading }>Deployed bytecode</Skeleton>
+      <Skeleton fontWeight={ 500 } loading={ isLoading }>{ t('addresses.common.deployed_bytecode') }</Skeleton>
       <Flex alignItems="center" flexGrow={ 1 }>
         { showSelect && (
           <Select

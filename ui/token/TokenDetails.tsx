@@ -3,6 +3,7 @@ import type { UseQueryResult } from '@tanstack/react-query';
 import BigNumber from 'bignumber.js';
 import { useRouter } from 'next/router';
 import React, { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { scroller } from 'react-scroll';
 
 import type { TokenInfo } from 'types/api/token';
@@ -21,7 +22,7 @@ import type { TokenTabs } from 'ui/pages/Token';
 import AppActionButton from 'ui/shared/AppActionButton/AppActionButton';
 import useAppActionData from 'ui/shared/AppActionButton/useAppActionData';
 import * as DetailedInfo from 'ui/shared/DetailedInfo/DetailedInfo';
-import DetailedInfoSponsoredItem from 'ui/shared/DetailedInfo/DetailedInfoSponsoredItem';
+// import DetailedInfoSponsoredItem from 'ui/shared/DetailedInfo/DetailedInfoSponsoredItem';
 import TruncatedValue from 'ui/shared/TruncatedValue';
 
 import TokenNftMarketplaces from './TokenNftMarketplaces';
@@ -31,6 +32,7 @@ interface Props {
 }
 
 const TokenDetails = ({ tokenQuery }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMounted = useIsMounted();
 
@@ -111,10 +113,10 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       { exchangeRate && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Price per token on the exchanges"
+            hint={ t('tokens.common.price_per_token_on_the_exchang') }
             isLoading={ tokenQuery.isPlaceholderData }
           >
-            Price
+            { t('tokens.common.price') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ tokenQuery.isPlaceholderData } display="inline-block">
@@ -127,10 +129,10 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       { marketCap && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Circulating supply * Price"
+            hint={ t('tokens.common.circulating_supply_price') }
             isLoading={ tokenQuery.isPlaceholderData }
           >
-            Market cap
+            { t('tokens.common.market_cap') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ tokenQuery.isPlaceholderData } display="inline-block">
@@ -141,10 +143,10 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       ) }
 
       <DetailedInfo.ItemLabel
-        hint="The total amount of tokens issued"
+        hint={ t('tokens.common.the_total_amount_of_tokens_iss') }
         isLoading={ tokenQuery.isPlaceholderData }
       >
-        Max total supply
+        { t('tokens.common.max_total_supply') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue
         alignSelf="center"
@@ -164,10 +166,10 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Number of accounts holding the token"
+        hint={ t('tokens.common.number_of_accounts_holding_the') }
         isLoading={ tokenQuery.isPlaceholderData }
       >
-        Holders
+        { t('tokens.common.holders') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ tokenCountersQuery.isPlaceholderData }>
@@ -176,10 +178,10 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Number of transfer for the token"
+        hint={ t('tokens.common.number_of_transfer_for_the_token') }
         isLoading={ tokenQuery.isPlaceholderData }
       >
-        Transfers
+        { t('tokens.common.transfers') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Skeleton loading={ tokenCountersQuery.isPlaceholderData }>
@@ -190,10 +192,10 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       { decimals && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Number of digits that come after the decimal place when displaying token value"
+            hint={ t('tokens.common.number_of_digits_that_come_aft') }
             isLoading={ tokenQuery.isPlaceholderData }
           >
-            Decimals
+            { t('tokens.common.decimals') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Skeleton loading={ tokenQuery.isPlaceholderData } minW={ 6 }>
@@ -215,19 +217,19 @@ const TokenDetails = ({ tokenQuery }: Props) => {
       { (type !== 'ERC-20' && config.UI.views.nft.marketplaces.length === 0 && appActionData) && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Link to the dapp"
+            hint={ t('tokens.common.link_to_the_dapp') }
           >
-            Dapp
+            { t('tokens.common.dapp') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue
             py="1px"
           >
-            <AppActionButton data={ appActionData } height="30px" source="NFT collection"/>
+            <AppActionButton data={ appActionData } height="30px" source={ t('tokens.common.nft_collection') }/>
           </DetailedInfo.ItemValue>
         </>
       ) }
 
-      <DetailedInfoSponsoredItem isLoading={ tokenQuery.isPlaceholderData }/>
+      { /* <DetailedInfoSponsoredItem isLoading={ tokenQuery.isPlaceholderData }/> */ }
     </DetailedInfo.Container>
   );
 };

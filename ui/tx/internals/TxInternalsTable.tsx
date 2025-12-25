@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { InternalTransaction } from 'types/api/internalTransaction';
 
@@ -17,13 +18,15 @@ interface Props {
 }
 
 const TxInternalsTable = ({ data, sort, onSortToggle, top, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <AddressHighlightProvider>
       <TableRoot>
         <TableHeaderSticky top={ top }>
           <TableRow>
-            <TableColumnHeader width="28%">Type</TableColumnHeader>
-            <TableColumnHeader width="40%">From/To</TableColumnHeader>
+            <TableColumnHeader width="28%">{ t('common.common.type') }</TableColumnHeader>
+            <TableColumnHeader width="40%">{ t('common.common.from_to') }</TableColumnHeader>
             <TableColumnHeaderSortable
               width="16%"
               isNumeric
@@ -31,7 +34,7 @@ const TxInternalsTable = ({ data, sort, onSortToggle, top, isLoading }: Props) =
               sortValue={ sort }
               onSortToggle={ onSortToggle }
             >
-              Value { currencyUnits.ether }
+              { t('common.common.value') } { currencyUnits.ether }
             </TableColumnHeaderSortable>
             <TableColumnHeaderSortable
               width="16%"
@@ -40,7 +43,7 @@ const TxInternalsTable = ({ data, sort, onSortToggle, top, isLoading }: Props) =
               sortValue={ sort }
               onSortToggle={ onSortToggle }
             >
-              Gas limit { currencyUnits.ether }
+              { t('common.common.gas_limit') } { currencyUnits.ether }
             </TableColumnHeaderSortable>
           </TableRow>
         </TableHeaderSticky>

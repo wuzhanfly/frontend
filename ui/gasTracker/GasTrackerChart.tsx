@@ -1,5 +1,6 @@
 import { Box, Flex, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -13,6 +14,7 @@ import ChartWidgetContainer from 'ui/stats/ChartWidgetContainer';
 const GAS_PRICE_CHART_ID = 'averageGasPrice';
 
 const GasTrackerChart = () => {
+  const { t } = useTranslation();
   const [ isChartLoadingError, setChartLoadingError ] = React.useState(false);
   const { data, isPlaceholderData, isError } = useApiQuery('stats:lines', {
     queryOptions: {
@@ -61,8 +63,8 @@ const GasTrackerChart = () => {
   return (
     <Box>
       <Flex justifyContent="space-between" alignItems="center" mb={ 6 }>
-        <chakra.h3 textStyle="h3">Gas price history</chakra.h3>
-        <Link href={ route({ pathname: '/stats', hash: 'gas' }) }>Charts & stats</Link>
+        <chakra.h3 textStyle="h3">{ t('gas_tracker.common.gas_price_history') }</chakra.h3>
+        <Link href={ route({ pathname: '/stats', hash: 'gas' }) }>{ t('common.common.charts_and_stats') }</Link>
       </Flex>
       { content }
     </Box>

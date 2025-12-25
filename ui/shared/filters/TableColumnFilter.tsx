@@ -4,6 +4,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Button } from 'toolkit/chakra/button';
 import { PopoverCloseTriggerWrapper } from 'toolkit/chakra/popover';
@@ -19,6 +20,8 @@ type Props = {
 };
 
 const TableColumnFilter = ({ title, isFilled, isTouched, hasReset, onFilter, onReset, children }: Props) => {
+  const { t } = useTranslation();
+
   const onFilterClick = React.useCallback(() => {
     onFilter();
   }, [ onFilter ]);
@@ -33,7 +36,7 @@ const TableColumnFilter = ({ title, isFilled, isTouched, hasReset, onFilter, onR
             disabled={ !isFilled }
             textStyle="sm"
           >
-            Reset
+            { t('common.common.reset') }
           </Button>
         ) }
       </Flex>
@@ -44,7 +47,7 @@ const TableColumnFilter = ({ title, isFilled, isTouched, hasReset, onFilter, onR
           onClick={ onFilterClick }
           w="fit-content"
         >
-          Filter
+          { t('common.common.filter') }
         </Button>
       </PopoverCloseTriggerWrapper>
     </>

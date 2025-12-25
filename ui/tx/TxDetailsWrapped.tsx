@@ -1,6 +1,7 @@
 import { Flex, Grid } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Transaction } from 'types/api/transaction';
 import type { ExcludeUndefined } from 'types/utils';
@@ -23,21 +24,23 @@ interface Props {
 }
 
 const TxDetailsWrapped = ({ data }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <Grid columnGap={ 8 } rowGap={{ base: 3, lg: 3 }} templateColumns={{ base: 'minmax(0, 1fr)', lg: 'auto minmax(0, 1fr)' }}>
       <DetailedInfo.ItemLabel
-        hint="Unique character string (TxID) assigned to every verified transaction"
+        hint={ t('transactions.wrapped.transaction_hash_hint') }
       >
-        Transaction hash
+        { t('transactions.wrapped.transaction_hash') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <TxEntity hash={ data.hash } noIcon noLink/>
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Transaction method name"
+        hint={ t('transactions.common.transaction_method_name') }
       >
-        Method
+        { t('transactions.wrapped.method') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <Badge colorPalette="gray">
@@ -50,9 +53,9 @@ const TxDetailsWrapped = ({ data }: Props) => {
       { data.to && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Address (external or contract) receiving the transaction"
+            hint={ t('transactions.wrapped.address_receiving_transaction_hint') }
           >
-            { data.to.is_contract ? 'Interacted with contract' : 'To' }
+            { data.to.is_contract ? t('transactions.common.interacted_with_contract') : t('transactions.common.to') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <Flex flexWrap="nowrap" alignItems="center" maxW="100%">
@@ -65,9 +68,9 @@ const TxDetailsWrapped = ({ data }: Props) => {
       <DetailedInfo.ItemDivider/>
 
       <DetailedInfo.ItemLabel
-        hint="Value sent in the native token (and USD) if applicable"
+        hint={ t('transactions.wrapped.value_hint') }
       >
-        Value
+        { t('transactions.wrapped.value') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <CurrencyValue
@@ -81,9 +84,9 @@ const TxDetailsWrapped = ({ data }: Props) => {
       { data.fee.value !== null && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Total transaction fee"
+            hint={ t('transactions.common.total_transaction_fee') }
           >
-            Transaction fee
+            { t('transactions.wrapped.transaction_fee') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <TxFee tx={ data } withUsd/>
@@ -96,9 +99,9 @@ const TxDetailsWrapped = ({ data }: Props) => {
       { data.gas_limit && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Maximum amount of gas that can be used by the transaction"
+            hint={ t('transactions.common.maximum_amount_of_gas_that_can') }
           >
-            Gas limit
+            { t('transactions.wrapped.gas_limit') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             { BigNumber(data.gas_limit).toFormat() }
@@ -111,9 +114,9 @@ const TxDetailsWrapped = ({ data }: Props) => {
       <TxDetailsOther type={ data.type } nonce={ data.nonce } position={ null }/>
 
       <DetailedInfo.ItemLabel
-        hint="Binary data included with the transaction. See logs tab for additional info"
+        hint={ t('transactions.wrapped.raw_input_hint') }
       >
-        Raw input
+        { t('transactions.wrapped.raw_input') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <RawInputData hex={ data.raw_input }/>
@@ -122,9 +125,9 @@ const TxDetailsWrapped = ({ data }: Props) => {
       { data.decoded_input && (
         <>
           <DetailedInfo.ItemLabel
-            hint="Decoded input data"
+            hint={ t('transactions.common.decoded_input_data') }
           >
-            Decoded input data
+            { t('transactions.wrapped.decoded_input_data') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <LogDecodedInputData data={ data.decoded_input }/>

@@ -1,5 +1,6 @@
 import { Grid, VStack, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CctxListItem } from '@blockscout/zetachain-cctx-types';
 
@@ -19,6 +20,8 @@ type Props = {
 };
 
 const LatestZetaChainCCTXItem = ({ tx, isLoading, animation }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <VStack
       width="100%"
@@ -40,21 +43,21 @@ const LatestZetaChainCCTXItem = ({ tx, isLoading, animation }: Props) => {
         </Text>
       </Skeleton>
       <Grid gridTemplateColumns="100px 1fr" gap={ 2 }>
-        <Text>Sender</Text>
+        <Text>{ t('zeta_chain.sender') }</Text>
         <AddressEntityZetaChain
           address={{ hash: tx.sender_address }}
           chainId={ tx.source_chain_id.toString() }
           isLoading={ isLoading }
           truncation="constant"
         />
-        <Text>Receiver</Text>
+        <Text>{ t('zeta_chain.receiver') }</Text>
         <AddressEntityZetaChain
           address={{ hash: tx.receiver_address }}
           chainId={ tx.target_chain_id.toString() }
           isLoading={ isLoading }
           truncation="constant"
         />
-        <Text>Asset</Text>
+        <Text>{ t('zeta_chain.asset') }</Text>
         <ZetaChainCCTXValue
           coinType={ tx.coin_type }
           tokenSymbol={ tx.token_symbol }

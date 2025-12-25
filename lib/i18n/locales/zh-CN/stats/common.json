@@ -28,5 +28,6 @@
   "stats.common.contracts_that_have_been_verified": "已验证的合约",
   "stats.charts_loading_error.some_charts_did_not_load": "部分图表未能正常加载。",
   "stats.charts_loading_error.click_once_again": "再次点击。",
-  "stats.charts_widgets_list.couldnt_find_chart": "找不到匹配您搜索的图表。"
+  "stats.charts_widgets_list.couldnt_find_chart": "找不到匹配您搜索的图表。",
+  "stats.charts_widgets_list.reset_zoom": "重置缩放"
 }

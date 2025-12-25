@@ -17,5 +17,10 @@
   "contract_verification.common.vyper_standard_input_description": "使用标准输入 JSON 文件验证 Vyper 合约",
   "contract_verification.common.solidity_hardhat_description": "通过 Hardhat 插件验证",
   "contract_verification.common.solidity_foundry_description": "通过 Foundry 验证",
-  "contract_verification.common.stylus_github_repository_description": "通过 GitHub 仓库验证 Stylus 合约"
+  "contract_verification.common.stylus_github_repository_description": "通过 GitHub 仓库验证 Stylus 合约",
+  "contract_verification.common.abi_alert": "注意：带有自定义ABI的合约仅用于调试目的，用户有责任确保提供的ABI与合约匹配，否则可能会出现错误或返回的结果不正确。对于因使用读写合约而产生的任何损失，Blockscout概不负责。",
+  "contract_verification.common.update": "更新",
+  "contract_verification.common.contract_abi": "合约ABI",
+  "contract_verification.common.methods_loading_text": "为该合约添加自定义ABI，并在登录您的账户后进行访问。这有助于调试、功能测试和合约交互。",
+  "contract_verification.common.add_custom_abi": "添加自定义ABI"
 }

@@ -1,6 +1,7 @@
 import { chakra, Box, Center } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { routeParams } from 'nextjs/routes';
 
@@ -11,6 +12,7 @@ import ChainIcon from 'ui/shared/externalChains/ChainIcon';
 import IconSvg from 'ui/shared/IconSvg';
 
 const BlockCountdownIndex = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const multichainContext = useMultichainContext();
 
@@ -50,10 +52,10 @@ const BlockCountdownIndex = () => {
         level="1"
         mt={{ base: 3, lg: 6 }}
       >
-        Block countdown
+        { t('blocks.common.block_countdown') }
       </Heading>
       <Box mt={ 2 }>
-        The estimated time for a block to be created and added to the blockchain.
+        { t('blocks.common.block_countdown_description') }
       </Box>
       <chakra.form
         noValidate
@@ -62,7 +64,7 @@ const BlockCountdownIndex = () => {
         mt={{ base: 3, lg: 6 }}
       >
         <FilterInput
-          placeholder="Search by block number"
+          placeholder={ t('common.common.search_by_block_number') }
           size="sm"
           type="number"
           name="search_term"

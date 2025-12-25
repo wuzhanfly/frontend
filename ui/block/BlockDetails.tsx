@@ -3,6 +3,7 @@ import BigNumber from 'bignumber.js';
 import { capitalize } from 'es-toolkit';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { ZKSYNC_L2_TX_BATCH_STATUSES } from 'types/api/zkSyncL2';
 
@@ -51,6 +52,7 @@ interface Props {
 const rollupFeature = config.features.rollup;
 
 const BlockDetails = ({ query }: Props) => {
+  const { t } = useTranslation();
   const router = useRouter();
   const heightOrHash = getQueryParamString(router.query.height_or_hash);
   const multichainContext = useMultichainContext();
@@ -87,13 +89,13 @@ const BlockDetails = ({ query }: Props) => {
 
     return (
       <Text color="text.secondary" whiteSpace="break-spaces">
-        <Tooltip content="Static block reward">
+        <Tooltip content={ t('blocks.common.static_block_reward') }>
           <span>{ staticReward.dividedBy(WEI).toFixed() }</span>
         </Tooltip>
         { !txFees.isEqualTo(ZERO) && (
           <>
             { space }+{ space }
-            <Tooltip content="Txn fees">
+            <Tooltip content={ t('blocks.common.txn_fees') }>
               <span>{ txFees.dividedBy(WEI).toFixed() }</span>
             </Tooltip>
           </>
@@ -101,7 +103,7 @@ const BlockDetails = ({ query }: Props) => {
         { !burntFees.isEqualTo(ZERO) && (
           <>
             { space }-{ space }
-            <Tooltip content="Burnt fees">
+            <Tooltip content={ t('blocks.common.burnt_fees') }>
               <span>{ burntFees.dividedBy(WEI).toFixed() }</span>
             </Tooltip>
           </>
@@ -113,7 +115,7 @@ const BlockDetails = ({ query }: Props) => {
   const txsNum = (() => {
     const blockTxsNum = (
       <Link href={ route({ pathname: '/block/[height_or_hash]', query: { height_or_hash: heightOrHash, tab: 'txs' } }, multichainContext) }>
-        { data.transactions_count } txn{ data.transactions_count === 1 ? '' : 's' }
+        { data.transactions_count } { t('blocks.common.txn') }{ data.transactions_count === 1 ? '' : 's' }
       </Link>
     );
 
@@ -121,7 +123,7 @@ const BlockDetails = ({ query }: Props) => {
       <>
         <span> including </span>
         <Link href={ route({ pathname: '/block/[height_or_hash]', query: { height_or_hash: heightOrHash, tab: 'blob_txs' } }, multichainContext) }>
-          { data.blob_transaction_count } blob txn{ data.blob_transaction_count === 1 ? '' : 's' }
+          { data.blob_transaction_count } { t('blocks.common.blob_txns') }{ data.blob_transaction_count === 1 ? '' : 's' }
         </Link>
       </>
     ) : null;
@@ -130,7 +132,7 @@ const BlockDetails = ({ query }: Props) => {
       <>
         { blockTxsNum }
         { blockBlobTxsNum }
-        <span> in this block</span>
+        <span> { t('blocks.common.in_this_block') }</span>
       </>
     );
   })();
@@ -138,11 +140,11 @@ const BlockDetails = ({ query }: Props) => {
   const blockTypeLabel = (() => {
     switch (data.type) {
       case 'reorg':
-        return 'Reorg';
+        return t('common.common.reorg');
       case 'uncle':
-        return 'Uncle';
+        return t('common.common.uncle');
       default:
-        return 'Block';
+        return t('blocks.common.block');
     }
   })();
 
@@ -158,12 +160,12 @@ const BlockDetails = ({ query }: Props) => {
         <Skeleton loading={ isPlaceholderData }>
           { data.height }
         </Skeleton>
-        { data.height === 0 && <Text whiteSpace="pre"> - Genesis Block</Text> }
+        { data.height === 0 && <Text whiteSpace="pre">{ ` - ${ t('blocks.common.genesis_block') }` }</Text> }
         <PrevNext
           ml={ 6 }
           onClick={ handlePrevNextClick }
-          prevLabel="View previous block"
-          nextLabel="View next block"
+          prevLabel={ t('blocks.common.view_previous_block') }
+          nextLabel={ t('blocks.common.view_next_block') }
           isPrevDisabled={ data.height === 0 }
           isLoading={ isPlaceholderData }
         />
@@ -172,10 +174,10 @@ const BlockDetails = ({ query }: Props) => {
       { rollupFeature.isEnabled && rollupFeature.type === 'arbitrum' && data.arbitrum && (
         <>
           <DetailedInfo.ItemLabel
-            hint="The most recent L1 block height as of this L2 block"
+            hint={ t('blocks.common.the_most_recent_l1_block_heigh') }
             isLoading={ isPlaceholderData }
           >
-            L1 block height
+            { t('blocks.common.l1_block_height') }
           </DetailedInfo.ItemLabel>
           <DetailedInfo.ItemValue>
             <BlockEntityL1 isLoading={ isPlaceholderData } number={ data.arbitrum.l1_block_number }/>

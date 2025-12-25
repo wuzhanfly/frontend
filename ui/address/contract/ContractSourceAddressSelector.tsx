@@ -1,5 +1,6 @@
 import { chakra, createListCollection, Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs-routes';
 
@@ -24,6 +25,7 @@ interface Props {
 }
 
 const ContractSourceAddressSelector = ({ className, selectedItem, onItemSelect, items, isLoading, label }: Props) => {
+  const { t } = useTranslation();
 
   const handleItemSelect = React.useCallback(({ value }: { value: Array<string> }) => {
     const nextOption = items.find(({ address_hash: addressHash }) => addressHash === value[0]);
@@ -61,7 +63,7 @@ const ContractSourceAddressSelector = ({ className, selectedItem, onItemSelect, 
       <chakra.span fontWeight={ 500 } fontSize="sm">{ label }</chakra.span>
       <Select
         collection={ collection }
-        placeholder="Select contract"
+        placeholder={ t('addresses.common.select_contract') }
         defaultValue={ [ selectedItem.address_hash ] }
         onValueChange={ handleItemSelect }
         maxW={{ base: '180px', lg: '400px' }}
@@ -71,7 +73,7 @@ const ContractSourceAddressSelector = ({ className, selectedItem, onItemSelect, 
       <Flex alignItems="center">
         <CopyToClipboard text={ selectedItem.address_hash } ml={ 0 }/>
         <LinkNewTab
-          label="Open contract details page in new tab"
+          label={ t('addresses.common.open_contract_details_page_in_') }
           href={ route({ pathname: '/address/[hash]', query: { hash: selectedItem.address_hash, tab: 'contract' } }) }
         />
       </Flex>

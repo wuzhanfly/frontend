@@ -1,6 +1,7 @@
 import { Flex, chakra } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TxAction, TxActionGeneral } from 'types/api/txAction';
 
@@ -24,6 +25,7 @@ function getActionText(actionType: TxActionGeneral['type']) {
 }
 
 const TxDetailsAction = ({ action }: Props) => {
+  const { t } = useTranslation();
   const { protocol, type, data } = action;
 
   if (protocol !== 'uniswap_v3') {
@@ -110,7 +112,7 @@ const TxDetailsAction = ({ action }: Props) => {
       return (
         <div>
           <Flex rowGap={ 2 } columnGap={ 2 } flexWrap="wrap" alignItems="center" whiteSpace="pre-wrap" fontWeight={ 500 }>
-            <chakra.span color="text.secondary">Minted</chakra.span>
+            <chakra.span color="text.secondary">{ t('transactions.common.minted') }</chakra.span>
 
             <TokenEntity
               token={ token }
@@ -119,7 +121,7 @@ const TxDetailsAction = ({ action }: Props) => {
               rowGap={ 2 }
             />
 
-            <chakra.span color="text.secondary">to</chakra.span>
+            <chakra.span color="text.secondary">{ t('common.common.to') }</chakra.span>
 
             <AddressEntity
               address={{ hash: data.to }}
@@ -135,7 +137,7 @@ const TxDetailsAction = ({ action }: Props) => {
                 return (
                   <Flex key={ data.address + id } whiteSpace="pre-wrap" columnGap={ 2 }>
                     <chakra.span flexShrink={ 0 }>1</chakra.span>
-                    <chakra.span color="text.secondary" flexShrink={ 0 }>of token ID</chakra.span>
+                    <chakra.span color="text.secondary" flexShrink={ 0 }>{ t('transactions.common.of_token_id') }</chakra.span>
                     <NftEntity hash={ data.address } id={ id } w="min-content" variant="content"/>
                   </Flex>
                 );

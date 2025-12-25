@@ -14,7 +14,8 @@ type Props = {
   data: NonNullable<AddressMetadataTagFormatted['meta']>;
   className?: string;
   txHash?: string;
-  source: 'Txn' | 'NFT collection' | 'NFT item';
+  source: string;
+  // source: 'Txn' | 'NFT collection' | 'NFT item';
 };
 
 const AppActionButton = ({ data, className, txHash, source }: Props) => {

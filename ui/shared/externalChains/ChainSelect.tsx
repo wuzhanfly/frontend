@@ -1,5 +1,6 @@
 import { createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ExternalChain } from 'types/externalChains';
 
@@ -11,12 +12,6 @@ import IconSvg from 'ui/shared/IconSvg';
 
 import ChainIcon from './ChainIcon';
 
-const ALL_OPTION = {
-  value: 'all',
-  label: 'All chains',
-  icon: <IconSvg name="apps_slim" boxSize={ 5 }/>,
-};
-
 export interface Props extends Omit<SelectProps, 'collection' | 'placeholder'> {
   loading?: boolean;
   mode?: ViewMode;
@@ -26,8 +21,17 @@ export interface Props extends Omit<SelectProps, 'collection' | 'placeholder'> {
 }
 
 const ChainSelect = ({ loading, mode, chainsConfig, chainIds, withAllOption, ...props }: Props) => {
+  const { t } = useTranslation();
   const isInitialLoading = useIsInitialLoading(loading);
   const isMobile = useIsMobile();
+
+  const ALL_OPTION = React.useMemo(() => {
+    return {
+      value: 'all',
+      label: t('shared.common.all_chains'),
+      icon: <IconSvg name="apps_slim" boxSize={ 5 }/>,
+    };
+  }, [ t ]);
 
   const collection = React.useMemo(() => {
 
@@ -42,7 +46,7 @@ const ChainSelect = ({ loading, mode, chainsConfig, chainIds, withAllOption, ...
     const items = [ withAllOption ? ALL_OPTION : undefined, ...chainItems ].filter(Boolean);
 
     return createListCollection<SelectOption>({ items });
-  }, [ chainIds, chainsConfig, withAllOption ]);
+  }, [ chainIds, chainsConfig, withAllOption, ALL_OPTION ]);
 
   if (collection.items.length === 0) {
     return null;
@@ -52,7 +56,7 @@ const ChainSelect = ({ loading, mode, chainsConfig, chainIds, withAllOption, ...
     <Select
       collection={ collection }
       defaultValue={ collection.items.length > 0 ? [ collection.items[0].value ] : undefined }
-      placeholder="Select chain"
+      placeholder={ t('shared.common.select_chain') }
       loading={ isInitialLoading }
       mode={ isMobile && !mode ? 'compact' : mode }
       w="fit-content"

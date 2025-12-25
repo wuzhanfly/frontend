@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenInfo, TokenInstance } from 'types/api/token';
 import type { TokenTransfer } from 'types/api/tokenTransfer';
@@ -25,6 +26,7 @@ interface Props {
 }
 
 const TokenTransferTable = ({ data, top, showSocketInfo, showSocketErrorAlert, socketInfoNum, tokenId, isLoading, token, instance }: Props) => {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
   const chainData = multichainContext?.chain;
   const tokenType = token.type;
@@ -36,17 +38,21 @@ const TokenTransferTable = ({ data, top, showSocketInfo, showSocketErrorAlert, s
           <TableRow>
             { chainData && <TableColumnHeader width="38px"/> }
             <TableColumnHeader width="280px">
-              Txn hash
+              { t('common.common.txn_hash') }
               <TimeFormatToggle/>
             </TableColumnHeader>
-            <TableColumnHeader width="200px">Method</TableColumnHeader>
-            <TableColumnHeader width={{ lg: '224px', xl: '380px' }}>From/To</TableColumnHeader>
+            <TableColumnHeader width="200px">{ t('common.common.method') }</TableColumnHeader>
+            <TableColumnHeader width={{ lg: '224px', xl: '380px' }}>{ t('common.common.from_to') }</TableColumnHeader>
             { (NFT_TOKEN_TYPE_IDS.includes(tokenType)) &&
-              <TableColumnHeader width={ tokenType === 'ERC-1155' || tokenType === 'ERC-404' ? '50%' : '100%' }>Token ID</TableColumnHeader>
+              (
+                <TableColumnHeader width={ tokenType === 'ERC-1155' || tokenType === 'ERC-404' ? '50%' : '100%' }>
+                  { t('common.common.token_id') }
+                </TableColumnHeader>
+              )
             }
             { (tokenType === 'ERC-20' || tokenType === 'ERC-1155' || tokenType === 'ERC-404') && (
               <TableColumnHeader width={ tokenType === 'ERC-20' ? '100%' : '50%' } isNumeric>
-                <TruncatedValue value={ `Value ${ token?.symbol || '' }` } w="100%" verticalAlign="middle"/>
+                <TruncatedValue value={ `${ t('common.common.value') } ${ token?.symbol || '' }` } w="100%" verticalAlign="middle"/>
               </TableColumnHeader>
             ) }
           </TableRow>

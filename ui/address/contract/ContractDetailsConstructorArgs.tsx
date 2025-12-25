@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContract } from 'types/api/contract';
 
@@ -64,6 +65,7 @@ interface Props {
 }
 
 const ContractDetailsConstructorArgs = ({ data, isLoading }: Props) => {
+  const { t } = useTranslation();
 
   const content = React.useMemo(() => {
     if (!data?.decoded_constructor_args) {
@@ -96,7 +98,7 @@ const ContractDetailsConstructorArgs = ({ data, isLoading }: Props) => {
   return (
     <RawDataSnippet
       data={ content }
-      title="Constructor Arguments"
+      title={ t('addresses.common.constructor_arguments') }
       textareaMaxHeight="200px"
       isLoading={ isLoading }
     />

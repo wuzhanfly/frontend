@@ -1,10 +1,11 @@
 import { Box, HStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenType } from 'types/api/token';
 
 import useIsMobile from 'lib/hooks/useIsMobile';
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 import AddressAdvancedFilterLink from 'ui/address/AddressAdvancedFilterLink';
 import AddressCsvExportLink from 'ui/address/AddressCsvExportLink';
 import type { Filters } from 'ui/address/useAddressTokenTransfersQuery';
@@ -27,6 +28,7 @@ interface Props {
 }
 
 const TokenTransfersLocal = ({ query, filters, addressHash, onTypeFilterChange, onAddressFilterChange }: Props) => {
+  const { t } = useTranslation();
   const { isError, isPlaceholderData, data, pagination } = query;
   const isMobile = useIsMobile();
 
@@ -106,9 +108,9 @@ const TokenTransfersLocal = ({ query, filters, addressHash, onTypeFilterChange, 
     <DataListDisplay
       isError={ isError }
       itemsNum={ data?.items?.length }
-      emptyText="There are no token transfers."
+      emptyText={ t('tokens.common.there_are_no_token_transfers') }
       filterProps={{
-        emptyFilteredText: `Couldn${ apos }t find any token transfer that matches your query.`,
+        emptyFilteredText: t('common.common.couldnt_find_any_token_transfer_that_matches_your_query'),
         hasActiveFilters: Boolean(numActiveFilters),
       }}
       actionBar={ actionBar }

@@ -2,6 +2,7 @@ import { Flex } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContract } from 'types/api/contract';
 
@@ -28,6 +29,7 @@ interface Props {
 }
 
 const ContractMethodsCustom = ({ isLoading: isLoadingProp }: Props) => {
+  const { t } = useTranslation();
 
   const modal = useDisclosure();
   const router = useRouter();
@@ -66,11 +68,11 @@ const ContractMethodsCustom = ({ isLoading: isLoadingProp }: Props) => {
           variant="outline"
           onClick={ modal.onOpen }
         >
-          Update
+          { t('contract_verification.common.update') }
         </Button>
       </Skeleton>
     );
-  }, [ isLoading, modal.onOpen ]);
+  }, [ isLoading, modal.onOpen, t ]);
 
   return (
     <Flex flexDir="column" rowGap={ 6 }>
@@ -82,7 +84,7 @@ const ContractMethodsCustom = ({ isLoading: isLoadingProp }: Props) => {
           </Flex>
           <RawDataSnippet
             data={ JSON.stringify(abi) }
-            title="Contract ABI"
+            title={ t('contract_verification.common.contract_abi') }
             textareaMaxHeight="150px"
             isLoading={ isLoading }
             rightSlot={ updateButton }
@@ -100,8 +102,7 @@ const ContractMethodsCustom = ({ isLoading: isLoadingProp }: Props) => {
       ) : (
         <>
           <Skeleton loading={ isLoading }>
-            Add custom ABIs for this contract and access when logged into your account. Helpful for debugging,
-            functional testing and contract interaction.
+            { t('contract_verification.common.methods_loading_text') }
           </Skeleton>
           <AuthGuard onAuthSuccess={ modal.onOpen }>
             { ({ onClick }) => (
@@ -110,7 +111,7 @@ const ContractMethodsCustom = ({ isLoading: isLoadingProp }: Props) => {
                   size="sm"
                   onClick={ onClick }
                 >
-                  Add custom ABI
+                  { t('contract_verification.common.add_custom_abi') }
                 </Button>
               </Skeleton>
             ) }

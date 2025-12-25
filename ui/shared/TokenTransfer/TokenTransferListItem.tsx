@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenTransfer } from 'types/api/tokenTransfer';
 import type { ClusterChainConfig } from 'types/multichain';
@@ -39,6 +40,7 @@ const TokenTransferListItem = ({
   isLoading,
   chainData,
 }: Props) => {
+  const { t } = useTranslation();
   const { usd, valueStr } = total && 'value' in total && total.value !== null ? getCurrencyValue({
     value: total.value,
     exchangeRate: token?.exchange_rate,
@@ -102,7 +104,7 @@ const TokenTransferListItem = ({
       />
       { valueStr && (
         <Flex columnGap={ 2 } w="100%">
-          <Skeleton loading={ isLoading } fontWeight={ 500 } flexShrink={ 0 }>Value</Skeleton>
+          <Skeleton loading={ isLoading } fontWeight={ 500 } flexShrink={ 0 }>{ t('common.common.value') }</Skeleton>
           <Skeleton loading={ isLoading } color="text.secondary" wordBreak="break-all" overflow="hidden">
             <span>{ valueStr }</span>
             { usd && <span> (${ usd })</span> }

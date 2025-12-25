@@ -1,5 +1,6 @@
 import { Spinner, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Alert } from 'toolkit/chakra/alert';
 
@@ -9,6 +10,8 @@ interface Props {
 }
 
 const ServiceDegradationWarning = ({ isLoading, className }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <Alert
       loading={ isLoading }
@@ -16,7 +19,7 @@ const ServiceDegradationWarning = ({ isLoading, className }: Props) => {
       className={ className }
       startElement={ <Spinner size="sm" my="3px" flexShrink={ 0 }/> }
     >
-      Data sync in progress... page will refresh automatically once data is available
+      { t('blocks.common.service_degradation_warning_alert') }
     </Alert>
   );
 };

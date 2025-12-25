@@ -15,5 +15,9 @@
   "txs.common.eip_1559": "EIP-1559",
   "txs.common.view_all": "view all",
   "txs.common.remasc": "REMASC",
-  "txs.common.empty_filtered_text": "Couldn't find any transaction that matches your query."
+  "txs.common.empty_filtered_text": "Couldn't find any transaction that matches your query.",
+  "txs.common.validated": "validated",
+  "txs.common.mined": "mined",
+  "txs.common.posted": "posted",
+  "txs.common.sequenced": "sequenced"
 }

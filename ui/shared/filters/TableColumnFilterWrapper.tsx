@@ -1,5 +1,6 @@
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Button } from 'toolkit/chakra/button';
 import { PopoverBody, PopoverContent, PopoverRoot, PopoverTrigger } from 'toolkit/chakra/popover';
@@ -15,12 +16,14 @@ interface Props {
 }
 
 const TableColumnFilterWrapper = ({ columnName, className, children, isLoading, selected, value }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <PopoverRoot>
       <PopoverTrigger>
         <Button
           display="inline-flex"
-          aria-label={ `filter by ${ columnName }` }
+          aria-label={ t('staking.common.filter_by', { columnName }) }
           variant="icon_secondary"
           borderWidth="0"
           h="20px"

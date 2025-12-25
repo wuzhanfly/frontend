@@ -38,7 +38,7 @@ const BlocksTabSlot = ({ pagination }: Props) => {
           <Text as="span" fontSize="sm">
             { t('gas_tracker.common.network_utilization_description') }{ nbsp }
           </Text>
-          <Tooltip content={ `${ upperFirst(networkUtilization.load) } load` }>
+          <Tooltip content={ `${ upperFirst(networkUtilization.load) } ${ t('blocks.common.load') }` }>
             <Skeleton display="inline-block" fontSize="sm" color={ networkUtilization.color } fontWeight={ 600 } loading={ statsQuery.isPlaceholderData }>
               <span>{ statsQuery.data.network_utilization_percentage.toFixed(2) }%</span>
             </Skeleton>

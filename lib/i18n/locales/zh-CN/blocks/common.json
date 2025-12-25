@@ -80,5 +80,18 @@
   "blocks.common.miner": "矿工",
   "blocks.common.poster": "发布者",
   "blocks.common.sequencer": "排序者",
-  "blocks.common.fee_recipient": "费用接收方"
+  "blocks.common.fee_recipient": "费用接收方",
+  "blocks.common.load": "负载",
+  "blocks.common.load_high": "高",
+  "blocks.common.load_medium": "中",
+  "blocks.common.load_low": "低",
+  "blocks.common.block_countdown_description": "区块被创建并添加到区块链的预计时间。",
+  "blocks.common.service_degradation_warning_alert": "数据同步中... 数据可用后页面将自动刷新",
+  "blocks.common.there_no_deposits_for_this_block": "这个区块没有存款。",
+  "blocks.common.transaction_hash": "交易哈希",
+  "blocks.common.from": "从",
+  "blocks.common.pubkey": "公钥",
+  "blocks.common.status": "状态",
+  "blocks.common.age": "周期",
+  "blocks.common.value": "价值"
 }

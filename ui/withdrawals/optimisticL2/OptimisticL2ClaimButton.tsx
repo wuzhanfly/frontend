@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressParam } from 'types/api/addressParams';
 import type { OptimisticL2WithdrawalClaimInfo } from 'types/api/optimisticL2';
@@ -35,6 +36,7 @@ interface Props {
 }
 
 const OptimisticL2ClaimButton = ({ data, from, onSuccess, source }: Props) => {
+  const { t } = useTranslation();
 
   const modal = useDisclosure();
 
@@ -49,14 +51,14 @@ const OptimisticL2ClaimButton = ({ data, from, onSuccess, source }: Props) => {
             onSuccess={ onSuccess }
           />
         ) }
-        <Button variant="outline" size="sm" onClick={ modal.onOpen }>Claim</Button>
+        <Button variant="outline" size="sm" onClick={ modal.onOpen }>{ t('withdrawals.arbitrum_l2.claim') }</Button>
       </>
     );
   }
 
   if (!rollupFeature.isEnabled || !rollupFeature.L2WithdrawalUrl) {
     if (source === 'list') {
-      return 'Ready for relay';
+      return t('withdrawals.common.ready_for_relay');
     }
     return null;
   }
@@ -67,7 +69,7 @@ const OptimisticL2ClaimButton = ({ data, from, onSuccess, source }: Props) => {
         href={ rollupFeature.L2WithdrawalUrl }
         external
       >
-        Ready for relay
+        { t('withdrawals.common.ready_for_relay') }
       </Link>
     );
   }
@@ -78,7 +80,7 @@ const OptimisticL2ClaimButton = ({ data, from, onSuccess, source }: Props) => {
       external
       noIcon
     >
-      <Button variant="outline" size="sm">Claim</Button>
+      <Button variant="outline" size="sm">{ t('withdrawals.arbitrum_l2.claim') }</Button>
     </Link>
   );
 };

@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 import type { EntityTag as TEntityTag } from 'ui/shared/EntityTags/types';
@@ -35,6 +36,7 @@ const rollupFeature = config.features.rollup;
 const tacFeature = config.features.tac;
 
 const TransactionPageContent = () => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const hash = getQueryParamString(router.query.hash);
@@ -62,28 +64,28 @@ const TransactionPageContent = () => {
     return [
       {
         id: 'index',
-        title: config.features.suave.isEnabled && data?.wrapped ? 'Confidential compute tx details' : 'Details',
+        title: config.features.suave.isEnabled && data?.wrapped ? t('transactions.common.confidential_compute_tx_detail') : t('transactions.common.details'),
         component: detailsComponent,
       },
       txInterpretation.isEnabled && txInterpretation.provider === 'noves' ?
-        { id: 'asset_flows', title: 'Asset Flows', component: <TxAssetFlows hash={ hash }/> } :
+        { id: 'asset_flows', title: t('transactions.common.asset_flows'), component: <TxAssetFlows hash={ hash }/> } :
         undefined,
       config.features.suave.isEnabled && data?.wrapped ?
-        { id: 'wrapped', title: 'Regular tx details', component: <TxDetailsWrapped data={ data.wrapped }/> } :
+        { id: 'wrapped', title: t('transactions.common.regular_tx_details'), component: <TxDetailsWrapped data={ data.wrapped }/> } :
         undefined,
-      { id: 'token_transfers', title: 'Token transfers', component: <TxTokenTransfer txQuery={ txQuery }/> },
+      { id: 'token_transfers', title: t('transactions.common.token_transfers'), component: <TxTokenTransfer txQuery={ txQuery }/> },
       config.features.userOps.isEnabled ?
-        { id: 'user_ops', title: 'User operations', component: <TxUserOps txQuery={ txQuery }/> } :
+        { id: 'user_ops', title: t('transactions.common.user_operations'), component: <TxUserOps txQuery={ txQuery }/> } :
         undefined,
-      { id: 'internal', title: 'Internal txns', component: <TxInternals txQuery={ txQuery }/> },
+      { id: 'internal', title: t('transactions.common.internal_txns'), component: <TxInternals txQuery={ txQuery }/> },
       config.features.dataAvailability.isEnabled && txQuery.data?.blob_versioned_hashes?.length ?
-        { id: 'blobs', title: 'Blobs', component: <TxBlobs txQuery={ txQuery }/> } :
+        { id: 'blobs', title: t('transactions.common.blobs'), component: <TxBlobs txQuery={ txQuery }/> } :
         undefined,
-      { id: 'logs', title: 'Logs', component: <TxLogs txQuery={ txQuery }/> },
-      { id: 'state', title: 'State', component: <TxState txQuery={ txQuery }/> },
-      { id: 'raw_trace', title: 'Raw trace', component: <TxRawTrace txQuery={ txQuery }/> },
+      { id: 'logs', title: t('transactions.common.logs'), component: <TxLogs txQuery={ txQuery }/> },
+      { id: 'state', title: t('transactions.common.state'), component: <TxState txQuery={ txQuery }/> },
+      { id: 'raw_trace', title: t('transactions.common.raw_trace'), component: <TxRawTrace txQuery={ txQuery }/> },
       txQuery.data?.authorization_list?.length ?
-        { id: 'authorizations', title: 'Authorizations', component: <TxAuthorizations txQuery={ txQuery }/> } :
+        { id: 'authorizations', title: t('transactions.common.authorizations'), component: <TxAuthorizations txQuery={ txQuery }/> } :
         undefined,
     ].filter(Boolean);
   })();
@@ -93,10 +95,10 @@ const TransactionPageContent = () => {
 
   if (rollupFeature.isEnabled && rollupFeature.interopEnabled && data?.op_interop_messages && data.op_interop_messages.length > 0) {
     if (data.op_interop_messages.some(message => message.init_chain !== undefined)) {
-      txTags.push({ slug: 'relay_tx', name: 'Relay tx', tagType: 'custom' as const, ordinal: 0 });
+      txTags.push({ slug: 'relay_tx', name: t('transactions.common.relay_tx'), tagType: 'custom' as const, ordinal: 0 });
     }
     if (data.op_interop_messages.some(message => message.relay_chain !== undefined)) {
-      txTags.push({ slug: 'init_tx', name: 'Source tx', tagType: 'custom' as const, ordinal: 0 });
+      txTags.push({ slug: 'init_tx', name: t('transactions.common.source_tx'), tagType: 'custom' as const, ordinal: 0 });
     }
   }
 
@@ -124,7 +126,7 @@ const TransactionPageContent = () => {
     <>
       <TextAd mb={ 6 }/>
       <PageTitle
-        title="Transaction details"
+        title={ t('transactions.common.transaction_details') }
         contentAfter={ tags }
         secondRow={ titleSecondRow }
       />

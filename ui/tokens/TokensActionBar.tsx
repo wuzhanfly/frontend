@@ -1,5 +1,6 @@
 import { createListCollection, HStack } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokensSortingValue } from 'types/api/tokens';
 import type { PaginationParams } from 'ui/shared/pagination/types';
@@ -33,6 +34,7 @@ const TokensActionBar = ({
   filter,
   inTabsSlot,
 }: Props) => {
+  const { t } = useTranslation();
 
   const handleSortChange = React.useCallback(({ value }: { value: Array<string> }) => {
     onSortChange(value[0] as TokensSortingValue);
@@ -43,7 +45,7 @@ const TokensActionBar = ({
       w={{ base: '100%', lg: '360px' }}
       size="sm"
       onChange={ onSearchChange }
-      placeholder="Token name or symbol"
+      placeholder={ t('tokens.common.token_name_or_symbol') }
       initialValue={ searchTerm }
     />
   );

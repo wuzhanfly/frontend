@@ -272,5 +272,10 @@
   "transactions.common.num_more_names": "{num} 更多 {name}{unit}",
   "transactions.common.have_come_in": "已经到来",
   "transactions.common.there_are_no_validators": "找不到符合您查询的验证者。",
-  "transactions.common.sort_by": "排序方式"
+  "transactions.common.sort_by": "排序方式",
+  "transactions.common.chain_transactions": "{{chain}} 交易",
+  "transactions.common.user_is_gas_limit": "用户设置的最大燃气上限",
+  "transactions.common.allowed_peekers": "允许观察者",
+  "transactions.common.there_are_no_logs": "此交易没有日志记录。",
+  "transactions.common.by": "by"
 }

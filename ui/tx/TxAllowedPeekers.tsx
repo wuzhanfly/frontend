@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { CollapsibleList } from 'toolkit/chakra/collapsible';
 import * as DetailedInfo from 'ui/shared/DetailedInfo/DetailedInfo';
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const TxAllowedPeekers = ({ items }: Props) => {
+  const { t } = useTranslation();
   const renderItem = React.useCallback((item: string) => {
     return <AddressEntity key={ item } address={{ hash: item, is_contract: true }}/>;
   }, []);
@@ -16,9 +18,9 @@ const TxAllowedPeekers = ({ items }: Props) => {
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="Smart contracts allowed to interact with confidential data"
+        hint={ t('transactions.common.smart_contracts_allowed_to_int') }
       >
-        Allowed peekers
+        { t('transactions.common.allowed_peekers') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue>
         <CollapsibleList

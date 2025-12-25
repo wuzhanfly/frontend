@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { OptimisticL2WithdrawalsItem } from 'types/api/optimisticL2';
 
@@ -18,6 +19,8 @@ const rollupFeature = config.features.rollup;
 type Props = { item: OptimisticL2WithdrawalsItem; isLoading?: boolean };
 
 const OptimisticL2WithdrawalsListItem = ({ item, isLoading }: Props) => {
+  const { t } = useTranslation();
+
   const timeToEnd = item.challenge_period_end ? dayjs(item.challenge_period_end).fromNow(true) + ' left' : null;
 
   if (!rollupFeature.isEnabled || rollupFeature.type !== 'optimistic') {
@@ -27,7 +30,7 @@ const OptimisticL2WithdrawalsListItem = ({ item, isLoading }: Props) => {
   return (
     <ListItemMobileGrid.Container>
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Msg nonce</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('withdrawals.optimistic_l2.msg_nonce') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <Skeleton loading={ isLoading } display="inline-block">
           { item.msg_nonce_version + '-' + item.msg_nonce }
@@ -36,7 +39,7 @@ const OptimisticL2WithdrawalsListItem = ({ item, isLoading }: Props) => {
 
       { item.from && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>From</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('withdrawals.optimistic_l2.from') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <AddressEntity
               address={ item.from }
@@ -47,7 +50,7 @@ const OptimisticL2WithdrawalsListItem = ({ item, isLoading }: Props) => {
         </>
       ) }
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>L2 txn hash</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('withdrawals.optimistic_l2.l2_txn_hash') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <TxEntity
           isLoading={ isLoading }
@@ -58,7 +61,7 @@ const OptimisticL2WithdrawalsListItem = ({ item, isLoading }: Props) => {
 
       { item.l2_timestamp && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Age</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('withdrawals.optimistic_l2.age') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <TimeWithTooltip
               timestamp={ item.l2_timestamp }
@@ -69,14 +72,14 @@ const OptimisticL2WithdrawalsListItem = ({ item, isLoading }: Props) => {
         </>
       ) }
 
-      <ListItemMobileGrid.Label isLoading={ isLoading }>Status</ListItemMobileGrid.Label>
+      <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('withdrawals.optimistic_l2.status') }</ListItemMobileGrid.Label>
       <ListItemMobileGrid.Value>
         <OptimisticL2WithdrawalsItemStatus data={ item } isLoading={ isLoading }/>
       </ListItemMobileGrid.Value>
 
       { item.l1_transaction_hash && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>L1 txn hash</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('withdrawals.optimistic_l2.l1_txn_hash') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>
             <TxEntityL1
               isLoading={ isLoading }
@@ -90,7 +93,7 @@ const OptimisticL2WithdrawalsListItem = ({ item, isLoading }: Props) => {
 
       { timeToEnd && (
         <>
-          <ListItemMobileGrid.Label isLoading={ isLoading }>Time left</ListItemMobileGrid.Label>
+          <ListItemMobileGrid.Label isLoading={ isLoading }>{ t('withdrawals.optimistic_l2.time_left') }</ListItemMobileGrid.Label>
           <ListItemMobileGrid.Value>{ timeToEnd }</ListItemMobileGrid.Value>
         </>
       ) }

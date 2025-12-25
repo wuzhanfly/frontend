@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import multichainConfig from 'configs/multichain';
 import { MultichainProvider } from 'lib/contexts/multichain';
@@ -14,6 +15,8 @@ import useStats from 'ui/stats/useStats';
 import ChainSelect from '../components/ChainSelect';
 
 const OpSuperchainStats = () => {
+  const { t } = useTranslation();
+
   useEtherscanRedirects();
 
   const chainIds = React.useMemo(() => {
@@ -44,7 +47,7 @@ const OpSuperchainStats = () => {
 
   return (
     <>
-      <PageTitle title="Charts & stats"/>
+      <PageTitle title={ t('common.common.charts_and_stats') }/>
       <ChainSelect
         value={ chainSelect.value }
         onValueChange={ chainSelect.onValueChange }

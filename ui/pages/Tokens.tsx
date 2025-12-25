@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 import type { TokenType } from 'types/api/token';
@@ -42,6 +43,7 @@ const TABS_RIGHT_SLOT_PROPS: SlotProps = {
 const bridgedTokensFeature = config.features.bridgedTokens;
 
 const Tokens = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMobile = useIsMobile();
 
@@ -140,7 +142,7 @@ const Tokens = () => {
 
     return (
       <Box fontSize="sm" mb={ 4 } mt={ 1 } whiteSpace="pre-wrap" flexWrap="wrap">
-        List of the tokens bridged through { bridgesListText } extensions
+        { t('tokens.common.list_of_tokens_bridged_through', { bridge: bridgesListText }) }
       </Box>
     );
   })();
@@ -148,7 +150,7 @@ const Tokens = () => {
   const tabs: Array<TabItemRegular> = [
     {
       id: 'all',
-      title: 'All',
+      title: t('validators.common.all'),
       component: (
         <TokensList
           query={ tokensQuery }
@@ -162,7 +164,7 @@ const Tokens = () => {
     },
     bridgedTokensFeature.isEnabled ? {
       id: 'bridged',
-      title: 'Bridged',
+      title: t('tokens.common.bridged'),
       component: (
         <TokensList
           query={ tokensQuery }
@@ -180,7 +182,7 @@ const Tokens = () => {
   return (
     <>
       <PageTitle
-        title={ config.meta.seo.enhancedDataEnabled ? `Tokens on ${ config.chain.name }` : 'Tokens' }
+        title={ config.meta.seo.enhancedDataEnabled ? t('tokens.common.tokens_on_chain', { chainName: config.chain.name }) : t('tokens.common.tokens') }
         withTextAd
       />
       { !hasMultipleTabs && !isMobile && actionBar }

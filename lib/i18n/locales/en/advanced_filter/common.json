@@ -1,4 +1,27 @@
 {
   "advanced_filter.common.advanced_filter": "Advanced Filter",
-  "advanced_filter.common.type_of_transfer": "Type Of Transfer"
+  "advanced_filter.common.type_of_transfer": "Type Of Transfer",
+  "advanced_filter.common.no_match_found": "No match found for current filter",
+  "advanced_filter.common.all": "All",
+  "advanced_filter.common.seven_days": "7d",
+  "advanced_filter.common.type": "Type",
+  "advanced_filter.common.age": "Age",
+  "advanced_filter.common.and_or": "And/Or",
+  "advanced_filter.common.columns": "Columns",
+  "advanced_filter.common.tx_hash": "Tx hash",
+  "advanced_filter.common.method": "Method",
+  "advanced_filter.common.from": "From",
+  "advanced_filter.common.to": "To",
+  "advanced_filter.common.amount": "Amount",
+  "advanced_filter.common.asset": "Asset",
+  "advanced_filter.common.fee": "Fee",
+  "advanced_filter.common.or": "OR",
+  "advanced_filter.common.and": "And",
+  "advanced_filter.common.coin_transfer": "Coin Transfer",
+  "advanced_filter.common.erc_20_transfer": "ERC-20 Transfer",
+  "advanced_filter.common.erc_404_transfer": "ERC-404 Transfer",
+  "advanced_filter.common.erc_721_transfer": "ERC-721 Transfer",
+  "advanced_filter.common.erc_1155_transfer": "ERC-1155 Transfer",
+  "advanced_filter.common.contract_creation": "Contract Creation",
+  "advanced_filter.common.contract_interaction": "Contract Interaction"
 }

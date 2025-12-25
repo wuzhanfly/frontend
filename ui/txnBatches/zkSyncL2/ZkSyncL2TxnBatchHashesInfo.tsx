@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ZkSyncBatch } from 'types/api/zkSyncL2';
 
@@ -22,13 +23,15 @@ interface Props {
 }
 
 const ZkSyncL2TxnBatchHashesInfo = ({ isLoading, data }: Props) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <DetailedInfo.ItemLabel
-        hint="Hash of L1 tx on which the batch was committed"
+        hint={ t('common.common.hash_of_l1_tx_on_which_the_bat') }
         isLoading={ isLoading }
       >
-        Commit tx hash
+        { t('common.common.commit_tx_hash') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue multiRow >
         { data.commit_transaction_hash ? (
@@ -48,10 +51,10 @@ const ZkSyncL2TxnBatchHashesInfo = ({ isLoading, data }: Props) => {
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Hash of L1 tx on which the batch was proven"
+        hint={ t('common.common.hash_of_l1_tx_on_which_the_batch_was_proven') }
         isLoading={ isLoading }
       >
-        Prove tx hash
+        { t('common.common.prove_tx_hash') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue multiRow>
         { data.prove_transaction_hash ? (
@@ -67,14 +70,14 @@ const ZkSyncL2TxnBatchHashesInfo = ({ isLoading, data }: Props) => {
               </Flex>
             ) }
           </>
-        ) : <Skeleton loading={ isLoading }>Pending</Skeleton> }
+        ) : <Skeleton loading={ isLoading }>{ t('shared.common.pending') }</Skeleton> }
       </DetailedInfo.ItemValue>
 
       <DetailedInfo.ItemLabel
-        hint="Hash of L1 tx on which the batch was executed and finalized"
+        hint={ t('common.common.hash_of_l1_tx_on_which_the_batch_was_executed_and_finalized') }
         isLoading={ isLoading }
       >
-        Execute tx hash
+        { t('common.common.execute_tx_hash') }
       </DetailedInfo.ItemLabel>
       <DetailedInfo.ItemValue multiRow>
         { data.execute_transaction_hash ? (
@@ -90,7 +93,7 @@ const ZkSyncL2TxnBatchHashesInfo = ({ isLoading, data }: Props) => {
               </Flex>
             ) }
           </>
-        ) : <Skeleton loading={ isLoading }>Pending</Skeleton> }
+        ) : <Skeleton loading={ isLoading }>{ t('shared.common.pending') }</Skeleton> }
       </DetailedInfo.ItemValue>
     </>
   );

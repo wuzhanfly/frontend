@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
+import i18n from 'i18next';
 import React from 'react';
 
 import type { TxStateChange } from 'types/api/txStateChanges';
@@ -18,10 +19,12 @@ import TokenEntity from 'ui/shared/entities/token/TokenEntity';
 import TxStateTokenIdList from './TxStateTokenIdList';
 
 export function getStateElements(data: TxStateChange, isLoading?: boolean) {
+  const t = i18n.t.bind(i18n);
+
   const tag = (() => {
     if (data.is_miner) {
       return (
-        <Tooltip content="A block producer who successfully included the block into the blockchain">
+        <Tooltip content={ t('transactions.common.a_block_producer_who_successfu') }>
           <Badge textTransform="capitalize" colorPalette="yellow" loading={ isLoading }>
             { getNetworkValidatorTitle() }
           </Badge>
@@ -39,10 +42,10 @@ export function getStateElements(data: TxStateChange, isLoading?: boolean) {
       })();
 
       if (changeDirection) {
-        const text = changeDirection === 'from' ? 'Mint' : 'Burn';
+        const text = changeDirection === 'from' ? t('transactions.common.mint') : t('transactions.common.burn');
         return (
-          <Tooltip content="Address used in tokens mintings and burnings">
-            <Badge textTransform="capitalize" colorPalette="yellow" loading={ isLoading }>{ text } address</Badge>
+          <Tooltip content={ t('transactions.common.address_used_in_tokens_minting') }>
+            <Badge textTransform="capitalize" colorPalette="yellow" loading={ isLoading }>{ text } { t('common.common.address') }</Badge>
           </Tooltip>
         );
       }

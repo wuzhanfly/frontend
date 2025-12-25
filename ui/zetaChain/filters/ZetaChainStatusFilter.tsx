@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ZetaChainCCTXFilterParams, StatusReducedFilters } from 'types/client/zetaChain';
 
@@ -10,12 +11,6 @@ const FILTER_PARAM_STATUS = 'status_reduced';
 
 type FilterValue = 'all' | StatusReducedFilters;
 
-const STATUS_OPTIONS: Array<{ value: FilterValue; label: string }> = [
-  { value: 'all', label: 'All' },
-  { value: 'Success', label: 'Success' },
-  { value: 'Failed', label: 'Failed' },
-];
-
 type Props = {
   value?: Array<StatusReducedFilters>;
   handleFilterChange: (field: keyof ZetaChainCCTXFilterParams, value?: Array<StatusReducedFilters>) => void;
@@ -25,6 +20,14 @@ type Props = {
 };
 
 const ZetaChainStatusFilter = ({ value = [], handleFilterChange, onClose }: Props) => {
+  const { t } = useTranslation();
+
+  const STATUS_OPTIONS: Array<{ value: FilterValue; label: string }> = [
+    { value: 'all', label: t('validators.common.all') },
+    { value: 'Success', label: t('common.common.success') },
+    { value: 'Failed', label: t('shared.common.failed') },
+  ];
+
   // Convert API values to internal format and determine initial state
   const getInitialValue = React.useCallback((): FilterValue => {
     if (value.length === 1) {

@@ -1,6 +1,7 @@
 import type { BoxProps } from '@chakra-ui/react';
 import { chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TokenInfo } from 'types/api/token';
 
@@ -39,6 +40,8 @@ const Link = chakra((props: LinkProps) => {
 type IconProps = Pick<EntityProps, 'token' | 'className'> & EntityBase.IconBaseProps;
 
 const Icon = (props: IconProps) => {
+  const { t } = useTranslation();
+
   if (props.noIcon) {
     return null;
   }
@@ -56,7 +59,7 @@ const Icon = (props: IconProps) => {
       alt={ `${ props.token.name || 'token' } logo` }
       fallback={ <TokenLogoPlaceholder/> }
       shield={ props.shield ?? (props.chain ? { src: props.chain.logo } : undefined) }
-      hint={ props.chain && props.shield !== false ? getChainTooltipText(props.chain, 'Token on ') : undefined }
+      hint={ props.chain && props.shield !== false ? getChainTooltipText(props.chain, t('tokens.common.token_on')) : undefined }
       { ...props }
     />
   );
@@ -65,9 +68,11 @@ const Icon = (props: IconProps) => {
 type ContentProps = Omit<EntityBase.ContentBaseProps, 'text'> & Pick<EntityProps, 'token' | 'jointSymbol' | 'onlySymbol'>;
 
 const Content = chakra((props: ContentProps) => {
+  const { t } = useTranslation();
+
   const nameString = [
-    !props.onlySymbol && (props.token.name ?? 'Unnamed token'),
-    props.onlySymbol && (props.token.symbol ?? props.token.name ?? 'Unnamed token'),
+    !props.onlySymbol && (props.token.name ?? t('tokens.common.unnamed_token')),
+    props.onlySymbol && (props.token.symbol ?? props.token.name ?? t('tokens.common.unnamed_token')),
     props.token.symbol && props.jointSymbol && !props.onlySymbol && `(${ props.token.symbol })`,
   ].filter(Boolean).join(' ');
 
@@ -133,9 +138,11 @@ interface ReputationProps extends BoxProps {
 }
 
 const Reputation = ({ value, ...rest }: ReputationProps) => {
+  const { t } = useTranslation();
+
   if (config.UI.views.token.hideScamTokensEnabled && value === 'scam') {
     return (
-      <Tooltip content="This token has been flagged as a potential scam. You enabled the display of flagged tokens in the explorer — proceed with caution.">
+      <Tooltip content={ t('shared.token_entity.scam_warning') }>
         <IconSvg name="scam" boxSize={ 5 } ml={ 2 } { ...rest }/>
       </Tooltip>
     );

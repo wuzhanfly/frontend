@@ -39,5 +39,14 @@
   "staking.common.l2_block": "L2 区块",
   "staking.common.l2_block_no": "L2 区块号",
   "staking.common.deposits_feature_is_not_enable": "存款功能未启用。",
-  "staking.common.withdrawals_feature_is_not_ena": "取款功能未启用。"
+  "staking.common.withdrawals_feature_is_not_ena": "取款功能未启用。",
+  "staking.common.cctx_hash": "CCTx 哈希",
+  "staking.common.receiver": "接收者",
+  "staking.common.value": "值",
+  "staking.common.filter_by": "按 {{columnName}} 过滤",
+  "staking.common.search_by_token_name_or_symbol": "按代币名称或符号搜索",
+  "staking.common.popular": "热门",
+  "staking.common.no_tokens_found": "未找到代币",
+  "staking.common.filtered_by": "已过滤:",
+  "staking.common.reset_filters": "重置过滤器"
 }

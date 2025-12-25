@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import { chunk } from 'es-toolkit';
 import React, { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { PaginationParams } from 'ui/shared/pagination/types';
 
@@ -22,6 +23,7 @@ interface FlowViewProps {
 }
 
 export default function TxAssetFlows(props: FlowViewProps) {
+  const { t } = useTranslation();
 
   const { data: queryData, isPlaceholderData, isError } = useApiQuery('general:noves_transaction', {
     pathParams: { hash: props.hash },
@@ -55,7 +57,7 @@ export default function TxAssetFlows(props: FlowViewProps) {
       <Box display="flex" alignItems="center" gap={ 1 }>
         <Skeleton borderRadius="sm" loading={ isPlaceholderData } >
           <Text fontWeight="400" mr={ 1 }>
-            Wallet
+            { t('common.common.wallet') }
           </Text>
         </Skeleton>
 
@@ -87,10 +89,10 @@ export default function TxAssetFlows(props: FlowViewProps) {
           <TableHeaderSticky top={ 75 }>
             <TableRow>
               <TableColumnHeader>
-                Actions
+                { t('common.common.actions') }
               </TableColumnHeader>
               <TableColumnHeader width="450px">
-                From/To
+                { t('common.common.from_to') }
               </TableColumnHeader>
             </TableRow>
           </TableHeaderSticky>
@@ -112,7 +114,7 @@ export default function TxAssetFlows(props: FlowViewProps) {
     <DataListDisplay
       isError={ isError }
       itemsNum={ data?.length }
-      emptyText="There are no transfers."
+      emptyText={ t('transactions.common.there_are_no_transfers') }
       actionBar={ actionBar }
     >
       { content }

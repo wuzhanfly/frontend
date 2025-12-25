@@ -1,5 +1,6 @@
 import { Text, chakra } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { CoinType } from '@blockscout/zetachain-cctx-types';
 
@@ -18,11 +19,13 @@ type Props = {
 };
 
 const ZetaChainCCTXValue = ({ coinType, tokenSymbol, amount, decimals, isLoading, className, accuracy = 8 }: Props) => {
+  const { t } = useTranslation();
+
   let unit: string;
   let value: string | undefined;
   switch (coinType) {
     case CoinType.ERC20:
-      unit = tokenSymbol || 'Unnamed token';
+      unit = tokenSymbol || t('tokens.common.unnamed_token');
       value = getCurrencyValue({ value: amount, decimals: decimals?.toString() || '18', accuracy }).valueStr;
       break;
     case CoinType.ZETA:
@@ -30,7 +33,7 @@ const ZetaChainCCTXValue = ({ coinType, tokenSymbol, amount, decimals, isLoading
       value = getCurrencyValue({ value: amount, decimals: config.chain.currency.decimals?.toString() || '18', accuracy }).valueStr;
       break;
     case CoinType.GAS:
-      unit = tokenSymbol || 'Unnamed token';
+      unit = tokenSymbol || t('tokens.common.unnamed_token');
       value = getCurrencyValue({ value: amount, decimals: decimals?.toString() || '18', accuracy }).valueStr;
       break;
     default:

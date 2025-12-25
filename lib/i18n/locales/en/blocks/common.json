@@ -80,5 +80,18 @@
   "blocks.common.miner": "miner",
   "blocks.common.poster": "poster",
   "blocks.common.sequencer": "sequencer",
-  "blocks.common.fee_recipient": "fee recipient"
+  "blocks.common.fee_recipient": "fee recipient",
+  "blocks.common.load": "load",
+  "blocks.common.load_high": "high",
+  "blocks.common.load_medium": "medium",
+  "blocks.common.load_low": "low",
+  "blocks.common.block_countdown_description": "The estimated time for a block to be created and added to the blockchain.",
+  "blocks.common.service_degradation_warning_alert": "Data sync in progress... page will refresh automatically once data is available",
+  "blocks.common.there_no_deposits_for_this_block": "There are no deposits for this block.",
+  "blocks.common.transaction_hash": "Transaction hash",
+  "blocks.common.from": "From",
+  "blocks.common.pubkey": "PubKey",
+  "blocks.common.status": "Status",
+  "blocks.common.age": "Age",
+  "blocks.common.value": "Value"
 }

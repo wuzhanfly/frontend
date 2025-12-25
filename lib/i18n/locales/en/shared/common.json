@@ -18,5 +18,7 @@
   "shared.common.the_contract_was_successfully_verified": "The contract was successfully verified",
   "shared.common.log_index": "Log index",
   "shared.common.invalid_utf8_with_hex": "[Invalid UTF-8] {{hex}}",
-  "shared.common.decode_error_with_hex": "[Decode error] {{hex}}"
+  "shared.common.decode_error_with_hex": "[Decode error] {{hex}}",
+  "shared.common.select_chain": "Select chain",
+  "shared.common.all_chains": "All chains"
 }

@@ -57,8 +57,15 @@
   "batches.zksync_l2.gas_price_for_the_batch_settlement_transaction_on_l1": "Gas price for the batch settlement transaction on L1",
   "batches.zksync_l2.l1_gas_price": "L1 gas price",
   "batches.zksync_l2.l2_fair_gas_price": "L2 fair gas price",
+  "batches.zksync_l2.status_processed_on_l2": "Processed on L2",
+  "batches.zksync_l2.status_sealed_on_l2": "Sealed on L2",
+  "batches.zksync_l2.status_sent_to_l1": "Sent to L1",
+  "batches.zksync_l2.status_validated_on_l1": "Validated on L1",
+  "batches.zksync_l2.status_executed_on_l1": "Executed on L1",
   "batches.common.blob": "Blob",
   "batches.common.in_anytrust": "AnyTrust",
   "batches.common.in_calldata": "Calldata",
-  "batches.common.in_celestia": "Celestia"
+  "batches.common.in_celestia": "Celestia",
+  "batches.common.l1_batch_root": "L1 batch root is a hash that summarizes batch data and submitted to the L1",
+  "batches.common.gas_price_below_batch_fail": "The gas price below which the 'baseFee' of the batch should not fall"
 }

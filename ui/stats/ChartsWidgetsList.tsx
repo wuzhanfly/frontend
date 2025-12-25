@@ -1,5 +1,6 @@
 import { Box, Grid } from '@chakra-ui/react';
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type * as stats from '@blockscout/stats-types';
 import type { StatsIntervalIds } from 'types/client/stats';
@@ -9,7 +10,7 @@ import useApiQuery from 'lib/api/useApiQuery';
 import { useMultichainContext } from 'lib/contexts/multichain';
 import { Heading } from 'toolkit/chakra/heading';
 import { Skeleton } from 'toolkit/chakra/skeleton';
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 import EmptySearchResult from 'ui/shared/EmptySearchResult';
 import GasInfoTooltip from 'ui/shared/gas/GasInfoTooltip';
 import IconSvg from 'ui/shared/IconSvg';
@@ -27,6 +28,7 @@ type Props = {
 };
 
 const ChartsWidgetsList = ({ filterQuery, isError, isPlaceholderData, charts, interval, initialFilterQuery }: Props) => {
+  const { t } = useTranslation();
   const [ isSomeChartLoadingError, setIsSomeChartLoadingError ] = useState(false);
   const isAnyChartDisplayed = charts?.some((section) => section.charts.length > 0);
   const isEmptyChartList = Boolean(filterQuery) && !isAnyChartDisplayed;
@@ -59,7 +61,7 @@ const ChartsWidgetsList = ({ filterQuery, isError, isPlaceholderData, charts, in
   }
 
   if (isEmptyChartList) {
-    return <EmptySearchResult text={ `Couldn${ apos }t find a chart that matches your filter query.` }/>;
+    return <EmptySearchResult text={ t('stats.charts_widgets_list.couldnt_find_chart') }/>;
   }
 
   return (

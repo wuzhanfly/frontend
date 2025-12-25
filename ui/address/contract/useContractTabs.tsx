@@ -1,5 +1,6 @@
 import type { Channel } from 'phoenix';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Address } from 'types/api/address';
 import type { ClusterChainConfig } from 'types/multichain';
@@ -39,6 +40,8 @@ interface Props {
 }
 
 export default function useContractTabs({ addressData, isEnabled, hasMudTab, channel, chain }: Props): ReturnType {
+  const { t } = useTranslation();
+
   const contractQuery = useApiQuery('general:contract', {
     pathParams: { hash: addressData?.hash },
     queryOptions: {
@@ -67,18 +70,18 @@ export default function useContractTabs({ addressData, isEnabled, hasMudTab, cha
       tabs: [
         addressData && {
           id: 'contract_code' as const,
-          title: 'Code',
+          title: t('staking.common.code'),
           component: <ContractDetails mainContractQuery={ contractQuery } channel={ channel } addressData={ addressData }/>,
           subTabs: CONTRACT_DETAILS_TAB_IDS as unknown as Array<string>,
         },
         contractQuery.data?.abi && {
           id: [ 'read_write_contract' as const, 'read_contract' as const, 'write_contract' as const ],
-          title: 'Read/Write contract',
+          title: t('addresses.common.read_write_contract'),
           component: <ContractMethodsRegular abi={ contractQuery.data.abi } isLoading={ contractQuery.isPlaceholderData }/>,
         },
         verifiedImplementations.length > 0 && {
           id: [ 'read_write_proxy' as const, 'read_proxy' as const, 'write_proxy' as const ],
-          title: 'Read/Write proxy',
+          title: t('addresses.common.read_write_proxy'),
           component: (
             <ContractMethodsProxy
               implementations={ verifiedImplementations }
@@ -89,12 +92,12 @@ export default function useContractTabs({ addressData, isEnabled, hasMudTab, cha
         },
         config.features.account.isEnabled && {
           id: [ 'read_write_custom_methods' as const, 'read_custom_methods' as const, 'write_custom_methods' as const ],
-          title: 'Custom ABI',
+          title: t('common.common.custom_abi'),
           component: <ContractMethodsCustom isLoading={ contractQuery.isPlaceholderData }/>,
         },
         hasMudTab && {
           id: 'mud_system' as const,
-          title: 'MUD System',
+          title: t('addresses.common.mud_system'),
           component: mudSystemsQuery.isPlaceholderData ?
             <ContentLoader/> :
             <ContractMethodsMudSystem items={ mudSystemsQuery.data?.items ?? [] }/>,
@@ -111,5 +114,6 @@ export default function useContractTabs({ addressData, isEnabled, hasMudTab, cha
     hasMudTab,
     mudSystemsQuery.isPlaceholderData,
     mudSystemsQuery.data?.items,
+    t,
   ]);
 }

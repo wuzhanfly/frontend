@@ -131,6 +131,8 @@
   "common.common.search_by_contract_name_or_add": "按合约名称或地址搜索",
   "common.common.there_are_no_verified_contract": "暂无已验证合约。",
   "common.common.search_result": "搜索结果",
+  "common.common.rest_api": "REST API",
+  "common.common.graphql_api": "GraphQL API",
   "common.common.eth_rpc_api": "ETH RPC API",
   "common.common.rpc_api_endpoints": "RPC API端点",
   "common.common.api_documentation": "API文档",

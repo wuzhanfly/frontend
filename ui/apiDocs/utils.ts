@@ -1,7 +1,11 @@
+import i18n from 'i18next';
+
 import type { SwaggerRequest } from './types';
 
 import config from 'configs/app';
 import type { ApiPropsBase } from 'configs/app/apis';
+
+const t = i18n.t.bind(i18n);
 
 const feature = config.features.apiDocs;
 
@@ -21,7 +25,7 @@ const getMicroserviceSwaggerUrl = (api: ApiPropsBase) => `${ api.endpoint }${ ap
 export const REST_API_SECTIONS = [
   feature.isEnabled && {
     id: 'blockscout-core-api',
-    title: 'Blockscout core API',
+    title: t('common.common.blockscout_core_api'),
     swagger: {
       url: feature.coreApiSwaggerUrl,
       requestInterceptor: (req: SwaggerRequest) => {
@@ -53,7 +57,7 @@ export const REST_API_SECTIONS = [
   },
   config.apis.stats && {
     id: 'stats-api',
-    title: 'Stats API',
+    title: t('common.common.stats_api'),
     swagger: {
       url: getMicroserviceSwaggerUrl(config.apis.stats),
       requestInterceptor: microserviceRequestInterceptorFactory(config.apis.stats),
@@ -61,7 +65,7 @@ export const REST_API_SECTIONS = [
   },
   config.apis.bens && {
     id: 'bens-api',
-    title: 'Name service API',
+    title: t('common.common.name_service_api'),
     swagger: {
       url: getMicroserviceSwaggerUrl(config.apis.bens),
       requestInterceptor: microserviceRequestInterceptorFactory(config.apis.bens),
@@ -69,7 +73,7 @@ export const REST_API_SECTIONS = [
   },
   config.apis.userOps && {
     id: 'user-ops-api',
-    title: 'User ops indexer API',
+    title: t('common.common.user_ops_indexer_api'),
     swagger: {
       url: getMicroserviceSwaggerUrl(config.apis.userOps),
       requestInterceptor: microserviceRequestInterceptorFactory(config.apis.userOps),
@@ -77,7 +81,7 @@ export const REST_API_SECTIONS = [
   },
   config.apis.tac && {
     id: 'tac-api',
-    title: 'TAC operation lifecycle API',
+    title: t('common.common.tac_operation_lifecycle_api'),
     swagger: {
       url: getMicroserviceSwaggerUrl(config.apis.tac),
       requestInterceptor: microserviceRequestInterceptorFactory(config.apis.tac),

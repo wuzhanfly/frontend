@@ -148,6 +148,8 @@
   "common.common.epoch_finalized_after_celo_mig": "Epoch Finalized After Celo Mig",
   "common.common.escape": "Escape",
   "common.common.essential_dapp_not_found": "Essential Dapp Not Found",
+  "common.common.rest_api": "REST API",
+  "common.common.graphql_api": "GraphQL API",
   "common.common.eth_rpc_api": "Eth Rpc Api",
   "common.common.evm_version": "Evm Version",
   "common.common.exclude": "Exclude",

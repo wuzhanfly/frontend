@@ -4,5 +4,13 @@
   "snippets.footer.made_with": "制作于",
   "snippets.footer.blockscout_description": "Blockscout 是一个用于检查和分析 EVM 兼容区块链的工具。以太坊网络的区块链浏览器。",
   "snippets.search_bar_mobile.search": "搜索",
-  "snippets.search_bar_mobile.view_all_results": "查看所有结果"
+  "snippets.search_bar_mobile.view_all_results": "查看所有结果",
+  "snippets.footer.backend": "后端:",
+  "snippets.footer.frontend": "前端:",
+  "snippets.footer.copyright": "版权所有 {{copy}} Blockscout Limited 2023-{{date}}",
+  "snippets.footer.recaptcha_protection": "本网站受 reCAPTCHA 和 Google 的保护",
+  "snippets.footer.recaptcha_privacy_policy": "隐私政策",
+  "snippets.footer.recaptcha_terms_of_service": "服务条款适用。",
+  "snippets.footer.recaptcha_and": "和",
+  "snippets.footer.recaptcha_apply": "适用。"
 }

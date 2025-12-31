@@ -2,6 +2,7 @@ import type { GridProps, HTMLChakraProps } from '@chakra-ui/react';
 import { Box, Grid, Flex, Text, VStack } from '@chakra-ui/react';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { CustomLinksGroup } from 'types/footerLinks';
 
@@ -27,6 +28,7 @@ const FRONT_VERSION_URL = `https://github.com/blockscout/frontend/tree/${ config
 const FRONT_COMMIT_URL = `https://github.com/blockscout/frontend/commit/${ config.UI.footer.frontendCommit }`;
 
 const Footer = () => {
+  const { t } = useTranslation();
 
   const { data: backendVersionData } = useApiQuery('general:config_backend_version', {
     queryOptions: {
@@ -41,37 +43,37 @@ const Footer = () => {
     {
       icon: 'edit' as const,
       iconSize: '16px',
-      text: 'Submit an issue',
+      text: t('common.common.submit_an_issue'),
       url: issueUrl,
     },
     {
       icon: 'social/git' as const,
       iconSize: '18px',
-      text: 'Contribute',
+      text: t('common.common.contribute'),
       url: 'https://github.com/blockscout/blockscout',
     },
     {
       icon: 'social/twitter' as const,
       iconSize: '18px',
-      text: 'X (ex-Twitter)',
+      text: t('snippets.footer.x_twitter'),
       url: 'https://x.com/blockscout',
     },
     {
       icon: 'social/discord' as const,
       iconSize: '24px',
-      text: 'Discord',
+      text: t('tokens.common.discord'),
       url: 'https://discord.gg/blockscout',
     },
     {
       icon: 'brands/blockscout' as const,
       iconSize: '18px',
-      text: 'All chains',
+      text: t('common.common.all_chains'),
       url: 'https://www.blockscout.com/chains-and-projects',
     },
     {
       icon: 'donate' as const,
       iconSize: '20px',
-      text: 'Donate',
+      text: t('common.common.donate'),
       url: 'https://eth.blockscout.com/address/0xfB4aF6A8592041E9BcE186E5aC4BDbd2B137aD11',
     },
   ];
@@ -124,7 +126,7 @@ const Footer = () => {
     return (
       <Box gridArea={ gridArea }>
         <Flex columnGap={ 2 } textStyle="xs" alignItems="center">
-          <span>Made with</span>
+          <span>{ t('snippets.footer.made_with') }</span>
           <Link href="https://www.blockscout.com" external noIcon display="inline-flex" color={ logoColor } _hover={{ color: logoColor }}>
             <IconSvg
               name="networks/logo-placeholder"
@@ -134,26 +136,26 @@ const Footer = () => {
           </Link>
         </Flex>
         <Text mt={ 3 } fontSize="xs">
-          Blockscout is a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.
+          { t('snippets.footer.blockscout_description') }
         </Text>
         <Box mt={ 6 } alignItems="start" textStyle="xs">
           { apiVersionUrl && (
             <Text>
-              Backend: <Link href={ apiVersionUrl } external noIcon>{ backendVersionData?.backend_version }</Link>
+              { t('snippets.footer.backend') } <Link href={ apiVersionUrl } external noIcon>{ backendVersionData?.backend_version }</Link>
             </Text>
           ) }
           { frontendLink && (
             <Text>
-              Frontend: { frontendLink }
+              { t('snippets.footer.frontend') } { frontendLink }
             </Text>
           ) }
           <Text>
-            Copyright { copy } Blockscout Limited 2023-{ (new Date()).getFullYear() }
+            { t('snippets.footer.copyright', { copy, date: (new Date()).getFullYear() }) }
           </Text>
         </Box>
       </Box>
     );
-  }, [ apiVersionUrl, backendVersionData?.backend_version, frontendLink ]);
+  }, [ apiVersionUrl, backendVersionData?.backend_version, frontendLink, t ]);
 
   const containerProps: HTMLChakraProps<'div'> = {
     as: 'footer',
@@ -177,11 +179,11 @@ const Footer = () => {
 
     return (
       <Box gridArea={ gridArea } textStyle="xs" mt={ 6 }>
-        <span>This site is protected by reCAPTCHA and the Google </span>
-        <Link href="https://policies.google.com/privacy" external noIcon>Privacy Policy</Link>
-        <span> and </span>
-        <Link href="https://policies.google.com/terms" external noIcon>Terms of Service</Link>
-        <span> apply.</span>
+        <span>{ t('snippets.footer.recaptcha_protection') } </span>
+        <Link href="https://policies.google.com/privacy" external noIcon>{ t('snippets.footer.recaptcha_privacy_policy') }</Link>
+        <span> { t('snippets.footer.recaptcha_and') } </span>
+        <Link href="https://policies.google.com/terms" external noIcon>{ t('snippets.footer.recaptcha_terms_of_service') }</Link>
+        <span> { t('snippets.footer.recaptcha_apply') }</span>
       </Box>
     );
   };

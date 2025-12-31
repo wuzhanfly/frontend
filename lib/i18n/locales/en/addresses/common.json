@@ -258,5 +258,11 @@
   "addresses.common.tab_dot": "tab.",
   "addresses.common.contract_abi_item_fallback": "The fallback function is executed on a call to the contract if none of the other functions match the given function signature, or if no data was supplied at all and there is no receive Ether function.The fallback function always receives data, but in order to also receive Ether it must be marked payable.",
   "addresses.common.contract_abi_item_receive": "The receive function is executed on a call to the contract with empty calldata.This is the function that is executed on plain Ether transfers (e.g. via .send() or .transfer()).If no such function exists, but a payable fallback function exists, the fallback function will be called on a plain Ether transfer.If neither a receive Ether nor a payable fallback function is present,the contract cannot receive Ether through regular transactions and throws an exception.",
-  "addresses.common.is_invalid": "An error occurred while parsing the method signature."
+  "addresses.common.is_invalid": "An error occurred while parsing the method signature.",
+  "addresses.common.eoa": "EOA",
+  "addresses.common.eoa_plus_code": "EOA+code",
+  "addresses.common.multisig_safe": "Multisig: Safe",
+  "addresses.common.xhs_level": "XHS {{level}} level",
+  "addresses.common.xstar_looks_for_off-chain_information": "XStar looks for off-chain information about an address and interpret it as a XHS score. Different score means different humanity levels.",
+  "addresses.common.details_small": "details"
 }

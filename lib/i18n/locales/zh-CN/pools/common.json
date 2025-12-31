@@ -1,5 +1,13 @@
 {
   "table_item": {
     "dex_name": "去中心化交易所名称"
-  }
+  },
+  "pools.common.pool": "池",
+  "pools.common.verify_with": "验证",
+  "pools.common.view_in": "查看",
+  "pools.common.this_liquidity_provider": "此流动性提供者（LP）代币代表{{base_token_symbol}}/{{quote_token_symbol}}配对。",
+  "pools.common.pair_token_symbol_or_token_address": "配对、代币符号或代币地址",
+  "pools.common.dex_tracker": "去中心化交易所追踪器",
+  "pools.common.there_are_no_pools": "没有池。",
+  "pools.common.cant_find_pools": "找不到符合您过滤查询的池。"
 }

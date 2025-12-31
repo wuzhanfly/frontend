@@ -2,6 +2,7 @@ import { List, chakra, Box } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { VerifiedAddress, TokenInfoApplication, TokenInfoApplications, VerifiedAddressResponse } from 'types/api/account';
 
@@ -29,6 +30,7 @@ import VerifiedAddressesTable from 'ui/verifiedAddresses/VerifiedAddressesTable'
 const VerifiedAddresses = () => {
   useRedirectForInvalidAuthToken();
 
+  const { t } = useTranslation();
   const router = useRouter();
   const addressHash = getQueryParamString(router.query.address);
 
@@ -115,14 +117,14 @@ const VerifiedAddresses = () => {
     if (userWithoutEmail) {
       return (
         <Button disabled mt={ 8 }>
-          Add address
+          { t('account.common.add_address') }
         </Button>
       );
     }
 
     return (
       <Button onClick={ modalProps.onOpen } loadingSkeleton={ isLoading } mt={ 8 }>
-        Add address
+        { t('account.common.add_address') }
       </Button>
     );
   })();
@@ -130,11 +132,11 @@ const VerifiedAddresses = () => {
   if (selectedAddress) {
     const addressInfo = addressesQuery.data?.verifiedAddresses.find(({ contractAddress }) => contractAddress.toLowerCase() === selectedAddress.toLowerCase());
     const tokenName = addressInfo ? `${ addressInfo.metadata.tokenName } (${ addressInfo.metadata.tokenSymbol })` : '';
-    const beforeTitle = <BackToButton onClick={ handleGoBack } hint="Back to my verified addresses" mr={ 3 }/>;
+    const beforeTitle = <BackToButton onClick={ handleGoBack } hint={ t('common.common.back_to_my_verified_addresses') } mr={ 3 }/>;
 
     return (
       <>
-        <PageTitle title="Token info application form" beforeTitle={ beforeTitle }/>
+        <PageTitle title={ t('common.common.token_info_application_form') } beforeTitle={ beforeTitle }/>
         <TokenInfoForm
           address={ selectedAddress }
           tokenName={ tokenName }
@@ -186,28 +188,25 @@ const VerifiedAddresses = () => {
 
   return (
     <>
-      <PageTitle title="My verified addresses"/>
+      <PageTitle title={ t('common.common.my_verified_addresses') }/>
       { userWithoutEmail && <VerifiedAddressesEmailAlert/> }
       <AccountPageDescription allowCut={ false }>
         <span>
-          Verify ownership of a smart contract address to easily update information in Blockscout.
-          You will sign a single message to verify contract ownership.
-          Once verified, you can update token information, address name tags, and address labels from the
-          Blockscout console without needing to sign additional messages.
+          { t('verified_addresses.common.verify_contract_ownership') }
         </span>
         <chakra.p fontWeight={ 600 } mt={ 5 }>
-          Before starting, make sure that:
+          { t('verified_addresses.common.before_starting_make_sure_that') }
         </chakra.p>
         <List.Root pl={ 5 } as="ol">
-          <List.Item>The source code for the smart contract is deployed on “{ config.chain.name }”.</List.Item>
+          <List.Item>{ t('verified_addresses.common.source_code_deployed_on_chain', { chain: config.chain.name }) }</List.Item>
           <List.Item>
-            <span>The source code is verified (if not yet verified, you can use </span>
-            <Link href="https://docs.blockscout.com/devs/verification" external noIcon>this tool</Link>
+            <span>{ t('verified_addresses.common.the_source_code_is_verified_if_not_yet_verified_you_can_use') } </span>
+            <Link href="https://docs.blockscout.com/devs/verification" external noIcon>{ t('verified_addresses.common.this_tool') }</Link>
             <span>).</span>
           </List.Item>
         </List.Root>
         <chakra.div mt={ 5 }>
-          Once these steps are complete, click the Add address button below to get started.
+          { t('verified_addresses.common.once_these_steps_are_complete_click_the_add_address_button_below_to_get_started') }
         </chakra.div>
         <AdminSupportText mt={ 5 }/>
       </AccountPageDescription>

@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useApiQuery from 'lib/api/useApiQuery';
@@ -26,6 +27,7 @@ import PageTitle from 'ui/shared/Page/PageTitle';
 import VerifyWith from 'ui/shared/VerifyWith';
 
 const Pool = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const hash = getQueryParamString(router.query.hash);
 
@@ -103,13 +105,13 @@ const Pool = () => {
       { poolIdOrContract }
       <Flex gap={ 2 } ml={ 2 }>
         <InfoButton>
-          { `This Liquidity Provider (LP) token represents ${ data?.base_token_symbol }/${ data?.quote_token_symbol } pairing.` }
+          { t('pools.common.this_liquidity_provider', { base_token_symbol: data?.base_token_symbol, quote_token_symbol: data?.quote_token_symbol }) }
         </InfoButton>
         { hasLinks && (
           <VerifyWith
             links={ externalLinksComponents }
-            label="Verify with"
-            longText="View in"
+            label={ t('pools.common.verify_with') }
+            longText={ t('pools.common.view_in') }
             shortText=""
           />
         ) }
@@ -130,7 +132,7 @@ const Pool = () => {
             variant="heading"
           />
         ) : null }
-        contentAfter={ <Skeleton loading={ isPlaceholderData }><Tag>Pool</Tag></Skeleton> }
+        contentAfter={ <Skeleton loading={ isPlaceholderData }><Tag>{ t('pools.common.pool') }</Tag></Skeleton> }
         secondRow={ titleSecondRow }
         isLoading={ isPlaceholderData }
         withTextAd

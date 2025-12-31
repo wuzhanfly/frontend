@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { SHIBARIUM_WITHDRAWAL_ITEM } from 'stubs/shibarium';
@@ -15,6 +16,7 @@ import WithdrawalsListItem from 'ui/withdrawals/shibarium/WithdrawalsListItem';
 import WithdrawalsTable from 'ui/withdrawals/shibarium/WithdrawalsTable';
 
 const ShibariumWithdrawals = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:shibarium_withdrawals',
     options: {
@@ -61,7 +63,7 @@ const ShibariumWithdrawals = () => {
 
     return (
       <Skeleton loading={ countersQuery.isPlaceholderData } display="inline-block">
-        A total of { countersQuery.data?.toLocaleString() } withdrawals found
+        { t('common.common.a_total_of_data_withdrawals_found', { data: countersQuery.data?.toLocaleString() }) }
       </Skeleton>
     );
   })();
@@ -70,11 +72,11 @@ const ShibariumWithdrawals = () => {
 
   return (
     <>
-      <PageTitle title={ `Withdrawals (L2${ nbsp }${ rightLineArrow }${ nbsp }L1)` } withTextAd/>
+      <PageTitle title={ `${ t('common.common.withdrawals') } (L2${ nbsp }${ rightLineArrow }${ nbsp }L1)` } withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no withdrawals."
+        emptyText={ t('common.common.there_are_no_withdrawals') }
         actionBar={ actionBar }
       >
         { content }

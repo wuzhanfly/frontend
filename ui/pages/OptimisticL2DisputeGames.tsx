@@ -1,5 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { L2_DISPUTE_GAMES_ITEM } from 'stubs/L2';
@@ -14,6 +15,7 @@ import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 import StickyPaginationWithText from 'ui/shared/StickyPaginationWithText';
 
 const OptimisticL2DisputeGames = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:optimistic_l2_dispute_games',
     options: {
@@ -60,10 +62,10 @@ const OptimisticL2DisputeGames = () => {
 
     return (
       <Skeleton loading={ countersQuery.isPlaceholderData || isPlaceholderData } display="flex" flexWrap="wrap">
-        Dispute game index
-        <Text fontWeight={ 600 } whiteSpace="pre"> #{ data.items[0].index } </Text>to
+        { t('common.common.dispute_game_index') }
+        <Text fontWeight={ 600 } whiteSpace="pre"> #{ data.items[0].index } </Text>{ t('common.common.to') }
         <Text fontWeight={ 600 } whiteSpace="pre"> #{ data.items[data.items.length - 1].index } </Text>
-        (total of { countersQuery.data?.toLocaleString() } games)
+        { t('common.common.total_of_data_games', { data: countersQuery.data?.toLocaleString() }) }
       </Skeleton>
     );
   })();
@@ -72,11 +74,11 @@ const OptimisticL2DisputeGames = () => {
 
   return (
     <>
-      <PageTitle title="Dispute games" withTextAd/>
+      <PageTitle title={ t('common.common.dispute_games') } withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no dispute games."
+        emptyText={ t('common.common.there_are_no_dispute_games') }
         actionBar={ actionBar }
       >
         { content }

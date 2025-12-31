@@ -27,5 +27,6 @@
   "result_with_errors": {
     "address_label": "智能合约/地址 (0x...)",
     "start_over_button": "重新开始"
-  }
+  },
+  "public_tags.common.request_a_public_tag_label": "请求公共标签/标签"
 }

@@ -21,5 +21,6 @@
   "account.common.email_notification_is_on": "Email notification is ON",
   "account.common.email_notification_is_off": "Email notification is OFF",
   "account.common.email_notification": "Email notification",
-  "account.common.private_tag": "Private tag"
+  "account.common.private_tag": "Private tag",
+  "account.common.email_notification_description": "An email notification can be sent to you when an address on your watch list sends or receives any transactions."
 }

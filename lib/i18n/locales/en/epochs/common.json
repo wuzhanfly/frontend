@@ -25,5 +25,8 @@
   "epochs.common.epochs": "Epochs",
   "epochs.common.there_are_no_epochs": "There are no epochs.",
   "epochs.common.ranging_from": "Ranging from",
-  "epochs.common.to": "to"
+  "epochs.common.to": "to",
+  "epochs.common.finalized_while_celo_was_still_an_l1_network": "Epoch finalized while Celo was still an L1 network",
+  "epochs.common.became_an_l2_rollup": "Epoch finalized after Celo migrated to the OP‐stack, when it became an L2 rollup",
+  "epochs.common.epoch_#number": "Epoch #{{number}}"
 }

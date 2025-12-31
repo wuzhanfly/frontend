@@ -35,5 +35,19 @@
     "metrics_not_updated": "Metrics are not updated in real time. Please allow up to one hour for your Performance Rank and earned Merits to reflect recent activity. If you experience any issues, feel free to reach out on",
     "discord": "Discord",
     "grab_activity_pass": "Grab Activity pass"
-  }
+  },
+  "rewards.common.explore_the_merits_hub": "Explore the Merits Hub",
+  "rewards.common.to_earn_spend_and_learn_more_about_the_program": " to earn, spend, and learn more about the program.",
+  "rewards.common.all_merits": "All Merits",
+  "rewards.common.claim_your_daily_merits_and_any_merits_received_from_referrals": "Claim your daily Merits and any Merits received from referrals",
+  "rewards.common.total_merits_earned": "Total number of Merits earned from all activities.",
+  "rewards.common.more_info_on_merits": "More info on Merits",
+  "rewards.common.referrals": "Referrals",
+  "rewards.common.referrals_description": "Total number of users who have joined the program using your code or referral link.",
+  "rewards.common.streak": "Streak",
+  "rewards.common.streak_description": "Current number of consecutive days you've claimed your daily Merits. The longer your streak, the more daily Merits you can earn.",
+  "rewards.common.streak_hint": "See the",
+  "rewards.common.streak_hint_link": "docs",
+  "rewards.common.streak_hint_suffix": "to learn how your streak number affects daily rewards",
+  "rewards.common.check_achievements": "Check achievements"
 }

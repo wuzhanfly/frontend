@@ -17,11 +17,6 @@ interface Props {
   isLoading: boolean;
 }
 
-const TITLES: Record<keyof GasPrices, string> = {
-  fast: 'Fast',
-  average: 'Normal',
-  slow: 'Slow',
-};
 const ICONS: Record<keyof GasPrices, IconName> = {
   fast: 'rocket_xl',
   average: 'gas_xl',
@@ -30,6 +25,13 @@ const ICONS: Record<keyof GasPrices, IconName> = {
 
 const GasTrackerPriceSnippet = ({ data, type, isLoading }: Props) => {
   const { t } = useTranslation();
+
+  const TITLES: Record<keyof GasPrices, string> = {
+    fast: t('gas_tracker.common.fast'),
+    average: t('gas_tracker.common.normal'),
+    slow: t('gas_tracker.common.slow'),
+  };
+
   const bgColors = {
     fast: 'transparent',
     average: { _light: 'gray.50', _dark: 'whiteAlpha.200' },

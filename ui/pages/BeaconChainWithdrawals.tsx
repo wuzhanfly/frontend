@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useApiQuery from 'lib/api/useApiQuery';
@@ -20,6 +21,7 @@ import BeaconChainWithdrawalsTable from 'ui/withdrawals/beaconChain/BeaconChainW
 const feature = config.features.beaconChain;
 
 const BeaconChainWithdrawals = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:withdrawals',
     options: {
@@ -71,8 +73,11 @@ const BeaconChainWithdrawals = () => {
       <Skeleton loading={ countersQuery.isPlaceholderData || isPlaceholderData } display="flex" flexWrap="wrap">
         { countersQuery.data && (
           <Text lineHeight={{ base: '24px', lg: '32px' }}>
-            { BigNumber(countersQuery.data.withdrawals_count).toFormat() } withdrawals processed
-            and { getCurrencyValue({ value: countersQuery.data.withdrawals_sum }).valueStr } { currencyUnits.ether } withdrawn
+            { t('common.common.withdrawals_processed', {
+              num1: BigNumber(countersQuery.data.withdrawals_count).toFormat(),
+              num2: getCurrencyValue({ value: countersQuery.data.withdrawals_sum }).valueStr,
+              unit: currencyUnits.ether,
+            }) }
           </Text>
         ) }
       </Skeleton>
@@ -84,13 +89,13 @@ const BeaconChainWithdrawals = () => {
   return (
     <>
       <PageTitle
-        title={ config.meta.seo.enhancedDataEnabled ? `${ config.chain.name } withdrawals` : 'Withdrawals' }
+        title={ config.meta.seo.enhancedDataEnabled ? t('common.common.chain_withdrawals', { chain: config.chain.name }) : t('common.common.withdrawals') }
         withTextAd
       />
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no withdrawals."
+        emptyText={ t('common.common.there_are_no_withdrawals') }
         actionBar={ actionBar }
       >
         { content }

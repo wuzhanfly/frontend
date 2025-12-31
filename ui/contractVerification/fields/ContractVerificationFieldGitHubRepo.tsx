@@ -1,6 +1,7 @@
 import { get } from 'es-toolkit/compat';
 import React from 'react';
 import { useFormContext } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const ContractVerificationFieldGitHubRepo = ({ onCommitHashChange }: Props) => {
+  const { t } = useTranslation();
   const repoErrorRef = React.useRef<string | undefined>(undefined);
   const fetch = useFetch();
   const { getValues, trigger, getFieldState } = useFormContext<FormFields>();
@@ -46,15 +48,15 @@ const ContractVerificationFieldGitHubRepo = ({ onCommitHashChange }: Props) => {
         onCommitHashChange(get(response, '[0].sha'));
         return;
       } catch (error) {
-        repoErrorRef.current = 'GitHub repository not found';
+        repoErrorRef.current = t('common.common.github_repository_not_found');
       }
     } else {
-      repoErrorRef.current = 'Invalid GitHub repository URL';
+      repoErrorRef.current = t('common.common.invalid_github_repository_url');
     }
 
     trigger('repository_url');
     onCommitHashChange();
-  }, [ fetch, getValues, getFieldState, onCommitHashChange, trigger ]);
+  }, [ fetch, getValues, getFieldState, onCommitHashChange, trigger, t ]);
 
   const repoUrlValidator = React.useCallback(() => {
     return repoErrorRef.current ? repoErrorRef.current : true;
@@ -72,7 +74,7 @@ const ContractVerificationFieldGitHubRepo = ({ onCommitHashChange }: Props) => {
     <ContractVerificationFormRow>
       <FormFieldUrl<FormFields>
         name="repository_url"
-        placeholder="GitHub repository URL"
+        placeholder={ t('common.common.github_repository_url') }
         required
         onBlur={ handleBlur }
         rules={ rules }

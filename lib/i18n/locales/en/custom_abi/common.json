@@ -2,5 +2,7 @@
   "custom_abi.delete_modal.custom_abi_for": "Custom ABI for ",
   "custom_abi.delete_modal.will_be_deleted": " will be deleted",
   "custom_abi.form.custom_abi_placeholder": "Custom ABI [{...}] (JSON format)",
-  "custom_abi.table.abi_for_smart_contract": "ABI for Smart contract address (0x...)"
+  "custom_abi.table.abi_for_smart_contract": "ABI for Smart contract address (0x...)",
+  "custom_abi.common.add_custom_abis_for_any_contract": "Add custom ABIs for any contract and access when logged into your account. Helpful for debugging, functional testing and contract interaction.",
+  "custom_abi.common.add_custom_abi": " Add custom ABI"
 }

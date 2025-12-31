@@ -27,5 +27,6 @@
   "result_with_errors": {
     "address_label": "Smart contract / Address (0x...)",
     "start_over_button": "Start over"
-  }
+  },
+  "public_tags.common.request_a_public_tag_label": "Request a public tag/label"
 }

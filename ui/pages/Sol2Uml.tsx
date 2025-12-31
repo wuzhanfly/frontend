@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { useMultichainContext } from 'lib/contexts/multichain';
 import AddressEntity from 'ui/shared/entities/address/AddressEntity';
@@ -9,6 +10,7 @@ import PageTitle from 'ui/shared/Page/PageTitle';
 import Sol2UmlDiagram from 'ui/sol2uml/Sol2UmlDiagram';
 
 const Sol2Uml = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const multichainContext = useMultichainContext();
 
@@ -16,7 +18,7 @@ const Sol2Uml = () => {
 
   const chainInfo = multichainContext?.chain ? (
     <Flex display="inline-flex" alignItems="center">
-      <span>on</span>
+      <span>{ t('visualize.common.on') }</span>
       <ChainIcon data={ multichainContext.chain } ml={ 1 } mr={ 2 }/>
       <span>{ multichainContext.chain.app_config.chain.name }</span>
     </Flex>
@@ -24,9 +26,9 @@ const Sol2Uml = () => {
 
   return (
     <>
-      <PageTitle title="Solidity UML diagram"/>
+      <PageTitle title={ t('visualize.common.solidity_uml_diagram') }/>
       <Flex mb={ 10 } flexWrap="wrap" columnGap={ 1 }>
-        <span>For contract</span>
+        <span>{ t('visualize.common.for_contract') }</span>
         <AddressEntity
           address={{ hash: addressHash, is_contract: true }}
           noCopy

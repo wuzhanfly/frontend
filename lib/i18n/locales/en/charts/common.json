@@ -6,5 +6,7 @@
   "charts.common.year": "Year",
   "charts.common.incomplete_resolution": "Incomplete {{resolution}}",
   "charts.common.dates": "Dates",
-  "charts.common.date": "Date"
+  "charts.common.date": "Date",
+  "charts.common.share": "Share",
+  "charts.common.no_data": "No data for the selected resolution & interval."
 }

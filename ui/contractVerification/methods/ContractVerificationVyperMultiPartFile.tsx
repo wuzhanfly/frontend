@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContractVerificationConfig } from 'types/client/contract';
 
@@ -13,27 +14,25 @@ const MAIN_SOURCES_TYPES = [ '.vy' as const ];
 const INTERFACE_TYPES = [ '.vy' as const, '.json' as const ];
 
 const ContractVerificationVyperMultiPartFile = ({ config }: { config: SmartContractVerificationConfig }) => {
+  const { t } = useTranslation();
 
   const interfacesHint = (
     <>
-      <span>Add any </span>
-      <Link href="https://docs.vyperlang.org/en/stable/interfaces.html" external noIcon>required interfaces</Link>
-      <span> for the main compiled contract.</span>
+      <span>{ t('common.common.add_any') } </span>
+      <Link href="https://docs.vyperlang.org/en/stable/interfaces.html" external noIcon>{ t('contract_verification.common.required_interfaces') }</Link>
+      <span> { t('contract_verification.common.for_the_main_compiled_contract') }</span>
     </>
   );
 
   return (
-    <ContractVerificationMethod title="Contract verification via Vyper (multi-part files)">
+    <ContractVerificationMethod title={ t('contract_verification.common.via_vyper_multi-part_files') }>
       <ContractVerificationFieldCompiler config={ config } isVyper/>
       <ContractVerificationFieldEvmVersion isVyper config={ config }/>
       <ContractVerificationFieldSources
         name="sources"
         fileTypes={ MAIN_SOURCES_TYPES }
-        title="Upload main *.vy source"
-        hint={ `
-          Primary compiled Vyper contract. 
-          Only add the main contract here whose bytecode has been deployed, all other files can be uploaded to the interfaces box below.
-        ` }
+        title={ t('contract_verification.common.upload_main_source') }
+        hint={ t('contract_verification.common.primary_compiled_vyper_contract') }
         required
       />
       <ContractVerificationFieldSources
@@ -41,7 +40,7 @@ const ContractVerificationVyperMultiPartFile = ({ config }: { config: SmartContr
         fileTypes={ INTERFACE_TYPES }
         multiple
         fullFilePath
-        title="Interfaces (.vy or .json)"
+        title={ t('contract_verification.common.interfaces_vy_json') }
         hint={ interfacesHint }
       />
     </ContractVerificationMethod>

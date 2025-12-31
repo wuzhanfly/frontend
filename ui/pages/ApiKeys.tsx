@@ -1,5 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { ApiKey } from 'types/api/account';
 
@@ -22,6 +23,7 @@ import useRedirectForInvalidAuthToken from 'ui/snippets/auth/useRedirectForInval
 const DATA_LIMIT = 3;
 
 const ApiKeysPage: React.FC = () => {
+  const { t } = useTranslation();
   const apiKeyModalProps = useDisclosure();
   const deleteModalProps = useDisclosure();
   useRedirectForInvalidAuthToken();
@@ -57,8 +59,8 @@ const ApiKeysPage: React.FC = () => {
 
   const description = (
     <AccountPageDescription>
-      Create API keys to use for your RPC and EthRPC API requests. For more information, see { space }
-      <Link href="https://docs.blockscout.com/using-blockscout/my-account/api-keys#api-keys" external noIcon>"How to use a Blockscout API key"</Link>.
+      { t('api_key.common.description') } { space }
+      <Link href="https://docs.blockscout.com/using-blockscout/my-account/api-keys#api-keys" external noIcon>{ t('api_key.common.how_to_use') }</Link>.
     </AccountPageDescription>
   );
 
@@ -111,11 +113,11 @@ const ApiKeysPage: React.FC = () => {
             onClick={ apiKeyModalProps.onOpen }
             disabled={ !canAdd }
           >
-            Add API key
+            { t('api_key.common.add_api_key') }
           </Button>
           { !canAdd && (
             <Text fontSize="sm" color="text.secondary">
-              { `You have added the maximum number of API keys (${ DATA_LIMIT }). Contact us to request additional keys.` }
+              { t('api_key.common.max_keys_reached', { DATA_LIMIT }) }
             </Text>
           ) }
         </Skeleton>
@@ -127,7 +129,7 @@ const ApiKeysPage: React.FC = () => {
 
   return (
     <>
-      <PageTitle title="API keys"/>
+      <PageTitle title={ t('api_key.common.api_keys') }/>
       { content }
     </>
   );

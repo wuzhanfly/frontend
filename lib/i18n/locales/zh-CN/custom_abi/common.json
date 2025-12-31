@@ -2,5 +2,7 @@
   "custom_abi.delete_modal.custom_abi_for": "自定义ABI用于 ",
   "custom_abi.delete_modal.will_be_deleted": " 将被删除",
   "custom_abi.form.custom_abi_placeholder": "自定义ABI [{...}] (JSON格式)",
-  "custom_abi.table.abi_for_smart_contract": "ABI用于智能合约地址 (0x...)"
+  "custom_abi.table.abi_for_smart_contract": "ABI用于智能合约地址 (0x...)",
+  "custom_abi.common.add_custom_abis_for_any_contract": "登录您的账户后，可为任何合约添加自定义ABI并进行访问。这对调试、功能测试和合约交互非常有用。",
+  "custom_abi.common.add_custom_abi": " 添加自定义ABI"
 }

@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { EssentialDappsConfig } from 'types/client/marketplace';
 
@@ -14,6 +15,7 @@ import PageTitle from 'ui/shared/Page/PageTitle';
 const feature = config.features.marketplace;
 
 const EssentialDapp = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const id = getQueryParamString(router.query.id);
 
@@ -23,23 +25,23 @@ const EssentialDapp = () => {
 
   switch (id) {
     case 'swap':
-      title = 'Swap';
+      title = t('marketplace.common.swap');
       content = <Swap/>;
       isCentered = true;
       break;
     case 'revoke':
-      title = 'Revoke';
+      title = t('marketplace.common.revoke');
       content = <Revoke/>;
       break;
     case 'multisend':
-      title = 'Multisend';
+      title = t('marketplace.common.multisend');
       content = <Multisend/>;
       isCentered = true;
       break;
   }
 
   if (!content || (feature.isEnabled && !feature.essentialDapps?.[id as keyof EssentialDappsConfig])) {
-    throw new Error('Essential dapp not found', { cause: { status: 404 } });
+    throw new Error(t('common.common.essential_dapp_not_found'), { cause: { status: 404 } });
   }
 
   return (

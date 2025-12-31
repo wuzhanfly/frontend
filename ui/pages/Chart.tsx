@@ -2,6 +2,7 @@ import { createListCollection, Flex, Text } from '@chakra-ui/react';
 import type { NextRouter } from 'next/router';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Resolution } from '@blockscout/stats-types';
 import type { StatsIntervalIds } from 'types/client/stats';
@@ -70,6 +71,7 @@ const getResolutionFromQuery = (router: NextRouter) => {
 };
 
 const Chart = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const id = getQueryParamString(router.query.id);
   const intervalFromQuery = getIntervalFromQuery(router);
@@ -173,7 +175,7 @@ const Chart = () => {
       loadingSkeleton={ lineQuery.isPlaceholderData }
     >
       <IconSvg name="share" w={ 4 } h={ 4 }/>
-      Share
+      { t('charts.common.share') }
     </Button>
   );
 
@@ -205,7 +207,7 @@ const Chart = () => {
             />
           ) }
           <Flex alignItems="center" gap={ 3 }>
-            { !isMobile && <Text>Period</Text> }
+            { !isMobile && <Text>{ t('charts.common.period') }</Text> }
             <ChartIntervalSelect interval={ interval } onIntervalChange={ onIntervalChange }/>
           </Flex>
           { (
@@ -214,11 +216,11 @@ const Chart = () => {
           ) && (
             <Flex alignItems="center" gap={ 3 }>
               <Skeleton loading={ isInfoLoading }>
-                { isMobile ? 'Res.' : 'Resolution' }
+                { isMobile ? t('common.common.res') : t('common.common.resolution') }
               </Skeleton>
               <Select
                 collection={ resolutionCollection }
-                placeholder="Select resolution"
+                placeholder={ t('common.common.select_resolution') }
                 defaultValue={ [ defaultResolution ] }
                 onValueChange={ onResolutionChange }
                 w={{ base: 'fit-content', lg: '160px' }}
@@ -235,7 +237,7 @@ const Chart = () => {
               gap={ 2 }
             >
               <IconSvg name="repeat" w={ 5 } h={ 5 }/>
-              { !isMobile && 'Reset' }
+              { !isMobile && t('common.common.reset') }
             </Button>
           ) }
         </Flex>
@@ -287,7 +289,7 @@ const Chart = () => {
           zoomRange={ zoomRange }
           handleZoom={ handleZoom }
           empty={ !hasNonEmptyCharts }
-          emptyText="No data for the selected resolution & interval."
+          emptyText={ t('charts.common.no_data') }
           resolution={ resolution }
         />
       </Flex>

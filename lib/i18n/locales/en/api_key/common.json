@@ -1,5 +1,10 @@
 {
   "api_key.delete_modal.api_key_for": "API key for",
   "api_key.delete_modal.will_be_deleted": "will be deleted",
-  "api_key.table.api_key_token_limit": "API key token (limit {{limit}} keys)"
+  "api_key.table.api_key_token_limit": "API key token (limit {{limit}} keys)",
+  "api_key.common.description": "Create API keys to use for your RPC and EthRPC API requests. For more information, see",
+  "api_key.common.how_to_use": "'How to use a Blockscout API key'",
+  "api_key.common.add_api_key": "Add API key",
+  "api_key.common.max_keys_reached": "You have added the maximum number of API keys ({{DATA_LIMIT}}). Contact us to request additional keys.",
+  "api_key.common.api_keys": "API keys"
 }

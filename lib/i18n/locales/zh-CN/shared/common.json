@@ -20,5 +20,7 @@
   "shared.common.invalid_utf8_with_hex": "[无效的 UTF-8] {{hex}}",
   "shared.common.decode_error_with_hex": "[解码错误] {{hex}}",
   "shared.common.select_chain": "选择链",
-  "shared.common.all_chains": "所有链"
+  "shared.common.all_chains": "所有链",
+  "shared.common.operations": "操作",
+  "shared.common.no_operations_found": "找不到与您的查询匹配的任何操作。"
 }

@@ -1,5 +1,6 @@
 import { chakra, Code } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 
@@ -12,19 +13,21 @@ interface Props {
 }
 
 const ContractVerificationFieldName = ({ hint }: Props) => {
+  const { t } = useTranslation();
   return (
     <ContractVerificationFormRow>
       <FormFieldText<FormFields>
         name="name"
         required
-        placeholder="Contract name"
+        placeholder={ t('common.common.contract_name') }
         rules={{ maxLength: 255 }}
       />
       { hint ? <span>{ hint }</span> : (
         <>
-          <span>Must match the name specified in the code. For example, in </span>
-          <Code color="text.secondary">{ `contract MyContract {..}` }</Code>
-          <span>. <chakra.span fontWeight={ 600 }>MyContract</chakra.span> is the contract name.</span>
+          <span>{ t('contract_verification.common.must_match_the_name_specified') } </span>
+          <Code color="text.secondary">{ t('contract_verification.common.contract_myContract') }</Code>
+          <span>. <chakra.span fontWeight={ 600 }>{ t('contract_verification.common.myContract') }</chakra.span>
+            { t('contract_verification.common.is_the_contract_name') }</span>
         </>
       ) }
     </ContractVerificationFormRow>

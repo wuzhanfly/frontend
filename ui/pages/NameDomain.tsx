@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 
@@ -23,6 +24,7 @@ import IconSvg from 'ui/shared/IconSvg';
 import PageTitle from 'ui/shared/Page/PageTitle';
 
 const NameDomain = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const domainName = getQueryParamString(router.query.name);
 
@@ -34,8 +36,8 @@ const NameDomain = () => {
   });
 
   const tabs: Array<TabItemRegular> = [
-    { id: 'details', title: 'Details', component: <NameDomainDetails query={ infoQuery }/> },
-    { id: 'history', title: 'History', component: <NameDomainHistory domain={ infoQuery.data }/> },
+    { id: 'details', title: t('transactions.common.details'), component: <NameDomainDetails query={ infoQuery }/> },
+    { id: 'history', title: t('common.common.history'), component: <NameDomainHistory domain={ infoQuery.data }/> },
   ];
 
   throwOnResourceLoadError(infoQuery);
@@ -65,7 +67,7 @@ const NameDomain = () => {
             isLoading={ isLoading }
             variant="subheading"
           />
-          <Tooltip content="Lookup for related domain names">
+          <Tooltip content={ t('common.common.lookup_for_related_domain_names') }>
             <Link
               flexShrink={ 0 }
               display="inline-flex"
@@ -85,7 +87,7 @@ const NameDomain = () => {
   return (
     <>
       <TextAd mb={ 6 }/>
-      <PageTitle title="Name details" secondRow={ titleSecondRow }/>
+      <PageTitle title={ t('common.common.name_details') } secondRow={ titleSecondRow }/>
       <RoutedTabs tabs={ tabs } isLoading={ infoQuery.isPlaceholderData }/>
     </>
   );

@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { L2_WITHDRAWAL_ITEM } from 'stubs/L2';
@@ -15,6 +16,7 @@ import OptimisticL2WithdrawalsListItem from 'ui/withdrawals/optimisticL2/Optimis
 import OptimisticL2WithdrawalsTable from 'ui/withdrawals/optimisticL2/OptimisticL2WithdrawalsTable';
 
 const OptimisticL2Withdrawals = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:optimistic_l2_withdrawals',
     options: {
@@ -64,7 +66,7 @@ const OptimisticL2Withdrawals = () => {
         loading={ countersQuery.isPlaceholderData }
         display="inline-block"
       >
-        A total of { countersQuery.data?.toLocaleString() } withdrawals found
+        { t('common.common.total_of_data_withdrawals_found') }
       </Skeleton>
     );
   })();
@@ -73,11 +75,11 @@ const OptimisticL2Withdrawals = () => {
 
   return (
     <>
-      <PageTitle title={ `Withdrawals (L2${ nbsp }${ rightLineArrow }${ nbsp }L1)` } withTextAd/>
+      <PageTitle title={ `${ t('common.common.withdrawals') } (L2${ nbsp }${ rightLineArrow }${ nbsp }L1)` } withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items?.length }
-        emptyText="There are no withdrawals."
+        emptyText={ t('common.common.there_are_no_withdrawals') }
         actionBar={ actionBar }
       >
         { content }

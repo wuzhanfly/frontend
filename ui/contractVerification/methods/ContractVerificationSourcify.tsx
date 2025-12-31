@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFormContext } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 
@@ -8,13 +9,14 @@ import config from 'configs/app';
 import ContractVerificationMethod from '../ContractVerificationMethod';
 
 const ContractVerificationSourcify = () => {
+  const { t } = useTranslation();
   const { watch } = useFormContext<FormFields>();
   const address = watch('address');
 
   const iframeUrl = `https://verify.sourcify.dev/widget?chainId=${ config.chain.id }&address=${ address }`;
 
   return (
-    <ContractVerificationMethod title="Contract verification via Sourcify (Solidity or Vyper)">
+    <ContractVerificationMethod title={ t('contract_verification.common.via_sourcify_vyper') }>
       <iframe
         src={ iframeUrl }
         sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"

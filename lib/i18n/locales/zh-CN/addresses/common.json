@@ -258,5 +258,11 @@
   "addresses.common.tab_dot": "标签。",
   "addresses.common.contract_abi_item_fallback": "如果其他函数都不符合给定的函数签名，或者根本没有提供任何数据且没有接收以太币的函数，则会在调用合约时执行回退函数。回退函数总是会接收数据，但为了同时接收以太币，它必须被标记为可支付。",
   "addresses.common.contract_abi_item_receive": "receive函数是在调用合约且调用数据为空时执行的。这是在普通以太币转账（例如，通过.send()或.transfer()）时执行的函数。如果不存在此类函数，但存在可支付的回退函数，则会在普通以太币转账时调用回退函数。如果既不存在接收以太币的函数，也不存在可支付的回退函数，则合约无法通过常规交易接收以太币，并会抛出异常。",
-  "addresses.common.is_invalid": "解析方法签名时出错。"
+  "addresses.common.is_invalid": "解析方法签名时出错。",
+  "addresses.common.eoa": "EOA",
+  "addresses.common.eoa_plus_code": "EOA+code",
+  "addresses.common.multisig_safe": "多重签名：安全",
+  "addresses.common.xhs_level": "XHS {{level}}级",
+  "addresses.common.xstar_looks_for_off-chain_information": "XStar会查找某个地址的链下信息，并将其解读为XHS评分。不同的评分意味着不同的人性化程度。",
+  "addresses.common.details_small": "详情"
 }

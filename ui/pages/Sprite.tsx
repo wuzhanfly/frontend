@@ -2,6 +2,7 @@ import type { HTMLChakraProps } from '@chakra-ui/react';
 import { Flex, Box } from '@chakra-ui/react';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useFetch from 'lib/hooks/useFetch';
 import { Tooltip } from 'toolkit/chakra/tooltip';
@@ -22,6 +23,7 @@ interface IconInfo {
 }
 
 const Item = ({ name, file_size: fileSize, bgColor }: IconInfo & HTMLChakraProps<'div'>) => {
+  const { t } = useTranslation();
   const { hasCopied, copy } = useClipboard(name, 1000);
   const [ copied, setCopied ] = React.useState(false);
 
@@ -45,7 +47,7 @@ const Item = ({ name, file_size: fileSize, bgColor }: IconInfo & HTMLChakraProps
       cursor="pointer"
     >
       <IconSvg name={ name.replace('.svg', '') as IconName } boxSize="100px" bgColor={ bgColor } borderRadius="base"/>
-      <Tooltip content={ copied ? 'Copied' : 'Copy to clipboard' } open={ copied }>
+      <Tooltip content={ copied ? t('common.common.copied') : t('common.common.copy_to_clipboard') } open={ copied }>
         <Box fontWeight={ 500 } mt={ 2 }>{ name }</Box>
       </Tooltip>
       <Box color="text.secondary">{ formatFileSize(fileSize) }</Box>
@@ -54,6 +56,7 @@ const Item = ({ name, file_size: fileSize, bgColor }: IconInfo & HTMLChakraProps
 };
 
 const Sprite = () => {
+  const { t } = useTranslation();
   const [ searchTerm, setSearchTerm ] = React.useState('');
 
   const fetch = useFetch();
@@ -78,7 +81,7 @@ const Sprite = () => {
       .sort((a, b) => a.name.localeCompare(b.name));
 
     if (items.length === 0) {
-      return <EmptySearchResult text="No icons found"/>;
+      return <EmptySearchResult text={ t('common.common.no_icons_found') }/>;
     }
 
     return (
@@ -99,9 +102,19 @@ const Sprite = () => {
     }, { num: 0, fileSize: 0 });
   }, [ data ]);
 
-  const searchInput = <FilterInput placeholder="Search by name..." onChange={ setSearchTerm } loading={ isFetching } minW={{ base: '100%', lg: '300px' }}/>;
-  const totalEl = total ? <Box ml="auto">Items: { total.num } / Size: { formatFileSize(total.fileSize) }</Box> : null;
-
+  const searchInput = (
+    <FilterInput
+      placeholder={ t('common.common.search_by_name') }
+      onChange={ setSearchTerm }
+      loading={ isFetching }
+      minW={{ base: '100%', lg: '300px' }}
+    />
+  );
+  const totalEl = total ? (
+    <Box ml="auto">
+      { t('common.common.items') }: { total.num } / { t('common.common.size') }: { formatFileSize(total.fileSize) }
+    </Box>
+  ) : null;
   const contentAfter = (
     <>
       { totalEl }
@@ -111,7 +124,7 @@ const Sprite = () => {
 
   return (
     <div>
-      <PageTitle title="SVG sprite 🥤" contentAfter={ contentAfter }/>
+      <PageTitle title={ t('common.common.svg_sprite') } contentAfter={ contentAfter }/>
       { content }
     </div>
   );

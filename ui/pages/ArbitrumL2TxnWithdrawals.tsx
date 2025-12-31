@@ -1,6 +1,7 @@
 import { Box, chakra, Text } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import getQueryParamString from 'lib/router/getQueryParamString';
@@ -8,13 +9,14 @@ import { ARBITRUM_L2_TXN_WITHDRAWALS_ITEM } from 'stubs/arbitrumL2';
 import { FilterInput } from 'toolkit/components/filters/FilterInput';
 import { FormFieldError } from 'toolkit/components/forms/components/FormFieldError';
 import { TRANSACTION_HASH_REGEXP } from 'toolkit/components/forms/validators/transaction';
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 import DataListDisplay from 'ui/shared/DataListDisplay';
 import PageTitle from 'ui/shared/Page/PageTitle';
 import ArbitrumL2TxnWithdrawalsList from 'ui/txnWithdrawals/arbitrumL2/ArbitrumL2TxnWithdrawalsList';
 import ArbitrumL2TxnWithdrawalsTable from 'ui/txnWithdrawals/arbitrumL2/ArbitrumL2TxnWithdrawalsTable';
 
 const ArbitrumL2TxnWithdrawals = () => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const [ searchTerm, setSearchTerm ] = React.useState(getQueryParamString(router.query.q) || undefined);
@@ -50,10 +52,10 @@ const ArbitrumL2TxnWithdrawals = () => {
         { shallow: true },
       );
     } else {
-      setError('Invalid transaction hash');
+      setError(t('common.common.invalid_transaction_hash'));
       setSearchTerm(undefined);
     }
-  }, [ router ]);
+  }, [ router, t ]);
 
   const handleSubmit = React.useCallback((event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -75,15 +77,15 @@ const ArbitrumL2TxnWithdrawals = () => {
 
   return (
     <>
-      <PageTitle title="Transaction withdrawals" withTextAd/>
-      <Text>L2 to L1 message relayer: search for your L2 transaction to execute a manual withdrawal.</Text>
+      <PageTitle title={ t('common.common.transaction_withdrawals') } withTextAd/>
+      <Text>{ t('txn_withdrawals.common.l2_to_l1_message_relayer') }</Text>
       <chakra.form onSubmit={ handleSubmit } noValidate>
         <FilterInput
           name="tx_hash"
           w={{ base: '100%', lg: '700px' }}
           mt={ 6 }
           size="sm"
-          placeholder="Search by transaction hash"
+          placeholder={ t('common.common.search_by_transaction_hash') }
           initialValue={ searchTerm }
           onChange={ handleSearchTermChange }
           onFocus={ handleSearchInputFocus }
@@ -96,7 +98,7 @@ const ArbitrumL2TxnWithdrawals = () => {
         isError={ isError }
         itemsNum={ searchTerm ? data?.items.length : undefined }
         filterProps={{
-          emptyFilteredText: `Couldn${ apos }t find any withdrawals for your transaction.`,
+          emptyFilteredText: t('txn_withdrawals.common.couldnt_find_withdrawals'),
           hasActiveFilters: Boolean(searchTerm),
         }}
       >

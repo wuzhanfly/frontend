@@ -1,6 +1,7 @@
 import { Box, Text } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import useApiQuery from 'lib/api/useApiQuery';
@@ -18,6 +19,7 @@ import StickyPaginationWithText from 'ui/shared/StickyPaginationWithText';
 const feature = config.features.beaconChain;
 
 const BeaconChainDeposits = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:deposits',
     options: {
@@ -68,7 +70,7 @@ const BeaconChainDeposits = () => {
       <Skeleton loading={ countersQuery.isPlaceholderData || isPlaceholderData } display="flex" flexWrap="wrap">
         { countersQuery.data && (
           <Text lineHeight={{ base: '24px', lg: '32px' }}>
-            { BigNumber(countersQuery.data.deposits_count).toFormat() } deposits processed
+            { t('common.common.deposits_processed', { num: BigNumber(countersQuery.data.deposits_count).toFormat() }) }
           </Text>
         ) }
       </Skeleton>
@@ -80,13 +82,13 @@ const BeaconChainDeposits = () => {
   return (
     <>
       <PageTitle
-        title={ config.meta.seo.enhancedDataEnabled ? `${ config.chain.name } deposits` : 'Deposits' }
+        title={ config.meta.seo.enhancedDataEnabled ? t('common.common.chain_deposits', { chain: config.chain.name }) : t('common.common.deposits') }
         withTextAd
       />
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no deposits."
+        emptyText={ t('common.common.there_are_no_deposits') }
         actionBar={ actionBar }
       >
         { content }

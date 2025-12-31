@@ -1,5 +1,13 @@
 {
   "table_item": {
     "dex_name": "DEX Name"
-  }
+  },
+  "pools.common.pool": "Pool",
+  "pools.common.verify_with": "Verify with",
+  "pools.common.view_in": "View in",
+  "pools.common.this_liquidity_provider": "This Liquidity Provider (LP) token represents {{base_token_symbol}}/{{quote_token_symbol}} pairing.",
+  "pools.common.pair_token_symbol_or_token_address": "Pair, token symbol or token address",
+  "pools.common.dex_tracker": "DEX tracker",
+  "pools.common.there_are_no_pools": "There are no pools.",
+  "pools.common.cant_find_pools": "Couldn't find pools that matches your filter query."
 }

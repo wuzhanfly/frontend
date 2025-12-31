@@ -1,5 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { Screen } from 'ui/snippets/auth/types';
 
@@ -25,6 +26,7 @@ const MIXPANEL_CONFIG = {
 };
 
 const MyProfile = () => {
+  const { t } = useTranslation();
   const [ authInitialScreen, setAuthInitialScreen ] = React.useState<Screen>();
   const authModal = useDisclosure();
 
@@ -48,8 +50,7 @@ const MyProfile = () => {
     return (
       <>
         <AccountPageDescription>
-          You can add your email to receive watchlist notifications.
-          Additionally, you can manage your wallet address and email, which can be used for logging into your Blockscout account.
+          { t('common.common.my_profile_des') }
         </AccountPageDescription>
         <Flex maxW="480px" mt={ 8 } flexDir="column" rowGap={ 12 }>
           <MyProfileEmail profileQuery={ profileQuery }/>
@@ -64,7 +65,7 @@ const MyProfile = () => {
 
   return (
     <>
-      <PageTitle title="My profile"/>
+      <PageTitle title={ t('common.common.my_profile') }/>
       { content }
     </>
   );

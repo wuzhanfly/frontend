@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFieldArray, useFormContext } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 
@@ -10,6 +11,7 @@ import ContractVerificationFormRow from '../ContractVerificationFormRow';
 import ContractVerificationFieldLibraryItem from './ContractVerificationFieldLibraryItem';
 
 const ContractVerificationFieldLibraries = () => {
+  const { t } = useTranslation();
   const { formState, control, getValues } = useFormContext<FormFields>();
   const { fields, append, remove, insert } = useFieldArray({
     name: 'libraries',
@@ -50,7 +52,7 @@ const ContractVerificationFieldLibraries = () => {
           mt={ 9 }
           disabled={ formState.isSubmitting }
         >
-          Add contract libraries
+          { t('contract_verification.common.add_contract_libraries') }
         </Checkbox>
       </ContractVerificationFormRow>
       { fields.map((field, index) => (

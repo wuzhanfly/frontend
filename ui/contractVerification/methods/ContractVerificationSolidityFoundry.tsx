@@ -1,6 +1,7 @@
 import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
 import { useFormContext } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 
@@ -12,6 +13,7 @@ import ContractVerificationFormRow from '../ContractVerificationFormRow';
 import ContractVerificationMethod from '../ContractVerificationMethod';
 
 const ContractVerificationSolidityFoundry = () => {
+  const { t } = useTranslation();
   const { watch } = useFormContext<FormFields>();
   const address = watch('address');
 
@@ -23,15 +25,15 @@ const ContractVerificationSolidityFoundry = () => {
   [contractFile]:[contractName]`;
 
   return (
-    <ContractVerificationMethod title="Contract verification via Foundry">
+    <ContractVerificationMethod title={ t('common.common.contract_verification_via_foun') }>
       <ContractVerificationFormRow>
         <Flex flexDir="column">
           <ContractVerificationFormCodeSnippet code={ codeSnippet }/>
         </Flex>
         <Box whiteSpace="pre-wrap">
-          <span>Full tutorial about contract verification via Foundry on Blockscout is available </span>
+          <span>{ t('contract_verification.common.full_tutorial') } </span>
           <Link href="https://docs.blockscout.com/devs/verification/foundry-verification" external>
-            here
+            { t('contract_verification.common.here') }
           </Link>
         </Box>
       </ContractVerificationFormRow>

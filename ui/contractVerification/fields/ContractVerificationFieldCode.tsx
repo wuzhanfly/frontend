@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 
@@ -11,16 +12,17 @@ interface Props {
 }
 
 const ContractVerificationFieldCode = ({ isVyper }: Props) => {
+  const { t } = useTranslation();
   return (
     <ContractVerificationFormRow>
       <FormFieldText<FormFields>
         name="code"
         required
-        placeholder="Contract code"
+        placeholder={ t('common.common.contract_code') }
         asComponent="Textarea"
       />
       { isVyper ? null : (
-        <span>If your code utilizes a library or inherits dependencies, we recommend using other verification methods instead.</span>
+        <span>{ t('contract_verification.common.if_your_code_utilizes_a_library') }</span>
       ) }
     </ContractVerificationFormRow>
   );

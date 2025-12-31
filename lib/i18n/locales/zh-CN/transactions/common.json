@@ -19,6 +19,7 @@
   "transactions.common.txn_fee": "交易费用",
   "transactions.common.token_transfers": "代币转账",
   "transactions.common.user_operations": "用户操作",
+  "transactions.common.chain_user_operations": "{{chain}} 用户操作",
   "transactions.common.internal_txns": "内部交易",
   "transactions.common.blobs": "Blob 数据",
   "transactions.common.logs": "日志",

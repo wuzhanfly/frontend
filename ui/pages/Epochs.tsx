@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { CELO_EPOCH_ITEM } from 'stubs/epoch';
 import { generateListStub } from 'stubs/utils';
@@ -13,6 +14,7 @@ import Pagination from 'ui/shared/pagination/Pagination';
 import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 
 const EpochsPageContent = () => {
+  const { t } = useTranslation();
   const epochsQuery = useQueryWithPages({
     resourceName: 'general:epochs_celo',
     options: {
@@ -60,11 +62,11 @@ const EpochsPageContent = () => {
 
   return (
     <>
-      <PageTitle title="Epochs" withTextAd/>
+      <PageTitle title={ t('epochs.common.epochs') } withTextAd/>
       <DataListDisplay
         isError={ epochsQuery.isError }
         itemsNum={ epochsQuery.data?.items?.length }
-        emptyText="There are no epochs."
+        emptyText={ t('epochs.common.there_are_no_epochs') }
         actionBar={ actionBar }
       >
         { content }

@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import throwOnResourceLoadError from 'lib/errors/throwOnResourceLoadError';
@@ -12,6 +13,7 @@ import PageTitle from 'ui/shared/Page/PageTitle';
 import TacOperationTag from 'ui/shared/TacOperationTag';
 
 const TacOperation = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const id = getQueryParamString(router.query.id);
 
@@ -36,7 +38,7 @@ const TacOperation = () => {
     <>
       <TextAd mb={ 6 }/>
       <PageTitle
-        title="Operation details"
+        title={ t('common.common.operation_details') }
         contentAfter={ titleContentAfter }
         isLoading={ query.isPlaceholderData }
         secondRow={ titleSecondRow }

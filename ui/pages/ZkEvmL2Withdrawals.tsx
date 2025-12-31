@@ -1,4 +1,5 @@
 import { Box } from '@chakra-ui/react';
+import { t } from 'i18next';
 import React from 'react';
 
 import useApiQuery from 'lib/api/useApiQuery';
@@ -59,7 +60,7 @@ const ZkEvmL2Withdrawals = () => {
         loading={ countersQuery.isPlaceholderData }
         display="inline-block"
       >
-        A total of { countersQuery.data?.toLocaleString() } withdrawals found
+        { t('common.common.total_of_data_withdrawals_found', { data: countersQuery.data?.toLocaleString() }) }
       </Skeleton>
     );
   })();
@@ -68,11 +69,11 @@ const ZkEvmL2Withdrawals = () => {
 
   return (
     <>
-      <PageTitle title={ `Withdrawals (L2${ nbsp }${ rightLineArrow }${ nbsp }L1)` } withTextAd/>
+      <PageTitle title={ `${ t('common.common.withdrawals') } (L2${ nbsp }${ rightLineArrow }${ nbsp }L1)` } withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no withdrawals."
+        emptyText={ t('common.common.there_are_no_withdrawals') }
         actionBar={ actionBar }
       >
         { content }

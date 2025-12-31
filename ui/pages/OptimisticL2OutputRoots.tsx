@@ -1,5 +1,6 @@
 import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { L2_OUTPUT_ROOTS_ITEM } from 'stubs/L2';
@@ -14,6 +15,7 @@ import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 import StickyPaginationWithText from 'ui/shared/StickyPaginationWithText';
 
 const OptimisticL2OutputRoots = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:optimistic_l2_output_roots',
     options: {
@@ -60,10 +62,10 @@ const OptimisticL2OutputRoots = () => {
 
     return (
       <Skeleton loading={ countersQuery.isPlaceholderData || isPlaceholderData } display="flex" flexWrap="wrap">
-        L2 output index
-        <Text fontWeight={ 600 } whiteSpace="pre"> #{ data.items[0].l2_output_index } </Text>to
+        { t('common.common.l2_output_index') }
+        <Text fontWeight={ 600 } whiteSpace="pre"> #{ data.items[0].l2_output_index } </Text>{ t('common.common.to') }
         <Text fontWeight={ 600 } whiteSpace="pre"> #{ data.items[data.items.length - 1].l2_output_index } </Text>
-        (total of { countersQuery.data?.toLocaleString() } roots)
+        { t('common.common.total_of_data_roots', { data: countersQuery.data?.toLocaleString() }) }
       </Skeleton>
     );
   })();
@@ -72,11 +74,11 @@ const OptimisticL2OutputRoots = () => {
 
   return (
     <>
-      <PageTitle title="Output roots" withTextAd/>
+      <PageTitle title={ t('common.common.output_roots') } withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no output roots."
+        emptyText={ t('common.common.there_are_no_output_roots') }
         actionBar={ actionBar }
       >
         { content }

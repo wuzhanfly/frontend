@@ -2,6 +2,7 @@ import { VStack, Code, Flex, Box } from '@chakra-ui/react';
 import mixpanel from 'mixpanel-browser';
 import type { ChangeEvent } from 'react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import config from 'configs/app';
 import * as cookies from 'lib/cookies';
@@ -15,6 +16,7 @@ import { toaster } from 'toolkit/chakra/toaster';
 import PageTitle from 'ui/shared/Page/PageTitle';
 
 const Login = () => {
+  const { t } = useTranslation();
   const rollbar = useRollbar();
   const [ num, setNum ] = useGradualIncrement(0);
   const testFeature = useFeatureValue('test_value', 'fallback');
@@ -29,12 +31,12 @@ const Login = () => {
   }, []);
 
   const checkRollbar = React.useCallback(() => {
-    rollbar?.error('Test error', { payload: 'foo' });
-  }, [ rollbar ]);
+    rollbar?.error(t('common.common.test_error'), { payload: 'foo' });
+  }, [ rollbar, t ]);
 
   const checkMixpanel = React.useCallback(() => {
-    mixpanel.track('Test event', { my_prop: 'foo bar' });
-  }, []);
+    mixpanel.track(t('common.common.test_event'), { my_prop: 'foo bar' });
+  }, [ t ]);
 
   const handleTokenChange = React.useCallback((event: ChangeEvent<HTMLTextAreaElement>) => {
     setToken(event.target.value);
@@ -44,8 +46,8 @@ const Login = () => {
     cookies.set(cookies.NAMES.API_TOKEN, token);
     setToken('');
     toaster.create({
-      title: 'Success 🥳',
-      description: 'Successfully set cookie',
+      title: t('common.common.success_'),
+      description: t('common.common.successfully_set_cookie'),
       type: 'success',
       onStatusChange: (details) => {
         if (details.status === 'unmounted') {
@@ -53,7 +55,7 @@ const Login = () => {
         }
       },
     });
-  }, [ token ]);
+  }, [ token, t ]);
 
   const handleNumIncrement = React.useCallback(() => {
     for (let index = 0; index < 5; index++) {
@@ -63,31 +65,31 @@ const Login = () => {
 
   return (
     <VStack gap={ 4 } alignItems="flex-start" maxW="1000px">
-      <PageTitle title="Login page 😂"/>
+      <PageTitle title={ t('common.common.login_page_') }/>
       { isFormVisible && (
         <>
           <Alert
             status="warning"
-            title="!!! Temporary solution for authentication on localhost !!!"
+            title={ t('common.common.temporary_solution') }
             inline={ false }
           >
-            To Sign in go to production instance first, sign in there, copy obtained API token from cookie
-            <Code ml={ 1 }>{ cookies.NAMES.API_TOKEN }</Code> and paste it in the form below. After submitting the form you should be successfully
-            authenticated in current environment
+            { t('common.common.to_sign_in_go_to_production') }
+            <Code ml={ 1 }>{ cookies.NAMES.API_TOKEN }</Code> { t('common.common.and_paste_it_in_the_form_below') }
           </Alert>
-          <Textarea value={ token } onChange={ handleTokenChange } placeholder="API token"/>
-          <Button onClick={ handleSetTokenClick }>Set cookie</Button>
+          <Textarea value={ token } onChange={ handleTokenChange } placeholder={ t('common.common.api_token') }/>
+          <Button onClick={ handleSetTokenClick }>{ t('common.common.set_cookie') }</Button>
         </>
       ) }
       <Flex columnGap={ 2 }>
-        <Button colorScheme="red" onClick={ checkRollbar }>Check Rollbar</Button>
-        <Button colorScheme="teal" onClick={ checkMixpanel }>Check Mixpanel</Button>
+        <Button colorScheme="red" onClick={ checkRollbar }>{ t('common.common.check_rollbar') }</Button>
+        <Button colorScheme="teal" onClick={ checkMixpanel }>{ t('common.common.check_mixpanel') }</Button>
       </Flex>
       <Flex columnGap={ 2 } alignItems="center">
         <Box w="50px" textAlign="center">{ num }</Box>
-        <Button onClick={ handleNumIncrement } size="sm">add</Button>
+        <Button onClick={ handleNumIncrement } size="sm">{ t('common.common.add') }</Button>
       </Flex>
-      <Box>Test feature value: <b>{ testFeature.isLoading ? 'loading...' : JSON.stringify(testFeature.value) }</b></Box>
+      <Box>{ t('common.common.test_feature_value') } <b>{ testFeature.isLoading ?
+        t('common.common.loading') + '...' : JSON.stringify(testFeature.value) }</b></Box>
     </VStack>
   );
 

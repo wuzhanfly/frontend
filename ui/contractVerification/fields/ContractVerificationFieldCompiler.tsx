@@ -1,6 +1,7 @@
 import { chakra, Code, createListCollection } from '@chakra-ui/react';
 import React from 'react';
 import { useFormContext } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 import type { SmartContractVerificationConfig } from 'types/client/contract';
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const ContractVerificationFieldCompiler = ({ isVyper, isStylus, config }: Props) => {
+  const { t } = useTranslation();
   const [ isNightly, setIsNightly ] = React.useState(false);
   const { formState, getValues, resetField } = useFormContext<FormFields>();
 
@@ -70,7 +72,7 @@ const ContractVerificationFieldCompiler = ({ isVyper, isStylus, config }: Props)
       disabled={ formState.isSubmitting }
       size="sm"
     >
-      Include nightly builds
+      { t('contract_verification.common.include_nightly_builds') }
     </Checkbox>
   ) : null;
 
@@ -78,18 +80,18 @@ const ContractVerificationFieldCompiler = ({ isVyper, isStylus, config }: Props)
     <ContractVerificationFormRow>
       <FormFieldSelectAsync<FormFields, 'compiler'>
         name="compiler"
-        placeholder="Compiler"
+        placeholder={ t('common.common.compiler') }
         loadOptions={ loadOptions }
         extraControls={ extraControls }
         required
       />
       { isVyper || isStylus ? null : (
         <chakra.div>
-          <span >The compiler version is specified in </span>
-          <Code color="text.secondary">pragma solidity X.X.X</Code>
-          <span>. Use the compiler version rather than the nightly build. If using the Solidity compiler, run </span>
-          <Code color="text.secondary">solc —version</Code>
-          <span> to check.</span>
+          <span >{ t('contract_verification.common.the_compiler_version_is_specified_in') } </span>
+          <Code color="text.secondary">{ t('contract_verification.common.pragma_solidity') }</Code>
+          <span>{ t('contract_verification.common.use_the_compiler_version') }</span>
+          <Code color="text.secondary">{ t('contract_verification.common.solc_version') }</Code>
+          <span>{ t('contract_verification.common.to_check') }</span>
         </chakra.div>
       ) }
     </ContractVerificationFormRow>

@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { generateListStub } from 'stubs/utils';
@@ -15,6 +16,7 @@ import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 import StickyPaginationWithText from 'ui/shared/StickyPaginationWithText';
 
 const ZkEvmL2Deposits = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:zkevm_l2_deposits',
     options: {
@@ -59,7 +61,7 @@ const ZkEvmL2Deposits = () => {
         loading={ countersQuery.isPlaceholderData }
         display="inline-block"
       >
-        A total of { countersQuery.data?.toLocaleString() } deposits found
+        { t('common.common.a_total_of_data_deposits_found', { data: countersQuery.data?.toLocaleString() }) }
       </Skeleton>
     );
   })();
@@ -68,11 +70,11 @@ const ZkEvmL2Deposits = () => {
 
   return (
     <>
-      <PageTitle title={ `Deposits (L1${ nbsp }${ rightLineArrow }${ nbsp }L2)` } withTextAd/>
+      <PageTitle title={ `${ t('common.common.deposits') } (L1${ nbsp }${ rightLineArrow }${ nbsp }L2)` } withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items.length }
-        emptyText="There are no deposits."
+        emptyText={ t('common.common.there_are_no_deposits') }
         actionBar={ actionBar }
       >
         { content }

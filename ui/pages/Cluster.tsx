@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import getQueryParamString from 'lib/router/getQueryParamString';
@@ -8,6 +9,7 @@ import TextAd from 'ui/shared/ad/TextAd';
 import PageTitle from 'ui/shared/Page/PageTitle';
 
 const Cluster = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const encodedClusterName = getQueryParamString(router.query.name);
   const clusterName = decodeURIComponent(encodedClusterName || '');
@@ -25,7 +27,7 @@ const Cluster = () => {
   return (
     <>
       <TextAd mb={ 6 }/>
-      <PageTitle title="Cluster details"/>
+      <PageTitle title={ t('clusters.common.cluster_details') }/>
       <ClusterDetails
         clusterData={ clusterData }
         clusterName={ clusterName }

@@ -4,6 +4,7 @@ import type { ListCollection } from '@chakra-ui/react';
 import { Box, Select as ChakraSelect, createListCollection, Flex, Portal, Icon, useSelectContext } from '@chakra-ui/react';
 import { useDebounce } from '@uidotdev/usehooks';
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import ArrowIcon from 'icons/arrows/east-mini.svg';
 import CheckIcon from 'icons/check.svg';
@@ -283,6 +284,7 @@ export interface SelectAsyncProps extends Omit<SelectProps, 'collection'> {
 }
 
 export const SelectAsync = React.forwardRef<HTMLDivElement, SelectAsyncProps>((props, ref) => {
+  const { t } = useTranslation();
   const { placeholder, portalled = true, loading, loadOptions, extraControls, onValueChange, errorText, mode, ...rest } = props;
 
   const [ collection, setCollection ] = React.useState<ListCollection<SelectOption>>(createListCollection<SelectOption>({ items: [] }));
@@ -324,7 +326,7 @@ export const SelectAsync = React.forwardRef<HTMLDivElement, SelectAsyncProps>((p
       <SelectContent portalled={ portalled }>
         <Box px="4">
           <FilterInput
-            placeholder="Search"
+            placeholder={ t('common.common.search') }
             initialValue={ inputValue }
             onChange={ handleFilterChange }
             inputProps={{ pl: '9' }}

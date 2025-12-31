@@ -1,5 +1,6 @@
 import { Box, createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 import type { SmartContractVerificationConfig } from 'types/client/contract';
@@ -12,6 +13,7 @@ import ContractVerificationFormRow from '../ContractVerificationFormRow';
 const OPTIONS_LIMIT = 50;
 
 const ContractVerificationFieldZkCompiler = ({ config }: { config: SmartContractVerificationConfig }) => {
+  const { t } = useTranslation();
   const versions = React.useMemo(() => (
     config?.zk_compiler_versions || []
   ), [ config?.zk_compiler_versions ]);
@@ -38,13 +40,13 @@ const ContractVerificationFieldZkCompiler = ({ config }: { config: SmartContract
     <ContractVerificationFormRow>
       <FormFieldSelectAsync<FormFields, 'zk_compiler'>
         name="zk_compiler"
-        placeholder="ZK compiler"
+        placeholder={ t('common.common.zk_compiler') }
         loadOptions={ loadOptions }
         required
       />
       <Box>
         <Link external href="https://docs.zksync.io/zk-stack/components/compiler/specification#glossary">zksolc</Link>
-        <span> compiler version.</span>
+        <span> { t('common.common.compiler_version') }</span>
       </Box>
     </ContractVerificationFormRow>
   );

@@ -6,5 +6,8 @@
   "verified_addresses.common.you_need_a_valid_email_address_to_verify_contracts_please_add_your_email_to_your_account": "您需要有效的电子邮件地址来验证合约。请将您的电子邮件添加到您的账户中。",
   "verified_addresses.table.token_info": "代币信息",
   "verified_addresses.list_item.not_a_token": "非代币",
-  "verified_addresses.list_item.token_info": "代币信息"
+  "verified_addresses.list_item.token_info": "代币信息",
+  "verified_addresses.common.verify_contract_ownership": "验证智能合约地址的所有权，以便在Blockscout中轻松更新信息。您将签署一条消息以验证合约所有权。一旦验证通过，您就可以从Blockscout控制台更新代币信息、地址名称标签和地址标签，而无需签署其他消息。",
+  "verified_addresses.common.source_code_deployed_on_chain": "智能合约的源代码已部署在{{chain}}上",
+  "verified_addresses.common.this_tool": "此工具"
 }

@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 
@@ -18,6 +19,7 @@ import ZkEvmL2TxnBatchDetails from 'ui/txnBatches/zkEvmL2/ZkEvmL2TxnBatchDetails
 import TxsWithFrontendSorting from 'ui/txs/TxsWithFrontendSorting';
 
 const ZkEvmL2TxnBatch = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const number = getQueryParamString(router.query.number);
   const tab = getQueryParamString(router.query.tab);
@@ -44,14 +46,14 @@ const ZkEvmL2TxnBatch = () => {
   throwOnResourceLoadError(batchQuery);
 
   const tabs: Array<TabItemRegular> = React.useMemo(() => ([
-    { id: 'index', title: 'Details', component: <ZkEvmL2TxnBatchDetails query={ batchQuery }/> },
-    { id: 'txs', title: 'Transactions', component: <TxsWithFrontendSorting query={ batchTxsQuery }/> },
-  ].filter(Boolean)), [ batchQuery, batchTxsQuery ]);
+    { id: 'index', title: t('transactions.common.details'), component: <ZkEvmL2TxnBatchDetails query={ batchQuery }/> },
+    { id: 'txs', title: t('transactions.common.transactions'), component: <TxsWithFrontendSorting query={ batchTxsQuery }/> },
+  ].filter(Boolean)), [ batchQuery, batchTxsQuery, t ]);
 
   return (
     <>
       <TextAd mb={ 6 }/>
-      <PageTitle title={ `Txn batch #${ number }` }/>
+      <PageTitle title={ `${ t('common.common.txn_batch') } #${ number }` }/>
       <RoutedTabs
         tabs={ tabs }
         isLoading={ batchQuery.isPlaceholderData }

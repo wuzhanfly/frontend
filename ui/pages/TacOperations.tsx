@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useDebounce from 'lib/hooks/useDebounce';
 import useIsMobile from 'lib/hooks/useIsMobile';
@@ -8,7 +9,7 @@ import getQueryParamString from 'lib/router/getQueryParamString';
 import { TAC_OPERATION } from 'stubs/operations';
 import { generateListStub } from 'stubs/utils';
 import { FilterInput } from 'toolkit/components/filters/FilterInput';
-import { apos } from 'toolkit/utils/htmlEntities';
+// import { apos } from 'toolkit/utils/htmlEntities';
 import TacOperationsListItem from 'ui/operations/tac/TacOperationsListItem';
 import TacOperationsTable from 'ui/operations/tac/TacOperationsTable';
 import ActionBar from 'ui/shared/ActionBar';
@@ -18,6 +19,7 @@ import Pagination from 'ui/shared/pagination/Pagination';
 import useQueryWithPages from 'ui/shared/pagination/useQueryWithPages';
 
 const TacOperations = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const [ searchTerm, setSearchTerm ] = React.useState(getQueryParamString(router.query.q) || undefined);
 
@@ -47,7 +49,7 @@ const TacOperations = () => {
       w={{ base: '100%', lg: '460px' }}
       size="sm"
       onChange={ handleSearchTermChange }
-      placeholder="Search by operation, tx hash, sender"
+      placeholder={ t('common.common.search_by_operation_tx_hash_se') }
       initialValue={ searchTerm }
     />
   );
@@ -90,13 +92,13 @@ const TacOperations = () => {
 
   return (
     <>
-      <PageTitle title="Operations" withTextAd/>
+      <PageTitle title={ t('shared.common.operations') } withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items?.length }
-        emptyText="There are no operations."
+        emptyText={ t('common.common.there_are_no_operations') }
         filterProps={{
-          emptyFilteredText: `Couldn${ apos }t find any operation that matches your query.`,
+          emptyFilteredText: t('shared.common.no_operations_found'),
           hasActiveFilters: Boolean(debouncedSearchTerm),
         }}
         actionBar={ actionBar }

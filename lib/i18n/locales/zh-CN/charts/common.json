@@ -6,5 +6,7 @@
   "charts.common.year": "年",
   "charts.common.incomplete_resolution": "不完整的{{resolution}}",
   "charts.common.dates": "日期",
-  "charts.common.date": "日期"
+  "charts.common.date": "日期",
+  "charts.common.share": "分享",
+  "charts.common.no_data": "所选分辨率和时间间隔没有数据。"
 }

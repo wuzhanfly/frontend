@@ -1,6 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { AddressFromToFilterValues } from 'types/api/address';
 import type { CsvExportParams } from 'types/client/address';
@@ -70,6 +71,7 @@ const EXPORT_TYPES: Record<CsvExportParams['type'], ExportTypeEntity> = {
 const isCorrectExportType = (type: string): type is CsvExportParams['type'] => Object.keys(EXPORT_TYPES).includes(type);
 
 const CsvExport = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const isMobile = useIsMobile();
   const multichainContext = useMultichainContext();
@@ -159,7 +161,7 @@ const CsvExport = () => {
     if (exportTypeParam === 'holders' && tokenQuery.data) {
       return (
         <Flex mb={ 10 } whiteSpace="pre-wrap" flexWrap="wrap">
-          <span>Export { exportType.text } for token </span>
+          <span>{ t('common.common.export_text_for_token', { text: exportType.text }) }</span>
           <TokenEntity
             token={ tokenQuery.data }
             truncation={ isMobile ? 'constant' : 'dynamic' }
@@ -169,8 +171,8 @@ const CsvExport = () => {
             noSymbol
           />
           { chainInfo }
-          <span> to CSV file. </span>
-          <span>Exports are limited to the top { limit } holders by amount held.</span>
+          <span>{ t('common.common.to_csv_file2') }</span>
+          <span>{ t('common.common.exports_are_limited_to_the_top', { limit }) }</span>
         </Flex>
       );
     }
@@ -181,24 +183,24 @@ const CsvExport = () => {
 
     return (
       <Flex mb={ 10 } whiteSpace="pre-wrap" flexWrap="wrap">
-        <span>Export { exportType.text } for address </span>
+        <span>{ t('common.common.export_text_for_address', { text: exportType.text }) }</span>
         <AddressEntity
           address={ addressQuery.data }
           truncation={ isMobile ? 'constant' : 'dynamic' }
           noCopy
         />
         <span>{ nbsp }</span>
-        { filterType && filterValue && <span>with applied filter by { filterType } ({ filterValue })</span> }
+        { filterType && filterValue && <span>{ t('common.common.with_applied_filter_by') } { filterType } ({ filterValue })</span> }
         { chainInfo }
-        <span> to CSV file. </span>
-        <span>Exports are limited to the last { limit } { exportType.text }.</span>
+        <span>{ t('common.common.to_csv_file2') }</span>
+        <span>{ t('common.common.export_are_limited_to_the_last', { limit, text: exportType.text }) }</span>
       </Flex>
     );
   })();
 
   return (
     <>
-      <PageTitle title="Export data to CSV file"/>
+      <PageTitle title={ t('common.common.export_data_to_csv_file') }/>
       { description }
       { content }
     </>

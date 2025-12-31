@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 
@@ -11,15 +12,17 @@ import PageTitle from 'ui/shared/Page/PageTitle';
 const feature = config.features.nameServices;
 
 const NameServices = () => {
+  const { t } = useTranslation();
   const tabs: Array<TabItemRegular> = [
-    feature.isEnabled && feature.ens.isEnabled && { id: 'domains', title: 'Domains', component: <NameDomains/> },
-    feature.isEnabled && feature.clusters.isEnabled && { id: 'directories', title: 'Directories', component: <Clusters/> },
+    feature.isEnabled && feature.ens.isEnabled && { id: 'domains', title: t('common.common.domains'), component: <NameDomains/> },
+    feature.isEnabled && feature.clusters.isEnabled && { id: 'directories', title: t('common.common.directories'), component: <Clusters/> },
   ].filter(Boolean);
 
   return (
     <>
       <PageTitle
-        title={ config.meta.seo.enhancedDataEnabled ? `${ config.chain.name } name services` : 'Name services lookup' }
+        title={ config.meta.seo.enhancedDataEnabled ?
+          t('common.common.chain_name_services', { chain: config.chain.name }) : t('common.common.name_services_lookup') }
         withTextAd
       />
       <RoutedTabs tabs={ tabs }/>

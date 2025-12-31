@@ -1,6 +1,7 @@
 import { Box, Center, Flex, Grid } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { route } from 'nextjs/routes';
 
@@ -30,6 +31,7 @@ type Props = {
 };
 
 const BlockCountdown = ({ hideCapybaraRunner }: Props) => {
+  const { t } = useTranslation();
   const multichainContext = useMultichainContext();
   const router = useRouter();
   const height = getQueryParamString(router.query.height);
@@ -79,7 +81,7 @@ const BlockCountdown = ({ hideCapybaraRunner }: Props) => {
               <TruncatedValue value={ `Block #${ height }` } w="100%"/>
             </Heading>
             <Box mt={ 2 } color="text.secondary">
-              <Box fontWeight={ 600 }>Estimated target date</Box>
+              <Box fontWeight={ 600 }>{ t('common.common.estimated_target_date') }</Box>
               <Box>{ dayjs().add(Number(data.result.EstimateTimeInSec), 's').format('llll') }</Box>
             </Box>
             <Flex columnGap={ 2 } mt={ 3 }>
@@ -92,7 +94,7 @@ const BlockCountdown = ({ hideCapybaraRunner }: Props) => {
                 href={ createGoogleCalendarLink({ blockHeight: height, timeFromNow: Number(data.result.EstimateTimeInSec), multichainContext }) }
               >
                 <Image src="/static/google_calendar.svg" alt="Google calendar logo" boxSize={ 5 } mr={ 2 }/>
-                <span>Google</span>
+                <span>{ t('common.common.google') }</span>
               </Link>
               <Button
                 variant="plain"
@@ -106,7 +108,7 @@ const BlockCountdown = ({ hideCapybaraRunner }: Props) => {
                 onClick={ handleAddToAppleCalClick }
               >
                 <Image src="/static/apple_calendar.svg" alt="Apple calendar logo" boxSize={ 5 }/>
-                <span>Apple</span>
+                <span>{ t('common.common.apple') }</span>
               </Button>
             </Flex>
           </Box>
@@ -138,8 +140,8 @@ const BlockCountdown = ({ hideCapybaraRunner }: Props) => {
           />
         ) }
         <Grid gridTemplateColumns="repeat(2, calc(50% - 4px))" columnGap={ 2 } mt={ 2 }>
-          <StatsWidget label="Remaining blocks" value={ data.result.RemainingBlock } icon="apps_slim"/>
-          <StatsWidget label="Current block" value={ data.result.CurrentBlock } icon="block_slim"/>
+          <StatsWidget label={ t('common.common.remaining_blocks') } value={ data.result.RemainingBlock } icon="apps_slim"/>
+          <StatsWidget label={ t('common.common.current_block') } value={ data.result.CurrentBlock } icon="block_slim"/>
         </Grid>
         { !hideCapybaraRunner && <CapybaraRunner/> }
       </Flex>

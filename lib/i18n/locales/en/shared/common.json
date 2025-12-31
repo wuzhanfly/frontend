@@ -20,5 +20,7 @@
   "shared.common.invalid_utf8_with_hex": "[Invalid UTF-8] {{hex}}",
   "shared.common.decode_error_with_hex": "[Decode error] {{hex}}",
   "shared.common.select_chain": "Select chain",
-  "shared.common.all_chains": "All chains"
+  "shared.common.all_chains": "All chains",
+  "shared.common.operations": "Operations",
+  "shared.common.no_operations_found": "Couldn't find any operation that matches your query."
 }

@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 
@@ -29,6 +30,7 @@ const TAB_LIST_PROPS = {
 const TABS_HEIGHT = 80;
 
 const ArbitrumL2TxnBatch = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const number = getQueryParamString(router.query.number);
   const height = getQueryParamString(router.query.height);
@@ -79,24 +81,24 @@ const ArbitrumL2TxnBatch = () => {
   const hasPagination = !isMobile && pagination?.isVisible;
 
   const tabs: Array<TabItemRegular> = React.useMemo(() => ([
-    { id: 'index', title: 'Details', component: <ArbitrumL2TxnBatchDetails query={ batchQuery }/> },
+    { id: 'index', title: t('transactions.common.details'), component: <ArbitrumL2TxnBatchDetails query={ batchQuery }/> },
     {
       id: 'txs',
-      title: 'Transactions',
+      title: t('transactions.common.transactions'),
       component: <TxsWithFrontendSorting query={ batchTxsQuery } top={ hasPagination ? TABS_HEIGHT : 0 }/>,
     },
     {
       id: 'blocks',
-      title: 'Blocks',
+      title: t('blocks.common.blocks'),
       component: <BlocksContent type="block" query={ batchBlocksQuery } enableSocket={ false } top={ hasPagination ? TABS_HEIGHT : 0 }/>,
     },
-  ].filter(Boolean)), [ batchQuery, batchTxsQuery, batchBlocksQuery, hasPagination ]);
+  ].filter(Boolean)), [ batchQuery, batchTxsQuery, batchBlocksQuery, hasPagination, t ]);
 
   return (
     <>
       <TextAd mb={ 6 }/>
       <PageTitle
-        title={ `Txn batch #${ batchQuery.data?.number }` }
+        title={ `${ t('common.common.txn_batch') } #${ batchQuery.data?.number }` }
         isLoading={ batchQuery.isPlaceholderData }
       />
       <RoutedTabs

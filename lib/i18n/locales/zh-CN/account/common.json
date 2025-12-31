@@ -21,5 +21,6 @@
   "account.common.email_notification_is_on": "邮件通知已开启",
   "account.common.email_notification_is_off": "邮件通知已关闭",
   "account.common.email_notification": "邮件通知",
-  "account.common.private_tag": "私有标签"
+  "account.common.private_tag": "私有标签",
+  "account.common.email_notification_description": "当您关注列表中的地址发送或接收任何交易时，可以向您发送电子邮件通知。"
 }

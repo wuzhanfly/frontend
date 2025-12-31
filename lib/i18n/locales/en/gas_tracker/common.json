@@ -19,5 +19,9 @@
   "gas_tracker.common.the_average_gas_fee_for_chain_transactions": "The average gas fee for {{chainName}} transactions varies based on network congestion. Check the current gas prices above to see real-time rates and plan your transactions accordingly.",
   "gas_tracker.common.how_does_blockscout_calculate_gas_fees": "How does Blockscout calculate gas fees?",
   "gas_tracker.common.blockscout_calculates_gas_fees": "Blockscout calculates gas fees based on recent transaction data from the blockchain. We analyze the gas prices of recently mined blocks to provide accurate estimates for different transaction priority levels.",
-  "gas_tracker.common.seconds_short": "sec"
+  "gas_tracker.common.seconds_short": "sec",
+  "gas_tracker.common.chain_gas_tracker": "{{chain}} gas tracker",
+  "gas_tracker.common.track_chain_gas_fees": "Track {{chain}} gas fees",
+  "gas_tracker.common.fast": "Fast",
+  "gas_tracker.common.slow": "Slow"
 }

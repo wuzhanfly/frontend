@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { SmartContractVerificationConfig } from 'types/client/contract';
 
@@ -13,8 +14,9 @@ import ContractVerificationFieldName from '../fields/ContractVerificationFieldNa
 import ContractVerificationFieldOptimization from '../fields/ContractVerificationFieldOptimization';
 
 const ContractVerificationFlattenSourceCode = ({ config }: { config: SmartContractVerificationConfig }) => {
+  const { t } = useTranslation();
   return (
-    <ContractVerificationMethod title="Contract verification via Solidity (flattened source code)">
+    <ContractVerificationMethod title={ t('contract_verification.common.via_solidity_flattened_source_code') }>
       { !config?.is_rust_verifier_microservice_enabled && <ContractVerificationFieldName/> }
       { config?.is_rust_verifier_microservice_enabled && <ContractVerificationFieldIsYul/> }
       <ContractVerificationFieldCompiler config={ config }/>

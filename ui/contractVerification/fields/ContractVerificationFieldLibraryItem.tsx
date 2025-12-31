@@ -1,5 +1,6 @@
 import { Flex, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 
@@ -21,6 +22,7 @@ interface Props {
 }
 
 const ContractVerificationFieldLibraryItem = ({ index, fieldsLength, onAddFieldClick, onRemoveFieldClick, isDisabled }: Props) => {
+  const { t } = useTranslation();
   const ref = React.useRef<HTMLDivElement>(null);
 
   const handleAddButtonClick = React.useCallback(() => {
@@ -39,7 +41,7 @@ const ContractVerificationFieldLibraryItem = ({ index, fieldsLength, onAddFieldC
     <>
       <ContractVerificationFormRow>
         <Flex alignItems="center" justifyContent="space-between" ref={ ref } mt={ index !== 0 ? 6 : 0 }>
-          <Text color="text.secondary" fontSize="sm">Contract library { index + 1 }</Text>
+          <Text color="text.secondary" fontSize="sm">{ t('contract_verification.common.contract_library') } { index + 1 }</Text>
           <Flex columnGap={ 5 }>
             { fieldsLength > 1 && (
               <RemoveButton
@@ -61,11 +63,11 @@ const ContractVerificationFieldLibraryItem = ({ index, fieldsLength, onAddFieldC
           name={ `libraries.${ index }.name` }
           required
           rules={{ maxLength: 255 }}
-          placeholder="Library name (.sol file)"
+          placeholder={ t('contract_verification.common.library_name') }
         />
         { index === 0 ? (
           <>
-            A library name called in the .sol file. Multiple libraries (up to 10) may be added for each contract.
+            { t('contract_verification.common.a_library_name.called_in') }
           </>
         ) : null }
       </ContractVerificationFormRow>
@@ -73,11 +75,11 @@ const ContractVerificationFieldLibraryItem = ({ index, fieldsLength, onAddFieldC
         <FormFieldAddress<FormFields>
           name={ `libraries.${ index }.address` }
           required
-          placeholder="Library address (0x...)"
+          placeholder={ t('contract_verification.common.Library address_0x') }
         />
         { index === 0 ? (
           <>
-            The 0x library address. This can be found in the generated json file or Truffle output (if using truffle).
+            { t('contract_verification.common.the_0x_library_address') }
           </>
         ) : null }
       </ContractVerificationFormRow>

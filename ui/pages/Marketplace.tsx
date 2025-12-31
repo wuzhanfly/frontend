@@ -1,6 +1,7 @@
 import { createListCollection, Flex } from '@chakra-ui/react';
 import React from 'react';
 import type { MouseEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { TabItemRegular } from 'toolkit/components/AdaptiveTabs/types';
 import { MarketplaceCategory } from 'types/client/marketplace';
@@ -34,24 +35,6 @@ const sortCollection = createListCollection({ items: SORT_OPTIONS });
 
 const feature = config.features.marketplace;
 
-const links: Array<{ label: string; href: string; icon: IconName }> = [];
-if (feature.isEnabled) {
-  if (feature.submitFormUrl) {
-    links.push({
-      label: 'Submit app',
-      href: feature.submitFormUrl,
-      icon: 'plus' as IconName,
-    });
-  }
-  if (feature.suggestIdeasFormUrl) {
-    links.push({
-      label: 'Suggest ideas',
-      href: feature.suggestIdeasFormUrl,
-      icon: 'edit' as IconName,
-    });
-  }
-}
-
 const Marketplace = () => {
   const {
     isPlaceholderData,
@@ -77,9 +60,29 @@ const Marketplace = () => {
     setSorting,
   } = useMarketplace();
 
+  const { t } = useTranslation();
+
   const isMobile = useIsMobile();
 
   const graphLinksQuery = useGraphLinks();
+
+  const links: Array<{ label: string; href: string; icon: IconName }> = [];
+  if (feature.isEnabled) {
+    if (feature.submitFormUrl) {
+      links.push({
+        label: t('marketplace.common.submit_app'),
+        href: feature.submitFormUrl,
+        icon: 'plus' as IconName,
+      });
+    }
+    if (feature.suggestIdeasFormUrl) {
+      links.push({
+        label: t('marketplace.common.suggest_ideas'),
+        href: feature.suggestIdeasFormUrl,
+        icon: 'edit' as IconName,
+      });
+    }
+  }
 
   const categoryTabs = React.useMemo(() => {
     const tabs: Array<TabItemRegular> = categories.map(category => ({
@@ -229,7 +232,7 @@ const Marketplace = () => {
           <FilterInput
             initialValue={ filterQuery }
             onChange={ onSearchInputChange }
-            placeholder="Find app by name or keyword..."
+            placeholder={ t('marketplace.common.find_app_by_name_or_keyword') }
             loading={ isPlaceholderData }
             size="sm"
             w={{ base: '100%', lg: '350px' }}

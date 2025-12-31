@@ -12,7 +12,7 @@ const RpcApi = () => {
       <Text>
         { t('api_docs.rpc.description') }
       </Text>
-      <Link href="https://docs.blockscout.com/devs/apis/rpc" external mt={ 6 }>View modules</Link>
+      <Link href="https://docs.blockscout.com/devs/apis/rpc" external mt={ 6 }>{ t('api_docs.rpc.view_modules') }</Link>
     </Box>
   );
 };

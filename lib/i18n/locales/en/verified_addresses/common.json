@@ -6,5 +6,8 @@
   "verified_addresses.common.you_need_a_valid_email_address_to_verify_contracts_please_add_your_email_to_your_account": "You need a valid email address to verify contracts. Please add your email to your account.",
   "verified_addresses.table.token_info": "Token info",
   "verified_addresses.list_item.not_a_token": "Not a token",
-  "verified_addresses.list_item.token_info": "Token Info"
+  "verified_addresses.list_item.token_info": "Token Info",
+  "verified_addresses.common.verify_contract_ownership": "Verify ownership of a smart contract address to easily update information in Blockscout. You will sign a single message to verify contract ownership. Once verified, you can update token information, address name tags, and address labels from the Blockscout console without needing to sign additional messages.",
+  "verified_addresses.common.source_code_deployed_on_chain": "The source code for the smart contract is deployed on {{chain}}",
+  "verified_addresses.common.this_tool": "this tool"
 }

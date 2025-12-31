@@ -25,5 +25,8 @@
   "epochs.common.epochs": "纪元",
   "epochs.common.there_are_no_epochs": "暂无纪元。",
   "epochs.common.ranging_from": "范围从",
-  "epochs.common.to": "到"
+  "epochs.common.to": "到",
+  "epochs.common.finalized_while_celo_was_still_an_l1_network": "在Celo仍为L1网络时，Epoch已经完成",
+  "epochs.common.became_an_l2_rollup": "在Celo迁移到OP-stack并成为L2合并后，该纪元宣告结束",
+  "epochs.common.epoch_#number": "纪元 #{{number}}"
 }

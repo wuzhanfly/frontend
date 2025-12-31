@@ -1,6 +1,7 @@
 import { Box, HStack } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import throwOnResourceLoadError from 'lib/errors/throwOnResourceLoadError';
@@ -15,6 +16,7 @@ import BlockEntity from 'ui/shared/entities/block/BlockEntity';
 import PageTitle from 'ui/shared/Page/PageTitle';
 
 const EpochPageContent = () => {
+  const { t } = useTranslation();
   const isMobile = useIsMobile();
   const router = useRouter();
   const number = getQueryParamString(router.query.number);
@@ -36,13 +38,13 @@ const EpochPageContent = () => {
     switch (epochQuery.data?.type) {
       case 'L1':
         return (
-          <Tooltip content="Epoch finalized while Celo was still an L1 network">
+          <Tooltip content={ t('epochs.common.finalized_while_celo_was_still_an_l1_network') }>
             <Tag loading={ isLoading }>{ epochQuery.data.type }</Tag>
           </Tooltip>
         );
       case 'L2':
         return (
-          <Tooltip content="Epoch finalized after Celo migrated to the OP‐stack, when it became an L2 rollup">
+          <Tooltip content={ t('epochs.common.became_an_l2_rollup') }>
             <Tag loading={ isLoading }>{ epochQuery.data.type }</Tag>
           </Tooltip>
         );
@@ -61,7 +63,7 @@ const EpochPageContent = () => {
 
     return (
       <HStack textStyle={{ base: 'heading.sm', lg: 'heading.md' }} flexWrap="wrap">
-        <Box color="text.secondary">Ranging from</Box>
+        <Box color="text.secondary">{ t('epochs.common.ranging_from') }</Box>
         <BlockEntity
           number={ epochQuery.data.start_block_number }
           variant="subheading"
@@ -81,7 +83,7 @@ const EpochPageContent = () => {
     <>
       <TextAd mb={ 6 }/>
       <PageTitle
-        title={ `Epoch #${ number }` }
+        title={ t('epochs.common.epoch_#number', { number }) }
         contentAfter={ titleContentAfter }
         secondRow={ titleSecondRow }
         isLoading={ isLoading }

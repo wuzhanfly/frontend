@@ -1,5 +1,6 @@
 import { createListCollection } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { FormFields } from '../types';
 import type { SmartContractVerificationConfig } from 'types/client/contract';
@@ -15,6 +16,7 @@ interface Props {
 }
 
 const ContractVerificationFieldEvmVersion = ({ isVyper, config }: Props) => {
+  const { t } = useTranslation();
   const collection = React.useMemo(() => {
     const items = (isVyper ? config?.vyper_evm_versions : config?.solidity_evm_versions)?.map((option) => ({ label: option, value: option })) || [];
 
@@ -25,12 +27,12 @@ const ContractVerificationFieldEvmVersion = ({ isVyper, config }: Props) => {
     <ContractVerificationFormRow>
       <FormFieldSelect<FormFields, 'evm_version'>
         name="evm_version"
-        placeholder="EVM Version"
+        placeholder={ t('common.common.evm_version') }
         collection={ collection }
         required
       />
       <>
-        <span>The EVM version the contract is written for. If the bytecode does not match the version, we try to verify using the latest EVM version. </span>
+        <span>{ t('contract_verification.common.the_evm_version_the_contract_is_written_for') }</span>
         <Link
           href={ isVyper ?
             'https://docs.vyperlang.org/en/stable/compiling-a-contract.html#target-options' :
@@ -39,7 +41,7 @@ const ContractVerificationFieldEvmVersion = ({ isVyper, config }: Props) => {
           external
           noIcon
         >
-          EVM version details
+          { t('contract_verification.common.evm_version_details') }
         </Link>
       </>
     </ContractVerificationFormRow>

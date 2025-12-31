@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useApiQuery from 'lib/api/useApiQuery';
 import { SCROLL_L2_MESSAGE_ITEM } from 'stubs/scrollL2';
@@ -15,6 +16,7 @@ import ScrollL2WithdrawalsListItem from 'ui/withdrawals/scrollL2/ScrollL2Withdra
 import ScrollL2WithdrawalsTable from 'ui/withdrawals/scrollL2/ScrollL2WithdrawalsTable';
 
 const ScrollL2Withdrawals = () => {
+  const { t } = useTranslation();
   const { data, isError, isPlaceholderData, pagination } = useQueryWithPages({
     resourceName: 'general:scroll_l2_withdrawals',
     options: {
@@ -59,7 +61,7 @@ const ScrollL2Withdrawals = () => {
         loading={ countersQuery.isPlaceholderData }
         display="inline-block"
       >
-        A total of { countersQuery.data?.toLocaleString() } withdrawals found
+        { t('common.common.a_total_of_data_withdrawals_found', { data: countersQuery.data?.toLocaleString() }) }
       </Skeleton>
     );
   })();
@@ -68,11 +70,11 @@ const ScrollL2Withdrawals = () => {
 
   return (
     <>
-      <PageTitle title={ `Withdrawals (L2${ nbsp }${ rightLineArrow }${ nbsp }L1)` } withTextAd/>
+      <PageTitle title={ `${ t('common.common.withdrawals') } (L2${ nbsp }${ rightLineArrow }${ nbsp }L1)` } withTextAd/>
       <DataListDisplay
         isError={ isError }
         itemsNum={ data?.items?.length }
-        emptyText="There are no withdrawals."
+        emptyText={ t('common.common.there_are_no_withdrawals') }
         actionBar={ actionBar }
       >
         { content }

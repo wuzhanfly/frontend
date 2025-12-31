@@ -19,6 +19,7 @@
   "transactions.common.txn_fee": "Txn fee",
   "transactions.common.token_transfers": "Token transfers",
   "transactions.common.user_operations": "User operations",
+  "transactions.common.chain_user_operations": "{{chain}} user operations",
   "transactions.common.internal_txns": "Internal txns",
   "transactions.common.blobs": "Blobs",
   "transactions.common.logs": "Logs",

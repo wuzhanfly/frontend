@@ -1,6 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { useQueryClient } from '@tanstack/react-query';
 import React, { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { WatchlistAddress, WatchlistResponse } from 'types/api/account';
 
@@ -25,6 +26,7 @@ import WatchListItem from 'ui/watchlist/WatchlistTable/WatchListItem';
 import WatchlistTable from 'ui/watchlist/WatchlistTable/WatchlistTable';
 
 const WatchList: React.FC = () => {
+  const { t } = useTranslation();
 
   const { data, isPlaceholderData, isError, pagination } = useQueryWithPages({
     resourceName: 'general:watchlist',
@@ -89,7 +91,7 @@ const WatchList: React.FC = () => {
       <>
         { !hasEmail && <WatchlistEmailAlert/> }
         <AccountPageDescription>
-          An email notification can be sent to you when an address on your watch list sends or receives any transactions.
+          { t('account.common.email_notification_description') }
         </AccountPageDescription>
         <DataListDisplay
           isError={ isError }
@@ -124,7 +126,7 @@ const WatchList: React.FC = () => {
           <Button
             onClick={ addressModalProps.onOpen }
           >
-            Add address
+            { t('account.common.add_address') }
           </Button>
         </Skeleton>
         <AddressModal
@@ -149,7 +151,7 @@ const WatchList: React.FC = () => {
 
   return (
     <>
-      <PageTitle title="Watch list"/>
+      <PageTitle title={ t('transactions.common.watch_list') }/>
       { content }
     </>
   );

@@ -1,5 +1,10 @@
 {
   "api_key.delete_modal.api_key_for": "API密钥用于",
   "api_key.delete_modal.will_be_deleted": "将被删除",
-  "api_key.table.api_key_token_limit": "API密钥令牌（限制{{limit}}个密钥）"
+  "api_key.table.api_key_token_limit": "API密钥令牌（限制{{limit}}个密钥）",
+  "api_key.common.description": "创建API密钥以用于您的RPC和EthRPC API请求。如需更多信息，请参阅",
+  "api_key.common.how_to_use": "'如何使用Blockscout API密钥'",
+  "api_key.common.add_api_key": "添加API密钥",
+  "api_key.common.max_keys_reached": "您已添加了最大数量的API密钥（{{DATA_LIMIT}}）。请联系我们以申请更多密钥。",
+  "api_key.common.api_keys": "API密钥"
 }

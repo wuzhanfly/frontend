@@ -35,5 +35,19 @@
     "metrics_not_updated": "指标不会实时更新。请允许最多一小时的时间，让您的绩效排名和赚取的积分反映最近的活动。如果您遇到任何问题，请随时联系我们",
     "discord": "Discord",
     "grab_activity_pass": "获取活动通行证"
-  }
+  },
+  "rewards.common.explore_the_merits_hub": "探索积分中心",
+  "rewards.common.to_earn_spend_and_learn_more_about_the_program": " 以赚取、花费并了解更多关于该计划的信息。",
+  "rewards.common.all_merits": "所有积分",
+  "rewards.common.claim_your_daily_merits_and_any_merits_received_from_referrals": "领取您的每日积分和通过推荐获得的任何积分",
+  "rewards.common.total_merits_earned": "从所有活动中赚取的积分总数。",
+  "rewards.common.more_info_on_merits": "关于积分的更多信息",
+  "rewards.common.referrals": "推荐",
+  "rewards.common.referrals_description": "使用您的代码或推荐链接加入该计划的用户总数。",
+  "rewards.common.streak": "连胜",
+  "rewards.common.streak_description": "您已领取每日积分的连续天数。连胜时间越长，您可以赚取的每日积分就越多。",
+  "rewards.common.streak_hint": "查看",
+  "rewards.common.streak_hint_link": "文档",
+  "rewards.common.streak_hint_suffix": "了解您的连胜数字如何影响每日奖励",
+  "rewards.common.check_achievements": "查看成就"
 }

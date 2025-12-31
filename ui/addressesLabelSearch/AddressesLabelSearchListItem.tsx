@@ -1,6 +1,7 @@
 import { HStack } from '@chakra-ui/react';
 import BigNumber from 'bignumber.js';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import type { AddressesItem } from 'types/api/addresses';
 
@@ -19,7 +20,7 @@ const AddressesLabelSearchListItem = ({
   item,
   isLoading,
 }: Props) => {
-
+  const { t } = useTranslation();
   const addressBalance = BigNumber(item.coin_balance || 0).div(BigNumber(10 ** config.chain.currency.decimals));
 
   return (
@@ -31,13 +32,14 @@ const AddressesLabelSearchListItem = ({
         w="100%"
       />
       <HStack gap={ 3 } maxW="100%" alignItems="flex-start">
-        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 } flexShrink={ 0 }>{ `Balance ${ currencyUnits.ether }` }</Skeleton>
+        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 } flexShrink={ 0 }>
+          { t('addresses_label_search.list_item.balance_ether', { currencyUnit: currencyUnits.ether }) }</Skeleton>
         <Skeleton loading={ isLoading } fontSize="sm" color="text.secondary" minW="0" whiteSpace="pre-wrap">
           <span>{ addressBalance.dp(8).toFormat() }</span>
         </Skeleton>
       </HStack>
       <HStack gap={ 3 }>
-        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 }>Txn count</Skeleton>
+        <Skeleton loading={ isLoading } fontSize="sm" fontWeight={ 500 }>{ t('addresses_label_search.list_item.txn_count') }</Skeleton>
         <Skeleton loading={ isLoading } fontSize="sm" color="text.secondary">
           <span>{ Number(item.transactions_count).toLocaleString() }</span>
         </Skeleton>

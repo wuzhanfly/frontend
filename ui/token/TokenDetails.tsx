@@ -224,7 +224,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
           <DetailedInfo.ItemValue
             py="1px"
           >
-            <AppActionButton data={ appActionData } height="30px" source={ t('tokens.common.nft_collection') }/>
+            <AppActionButton data={ appActionData } height="30px" source="NFT collection"/>
           </DetailedInfo.ItemValue>
         </>
       ) }

@@ -146,7 +146,7 @@ const TxSubHeading = ({ hash, hasTag, txQuery }: Props) => {
       >
         { !hasTag && <AccountActionsMenu isLoading={ isLoading }/> }
         { appActionData && (
-          <AppActionButton data={ appActionData } txHash={ hash } source={ t('transactions.common.txn') }/>
+          <AppActionButton data={ appActionData } txHash={ hash } source="Txn"/>
         ) }
         <NetworkExplorers type="tx" pathParam={ hash } ml="auto"/>
       </Flex>
